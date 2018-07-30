@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>test</title>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script type="text/javascript" src="scripts/base64.js"></script>
+    <script>
+        var testObj= {
+            alarmahead: "",
+            alarmtype: 0,
+            categoryid: 3,
+            client: 0,
+            createdate: 1417343024,
+            dateignore: 0,
+            datetime: 1436832000,
+            datetype: 0,
+            enddate: "",
+            extra: {"oid": "1552886"},
+            favourite: 0,
+            reminderid: "1ADD846CF3AD4B7F935A784BEFFC996A",
+            isallday: 1,
+            lastupdatedate: 1416370060,
+            needalarm: 1,
+            note: "",
+            repeateenddate: "",
+            repeatfrequently: 0,
+            repeattype: 0,
+            status: 2,
+            title: "\U9ad8\U6e29\U9996\U9009 \U9e21\U4e1d\U51c9\U9762",
+            userid: ""
+        };
+        location.href="protocol://setreminder#"+base64encode(utf16to8(JSON.stringify(testObj)));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

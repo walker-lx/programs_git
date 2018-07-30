@@ -1,0 +1,1282 @@
+@import '../css/base.scss';
+._hidden {
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+.content {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #F0F6EA;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    .head {
+        position: relative;
+        width: 100%;
+        height: calc(100vw * (226 / 375));
+        background: url('../img/smls_home_banner_bg@3x.jpg') no-repeat;
+        background-size: 100% 100%;
+        box-sizing: border-box;
+        padding-top: 30px;
+        .num, .wh {
+            position: absolute;
+        }
+        .wh {
+            width: 16px;
+            height: 16px;
+            top: 19px;
+            right: 21px;
+            border-right: 50%;
+            overflow: hidden;
+            background: url('../img/smls_home_More_nor_icon@3x.png') no-repeat;
+            background-size: 100% 100%;
+        }
+        .wharea {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            top: 0;
+            right: 0;
+        }
+        .num {
+            top: 19px;
+            right: 36px;
+            width: 63px;
+            height: 64px;
+            text-align: center;
+            line-height: 64px;
+            color: #B8C1A6;
+            font-size: 36px;
+            background: url('../img/smls_home_banner_number-img@3x.png') no-repeat;
+            background-size: contain;
+        }
+        .avtar {
+            position: relative;
+            width: 137px;
+            height: 82px;
+            margin: 0 auto;
+            text-align: center;
+            // background-image: url('../img/touxiang.jpg');
+            // background-repeat: no-repeat;
+            // background-position: 50% center;
+            // background-size: 80px 80px;
+            .avtar_img {
+                display: block;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin: 1px auto 0;
+                overflow: hidden;
+            }
+            .avtar_bg {
+                position: absolute;
+                width: 137px;
+                height: 82px;
+                top: 0;
+                left: 0;
+            }
+        }
+        .user {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 9px;
+            .nickname {
+                color: #3B4A12;
+                font-size: 22px;
+            }
+            .changeuser {
+                position: relative;
+                width: 20px;
+                height: 20px;
+                background: url('https://qiniu.image.cq-wnl.com/content/20180412646ba60fe9b940ca842280307b2173b4.png') no-repeat;
+                background-size: 100% 100%;
+                margin-left: 8px;
+            }
+        }
+        .luck {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            .luckcolor, .luckbirth, .lucktext {
+                height: 25px;
+                line-height: 25px;
+                border: 1px solid #B8C494;
+                padding: 0 4px;
+                font-size: 15px;
+                color: #3B4A12;
+                font-family: 'font';
+                @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+                    font-size: 13px;
+                }
+                @media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 360px) {
+                    line-height: 27px;
+                }
+            }
+            .luckbirth, .lucktext {
+                margin-left: 10px;
+            }
+        }
+    }
+    // 今日运势
+    .todayluck {
+        position: relative;
+        margin: 21px 10px;
+        .todaytitle {
+            width: 194px;
+            height: 43px;
+            background: url('../img/smls_home_Title_nor_img@3x.png') no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            text-align: center;
+            color: #3B4A12;
+            font-size: 20px;
+            font-family: 'font';
+        }
+        .todayluck_share {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: url('../img/smls_home_share_icon@3x.png') no-repeat;
+            background-size: cover;
+        }
+        // 今日运势详情
+        .todayluck_detail {
+            position: relative;
+            box-sizing: border-box;
+            border: 2px solid #B8C494;
+            border-radius: 2px;
+            background-color: #fff;
+            padding-bottom: 40px;
+            .daydetail {
+                position: relative;
+                .daymask {
+                    .daymask_mask {
+                        position: absolute;
+                        // display: flex;
+                        // align-items: center;
+                        width: calc(100% - 30px);
+                        top: 0;
+                        left: 15px;
+                        bottom: 0;
+                        right: 15px;
+                        background: url('../img/mrys-mhbg-img@3x.jpg') no-repeat;
+                        background-size: 100% 100%;
+                        .dayljck {
+                            width: 230px;
+                            height: 50px;
+                            text-align: center;
+                            line-height: 50px;
+                            background-color: #AEC46F;
+                            border-radius: 4px;
+                            color: #fff;
+                            margin: 65% auto 0;
+                            font-size: 17px;
+                        }
+                        .daytip {
+                            text-align: center;
+                            color: #837B70;
+                            font-size: 13px;
+                            margin: 12px auto 0;                            
+                        }
+                    }
+                }
+            }
+            .todayluck_tab {
+                display: flex;
+                width: calc(100vw - 34px);
+                align-items: center;
+                justify-content: space-between;
+                color: #B8C494;
+                height: 37px;
+                margin: 5px 5px 0;
+                font-size: 20px;
+                .tlucktext, .mlucktext {
+                    // width: 145px;
+                    width: calc((100vw - 34px - 48px - 3px) / 2);
+                    text-align: center;
+                    font-family: 'font';
+                    // @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+                    //     width: 120px;
+                    // }
+                    
+                }
+                // .mlucktext {
+                //     color: #B8C494;
+                // }
+                .line {
+                    width: 1px;
+                    height: 21px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    background-color: #B8C494;
+                }
+                .line5 {
+                    width: 1px;
+                    height: 100%;
+                    background-color: #B8C494;
+                }
+                .hasluck_share {
+                    // width: calc(100% - 292px);
+                    width: 48px;
+                    text-align: center;
+                }
+                img {
+                    width: 18px;
+                    height: 20px;
+                    margin: 0 auto;
+                }
+            }
+            .todayselected, .nextdayselected {
+                display: flex;
+                width: calc(100vw - 34px);
+                // overflow: hidden;
+                margin: 0 5px;
+                .todayselected_1 {
+                    // width: 70px;
+                    // width: calc(((100vw - 34px - 48px - 3px) / 4) + 2px);
+                    width: calc((100vw - 85px) / 4);
+                    height: 1px;
+                    background-color: #B8C494;
+                }
+                .nextdayselected_1 {
+                    width: calc(100vw - (100vw - 85px) / 4 - 50px);
+                    height: 1px;
+                    background-color: #B8C494;
+                }
+                .todayselected_2, .nextdayselected_2 {
+                    position: relative;
+                    width: 0;
+                    height: 0;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-bottom: 5px solid #B8C494;
+                    margin-top: -4px;
+                    .act {
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        top: 1px;
+                        left: -5px;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-bottom: 5px solid #fff;
+                    }
+                    // border-right: 1px solid #B8C494;
+                    // border-top: 1px solid #B8C494;
+                    // transform: rotateZ(-45deg) translateY(-4px);
+                    // margin-left: 4px;
+                    // margin-right: -2px;
+                }
+                .todayselected_3 {
+                    // width: calc(100% - 78px);
+                    // width: calc(100vw - (((100vw - 85px) / 4) - 3px));
+                    width: calc(100vw - (100vw - 85px) / 4 - 10px);
+                    height: 1px;
+                    background-color: #B8C494;
+                }
+                .nextdayselected_3 {
+                    // width: 125px;
+                    width: calc((100vw - 85px) / 4 + 48px + 20px);
+                    height: 1px;
+                    overflow: hidden;
+                    background-color: #B8C494;
+                }
+            }
+            .day_yryz {
+                // display: flex;
+                width: calc(100% - 110px);
+                display: -webkit-box;
+                // height: 100px;
+                align-items: center;
+                margin: 24px 20px 0 30px;
+                box-sizing: border-box;              
+                .yryzicon {
+                    width: 55px;
+                    height: 55px;
+                    background: url('../img/tips_icon@3x.png') no-repeat;
+                    background-size: 100% 100%;
+                }
+                .yryztext {
+                    color: #615A50;
+                    text-align: justify;
+                    margin-left: 20px;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+            .dayluck {
+                margin: 24px 25px;
+                @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+                    margin: 24px 15px;
+                }
+                .dayluck_aq, .dayluck_sy, .dayluck_cf {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+                    color: #615A50;
+                    font-size: 15px;
+                    .dayluck_aq_text, .dayluck_sy_text, .dayluck_cf_text {
+                        width: 34px;
+                        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+                            width: 28px;
+                            font-size: 12px;
+                        }
+                    }
+                    .dayluck_aq_icon {
+                        background: url('../img/smls_home_love_nor_icon@3x.png') no-repeat;
+                    }
+                    .dayluck_sy_icon {
+                        background: url('../img/smls_home_work_nor_icon@3x.png') no-repeat;
+                    }
+                    .dayluck_cf_icon {
+                        background: url('../img/smls_home_money_nor_icon@3x.png') no-repeat;
+                    }
+                    .dayluck_aq_icon, .dayluck_sy_icon, .dayluck_cf_icon {
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 6px;
+                        background-size: 100% 100%;
+                    }
+                    .dayluck_aq_progress, .dayluck_sy_progress, .dayluck_cf_progress {
+                        width: 196px;
+                        height: 14px;
+                        border-radius: 7px;
+                        margin-left: 20px;
+                        margin-right: 10px;
+                        background-color: #EAEAEA;
+                        overflow: hidden;
+                        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+                            margin-left: 2px;
+                            margin-right: 5px;                            
+                        }
+                        
+                    }
+                    .dayluck_aq_slide, .dayluck_sy_slide, .dayluck_cf_slide {
+                        height: 100%;
+                        border-radius: 7px;
+                    }
+                    .dayluck_aq_slide {
+                        width: calc(196px * .4);                        
+                        background-color: #E56464;                        
+                    }
+                    .dayluck_sy_slide {
+                        width: calc(196px * .6);                        
+                        background-color: #79B5FD;                        
+                    }
+                    .dayluck_cf_slide {
+                        width: calc(196px * .8);                        
+                        background-color: #FEB338;                        
+                    }
+                    .dayluck_aq_num {
+                        color: #E56464;
+                    }
+                    .dayluck_sy_num {
+                        color: #79B5FD;
+                    }
+                    .dayluck_cf_num {
+                        color: #FEB338;
+                    }
+                }
+                .dayluck_aq, .dayluck_sy {
+                    margin-bottom: 22px;
+                }
+            }
+            .daylucktext {
+                display: flex;
+                align-items: center;
+                margin: 26px 20px;
+                height: 74px;
+                @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+                    margin: 26px 10px;                            
+                }
+                border: {
+                    top: 1px solid #eee;
+                    bottom: 1px solid #eee;
+                }
+                .line {
+                    height: 100%;
+                    width: 1px;
+                    background-color: #eee;
+                }
+                .daylucktext_color, .daylucktext_wp, .daylucktext_people {
+                    flex: 1;
+                    text-align: center;
+                    .daylucktext_color_text, .daylucktext_wp_text, .daylucktext_people_text {
+                        width: 51px;
+                        height: 19px;
+                        text-align: center;
+                        line-height: 19px;
+                        border: 1px solid #B8C494;
+                        color: #5B6F23;
+                        margin: 0 auto 9px;
+                        font-size: 13px;                        
+                        // padding-left: 6px;
+                        // padding-right: 6px;
+                    }
+                    .daylucktext_color_desc, .daylucktext_wp_desc, .daylucktext_people_desc {
+                        // margin: 9px auto;
+                        color: #615A50;
+                        font-size: 15px;
+                        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+                            font-size: 12px;                            
+                        }
+                    }
+                }
+            }
+            .dayluck_zy {
+                margin: 25px 25px 0;
+                .dayluck_zy_aq, .dayluck_zy_sy {
+                    margin-bottom: 26px;
+                }
+                .dayluck_zy_aq_title, .dayluck_zy_sy_title, .dayluck_zy_cf_title {
+                    color: #3B4A12;
+                    font-size: 20px;
+                    font-family: 'font';
+                }
+                .dayluck_zy_aq_desc, .dayluck_zy_sy_desc, .dayluck_zy_cf_desc {
+                    color: #615A50;
+                    font-size: 15px;
+                    line-height: 1.4;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    // 图卡游戏
+    .swiper-wrapper {
+        width: calc(100vw - 40px);
+        // width: 355px;
+        margin: 0 auto;  
+    }
+    .tkitem {
+        width: calc(100vw - 40px);
+        height: calc((100vw - 40px) * (184 / 334));
+        background-color: #fff;
+        box-sizing: border-box;
+        padding: 5px;
+        border-radius: 2px;
+        // margin: 20px auto;
+        .item_detail {
+            position: relative;
+            height: 100%;
+            border: 1px solid #B8C494;
+            .item_con {
+                display: flex;
+                // display: -webkit-box;
+                justify-content: space-between;
+                // width: calc(100vw - 210px);
+                box-sizing: border-box;
+                .tkleft {
+                    // display: inline-block;
+                    // width: 200px;
+                    flex: 1;
+                    position: relative;
+                    margin: 15px 0 0 20px;
+                    .tkleft1 {
+                        color: #3B4A12;
+                        font-size: 20px;
+                        font-family: 'font';
+                    }
+                    .tkleft2 {
+                        color: #615A50;
+                        text-align: justify;
+                        font-size: 15px;
+                        margin-top: 13px;
+                        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+                            font-size: 12px;
+                            margin-top: 6px;                            
+                        }
+                        @media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 360px) {
+                            // font-size: 13px;
+                            margin-top: 9px;                            
+                        }
+                        @media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 412px) {
+                            margin-top: 17px;                            
+                        }
+                    }
+                    .tkleft3 {
+                        position: absolute;
+                        bottom: -3px;
+                        color: #5B6F23;
+                        font-size: 13px;
+                        @media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: 360px) {
+                            font-size: 11px;
+                        }
+                    }
+                    .ckqw {
+                        color: #615A50;
+                        font-weight: 600;
+                    }
+                }
+                .tkright {
+                    // display: inline-block;                 
+                    // align-self: center;
+                    // float: right;
+                    // flex: 1;                    
+                    margin-top: 17px;
+                    width: 120px;
+                    height: 140px;
+                    margin-left: 8px;
+                    margin-right: 18px;                    
+                    background-color: #eee;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+                        width: 90px;
+                        height: 105px;
+                        margin-left: 9px;
+                        margin-right: 9px;
+                    }
+                    @media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 360px) {
+                        // font-size: 13px;
+                        margin-left: 2px;  
+                        margin-right: 14px;                                                                      
+                    }
+                    @media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 412px) {
+                        // font-size: 13px;
+                        margin-left: 24px;  
+                        margin-right: 27px;                                                                      
+                    }
+                }
+            }
+        }
+    }
+    // 本月及下月运势
+    .monthluck {
+        position: relative;
+        margin: 20px 10px;
+        border: 2px solid #B8C494;
+        background-color: #fff;
+        .monthluck_tab {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #B8C494;
+            height: 37px;
+            line-height: 37px;
+            margin: 5px 5px 0;
+            font-size: 20px;
+            .line {
+                width: 1px;
+                height: 21px;
+                background-color: #B8C494;
+            }
+            .monthtext, .nextmonthtext {
+                flex: 1;
+                text-align: center;
+                font-family: 'font';
+            }
+            // .nextmonthtext {
+            //     color: #B8C494;
+            // }
+        }
+        .monthselected, .nextmonthselected {
+            display: flex;
+            margin: 0 5px;
+            .monthselected_1 {
+                width: calc(50% - 90px);
+                height: 1px;
+                background-color: #B8C494;
+            }
+            .nextmonthselected_1 {
+                width: calc(100vw - 5px);
+                height: 1px;
+                background-color: #B8C494;
+            }
+            .monthselected_2, .nextmonthselected_2 {
+                width: 6px;
+                height: 6px;
+                border-right: 1px solid #B8C494;
+                border-top: 1px solid #B8C494;
+                transform: rotateZ(-45deg) translateY(-4px);
+                margin-left: 4px;
+                margin-right: -2px;
+            }
+            .monthselected_3 {
+                width: calc(50% + 92px);
+                height: 1px;
+                background-color: #B8C494;
+            }
+            .nextmonthselected_3 {
+                width: 125px;
+                height: 1px;
+                overflow: hidden;
+                background-color: #B8C494;
+            }
+        }
+        // 蒙层
+        .monthdetail {
+            position: relative;
+            .monthmask {
+                .monthmask_mask {
+                    position: absolute;
+                    width: calc(100% - 30px);
+                    top: 0;
+                    left: 15px;
+                    bottom: 0;
+                    right: 15px;
+                    background: url('../img/xyys-mhbg@3x.jpg') no-repeat;
+                    background-size: 100% 100%;
+                    .monthljck {
+                        position: relative;
+                        width: 230px;
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        color: #fff;
+                        background-color: #AEC46F;
+                        border-radius: 4px;
+                        font-size: 17px;
+                        margin: 45% auto 0;
+                    }
+                    .monthtip {
+                        text-align: center;
+                        color: #837B70;
+                        font-size: 13px;
+                        margin: 12px auto 0;
+                    }
+                }
+            }
+        }
+        .monthluck_zy {
+            margin: 21px 25px;
+            .monthluck_zy_aq, .monthluck_zy_sy, .monthluck_zy_cf {
+                display: flex;
+                color: #615A50;
+                align-items: center;
+                font-size: 17px;
+            }
+            .monthluck_zy_sy, .monthluck_zy_cf {
+                margin-top: 15px;
+            }
+            .monthluck_zy_aq_icon1, .monthluck_zy_sy_icon1, .monthluck_zy_cf_icon1 {
+                margin-left: 10px;
+            }
+            .monthluck_zy_aq_icon1, .monthluck_zy_aq_icon2, .monthluck_zy_aq_icon3, .monthluck_zy_aq_icon4, .monthluck_zy_aq_icon5 {
+                background: url('../img/smls_home_love_dis_icon@3x.png') no-repeat;
+                &.actaq {
+                    background: url('../img/smls_home_love_nor_icon@3x.png') no-repeat;
+                    background-size: 100% 100%;                   
+                }
+            }
+            .monthluck_zy_sy_icon1, .monthluck_zy_sy_icon2, .monthluck_zy_sy_icon3, .monthluck_zy_sy_icon4, .monthluck_zy_sy_icon5 {
+                background: url('../img/smls_home_work_dis_icon@3x.png') no-repeat;
+                &.actsy {
+                    background: url('../img/smls_home_work_nor_icon@3x.png') no-repeat;
+                    background-size: 100% 100%;                    
+                }
+            }
+            .monthluck_zy_cf_icon1, .monthluck_zy_cf_icon2, .monthluck_zy_cf_icon3, .monthluck_zy_cf_icon4, .monthluck_zy_cf_icon5 {
+                background: url('../img/smls_home_money_dis_icon@3x.png') no-repeat;
+                &.actcf {
+                    background: url('../img/smls_home_money_nor_icon@3x.png') no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+            .icon {
+                width: 15px;
+                height: 15px;
+                background-size: 100% 100%;
+                margin-right: 5px;
+            }
+        }
+        .monthluck_zy_desc {
+            color: #615A50;
+            text-indent: 1em;
+            margin: 20px 25px;
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+    .historybtn {
+        position: relative;
+        height: 50px;
+        line-height: 50px;
+        margin: 20px 10px;
+        text-align: center;
+        border-radius: 4px;
+        color: #fff;
+        background-color: #AEC46F;
+        font-size: 17px;
+    }
+    // 开运指南
+    .kyzn {
+        margin: 21px 10px;
+        .kyzn_title {
+            width: 194px;
+            height: 43px;
+            background: url('../img/smls_home_Title_nor_img@3x.png') no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            text-align: center;
+            color: #3B4A12;
+            font-size: 20px;
+            font-family: 'font';
+        }
+        .kyzn_detail {
+            position: relative;
+            border: 2px solid #B8C494;
+            border-radius: 2px;
+            background-color: #fff;            
+            .kyzn_text {
+                text-indent: 1.2em;
+                color: #615A50;
+                line-height: 1.4;
+                margin: 25px 25px 30px;
+                text-align: justify;
+                font-size: 16px;
+            }
+        }
+    }
+    // 大师描述
+    .cstip {
+        position: relative;
+        margin: 20px 10px;
+        // box-sizing: border-box;
+        border: 2px solid #B8C494;
+        border-radius: 2px;
+        background-color: #fff;
+        .cstip1, .cstip2, .cstip3, .cstip4, .cstip5, .cstip6 {
+            text-align: center;
+            color: #615A50;
+            font-size: 17px;
+            line-height: 1.5;
+            font-family: 'font';
+            @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+                font-size: 14px;
+            }
+        }
+        .cstip1 {
+            margin-top: 34px; 
+        }
+        .cstip5 {
+            margin-top: 8px;
+        }
+        .line {
+            height: 1px;
+            margin: 34px 5px 20px;
+            background-color: #B8C494
+        }
+        .ds_desc {
+            // display: flex;
+            width: calc(100% - 120px);
+            display: -webkit-box;
+            text-align: justify;
+            margin: 0 25px;
+            .ds_icon {
+                width: 75px;
+                height: 75px;
+                // background: red;
+                // background: url('https://qiniu.image.cq-wnl.com/content/201804176e0ee67a8844484f99fc1a92abb26a32.png') no-repeat;
+                // background-size: 100% 100%;
+            }
+            .ds_detail {
+                margin-left: 15px;
+                .ds_detail_title {
+                    color: #615A50;
+                    font-size: 17px;
+                }
+                .ds_detail_text {
+                    color: #837B70;
+                    font-size: 13px;
+                }
+            }
+        }
+        .zxcs {
+            position: relative;
+            width: calc(100% - 50px);
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: #AEC46F;
+            color: #fff;
+            border-radius: 4px;
+            margin: 23px auto 25px;
+            font-size: 17px;
+        }
+    }
+    // 测算描述
+    .csdesc1, .csdesc2 {
+        margin: 20px 10px;
+        border: 2px solid #B8C494;
+        border-radius: 2px;
+        color: #615A50;
+        font-size: 16px;
+        line-height: 1.4;
+        background-color: #fff;
+        .csdesc1_top {
+            background: url('../img/rdmy-img@3x.jpg') no-repeat;
+        }
+        .csdesc2_top {
+            background: url('../img/yysr-img@3x.jpg') no-repeat;
+        }
+        .csdesc1_top, .csdesc2_top {
+            width: 100%;
+            height: calc((100vw - 24px) * (150 / 351));
+            background-size: 100% 100%;
+        }
+        .csdesc1_bottom, .csdesc2_bottom {
+            position: relative;            
+            margin: 0 5px 5px;
+            border: {
+                left: 1px solid #B8C494;
+                right: 1px solid #B8C494;
+                bottom: 1px solid #B8C494;
+            };
+            padding: 21px 18px 14px;            
+            .csdesc1_bottom_text, .csdesc2_bottom_text {
+                text-align: justify;
+                line-height: 1.5;
+                .text1, .text2, .text3, .text4, .text5 {
+                    text-indent: 1em;
+                }
+            }
+        }
+    }
+    // 用户反馈
+    .yhfk {
+        .yhfk_title {
+            width: 194px;
+            height: 43px;
+            background: url('../img/smls_home_Title_nor_img@3x.png') no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            text-align: center;
+            color: #3B4A12;
+            font-size: 20px;
+            font-family: 'font';
+        }
+        .yhfk_num {
+            color: #5B6F23;
+            text-align: center;
+            font-size: 15px;
+            font-family: 'font';
+        }
+        .yhfk_detail {
+            position: relative;
+            height: 285px;    
+            border: 2px solid #B8C494;
+            margin: 9px 10px;
+            border-radius: 2px;
+            background-color: #fff;
+            overflow: hidden;
+            // box-sizing: border-box;
+            // padding-top: 40px;
+            .wrap {
+                margin-top: 15px;
+                height: 250px;
+                overflow: hidden;
+            }
+            .fklist {
+                // height: calc(100% - 55px);
+                // overflow: hidden; 
+                margin: 20px 20px 0;
+                font-size: 15px;
+                padding-top: 20px; 
+                // transition: all .4s;              
+                .fkitem {
+                    height: 70px;
+                    .fkinfo {
+                        margin: 0 5px;
+                        .fkname {
+                            color: #5B6F23;
+                        }
+                        .fktext {
+                            width: 100%;
+                            color: #837B70;
+                            margin-top: 10px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    .fkline {
+                        height: 1px;
+                        background-color: rgba(184,196,148, .1);
+                        margin: 10px auto;
+                    }
+                }
+            }
+        }
+    }
+    // 相关应用
+    .xgyy {
+        margin-top: 21px;
+        .xgyy_title {
+            width: 194px;
+            height: 43px;
+            background: url('../img/smls_home_Title_nor_img@3x.png') no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            text-align: center;
+            color: #3B4A12;
+            font-size: 20px;
+            font-family: 'font';
+        }
+        .xgyy_detail {
+            width: 100%;
+            height: 140px;
+            overflow: hidden;
+            .xgyy_wrap {
+                display: -webkit-box;
+                height: 140px;
+                padding-bottom: 25px;
+                overflow-y: hidden;
+                overflow-x: scroll;
+                -webkit-overflow-scrolling: touch;
+                .xgyy_item {
+                    width: 120px;
+                    height: 140px;
+                    background-color: #eee;
+                    // background-image: url('https://qiniu.image.cq-wnl.com/content/201804121daa7df4fdc2465c8f5e259a193f8cbd.png');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    margin-right: 15px;
+                    &:nth-of-type(2) {
+                        margin-left: 15px;
+                    }
+                    .xgyy_item_text {
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, .5);
+                        padding: 50px 25px;
+                        box-sizing: border-box;
+                        color: #fff;
+                        text-align: center;
+                        .text {
+                            display: -webkit-box;     
+                            -webkit-box-orient: vertical;     
+                            -webkit-line-clamp: 2;     
+                            overflow: hidden;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            .hold {
+                width: 1px;
+                height: 100%;
+                background-color: #F0F6EA;
+            }
+        }
+    }
+    // 联系方式
+    .contact {
+        margin: 25px auto;
+        .qq {
+            color: #879365;
+            text-align: center;
+            font-size: 13px;
+        }
+    }
+}
+
+
+
+
+
+
+// 弹窗公共样式
+.smlsmask_mask, .tkmask_mask, .indexani_mask, .numani_mask, .kfmask_mask {
+    position: fixed;
+        opacity: 0.4;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* width: 100%; */
+        /* height: 100%; */
+        background-color: #000;
+        z-index: 99; 
+}
+.smlsmask_con, .tkmask_con, .indexani_con, .numani_con, .kfmask_con {
+    position: fixed;
+    width: calc(100vw - 86px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+.squar1 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 0;
+    left: 0;
+    border: {
+        right: 1px solid #B8C494;
+        bottom: 1px solid #B8C494;
+    }
+}
+.squar2 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 0;
+    right: 0;
+    border: {
+        left: 1px solid #B8C494;
+        bottom: 1px solid #B8C494;
+    }
+}
+.squar3 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    border: {
+        right: 1px solid #B8C494;
+        top: 1px solid #B8C494;
+    }
+}
+.squar4 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    bottom: 0;
+    right: 0;
+    border: {
+        top: 1px solid #B8C494;
+        left: 1px solid #B8C494;
+    }
+}
+.smlsmask_close, .tkmask_close, .indexani_close, .kfmask_close {
+    width: 36px;
+    height: 36px;
+    // background: url('https://qiniu.image.cq-wnl.com/content/201804287d69345d4568495ab615fcf3017df2b6.png') no-repeat;
+    // background-size: cover;
+    margin: 28px auto 0;
+}
+.smlsmask_detail, .tkmask_detail, .indexani_detail, .kfmask_detail {
+    background-color: #fff;
+    border: 2px solid #B8C494;
+    border-radius: 2px;
+}
+// 过渡效果
+.kfmask, .smlsmask, .tkmask, .numani, .indexani {
+    // visibility: hidden;
+    transition: all .3s;
+}
+// 客服会话弹窗
+.kfmask {
+    .kfmask_detail {
+        padding: 5px;
+        .kfmask_detail_box {
+            position: relative;
+            border: 1px solid #B8C494;
+            padding: 15px 0 20px 0;
+            .kfmask_detail_box_top {
+                width: 80px;
+                height: 80px;
+                border-radius: 4px;
+                overflow: hidden;
+                background: url('https://qiniu.image.cq-wnl.com/content/20180425e72e808c50d14692805167de577393bd.jpg') no-repeat;
+                background-size: 100% 100%;
+                margin: 0 auto;
+            }
+            .kfmask_detail_box_center {
+                margin: 15px auto;
+                text-align: center;
+                color: #615A50;
+                font-size: 15px;
+                .text2 span {
+                    font-weight: 600;
+                }
+            }
+            .kfmask_detail_box_bottom {
+                width: calc(100vw - 130px);
+                height: 50px;
+                background-color: #FEB338;
+                text-align: center;
+                line-height: 50px;
+                color: #fff;
+                margin: 20px auto 0;
+                font-size: 17px;
+            }
+        }
+    }
+}
+// 生命灵数详解弹窗
+.smlsmask {
+    .smlsmask_con {
+        .smlsmask_detail {
+            .smlsmask_detail_top {
+                width: 100%;
+                height: 108px;
+                text-align: center;
+                line-height: 118px;
+                color: #3B4A12;
+                font-size: 32px;
+                background: url('https://qiniu.image.cq-wnl.com/content/201804169b8c89ea1c0a492d9632d8736137c6db.jpg') no-repeat;
+                background-size: cover;
+                font-family: 'font';
+            }
+            .smlsmask_detail_bottom {
+                box-sizing: border-box;
+                padding: 0 5px 5px 5px;
+                .smlsmask_detail_bottom_text {
+                    position: relative;
+                    height: 161px;
+                    border: 1px solid #B8C494;
+                    border-top: none;
+                    color: #615A50;
+                    font-size: 16px;
+                    line-height: 1.4;
+                    .smlsmask_detail_bottom_text_desc {
+                        text-align: justify;
+                        padding-top: 12px;
+                        margin: 0 20px 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 图卡弹窗
+.tkmask {
+    // z-index: 9999;
+    .tkmask_con {
+        .tkmask_detail {
+            padding: 5px;
+            .tkmask_detail_box {
+                position: relative;
+                border: 1px solid #B8C494;
+                padding: 10px 20px 15px;
+                .tkmask_detail_box_top {
+                    width: calc(130px * (120 / 140)); 
+                    height: 130px;
+                    // background-color: #eee;
+                    // background-image: url('');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    margin: 0 auto;
+                }
+                .tkmask_detail_box_text {
+                    color: #615A50;
+                    text-align: justify;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+// 首页动画弹窗
+.indexani {
+    .indexani_con {
+        .indexani_detail {
+            // padding: 5px;
+            .indexani_detail_top {
+                width: 100%;
+                height: 205px;
+                background: url('https://qiniu.image.cq-wnl.com/content/20180418833f58a8bf014b44a4067f41d1514a02.gif') no-repeat;
+                background-size: 100% 100%;
+            }
+            .indexani_detail_box {
+                padding: 0 5px 5px;
+                .indexani_detail_box_text {
+                    position: relative;
+                    padding: 11px 20px 10px;
+                    text-align: justify;
+                    color: #615A50;
+                    font-size: 16px;
+                    line-height: 1.4;
+                    border: {
+                        left: 1px solid #B8C494;
+                        bottom: 1px solid #B8C494;
+                        right: 1px solid #B8C494;
+                    };
+                }
+            }
+        }
+    }
+}
+
+// 数字显示动画
+.numani {
+    .numani_detail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100vw - 86px);
+        height: calc((100vw - 86px) * (520 / 560));
+        // background: url('https://qiniu.image.cq-wnl.com/content/20180418d67e8839ab1540c9aee59fc6befeda0d.gif') no-repeat;
+        background: url('../img/num.gif') no-repeat;
+        background-size: 100% 100%;
+        .numani_num {
+            // visibility: hidden;
+            opacity: 0;
+            width: 40px;
+            height: 86px;
+            // background-image: url('../img/8.png');
+            background-repeat: no-repeat;
+            background-position: 50% center;
+            background-size: 100% 100%;
+            transition: all .8s ease-in 2.5s;
+            &.numactive {
+                // visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    .numani_btn {
+        width: calc(100vw - 86px);
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background-color: #FEB338;
+        color: #fff;
+        border-radius: 4px;
+        margin: 20px auto;
+        font-size: 17px;
+    }
+}
+
+// 按钮选中颜色
+.actcolor {
+    color: #3B4A12
+}
+.tip {
+    position: fixed;
+    bottom: -30px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
+    transition: all .3s;
+    z-index: 510;
+    &.slide {
+        bottom: 317px;
+    }
+}
+.posbottom {
+    padding-bottom: 60px !important;
+}
+// 按钮点击态
+.hisactive, .todayactive, .monthactive, .nextmonthactive, .zxcsactive, .monthactive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .1);
+}
+.changeactive {
+    opacity: .7;
+}

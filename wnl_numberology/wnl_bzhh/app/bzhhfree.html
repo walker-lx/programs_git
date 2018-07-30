@@ -1,0 +1,149 @@
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>八字合婚</title>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no"/>
+    <style>
+      @font-face {
+        font-family: 'zidingyi';
+        src: url('./font/zidingyi.eot');
+        src:
+          url('./font/zidingyi.eot?#font-spider') format('embedded-opentype'),
+          url('./font/zidingyi.woff') format('woff'),
+          url('./font/zidingyi.ttf') format('truetype'),
+          url('./font/zidingyi.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+    <!-- build:css ./styles/main_new1.css -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <!-- endbuild -->
+    <script type="text/javascript" src="./scripts/jquery-fastclick.min.js"></script>
+    <script type="text/javascript" src="./scripts/modal.js"></script>
+    <script type="text/javascript" src="./scripts/base64.js"></script>
+    <script type="text/javascript" src="./scripts/wnlui.js"></script>
+    <script type="text/javascript" src="./scripts/bzhh_free_003.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8e0b53b1de7438bdfa7a36b7a4a9ee61";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script>var deviceWidth = document.documentElement.clientWidth;if(window.devicePixelRatio>3){deviceWidth = 400;}if(deviceWidth > 640) deviceWidth = 640;document.documentElement.style.fontSize = deviceWidth / 3.75 + 'px';</script>
+
+</head>
+<body>
+<div class="content result_main">
+    <div class="resultContent">
+        <div class="resultCard">
+            <div class="corner corner1"></div>
+            <div class="corner corner2"></div>
+            <div class="corner corner3"></div>
+            <div class="corner corner4"></div>
+            <div class="resultCardTitle">
+            </div>
+            <div class="shareTitle hidden">经鉴定</div>
+            <div class="resultCardContent rateScoreContent">
+                <div class="nameLine line"><span class="lineTitle">男方姓名: </span><span class="lineBody name1 name"></span></div>
+                <div class="nameLine line"><span class="lineTitle">女方姓名: </span><span class="lineBody name2 name"></span></div>
+                <div class="line"><span class="lineTitle">婚姻评分: </span><span class="lineBody count"></span></div>
+                <div class="line"><span class="lineTitle">婚姻质量: </span><span class="lineBody rateStringContent"></span></div>
+            </div>
+            <div class="percentContent">击败了全国 <span id="percent"></span> 的合婚用户</div>
+        </div>
+        <div class="shareBtn hidden" onclick="_czc.push(['_trackEvent', 'start_cs.C', 'bzhh_unlock+click+share'],'','','');">分享鉴定结果</div>
+    </div>
+
+    <div class="moreLinkContent descContent hidden">
+        <div class="descInfo">
+            <div class="topDec"></div>
+            <div class="titleTxt">
+                婚后幸福指数
+            </div>
+            <div class="linkLockIcon">婚后感情是更加融洽还是一波三折？是羡煞旁人还是悲剧收场？</div>
+        </div>
+        <div class="descInfo">
+            <div class="topDec"></div>
+            <div class="titleTxt">
+                婚姻稳定指数
+            </div>
+            <div class="linkLockIcon">彼此患难与共长久绵长的情谊？还是大难临头各自飞的薄弱感情？</div>
+        </div>
+        <div class="descInfo">
+            <div class="topDec"></div>
+            <div class="titleTxt">
+                婚外情指数
+            </div>
+            <div class="linkLockIcon">拈花惹草的本性？还是雷打不动的专情？</div>
+        </div>
+        <div class="descInfo">
+            <div class="topDec"></div>
+            <div class="titleTxt">
+                心灵默契指数
+            </div>
+            <div class="linkLockIcon">一个眼神便能读懂对方？还是像两条平行线永远无法有交集？</div>
+        </div>
+        <div class="descInfo">
+            <div class="topDec"></div>
+            <div class="titleTxt">
+                互帮互助指数
+            </div>
+            <div class="linkLockIcon">是1+1=3？还是1+1=1？</div>
+        </div>
+        <div class="descInfo">
+            <div class="topDec"></div>
+            <div class="titleTxt">
+                老公旺妻指数
+            </div>
+            <div class="linkLockIcon">他是不是家中的顶梁柱？</div>
+        </div>
+        <div class="descInfo">
+            <div class="topDec"></div>
+            <div class="titleTxt">
+                老婆旺夫指数
+            </div>
+            <div class="linkLockIcon">她是不是你的贤内助？</div>
+        </div>
+        <div class="descInfo">
+            <div class="topDec"></div>
+            <div class="titleTxt">
+                子女运势指数
+            </div>
+            <div class="linkLockIcon">子女运势兴旺还是凋敝？</div>
+        </div>
+        <div class="descInfo">
+            <div class="topDec"></div>
+            <div class="titleTxt">
+                家庭和睦指数
+            </div>
+            <div class="linkLockIcon">双方产生矛盾后，是彼此懂得谦让、宽容，还是争吵不休？</div>
+        </div>
+    </div>
+    <div class="contact_content clear_float hidden">
+        <div class="qq_txt">测算答疑：QQ1254836806</div>
+        <div class="phone_txt">电话：<a href='tel:020-28965013'>020-28965013</a></div>
+    </div>
+
+    <div class="copyRight clear_float hidden">
+        Copyright © CALENDAR Tech. All Rights Reserved.
+    </div>
+    <div class="share hidden">
+        <img class="shareCode" src="./images/shareCode.png" />
+        <div class="shareInfo">长按或扫描识别二维码<br/>查看你和TA的感情状态</div>
+    </div>
+</div>
+
+<div class="viewDetail hidden" onclick="_czc.push(['_trackEvent', 'start_cs.C', 'bzhh_unlock+click+pay_unlock'],'','','');">立即查看答案</div>
+<script type="text/javascript" src="./scripts/vc.js"></script>
+<script type="text/javascript" src="//mobile.51wnl.com/utils/in-view/dist/in-view.min.js"></script>
+</body>
+</html>

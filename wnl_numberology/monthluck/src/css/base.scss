@@ -1,0 +1,184 @@
+@mixin _bg($url, $ext) {
+    // 背景图片适配2倍屏与3倍屏
+    background-image: url($url + "@2x." + $ext);
+    background-repeat: no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+        background-image: url($url + "@3x." + $ext);
+    }
+}
+@font-face {
+    font-family: 'font';
+    src: url('../../static/libs/font/xpyy.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'font2';
+    src: url('../../static/libs/font/xpyy2.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+.hidden {
+    display: none !important;
+}
+.wnl_history_btn {
+    bottom: 64px !important;
+    transition: all .6s;
+    z-index: 50 !important;
+}
+.contact {
+    margin-top: 0.19rem;
+    text-align: center;
+    color: #000;
+    font-size: 0.11rem;
+    font-family: 'font';
+    .copyright {
+        margin-top: 6px;
+    }
+}
+.payitem {
+    .payitem_detail {
+        width: 3.21rem;
+        height: 2.53rem;
+        // height: 2.33rem;
+        margin: 0.27rem auto 0;
+        // background-color: rgb(253, 249, 226);
+        overflow: hidden;
+        box-shadow: 3.6px 3.6px 8px 1px #A14611;
+        border-radius: 3px;
+        // border-radius: 0 0 3px 3px;
+        .payitem_title {
+            width: 100%;
+            height: 0.3rem;
+            line-height: 0.32rem;
+            background: url('../img/v2/tiaotiao01.png') no-repeat;
+            background-size: 100% 100%;
+            text-align: center;
+            color: #F9EED8;
+            border-radius: 3px 3px 0 0;
+            // letter-spacing: 1.2em;
+            font-size: 0.18rem;
+            font-family: 'font2';
+        }
+        .payitem_con {
+            width: 100%;
+            height: 2.48rem;
+            background: url('../img/v2/banban02.png') no-repeat;
+            // background-color: #fff;
+            background-position-y: -0.2rem;
+            background-size: 100% 100%;
+            text-align: center;
+            color: #7D2E00;
+            font-family: 'font2';
+            box-sizing: border-box;
+            padding-top: 0.38rem;
+            .payitem_text {
+                font-size: 0.16rem;
+            }
+            .payitem_tip1 {
+                margin-top: 0.35rem;
+            }
+            .payitem_tip1, .payitem_tip2 {
+                font-size: 0.16rem;
+            }
+            .payitem_btn {
+                width: 1.43rem;
+                height: 0.43rem;
+                margin: 0.29rem auto 0;
+                background: url('../img/v2/anniu04.png') no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    .mtop {
+        margin: 0.53rem auto 0;
+    }
+}
+
+.paymask {
+    // position: fixed;
+    // width: 3.21rem;
+    // height: 2.53rem;
+    // // height: 2.33rem;
+    // top: 50%;
+    // left: 50%;
+    // margin-left: -1.605rem;
+    // margin-top: -1.265rem;
+    // background-color: rgb(253, 249, 226);
+    // box-shadow: 3.6px 3.6px 8px 1px #A14611;
+    // border-radius: 0 0 3px 3px;
+    // overflow: hidden;
+    // z-index: 99;
+    .paymask_mask {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($color: #000000, $alpha: .3);
+        z-index: 2;
+    }
+    .paymask_detail {
+        position: fixed;
+        width: 3.21rem;
+        height: 2.53rem;
+        // height: 2.33rem;
+        top: 50%;
+        left: 50%;
+        margin-left: -1.605rem;
+        margin-top: -1.265rem;
+        background-color: rgb(253, 249, 226);
+        box-shadow: 3.6px 3.6px 8px 1px #A14611;
+        // border-radius: 0 0 3px 3px;
+        border-radius: 3px;
+        overflow: hidden;
+        z-index: 99;
+        .paymask_title {
+            width: 100%;
+            height: 0.2rem;
+            line-height: 0.21rem;
+            background: url('../img/v2/tiaotiao01.png') no-repeat;
+            background-size: 100% 100%;
+            text-align: center;
+            color: #F9EED8;
+            border-radius: 3px 3px 0 0;
+            // letter-spacing: 1.2em;
+            font-size: 0.15rem;
+            font-family: 'font';
+        }
+        .paymask_con {
+            width: 100%;
+            height: 2.48rem;
+            background: url('../img/v2/banban02.png') no-repeat;
+            // background-color: #fff;
+            background-position-y: -0.2rem;
+            background-size: 100% 100%;
+            text-align: center;
+            color: #7D2E00;
+            font-family: 'font2';
+            box-sizing: border-box;
+            padding-top: 0.32rem;
+            z-index: 99 !important;            
+            // color: #F9EED8;
+            .paymask_text {
+                font-size: 0.24rem;
+                z-index: 99 !important;
+            }
+            .paymask_tip1 {
+                margin-top: 0.35rem;
+            }
+            .paymask_tip1, .paymask_tip2 {
+                font-size: 0.16rem;
+            }
+            .paymask_btn {
+                width: 1.43rem;
+                height: 0.43rem;
+                margin: 0.41rem auto 0;
+                background: url('../img/v2/anniu04.png') no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>生命灵数</title>
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <script src="./static/libs/js/vconsole.min.js"></script> -->
+	<script src="./static/libs/js/wnlui.js"></script>	
+	<!-- <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/3.4.1/css/swiper.min.css"> -->
+	<!-- <script src="https://cdn.bootcss.com/Swiper/3.4.1/js/swiper.min.js"></script>		 -->
+	<!-- <link rel="stylesheet" href="../static/libs/css/swiper.css"> -->
+</head>
+
+<body>
+	<div class="content" id="content">
+		<div class="head">
+			<div class="num">8</div>
+			<div class="wh"></div>
+			<div class="wharea"></div>
+			<div class="avtar">
+				<div class="avtar_img">
+						<img src="./img/touxiang.jpg" id="avtar" alt="" width="80" height="80">
+				</div>
+				<img src="./img/smls_home_banner_head-rim@3x.png" alt="" class="avtar_bg" width="137" height="82">
+			</div>
+			<div class="user">
+				<div class="nickname">张三</div>
+				<div class="changeuser"></div>
+			</div>
+			<div class="luck">
+				<div class="luckcolor">代表色：<span id="color">靛色</span></div>
+				<div class="luckbirth">1995年03月26日</div>
+				<div class="lucktext">对应：<span>眉心轮</span></div>				
+			</div>
+		</div>
+
+		<!-- 今日运势 -->
+		<div class="todayluck">
+			<div class="todaytitle">今日运势</div>
+			<div class="todayluck_share"></div>
+			<div class="todayluck_detail">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+				<div class="line4"></div>
+				<div class="todayluck_tab hidden">
+					<div class="tlucktext actcolor">今日运势</div>
+					<div class="line"></div>
+					<div class="mlucktext">明日运势</div>
+					<div class="line5"></div>
+					<div class="hasluck_share">
+						<img src="./img/smls_home_share_nor_icon@3x.png" alt="">
+					</div>					
+				</div>
+				<div class="todayselected hidden">
+					<div class="todayselected_1"></div>
+					<div class="todayselected_2"><div class="act"></div></div>
+					<div class="todayselected_3"></div>					
+				</div>
+				<div class="nextdayselected hidden">
+					<div class="nextdayselected_1"></div>
+					<div class="nextdayselected_2"><div class="act"></div></div>
+					<div class="nextdayselected_3"></div>					
+				</div>
+				<div class="daydetail">
+						<div class="daymask hidden">
+							<div class="daymask_mask">
+								<div class="dayljck pay" data-monthnum="">立即查看</div>
+								<div class="daytip">解锁月运后可永久查看明日月势哦</div>								
+							</div>
+						</div>
+						<div class="day_yryz">
+							<div class="yryzicon"></div>
+							<div class="yryztext">今天在心中默念十句“我是富有的”增强自己这个月的财富运势。</div>
+						</div>
+						<div class="dayluck">
+							<div class="dayluck_aq">
+								<div class="dayluck_aq_icon"></div>
+								<div class="dayluck_aq_text">爱情</div>
+								<div class="dayluck_aq_progress">
+									<div class="dayluck_aq_slide"></div>
+								</div>
+								<div class="dayluck_aq_num">40</div>						
+							</div>
+							<div class="dayluck_sy">
+								<div class="dayluck_sy_icon"></div>
+								<div class="dayluck_sy_text">事业</div>
+								<div class="dayluck_sy_progress">
+									<div class="dayluck_sy_slide"></div>							
+								</div>
+								<div class="dayluck_sy_num">60</div>						
+							</div>
+							<div class="dayluck_cf">
+								<div class="dayluck_cf_icon"></div>
+								<div class="dayluck_cf_text">财运</div>
+								<div class="dayluck_cf_progress">
+									<div class="dayluck_cf_slide"></div>							
+								</div>
+								<div class="dayluck_cf_num">80</div>						
+							</div>
+						</div>
+						<div class="daylucktext">
+							<div class="daylucktext_color">
+								<div class="daylucktext_color_text">补运色</div>
+								<div class="daylucktext_color_desc">深灰色</div>						
+							</div>
+							<div class="line"></div>
+							<div class="daylucktext_wp">
+								<div class="daylucktext_wp_text">补气物</div>
+								<div class="daylucktext_wp_desc">黑米</div>
+							</div>
+							<div class="line"></div>					
+							<div class="daylucktext_people">
+								<div class="daylucktext_people_text">帮运人</div>
+								<div class="daylucktext_people_desc">数字8的人</div>
+							</div>				
+						</div>
+						<div class="dayluck_zy">
+							<div class="dayluck_zy_aq">
+								<div class="dayluck_zy_aq_title">爱情运转</div>
+								<div class="dayluck_zy_aq_desc">在今日的你有财运没爱运，要留意和家人的对话语气，深呼吸会让你避过口角。</div>						
+							</div>
+							<div class="dayluck_zy_sy">
+								<div class="dayluck_zy_sy_title">事业运转</div>
+								<div class="dayluck_zy_sy_desc">在今日的你，因财运旺盛，事业也相帮衬，做起事来得心应手，在工作上可以多发力。</div>						
+							</div>
+							<div class="dayluck_zy_cf">
+								<div class="dayluck_zy_cf_title">财富运转</div>
+								<div class="dayluck_zy_cf_desc">在今日的你，因天时旺你偏财运，可以出点小财，买个体彩，既帮人又给自己一个希望。</div>						
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<!-- 图卡游戏 -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide hidden">
+					<div class="tkitem">
+						<div class="item_detail">
+							<div class="squar1"></div>
+							<div class="squar2"></div>
+							<div class="squar3"></div>
+							<div class="squar4"></div>
+							<div class="item_con">
+								<div class="tkleft">
+									<div class="tkleft1">图卡游戏</div>
+									<div class="tkleft2"><span>今天属于你的图卡，你看到了什么？有什么感觉，花三分钟，去关注一下自己的感觉</span><span id="more" class="more hidden">...</span><span class="ckqw hidden" id="ckqw">查看全文</span></div>
+									<div class="tkleft3">(注：明天可查看答案哦)</div>								
+								</div>
+								<div class="tkright"></div>
+								<!-- <img src="" class="tkright" alt=""> -->
+							</div>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 月运 -->
+		<div class="monthluck hidden">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+			<div class="line4"></div>			
+			<div class="monthluck_tab">
+				<div class="monthtext actcolor">本月运势</div>
+				<div class="line"></div>
+				<div class="nextmonthtext">下月运势</div>				
+			</div>
+			<div class="monthselected">
+				<div class="monthselected_1"></div>
+				<div class="monthselected_2"></div>
+				<div class="monthselected_3"></div>					
+			</div>
+			<div class="nextmonthselected hidden">
+				<div class="nextmonthselected_1"></div>
+				<div class="nextmonthselected_2"></div>
+				<div class="nextmonthselected_3"></div>					
+			</div>
+			<div class="monthdetail">
+					<div class="monthmask hidden">
+						<div class="monthmask_mask">
+							<div class="monthljck pay" data-monthnum=""><div class="monthactive hidden"></div>立即查看</div>						
+							<div class="monthtip">解析当月运势，查看本月开运建议</div>
+						</div>
+					</div>
+					<div class="monthluck_zy">
+						<div class="monthluck_zy_aq">
+							<div class="monthluck_zy_aq_text">本月爱情运</div>
+							<div class="monthluck_zy_aq_icon1 icon"></div>
+							<div class="monthluck_zy_aq_icon2 icon"></div>					
+							<div class="monthluck_zy_aq_icon3 icon"></div>					
+							<div class="monthluck_zy_aq_icon4 icon"></div>					
+							<div class="monthluck_zy_aq_icon5 icon"></div>															
+						</div>
+						<div class="monthluck_zy_sy">
+							<div class="monthluck_zy_sy_text">本月事业运</div>
+							<div class="monthluck_zy_sy_icon1 icon"></div>
+							<div class="monthluck_zy_sy_icon2 icon"></div>					
+							<div class="monthluck_zy_sy_icon3 icon"></div>					
+							<div class="monthluck_zy_sy_icon4 icon"></div>					
+							<div class="monthluck_zy_sy_icon5 icon"></div>															
+						</div>
+						<div class="monthluck_zy_cf">
+							<div class="monthluck_zy_cf_text">本月财富运</div>
+							<div class="monthluck_zy_cf_icon1 icon"></div>
+							<div class="monthluck_zy_cf_icon2 icon"></div>					
+							<div class="monthluck_zy_cf_icon3 icon"></div>					
+							<div class="monthluck_zy_cf_icon4 icon"></div>					
+							<div class="monthluck_zy_cf_icon5 icon"></div>															
+						</div>
+					</div>
+					<div class="monthluck_zy_desc"> 你在这个月，以时间廊的自我能量密码来说，他是7，所以在这个月，整体的地球上的能量，会出现探索、变动及变局，掌握地球的二股势力，在这个月会互相牵引，各有胜算，因为两股势力的彼此制衡，不相上下的结果，反而让这个月对每个人的生命能量更加充满挑战，如何在这个月里能够多运用自身数字能量密码来稳定自身运势？ 整体来说请多保持一颗“喜乐”的心，会更容易掌握好运势。</div>
+			</div>
+		</div>
+		<!-- 开运指南 -->
+		<div class="kyzn hidden">
+			<div class="kyzn_title">开运指南</div>
+			<div class="kyzn_detail">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+				<div class="line4"></div>				
+				<div class="kyzn_text"> 5月是你的创造金钱的月份，在这个月你会有许多机会可以赚到金钱，可以多上网络，收红包，这个月在网络上，你会有许多意外财，你的金钱能量在这个月会爆棚，要多多留意，并且会出现在虚拟世界，买个体彩也是好主意。财富冲克爱的运势，这个月个人要多留意语言的表达，多说谢谢，会避免自己这个月的爱的冲突。</div>
+			</div>
+		</div>
+		<!-- 查看历史月运 -->
+		<div class="historybtn hidden"><div class="hisactive hidden"></div>查看历史月运</div>
+		<!-- 大师描述 -->
+		<div class="cstip">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+			<div class="line4"></div>
+			<div class="cstip1">你对命运感到困惑吗？</div>
+			<div class="cstip2">你的感情婚姻顺历吗？</div>			
+			<div class="cstip3">你的财运何时才会到来？</div>			
+			<div class="cstip4">你的事业是会红火还是平淡？</div>			
+			<div class="cstip5">潘老师结合你的八字情况，准确预测你的</div>			
+			<div class="cstip6">命运情况，为您解决一切事业财运问题。</div>
+			<div class="line"></div>
+			<div class="ds_desc">
+				<!-- <div class="ds_icon"></div> -->
+				<img src="//qiniu.image.cq-wnl.com/content/201804176e0ee67a8844484f99fc1a92abb26a32.png" class="ds_icon" alt="">
+				<div class="ds_detail">
+					<div class="ds_detail_title">理·天女</div>
+					<div class="ds_detail_text">95年打开能量体质，承接宇宙能量，研究生命能量源头之密码，擅长阅读因果，知命改运。</div>					
+				</div>				
+			</div>
+			<div class="zxcs"><div class="zxcsactive hidden"></div>进入在线测算</div>								
+		</div>
+
+		<!-- 测算描述1 -->
+		<div class="csdesc1">
+			<div class="csdesc1_top"></div>
+			<div class="csdesc1_bottom">
+				<div class="squar3"></div>
+				<div class="squar4"></div>
+				<div class="csdesc1_bottom_text">
+					<div class="text1">人的命运，到底可不可以测算？如何测算？如何改变命运？改变命运是为了自己更好，而这个更好是什么呢？</div>
+					<div class="text2">对于命运，人总有许多的不确定感，而大部分的人，都很想掌握命运，让自己更好。但是，到底有没有可以掌握命运最快速的方法呢？</div>
+					<div class="text3">人的命是60%的固定轨，也是算命可以算出来的。人的运是40%的变数轨，这个运才是决定好坏的决策点。那要如何知道那60%，而后掌握那40%呢？</div>
+					<div class="text4">你能做到60%的知晓，40%的改变，一生当然顺风顺水。籍由60%的固定轨，来知晓我们每日的命轨，而这命轨就是天时，加上我们自己的原生生命能量密码来决定每日的发生事件。而那40%的决定权，就是生命灵数的重点，透由每日念转，决定了快乐一天，幸福一天，还是黑暗一天。</div>
+					<div class="text5">心想事成从现在开始。</div>					
+				</div>
+			</div>
+		</div>
+		<!-- 测算描述2 -->
+		<div class="csdesc2">
+			<div class="csdesc2_top"></div>
+			<div class="csdesc2_bottom">
+				<div class="squar3"></div>
+				<div class="squar4"></div>				
+				<div class="csdesc2_bottom_text">
+					<div class="text1"> 阳历生日是目前地球70亿人口使用最多的生日数字，所以它的运算能量影响一个人也是最大的，对于60%的命格，这个数字密码占了其中的60%，基本上已决定了你的人生大部分，那该如何计算你的生命灵数呢？</div>
+					<div class="text2"> 就是将你的阳历生日的数字全部加起来，最后归整到一个个位数字，例如：1980年02月06生日的人，1+9+8+0+0+2+0+6=26，2+6=8，他的生命灵数就是8。在1980年02月06号这个日子出生的人，</div>
+					<div class="text3">他的生命灵数就是8，最后这个数字，也是他一生的生命灵数。</div>
+				</div>
+			</div>
+		</div>
+		<!-- 用户反馈 -->
+		<div class="yhfk">
+			<div class="yhfk_title">用户反馈</div>
+			<div class="yhfk_num">已有45328人开启一日一转</div>
+			<div class="yhfk_detail">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+				<div class="line4"></div>
+				<div class="wrap">
+					<div class="fklist" id="marquee-top">
+						<!-- <div class="fkwrap"> -->
+							<div class="fkitem marqueeItem hidden">
+								<div class="fkinfo">
+									<div class="fkname">王女士</div>
+									<div class="fktext">1234547878</div>
+								</div>
+								<div class="fkline"></div>
+							</div>
+						<!-- </div> -->
+					</div>
+				</div>			
+			</div>
+		</div>
+		<!-- 相关应用 -->
+		<div class="xgyy">
+			<div class="xgyy_title">相关应用</div>
+			<div class="xgyy_detail">
+				<div class="xgyy_wrap">
+					<div class="xgyy_item hidden" >
+						<div class="xgyy_item_text" data-url="">
+							<div class="text"></div>
+						</div>
+					</div>
+					<div class="hold"></div>									
+				</div>
+			</div>
+		</div>
+		<!-- 联系方式 -->
+		<div class="contact">
+			<div class="qq">测算答疑：QQ1254836806 电话：020-28965013</div>
+		</div>
+	</div>
+
+	<!-- 底部按钮 -->
+	<div class="comfirm todaybtn">
+		<div class="comfirmtext todaybtn_text"><div class="todayactive hidden"></div>开启今日运势</div>
+	</div>
+	<div class="comfirm monthbtn pay hidden" data-monthnum="">
+		<div class="comfirmtext monthbtn_text"><div class="monthactive hidden"></div>解锁本月运势</div>
+	</div>
+	<div class="comfirm nextmonthbtn pay hidden" data-monthnum="">
+		<div class="comfirmtext nextmonthbtn_text"><div class="nextmonthactive hidden"></div>解锁下月运势</div>
+	</div>
+	<!-- 客服会话弹窗 -->
+	<div class="kfmask _hidden">
+		<div class="kfmask_mask"></div>
+		<div class="kfmask_con">
+			<div class="kfmask_detail">
+				<div class="kfmask_detail_box">
+					<div class="squar1"></div>
+					<div class="squar2"></div>
+					<div class="squar3"></div>
+					<div class="squar4"></div>
+					<div class="kfmask_detail_box_top"></div>
+					<div class="kfmask_detail_box_center">
+						<div class="text1">你即将进入客服会话， </div>
+						<div class="text2"><span>在对话框内输入“1”</span>将获得神秘链接</div>
+						<div class="text3">立即进入大师亲算</div>						
+					</div>
+					<div class="kfmask_detail_box_bottom">马上进入</div>					
+				</div>
+			</div>
+			<!-- <div class="kfmask_close"></div> -->
+			<img src="//qiniu.image.cq-wnl.com/content/201804287d69345d4568495ab615fcf3017df2b6.png" class="kfmask_close" alt="">
+		</div>
+	</div>
+	<!-- 查看数字详解弹窗 -->
+	<div class="smlsmask hidden">
+		<div class="smlsmask_mask"></div>
+		<div class="smlsmask_con">
+			<div class="smlsmask_detail">
+				<div class="smlsmask_detail_top">生命灵数:<span id="lifenum">8</span></div>
+				<div class="smlsmask_detail_bottom">
+					<div class="smlsmask_detail_bottom_text">
+						<div class="squar3"></div>
+						<div class="squar4"></div>						
+						<div class="smlsmask_detail_bottom_text_desc">数字8代表颜色为白色，对应足三里穴位，数字8的人，有数字天分，有经济头脑，喜爱金钱游戏，对财富需求大，生命变化大，很喜欢折腾自己，一生来学习富足的考验。</div>
+					</div>					
+				</div>				
+			</div>
+			<!-- <div class="smlsmask_close"></div>			 -->
+			<img src="//qiniu.image.cq-wnl.com/content/201804287d69345d4568495ab615fcf3017df2b6.png" class="smlsmask_close" alt="">
+		</div>
+	</div>
+
+	<!-- 图卡弹窗 -->
+	<div class="tkmask hidden">
+		<div class="tkmask_mask"></div>
+		<div class="tkmask_con">
+			<div class="tkmask_detail">
+				<div class="tkmask_detail_box">
+					<div class="squar1"></div>
+					<div class="squar2"></div>
+					<div class="squar3"></div>
+					<div class="squar4"></div>					
+					<div class="tkmask_detail_box_top"></div>
+					<div class="tkmask_detail_box_text">今天属于你的这张卡，图卡表象呈现的是一个母亲和一个孩子，反应的是我们和母亲的关系，在你注视这张图卡时，你的感受是温暖、是冷漠、是关爱、是责备……无论你的感受是什么，图卡正在提醒着你和母亲的关系，是你有机会可以去转化的，给她打个电话吧！如果她不在了，请在心里告诉她，你想她！你爱她！</div>																							
+				</div>
+			</div>
+			<!-- <div class="tkmask_close"></div> -->
+			<img src="//qiniu.image.cq-wnl.com/content/201804287d69345d4568495ab615fcf3017df2b6.png" class="tkmask_close" alt="">
+		</div>
+	</div>
+
+	<!-- 首页进入动画 -->
+	<div class="indexani hidden">
+		<div class="indexani_mask"></div>
+		<div class="indexani_con">
+			<div class="indexani_detail">
+				<div class="indexani_detail_top"></div>
+				<div class="indexani_detail_box">
+					<div class="indexani_detail_box_text">
+							<div class="squar3"></div>
+							<div class="squar4"></div>
+						输入您的阳历出生日期，获取您的生命能量密码，将您的生命能量密码结合宇宙能量，预知您的每日运势，让您心想事成。</div>
+				</div>				
+			</div>
+			<!-- <div class="indexani_close"></div> -->
+			<img src="//qiniu.image.cq-wnl.com/content/201804287d69345d4568495ab615fcf3017df2b6.png" class="indexani_close" alt="">
+		</div>
+	</div>
+	<!-- 输入日期后动画显示弹窗 -->
+	<div class="numani hidden">
+		<div class="numani_mask"></div>
+		<div class="numani_con">
+			<div class="numani_detail">
+				<div class="numani_num"></div>
+			</div>
+			<div class="numani_btn">开启今日运势</div>
+		</div>
+	</div>
+	<!-- 微信分享遮罩 -->
+	<div class="wxsharemask hidden">
+		<img src="./img/guide.png" alt="">
+	</div>
+	<!-- swiper -->
+	<div class="tip">请选择您的出生日期</div>
+</body>
+
+</html>

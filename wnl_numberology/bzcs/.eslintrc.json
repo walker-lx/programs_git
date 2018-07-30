@@ -1,0 +1,102 @@
+// http://eslint.org/docs/user-guide/configuring
+{
+	"root": true,
+	// parser: "eslint:recommended",
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "script"
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"jquery": true
+	},
+	"globals": {
+        "Base64": true,
+        "_czc":true,
+        "_":true,
+        "Chart":true,
+        "ylwindow":true,
+        "echarts":true,
+        "Swiper":true,
+        "userId":true,
+        "deviceId": true,
+        "mac":true,
+        "imei":true,
+        "idfa":true,
+        "channel":true,
+        "posId":true,
+        "boundId":true,
+        "pushToken":true,
+        "pToken":true,
+        "openid":true
+	},
+	"extends": "eslint:recommended",
+	"plugins": [
+		"html",
+		"import"
+	],
+	"settings": {
+        // "html/html-extensions": [".html","vue"],  // consider .html and .we files as HTML
+        // "html/javascript-mime-types": ["text/javascript", "text/jsx"],  // also use script tags with a "text/jsx" type attribute
+        "html/javascript-mime-types": "/^text\\/(javascript|jsx)$/"
+    },
+	 // add your custom rules here
+	"rules": {
+		// allow debugger during development
+		// "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"no-tabs": "off",
+		"quotes": [
+			"error",
+			"single",
+			{
+				"avoidEscape": true,
+				"allowTemplateLiterals": true
+			}
+		],
+		"no-unused-vars": [
+			"error",
+			{
+				"vars": "all",
+				"args": "after-used"
+			}
+		],
+		"brace-style": [
+			"error",
+			"stroustrup"
+		],
+		"semi": [
+			"error",
+			"always"
+		],
+		"no-console": 0,
+		"prefer-const": 0,
+		"prefer-template": 0,
+		"no-param-reassign": 0,
+		"comma-dangle": [
+			1,
+			"never"
+		],
+		"spaced-comment": [
+			0,
+			"always"
+		],
+		"func-names": 0,
+		"no-underscore-dangle": 0,
+		"import/prefer-default-export": 1,
+		"class-methods-use-this": 0,
+		"no-prototype-builtins": 0,
+		"import/no-extraneous-dependencies": 0,
+		"radix": 0,
+		"eol-last": "off",
+		"linebreak-style": "off",
+		"max-len": ["error", 250]
+	}
+}

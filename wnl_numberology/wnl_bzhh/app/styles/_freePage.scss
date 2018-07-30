@@ -1,0 +1,280 @@
+.result_main{
+    padding-top: 20px !important;
+}
+.payedContent{
+    padding-top: 20px !important;
+}
+.resultContent{
+    // height: 285px;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #ffe3ca;
+    .resultCard {
+        border: 1px solid #d2000b;
+        // height: 240px;
+        box-sizing: border-box;
+        padding: 0 20px;
+        position: relative;
+        .resultCardTitle{
+            // font-family: zidingyi;
+            margin: 20px auto;
+            width: 200px;
+            height: 41px;
+            font-size: 26px;
+            line-height: 41px;
+            letter-spacing: 5px;
+            text-align: center;
+            color: #ffffff;
+            background-image: url(../images/bazititle-icon.png);
+            background-size: cover;
+        }
+        .shareTitle {
+            font-size: 17px;
+            line-height: 1;
+            text-align: left;
+            color: #333333;
+            margin-bottom: 0.1rem;
+        }
+        .resultCardContent {
+            border-top: 1px dotted #999;
+            border-bottom: 1px dotted #999;
+            width: 100%;
+            padding-top: 10px;
+            position: relative;
+            .line {
+                font-size: 17px;
+                line-height: 1;
+                text-align: left;
+                color: #333333;
+                margin-bottom: 10px;
+            }
+            .nameLine{
+                max-width: 145px;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+                overflow:hidden;
+            }
+            .lineBody {
+                color: #d2000b;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 1rem;
+                height: 1rem;
+                right: 0;
+                top: 50%;
+                margin-top: -0.5rem;
+                background-image: url(../images/yinzhang-icon@3x.png);
+                background-size: cover;
+            }
+        }
+        .percentContent {
+            font-size: 15px;
+            line-height: 1;
+            color: #333333;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            #percent{
+                color: #d2000b;
+            }
+        }
+        .corner{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffe3ca;
+        }
+        .corner1{
+            top: -1px;
+            left: -1px;
+            background-color: #ffe3ca;
+            background-image: url(../images/huabian1-icon@3x.png);
+            background-size: cover;
+        }
+        .corner2{
+            top: -1px;
+            right: -1px;
+            background-color: #ffe3ca;
+            background-image: url(../images/huabian2-icon@3x.png);
+            background-size: cover;
+        }
+        .corner3{
+            bottom: -1px;
+            left: -1px;
+            background-color: #ffe3ca;
+            background-image: url(../images/huabian3-icon@3x.png);
+            background-size: cover;
+        }
+        .corner4{
+            bottom: -1px;
+            right: -1px;
+            background-color: #ffe3ca;
+            background-image: url(../images/huabian4-icon@3x.png);
+            background-size: cover;
+        }
+    }
+    .shareBtn {
+        color: #d2000b;
+        position: relative;
+        height: 18px;
+        padding-top: 10px;
+        line-height: 18px;
+        font-size: 15px;
+        width: 100%;
+        text-align: center;
+        margin-left: 14px;
+        margin-bottom: 6px;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            top: 10px;
+            margin-left: -28px;
+            background-image: url(../images/share-icon@3x.png);
+            background-size: cover;
+        }
+    }
+}
+
+.moreLinkContent .descInfo{
+    margin-top: 20px !important;
+    height: 177px;
+    background-image: url(../images/locklayer-pic@3x.png);
+    box-sizing: border-box;
+    background-size: cover;
+    .titleTxt{
+        font-size: 20px;
+        line-height: 1;
+        text-align: left;
+        color: #333333;
+        font-weight: 500;
+    }
+    .linkLockIcon{
+        font-size: 17px;
+        line-height: 1.29;
+        text-align: center;
+        color: #333333;
+        padding-top: 72px;
+        box-sizing: border-box;
+        &::before{
+            content: "";
+            position: absolute;
+            background-image: url(../images/lock-icon@3x.png);
+            background-size: cover;
+            width: 36px;
+            height: 41px;
+            top: 68px;
+            left: 50%;
+            margin-left: -18px;
+        }
+    }
+}
+
+.moreInfoContent .descInfo{
+    margin-top: 20px;
+    .titleTxt {
+        margin-bottom: 15px;
+        font-size: 20px;
+        line-height: 1;
+        text-align: left;
+        color: #333333;
+        font-weight: 500;
+        .span{
+            float: left;
+            margin-right: 6px;
+            margin-top: -5px;
+            min-width: 32px;
+            text-align: center;
+            height: 32px;
+            line-height: 1;
+            padding-top: 7px;
+            // border: solid 2px #d2000b;
+            box-sizing: border-box;
+            border-radius: 50%;
+            font-size: 15px;
+            font-weight: 500;
+            color: #d2000b;
+            position: absolute;
+        }
+    }
+    .hhInfoTxt {
+        border-top: 1px dotted #999999;
+        padding-top: 10px;
+        font-size: 17px;
+        text-align: justify;
+        color: #333333;
+        line-height: 24px;
+    }
+}
+.payedContent{
+    .clear_float{
+        margin-bottom: 0px !important;
+    }
+}
+
+.viewDetail{
+    position: fixed;
+    z-index: 999;
+    height: 60px;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	background-color: #ffda4d;
+    box-shadow: 0 -1px 4px 0 rgba(181, 15, 15, 0.5);
+    font-weight: 500;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    color: #a20605;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+.share{
+    position: relative;
+    margin-top: 0.5rem;
+    &:before{
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1.97rem;
+        left: -0.15rem;
+        top: 0;
+        background-image: url('../images/left-xizi-icon@3x.png');
+        background-size: cover;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1.97rem;
+        right: -0.15rem;
+        top: 0;
+        background-image: url('../images/right-xizi-icon@3x.png');
+        background-size: cover;
+    }
+    .shareCode{
+        width: 1.28rem;
+        padding: 0.08rem;
+        background: rgba(256,256,256,0.2);
+        margin: 0 auto;
+        transform: translate(-50%,0);
+        left: 50%;
+        position: relative;
+
+    }
+    .shareInfo{
+        color: #FFF;
+        @extend .font_17;
+        line-height: 1.29;
+        text-align: center;
+        margin-top: 0.15rem;
+        margin-bottom: 0.5rem;
+    }
+}

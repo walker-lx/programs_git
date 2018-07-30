@@ -1,0 +1,243 @@
+html,
+body {
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: -apple-system, "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+body {
+    background: url('../img/background.jpg');
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.head-section {
+    background: 
+    url('../img/flower.png') center no-repeat,
+    url('../img/flower2.png') center no-repeat;
+    background-size: cover;
+}
+
+.header-bar {
+    width: 100%;
+    background-color: #d03e3f;
+    height: 60px;
+}
+
+.top-key {
+    width: 100%;
+    height: 211px;
+    position: relative;
+    text-align: center;
+    background-image: url('../img/top-picture2.png');
+    background-size: cover; 
+    margin-top: 20px;
+}
+
+.key-title {
+    font-family: PingFangSC;
+    font-size: 15px;
+    line-height: 0.13;
+    letter-spacing: 1.2px;
+    text-align: center;
+    color: #ff8b76;
+    padding-top: 10%;
+}
+
+.keywords {
+    margin-top: 10px;
+    width: 37%;
+    margin-left: 31%;
+}
+
+.keyword {
+    width: 55px;
+    height: 11.5px;
+    font-family: PingFangSC;
+    font-size: 12px;
+    line-height: 0.9;
+    letter-spacing: 1.6px;
+    text-align: left;
+    color: #ffffff;
+    padding: 2px 1px 2px 3px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.keyword01 {
+    border-radius: 3px;
+    background-color: #ffab79;
+}
+
+.keyword02 {
+    border-radius: 3px;
+    background-color: #7fbbf2;
+    margin-left: 5px;
+}
+
+.keyword03 {
+    border-radius: 3px;
+    background-color: #a2d892;
+}
+
+.keyword04 {
+    border-radius: 3px;
+    background-color: #ff7f6e;
+    margin-left: 5px;
+}
+
+.report-section {
+    margin-top: 25px;
+}
+
+.report {
+    border-radius: 7.5px;
+    background-color: #ffffff;
+    box-shadow: 2.4px 4.4px 16px 0 rgba(131, 47, 38, 0.19);
+    margin: 0 10px 10px 10px;
+    padding-bottom: 1px;
+    cursor: pointer;
+}
+
+.report-header {
+    text-align: center;
+}
+
+.report-header-01 {
+    height: 30px;
+    width: 25%;
+    background-position: 100% 50%;
+    float: left;
+}
+
+.report-header-01>img {
+    width: 60%;
+    height: 50%;
+    padding: 6px 0 0 20px;
+}
+
+.report-header-02 {
+    height: 30px;
+    width: 25%;
+    background-position: 0 50%;
+    float: right;
+}
+
+.report-header-02>img {
+    width: 60%;
+    height: 50%;
+    padding: 6px 20px 0 0;
+}
+
+.header-title {
+    font-family: PingFangSC;
+    font-size: 18px;
+    line-height: 2.07;
+    letter-spacing: 1.4px;
+    text-align: center;
+    color: #ff8a75;
+    width: auto;
+    display: inline-block;
+}
+
+.report-lock {
+    margin: 0 5px 10px 5px;
+    border-radius: 4px;
+    text-align: center;
+    height: 55px;
+}
+
+.report-lock-icon {
+    display: inline-block;
+    color: #fff;
+    background-repeat: no-repeat;
+    /*background-position: 0 0;*/
+    margin-top: 5px;
+    width: 19px;
+    height: 20px;
+}
+
+.report-lock-icon>img {
+    width: 85%;
+    height: 85%;
+}
+
+.report-lock-icon>image {
+    display: table-cell;
+}
+
+.report-content {
+    display: inline-block;
+    font-family: PingFangSC;
+    font-size: 15px;
+    line-height: 3.6;
+    letter-spacing: 0.6px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.report-content-01 {
+    background-image: -webkit-linear-gradient(98deg, #ffa956, #ff834c);
+}
+
+.report-content-02 {
+    background-image: -webkit-linear-gradient(78deg, #7cd1ae, #8cca62);
+}
+
+.report-content-03 {
+    background-image: -webkit-linear-gradient(78deg, #ff9084, #ff7e7e);
+}
+
+.report-content-04-01 {
+    background-image: -webkit-linear-gradient(78deg, #ffb07b, #ff7ea5);
+}
+
+.report-content-04-02 {
+    background-image: -webkit-linear-gradient(78deg, #ff719d, #ff7efd);
+}
+
+.report-content-05-01 {
+    background-image: -webkit-linear-gradient(78deg, #79dac0, #5ca3f4);
+}
+
+.report-content-05-02 {
+    background-image: -webkit-linear-gradient(78deg, #6fcceb, #7d80ff);
+}
+
+.view-report {
+    border-radius: 8px;
+    background-color: #ff7f68;
+    font-family: PingFangSC;
+    font-size: 18px;
+    line-height: 2.8;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #ffffff;
+    margin: 20px 10px 10px 10px;
+    cursor: pointer;
+}
+
+.homeShow {
+    display: none;
+}
+.iphoneXAdaptation {
+    height: 24px;
+    width: 100%;
+    display: none;
+}
+/*iphone5*/
+
+@media screen and (min-width: 310px) and (max-width: 359px) {
+    .keywords {
+        width: 40%;
+        margin-left: 30%;
+    }
+}

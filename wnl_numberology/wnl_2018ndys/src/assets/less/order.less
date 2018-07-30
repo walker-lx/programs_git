@@ -1,0 +1,45 @@
+.list-wrap {
+    margin-top: 10px;
+    border-radius: 2px;
+    padding-top: 0.4529rem;
+    background-color: rgba(255, 242, 213, 0.72);
+    border: solid 1px #a7a3d3;
+    .list {
+        padding: 0 0.7699rem 0.9511rem;
+    }
+    .item {
+        margin-top: 10px;
+        width: 7.8351rem;
+        height: 4.212rem;
+        background: url('../img/card1.png') no-repeat center;
+        background-size: cover;
+    }
+    .item {
+        float: left;
+    }
+    .item:nth-child(2n) {
+        float: right;
+    }
+    .text {
+        font-size: 17px;
+        text-align: center;
+        color: #fff0be;
+    }
+    .text:first-child {
+        margin-top: 10px;
+    }
+    .text:last-child {
+        // margin-top: 4px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    .list-wrap {
+        .text:first-child {
+            margin-top: 4px;
+        }
+        .text:last-child {
+            margin-top: -2px;
+        }
+    }
+}

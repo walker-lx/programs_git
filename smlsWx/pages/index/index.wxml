@@ -1,0 +1,641 @@
+<!-- <page class="fixed"> -->
+<!--index.wxml-->
+<view class='toast {{ isactive ? "active" : "" }}'>{{ toasttext }}</view>
+<view class='ani' wx:if="{{ anishow }}">
+	<view class='ani_mask' bindtap='closeAni'></view>
+	<view class='ani_detail'>
+		<view class='ani_content'>
+			<view class='ani_con'></view>
+			<view class='ani_desc'>
+				<view class='ani_text'>
+				<view class='squar3'></view>
+				<view class='squar4'></view>				
+					输入您的阳历出生日期，获取您的生命能量密码，将您的生命能量密码结合宇宙能量，预知您的每日运势，让你心想事成。
+				</view>
+			</view>
+		</view>
+		<view class='ani_btn' bindtap='closeAni'></view>
+	</view> 			
+</view>
+<!--数字动画  -->
+<view class='num' wx:if="{{ numshow }}">
+	<view class='num_mask' bindtap='closeNum'></view>
+	<view class='numcontent'>
+		<view class='num_con'></view>
+		<image src='../../img/{{ _number }}.png' class='numimg {{ isnumactive ? "numactive" : "" }}'></image>
+		<view class='num_btn' bindtap='closeNum' bindtouchstart='addclick9' bindtouchmove='removeaddclick9' bindtouchend='removeaddclick9'>开启今日运势<view class='{{ clickstyle9 }}'></view></view>
+	</view>
+</view>
+<view class='content {{ stopscroll ? "fixed" : "" }}' catchtouchmove='{{ isFixed }}'>
+	<view class='fixbtn' bindtap='openDatePicker' wx:if="{{ daybtnshow }}" bindtouchstart='addclick1' bindtouchmove='removeaddclick1' bindtouchend='removeaddclick1'>
+		<view class='innerbtn'>获取今日运势<view class='{{ clickstyle1 }}'></view>
+		</view>
+	</view>
+	<view class='fixbtnmonth' wx:if="{{ monthbtnshow && allowpay === 1 }}" bindtap='openPay' bindtouchstart='addclick2' bindtouchmove='removeaddclick2' bindtouchend='removeaddclick2'>
+		<view class='innerbtn'>解锁本月运势<view class='{{ clickstyle2 }}'></view></view>
+	</view>
+	<view class='fixbtnmonth' data-monthnum='{{ nextmonthnum }}' wx:if="{{ monthbtnshow1 && allowpay === 1 }}" bindtap='openPay' bindtouchstart='addclick2' bindtouchmove='removeaddclick2' bindtouchend='removeaddclick2'>
+		<view class='innerbtn'>解锁下月运势<view class='{{ clickstyle3 }}'></view></view>
+	</view>
+  <view class='head'>
+	<view class='head_wh {{ whclickstyle }}' bindtap='openSmlsMask' bindtouchstart='whclick' bindtouchmove='removewhclick' bindtouchend='removewhclick'></view>
+	<view class='whclick' bindtap='openSmlsMask'></view>
+	<view class='head_num'>
+		<view class='head_num_bg'>{{ lifenum }}</view>
+		<!-- <view class='head_num_text'>生命灵数</view>		 -->
+	</view>	
+	<view class='avtar_bg'>
+		<image src='{{ avtar }}'></image>
+		<view class='avtar_img'></view>
+	</view>
+	<view class='userinfo'>
+		<button open-type='getUserInfo' bindgetuserinfo="getinfo" id='get' wx:if="{{ nouserinfo }}">请点击获取个人信息</button>	
+		<view class='nickname' wx:if="{{ hasuserinfo }}" bindtap='openUsersMask'>{{ nickname }}</view>
+		<view class='change {{ changeopa }}' wx:if="{{ hasdata }}" bindtouchstart='changeclick' bindtouchmove='removechangeclick' bindtouchend='removechangeclick' wx:if="{{ hasuserinfo }}" bindtap='openUsersMask'></view>
+	</view>
+	<view class='luckinfo'>
+		<view class='color'>代表色:{{ color }}</view>
+		<view class='birth'>{{ birth }}</view>
+		<view class='dyw'>对应:{{ dyw }}</view>		
+	</view>
+  </view>
+  <view class='detail {{ nobtn ? "posbottom" : "" }}'>
+  <!--未输入生日  -->
+	<view class='todayluck' wx:if="{{ defaultLuck }}" id='button'>
+		<view class='todayluck_text'>今日运势</view>
+		<view class='todayluck_share {{ shareclickstyle }}' bindtouchstart='addsharestyle' bindtouchmove='removesharestyle' bindtouchend='removesharestyle'>
+			<button class='share' open-type='share'></button>
+		</view>
+	</view>
+	<view class='detail_luck' wx:if="{{ defaultLuck }}">
+		<view class='line1'></view>
+		<view class='line2'></view>
+		<view class='line3'></view>
+		<view class='line4'></view>
+		<view class='detail_luck_info'>
+			<view class='detail_luck_desc'>
+				<image class='desc_bg' src='https://qiniu.image.cq-wnl.com/content/201804258ae93f85e16a45738a3edaf39614989f.png'></image>
+				<view class='desc_text'>在今天心中默念十句“我是富有的”增强自己这个月的财富运势。</view>			
+			</view>
+			<view class='detail_luck_icon'>
+				<view class='mc'></view>
+				<view class='aq'>
+					<view class='aq_icon'></view>
+					<view class='aq_text'>爱情</view>
+					<!-- <view class='aq_start'>0</view> -->
+					<view class='aq_progress'>
+						<view class='aq_num'></view>
+					</view>					
+					<view class='aq_end'>40</view>					
+				</view>
+				<view class='sy'>
+					<view class='sy_icon'></view>
+					<view class='sy_text'>事业</view>
+					<!-- <view class='sy_start'>0</view> -->
+					<view class='sy_progress'>
+						<view class='sy_num'></view>
+					</view>					
+					<view class='sy_end'>60</view>
+				</view>
+				<view class='cy'>
+					<view class='cy_icon'></view>
+					<view class='cy_text'>财运</view>
+					<!-- <view class='cy_start'>0</view> -->
+					<view class='cy_progress'>
+						<view class='cy_num'></view>
+					</view>					
+					<view class='cy_end'>80</view>
+				</view>				
+			</view>
+		</view>
+		<!-- <view class='gapline'></view> -->
+		<view class='luckitem'>
+			<view class='itemcolor'>
+				<view class='color_title'>补运色</view>
+				<view class='color_text'>深灰色</view>				
+			</view>
+			<view class='itemwp'>
+				<view class='wp_title'>补气物</view>
+				<view class='wp_text'>黑米</view>				
+			</view>
+			<view class='itempeople'>
+				<view class='people_title'>帮运人</view>
+				<view class='people_text'>数字8的人</view>				
+			</view>
+		</view>
+		<view class='zy_content'>
+			<view class='zy_content_mask'></view>
+			<view class='zy_aq'>
+				<view class='zy_aq_title'>
+					<view class='zy_aq_title_text'>爱情运转</view>
+					<view class='zy_aq_title_icon'>
+						<!-- <view class='aq_active' wx:for="{{ zy_aq }}" wx:key="aq"></view> -->
+						<!-- <view class='aq_noactive' wx:for="{{ zy_noaq }}" wx:key="noaq"></view>						 -->
+					</view>				
+				</view>
+				<view class='zy_aq_desc'>在今日的你有财运没爱运，要留意和家人的对话语气，深呼吸会让你避过口角。</view>			
+			</view>
+			<view class='zy_sy'>
+				<view class='zy_sy_title'>
+					<view class='zy_sy_title_text'>事业运转</view>
+					<view class='zy_sy_title_icon'>
+						<!-- <view class='sy_active' wx:for="{{ zy_sy }}" wx:key="sy"></view> -->
+						<!-- <view class='sy_noactive' wx:for="{{ zy_nosy }}" wx:key="nosy"></view>						 -->
+					</view>				
+				</view>
+				<view class='zy_sy_desc'>在今日的你，因财运旺盛，事业也相帮衬，做起事来得心应手，在工作上可以多发力。</view>	
+			</view>
+			<view class='zy_cy'>
+				<view class='zy_cy_title'>
+					<view class='zy_cy_title_text'>财运运转</view>
+					<view class='zy_cy_title_icon'>
+						<!-- <view class='cy_active' wx:for="{{ zy_cf }}" wx:key="cf"></view> -->
+						<!-- <view class='cy_noactive' wx:for="{{ zy_nocf }}" wx:key="nocf"></view> -->
+					</view>			
+				</view>
+				<view class='zy_cy_desc'>在今日的你，因天时旺你偏财运，可以出点小财，买个体彩，既帮人又给自己一个希望。</view>	
+			</view>
+		</view>
+	</view>
+	<!--已输入生日  -->
+	<view class='inputed' wx:if="{{ isInput }}">
+		<view class='line1'></view>
+		<view class='line2'></view>
+		<view class='line3'></view>
+		<view class='line4'></view>
+		<view class='inputed_tab'>
+			<view class='inputed_tab_choose'>
+				<view class='today {{ isToday ? "active" : "" }}' bindtap='openTodayLuck'>今日运势</view>
+				<view class='next {{ isNext ? "active" : "" }}' data-onepay='{{ onepay }}' bindtap='openNextLuck'>明日运势</view>
+			</view>
+			<view class='inputed_tab_share' bindtouchstart='addtoday' bindtouchmove='removetoday' bindtouchend='removetoday'>
+				<view class='sharebtn {{ todaystyle }}'>
+					<button open-type="share"></button>
+				</view>
+			</view>		
+		</view>
+		<view class='today_active' wx:if="{{ today_opa }}">
+			<view class='today_line1'></view>
+			<view class='today_line2'></view>
+			<view class='today_line3'></view>			
+		</view>
+		<view class='next_active' wx:if="{{ next_opa }}">
+			<view class='next_line1'></view>
+			<view class='next_line2'></view>
+			<view class='next_line3'></view>			
+		</view>
+		<!-- <view class='today_active'></view>		 -->
+		<view class='todaycontent'>
+			<view class='ljckMask' wx:if="{{ dayluck && allowpay === 1 }}">
+				<!-- <image class='ljckMask_mask' src='https://qiniu.image.cq-wnl.com/content/201804151e7890d43d724acdb943ea36a7eee809.png'>
+				</image> -->
+				<image class='ljckMask_mask' src='https://qiniu.image.cq-wnl.com/content/20180502cdce160e67c54dcd8f02ba569cc5aa71.jpg'></image>
+				<view class='ljckMask_content'>
+					<view class='ljck' bindtap='openPay' bindtouchstart='addclick5' bindtouchmove='removeaddclick5' bindtouchend='removeaddclick5'>立即查看<view class='{{ clickstyle5 }}'></view></view>
+					<view class='ljck_tip'>解锁月运后可永久查看明日月势哦</view>
+				</view>
+				<!-- <view class='ljck_line'></view>												 -->
+			</view>			
+			<view class='detail_luck_info'>
+			<view class='detail_luck_desc'>
+				<image class='desc_bg' src='https://qiniu.image.cq-wnl.com/content/201804258ae93f85e16a45738a3edaf39614989f.png'></image>
+				<view class='desc_text'>{{ todayyryz }}</view>			
+			</view>
+			<view class='detail_luck_icon'>
+				<view class='aq'>
+					<view class='aq_icon'></view>
+					<view class='aq_text'>爱情</view>
+					<!-- <view class='aq_start'>0</view> -->
+					<view class='aq_progress'>
+						<view class='aq_num' style="width:{{ aq_num_width }}"></view>
+					</view>					
+					<view class='aq_end'>{{ aq_num }}</view>					
+				</view>
+				<view class='sy'>
+					<view class='sy_icon'></view>
+					<view class='sy_text'>事业</view>
+					<!-- <view class='sy_start'>0</view> -->
+					<view class='sy_progress'>
+						<view class='sy_num' style='width: {{ sy_num_width }}'></view>
+					</view>					
+					<view class='sy_end'>{{ sy_num }}</view>
+				</view>
+				<view class='cy'>
+					<view class='cy_icon'></view>
+					<view class='cy_text'>财运</view>
+					<!-- <view class='cy_start'>0</view> -->
+					<view class='cy_progress'>
+						<view class='cy_num' style='width: {{ cy_num_width }}'></view>
+					</view>					
+					<view class='cy_end'>{{ cy_num }}</view>
+				</view>				
+			</view>
+		</view>
+		<!-- <view class='gapline'></view> -->
+		<view class='luckitem'>
+			<view class='itemcolor'>
+				<view class='color_title'>补运色</view>
+				<view class='color_text'>{{ color_text }}</view>				
+			</view>
+			<view class='itemwp'>
+				<view class='wp_title'>补气物</view>
+				<view class='wp_text'>{{ wp_text }}</view>				
+			</view>
+			<view class='itempeople'>
+				<view class='people_title'>帮运人</view>
+				<view class='people_text'>{{ people_text }}</view>				
+			</view>
+		</view>
+		<view class='zy_content'>
+			<view class='zy_content_mask'></view>
+			<view class='zy_aq'>
+				<view class='zy_aq_title'>
+					<view class='zy_aq_title_text'>爱情转运</view>
+					<view class='zy_aq_title_icon'>
+						<!-- <view class='aq_active' wx:for="{{ zy_aq }}" wx:key="aq"></view> -->
+						<!-- <view class='aq_noactive' wx:for="{{ zy_noaq }}" wx:key="noaq"></view>						 -->
+					</view>				
+				</view>
+				<view class='zy_aq_desc'>{{ zy_aq_desc }}</view>			
+			</view>
+			<view class='zy_sy'>
+				<view class='zy_sy_title'>
+					<view class='zy_sy_title_text'>事业转运</view>
+					<view class='zy_sy_title_icon'>
+						<!-- <view class='sy_active' wx:for="{{ zy_sy }}" wx:key="sy"></view> -->
+						<!-- <view class='sy_noactive' wx:for="{{ zy_nosy }}" wx:key="nosy"></view>						 -->
+					</view>				
+				</view>
+				<view class='zy_sy_desc'>{{ zy_sy_desc }}</view>	
+			</view>
+			<view class='zy_cy'>
+				<view class='zy_cy_title'>
+					<view class='zy_cy_title_text'>财运转运</view>
+					<view class='zy_cy_title_icon'>
+						<!-- <view class='cy_active' wx:for="{{ zy_cf }}" wx:key="cf"></view> -->
+						<!-- <view class='cy_noactive' wx:for="{{ zy_nocf }}" wx:key="nocf"></view> -->
+					</view>			
+				</view>
+				<view class='zy_cy_desc'>{{ zy_cy_desc }}</view>	
+			</view>
+		</view>
+		</view>
+	</view>
+	<!--swiper  -->
+	<view class='swiperArea' wx:if="{{ tkShow }}" id='tk' data-date='{{ clickdate }}' data-tkimg='{{ clickimg }}'>
+		<swiper previous-margin='32rpx' next-margin='32rpx' current-item-id="{{ hastk ? tkid : '20180326' }}">
+		<block wx:for="{{ hastk ? tkobj : defaultGame }}" wx:key="{{ item.id }}">
+			<swiper-item item-id="{{ item.date1 }}">
+				<!-- <image src="{{item.src}}" bindtap='openTkMask' /> -->
+				<view class='tkitem'>
+					<view class='tkitem_box'>
+						<view class='squar1'></view>
+						<view class='squar2'></view>
+						<view class='squar3'></view>
+						<view class='squar4'></view>
+						<view class='tkitem_content' data-tktext='{{ item.imgDesc }}' data-tkimg='{{ item.img }}' bindtap="openTkMask" data-date='{{ item.date1 }}'>
+							<view class='tkitem_content_left'>
+								<view class='tkitem_content_left_title'>图卡游戏</view>
+								 <view class='tkitem_content_left_text'>{{ item.desc.length > 0 ? item.desc : item.luckPropose }}<span data-tktext='{{ item.imgDesc }}' data-tkimg='{{ item.img }}' wx:if="{{ item.islong }}">...</span><span data-tktext='{{ item.imgDesc }}' data-tkimg='{{ item.img }}' wx:if="{{ item.islong }}">查看全文</span></view>	 
+								<view class='tkitem_content_left_tip' wx:if="{{ (item.imgDesc.length <= 0)}}" style="margin-top: {{ tip_top }}">(注：明天右滑可查看答案哦)</view>
+							</view>
+							<view class='tkitem_content_right' style='background-image: url("{{ item.img }}")'></view>							
+						</view>
+					</view>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+	</view>
+	<!--转运  -->
+	<!-- <view class='zy' wx:if="{{ nopay }}">
+		<view class='line1'></view>
+		<view class='line2'></view>
+		<view class='line3'></view>
+		<view class='line4'></view>
+		<view class='zy_content'>
+			<view class='zy_content_mask'></view>
+			<view class='zy_aq'>
+				<view class='zy_aq_title'>
+					<view class='zy_aq_title_text'>爱情转运</view>
+					<view class='zy_aq_title_icon'>
+						<view class='aq_active' wx:for="{{ zy_aq }}" wx:key="aq"></view>
+						<view class='aq_noactive' wx:for="{{ zy_noaq }}" wx:key="noaq"></view>						
+					</view>				
+				</view>
+				<view class='zy_aq_desc'>{{ zy_aq_desc }}</view>			
+			</view>
+			<view class='zy_sy'>
+				<view class='zy_sy_title'>
+					<view class='zy_sy_title_text'>事业转运</view>
+					<view class='zy_sy_title_icon'>
+						<view class='sy_active' wx:for="{{ zy_sy }}" wx:key="sy"></view>
+						<view class='sy_noactive' wx:for="{{ zy_nosy }}" wx:key="nosy"></view>						
+					</view>				
+				</view>
+				<view class='zy_sy_desc'>{{ zy_sy_desc }}</view>	
+			</view>
+			<view class='zy_cy'>
+				<view class='zy_cy_title'>
+					<view class='zy_cy_title_text'>财运转运</view>
+					<view class='zy_cy_title_icon'>
+						<view class='cy_active' wx:for="{{ zy_cf }}" wx:key="cf"></view>
+						<view class='cy_noactive' wx:for="{{ zy_nocf }}" wx:key="nocf"></view>
+					</view>			
+				</view>
+				<view class='zy_cy_desc'>{{ zy_cy_desc }}</view>	
+			</view>
+		</view>
+	</view> -->
+	<!--本月及下月运势(输入生日后展示)  -->
+	<view class='monthluck' wx:if="{{ isInput }}">
+		<view class='line1'></view>
+		<view class='line2'></view>
+		<view class='line3'></view>
+		<view class='line4'></view>
+		<view class='month_tab'>
+			 <view class='month_tab_choose'> 
+				<view class='month {{ isMonth ? "active" : "" }}' data-monthpay='{{ monthpay }}' bindtap='openMonthLuck'>本月运势</view>
+				<view class='nextmonth {{ isNextMonth ? "active" : "" }}' data-monthpay='{{ nextmonthpay }}' bindtap='openNextMonthLuck'>下月运势</view>
+			 </view> 
+			<!-- <button class='month_tab_share' open-type='share'></button>	 -->
+		</view>
+		<view class='month_active' wx:if="{{ month_opa }}">
+			<view class='month_line1'></view>
+			<view class='month_line2'></view>
+			<view class='month_line3'></view>			
+		</view>
+		<view class='nextmonth_active' wx:if="{{ nextmonth_opa }}">
+			<view class='nextmonth_line1'></view>
+			<view class='nextmonth_line2'></view>
+			<view class='nextmonth_line3'></view>		
+		</view>
+		<!--本月运势蒙层  -->
+		<view class='monthcontent'>
+			 <view class='ljckMask' wx:if="{{ monthluck && allowpay === 1 }}"> 
+			<!-- <view class='ljckMask'>			 -->
+			<image class='ljckMask_mask' src='https://qiniu.image.cq-wnl.com/content/20180502f5eeccda0644496e8d93e185360f6581.jpg'>
+			</image>
+			<view class='ljckMask_content'>
+				<view class='ljck' bindtap='openPay' data-monthnum='{{ monthnum }}' bindtouchstart='addclick4' bindtouchmove='removeaddclick4' bindtouchend='removeaddclick4'>立即查看<view class='{{ clickstyle4 }}'></view></view>
+				<view class='ljck_tip'>{{ monthtext }}</view>
+			</view>
+			<!-- <view class='ljck_line'></view>													 -->
+		</view>
+		<view class='monthluck_detail'>
+			<view class='monthluck_detail_aq'>
+				<view class='by_aq_text'>本月爱情运</view>
+				<view class='by_aq_icon' wx:for="{{ month_aq }}" wx:key="month_aq"></view>
+				<view class='by_aq_noicon' wx:for="{{ month_noaq }}" wx:key="month_noaq"></view>				
+			</view>
+			<view class='monthluck_detail_sy'>
+				<view class='by_sy_text'>本月事业运</view>
+				<view class='by_sy_icon' wx:for="{{ month_sy }}" wx:key="month_sy"></view>
+				<view class='by_sy_noicon' wx:for="{{ month_nosy }}" wx:key="month_nosy"></view>				
+			</view>
+			<view class='monthluck_detail_cf'>
+				<view class='by_cf_text'>本月财富运</view>
+				<view class='by_cf_icon' wx:for="{{ month_cf }}" wx:key="month_cf"></view>
+				<view class='by_cf_noicon' wx:for="{{ month_nocf }}" wx:key="month_nocf"></view>				
+			</view>
+			<view class='monthluck_detail_text1'>{{ yryz }}</view>			
+		</view>
+		</view>
+	</view>
+	<!--开运指南(输入后展示)  -->
+	<view class='kyzn' wx:if="{{ !monthluck }}">
+		<view class='kyzn_title'>开运指南</view>
+		<view class='kyzn_desc'>
+			<view class='line1'></view>
+			<view class='line2'></view>
+			<view class='line3'></view>
+			<view class='line4'></view>
+			<view class='kyzn_text'>{{ hyjy }}</view>
+		</view>
+	</view>
+	<!--查看历史月运  -->
+	<view class='historybtn' wx:if="{{ onepay === 1 && allowpay === 1 }}" bindtap='openHistoryLuck' bindtouchstart='addclick7' bindtouchmove='removeaddclick7' bindtouchend='removeaddclick7'>查看历史月运<view class='{{ clickstyle7 }}'></view></view>
+	<!--提示  -->
+	<view class='tip' wx:if="{{ allowpay === 1 }}">
+		<view class='line1'></view>
+		<view class='line2'></view>
+		<view class='line3'></view>
+		<view class='line4'></view>
+		<view class='tip_text1'>你对命运感到困惑吗？</view>
+		<view class='tip_text2'>你的感情婚姻顺历吗？</view>
+		<view class='tip_text3'>你的财运何时才会到来？</view>
+		<view class='tip_text4'>你的事业是会红火还是平淡？</view>
+		<view class='tip_text5'>潘老师结合你的八字情况，准确预测你的命运情况，为您解决一切事业财运问题。</view>
+		<view class='tip_line'></view>
+		<view class='tip_desc'>
+			<!-- <view class='tip_desc_bg'></view> -->
+			<image class='tip_desc_bg' src='https://qiniu.image.cq-wnl.com/content/201804176e0ee67a8844484f99fc1a92abb26a32.png'></image>			
+			<view class='tip_desc_text'>
+				<view class='tip_desc_title'>理·天女</view>
+				<view class='tip_desc_wz'>95年打开能量体质，承接宇宙能量，研究生命能量源头之密码，擅长阅读因果，知命改运</view>				
+			</view>			
+		</view>	
+		<view class='csbtn' bindtap='openKfMask' wx:if="{{ allowpay === 1 }}" bindtouchstart='addclick6' bindtouchmove='removeaddclick6' bindtouchend='removeaddclick6'>进入在线测算<view class='{{ clickstyle6 }}'></view></view>		
+	</view>
+	<view class='csdesc1' wx:if="{{ defaultLuck }}">
+		<view class='bg1'></view>
+		<view class='csdesc_text'>
+			<!-- <view class='squar1'></view> -->
+			<!-- <view class='squar2'></view> -->
+			<view class='squar3'></view>
+			<view class='squar4'></view>
+			<view class='csdesc_text_wz1'> 人的命运，到底可不可以测算？如何测算？如何改变命运？改变命运是为了自己更好，而这个更好是什么呢？</view>
+			<view class='csdesc_text_wz2'> 对于命运，人总有许多的不确定感，而大部分的人，都很想掌握命运，让自己更好。但是，到底有没有可以掌握命运最快速的方法呢？</view>
+			<view class='csdesc_text_wz3'> 人的命是60%的固定轨，也是算命可以算出来的。人的运是40%的变数轨，这个运才是决定好坏的决策点。那要如何知道那60%，而后掌握那40%呢？ </view>
+			<view class='csdesc_text_wz4'> 你能做到60%的知晓，40%的改变，一生当然顺风顺水。籍由60%的固定轨，来知晓我们每日的命轨，而这命轨就是天时，加上我们自己的原生生命能量密码来决定每日的发生事件。而那40%的决定权，就是生命灵数的重点，透由每日念转，决定了快乐一天，幸福一天，还是黑暗一天。</view>
+			<view class='csdesc_text_wz5'>心想事成从现在开始。</view>			
+		</view>
+	</view>
+	<view class='csdesc2' wx:if="{{ defaultLuck }}">
+		<view class='bg2'></view>
+		<view class='csdesc_text'>
+			<!-- <view class='squar1'></view> -->
+			<!-- <view class='squar2'></view> -->
+			<view class='squar3'></view>
+			<view class='squar4'></view>
+			<view class='csdesc_text_wz1'> 阳历生日是目前地球70亿人口使用最多的生日数字，所以它的运算能量影响一个人也是最大的，对于60%的命格，这个数字密码占了其中的60%，基本上已决定了你的人生大部分，那该如何计算你的生命灵数呢？ </view>
+			<view class='csdesc_text_wz2'>就是将你的阳历生日的数字全部加起来，最后归整到一个个位数字，例如：1980年02月06生日的人，</view>
+			<view class='csdesc_text_wz3'> 1+9+8+0+0+2+0+6=26，2+6=8，他的生命灵数就是8。在1980年02月06号这个日子出生的人，他的生命灵数就是8，最后这个数字，也是他一生的生命灵数。</view>
+		</view>
+	</view>
+	<!--用户反馈  -->
+	<view class='fk'>
+		<view class='fk_title'>用户反馈</view>
+		<view class='fk_num'>已有<span>{{ peoplenum }}</span>人开启一日一转</view>
+		<view class='fk_detail'>
+			<view class='line1'></view>
+			<view class='line2'></view>
+			<view class='line3'></view>
+			<view class='line4'></view>
+			 <view class='fk_list'>
+				<view class='fk_scroll' style='margin-top: {{ scrolltop }}'>
+					<view class='fk_item' wx:for="{{ fklist }}" wx:key="{{ item.id }}" id='scroll{{ index }}'>
+						<view class='fk_info' id="comment1">
+							<view class='fk_item_name'>{{ item.name }}</view>
+							<view class='fk_item_text'>{{ item.content }}</view>
+						</view>
+						<view class='fk_item_line'></view>				
+					</view>
+				</view>
+			</view>
+			<!-- <swiper previous-margin='0rpx' next-margin='0rpx' vertical="true" autoplay="true" display-multiple-items="4" circular="true" interval="1000">
+				<view class='test11'>
+					<swiper-item class="test1">
+						<view class='test'>滑动</view>
+					</swiper-item>
+				</view>
+				<view class='test11'>
+					<swiper-item class="test1">
+						<view class='test'>滑动</view>
+					</swiper-item>
+				</view>
+				<view class='test11'>
+					<swiper-item class="test1">
+						<view class='test'>滑动</view>
+					</swiper-item>
+				</view>
+				<view class='test11'>
+					<swiper-item class="test1">
+						<view class='test'>滑动</view>
+					</swiper-item>
+				</view>
+				<view class='test11'>
+					<swiper-item class="test1">
+						<view class='test'>滑动</view>
+					</swiper-item>
+				</view>
+				
+			</swiper> -->
+		</view>	
+	</view>
+	<!--相关应用  -->
+	<view class='csitem' wx:if="{{ allowpay === 1 }}">
+		<view class='csitem_title'>相关应用</view>
+		 <view class='flex'>
+			<view class='wrap'>
+				<view class='item' wx:for="{{ miniList }}" wx:key="{{ item.id }}" data-url='{{ item.appID }}' style='background-image: url("{{ item.img }}")' bindtap='openOther'>
+					<view class='item_mask'>
+						<view class='item_mask_text'>{{ item.title }}</view>
+					</view>
+				</view>
+				<!-- <view class='item'>
+					<view class='item_mask'>八字测算中的大运</view>
+				</view>
+				<view class='item'>
+					<view class='item_mask'>八字测算中的大运</view>
+				</view>
+				<view class='item'>
+					<view class='item_mask'>八字测算中的大运</view>
+				</view>
+				<view class='item'>
+					<view class='item_mask'>八字测算中的大运</view>
+				</view>
+				<view class='item'>
+					<view class='item_mask'>八字测算中的大运</view>
+				</view> -->
+				<view class='test'></view>	
+			</view>	
+		</view> 
+	</view>
+	<!--联系方式  -->
+	<view class='contact'>测算答疑：QQ1254836806<span>电话：020-28965013</span></view>
+	<!--日期组件  -->
+	<date-picker datePickerMode="{{datePickerMode}}" bind:dateSelectConfirm="getDateInfo" bind:dateSelectCancel="cancel" isSolar="{{isSolar}}"></date-picker> 	
+  </view>
+  <!--切换用户弹窗  -->
+  <view class='usersMask' wx:if="{{ usersMaskShow }}">
+	<view class='usersMask_mask'></view>
+	<view class='usersMask_content'>
+		<view class='usersMask_list'>
+			<view class='usersMask_list_content'>
+				<view class='squar1'></view>
+				<view class='squar2'></view>
+				<view class='squar3'></view>
+				<view class='squar4'></view>
+				<view class='usersMask_list_item'>
+					<view class='item_name'>
+						<input class='item_name_input' value='张三'></input>
+					</view>
+					<view class='item_icon'></view>				
+				</view>	
+				<view class='usersMask_list_item'>
+					<view class='item_name'>
+						<input class='item_name_input' value='张三'></input>
+					</view>
+					<view class='item_icon'></view>				
+				</view>
+				<view class='usersMask_list_item'>
+					<view class='item_name'>
+						<input class='item_name_input' value='' placeholder='添加新用户'></input>
+					</view>
+					<view class='item_icon'></view>				
+				</view>			
+			</view>
+		</view>
+		<view class='usersMask_close' bindtap='closeUsersMask'></view>
+	</view>
+  </view>
+  <!--查看生命灵数详解弹窗  -->
+  <view class='smlsMask' wx:if="{{ smlsMaskShow }}">
+	<view class='smlsMask_mask' bindtap='closeSmlsMask' catchtouchmove='disscroll'></view>
+	<view class='smlsMask_content'>
+		<view class='smlsMask_content_detail'>
+			<view class='smls_img'>生命灵数：{{ lifenum }}</view>
+			<view class='smlsMask_detail_textbox'>
+				<view class='squar3'></view>
+				<view class='squar4'></view>				
+				<view class='smlsMask_detail_text'>{{ lifenum_desc }}</view>
+			</view>
+		</view>
+		<view class='smlsMask_close' bindtap='closeSmlsMask'></view>
+	</view>
+  </view>
+  <!--查看图卡弹窗  -->
+  <view class='tkMask' wx:if="{{ tkMaskShow }}">
+	<view class='tkMask_mask' bindtap='closeTkMask'></view>
+	<view class='tkMask_content'>
+		<view class='tkMask_content_detail'>
+			<view class='tkmask_con'>
+					<view class='squar1'></view>
+					<view class='squar2'></view>
+					<view class='squar3'></view>
+					<view class='squar4'></view>
+				<!-- <view class='tk_img' style='background-image: url("{{ _tkimg }}")'></view> -->
+				<image class='tk_img' src='{{ _tkimg }}'></image>
+				<view class='tkMask_content_detail_textbox'>				
+					<view class='tkMask_detail_text'>{{ tktext }}</view>
+				</view>
+			</view>
+		</view>
+		<view class='tkMask_close' bindtap='closeTkMask'></view>		
+	</view>
+  </view>
+  <!--客服会话弹窗  -->
+  <view class='kfMask' wx:if="{{ kfMaskShow }}">
+	<view class='kfMask_mask' bindtap='closeKfMask'></view>
+	<view class='kfMask_content'>
+		<view class='kfMask_detail'>
+			<view class='kfMask_content_box'>
+				<view class='squar1'></view>
+				<view class='squar2'></view>
+				<view class='squar3'></view>
+				<view class='squar4'></view>
+				<view class='kfMask_content_img'></view>
+				<view class='kfMask_content_text1'>你即将进入客服会话，</view>
+				<view class='kfMask_content_text2'><span class="bold">在对话框内输入“{{ responsenum }}”</span>将获得神秘链接
+	</view>
+				<view class='kfMask_content_text3'>{{ responsetext }}</view>
+				<button class='dsbtn' bindtap='closeKfMask' open-type='contact' session-from='' bindtouchstart='addclick8' bindtouchmove='removeaddclick8' bindtouchend='removeaddclick8'>马上进入<view class='{{ clickstyle8 }}'></view></button>			
+			</view>
+		</view>
+	<view class='closekf' bindtap='closeKfMask'></view>			
+	</view>
+  </view>
+</view>
+
+<!-- </page> -->

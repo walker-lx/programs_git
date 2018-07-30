@@ -1,0 +1,564 @@
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch; }
+
+body, div, img {
+  margin: 0;
+  padding: 0; }
+
+.hidden {
+  display: none !important; }
+
+.mobilenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #1d6ccd;
+  font-size: 15px;
+  color: #fff;
+  z-index: 9999; }
+  .mobilenav .navbanner {
+    width: 42%;
+    margin: 0 auto; }
+    .mobilenav .navbanner .index, .mobilenav .navbanner .about {
+      position: relative; }
+    .mobilenav .navbanner .index {
+      float: left; }
+    .mobilenav .navbanner .line {
+      position: absolute;
+      width: 30%;
+      height: 2px;
+      border-radius: 2px;
+      left: 10px;
+      top: 32.5px;
+      background-color: #fff; }
+    .mobilenav .navbanner .about {
+      float: right;
+      opacity: 0.5;
+      filter: alpha(opacity=50); }
+
+.pcnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  color: #fff;
+  background-color: #1d6ccd;
+  display: inline-block;
+  font-size: 18px;
+  z-index: 9999; }
+  .pcnav .navleft {
+    float: left;
+    margin-left: 134px;
+    background-image: url("../img/icon-1.png");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: 24px 24px; }
+    .pcnav .navleft .text {
+      margin-left: 34px; }
+  .pcnav .navright {
+    float: right;
+    margin-right: 134px; }
+    .pcnav .navright .index {
+      margin-right: 26px; }
+    .pcnav .navright .about {
+      opacity: 0.5;
+      filter: alpha(opacity=50); }
+
+.ddindex .top {
+  padding-top: 75px;
+  padding-bottom: 29px;
+  background-color: #edf6ff; }
+  .ddindex .top .desc {
+    width: 149px;
+    height: 55px;
+    line-height: 1.8;
+    margin: 0 auto;
+    background-image: url("../img/icon@2x.png");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+      .ddindex .top .desc {
+        background-image: url("../img/icon@3x.png"); } }
+    .ddindex .top .desc .name, .ddindex .top .desc .calender {
+      margin-left: 67px;
+      color: #333; }
+    .ddindex .top .desc .name {
+      font-size: 19px;
+      font-weight: 600; }
+    .ddindex .top .desc .calender {
+      font-size: 12px; }
+  .ddindex .top .client, .ddindex .top .usewx {
+    margin: 30px auto;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #1d6ccd;
+    border: 1px solid #1d6ccd;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px 0 rgba(29, 108, 205, 0.5); }
+    .ddindex .top .client .text, .ddindex .top .usewx .text {
+      margin-left: 18px; }
+  .ddindex .top .client {
+    background-image: url("../img/phone-icon@2x.png");
+    background-repeat: no-repeat;
+    background-position: 27px center;
+    background-size: 10px 16px; }
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+      .ddindex .top .client {
+        background-image: url("../img/phone-icon@3x.png"); } }
+  .ddindex .top .view {
+    width: 87.47%;
+    height: 268px;
+    margin: 0 auto;
+    background-image: url("../img/phone@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+      .ddindex .top .view {
+        background-image: url("../img/phone@3x.png"); } }
+.ddindex .pctop {
+  width: 100%;
+  min-width: 900px;
+  min-height: 449px;
+  padding-top: 65px;
+  padding-bottom: 51px;
+  background-color: #edf6ff; }
+  .ddindex .pctop .pcindextop {
+    width: 900px;
+    height: 449px;
+    margin: 0 auto; }
+  .ddindex .pctop .pcview {
+    width: 549px;
+    height: 449px;
+    background-image: url("../img/web-top-phone.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left; }
+  .ddindex .pctop .pcright {
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 72px; }
+    .ddindex .pctop .pcright .pcdesc {
+      width: 210px;
+      height: 75px;
+      line-height: 1.7;
+      letter-spacing: 1.4px;
+      margin: 0 auto;
+      background-image: url("../img/icon-2.png");
+      background-repeat: no-repeat;
+      background-position: 0 center;
+      background-size: 75px 75px; }
+      .ddindex .pctop .pcright .pcdesc .pcname, .ddindex .pctop .pcright .pcdesc .pccalender {
+        margin-left: 87px;
+        color: #333; }
+      .ddindex .pctop .pcright .pcdesc .pcname {
+        font-size: 26px;
+        font-weight: 600; }
+      .ddindex .pctop .pcright .pcdesc .pccalender {
+        font-size: 19px; }
+    .ddindex .pctop .pcright .pcclient, .ddindex .pctop .pcright .pcusewx {
+      width: 200px;
+      height: 50px;
+      min-width: 200px;
+      min-height: 50px;
+      margin-left: 70px;
+      font-size: 18px;
+      line-height: 50px;
+      text-align: center;
+      color: #fff;
+      background-color: #1d6ccd;
+      border: 1px solid #1d6ccd;
+      border-radius: 25px; }
+      .ddindex .pctop .pcright .pcclient .pctext, .ddindex .pctop .pcright .pcusewx .pctext {
+        margin-left: 26px; }
+    .ddindex .pctop .pcright .pcclient {
+      margin-top: 77px;
+      background-image: url("../img/phone-icon.png");
+      background-repeat: no-repeat;
+      background-position: 42px center;
+      background-size: 17px 25px;
+      position: relative; }
+      .ddindex .pctop .pcright .pcclient .downloadqr {
+        position: absolute;
+        width: 201px;
+        height: 215px;
+        left: -201px;
+        top: -70px;
+        background-image: url("../img/down.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+    .ddindex .pctop .pcright .pcusewx {
+      position: relative;
+      margin-top: 24px;
+      color: #1d6ccd;
+      background-color: #fff;
+      background-image: url("../img/wechat-icon.png");
+      background-repeat: no-repeat;
+      background-position: 38px center;
+      background-size: 25px 21px; }
+      .ddindex .pctop .pcright .pcusewx .usewxqr {
+        position: absolute;
+        width: 201px;
+        height: 215px;
+        left: -201px;
+        top: -70px;
+        background-image: url("../img/wx.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .ddindex .pctop .pcright .pcusewx .pctext {
+        margin-left: 32px; }
+.ddindex .funclist {
+  width: 100%;
+  margin: 5px auto; }
+  .ddindex .funclist .moreview, .ddindex .funclist .write, .ddindex .funclist .invite, .ddindex .funclist .cloud {
+    width: 100%;
+    margin-bottom: 5px;
+    color: #333;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+    .ddindex .funclist .moreview.pclist, .ddindex .funclist .write.pclist, .ddindex .funclist .invite.pclist, .ddindex .funclist .cloud.pclist {
+      width: 486px;
+      display: inline-block;
+      margin-left: 10px; }
+  .ddindex .funclist .viewtitle {
+    width: 97.1px;
+    height: 23px;
+    margin: 19px auto 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    background-image: url("../img/title-icon@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+      .ddindex .funclist .viewtitle {
+        background-image: url("../img/title-icon@3x.png"); } }
+  .ddindex .funclist .viewdesc {
+    text-align: center;
+    font-size: 13px; }
+  .ddindex .funclist .moreview {
+    background-image: url("../img/moreview.jpg"); }
+  .ddindex .funclist .write {
+    background-image: url("../img/write.jpg"); }
+  .ddindex .funclist .invite {
+    background-image: url("../img/invite.jpg"); }
+  .ddindex .funclist .cloud {
+    background-image: url("../img/cloud.jpg"); }
+  .ddindex .funclist.pcfunclist {
+    width: 55%;
+    margin: 10px auto; }
+.ddindex .btn {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center; }
+  .ddindex .btn .client1, .ddindex .btn .usewx1 {
+    width: 200px;
+    height: 50px;
+    min-width: 200px;
+    min-height: 50px;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 25px; }
+  .ddindex .btn .client1 {
+    position: relative;
+    color: #fff;
+    background-image: url("../img/phone-icon.png");
+    background-repeat: no-repeat;
+    background-position: 41px center;
+    background-size: 17px 25px;
+    background-color: #1d6ccd;
+    border: 1px solid #1d6ccd; }
+    .ddindex .btn .client1.shadow {
+      box-shadow: 0px 4px 12px 0 rgba(29, 108, 205, 0.5); }
+    .ddindex .btn .client1 .text1 {
+      margin-left: 18px; }
+      .ddindex .btn .client1 .text1.mobiletext {
+        margin-left: 18px; }
+    .ddindex .btn .client1 .downloadqr1 {
+      position: absolute;
+      width: 201px;
+      height: 215px;
+      left: 5px;
+      top: -215px;
+      background-image: url("../img/down1.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0;
+      filter: alpha(opacity=0); }
+    .ddindex .btn .client1.mobileclient {
+      width: 150px;
+      height: 40px;
+      min-width: 150px;
+      min-height: 40px;
+      line-height: 40px;
+      background-position: 28px center;
+      background-size: 10px 16px;
+      font-size: 15px;
+      border-radius: 20px; }
+  .ddindex .btn .usewx1 {
+    position: relative;
+    margin-left: 40px;
+    color: #1d6ccd;
+    background-image: url("../img/wechat-icon.png");
+    background-repeat: no-repeat;
+    background-position: 38px center;
+    background-size: 25px 21px;
+    background-color: #fff;
+    border: 1px solid #1d6ccd; }
+    .ddindex .btn .usewx1 .usewxqr1 {
+      position: absolute;
+      width: 201px;
+      height: 215px;
+      left: 5px;
+      top: -215px;
+      background-image: url("../img/wx1.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0;
+      filter: alpha(opacity=0); }
+    .ddindex .btn .usewx1 .text1 {
+      margin-left: 26px; }
+  .ddindex .btn.pcbtn {
+    min-width: 475px; }
+.ddindex .foot {
+  padding: 15px 15px 12.5px;
+  background-color: #e8e8e8;
+  font-size: 12px; }
+  .ddindex .foot .icp, .ddindex .foot .device, .ddindex .foot .qq, .ddindex .foot .addr {
+    margin-top: 9px; }
+.ddindex .pcfoot {
+  height: 59px;
+  padding-top: 21px;
+  text-align: center;
+  background-color: #e8e8e8;
+  font-size: 14px;
+  color: #333; }
+  .ddindex .pcfoot .company {
+    margin-top: 13px; }
+
+.ddabout .content {
+  padding-top: 75px;
+  padding-bottom: 36px;
+  background-color: #edf6ff; }
+  .ddabout .content .aboutdesc {
+    width: 149px;
+    height: 55px;
+    line-height: 1.8;
+    margin: 0 auto;
+    background-image: url("../img/icon@2x.png");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: contain; }
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+      .ddabout .content .aboutdesc {
+        background-image: url("../img/icon@3x.png"); } }
+    .ddabout .content .aboutdesc .name, .ddabout .content .aboutdesc .calender {
+      margin-left: 60px;
+      color: #333; }
+    .ddabout .content .aboutdesc .name {
+      font-size: 19px;
+      font-weight: 600; }
+    .ddabout .content .aboutdesc .calender {
+      font-size: 12px; }
+  .ddabout .content .abouttitle {
+    margin: 45px 23px 38px;
+    color: #333;
+    font-size: 17px;
+    font-weight: 600; }
+  .ddabout .content .aboutintroduce {
+    text-align: center;
+    width: 97.1px;
+    height: 23px;
+    margin: 0 auto 18px;
+    font-size: 17px;
+    font-weight: 600;
+    background-image: url("../img/title-icon@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+      .ddabout .content .aboutintroduce {
+        background-image: url("../img/title-icon@3x.png"); } }
+  .ddabout .content .aboutmoreview, .ddabout .content .aboutwrite, .ddabout .content .aboutinvite, .ddabout .content .aboutcloud {
+    margin: 0 15px 16px;
+    font-size: 15px;
+    color: #333; }
+.ddabout .pcaboutbtn {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center; }
+  .ddabout .pcaboutbtn:after {
+    content: " ";
+    position: absolute;
+    left: 135px;
+    top: -30px;
+    right: 135px;
+    height: 1px;
+    border-top: 1px solid #999;
+    color: #999;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    opacity: 0.5;
+    filter: alpha(opacity=50); }
+  .ddabout .pcaboutbtn .client1, .ddabout .pcaboutbtn .usewx1 {
+    width: 200px;
+    height: 50px;
+    min-width: 200px;
+    min-height: 50px;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 25px; }
+  .ddabout .pcaboutbtn .client1 {
+    position: relative;
+    color: #fff;
+    background-image: url("../img/phone-icon.png");
+    background-repeat: no-repeat;
+    background-position: 41px center;
+    background-size: 17px 25px;
+    background-color: #1d6ccd;
+    border: 1px solid #1d6ccd; }
+    .ddabout .pcaboutbtn .client1 .text1 {
+      margin-left: 14px; }
+      .ddabout .pcaboutbtn .client1 .text1.mobiletext {
+        margin-left: 18px; }
+    .ddabout .pcaboutbtn .client1 .downloadqr1 {
+      position: absolute;
+      width: 201px;
+      height: 215px;
+      left: 5px;
+      top: -215px;
+      background-image: url("../img/down1.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      z-index: 9999; }
+  .ddabout .pcaboutbtn .usewx1 {
+    position: relative;
+    margin-left: 40px;
+    color: #1d6ccd;
+    background-image: url("../img/wechat-icon.png");
+    background-repeat: no-repeat;
+    background-position: 46px center;
+    background-size: 25px 21px;
+    background-color: #fff;
+    border: 1px solid #1d6ccd; }
+    .ddabout .pcaboutbtn .usewx1 .usewxqr1 {
+      position: absolute;
+      width: 201px;
+      height: 215px;
+      left: 5px;
+      top: -215px;
+      background-image: url("../img/wx1.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      z-index: 9999; }
+    .ddabout .pcaboutbtn .usewx1 .text1 {
+      margin-left: 24px; }
+  .ddabout .pcaboutbtn.pcbtn {
+    min-width: 475px; }
+.ddabout .aboutfoot {
+  padding: 15px 15px 12.5px;
+  background-color: #e8e8e8;
+  font-size: 12px; }
+  .ddabout .aboutfoot .icp, .ddabout .aboutfoot .device, .ddabout .aboutfoot .qq, .ddabout .aboutfoot .addr {
+    margin-top: 9px; }
+.ddabout .pccontent {
+  width: 100%;
+  min-width: 694px;
+  margin-top: 44px;
+  background-color: #edf6ff; }
+  .ddabout .pccontent .pccontenttop {
+    width: 694px;
+    height: 436px;
+    margin: 0 auto; }
+  .ddabout .pccontent .pcaboutdesc {
+    width: 320px;
+    height: 110px;
+    line-height: 55px;
+    background-image: url("../img/icon-3.png");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: contain;
+    float: left;
+    margin-top: 190px; }
+    .ddabout .pccontent .pcaboutdesc .name, .ddabout .pccontent .pcaboutdesc .calender {
+      margin-left: 136px;
+      color: #333; }
+    .ddabout .pccontent .pcaboutdesc .name {
+      font-size: 38px;
+      font-weight: 600; }
+    .ddabout .pccontent .pcaboutdesc .calender {
+      font-size: 24px;
+      letter-spacing: 1.4px; }
+  .ddabout .pccontent .pcphoneicon {
+    display: inline-block;
+    width: 216px;
+    height: 389px;
+    margin-left: 158px;
+    margin-top: 48px;
+    background-image: url("../img/phone2.png");
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+    background-size: contain; }
+.ddabout .pcdesc {
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 60px;
+  color: #333; }
+  .ddabout .pcdesc .abouttitle, .ddabout .pcdesc .aboutintroduce {
+    margin-left: 134px;
+    font-size: 30px;
+    font-weight: 600; }
+  .ddabout .pcdesc .aboutintroduce {
+    margin: 60px 0 25px 135px; }
+  .ddabout .pcdesc .aboutmoreview, .ddabout .pcdesc .aboutwrite, .ddabout .pcdesc .aboutinvite, .ddabout .pcdesc .aboutcloud, .ddabout .pcdesc .wx, .ddabout .pcdesc .search, .ddabout .pcdesc .mail, .ddabout .pcdesc .qq {
+    margin-left: 145px;
+    margin-bottom: 15px;
+    font-size: 18px; }
+  .ddabout .pcdesc .wx, .ddabout .pcdesc .search, .ddabout .pcdesc .mail, .ddabout .pcdesc .qq {
+    margin-left: 135px; }
+  .ddabout .pcdesc .wx {
+    margin-top: 75px; }
+.ddabout .pcaboutfoot {
+  width: 100%;
+  height: 59px;
+  padding-top: 21px;
+  text-align: center;
+  background-color: #e8e8e8;
+  font-size: 14px;
+  color: #333; }
+  .ddabout .pcaboutfoot .company {
+    margin-top: 13px; }

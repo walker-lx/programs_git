@@ -1,0 +1,357 @@
+/* pages/activityDetails/activityDetails.wxss */
+page {
+  min-height: 100%;
+  background-color: #eaeaea;
+}
+.content {
+  width: 100%;
+  height: 600px;
+  padding-top: 42rpx;
+  background-color: #eaeaea;
+}
+.activitydetail {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  margin: 21rpx auto 0;
+  padding-bottom: 40rpx;  
+  color: #333;
+}
+.accontent {
+  margin: 0 30rpx;
+}
+.activitytype {
+  display: inline-block;
+  border-bottom-right-radius: 10rpx;
+  border-top-right-radius: 10rpx;  
+  padding: 8rpx 30rpx 6rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  color: #fff;
+  background-color: #ffc42f;
+  margin-top: 38rpx;
+  font-size: 26rpx;
+}
+.activityphoto {
+  position: absolute;
+  width: 120rpx;
+  right: 40rpx;
+  top: -14rpx;
+}
+.activitypic {
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+  border: 4rpx solid #fff;
+  border-radius: 10rpx;
+  box-sizing: content-box;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.crownicon {
+  position: absolute;
+  width: 40rpx;
+  height: 30rpx;
+  left: 40rpx;
+  top: -15rpx;
+}
+.activityusername {
+  display: block;
+  text-align: center;
+  font-size: 26rpx;
+  margin-top: 12rpx;
+}
+.activitytime {
+  margin-top: 28rpx;
+  font-size: 30rpx;
+}
+.activityname {
+  margin-top: 24rpx;
+  font-size: 34rpx;
+  color: #000000;
+  text-overflow: -o-ellipsis-lastline;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical;    
+}
+.activityaddr {
+  margin-top: 24rpx;
+  font-size: 30rpx;
+}
+.addrtext {
+  color: #000000;
+}
+.spend {
+  margin-top: 24rpx;
+  font-size: 30rpx;
+  color: #000000;
+}
+.spendcolor {
+  color: #333;
+}
+.tip {
+  margin-top: 24rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.line {
+  width: 100%;
+  height: 1rpx;
+  margin-top: 40rpx;
+  background-color: #eaeaea;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5) ;  
+}
+.join {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 41.2rpx;
+  font-size: 30rpx;
+}
+.scan image {
+  width: 10rpx;
+  height: 18rpx;
+  margin-left: 10rpx;
+}
+.joiner {
+  margin-top: 42rpx;
+  font-size: 0; 
+  display: flex;
+  flex-wrap: wrap;
+}
+.joinerinfo {
+  width: 120rpx;
+  text-align: center;
+  margin-bottom: 22rpx;
+  padding: 0 calc((100% - 600rpx) / 10);  
+}
+.add {
+  width: 120rpx; 
+  height: 120rpx; 
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 calc((100% - 600rpx) / 10);
+  padding: 0; 
+}
+.joinerinfo-headimg {
+  width: 120rpx;
+  height: 120rpx;
+  border: 4rpx solid #fff;
+  border-radius: 50%;
+}
+.addimg {
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: 32rpx;  
+  border: none;
+} 
+.joinerinfo-name {
+  font-size: 26rpx;
+  margin-top: 12rpx;
+  overflow: hidden;
+}
+.functab {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  color: #fff;
+  font-size: 34rpx;
+}
+.acmanage, .acspend {
+  flex: 1;
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center
+}
+.acmanage {
+  background-color: #ffc42f;
+}
+.acspend {
+  background-color: #ff952f;
+}
+.mask {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+.masktab {
+  position: absolute;
+  left: 60rpx;
+  bottom: 130rpx;
+  width: 260rpx;
+  border-radius: 16rpx;
+  color: #000000;
+  background-color: #fff;
+  z-index: 1000;
+}
+.maskitem {
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #eaeaea;
+}
+.last {
+  border: none;
+}
+.masktab:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-width: 10rpx 10rpx 0 10rpx;
+  border-style: dashed;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+  bottom: -8rpx;
+  left: 115rpx;
+	}
+.masktab:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-width:0 10rpx 10rpx 10rpx;
+  border-style:dashed;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+  bottom: -8rpx;
+  left: 115rpx;
+}
+
+.cancel {
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  background-color: #ffda7e;
+  font-size: 34rpx;
+}
+.sign {
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  background-color: #ffc42f;
+  font-size: 34rpx;
+}
+
+/*截止活动 取消活动 提前完成 （弹窗样式） */
+.stopmask, .qxmask, .tqmask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;  
+}
+.stopcontent, .qxcontent, .tqcontent {
+  position: absolute;
+  width: 550rpx;
+  height: 368rpx;
+  top: calc(50vh - 184rpx);
+  left: calc(50vw - 275rpx);
+  border-radius: 20rpx;
+  color: #333;
+  background-color: #fff;
+  z-index: 1000;
+}
+.stoptip, .qxtip, .tqtip {
+  text-align: center;
+  margin-top: 72rpx;
+  font-size: 40rpx;
+}
+.stoptext, .qxtext, .tqtext {
+  text-align: center;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+.stopbtn, .qxbtn, .tqbtn {
+  display: flex;
+  margin: 64rpx 40rpx;
+  justify-content: space-between;
+}
+.stopcomfirm, .stopcancel, .qxcomfirm, .qxcancel, .tqcomfirm, .tqcancel {
+  width: 220rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  background-color: #ffc42f;
+  font-size: 34rpx;
+}
+
+/*创建者（活动正在进行）  */
+.actab {
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  bottom: 0;
+  left: 0;
+}
+.advance, .acspend {
+  display: inline-block;
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 34rpx;
+}
+.advance {
+  background-color: #ffc42f
+}
+.acspend {
+  background-color: #ff952f;
+}
+
+/*创建者（活动已完成）  */
+.acspendfinish {
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  background-color: #ff952f;
+  font-size: 34rpx;
+}
+.signtip {
+  text-align: center;
+  margin-top: 41.2rpx;
+  font-size: 34rpx;
+}
+.signtip {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  margin-top: 41.2rpx;
+  color: #999;
+  font-size: 40rpx;
+}
+.tipline {
+  width: 100vw;
+  height: 2rpx;
+  margin-top: 41.2rpx;  
+  margin-left: -30rpx;
+  background-color: #eaeaea;
+}

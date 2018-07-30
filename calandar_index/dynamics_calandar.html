@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css_calandar/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css_calandar/index.css">
+  <link rel="stylesheet" type="text/css" href="css_calandar/style.css">
+  <link rel="stylesheet" type="text/css" href="css_calandar/pagination.css">
+  <link rel="stylesheet" type="text/css" href="css_calandar/mobile.css">
+  <title>51万年历官方网站，3亿用户共同选择。中国传统日历农历查询工具</title>
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260066306'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol +
+      "s11.cnzz.com/z_stat.php%3Fid%3D1260066306' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+</head>
+
+<body>
+  <div class="topBanner newsBg">
+    <!--<div class="firstLevel"></div>
+        <div class="secondLevel"></div>
+        <div class="thirdLevel cooperate"></div>
+        <div class="fourthLevel"></div>-->
+    <div class="topBannerContent newabout">
+      <div class="navContent">
+        <div class="wnlIcon"></div>
+        <div class="wnlTxt"></div>
+        <a class="navMenu" href="javascript:void(0)">
+          <div class="menuLine firstLine"></div>
+          <div class="menuLine secondLine"></div>
+          <div class="menuLine lastLine"></div>
+        </a>
+        <div class="navList">
+          <div class="navWnlIcon"></div>
+          <a class="navLink" href="index_calandar.html">首页</a>
+          <div class="navLink cooNav cooperate">
+            <div class="navLinkTxt">合作</div>
+            <div class="navLinkActive"></div>
+            <div class="cooMenu">
+              <a href="document_calandar.html">51万年历API</a>
+              <a href="cooperate_calandar.html">商务合作</a>
+            </div>
+          </div>
+          <div class="navLink cooNav dynamics active">
+            <div class="navLinkTxt">动态</div>
+            <div class="navLinkActive"></div>
+            <div class="cooMenu"></div>
+          </div>
+          <a class="navLink" href="recruit_calandar.html">招聘</a>
+          <a class="navLink" href="about_calandar.html">关于</a>
+          <!--<a class="navLink hidden wnlgyp" href="craftwork_calandar.html">工艺品</a>
+                        <a class="loginLink" href="http://www.51wnl.com">网页版</a>-->
+        </div>
+      </div>
+      <div class="secondNav dyNav"></div>
+    </div>
+
+
+  </div>
+  <div class="dongtai">
+    <div class="chooseTab">
+      <!--<div class="tab activeTab">优路活动</div>
+            <div class="tab ">新闻动态</div>
+            <div class="tab ">小活动</div>-->
+    </div>
+    <div class="newsItems">
+    </div>
+  </div>
+
+  <div class="paginationContent hidden">
+    <div class="pagination">
+      <div class="first btnB hidden" value="1">首页</div>
+      <div class="btns">
+      </div>
+      <div class="last btnB hidden" value="0">尾页</div>
+    </div>
+  </div>
+
+  <div class="bottomBanner">
+    <div class="bottomWNLIcon"></div>
+    <div class="socialListContent">
+      <a class="wxLink" href="javascript:void(0)" target="_blank"></a>
+      <a class="qqLink" href="http://shang.qq.com/wpa/qunwpa?idkey=f0f832e5f143c4825ec1ce2c5d5e75c5e45af7276e5765ef590f0932c1618b48"
+        target="_blank"></a>
+      <a class="wbLink" href="http://weibo.com/51wnl" target="_blank"></a>
+      <a class="emailLink" href="mailto:cal@youloft.com"></a>
+      <div class="qunContent hidden">QQ群:186720268</div>
+      <div class="mask qunMask hidden"></div>
+    </div>
+    <div class="rightTxt">版权所有 ® 重庆可兰达科技有限公司</div>
+    <div class="copyright">Copyright <span class="copyright-time"></span> CALENDAR Tech., All Rights Reserved.</div>
+    <div class="goverment">
+      <a class="goverment_link" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50019002500524">渝公网安备 50019002500524号</p></a>
+      <a class="goverment_icp" target="_blank" href="http://www.miitbeian.gov.cn">ICP: 渝ICP备11000038号-1</a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js_calandar/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js_calandar/style.js"></script>
+  <script>
+    var code1 = getQueryValue('code1');
+    var code2 = getQueryValue('code2');
+    var pageIndex = getQueryValue('page') === '' ? 0 : parseInt(getQueryValue('page'));
+    var pageArr = [];
+    var data = new Array();
+    var bigData;
+    $.ajax({
+      url: 'https://www.51wnl.com/Official/api/site/GetCategories',
+      dataType: 'JSON',
+      type: 'GET',
+      success: function (result) {
+        var info = result.data.categories;
+        for (var i = 0; i < info.length; i++) {
+          if (info[i].cat == "Youloft_Calendar") {
+            data.push(info[i]);
+          }
+
+        }
+        var i;
+        for (i = 0; i < data.length; i++) {
+          var html = '<a class="redirectLink" href="dynamics_calandar.html?code1=' + data[i].code + '&code2=' +
+            data[i].code + '001&page=0">' + data[i].title + '</a>';
+          $('.dynamics .cooMenu').append(html);
+          $('.dyNav').append(html);
+          if (code1 === data[i].code.toString()) {
+            var j;
+            for (j = 0; j < data[i].subCats.length; j++) {
+              var item = '<a class="tab activeTab" href="dynamics_calandar.html?code1=' + data[i].code +
+                '&code2=' + data[i].subCats[j].code + '&page=0">' + data[i].subCats[j].title + '</a>';
+              $('.chooseTab').append(item);
+            }
+          }
+        }
+        code1 = data[0].code;
+        code2 = data[0].subCats[0].code;
+      }
+    });
+
+    $.ajax({
+      url: 'https://www.51wnl.com/Official/api/site/getnews?code=' + code2,
+      dataType: 'JSON',
+      type: 'GET',
+      success: function (result) {
+        data = result.data.items;
+        bigData = result.data.items;
+        console.log(result.data.items);
+        pageChange(data, pageIndex);
+      }
+    })
+
+    function pageTo(pageIndex) {
+      pageIndex = parseInt(pageIndex);
+      pageChange(bigData, pageIndex);
+    }
+
+    function pageChange(bigData, pageIndex) {
+      if (bigData.length === 0) {
+        return;
+      }
+      var totalPage = parseInt(bigData.length / 10) + 1;
+      var data = [];
+      data.length = 0;
+      for (var i = 10 * pageIndex; i < bigData.length && i < 10 * (pageIndex + 1); i++) {
+        data.push(bigData[i]);
+      }
+      newsReset(data);
+      pageReset(pageIndex, totalPage);
+    }
+
+    function pageReset(pageIndex, totalPage) {
+      if (totalPage > 1) {
+        $('.paginationContent').removeClass('hidden');
+      }
+      if (pageIndex > 4) {
+        $('.pagination').find('.first').removeClass('hidden');
+      }
+      if (totalPage - pageIndex > 5) {
+        $('.pagination').find('.last').removeClass('hidden');
+      }
+      getPageNum(pageIndex, totalPage);
+      $('.btns').empty();
+      for (var i = 0; i < pageArr.length; i++) {
+        if (parseInt(pageArr[i]) === parseInt(pageIndex)) {
+          var item = '<div class="btn active" onclick="pageTo(' + parseInt(pageArr[i]) + ')">' + (parseInt(pageArr[i]) +
+            1) + '</div>';
+          $('.pagination').find('.btns').append(item);
+        } else {
+          var item = '<div class="btn" onclick="pageTo(' + parseInt(pageArr[i]) + ')">' + (parseInt(pageArr[i]) + 1) +
+            '</div>';
+          $('.pagination').find('.btns').append(item);
+        }
+      }
+    }
+
+    // page数据数组
+    function getPageNum(pageIndex, totalPage) {
+      pageArr = [pageIndex];
+      var i = 0;
+      while (1) {
+        i++;
+        if (pageArr.length >= 5) {
+          return pageArr;
+        }
+        if (pageIndex + i > totalPage - 1 && pageIndex - i < 0) {
+          return pageArr;
+        }
+        if (pageIndex - i >= 0) {
+          pageArr.unshift(pageIndex - i);
+        }
+        if (pageIndex + i <= totalPage - 1) {
+          pageArr.push(pageIndex + i);
+        }
+      }
+    }
+
+    function newsReset(data) {
+      $('.newsItems').empty();
+      for (var i = 0; i < data.length; i++) {
+        var item = '<div class="dynamicsContent" onclick="newsTo(' + data[i].id + ')">';
+        item += '  <div class="dyImg" style="border: none;background-size: cover;background-image:url(' + data[i].image +
+          ')"></div>';
+        item += '  <div class="dyDetails">';
+        item += '    <div class="dyTitle">' + data[i].title + '</div>';
+        item += '    <div class="dyText">' + data[i].subTitle + '</div>';
+        item += '    <div class="dyTime">' + data[i].pubDate.split('T')[0] + '</div>';
+        item += '  </div>';
+        item += '  <div class="tabBtn"></div>';
+        item += '</div>';
+        $('.newsItems').append(item);
+      }
+    }
+
+    function newsTo(newsId) {
+      location.href = 'newsPage.html?id=' + newsId;
+    }
+
+    function getQueryValue(name) {
+      var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) {
+        return decodeURIComponent(r[2]);
+      }
+      return null;
+    }
+  </script>
+</body>
+
+</html>

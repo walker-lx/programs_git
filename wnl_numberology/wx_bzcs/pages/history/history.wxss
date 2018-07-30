@@ -1,0 +1,233 @@
+/* pages/history/history.wxss */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.container {
+  margin: 0;
+  padding:0;
+  top: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #f6f6f6;
+  /* height: 100%;
+  overflow: scroll; */
+}
+
+.userinfo {
+  position: relative;
+}
+
+.userinfo_back {
+  box-sizing: border-box;
+  height: 346rpx;
+  padding-top: 40rpx;
+  background-position: center center;
+  opacity: 0.8;
+  background-color: #000;
+}
+
+.userinfo_back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 346rpx;
+  background-image: radial-gradient(circle at center 0, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.userinfo-avatar {
+  transform: translateX(-93rpx);
+  left: 50%;
+  position: absolute;
+  width: 186rpx;
+  height: 186rpx;
+  top: 40rpx;
+  border-radius: 186rpx;
+  /* border: solid 1px rgba(0,0,0,0.1); */
+  background-size:cover;
+  z-index: 9;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 266rpx;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.tabs {
+  height: 48px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+  margin-bottom: 20rpx;
+  position: relative;
+  padding: 0 15px;
+}
+
+.tab_item {
+  position: relative;
+  float: left;
+  width: 33.3%;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.0;
+  text-align: center;
+  color: #333;
+  padding: 17px 0;
+  box-sizing: border-box;
+}
+
+.tab_item_active {
+  color: #ff9447 !important;
+}
+
+.tab_item_active::after {
+  content: "";
+  height: 2px;
+  width: 80%;
+  background: #ff9447;
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+}
+
+/*
+* products
+*/
+
+.products {
+  position: relative;
+  padding: 0;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+
+.product {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 160px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.product_head {
+  height: 16px;
+  padding: 15px;
+  width: 100%;
+}
+
+.product_name {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #333;
+  max-width: 80%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.product_body {
+  background-color: #fcfbf9;
+  height: 66px;
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.product_body .title {
+  width: 25%;
+  font-size: 14px;
+  color: #777;
+  float: left;
+  line-height: 14px;
+}
+
+.product_body .product_id {
+  float: right;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #999;
+  word-wrap: break-word;
+  text-align: right;
+}
+
+.product_foot {
+  padding: 15px;
+  height: 31px;
+  box-sizing: border-box;
+}
+
+.product_foot .price {
+  color: #333;
+  position: relative;
+  font-weight: 500;
+}
+
+.product_foot .price::before {
+  content: "￥";
+  position: relative;
+  left: 0;
+  width: 10px;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.product_foot .invalid {
+  position: absolute;
+  right: 30rpx;
+  width: 60px;
+  background-size: cover;
+  bottom: 12px;
+  font-size: 14px;
+  color: #ff9447;
+  text-align: center;
+  border-radius: 4rpx;
+  border: solid 2rpx #ff9447;
+}
+
+.product_foot .payed {
+  position: absolute;
+  bottom: -12px;
+  right: 10px;
+  height: 60px;
+  width: 60px;
+  background-image: url(https://coco70.51wnl.com/numberologynew/cs/images/web-yzf-img@3x.png);
+  background-size: cover;
+}
+.empty{
+    position: absolute;
+    width: 100%;
+    clear: both;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1;
+    color: #999;
+    top: 50vh;
+    margin-top: -80px;
+}
+.empty::before{
+    position: absolute;
+    height: 50px;
+    width: 40px;
+    left: 50%;
+    margin-left: -20px;
+    bottom: 28px;
+    content: "";
+    background-image: url(https://coco70.51wnl.com/numberologynew/cs/images/web-lslb-big-icon@3x.png);
+    background-size: cover;
+}

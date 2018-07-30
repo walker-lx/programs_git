@@ -1,0 +1,53 @@
+.hidden {
+  display: none;
+}
+.paginationContent {
+  width: 100%;
+  display: block;
+  height: 130px;
+  box-sizing: border-box;
+}
+.pagination {
+  position: relative;
+  display: inline-block;
+  display: inline-flex;
+  transform: translate(-50%);
+  left: 50%;
+}
+.pagination .first {
+  margin-right: 13px;
+}
+.pagination .last {
+  margin-left: 13px;
+}
+.btns .active {
+  border: solid 1px #d03f3f !important;
+  color: #d03f3f !important;
+}
+.pagination .btn {
+  cursor: pointer;
+  float: left;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  border: solid 1px #333;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0 7px;
+  color: #333333;
+}
+
+.pagination .btnB {
+  cursor: pointer;
+  float: left;
+  text-align: center;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  border: solid 1px #111111;
+  font-size: 16px;
+  line-height: 28px;
+}

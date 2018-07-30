@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css_calandar/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css_calandar/index.css">
+  <link rel="stylesheet" type="text/css" href="css_calandar/style.css">
+  <link rel="stylesheet" type="text/css" href="css_calandar/mobile.css">
+  <title>51万年历官方网站，3亿用户共同选择。中国传统日历农历查询工具</title>
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260066306'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol +
+      "s11.cnzz.com/z_stat.php%3Fid%3D1260066306' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    if (window.location.host == "www.51wnl.com" || window.location.host == "51wnl.com") {
+      window.location.host = "open.51wnl.com";
+    }
+  </script>
+</head>
+
+<body>
+  <div class="qrcodeModal downlaodQRCode hidden">
+    <img class="qrImg" src="img_calandar/download_QRCode.png" alt="万年历二维码" />
+    <div class="downloadTxt">扫描下载-万年历</div>
+  </div>
+  <div class="downloadMask hidden"></div>
+  <div class="qrcodeModal wxQRCode hidden">
+    <img class="qrImg" src="img_calandar/wx_QRCode.png" alt="万年历微信二维码" />
+    <div class="downloadTxt">扫描关注-万年历微信</div>
+  </div>
+  <div class="topBanner cooperateBg">
+    <div class="firstLevel"></div>
+    <div class="secondLevel"></div>
+    <div class="thirdLevel cooperate"></div>
+    <div class="fourthLevel"></div>
+    <div class="topBannerContent newabout">
+      <div class="navContent">
+        <div class="wnlIcon"></div>
+        <div class="wnlTxt"></div>
+        <a class="navMenu" href="javascript:void(0)">
+          <div class="menuLine firstLine"></div>
+          <div class="menuLine secondLine"></div>
+          <div class="menuLine lastLine"></div>
+        </a>
+        <div class="navList">
+          <div class="navWnlIcon"></div>
+          <a class="navLink" href="index_calandar.html">首页</a>
+          <div class="navLink cooNav cooperate active">
+            <div class="navLinkTxt">合作</div>
+            <div class="navLinkActive"></div>
+            <div class="cooMenu">
+              <a href="document_calandar.html">51万年历API</a>
+              <a href="cooperate_calandar.html">商务合作</a>
+            </div>
+          </div>
+          <div class="navLink cooNav dynamics">
+            <div class="navLinkTxt">动态</div>
+            <div class="navLinkActive"></div>
+            <div class="cooMenu">
+              <!--<a href="news_calandar.html">新闻</a>
+                            <a href="youloft_calandar.html">优路家</a>-->
+            </div>
+          </div>
+          <a class="navLink" href="recruit_calandar.html">招聘</a>
+          <a class="navLink" href="about_calandar.html">关于</a>
+          <!--<a class="navLink hidden wnlgyp" href="craftwork_calandar.html">工艺品</a>
+                        <a class="loginLink" href="http://www.51wnl.com">网页版</a>-->
+        </div>
+      </div>
+      <div class="secondNav">
+        <a href="document_calandar.html" class="activeLi">51万年历API</a>
+        <a href="cooperate_calandar.html">商务合作</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="apiDetail">
+    <div class="lDetail">
+      <div class="lTitle">目录</div>
+      <a href="#api1" id="a">1.使用说明</a>
+      <a href="#api2">2.通用参数说明</a>
+      <a href="#api3">3.获取调休假</a>
+      <a href="#api4">4.获取节日</a>
+      <a href="#api5">5.获取一天的详细信息</a>
+      <a href="#api6">6.获取一年的详细信息</a>
+      <a href="#api7">7.获取接下来一天的详细信息</a>
+      <a href="#api8">8.获取节日小贴士</a>
+      <a href="#api9">9.获取星座运势</a>
+    </div>
+    <div class="rDetail">
+      <div class="rTitle">51万年历API文档</div>
+      <div id="api1" class="rApi">
+        <div class="rdName">使用说明</div>
+        <div class="rdText">51万年历接口提供专业全面的传统黄历信息；及时更新的法定调休假安排；大陆、港澳台四地的节日节气信息。
+          <br>申请试用authkey请联系:
+          <br>商务总监龚小姐（QQ：6635 2806）或产品总监李先生（QQ：7043 4724 3）
+        </div>
+      </div>
+      <div id="api2" class="rApi">
+        <div class="rdName">通用参数说明</div>
+        <div class="rdText">token: 根据请求参数(加上authorisekey 在群组中给出)字典排序拼接字符串 然后md5 后的值
+          <br>type: 0 表示大陆 1表示香港 2表示台湾 3表示澳门
+          <br>client: 请求的客户端来源</div>
+      </div>
+      <div id="api3" class="rApi">
+        <div class="rdName">获取调休假</div>
+        <div class="rdText">demo链接：
+          <a href="http://co-api.51wnl.com/calendar/vacations?token=A2E0C3CDEA081D3BFC34F8FE23A15886&type=1&timestamp=1462377600&client=ceshi">http://co-api.51wnl.com/calendar/vacations?token=A2E0C3CDEA081D3BFC34F8FE23A15886&type=1&timestamp=1462377600&client=ceshi</a>
+          <br>参数说明：
+          <br>token
+          <br>type
+          <br>client
+          <br>返回值说明:{"status":0,"data":{"20140101":"1","20140131":"1"},"errMsg":""}
+          <br>data:字段为主要输出内容 对应的值表示 时间以及当天的上班状态 1表示休假 2表示上班</div>
+      </div>
+      <div id="api4" class="rApi">
+        <div class="rdName">获取节日</div>
+        <div class="rdText">demo链接：
+          <a href="http://co-api.51wnl.com/calendar/festival?token=A2E0C3CDEA081D3BFC34F8FE23A15886&type=1&timestamp=1462377600&client=ceshi">http://co-api.51wnl.com/calendar/festival?token=A2E0C3CDEA081D3BFC34F8FE23A15886&type=1&timestamp=1462377600&client=ceshi</a>
+          <br>参数说明：
+          <br>token
+          <br>type
+          <br>client
+          <br>返回值说明:
+          <br>R：上次修改时间
+          <br>S：按阳历计算的节日
+          <br>L：按农历计算的节日
+          <br>W：按周计算的节日
+          <br>"0511"：S,L时表示5月11日 W时表示5月的第一个星期一
+        </div>
+      </div>
+      <div id="api5" class="rApi">
+        <div class="rdName">获取一天的详细信息</div>
+        <div class="rdText">demo链接：
+          <a href="http://co-api.51wnl.com/calendar/details?token=CD78D9012F1C063E54C640EA27952F80&timestamp=1462377600&client=ceshi">http://co-api.51wnl.com/calendar/details?token=CD78D9012F1C063E54C640EA27952F80&timestamp=1462377600&client=ceshi</a>
+          <br>demo链接：
+          <a href="http://co-api.51wnl.com/calendar/details?token=CD78D9012F1C063E54C640EA27952F80&timestamp=1462377600&client=ceshi">http://co-api.51wnl.com/calendar/details?token=CD78D9012F1C063E54C640EA27952F80&timestamp=1462377600&client=ceshi</a>
+          <br>参数说明：
+          <br>token
+          <br>timestamp 获取日期的时间戳
+          <br>client
+          <br>返回值说明:
+          <br>"datekey": 阳历
+          <br>"festivals":节日
+          <br>"vacationStatus":0表示正常的一天 1表示休假 2表示调休上班
+          <br>"terms":节气
+          <br>"termBeginTime": 节气开始时间
+          <br>"yi": 宜
+          <br>"ji": 忌
+          <br>"pzbj": 彭祖百忌
+          <br>"jsyq": 吉神宜趋
+          <br>"xsyj": 凶神宜忌
+          <br>"cs": 冲煞
+          <br>"wx": 五行
+          <br>"cxfgod":
+          <br>"tgdz": 天干地支
+          <br>"weekDay":星期
+          <br>"lunar": 农历
+          <br>"weeks": 第几周
+          <br>"constellation": 星座
+          <br>"branchHourInfo": 时辰宜忌
+        </div>
+      </div>
+      <div id="api6" class="rApi">
+        <div class="rdName">获取一年的详细信息</div>
+        <div class="rdText">demo链接：
+          <a href="http://co-api.51wnl.com/calendar/detailsyear?token=A29341D2D2851894A1AA8A2FB7A91962&year=2016&timestamp=1462377600&client=ceshi">http://co-api.51wnl.com/calendar/detailsyear?token=A29341D2D2851894A1AA8A2FB7A91962&year=2016&timestamp=1462377600&client=ceshi</a>
+          <br>参数说明：
+          <br>token
+          <br>year:年份
+          <br>client
+          <br>返回值说明:
+          <br>"datekey": 阳历
+          <br>"festivals":节日
+          <br>"vacationStatus":
+          <br>"terms":节气
+          <br>"termBeginTime": 节气开始时间
+          <br>"yi": 宜
+          <br>"ji": 忌
+          <br>"pzbj": 彭祖百忌
+          <br>"jsyq": 吉神宜趋
+          <br>"xsyj": 凶神宜忌
+          <br>"cs": 冲煞
+          <br>"wx": 五行
+          <br>"cxfgod":
+          <br>"tgdz": 天干地支
+          <br>"weekDay":星期
+          <br>"lunar": 农历
+          <br>"weeks": 第几周
+          <br>"constellation": 星座
+          <br>"branchHourInfo": 时辰宜忌
+        </div>
+      </div>
+      <div id="api7" class="rApi">
+        <div class="rdName">获取接下来一天的详细信息</div>
+        <div class="rdText">demo链接：
+          <a href="http://co-api.51wnl.com/calendar/nextdetail?token=74F1BE7757B9B72E0D531AA4199437DF&timestamp=1462377600&client=ceshi">http://co-api.51wnl.com/calendar/nextdetail?token=74F1BE7757B9B72E0D531AA4199437DF&timestamp=1462377600&client=ceshi</a>
+        </div>
+      </div>
+      <div id="api8" class="rApi">
+        <div class="rdName">获取节日小贴士</div>
+        <div class="rdText">demo链接：
+          <a href="http://co-api.51wnl.com/Calendar/FestivalInfo?name=辛亥革命纪念日&client=ceshi&simplified=0&token=A79D963960F24B84424723A2258BD703">http://co-api.51wnl.com/Calendar/FestivalInfo?name=辛亥革命纪念日&client=ceshi&simplified=0&token=A79D963960F24B84424723A2258BD703</a>
+          <br>参数说明：
+          <br>name：节日名
+          <br>simplified：整形 简体（0） 繁体（非0）</div>
+      </div>
+      <div id="api9" class="rApi">
+        <div class="rdName">获取星座运势</div>
+        <div class="rdText">demo链接：
+          <a href="http://co-api.51wnl.com//Calendar/GetStar?starName=aries&client=ceshi&token=7AFA7AC511153E696C09D04F94816CB1">http://co-api.51wnl.com//Calendar/GetStar?starName=aries&client=ceshi&token=7AFA7AC511153E696C09D04F94816CB1</a>
+          <br>参数说明：
+          <br>starName：星座名称 对应12星座名 aries，libra，sagittarius，pisces，cancer，gemini，aquarius，capricorn，virgo，scorpio，taurus ，leo
+          <br>client：对方请求的验证key
+          <br>token：验证参数 请求参数排序后MD5</div>
+      </div>
+    </div>
+  </div>
+  <div class="bottomBanner">
+    <div class="bottomWNLIcon"></div>
+    <div class="socialListContent">
+      <a class="wxLink" href="javascript:void(0)" target="_blank"></a>
+      <a class="qqLink" href="http://shang.qq.com/wpa/qunwpa?idkey=f0f832e5f143c4825ec1ce2c5d5e75c5e45af7276e5765ef590f0932c1618b48" target="_blank"></a>
+      <a class="wbLink" href="http://weibo.com/51wnl" target="_blank"></a>
+      <a class="emailLink" href="mailto:cal@youloft.com"></a>
+      <div class="qunContent hidden">QQ群:186720268</div>
+      <div class="mask qunMask hidden"></div>
+    </div>
+    <div class="rightTxt">版权所有 ® 重庆可兰达科技有限公司</div>
+    <div class="copyright">Copyright
+      <span class="copyright-time"></span> CALENDAR Tech., All Rights Reserved.</div>
+    <div class="goverment">
+      <a class="goverment_link" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50019002500524">渝公网安备 50019002500524号</p>
+      </a>
+      <a class="goverment_icp" target="_blank" href="http://www.miitbeian.gov.cn">ICP: 渝ICP备11000038号-1</a>
+    </div>
+  </div>
+  <script type="text/javascript" src="js_calandar/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js_calandar/index.js"></script>
+  <script type="text/javascript" src="js_calandar/style.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      if ($(window).scrollTop() >= 200) {
+        $(".lDetail").addClass("navFix");
+      } else {
+        $(".lDetail").removeClass("navFix");
+      }
+      var isStopScrollState = false;
+      var apicon = location.href.substr(location.href.indexOf('?apicon=') + 9);
+      if (apicon && apicon.trim() !== '') {
+        $(".lDetail").find("a").removeClass("activeApi");
+        $(".lDetail a[href=" + apicon + "]").addClass("activeApi");
+        isStopScrollState = true;
+      }
+      $(".lDetail a").on('click', function () {
+        $(".lDetail").find("a").removeClass("activeApi");
+        $(this).addClass("activeApi");
+        isStopScrollState = true;
+      });
+      $(window).scroll(function () {
+        if ($(window).scrollTop() >= 200) {
+          $(".lDetail").addClass("navFix");
+        } else {
+          $(".lDetail").removeClass("navFix");
+        }
+        if (isStopScrollState) {
+          isStopScrollState = false;
+          return;
+        }
+        var top = $(document).scrollTop();
+        var api = $(".rApi");
+        api.each(function () {
+          var $this = $(this);
+          var height1 = top - $this.offset().top;
+          var height2 = $this.offset().top - top;
+          if (height2 < 65 & height1 < $this.height()) {
+            var id = $this.attr("id").substr(-1, 1);
+            $(".lDetail").find("a").removeClass("activeApi");
+            $(".lDetail a").eq(id - 1).addClass("activeApi");
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

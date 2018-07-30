@@ -1,0 +1,270 @@
+@charset "UTF-8";
+*{ -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-tap-highlight-color: rgba(0,0,0,0);  border: 0; outline: none; }
+/*css resert*/
+html, body, div, p, span, label, img, a, ol, ul, dl, dt, dd, li, table, tr, td, th, tbody, thead, tfoot, form, fieldset, legent, h1, h2, h3, h4, h5, h6, strong, b, em, blockquote, cite, pre, code, hr, br, input, button, textarea,article, aside, details, figcaption, figure, footer, header, group, menu, nav, section { padding:0px; margin:0px; }
+a{text-decoration: none;}
+a, a:link, a:visited {
+    color: #333;
+}
+ul, li{list-style: none;}
+/*禁止iphone字体放大 */
+html { -webkit-text-size-adjust: none; }
+.clearfix{
+    *zoom:1;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.fl{float: left;}
+.fr{float: right;}
+
+
+#cnzz_stat_icon_1257628489{display: none;}
+body{
+	width: 375px;
+    font-family: -apple-system, "苹方-简", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", sans-serif;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+.page{
+    padding-bottom: 64px;
+}
+.header{
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    background: url(../img/weather477/tq-share-bg.png) no-repeat;
+    background-size: 375px 250px;
+}
+.location{
+    padding-top: 23px;
+    width: 100%;
+    text-align: center;
+}
+.location .location-icon{
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 21px;
+    background: url(../img/weather477/tq-web-icon00@3x.png) center no-repeat;
+    background-size: 12px 15px;
+}
+.location .location-name{
+    display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    line-height: 21px;
+    font-family:PingFangSC-Regular;
+    font-size:17px;
+    color:#ffffff;
+    text-shadow:0px 2px 1px rgba(0,0,0,0.20);
+}
+.temp{
+    position: relative;
+    margin: 10px auto;
+    display: inline-block;
+    font-family:SanFranciscoDisplay-Regular;
+    font-size:100px;
+    color:#ffffff;
+    line-height:80px;
+    text-shadow:0px 2px 1px rgba(0,0,0,0.20);
+    text-align:center;
+}
+.temp::after{
+    content: "°";
+    position: absolute;
+    width: 26px;
+    top: 0;
+    right: -26px;
+    font-family:SanFranciscoDisplay-Regular;
+    font-size:100px;
+    color:#ffffff;
+    line-height:80px;
+    text-shadow:0px 2px 1px rgba(0,0,0,0.20);
+}
+.temp-overview{
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#ffffff;
+    line-height:20px;
+    text-shadow:0px 2px 1px rgba(0,0,0,0.20);
+    text-align:center;
+}
+
+.wlist{
+    margin: 13px auto;
+    height: 20px;
+    line-height: 20px;
+}
+.wlist .lpart{
+    width: 130px;
+    height: 20px;
+    text-align: right;
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#999999;
+}
+.wlist .rpart{
+    width: 130px;
+    height: 20px;
+    text-align: left;
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#333333;
+    line-height:20px;
+}
+.lpart .listicon{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+.lpart .listkey{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px;
+}
+.lpart .ico1{
+    background: url(../img/weather477/tq-web-icon01@3x.png) center no-repeat;
+    background-size: 20px 14px;
+}
+.lpart .ico2{
+    background: url(../img/weather477/tq-web-icon02@3x.png) center no-repeat;
+    background-size: 11px 15px;
+}
+.lpart .ico3{
+    background: url(../img/weather477/tq-web-icon03@3x.png) center no-repeat;
+    background-size: 14px 14px;
+}
+.lpart .ico4{
+    background: url(../img/weather477/tq-web-icon04@3x.png) center no-repeat;
+    background-size: 20px 14px;
+}
+.lpart .ico5{
+    background: url(../img/weather477/tq-web-icon05@3x.png) center no-repeat;
+    background-size: 14px 14px;
+}
+.lpart .ico6{
+    background: url(../img/weather477/tq-web-icon06@3x.png) center no-repeat;
+    background-size: 14px 14px;
+}
+
+.wnlBanner{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 375px;
+    height: 64px;
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+    z-index: 100;
+}
+.closeBanner{
+    position: absolute;
+    display: block;
+    left: 10px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    background: url(../img/ad-close-icon@3x.png) no-repeat;
+    background-size: 10px 10px;
+}
+.wnllogo{
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    width: 44px;
+    height: 44px;
+    background: url(../img/ad-logo-icon.png) no-repeat;
+    background-size: 44px 44px;
+}
+.ad-title{
+    display: inline-block;
+    margin-top: 14px;
+    margin-left: 84px;
+}
+.ad-title .ad-t1{
+    font-family:PingFangSC-Regular;
+    font-size:14px;
+    color:#111111;
+    line-height:18px;
+    text-align:left;
+}
+.ad-title .ad-t2{
+    margin-top: 1px;
+    font-family:PingFangSC-Regular;
+    font-size:12px;
+    color:#333333;
+    line-height:18px;
+    text-align:left;
+}
+.downloadBtn{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -13px;
+    display: block;
+    border:1px solid #2ea9df;
+    border-radius:3px;
+    width:68px;
+    height:24px;
+    font-family:PingFangSC-Regular;
+    font-size:14px;
+    color:#2ea9df;
+    line-height:24px;
+    text-align:center;
+    text-decoration: none;
+}
+
+.public_toast{ padding: 10px 15px; border-radius: 3px; background: rgba(0,0,0,.7); position: fixed; left: 50%;top:50%; max-width:260px; z-index: 9999; color: #FFF; font-size: 13px; -webkit-transform: translate3d(-50%, 100%, 0); opacity: 0; transition: all linear .1s; white-space:nowrap;}
+.public_toast_show{ opacity: 1; -webkit-transform: translate3d(-50%, 0, 0);}
+
+/**
+ * iPhone 4/4s portrait
+ */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-device-pixel-ratio: 2)
+and (device-aspect-ratio: 2/3)
+and (orientation:portrait)  {
+	
+}
+@media screen and (max-width: 320px) {
+    body{font-size: 14px;}
+    .brief,.brief.toolong{font-size: 36px;}
+    .detail{font-size: 15px;}
+    .tabs ul li{font-size: 16px;}
+}
+@media screen and (min-width: 321px) and (max-width: 413px) {
+    body{font-size: 16px;}
+}
+@media screen and (min-width: 414px) and (max-width: 639px) {
+    body{font-size: 17px;}
+}
+@media screen and (min-width: 640px) {
+    body{font-size: 18px;}
+}
+@-webkit-keyframes loadPlus {
+    0% {
+        -webkit-transform: rotate(0)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+@keyframes loadPlus {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}

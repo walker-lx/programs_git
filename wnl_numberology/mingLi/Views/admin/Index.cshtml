@@ -1,0 +1,171 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/demo/demo.css">
+    <script src="~/Content/jquery.min.js"></script>
+    <script src="~/Content/jquery.easyui.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var url = '../admin/getdata';
+            $('#dg').datagrid({
+                url: url,
+                queryParams: {
+                    status:$("#Select1").val()
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+     <div style="margin:20px 0;"></div>
+    <div class="easyui-layout" style="width:100%;height:650px;">
+        <div data-options="region:'north'" style="height:50px">
+            <div style="line-height:48px;font-size:xx-large;font-weight:400;float:left;width:80%">
+                订单管理系统
+            </div>
+            <div style="float:right; line-height:48px;">
+                <label>@ViewBag.user</label>
+                <a href="loginout">退出</a>
+            </div>
+        </div>
+        <div data-options="region:'south',split:true" style="height:50px;"></div>
+         
+        <div data-options="region:'west',split:true" title="菜单栏" style="width:150px;"></div>
+        <div data-options="region:'center'">
+
+            <div>
+         <table id="dg" title="订单列表"  style="width:100%;height:500px"
+            
+            toolbar="#toolbar" pagination="true"
+            rownumbers="true" fitColumns="true" singleSelect="true">
+        <thead>
+            <tr>
+                <td field="orderid" width="30">订单标示</td>
+                <th field="ordertype" width="50">订单类别</th>
+                <th field="date" width="50">创建时间</th>
+                <th field="price" width="50">价格</th>
+                <th field="master" width="50">大师</th>
+                <th field="status" width="50">状态</th> 
+            </tr>
+        </thead>
+    </table>
+        <h1></h1>
+    <div id="toolbar">
+        <select id="Select1" class="easyui-select" onchange="changestatus()"  onselect="changestatus()">
+            <option value="0">新增</option>
+            <option value="1">修改</option>
+            <option value="2">删除</option>
+            <option value="3">待解答</option>
+            <option value="4">解答完成</option> 
+        </select>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="distribute()">分配大师</a>
+@*        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Edit User</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">Remove User</a>*@
+    </div>
+
+         <div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+            closed="true" buttons="#dlg-buttons">
+        <div class="ftitle"></div>
+        <form id="fm" method="post" novalidate>
+            <div class="fitem"> 
+                 <label id="orderlable">订单编号 </label>
+                 <input type="hidden" name="orderid" id="idhidden" />
+                 <input id="cc" name="dept">
+            </div> 
+           </form>
+             </div>
+        <div id="dlg-buttons">
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="submit()">提交</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')">Cancel</a>
+    </div>
+    </div>
+         </div>
+        </div>
+
+    
+
+    <script type="text/javascript">
+        function distribute() { 
+            var row = $('#dg').datagrid('getSelected');
+            if (row){
+                $("#orderlable").text(row.orderid);
+                $("#idhidden").val(row.orderid);
+                $('#dlg').dialog('open').dialog('setTitle', '分配大师');
+                $('#cc').combobox({
+                    url: '../admin/GetMasters',
+                    valueField: 'id',
+                    textField: 'text'
+                });
+            }
+        }
+
+        function changestatus() {
+            saveUser();
+        }
+
+        function submit() {
+            $('#fm').form('submit', {
+                url: '../admin/SubmitOrderToMaster',
+                onSubmit: function () {
+                    return true;
+                    //return $(this).form('validate');
+                },
+                success: function (result) {
+                    var result = eval('(' + result + ')');
+                    if (result.status > 0) {
+                        $.messager.show({
+                            title: 'Error',
+                            msg: result.errorMsg
+                        });
+                    } else {
+                        $('#dlg').dialog('close');        // close the dialog
+                        $('#dg').datagrid('reload');    // reload the user data
+                    }
+                }
+            });
+        }
+        function saveUser() {
+
+            var newurl = "../admin/getdata?status=" + $("#Select1").val();
+             
+            $('#dg').datagrid('load', {
+                status: $("#Select1").val()
+            });
+            return;
+
+            $('#fm').form('submit', {
+                url: url,
+                onSubmit: function () {
+                    return $(this).form('validate');
+                },
+                success: function (result) {
+                    var result = eval('(' + result + ')');
+                    if (result.errorMsg) {
+                        $.messager.show({
+                            title: 'Error',
+                            msg: result.errorMsg
+                        });
+                    } else {
+                        $('#dlg').dialog('close');        // close the dialog
+                        $('#dg').datagrid('reload');    // reload the user data
+                    }
+                }
+            });
+        }
+
+    </script>
+</body>
+    
+</html>
+

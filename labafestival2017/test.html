@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <a href="http://runjs.cn/code/lliykjxj" target="_blank">http://runjs.cn/code/lliykjxj</a> -->
+    <title>拼图游戏</title>
+    <style type="text/css">
+        body,
+        html {
+            padding: 0px;
+            margin: 0px;
+            background: #eee;
+        }
+
+        #gameDiv {
+            width: 460px;
+            height: 460px;
+            margin: 20px auto;
+            background: #F9F9F9;
+            padding: 1px 1px;
+            position: relative;
+        }
+
+        #maskBox {
+            opacity: 0.5;
+            display: block;
+        }
+
+        #answer-btn {
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        #answer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gameDiv"></div>
+    <button id="answer-btn">查看原图</button>
+    <div id="answer">
+        <img src="" alt="" id="answer-img">
+    </div>
+    <script>
+        window.onload = function () {
+            //生成函数
+            gameInfo.init();
+        }
+    </script>
+</body>
+<!-- <script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script> -->
+<script type="text/javascript">
+        /**
+     * Created by jsonpeter on 2015/8/13.
+     */
+        (function ($g) {
+            //游戏配置
+            setting = {
+                gameConfig: {
+                    url: "http://img.gzui.net/meinv.png",
+                    id: "gameDiv",
+                    //生成规格横4 纵4
+                    size: "4*4",
+                    //每个元素的间隔
+                    margin: 0,
+                    //拖动时候块透明度
+                    opacity: 0.8
+                },
+                setElement: {
+                    type: "div",
+                    id: "",
+                    float: "",
+                    display: "",
+                    margin: "",
+                    background: "",
+                    width: "",
+                    height: "",
+                    left: "",
+                    top: "",
+                    position: "",//absolute
+                    opacity: 0.4,
+                    animate: 0.8
+                }
+            };
+            //元素生成参数
+            var _sg = setting.gameConfig;
+            var _st = setting.setElement;
+            var gameInfo = function () { };
+            gameInfo.prototype = {
+                init: function () {
+                    this.creatObj();
+                    this.eventHand();
+                },
+                sortObj: {
+                    rightlist: [], //正确的排序
+                    romdlist: []   //打乱后的排序
+                },
+                creatObj: function () {
+                    _sg.boxObj = document.getElementById(_sg.id) || "";
+                    //尺寸自动获取
+                    var _size = _sg.size.split('*') || [0, 0];
+                    //计算单个div的高宽
+                    var w = Math.floor(_sg.boxObj.offsetWidth / _size[0]);
+                    var h = Math.floor(_sg.boxObj.offsetHeight / _size[1]);
+                    //图片生成div
+                    var _size = _sg.size.split('*') || [0, 0];
+                    var wt = _size[0], hg = _size[1];
+                    //创建一个素组并排序打散
+                    var sortList = [];
+                    for (var a = 0; a < wt * hg; a++) {
+                        sortList.push(a);
+                    }
+                    sortList.sort(randomsort);
+                    this.sortObj.rightlist = sortList;
+                    //---------
+                    var _i = 0, sid = 0;
+                    for (; _i < wt; _i++) {
+                        var _s = 0;
+                        for (; _s < hg; _s++) {
+                            //赋值随机打散后的id
+                            _st.id = sortList[sid++];
+                            _st.display = "block";
+                            _st.float = "left";
+                            //_st.top=w*_i+"px";
+                            //_st.left=h*_s+"px";
+                            _st.margin = _sg.margin + "px";
+                            _st.background = "url('" + _sg.url + "') " + (-w * _s) + "px " + (-h * _i) + "px";
+                            _st.width = w - _sg.margin * (wt / 2) + "px";
+                            _st.height = h - _sg.margin * (hg / 2) + "px";
+                            this.sortObj.romdlist.push(this.addElement());
+                            // console.log( (_w*_i)+"px "+(_h*_s)+"px ");
+                        }
+                    }
+                    this.boxSort();
+                },
+                boxSort: function () {
+                    var _arrySort = this.sortObj.romdlist;
+                    var _tmp = [], _n = 0;
+                    eachBox(_arrySort, function (d) {
+                        _tmp.push(parseInt(_arrySort[d].id));
+                    });
+                    //排序新数组
+                    _tmp.sort(function (a, b) {
+                        return a > b ? 1 : -1;
+                    });
+                    //排序后的带dom的素组
+                    for (; _n < _tmp.length; _n++) {
+                        var _s = 0;
+                        for (; _s < _arrySort.length; _s++) {
+                            if (_arrySort[_s].id == _tmp[_n]) {
+                                _sg.boxObj.appendChild(_arrySort[_s]);
+                            }
+                        }
+                    }
+                    return _tmp;
+                },
+                //添加元素
+                addElement: function () {
+                    var _obj = document.createElement(_st.type);
+                    _obj.id = _st.id;
+                    _obj.style.display = _st.display;
+                    _obj.style.float = _st.float;
+                    _obj.style.margin = _st.margin;
+                    _obj.style.background = _st.background;
+                    _obj.style.width = _st.width;
+                    _obj.style.position = _st.position;
+                    _obj.style.top = _st.top;
+                    _obj.style.left = _st.left;
+                    _obj.style.height = _st.height;
+                    return _obj;
+                },
+                mouseEvent: {
+                    mousedown: function (ev) {
+                        ev = ev || ev.event;
+                        ev.preventDefault();
+                        //元素类型div
+                        _st.type = "span";
+                        _st.id = "maskBox";
+                        _st.width = this.offsetWidth + "px";
+                        _st.height = this.offsetHeight + "px";
+                        _st.position = "absolute";
+                        _st.background = "";
+                        //_st.opacity=_sg.opacity;
+                        _st.left = this.offsetLeft + "px";
+                        _st.top = this.offsetTop + "px";
+                    },
+                    mouseup: function (ev) {
+                        ev = ev || ev.event;
+                        //var _e=t.setElement;
+                        ev.preventDefault();
+                        var obj = document.getElementById(this.id);
+                        if (obj) {
+                            _sg.boxObj.removeChild(obj);
+                        }
+                    },
+                    mousemove: function (ev) {
+                        ev = ev || ev.event;
+                        this.style.left = getX_Y.call(this, "x", ev) + "px";
+                        this.style.top = getX_Y.call(this, "y", ev) + "px";
+                    }
+                },
+                //正确检查 对比两个数组
+                gameCheck: function () {
+                    var s = 0, bols = true;
+                    var _arry = this.sortObj.rightlist;
+                    var _arryRom = this.sortObj.romdlist;
+                    console.log(_arry);
+                    console.log(_arryRom);
+                    for (; s < _arry.length; s++) {
+                        if (_arry[s] != _arryRom[s].id) {
+                            bols = false;
+                            break;
+                        }
+                    }
+                    return bols;
+                },
+                eventHand: function () {
+                    var _obj = _sg.boxObj.getElementsByTagName("div");
+                    var i = 0, olen = _obj.length;
+                    var that = this;
+                    var m = that.mouseEvent;
+                    var box_index = 0;
+                    for (; i < olen;) {
+                        (function (n) {
+                            //按下鼠标
+                            _obj[n].addEventListener("mousedown", function (e) {
+                                var _this = this;
+                                m.mousedown.call(_this, e);
+                                _st.background = _this.style.background;
+                                _this.style.background = "#FFF";
+                                //生成可移动的div
+                                var _newObj = that.addElement();
+                                _sg.boxObj.appendChild(_newObj);
+                                _newObj.style.opacity = _sg.opacity;
+                                //移动位置
+                                _newObj.onmousemove = function (e) {
+                                    m.mousemove.call(_newObj, e);
+                                    // console.log("____"+this.offsetLeft);
+                                    var _i = 0;
+                                    for (; _i < olen; _i++) {
+                                        var _w = parseInt(_obj[_i].style.width) / 1.5;
+                                        var _h = parseInt(_obj[_i].style.height) / 1.5;
+                                        var _left = _obj[_i].offsetLeft;
+                                        var _top = _obj[_i].offsetTop;
+                                        var _boxX = parseInt(this.style.left);
+                                        var _boxY = parseInt(this.style.top);
+                                        //还原样式
+                                        eachBox(_obj, function (d) {
+                                            _obj[d].style.opacity = 1.0;
+                                        });
+                                        //计算拖动到的位置
+                                        if (_left + _w > _boxX || _left > _boxX + _w) {
+                                            if (_top + _h > _boxY || _top > _boxY + _h) {
+                                                box_index = _i;
+                                                _obj[_i].style.opacity = _st.opacity;
+                                                break;
+                                            }
+                                        }
+                                    }
+                                };
+                                //鼠标松开
+                                _newObj.addEventListener("mouseup", function (e) {
+                                    //删除移动事件
+                                    _newObj.onmousemove = function (e) { };
+                                    //获取当前停留元素的坐标
+                                    var tagObj = {
+                                        id1: _obj[box_index].id,
+                                        id2: _this.id,
+                                        bg1: _obj[box_index].style.background,
+                                        bg2: this.style.background
+                                    };
+                                    //交换位置
+                                    _this.id = tagObj.id1;
+                                    _this.style.background = tagObj.bg1;
+                                    _obj[box_index].id = tagObj.id2;
+                                    _obj[box_index].style.background = tagObj.bg2;
+                                    //获取拖动后的排序
+                                    that.sortObj.romdlist = _obj;
+                                    //还原样式
+                                    eachBox(_obj, function (d) {
+                                        _obj[d].style.opacity = 1.0;
+                                    });
+                                    //删除浮动div
+                                    m.mouseup.call(_newObj, e);
+                                    //计算是否完成拼图
+                                    if (that.gameCheck()) {
+                                        alert("O(∩_∩)O哈哈~");
+                                    }
+                                }, false);
+                            }, false);
+                        })(i++);
+                    }
+                }
+            }
+            //随机数
+            function randomsort(a, b) {
+                return Math.random() > .5 ? -1 : 1;//用Math.random()函数生成0~1之间的随机数与0.5比较，返回-1或1
+            }
+            function eachBox(obj, fn) {
+                var _s = 0;
+                for (; _s < obj.length; _s++) {
+                    fn(_s);
+                }
+            }
+            function getX_Y(s, ev) {
+                var _b = (ev.clientX - this.parentNode.offsetLeft) - (this.offsetWidth / 2);
+                if (s === "y") {
+                    _b = (ev.clientY - this.parentNode.offsetTop) - (this.offsetHeight / 2);
+                }
+                return _b;
+            }
+            $g.gameInfo = new gameInfo();
+        })(window)
+</script>
+<script type="text/javascript">
+    var btn = document.getElementById('answer-btn');
+    var img = document.getElementById('answer-img');
+    img.setAttribute('switch', 'on');
+    btn.onclick = function () {
+        if (img.attributes['switch'].nodeValue == 'on') {
+            img.src = setting.gameConfig.url
+            img.setAttribute('switch', 'off');
+        } else {
+            img.src = "";
+            img.setAttribute('switch', 'on');
+        }
+    }
+</script>
+
+</html>

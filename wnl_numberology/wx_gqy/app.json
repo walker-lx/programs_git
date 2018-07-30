@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/result/result",
+    "pages/order/order",
+    "pages/status/status",
+    "pages/pay/pay",
+    "pages/shuffle/shuffle",
+    "pages/select/select"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ee60f3",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff"
+  }
+}

@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;  
+    box-sizing:border-box;
+    width: 100%;    
+    height: 100%; 
+    overflow: auto;
+    -webkit-overflow-scrolling:touch; 
+    overflow-y: scroll;    
+    -webkit-text-size-adjust:none;    
+    background-color: rgb(41, 33, 66);
+    font-family: -apple-system, "苹方-简", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", sans-serif;        
+}
+body {
+    color: white;
+}
+#cnzz_stat_icon_1261564228{
+    display: none;
+}
+.content,a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select:none;
+}
+.v {
+    width: 62.67%;    
+    width: calc(100vw - 140px);
+    height: 76px;
+    margin: 30px auto 19px;
+    display: box;               
+    display: -webkit-box;       
+    display: -moz-box;           
+    display: -ms-flexbox;      
+    display: -webkit-flex;      
+    display: flex;      
+     /* 09版 */  
+    -webkit-box-pack: space-between;  
+    /* 12版 */  
+    -webkit-justify-content: space-between;  
+    -moz-justify-content: space-between;  
+    -ms-justify-content: space-between;  
+    -o-justify-content: space-between;
+    justify-content: space-between;    
+    /* 09版 */  
+    -webkit-box-align: center;  
+    /* 12版 */  
+    -webkit-align-items: center;  
+    -moz-align-items: center;  
+    -ms-align-items: center;  
+    -o-align-items: center;  
+    align-items: center;  
+    /* background: url('img/topic-viewpoint-bg@2x.png') no-repeat;
+    background-position: 50% 50%;
+    background-size: 241px 76px; */
+}
+.xs,.hb {
+    text-align: center;
+    display: box;               
+    display: -webkit-box;       
+    display: -moz-box;           
+    display: -ms-flexbox;      
+    display: -webkit-flex;      
+    display: flex;               
+    /* 09版 */  
+    -webkit-box-pack: center;  
+    /* 12版 */  
+    -webkit-justify-content: center;  
+    -moz-justify-content: center;  
+    -ms-justify-content: center;  
+    -o-justify-content: center;  
+    justify-content: center;  
+    
+    /* 09版 */  
+    -webkit-box-align: center;  
+    /* 12版 */  
+    -webkit-align-items: center;  
+    -moz-align-items: center;  
+    -ms-align-items: center;  
+    -o-align-items: center;  
+    align-items: center;  
+    position: relative;
+    overflow: hidden;
+}
+ .xs {
+    width: 70px;
+    height: 70px;
+    background: url(img/topic-point1-circle@2x.png) no-repeat;
+    background-position: 50%;
+    background-size: 70px 70px;
+    color: white;
+    font-size: 20px;
+}  
+
+ .hb {
+    width: 70px;
+    height: 70px;
+    background: url(img/topic-point2-circle@2x.png) no-repeat;
+    background-position: 50%;
+    background-size: 70px 70px;
+    color: white;
+    font-size: 20px;
+}
+.left {
+    float: left;
+    width: 0;
+    height: 5px;
+    background-color: rgb(223,129,91);
+}
+.change {
+    width: calc(100vw - 140px - 140px);
+    height: 5px;
+    background-color: rgb(41, 33, 66);
+}
+.change .right {
+    float: right;
+    height: 5px;
+    background-color:rgb(27,170,169);
+    position: relative;
+}
+.change .right1 {
+    position: absolute;
+     background-color: rgb(41, 33, 66); 
+    height: 5px;
+}
+.hidden{
+    display: none !important;
+}
+.problem {
+    width: 100%;
+    height: 150px;
+    display: box;               
+    display: -webkit-box;       
+    display: -moz-box;           
+    display: -ms-flexbox;      
+    display: -webkit-flex;      
+    display: flex;               
+    /* 09版 */  
+    -webkit-box-pack: center;  
+    /* 12版 */  
+    -webkit-justify-content: center;  
+    -moz-justify-content: center;  
+    -ms-justify-content: center;  
+    -o-justify-content: center;  
+    justify-content: center;  
+    
+    /* 09版 */  
+    -webkit-box-align: center;  
+    /* 12版 */  
+    -webkit-align-items: center;  
+    -moz-align-items: center;  
+    -ms-align-items: center;  
+    -o-align-items: center;  
+    align-items: center;  
+    position: relative;
+    /* -webkit-filter: blur(2px);
+    -ms-filter: blur(2px);   
+    filter: blur(2px);  */
+}
+.problem img {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    left: 0;
+    top: 0;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    z-index: 999;
+}
+.shadow {
+    width: 100%;
+    height: 153px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9998;
+}
+.problem p {
+    width: calc(100vw - 36px - 37px);
+    margin: 0 auto;
+    color: white;
+    font-size: 20px;
+    z-index: 9999;
+}
+.problem p img {
+    width: 20px;
+    height: 20px;
+}
+.choose {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 11px;
+    font-size: 20px;
+}
+.des{
+    position: absolute;
+    width: calc(100vw - 2px);
+    top: 60px;
+        left: -60px; 
+    height: 100px;
+    border: 1px solid #888;
+    z-index: 100;
+    background-color: #999;
+        display: none;     
+}
+.content {
+    margin:0 auto 80px;
+    position: relative;
+}
+.fb {
+    margin-bottom: 7px;
+    margin-left: 20px;
+}
+.content .person {
+    width:calc(100vw - 40px);             
+    margin:15px auto;
+    height:auto;
+        display: box;               
+    display: -webkit-box;       
+    display: -moz-box;           
+    display: -ms-flexbox;      
+    display: -webkit-flex;      
+    display: flex;               
+    /* 09版 */  
+    -webkit-box-pack: space-between;  
+    /* 12版 */  
+    -webkit-justify-content: space-between; 
+    -moz-justify-content: space-between; 
+    -ms-justify-content: space-between; 
+    -o-justify-content: space-between; 
+    justify-content: space-between; 
+}
+    .content hr {
+    margin-left: 20px;
+} 
+.content .user_head {
+    text-align: center;
+    width:30px;
+    height:30px;
+    border:1px solid transparent;
+    border-radius:50%;
+    overflow: hidden;
+}
+
+.content .user_head img {
+    width: 30px;
+    height: 30px;
+}
+.content .zl {
+    width: 78.67%;
+     width:calc(100vw - 40px - 30px - 10px); 
+}
+.content .xq {
+    float:left;
+    font-size: 15px;            
+}
+.content .xq .xz img{
+    width: 11px;
+    height: 11px;
+    margin-right: 4px;
+}
+.content .xq .xz span {
+    opacity: 0.5;
+    font-size: 13px;    
+}
+.content .time {
+    float:right;
+    font-size:12px;
+}
+.content .time span {
+    margin-right: 4px;
+}
+.content .none {
+    clear:both;
+}
+.tp {
+    color:rgb(255, 130, 130);
+    margin:10px 0 10px;
+    /* text-overflow: -o-ellipsis-lastline;  
+    overflow: hidden;  
+    text-overflow: ellipsis;  
+    display: -webkit-box;  
+    -webkit-line-clamp: 1;  
+    -webkit-box-orient: vertical;    */
+    font-size: 15px;
+}
+.tp_blue {
+    color:rgb(86, 150, 223);
+    margin:10px 0 10px;
+    /* text-overflow: -o-ellipsis-lastline;  
+    overflow: hidden;  
+    text-overflow: ellipsis;  
+    display: -webkit-box;  
+    -webkit-line-clamp: 1;  
+    -webkit-box-orient: vertical;    */
+    font-size: 15px;
+}
+.content .gd {
+    margin-bottom: 10px;
+    font-size: 17px;
+    text-overflow: -o-ellipsis-lastline;  
+    overflow: hidden;  
+    text-overflow: ellipsis;  
+    display: -webkit-box;  
+    -webkit-line-clamp: 2;  
+    -webkit-box-orient: vertical;
+}
+.content .dz, .content .hf {
+    font-size: 12px;
+    height: 14px;
+    display: inline-box;               
+    display: -webkit-inline-box;       
+    display: -moz-inline-box;           
+    display: -ms-inline-flexbox;      
+    display: -webkit-inline-flex;      
+    display: inline-flex;              
+    /* 09版 */  
+    -webkit-box-align: center;  
+    /* 12版 */  
+    -webkit-align-items: center;  
+    -moz-align-items: center;  
+    -ms-align-items: center;  
+    -o-align-items: center;  
+    align-items: center;  
+}
+.content .hf {
+    margin-left: 20px;
+}
+.dzchange {
+    color:rgb(255, 130, 130);
+}
+.content .hf .hf_icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+.content .dz .dz_icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+.pl {
+    width: 100%;
+    overflow: hidden;
+    border-color: transparent;
+    border-width: 0.5px; 
+    border-style: solid;
+    margin-top:4px;
+    font-size: 15px;
+    background-color: rgba(255,255,255,0.1);
+}
+.pl p {
+    margin: 10px 10px;
+    text-overflow: -o-ellipsis-lastline;  
+    overflow: hidden;  
+    text-overflow: ellipsis;  
+    display: -webkit-box;  
+    -webkit-line-clamp: 2;  
+    -webkit-box-orient: vertical;
+}
+#llsBanner {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 9999;
+}   
+
+#llsBanner img {
+    width: 100%;
+    height: 60px;
+}
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1, minimum-scale=1, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试你的神兽属性</title>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+	<script type="text/javascript" src="js/flexible.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/fastclick.js"></script>
+	<script src="js/wnl-util.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+    <div class="index page1">
+		<div class="light"></div>
+		<div class="foot">
+			<div class="hand"></div>
+            <div class="long"></div>
+		</div>
+	</div>
+    
+	<div class="index page2 hidden">
+		<div class="label"></div>
+		<div class="longpress"></div>
+		<div class="center">
+			<button class="again"></button>
+			<button class="share"></button>
+			<button class="home hidden"></button>
+		</div>
+		<div class="showluck hidden"></div>
+	</div>
+
+	<div class="showShareMask hidden">
+  		<div class="shareArrow"></div>
+  	</div>
+	<!-- wnl share tool -->
+	<div class="sharemask hidden"></div>
+  	<div class="wnl-sharetool hidden">
+  	   <div class="platform">
+  		   <label class="weixin">微信</label>
+  		   <label class="weixin_circle">朋友圈</label>
+  		   <label class="qq">QQ</label>
+  		   <label class="weibo">新浪微博</label>
+  	   </div>
+  	   <div class="cancle-share">取消分享</div>
+  	</div>
+
+   <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+   <script>
+		$.ajax({
+			url: "https://b.cqyouloft.com/interface/API/weixinhandler.ashx",
+			type: "get",
+			data: {
+				requesturl: location.href
+			},
+			success: function(result) {
+				result = JSON.parse(result);
+				wx.config({
+					debug: false,
+					appId: 'wx347ab26567c5465f', // 必填，公众号的唯一标识
+					timestamp: result.timestamp, // 必填，生成签名的时间戳
+					nonceStr: result.nonceStr, // 必填，生成签名的随机串
+					signature: result.signature, // 必填，签名，见附录1
+					jsApiList: [
+							'onMenuShareTimeline',
+							'onMenuShareAppMessage',
+							'onMenuShareQQ',
+							'onMenuShareWeibo'
+						] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+				});
+			}
+		});
+	</script>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261564228'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261564228' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

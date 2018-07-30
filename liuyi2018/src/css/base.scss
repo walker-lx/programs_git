@@ -1,0 +1,66 @@
+@mixin _bg($url, $ext) {
+    // 背景图片适配2倍屏与3倍屏
+    background-image: url($url + "@2x." + $ext);
+    background-repeat: no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+        background-image: url($url + "@3x." + $ext);
+    }
+}
+@font-face {
+    font-family: 'font';
+    src: url('../assets/liuyi.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+#cnzz {
+    display: none !important;
+}
+.music_icon {
+    position: fixed;
+    top: 8px;
+    right: 10px;
+    z-index: 100;
+    // &.rotate {
+    //     animation: circle 2s infinite linear;
+    //     @keyframes circle {
+	// 		0% {
+	// 			transform: rotate(0)
+	// 		}
+	// 		100% {
+	// 			transform: rotate(1turn)
+	// 		}
+	// 	}
+    // }
+    .paly, .pause {
+        width: 30px;
+        height: 30px;
+    }
+}
+.rotate {
+    animation: circle 5s infinite linear;
+    @keyframes circle {
+        0% {
+            transform: rotate(0)
+        }
+        100% {
+            transform: rotate(1turn)
+        }
+    }
+}
+html, body {
+    user-select: none;
+}
+.wxsharemask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    img {
+        position: fixed;
+        top: 40px;
+        right: 30px;
+    }
+}

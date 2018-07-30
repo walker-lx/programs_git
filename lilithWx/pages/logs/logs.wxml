@@ -1,0 +1,99 @@
+<!--pages/logs/logs.wxml-->
+<view class="userpage">
+  <view class="user">
+     <!-- <view class="userhead" style="background-image:url('{{headimg}}')" bindtap="upheadimg"></view> -->
+     <image class="userhead" src="{{headimg}}"/>       
+    <view class="username">{{namere}}</view>
+  </view>
+  <view class='save' bindtap='save' wx:if="{{save}}">保存</view>
+  <view class="userinfo">
+    <view class="userzl nickname">
+      <text>昵称</text> 
+      <!-- <view class="userinput"> -->
+        <!-- <image src="../img/mine-tips-icon@2x.png" wx:if="{{nametip}}"></image> -->
+        <input value="{{name}}" bindinput="userinput" maxlength='50' class='userinput'/>
+      <!-- </view>   -->
+    </view>
+    <picker value="{{xbvalue}}" range="{{xbrange}}" bindchange="xbchange">
+      <view class="userzl xb">     
+        <text class="birthxb">性别</text>{{xbrange[xbvalue]}} 
+      </view>
+    </picker>
+
+    <!-- <picker mode="date" start="1900-01-01" end="{{endy}}-{{endm}}-{{endd}}" bindchange="datechange"> -->
+    <picker mode="date" start="1900-01-01" end="2018-12-12" bindchange="datechange">    
+      <view class="userzl birth">
+        <text class="birthdate">出生日期</text>{{birthdate}}
+      </view>
+    </picker>
+
+    <picker mode="time" start="00:00" end="24:00" bindchange="timechange">
+        <view class="userzl birth">
+          <text class="birthtime">出生时间</text>{{birthtime}}
+        </view>
+    </picker>
+
+    <view class="userzl birth">
+      <text class="birthplace">出生地</text>
+       <view bindtouchstart="open">{{province}}-{{city}}-{{county}}</view> 
+      <!-- <view bindtouchstart="open">{{citytext}}</view>       -->
+    </view> 
+
+    <view class="userzl birth">
+      <text class="birthplace">现居地</text>
+       <view bindtouchstart="open1">{{province1}}-{{city1}}-{{county1}}</view>       
+      <!-- <view bindtouchstart="open1">{{citytext1}}</view>             -->
+    </view> 
+  </view>
+  <view class="tip">您的个人信息将用于订制您的每日运势</view>
+
+  <!-- 底部banner   -->
+    <!-- <view class="banner">
+      <view class="xzbtn" bindtap="xzindex">
+        <image src="../img/tab-cece-icon2@2x.png"></image>
+        <view class="xztext" >星座</view>    
+      </view>
+      <view class="mebtn" bindtap="xzme">
+        <image src="../img/tab-mine-icon@2x.png"></image>
+        <view class="metext" >我</view>    
+      </view>
+    </view>   -->
+
+    <view wx:if="{{condition}}" class="citypickers">
+      <view class='mask' bindtap='hidebanner'></view>    
+      <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+        <view class="cityheader">
+          <view bindtouchstart="open" class="city-cancel">取消</view>
+          <view bindtouchstart="open" class="city-true">确定</view>
+        </view>
+        <picker-view-column>
+          <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;z-index:99999">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;z-index:99999">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;z-index:99999">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view> 
+
+    <view wx:if="{{condition1}}" class="citypickers">
+      <view class='mask1'  bindtap='hidebanner1'></view>
+      <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value1}}" bindchange="bindChange1" class="citybody">
+        <view class="cityheader">
+          <view bindtouchstart="open1" class="city-cancel">取消</view>
+          <view bindtouchstart="open1" class="city-true">确定</view>
+        </view>
+        <picker-view-column>
+          <view wx:for="{{provinces1}}" wx:key="item" style="line-height: 50px;padding-left:10px;z-index:99999">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys1}}" wx:key="item" style="line-height: 50px;padding-left:10px;z-index:99999">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{countys1}}" wx:key="item" style="line-height: 50px;padding-left:10px;z-index:99999">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view> 
+</view>

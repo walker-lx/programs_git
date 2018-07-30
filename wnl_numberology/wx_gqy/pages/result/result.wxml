@@ -1,0 +1,102 @@
+<view class="container result">
+  <view class="result-wrap">
+    <view class="title">
+      <view class="section">
+        <view class="section-1 {{rotate==1?'rotate':''}}">
+          <image src="{{imgsrc}}"></image>
+        </view>
+        <view class="section-2">
+          <view class="name">{{order.data.cardName}}({{position}})</view>
+          <view class="level">
+            <view class="text">桃花指数</view>
+            <view class="star icon-star" wx:for="{{happyLevel}}" wx:key="index"></view>
+            <view class="star icon-star-half" wx:if="{{isrp}}"></view>
+          </view>
+          <view class="keywords">
+            <view class="text" wx:for="{{keyWords}}" wx:key="index">{{item}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="card-text">
+        <text>{{order.data.freeData.cardIdea}}</text>
+      </view>
+    </view>
+    <block wx:if="{{!process}}">
+      <view class="list">
+        <view class="item" wx:for="{{resultContent}}" wx:key="index">
+          <view class="item-title">
+            <view class="icon-sline1"></view>
+            <view>{{item.title}}</view>
+            <view class="icon-sline2"></view>
+          </view>
+          <view class="item-content item-pay-content">
+            <view class="result-item-content-corner result-item-content-tl"></view>
+            <view class="result-item-content-corner result-item-content-tr"></view>
+            <view class="result-item-content-corner result-item-content-bl"></view>
+            <view class="result-item-content-corner result-item-content-br"></view>
+            <block wx:if="{{index!=3}}">
+              <view class="item-text">{{item.content}}</view>
+            </block>
+            <block wx:else>
+              <view class="item-text item-text-end">{{item.Content.Girl}}</view>
+              <view class="item-text item-text-end">{{item.Content.Boy}}</view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <block wx:if="{{!payStatus}}">
+        <view class="list">
+          <view class="item" wx:for="{{resultTitle}}" wx:key="index">
+            <view class="item-title">
+              <view class="icon-sline1"></view>
+              <view>{{item}}</view>
+              <view class="icon-sline2"></view>
+            </view>
+            <view class="item-content mask text-mask" bindtap="navigateToPay">
+              <view class="show-all icon-show-all"></view>
+              <view class="result-item-content-corner result-item-content-tl"></view>
+              <view class="result-item-content-corner result-item-content-tr"></view>
+              <view class="result-item-content-corner result-item-content-bl"></view>
+              <view class="result-item-content-corner result-item-content-br"></view>
+              <view class="item-text"></view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="list">
+          <view class="item" wx:for="{{resultContent}}" wx:key="index">
+            <view class="item-title">
+              <view class="icon-sline1"></view>
+              <view>{{item.Title}}</view>
+              <view class="icon-sline2"></view>
+            </view>
+            <view class="item-content item-pay-content">
+              <view class="result-item-content-corner result-item-content-tl"></view>
+              <view class="result-item-content-corner result-item-content-tr"></view>
+              <view class="result-item-content-corner result-item-content-bl"></view>
+              <view class="result-item-content-corner result-item-content-br"></view>
+              <block wx:if="{{index!=3}}">
+                <view class="item-text">{{item.Content}}</view>
+              </block>
+              <block wx:else>
+                <view class="item-text item-text-end">{{item.Content.Girl}}</view>
+                <view class="item-text item-text-end">{{item.Content.Boy}}</view>
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+    <block wx:if="{{process}}">
+      <view class="btn-wrap" wx:if="{{!payStatus}}">
+        <button class="btn-pay" bindtap="navigateToPay">立即解锁幸福秘诀</button>
+      </view>
+      <view class="btn-wrap" wx:else>
+        <button class="btn-pay" open-type="share">分享攒人品</button>
+      </view>
+    </block>
+  </view>
+</view>

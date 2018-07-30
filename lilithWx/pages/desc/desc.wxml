@@ -1,0 +1,31 @@
+<!--塔罗牌的描述页面-->
+<!-- <scroll-view upper-threshold="3" bindscrolltoupper="upper"> -->
+<view upper-threshold="3" bindscroll="upper">
+  <view class="content">
+    <image src="{{bgsrc}}" class="backimg"></image>
+    <view class="shadow"></view>
+    <view class="tarot">
+      <!-- <image src="{{descsrc}}" class="tarotpic"></image>  -->
+      <view class="tarotpic" style="background-image: url('{{descsrc}}')"></view> 
+      <view class="tarot_desc">
+        <text class="tarotd t1">牌名: {{descname}} （{{descup}}）</text>
+        <text class="tarotd t2">关键词: {{desckey}}</text>
+        <text class="tarotd t3">星座: {{descxz}}</text>   
+        <text class="tarotd t4">元素: {{descys}}</text>   
+      </view>
+    </view>
+    <view class="longtext">
+      <view class="longtext1">
+        <view class="explan">
+          <view class="explan_name">解释</view>
+          <view class="explan_desc">{{explain}}</view>      
+        </view>
+        <view class="cards">
+          <view class="cards_name">牌面</view>
+          <view class="cards_desc">{{pm}}</view>      
+        </view>
+      </view>  
+    </view>
+  </view>
+</view>
+

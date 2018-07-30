@@ -1,0 +1,151 @@
+<!DOCTYPE>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+	/>
+	<meta name="copyright" content="Copyright (c) 51wnl.com" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="description" content="万年历" />
+	<meta name="keywords" content="万年历" />
+	<title>另一半</title>
+	<link rel="stylesheet" href="./css/home.css">
+	<script type="text/javascript" src="./static/jquery-3.2.1.js"></script>
+</head>
+
+<body>
+	<div class="homeShow">
+		<div class="head-section">
+			<div class="top-key" id="top-key-pic">
+				<div class="key-title" id="keyWordsTitle">我的感情观</div>
+				<div class="keywords">
+					<span id="keyword01" class="keyword keyword01"></span>
+					<span id="keyword02" class="keyword keyword02"></span>
+					<span id="keyword03" class="keyword keyword03"></span>
+					<span id="keyword04" class="keyword keyword04"></span>
+				</div>
+			</div>
+		</div>
+		<div class="report-section">
+			<div class="report view-report-detail">
+				<div class="report-header">
+					<div class="report-header-01"><img src="./img/cut off rule-small -orig.png"></div>
+					<div class="header-title" id="title-01">我的感情弱点</div>
+					<div class="report-header-02"><img src="./img/cut off rule-right-small.png"></div>
+				</div>
+				<div class="report-lock report-content-01">
+					<div class="report-lock-icon"><img src="./img/lock1.png"></div>
+					<div class="report-content" id="lockedContentTitle01">我会因为什么感情弱点伤害彼此？</div>
+				</div>
+			</div>
+
+			<div class="report view-report-detail">
+				<div class="report-header">
+					<div class="report-header-01"><img src="./img/cut off rule-small -orig.png"></div>
+					<div class="header-title" id="title-02">感情弱点建议</div>
+					<div class="report-header-02"><img src="./img/cut off rule-right-small.png"></div>
+				</div>
+				<div class="report-lock report-content-02">
+					<div class="report-lock-icon"><img src="./img/lock1.png"></div>
+					<div class="report-content" id="lockedContentTitle02">感情专家的情感建议</div>
+				</div>
+			</div>
+			<div class="report view-report-detail">
+				<div class="report-header">
+					<div class="report-header-01"><img src="./img/cut off rule-small -orig.png"></div>
+					<div class="header-title" id="title-03">豪门潜质</div>
+					<div class="report-header-02"><img src="./img/cut off rule-right-small.png"></div>
+				</div>
+				<div class="report-lock report-content-03">
+					<div class="report-lock-icon"><img src="./img/lock1.png"></div>
+					<div class="report-content " id="lockedContentTitle03">我能迎娶白富美吗?</div>
+				</div>
+			</div>
+			<div class="report view-report-detail">
+				<div class="report-header">
+					<div class="report-header-01"><img src="./img/cut off rule-small -orig.png"></div>
+					<div class="header-title" id="title-04">另一半的模样</div>
+					<div class="report-header-02"><img src="./img/cut off rule-right-small.png"></div>
+				</div>
+				<div class="report-lock report-content-04-01">
+					<div class="report-lock-icon"><img src="./img/lock1.png"></div>
+					<div class="report-content" id="lockedContentTitle04-01">我的另一半到底是什么模样</div>
+				</div>
+				<div class="report-lock report-content-04-02">
+					<div class="report-lock-icon"><img src="./img/lock1.png"></div>
+					<div class="report-content" id="lockedContentTitle04-02">我在哪里能够遇到另一半？</div>
+				</div>
+			</div>
+			<div class="report view-report-detail">
+				<div class="report-header">
+					<div class="report-header-01"><img src="./img/cut off rule-small -orig.png"></div>
+					<div class="header-title" id="title-05">婚后感情生活</div>
+					<div class="report-header-02"><img src="./img/cut off rule-right-small.png"></div>
+				</div>
+				<div class="report-lock report-content-05-01">
+					<div class="report-lock-icon"><img src="./img/lock1.png"></div>
+					<div class="report-content" id="lockedContentTitle05-01">提前预知我们的感情波折点</div>
+				</div>
+				<div class="report-lock report-content-05-02">
+					<div class="report-lock-icon"><img src="./img/lock1.png"></div>
+					<div class="report-content" id="lockedContentTitle05-02">感情专家支招稳定感情关系秘诀</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="view-section">
+			<div class="view-report view-report-detail ">查看情感报告</div>
+        </div>
+
+        <div class="iphoneXAdaptation"></div>
+	</div>
+	<script type="text/javascript" src="./js/wnlui.js"></script>
+	<script type="text/javascript" src="./js/home.js"></script>
+	<script>
+		var title = "不用脱光也能脱单的秘密武器！";
+		var localUrl = location.href.replace('home', 'index');
+		var text = "让我们不将就不随便地找到另一半吧！";
+		var imgUrl = "https://qiniu.image.cq-wnl.com/content/201707212059dbb1f67545d0b33d6b05e8dc0862.jpg";
+		var textObj = {
+			title: title,
+			text: title,
+			image: '0',
+			imageURL: imgUrl,
+			url: localUrl,
+			pureText: text,
+			prefix: ""
+		};
+		var textObj1 = {
+			title: title,
+			text: text,
+			image: '0',
+			imageURL: imgUrl,
+			targetUrl: localUrl,
+			perfix: ""
+		};
+		wnlShare.wxShare({
+		  title: '星盘另一半',
+		  text: '我在万年历看【星盘另一半】，分享给你，一起看吧！',
+		  imgUrl: imgUrl,
+		  imageUrl: imgUrl,
+		  url: localUrl
+		});
+
+		function appCallback_share() {
+			try {
+				if (window.ylwindow) {
+					ylwindow.reportHasShare(true);
+					location.href = "protocol://share:" + encodeURI(JSON.stringify(textObj1));
+				} else {
+					location.href = "protocol://share#" + encodeURI(JSON.stringify(textObj));
+				}
+			} catch (e) {}
+			return 1;
+		}
+
+	</script>
+</body>
+
+</html>

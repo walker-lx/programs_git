@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>八字测算</title>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="./css/bzcs.css?v=2.0">
+    <script src="./scripts/jquery-fastclick.min.js" type="text/javascript"></script>
+    <script src="./scripts/modal.js" type="text/javascript"></script>
+    <script src="./scripts/underscore-min.js" type="text/javascript"></script>
+    <script src="./scripts/bzcs_result.js?v=2.0" type="text/javascript"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8e0b53b1de7438bdfa7a36b7a4a9ee61";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+    <div class="main">
+        <div id="dvFreeResult">
+            <div class="briefContent">
+                <div class="briefLine">
+                    <div>
+                        <span class="key">姓名：</span>
+                        <span  class="value name"></span>
+                    </div>
+                    <div style="min-width: 70px">
+                        <span class="key">性别：</span>
+                        <span class="value sex"></span>
+                    </div>
+                </div>
+                <div class="briefLine">
+                    <span class="key">公历：</span>
+                    <span class="value gongli"></span>
+                </div>
+                <div class="briefLine">
+                    <span class="key">八字：</span>
+                    <span class="value bazi"></span>
+                </div>
+            </div>
+            <div class="dayunTitle1">
+                <div class="titleIcon"></div>
+                <div class="titleTxt">
+                    大运
+                </div>
+                <div class="leftRadius"></div>
+                <div class="rightRadius"></div>
+            </div>
+            <div class="dayunContent hidden">
+                <div class="corner top-left"></div>
+                <div class="corner top-right"></div>
+                <div class="corner bottom-left"></div>
+                <div class="corner bottom-right"></div>
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="jiShi">
+                    <tbody id="tbdJiShi"></tbody>
+                </table>
+            </div>
+            <div class="dayunTitle1">
+                <div class="titleIcon"></div>
+                <div class="titleTxt">
+                    性情信息
+                </div>
+                <div class="leftRadius"></div>
+                <div class="rightRadius"></div>
+            </div>
+            <div class="xingqingContent"></div>
+            <a id="btnViewDetail" class="viewDetail" href="javascript:void(0)">未来10年大运提前知 点击查看</a>
+        </div>
+        <div id="dvPaidResult">
+            <div class="briefContent">
+                <div class="briefLine">
+                    <div>
+                        <span class="key">姓名：</span>
+                        <span  class="value name"></span>
+                    </div>
+                    <div>
+                        <span class="key">性别：</span>
+                        <span class="value sex"></span>
+                    </div>
+                </div>
+                <div class="briefLine">
+                    <span class="key">公历：</span>
+                    <span class="value gongli"></span>
+                </div>
+                <div class="briefLine">
+                    <span class="key">八字：</span>
+                    <span class="value bazi"></span>
+                </div>
+            </div>
+            <div class="dayunTitle1">
+                <div class="titleIcon"></div>
+                <div class="titleTxt">
+                    大运
+                </div>
+                <div class="leftRadius"></div>
+                <div class="rightRadius"></div>
+            </div>
+            <div class="dayunContent">
+                <div class="corner top-left"></div>
+                <div class="corner top-right"></div>
+                <div class="corner bottom-left"></div>
+                <div class="corner bottom-right"></div>
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="jiShi">
+                    <tbody id="tbdJiShi1"></tbody>
+                </table>
+            </div>
+            <div class="baziTitle">五行力量：</div>
+            <div class="wuxingContent">
+                <div class="wuxingImg jinImg">
+                    <div class="wuxingPercent jinPercent"></div>
+                </div>
+                <div class="wuxingImg muImg">
+                    <div class="wuxingPercent muPercent"></div>
+                </div>
+                <div class="wuxingImg shuiImg">
+                    <div class="wuxingPercent shuiPercent"></div>
+                </div>
+                <div class="wuxingImg huoImg">
+                    <div class="wuxingPercent huoPercent"></div>
+                </div>
+                <div class="wuxingImg tuImg">
+                    <div class="wuxingPercent tuPercent"></div>
+                </div>
+            </div>
+            <div class="baziTitle">命局五行喜忌：</div>
+            <div class="title1">最喜五行金：</div>
+            <div class="innerTxt zuixi"></div>
+            <div class="title1">次喜五行土：</div>
+            <div class="innerTxt cixi"></div>
+            <div class="title1">最忌五行木：</div>
+            <div class="innerTxt zuiji"></div>
+            <div class="title1">次忌五行水：</div>
+            <div class="innerTxt ciji"></div>
+            <div class="title1">平常五行火：</div>
+            <div class="innerTxt pingchang"></div>
+            <div class="dayunTitle1">
+                <div class="titleIcon"></div>
+                <div class="titleTxt">
+                    性情信息
+                </div>
+                <div class="leftRadius"></div>
+                <div class="rightRadius"></div>
+            </div>
+            <div class="xingqingContent"></div>
+            <div id="dvLiuNian"></div>
+        </div>
+    </div>
+    <!--<a class="yiqibaziLink hidden" href="zhuanjia.html">-->
+        <!--<img class="bannerImg" src="img/yiqibazi_ad.png" alt="董易奇专家团">-->
+    <!--</a>-->
+    <div class="yiqiDesc1 resultDesc hidden">
+        <div class="descLine">易奇八字专家团倾力打造 <a class="zhuanjiaLink" href="zhuanjia.html">查看专家团简介</a></div>
+        <div class="contactLine" style="margin-top: 3px;">QQ:1254836806  电话:020-28965013</div>
+        <!--<div class="contactLine" style="margin: 15px">-->
+            <!--<div class="corner top-left"></div>-->
+            <!--<div class="corner top-right"></div>-->
+            <!--<div class="corner bottom-left"></div>-->
+            <!--<div class="corner bottom-right"></div>-->
+            <!--<span class="contactTip">测算答疑: </span>-->
+            <!--<span class="contactTxt">QQ 1254836806 &nbsp&nbsp&nbsp 电话 020-28965013</span>-->
+        <!--</div>-->
+        <!--<div class="yiqiDesc">-->
+            <!--<div class="corner top-left"></div>-->
+            <!--<div class="corner top-right"></div>-->
+            <!--<div class="corner bottom-left"></div>-->
+            <!--<div class="corner bottom-right"></div>-->
+            <!--<div class="descLine">易奇八字专家团倾力打造 <a class="zhuanjiaLink" href="zhuanjia.html">查看专家团简介</a></div>-->
+        <!--</div>-->
+    </div>
+    <a class="wnlBannerLink hidden" href="javascript:void(0)">
+        <div class="downIcon"></div>
+        <div class="downTxt">
+            <div class="txtContainer">
+                <div class="txtWrapper">
+                    <img class="downTxtImg" src="img/ad-ww@3x.png" alt="万年历下载">
+                </div>
+            </div>
+        </div>
+        <div class="downBtnImg"></div>
+    </a>
+    <div id="dvPay" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <span class="zhifuTxt">支付金额:</span>
+            <span class="zhifuCount">98元</span>
+        </div>
+        <div class="modal-body">
+            <div class="introTitle">项目：【八字测算】</div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0)" class="dismissBtn pickConfirmBtn" aria-hidden="true" id="btnPay">
+                <div class="zhifuIcon"></div>
+                <div class="zhifuTipTxt">支付宝支付</div>
+                <div class="zhifuArrow"></div>
+            </a>
+        </div>
+    </div>
+    <div id="tipModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <div class="showString">更多测算功能，请下载万年历。</div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn dismissBtn downloadBtn" data-dismiss="modal" aria-hidden="true">确定</button>
+        </div>
+    </div>
+</body>
+</html>

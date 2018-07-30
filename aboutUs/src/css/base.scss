@@ -1,0 +1,39 @@
+@mixin _bg($url, $ext) {
+    // 背景图片适配2倍屏与3倍屏
+    background-image: url($url + "@2x." + $ext);
+    background-repeat: no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+        background-image: url($url + "@3x." + $ext);
+    }
+}
+.border-all-1px {
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200%;
+        height: 200%;
+        border: 1px solid red;
+        box-sizing: border-box;        
+        // -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        // -webkit-transform: scale(.5);
+        transform: scale(.5);
+    }
+}
+.border-bottom-1px {
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200%;
+        height: 200%;
+        border-bottom: 1px solid red;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+    }
+}

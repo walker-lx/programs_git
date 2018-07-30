@@ -1,0 +1,28 @@
+<view class="mask" id="mask_canvas" bindtap="maskTap"  catchtouchmove="catchMaskTouchMove"  animation="{{maskAnimation}}" style="z-index:{{maskZindex}};opacity:{{maskOpacity}};"></view>
+<view class="date_select_modal" animation="{{dateSelectAnimation}}">
+    <view class="date_confirm_content">
+        <view class="cancel_btn" bindtap="dateSelectCancelTap"></view>
+        <view class="confirm_btn" bindtap="dateSelectConfirmTap"></view>
+    </view>
+    <view class="date_select_line"></view>
+    <view class="picker-content">
+        <picker-view class="date_picker_view" indicator-style="height:34px;" value="{{datePickerViewValue}}" bindchange="datePickerChange">
+            <picker-view-column>
+                <view class="date_picker_item" wx:for="{{pickerDataList1}}" wx:key="*this">{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view class="date_picker_item" wx:for="{{pickerDataList2}}" wx:key="*this">{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view class="date_picker_item" wx:for="{{pickerDataList3}}" wx:key="*this">{{item}}</view>
+            </picker-view-column>
+        </picker-view>
+    </view>
+    <view class="date_select_line"></view>
+    <view class="date_select_footer">
+        <view class="date_l_btn {{lunarClass}}" bindtap="dateLunarTap">
+            <view class="date_select_circle"></view>
+            <view class="date_select_l">农历</view>
+        </view>
+    </view>
+</view>

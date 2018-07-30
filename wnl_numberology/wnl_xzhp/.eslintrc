@@ -1,0 +1,78 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jquery": true
+  },
+  "globals": {
+    "__DEBUG__": true,
+    "Base64": true,
+    "Router": true
+  },
+  // "parser": "babel-eslint",
+  // "parserOptions": {
+  //   "ecmaVersion": 6,
+  //   "sourceType": "module",
+  //   "ecmaFeatures": {
+  //     "jsx": true
+  //   }
+  // },
+  "rules": {
+    "indent": [
+      "error",
+      "tab",
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "no-tabs": "off",
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used"
+      }
+    ],
+    // "brace-style": [
+    //   "error",
+    //   "stroustrup"
+    // ],
+    // "linebreak-style": [
+    //   "error",
+    //   "windows"
+    // ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-console": 0,
+    "prefer-const": 0,
+    "prefer-template": 0,
+    "no-param-reassign": 0,
+    "comma-dangle": [
+      1,
+      "never"
+    ],
+    "spaced-comment": [
+      0,
+      "always"
+    ],
+    "func-names": 0,
+    "no-underscore-dangle": 0,
+    // "import/prefer-default-export": 1,
+    "class-methods-use-this": 0,
+    "no-prototype-builtins": 0,
+    // "import/no-extraneous-dependencies": 1,
+    "radix": 0
+  }
+}

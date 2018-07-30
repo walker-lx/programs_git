@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="copyright" content="Copyright (c) 51wnl.com" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="万年历" />
+    <meta name="keywords" content="万年历" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/result.css">
+    <link rel="stylesheet" type="text/css" href="static/css/wnlui.css">
+    <style>
+        @font-face {
+        font-family: 'zidingyi';
+        src: url('./img/zidingyi.eot');
+        src:
+          url('./img/zidingyi.eot?#font-spider') format('embedded-opentype'),
+          url('./img/zidingyi.woff') format('woff'),
+          url('./img/zidingyi.ttf') format('truetype'),
+          url('./img/zidingyi.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    <!-- <script src="//www.51wnl.com/vconsole.min.js"></script> -->
+    <title>新春大礼包</title>
+    
+</head>
+
+<body style="margin-top:-1.2rem;padding-bottom: 17px;">
+    <script type="text/javascript" src="./static/js/wnlui.js"></script>
+        <div class="header-section" style="height: 4.5rem">
+            <img src="./img/result-toutu.jpg" style="width:100vw"/>
+        </div>
+        <div class="main-section">
+            <div class="resultgoods">
+                <!-- 
+                <div class="goodsItem">
+                    <div class="goodsImg">
+                    </div>
+                    <div class="redirectBtn">
+                        点击查看结果
+                    </div>
+                </div>
+                <div class="goodsItem">
+                    <div class="goodsImg">
+                    </div>
+                    <div class="redirectBtn">
+                        点击查看结果
+                    </div>
+                </div>
+                <div class="goodsItem">
+                    <div class="goodsImg">
+                    </div>
+                    <div class="redirectBtn">
+                        点击查看结果
+                    </div>
+                </div> -->
+                
+            </div>
+            <div class="success_content hidden">
+                <div class="title">职场开运锦囊</div>
+                <div class="other_link">
+                    <a class="link" href="#">
+                        <img src="#">
+                        <div class="link_content">
+                            <div class="link_title"></div>
+                            <div class="link_number"></div>
+                        </div>
+                    </a>
+                    <a class="link" href="#">
+                        <img src="#">
+                        <div class="link_content">
+                            <div class="link_title"></div>
+                            <div class="link_number"></div>
+                        </div>
+                    </a>
+                    <a class="link" href="#">
+                        <img src="#">
+                        <div class="link_content">
+                            <div class="link_title"></div>
+                            <div class="link_number"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="about">
+                <div class="callNumber">
+                    <div class="qq">QQ：1436953644</div>
+                    <div class="phone">电话：023-88756857</div>
+                </div>
+                <div class="copyRight">Copyright © CALENDAR Tech. All Rights Reserved.</div>
+            </div>
+        </div>
+    </div>
+    <div class="iphoneXBanner hidden" style="height:34px;width: 100%;position:fixed;bottom: 0;z-index: 9999;background-color: rgba(0, 0, 0, 0.3);"></div>
+    
+    <!-- wnl share tool -->
+    <div class="sharemask hidden"></div>
+    <div class="wnl-sharetool hidden">
+        <div class="platform">
+            <label class="weixin">微信</label>
+            <label class="weixin_circle">朋友圈</label>
+            <label class="qq">QQ</label>
+            <label class="weibo">新浪微博</label>
+        </div>
+        <div class="cancle-share">取消分享</div>
+    </div>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script>
+        $.ajax({
+            url: "//b.cqyouloft.com/interface/API/weixinhandler.ashx",
+            type: "get",
+            data: {
+                requesturl: location.href
+            },
+            success: function (result) {
+                result = JSON.parse(result);
+                wx.config({
+                    debug: false,
+                    appId: 'wx347ab26567c5465f', // 必填，公众号的唯一标识
+                    timestamp: result.timestamp, // 必填，生成签名的时间戳
+                    nonceStr: result.nonceStr, // 必填，生成签名的随机串
+                    signature: result.signature, // 必填，签名，见附录1
+                    jsApiList: [
+                        'onMenuShareTimeline',
+                        'onMenuShareAppMessage',
+                        'onMenuShareQQ',
+                        'onMenuShareWeibo'
+                    ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                });
+            }
+        });
+    </script>
+    <script type="text/javascript" src="./static/js/flexible.debug.js"></script>
+    <script type="text/javascript" src="./js/jquery.marquee.js"></script>
+    <script type="text/javascript" src="./js/base64.min.js"></script>
+    <script type="text/javascript" src="./static/js/wnl-util.js"></script>
+    <script type="text/javascript" src="./js/result.js"></script>
+    <script type="text/javascript" src="./js/share.js"></script>
+
+</body>
+
+</html>

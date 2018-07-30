@@ -1,0 +1,24 @@
+{
+	"presets": [
+		["env", {
+			"targets": {
+				"browsers": [
+					"> 1%",
+					"iOS >= 7",
+					"Android >=4.0"
+				]
+			},
+			"modules": false,
+			"useBuiltIns": true,
+			"debug": true
+		}]
+		,"stage-2"
+	],
+	"plugins": ["transform-runtime"],
+	"env": {
+		"test": {
+			"presets": ["env", "stage-2"],
+			"plugins": ["istanbul"]
+		}
+	}
+}

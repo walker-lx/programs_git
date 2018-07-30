@@ -1,0 +1,62 @@
+
+.ad{
+  position: relative;
+	padding: 0.15rem 0.1rem;
+  width: 3.45rem;
+  box-sizing: content-box;
+  a{
+    position: relative;
+    .back{
+      position: relative;
+      min-height: 1.99rem;
+      background: #864;
+      &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        min-height: 0.2rem;
+        min-width: 0.25rem;
+        background: url('../images/gdt-logo-lt.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .footer{
+        width:100%;
+        position:absolute;
+        bottom: 0;
+        background: #000;
+        opacity: 0.6;
+        height: 0.3rem;
+
+        .desc{
+          position: absolute;
+          left:0;
+          margin: 0.06rem 0.1rem;
+          max-height: 0.18rem;
+          max-width: 2.55rem;
+          white-space: pre;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          @extend .font_14;
+          color:#fff;
+          line-height: 1.29;
+          text-align: left;
+        }
+        .more{
+          top:0;
+          right: 0.1rem;
+          position: absolute;
+          color: #fff;
+          @extend .font_10;
+          margin-top:0.08rem;
+          margin-bottom:0.08rem;
+          padding: 0.02rem 0.05rem;
+          max-height: 0.1rem;
+          border: 0.005rem solid #fff;
+          border-radius: 0.02rem;
+        }
+      }
+    }
+  }
+}

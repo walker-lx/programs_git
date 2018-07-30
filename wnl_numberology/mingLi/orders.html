@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=320px, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery-fastclick.min.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/orders.js?v=1.2"></script>
+</head>
+<body class="orderPage">
+    <div class="top">
+        <a href="mingli.html" class="backBtn1"></a>
+        <div class="title1">我的订单</div>
+    </div>
+    <div class="main">
+        <ul>
+            <li class="orderItem tempOrderItem hidden">
+                <div class="orderItemLine1">
+                    <span class="orderBum"></span>
+                    <span class="orderTeacher hidden"></span>
+                </div>
+                <div class="orderItemLine2">
+                    <span class="orderCategory"></span>
+                    <span class="orderPrice"></span>
+                </div>
+                <div class="orderItemLine3">
+                    <span class="orderDateTime"></span>
+                    <a class="deleteBtn" href="javascript:void(0)">删除</a>
+                    <a class="payBtn hidden" href="javascript:void(0)">待付款</a>
+                    <a class="payedBtn hidden" href="javascript:void(0)">待预测</a>
+                    <a class="confirmedBtn hidden" href="javascript:void(0)">待确认</a>
+                    <a class="finishedBtn hidden" href="javascript:void(0)">已完成</a>
+                </div>
+                <div class="triangle-right"></div>
+            </li>
+        </ul>
+        <ul class="orderList">
+        </ul>
+    </div>
+    <div id="myModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <div class="showString"></div>
+        </div>
+        <div class="modal-footer">
+            <button  data-dismiss="modal" aria-hidden="true" class="btn btn-primary">确定</button>
+        </div>
+    </div>
+    <div id="payConfirmModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body" style="height: 100px;">
+            <div class="showString">您即将跳转到支付宝网站进行订单支付 支付完成后请点 返回商户 回到订单 测算结果会在付款后<span style="font-weight: bold;">三个工作日</span>之内回复</div>
+        </div>
+        <div class="modal-footer">
+            <button id="goPay" class="btn btn-primary">立即前往支付</button>
+        </div>
+    </div>
+    <div id="deleteConfirModal" class="modal hide fade modaliOSStyle doubleBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <div class="showString">是否确定删除订单?</div>
+        </div>
+        <div class="modal-footer">
+            <button id="cancelDelete" data-dismiss="modal" aria-hidden="true" class="btn">取消</button>
+            <button id="confirmDelete" data-dismiss="modal" aria-hidden="true" class="btn btn-primary">确定</button>
+        </div>
+    </div>
+    <div class="mask hidden"></div>
+    <script>
+        var title="万年历的在线命理很准的哦，小伙伴们也快来试一下";
+        var textObj = {
+            text: title,
+            image: "1",
+            url:location.href,
+            pureText:title,
+            prefix:""
+        };
+        var textObj1={
+            text: title,
+            image: "1",
+            targetUrl:location.href,
+            perfix:""
+        };
+        function appCallback_share(){
+            try{
+                if(window.ylwindow){
+                    ylwindow.reportHasShare(true);
+                    location.href="protocol://share:" + encodeURI(JSON.stringify(textObj1));
+                }
+                else{
+                    location.href="protocol://share#" + encodeURI(JSON.stringify(textObj));
+                }
+            }
+            catch (e){}
+            return 1;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body,html{
+    font-family: -apple-system, "苹方-简", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", sans-serif;
+}
+body{
+    margin: 0;
+    width: 375px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust:none;
+    background-color: #ffffff;
+}
+a {
+    margin:0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a:active{
+    opacity: .6;
+}
+.hidden{
+    display: none !important;
+}
+.visibilityHidden{
+    visibility: hidden;
+}
+.main{
+    width: 100%;
+}
+.topBanner{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 66px;
+    background-color: #d93448;
+    z-index: 100;
+}
+.bannerContent{
+    width: 290px;
+    height: 44px;
+    margin: 11px auto;
+}
+.imgContent{
+    float: left;
+    width: 44px;
+    height: 44px;
+}
+.userImg{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 100%;
+}
+.userInfoContent{
+    float: left;
+    height: 44px;
+    margin-left: 10px;
+    display: table;
+}
+.tableWrapper{
+    display: table-cell;
+    vertical-align: middle;
+}
+.username{
+    font-size: 15px;
+    color: #ffffff;
+    text-align: left;
+    max-width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.shareDate{
+    font-size: 12px;
+    color: #ffffff;
+}
+.downloadContent,.shareContent{
+    position: relative;
+}
+.shareBtn,.downloadBtn{
+    float: right;
+    height: 29px;
+    line-height: 29px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    color: #ffe1e8;
+    border-radius: 4px;
+    border: 1px solid #ffe1e8;
+    margin-top: 8px;
+}
+.shareBtn{
+    width: 40px;
+}
+.downloadBtn{
+    width: 70px;
+    height: 29px;
+    margin-left: 10px;
+}
+.shareDomPanel {
+    position: absolute;
+    top: 45px;
+    right: 5px;
+    display: none;
+    width: 210px;
+    height: 59px;
+    background: url("../img/pop-share-wnl-box.png") 0 0 no-repeat;
+}
+.downloadPanel{
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 151px;
+    height: 209px;
+    display: none;
+    background-image: url("../img/pop-download-wnl-QR-box.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 151px 209px;
+    font-size: 0;
+}
+.bdsharebuttonbox{
+    margin-top: 13px;
+    margin-left: 13px;
+}
+.qrcodeImg{
+    width: 140px;
+    height: 140px;
+    margin: 25px 5px 0;
+}
+.downloadTxt{
+    font-size: 12px;
+    text-align: center;
+}
+.downloadTxt+.downloadTxt{
+    margin-top: 3px;
+}
+.mainContent{
+    width: 290px;
+    margin: 66px auto 0;
+}
+.shareInfoContent{
+    display: table;
+    width: 100%;
+}
+.wrapperContainer{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+.shareDreamTitle{
+    text-align: center;
+    font-size: 18px;
+    color: #111111;
+}
+.shareDreamContent{
+    text-align: center;
+    font-size: 15px;
+    color: #585858;
+    line-height: 134%;
+    margin-top: 10px;
+}
+.lotGoBtn {
+    display: block;
+    width: 100%;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 80px auto 74px;
+    background-color: #d93448;
+    border-radius: 5px;
+}
+.downloadLink{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background-color: #F2F2F2;
+    color: #d93448;
+    text-decoration: none;
+    letter-spacing: -4px;
+    word-spacing: -4px;
+    font-size: 0;
+}
+.downloadLink span{
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    *display: inline;
+    zoom:1;
+    vertical-align: middle;
+}
+.downloadIcon{
+    width: 17px;
+    height: 44px;
+    background-image: url("../img/download-icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 17px 17px;
+    margin-right: 10px;
+}
+.dreamContent{
+    width: 100%;
+}
+.searchTxt{
+    display: block;
+    width: 230px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    margin: 86px auto 0;
+    border: 1px solid #e2e2e2;
+}
+.dreamListContent{
+    margin-top: 20px;
+}
+.categoryLevel1{
+    width: 298px;
+    height: 30px;
+    margin: 0 auto 10px;
+}
+.levelItem1{
+    float: left;
+    width: 65px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #111111;
+    text-decoration: none;
+    border: 1px solid #111111;
+    border-radius: 4px;
+}
+.levelItem1+.levelItem1{
+    margin-left: 10px;
+}
+.levelItem1:hover{
+    border: 1px solid #d93448;
+}
+.levelItem1.active{
+    background-color: #d93448;
+    border: 1px solid #d93448;
+    color: #FFFFFF;
+}
+.categoryLevel2{
+    position: relative;
+    width: 298px;
+    margin: 0 auto;
+    display: none;
+}
+.arrowContent{
+    /*position: absolute;*/
+    /*top: -9px;*/
+    /*left: 0;*/
+    width: 20px;
+    height: 9px;
+    background-image: url("../img/zgjm/zgjm-box-arrow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 9px;
+}
+.levelList2{
+    padding:0 15px 15px;
+    letter-spacing: -4px;/*根据不同字体字号或许需要做一定的调整*/
+    word-spacing: -4px;
+    font-size: 0;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+}
+.levelItem2{
+    letter-spacing: normal;
+    word-spacing: normal;
+    display:inline-block;
+    *display: inline;
+    zoom:1;
+    width: 119px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 15px;
+    color: #111111;
+    text-decoration: none;
+    border-bottom: 1px solid #e2e2e2;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.levelItem2.secondItem{
+    margin-left: 30px;
+}
+.searchItem{
+    display: block;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    font-size: 15px;
+    color: #111111;
+    text-decoration: none;
+    border-bottom: 1px solid #e2e2e2;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-indent: 1em;
+}
+.resultContent{
+    display: table;
+}
+.resultDreamTitle{
+    text-align: center;
+    font-size: 18px;
+    color: #111111;
+}
+.resultDreamContent {
+    text-align: center;
+    font-size: 15px;
+    color: #585858;
+    line-height: 134%;
+    margin-top: 10px;
+}
+.wnlDownloadBtn {
+    display: block;
+    width: 100%;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 80px auto 74px;
+    background-color: #d93448;
+    border-radius: 5px;
+}
+.recommandList{
+    position: relative;
+    width: 240px;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+}
+.qrcodeImgContent{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+.contentMask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    -moz-opacity: 0.6;
+    background-color: #000000;
+    z-index: -1;
+}
+.wnlQRImgContent{
+    width: 280px;
+    position: absolute;
+    left: 50%;
+    margin-left: -140px;
+    top: 50%;
+    margin-top: -190px;
+    background-color: #ffffff;
+}
+.downloadTxt1{
+    text-align: center;
+}
+.line1{
+    margin-top: -10px;
+}
+
+.wnlBanner{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 375px;
+    height: 64px;
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+    z-index: 100;
+}
+.closeBanner{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background: url(../img/ad-close-icon@3x.png) center no-repeat;
+    background-size: 10px 10px;
+}
+.wnllogo{
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    width: 44px;
+    height: 44px;
+    background: url(../img/ad-logo-icon.png) no-repeat;
+    background-size: 44px 44px;
+}
+.ad-title{
+    display: inline-block;
+    margin-top: 14px;
+    margin-left: 84px;
+}
+.ad-title .ad-t1{
+    font-family:PingFangSC-Regular;
+    font-size:14px;
+    color:#111111;
+    line-height:18px;
+    text-align:left;
+}
+.ad-title .ad-t2{
+    margin-top: 1px;
+    font-family:PingFangSC-Regular;
+    font-size:12px;
+    color:#333333;
+    line-height:18px;
+    text-align:left;
+}
+.downloadBtn{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -13px;
+    display: block;
+    border:1px solid #2ea9df;
+    border-radius:3px;
+    width:68px;
+    height:24px;
+    font-family:PingFangSC-Regular;
+    font-size:14px;
+    color:#2ea9df;
+    line-height:24px;
+    text-align:center;
+    text-decoration: none;
+}
+
+
+
+
+@media only screen and (min-width:414px) {
+    .main{
+        width: 360px;
+        margin: 0 auto;
+    }
+    .bannerContent{
+        width: 330px;
+    }
+    .mainContent{
+        width: 330px;
+    }
+
+}
+@media only screen and (min-width:1024px) {
+    .main{
+        width: 640px;
+        margin: 0 auto;
+    }
+    .bannerContent{
+        width: 580px;
+    }
+    .mainContent{
+        width: 580px;
+    }
+    .username{
+        max-width:400px;
+    }
+}

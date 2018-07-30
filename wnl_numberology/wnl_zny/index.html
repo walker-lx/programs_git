@@ -1,0 +1,224 @@
+<!DOCTYPE lang="en">
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+	/>
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="copyright" content="Copyright (c) 51wnl.com" />
+	<meta name="description" content="万年历" />
+	<meta name="keywords" content="万年历" />
+	<title>子女运</title>
+	<link rel="stylesheet" href="./mobiscroll/mobiscroll.custom-2.14.4.min.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./static/indexCity.css">
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1263359536'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263359536' type='text/javascript'%3E%3C/script%3E"));</script>
+
+	<script type="text/javascript" src="./static/jquery-3.2.1.js"></script>
+
+	<style type="text/css">
+		 #cnzz_stat_icon_1263359536 {
+	            display: none;
+	        }
+	</style>
+</head>
+
+<body>
+	<script type="text/javascript" src='//mobile.51wnl.com/utils/wnlHistory/wnlHistoryPro-v2.js'></script>
+	<div class="header-section">
+		<div class="test-content">
+			<div class="test-number" id="test-number"></div>
+			<div class="test-number-great" id="test-number-great"></div>
+		</div>
+	</div>
+	<div class="question-section">
+		<div class="concerNum"><img src="./img/shouye-xiaobiaoti1.png"></div>
+		<div class="discipline question-section-pic "><img src="./img/picOne.png"></div>
+		<div class="education question-section-pic "><img src="./img/picTwo.png"></div>
+		<div class="goAbroad question-section-pic "><img src="./img/picThree.png"></div>
+		<div class="study question-section-pic "><img src="./img/picFour.png"></div>
+		<div class="understandChildren"><img src="./img/shouye-xiaobiaoti2.png"></div>
+	</div>
+	<div class="infoContent-section">
+		<div class="infoContent-section-bg">
+			<div class="contentForm">
+				<div class="input-content yourName">
+					<div class="contentLabel contentLabel01">孩子名字</div>
+					<input type="text" placeholder="请输入姓名" id="yourName">
+					<div class="sex">
+						<div class="sex-female sex-on">
+							<img src="./img/female_icon.png" alt="" class="sex-icon">
+							<div class=" sex-type">女生</div>
+						</div>
+						<div class="sex-male">
+							<img src="./img/male_icon.png" alt="" class="sex-icon">
+							<div class=" sex-type">男生</div>
+						</div>
+					</div>
+				</div>
+				<div class="input-content yourBirthDay">
+					<div class="contentLabel contentLabel02">出生日期</div>
+					<input type="text" placeholder="1990.01.01" id="yourBirthDay" readonly>
+				</div>
+				<div class="input-content yourBirthTime">
+					<div class="contentLabel contentLabel02">出生时间</div>
+					<select id="yourBirthTime">
+                            <option value="12:00:00">不清楚</option>
+                            <option value="0:30:00">00:00-00:59</option>
+                            <option value="1:30:00">01:00-01:59</option>
+                            <option value="2:30:00">02:00-02:59</option>
+                            <option value="3:30:00">03:00-03:59</option>
+                            <option value="4:30:00">04:00-04:59</option>
+                            <option value="5:30:00">05:00-05:59</option>
+                            <option value="6:30:00">06:00-06:59</option>
+                            <option value="7:30:00">07:00-07:59</option>
+                            <option value="8:30:00">08:00-08:59</option>
+                            <option value="9:30:00">09:00-09:59</option>
+                            <option value="10:30:00">10:00-10:59</option>
+                            <option value="11:30:00">11:00-11:59</option>
+                            <option value="12:30:00">12:00-12:59</option>
+                            <option value="13:30:00">13:00-13:59</option>
+                            <option value="14:30:00">14:00-14:59</option>
+                            <option value="15:30:00">15:00-15:59</option>
+                            <option value="16:30:00">16:00-16:59</option>
+                            <option value="17:30:00">17:00-17:59</option>
+                            <option value="18:30:00">18:00-18:59</option>
+                            <option value="19:30:00">19:00-19:59</option>
+                            <option value="20:30:00">20:00-20:59</option>
+                            <option value="21:30:00">21:00-21:59</option>
+                            <option value="22:30:00">22:00-22:59</option>
+                            <option value="23:30:00">23:00-23:59</option>
+                    </select>
+				</div>
+				<div class="input-content yourBirthPlace">
+					<div class="contentLabel contentLabel01">出生地点</div>
+					<textarea class="wnl_cityPicker" type="text" name="data" id="yourBirthPlace" readonly="readonly" placeholder="请完善出生地点"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="submit order-submit begin_btn"><img src="./img/anniu-lijichakan.png"></div>
+	<div class="measuredContent">
+		<div>
+			<div class="tips">为什么要精确到出生时间 ＞</div>
+			<div class="prompt_explain">
+				<div class="close_img"></div>
+				<div class="explain_title">为什么需要精准的出生时间？</div>
+				<div class="explain_content">提供更为准确的时间，能够为您提供更加精准的结果预测。如不知道具体出生时间，可以选择“不清楚”，我们将为您调整和计算出合适的时间。</div>
+			</div>
+		</div>
+		<div class="titleInfo"><img src="./img/shouye-xiaobiaoti3.png"></div>
+		<div class="measuredSorts"><img src="./img/jieshao.png"></div>
+		<div class="submit"><img src="./img/anniu-lijichakan.png" class="turnToData"></div>
+	</div>
+	<div class="customerFeedback">
+		<div class="customerFeedbackTtile"><img src="./img/shouye-xiaobiaoti4.png"></div>
+		<div class="customerFeedbackContent">
+			<div class="customerFeedbackContentDetail" id="customerFeedbackContentDetail">
+				<ul id="customerFeedbackContentDetail01">
+					<li class="heightDou"><span class="FeedbackTitle">陈女士:</span><span class="FeedbackContent">最近儿子很不听话，看看好像比较了解了。</span></li>
+					<li><span class="FeedbackTitle">赵女士:</span><span class="FeedbackContent">确实很准！也很有道理！</span></li>
+					<li><span class="FeedbackTitle">张先生:</span><span class="FeedbackContent">女儿太有个性，原来是这样！</span></li>
+					<li class="heightDou"><span class="FeedbackTitle">赵女士:</span><span class="FeedbackContent">这个测算还真的挺详细的，面面俱到，说得很准！</span></li>
+					<li><span class="FeedbackTitle">李先生:</span><span class="FeedbackContent">也许我的教育方式太严格了。</span></li>
+					<li class="heightDou"><span class="FeedbackTitle">陈女士:</span><span class="FeedbackContent">帮儿子算了一下，看来他找的这个工作没错！</span></li>
+					<li><span class="FeedbackTitle">吴女士:</span><span class="FeedbackContent">好贴心的建议！谢谢！</span></li>
+					<li><span class="FeedbackTitle">江先生:</span><span class="FeedbackContent">棒！说得很精准！</span></li>
+					<li><span class="FeedbackTitle">黄先生:</span><span class="FeedbackContent">说得挺准的，自己的确顾虑太多。</span></li>
+					<li><span class="FeedbackTitle">倪先生:</span><span class="FeedbackContent">句句在理，我选择理解女儿。</span></li>
+					<li><span class="FeedbackTitle">孟女士:</span><span class="FeedbackContent">明天让同事试试，她也在困惑中。</span></li>
+					<li><span class="FeedbackTitle">田女士:</span><span class="FeedbackContent">看来是我的教育方式真的有问题！</span></li>
+					<li class="heightDou"><span class="FeedbackTitle">马女士:</span><span class="FeedbackContent">我要儿子继续读研，他却不愿意，看来我们沟通真有问题。</span></li>
+					<li class="heightDou"><span class="FeedbackTitle">刘先生:</span><span class="FeedbackContent">我真的要与我儿子好好沟通了，现在关系特别不好。</span></li>
+					<li class="heightDou"><span class="FeedbackTitle">邓先生:</span><span class="FeedbackContent">以前不想儿子出国,他非要出国。现在国外好好的,又闹着回来。</span></li>
+					<li><span class="FeedbackTitle">彭女士:</span><span class="FeedbackContent">现在的孩子,弄不懂在想些什么。</span></li>
+					<li class="heightDou"><span class="FeedbackTitle">顾女士:</span><span class="FeedbackContent">女儿出国好坎坷，老是这样那样的问题。</span></li>
+					<li class="heightDou"><span class="FeedbackTitle">陈女士:</span><span class="FeedbackContent">邻居他家的儿子出国了，我也来测测我家女儿能不能出国。</span></li>
+					<li><span class="FeedbackTitle">李先生:</span><span class="FeedbackContent">儿子一跟我说话就吵架，真让人操心。</span></li>
+					<li><span class="FeedbackTitle">朱先生:</span><span class="FeedbackContent">儿大不由爹啊！</span></li>
+					<li class="heightDou"><span class="FeedbackTitle">钱女士:</span><span class="FeedbackContent">什么时候我家女儿能跟我好好说个话啊！</span></li>
+					<li><span class="FeedbackTitle">沈女士:</span><span class="FeedbackContent">哎，好舍不得儿子出国读书。</span></li>
+					<li><span class="FeedbackTitle">黄先生:</span><span class="FeedbackContent">给儿子算了一下，他说挺准的。</span></li>
+					<li class="heightDou"><span class="FeedbackTitle">温女士:</span><span class="FeedbackContent">这是万年历独家的产品吗？目前确实没有看到别家有。</span></li>
+					<li class="heightDou"><span class="FeedbackTitle">何女士:</span><span class="FeedbackContent">我是对儿子严格了点，这也是为他好啊！</span></li>
+					<li><span class="FeedbackTitle">刘女士:</span><span class="FeedbackContent">我还是想让我儿子出国读书！</span></li>
+				</ul>
+				<ul id="customerFeedbackContentDetail02"></ul>
+			</div>
+		</div>
+	</div>
+	<div class="customerFeedbackSubmit submit turnToData"><img src="./img/anniu-lijichakan.png"></div>
+    <div class="copyright">Copyright © 2013-1017 &nbsp;&nbsp;万年历</div>
+    <div class="iphoneXAdaptation"></div>
+	<div>
+		<div class="index_loading"></div>
+		<div class="index_mask"></div>
+		<div class="mask"></div>
+		<div class="loading"></div>
+		<div id="toast"></div>
+		<span id="toast1"></span>
+	</div>
+
+	<script type="text/javascript" src="./js/base64.min.js"></script>
+	<script type="text/javascript" src="./mobiscroll/mobiscroll-2.14.4-crack.js"></script>
+	<script type="text/javascript" src="./mobiscroll/mobiscroll.select.js"></script>
+	<script type="text/javascript" src="./mobiscroll/i18n/mobiscroll.i18n.zh.js"></script>
+	<script type="text/javascript" src="./mobiscroll/solar.js"></script>
+	<script type="text/javascript" src="./static/calendar.js"></script>
+	<script type="text/javascript" src="./static/city.js"></script>
+	<script type="text/javascript" src="./static/indexCity.js"></script>
+    <script type="text/javascript" src="./static/citypicker.js"></script>
+    <script type="text/javascript" src='./js/wnlui.js'></script>
+    <script type="text/javascript" src='./js/index.js'></script>
+	<!--分享  -->
+	<script>
+		var title = "天下没有教育不好的孩子？";
+		var localUrl = location.href;
+		var text = "只有不会教育孩子的家长！";
+		var imgUrl = "https://qiniu.image.cq-wnl.com/content/20170803268fb3b8362d40bdaaf28c7a31cdfe21.jpg";
+		var textObj = {
+			title: title,
+			text: title,
+			image: '0',
+			imageURL: imgUrl,
+			url: localUrl,
+			pureText: text,
+			prefix: ""
+		};
+		var textObj1 = {
+			title: title,
+			text: text,
+			image: '0',
+			imageURL: imgUrl,
+			targetUrl: localUrl,
+			perfix: ""
+		};
+		weChatShare.wxShare({
+		  title: '星盘子女运',
+		  text: '我在万年历看【星盘子女运】，分享给你，一起看吧！',
+		  imgUrl: imgUrl,
+		  imageUrl: imgUrl,
+		  url: localUrl
+		});
+
+		function appCallback_share() {
+			try {
+				if (window.ylwindow) {
+					ylwindow.reportHasShare(true);
+					location.href = "protocol://share:" + encodeURI(JSON.stringify(textObj1));
+				} else {
+					location.href = "protocol://share#" + encodeURI(JSON.stringify(textObj));
+				}
+			} catch (e) {}
+			return 1;
+		}
+
+	</script>
+</body>
+
+</html>

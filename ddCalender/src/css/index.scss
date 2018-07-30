@@ -1,0 +1,720 @@
+@mixin bgImg($url){
+    background-image: url($url + '@2x.png');
+    @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+      background-image: url($url + '@3x.png');
+    }
+}
+
+@mixin border-1px($color,$top:0) {
+  position: relative;
+  &:after{
+    content: " ";
+    position: absolute;
+    left: 135px;
+    top: $top;
+    right: 135px;
+    height: 1px;
+    border-top: 1px solid $color;
+    color: $color;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+    // -webkit-box-sizing: border-box;
+    // -moz-box-sizing: border-box;
+    // box-sizing: border-box;
+  }
+}
+html {
+	font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+	-webkit-overflow-scrolling : touch;
+}
+body, div, img {
+	margin: 0;
+	padding: 0;
+}
+.hidden {
+	display: none !important;
+}
+// .white {
+// 	background: #999;
+// 	color: #fff;
+// }
+.mobilenav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #1d6ccd;
+	font-size: 15px;
+	color: #fff;
+	z-index: 9999;
+	.navbanner {
+		width: 42%;
+		margin: 0 auto;
+		// display: flex;
+		// justify-content: space-between;
+		.index, .about {
+			position: relative;
+		}
+		.index {
+			float: left;
+		}
+		.line {
+			position: absolute;
+			width: 30%;
+			height: 2px;
+			border-radius: 2px;
+			left: 10px;
+			top: 32.5px;
+			background-color: #fff;
+		}
+		.about {
+			float: right;
+			opacity: 0.5;
+			filter:alpha(opacity=50);
+		}
+	}
+}
+.pcnav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	color: #fff;
+	background-color: #1d6ccd;
+	// display: flex;
+	// justify-content: space-between;
+	display: inline-block;
+	font-size: 18px;
+	z-index: 9999;
+	.navleft {
+		float: left;
+		margin-left: 134px;
+		background-image: url('../img/icon-1.png');
+		background-repeat: no-repeat;
+		background-position: 0 center;
+		background-size: 24px 24px;
+		.text {
+			margin-left: 34px;
+		}
+	}
+	.navright {
+		float: right;
+		margin-right: 134px;
+		.index {
+			margin-right: 26px;
+		}
+		.about {
+			opacity: 0.5;
+			filter:alpha(opacity=50);
+		}
+	}
+}
+.ddindex {
+	.top {
+		padding-top: 75px;
+		padding-bottom: 29px;
+		background-color: #edf6ff;
+		.desc {
+			width: 149px;
+			height: 55px;
+			line-height: 1.8;
+			margin: 0 auto;
+			@include bgImg('../img/icon');
+			background-repeat: no-repeat;
+			background-position: 0 center;
+			background-size: contain;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.name, .calender {
+				margin-left: 67px;
+				color: #333;
+			}
+			.name {
+				font-size: 19px;
+				font-weight: 600;
+			}
+			.calender {
+				font-size: 12px;
+			}
+		}
+		.client, .usewx {
+			margin: 30px auto;
+			width: 150px;
+			height: 40px;
+			font-size: 15px;
+			line-height: 40px;
+			text-align: center;
+			color: #fff;
+			background-color: #1d6ccd;
+			border: 1px solid #1d6ccd;
+			border-radius: 20px;
+			box-shadow: 0px 4px 12px 0 rgba(29, 108, 205, 0.5);
+			.text {
+				margin-left: 18px;
+			}
+		}
+		.client {
+			@include bgImg('../img/phone-icon');
+			background-repeat: no-repeat;
+			background-position: 27px center;
+			background-size: 10px 16px;
+		}
+		.view {
+			// width: 328px;
+			width: 87.47%;
+			height: 268px;
+			margin: 0 auto;
+			@include bgImg('../img/phone');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	}
+	.pctop {
+		// display: flex;
+		width: 100%;
+		min-width: 900px;
+		min-height: 449px;
+		padding-top: 65px;
+		padding-bottom: 51px;
+		background-color: #edf6ff;
+		.pcindextop {
+			width: 900px;
+			height: 449px;
+			margin: 0 auto;
+		}
+		.pcview {
+			width: 549px;
+			height: 449px;
+			// display: inline-block;
+			// margin-left: 430px;
+			background-image: url('../img/web-top-phone.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+			float: left;
+		}
+		.pcright {
+			display: inline-block;
+			margin-left: 70px;
+			margin-top: 72px;
+			.pcdesc {
+				width: 210px;
+				height: 75px;
+				line-height: 1.7;
+				letter-spacing: 1.4px;
+				margin: 0 auto;
+				// @include bgImg('../img/icon-2');
+				background-image: url('../img/icon-2.png');
+				background-repeat: no-repeat;
+				background-position: 0 center;
+				background-size: 75px 75px;
+				// display: flex;
+				// flex-direction: column;
+				// align-items: center;
+				.pcname, .pccalender {
+					margin-left: 87px;
+					color: #333;
+				}
+				.pcname {
+					font-size: 26px;
+					font-weight: 600;
+				}
+				.pccalender {
+					font-size: 19px;
+				}
+
+			}
+			.pcclient, .pcusewx {
+				width: 200px;
+				height: 50px;
+				min-width: 200px;
+				min-height: 50px;
+				margin-left: 70px;
+				font-size: 18px;
+				line-height: 50px;
+				text-align: center;
+				color: #fff;
+				background-color: #1d6ccd;
+				border: 1px solid #1d6ccd;
+				border-radius: 25px;
+				.pctext {
+					margin-left: 26px;
+				}
+			}
+			.pcclient {
+				margin-top: 77px;
+				// @include bgImg('../img/phone-icon');
+				background-image: url('../img/phone-icon.png');
+				background-repeat: no-repeat;
+				background-position: 42px center;
+				background-size: 17px 25px;
+				position: relative;
+				.downloadqr {
+					position: absolute;
+					width: 201px;
+					height: 215px;
+					left: -201px;
+					top: -70px;
+					background-image: url('../img/down.png');
+					background-repeat: no-repeat;
+					background-size: contain;
+					opacity: 0;
+					filter:alpha(opacity=0);
+				}
+			}
+			.pcusewx {
+				position: relative;
+				margin-top: 24px;
+				color: #1d6ccd;
+				background-color: #fff;
+				// @include bgImg('../img/wechat-icon');
+				background-image: url('../img/wechat-icon.png');
+				background-repeat: no-repeat;
+				background-position: 38px center;
+				background-size: 25px 21px;
+				.usewxqr {
+					position: absolute;
+					width: 201px;
+					height: 215px;
+					left: -201px;
+					top: -70px;
+					background-image: url('../img/wx.png');
+					background-repeat: no-repeat;
+					background-size: contain;
+					opacity: 0;
+					filter:alpha(opacity=0);
+				}
+				.pctext {
+					margin-left: 32px;
+				}
+			}
+		}
+	}
+	.funclist {
+		width: 100%;
+		margin: 5px auto;
+		.moreview, .write, .invite, .cloud {
+			width: 100%;
+			// height: 208px;
+			// height: 19%;
+			// border: 1px solid #999;
+			margin-bottom: 5px;
+			color: #333;
+			overflow: hidden;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			&.pclist {
+				width: 486px;
+				display: inline-block;
+				margin-left: 10px;
+			}
+		}
+		.viewtitle {
+			width: 97.1px;
+			height: 23px;
+			margin: 19px auto 0;
+			text-align: center;
+			font-size: 17px;
+			font-weight: 600;
+			@include bgImg('../img/title-icon');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+		.viewdesc {
+			text-align: center;
+			font-size: 13px;
+		}
+		.moreview {
+			background-image: url('../img/moreview.jpg');
+		}
+		.write {
+			background-image: url('../img/write.jpg');
+		}
+		.invite {
+			background-image: url('../img/invite.jpg');
+		}
+		.cloud {
+			background-image: url('../img/cloud.jpg');
+			// background-repeat: no-repeat;
+			// background-position: center;
+			// background-size: 100% 208px;
+		}
+		&.pcfunclist {
+			width: 55%;
+			margin: 10px auto;
+		}
+	}
+	.btn {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		// display: flex;
+		// justify-content: center;
+		text-align: center;
+		.client1, .usewx1 {
+			width: 200px;
+			height: 50px;
+			min-width: 200px;
+			min-height: 50px;
+			display: inline-block;
+			font-size: 18px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 25px;
+
+		}
+		.client1 {
+			position: relative;
+			color: #fff;
+			// @include bgImg('../img/phone-icon');
+			background-image: url('../img/phone-icon.png');
+			background-repeat: no-repeat;
+			background-position: 41px center;
+			background-size: 17px 25px;
+			background-color: #1d6ccd;
+			border: 1px solid #1d6ccd;
+			&.shadow {
+				box-shadow: 0px 4px 12px 0 rgba(29, 108, 205, 0.5);
+			}
+			.text1 {
+				margin-left: 18px;
+				&.mobiletext {
+					margin-left: 18px;
+				}
+			}
+			.downloadqr1 {
+				position: absolute;
+				width: 201px;
+				height: 215px;
+				left: 5px;
+				top: -215px;
+				background-image: url('../img/down1.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+				opacity: 0;
+				filter:alpha(opacity=0);
+			}
+			&.mobileclient {
+				width: 150px;
+				height: 40px;
+				min-width: 150px;
+				min-height: 40px;
+				line-height: 40px;
+				background-position: 28px center;
+				background-size: 10px 16px;
+				font-size: 15px;
+				border-radius: 20px;
+			}
+		}
+		.usewx1 {
+			position: relative;
+			margin-left: 40px;
+			color: #1d6ccd;
+			// @include bgImg('../img/wechat-icon');
+			background-image: url('../img/wechat-icon.png');
+			background-repeat: no-repeat;
+			background-position: 38px center;
+			background-size: 25px 21px;
+			background-color: #fff;
+			border: 1px solid #1d6ccd;
+			.usewxqr1 {
+				position: absolute;
+				width: 201px;
+				height: 215px;
+				left: 5px;
+				top: -215px;
+				background-image: url('../img/wx1.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+				opacity: 0;
+				filter:alpha(opacity=0);
+			}
+			.text1 {
+				margin-left: 26px;
+			}
+		}
+		&.pcbtn {
+			min-width: 475px;
+		}
+	}
+
+	.foot {
+		// position: fixed;
+		// bottom: 0;
+		// left: 0;
+		// width: 100%;
+		padding: 15px 15px 12.5px;
+		background-color: #e8e8e8;
+		font-size: 12px;
+		.icp, .device, .qq, .addr {
+			margin-top: 9px;
+		}
+	}
+	.pcfoot {
+		// width: 100%;
+		height: 59px;
+		padding-top: 21px;
+		text-align: center;
+		background-color: #e8e8e8;
+		font-size: 14px;
+		color: #333;
+		.company {
+			margin-top: 13px;
+		}
+	}
+}
+.ddabout {
+	.content {
+		padding-top: 75px;
+		padding-bottom: 36px;
+		background-color: #edf6ff;
+		.aboutdesc {
+			width: 149px;
+			height: 55px;
+			line-height: 1.8;
+			margin: 0 auto;
+			@include bgImg('../img/icon');
+			background-repeat: no-repeat;
+			background-position: 0 center;
+			background-size: contain;
+			// display: flex;
+			// flex-direction: column;
+			// align-items: center;
+			.name, .calender {
+				margin-left: 60px;
+				color: #333;
+			}
+			.name {
+				font-size: 19px;
+				font-weight: 600;
+			}
+			.calender {
+				font-size: 12px;
+			}
+		}
+		.abouttitle {
+			margin: 45px 23px 38px;
+			color: #333;
+			font-size: 17px;
+			font-weight: 600;
+		}
+		.aboutintroduce {
+			text-align: center;
+			width: 97.1px;
+			height: 23px;
+			margin: 0 auto 18px;
+			font-size: 17px;
+			font-weight: 600;
+			@include bgImg('../img/title-icon');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+		.aboutmoreview, .aboutwrite, .aboutinvite, .aboutcloud {
+			margin: 0 15px 16px;
+			font-size: 15px;
+			color: #333;
+		}
+	}
+	.pcaboutbtn {
+		margin-top: 60px;
+		margin-bottom: 30px;
+		// display: flex;
+		// justify-content: center;
+		@include border-1px(#999, -30px);
+		text-align: center;
+		.client1, .usewx1 {
+			width: 200px;
+			height: 50px;
+			min-width: 200px;
+			min-height: 50px;
+			display: inline-block;
+			font-size: 15px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 25px;
+			// box-shadow: 0px 4px 12px 0 rgba(29, 108, 205, 0.5);
+		}
+		.client1 {
+			position: relative;
+			color: #fff;
+			// @include bgImg('../img/phone-icon');
+			background-image: url('../img/phone-icon.png');
+			background-repeat: no-repeat;
+			background-position: 41px center;
+			background-size: 17px 25px;
+			background-color: #1d6ccd;
+			border: 1px solid #1d6ccd;
+			.text1 {
+				margin-left: 14px;
+				&.mobiletext {
+					margin-left: 18px;
+				}
+			}
+			.downloadqr1 {
+				position: absolute;
+				width: 201px;
+				height: 215px;
+				left: 5px;
+				top: -215px;
+				background-image: url('../img/down1.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+				opacity: 0;
+				filter:alpha(opacity=0);
+				z-index: 9999;
+			}
+		}
+		.usewx1 {
+			position: relative;
+			margin-left: 40px;
+			color: #1d6ccd;
+			// @include bgImg('../img/wechat-icon');
+			background-image: url('../img/wechat-icon.png');
+			background-repeat: no-repeat;
+			background-position: 46px center;
+			background-size: 25px 21px;
+			background-color: #fff;
+			border: 1px solid #1d6ccd;
+			.usewxqr1 {
+				position: absolute;
+				width: 201px;
+				height: 215px;
+				left: 5px;
+				top: -215px;
+				background-image: url('../img/wx1.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+				opacity: 0;
+				filter:alpha(opacity=0);
+				z-index: 9999;
+			}
+			.text1 {
+				margin-left: 24px;
+			}
+		}
+		&.pcbtn {
+			min-width: 475px;
+		}
+	}
+	.aboutfoot {
+		// width: 100%;
+		padding: 15px 15px 12.5px;
+		background-color: #e8e8e8;
+		font-size: 12px;
+		.icp, .device, .qq, .addr {
+			margin-top: 9px;
+		}
+	}
+
+	.pccontent {
+		width: 100%;
+		min-width: 694px;
+		margin-top: 44px;
+		// display: flex;
+		background-color: #edf6ff;
+		.pccontenttop {
+			width: 694px;
+			height: 436px;
+			margin: 0 auto;
+		}
+		.pcaboutdesc {
+			width: 320px;
+			height: 110px;
+			line-height: 55px;
+			// margin-left: 420px;
+			// display: inline-block;
+			// @include bgImg('../img/phone-icon');
+			background-image: url('../img/icon-3.png');
+			background-repeat: no-repeat;
+			background-position: 0 center;
+			background-size: contain;
+			float: left;
+			margin-top: 190px;
+			// align-self: center;
+			.name, .calender {
+				margin-left: 136px;
+				color: #333;
+			}
+			.name {
+				font-size: 38px;
+				font-weight: 600;
+			}
+			.calender {
+				font-size: 24px;
+				letter-spacing: 1.4px;
+			}
+		}
+		.pcphoneicon {
+			display: inline-block;
+			width: 216px;
+			height: 389px;
+			margin-left: 158px;
+			margin-top: 48px;
+			// overflow: hidden;
+			background-image: url('../img/phone2.png');
+			background-repeat: no-repeat;
+			background-position: 0 bottom;
+			background-size: contain;
+			// align-self: flex-end;
+		}
+	}
+	.pcdesc {
+		width: 65%;
+		margin: 0 auto;
+		margin-top: 60px;
+		color: #333;
+		.abouttitle, .aboutintroduce {
+			margin-left: 134px;
+			font-size: 30px;
+			font-weight: 600;
+		}
+		.aboutintroduce {
+			margin: 60px 0 25px 135px;
+		}
+		.aboutmoreview, .aboutwrite, .aboutinvite, .aboutcloud, .wx, .search, .mail, .qq {
+			margin-left: 145px;
+			margin-bottom: 15px;
+			font-size: 18px;
+		}
+		.wx, .search, .mail, .qq {
+			margin-left: 135px;
+		}
+		.wx {
+			margin-top: 75px;
+		}
+	}
+	.pcaboutfoot {
+		width: 100%;
+		height: 59px;
+		padding-top: 21px;
+		text-align: center;
+		background-color: #e8e8e8;
+		font-size: 14px;
+		color: #333;
+		.company {
+			margin-top: 13px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

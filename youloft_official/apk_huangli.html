@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .iosbg {
+            width: 168px;
+            height: 100%;
+            margin: 0 auto;
+            overflow: auto;
+            background-color: #fff;
+        }
+
+        .iosimg {
+            width: 168px;
+            height: 191.5px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // var dwidth = $(window).width() / 2;
+            var dheight = $(window).height() / 2;
+            var ua = window.navigator.userAgent;
+            var isWeixin = /MicroMessenger/i.test(ua);
+            var isAndroid = (/Android|HTC/i.test(ua) || (window.navigator.platform + '').match(/Linux/i));
+            var isIPad = !isAndroid && /iPad/i.test(ua);
+            var isIPhone = !isAndroid && /iPod|iPhone/i.test(ua);
+            var isIOS = isIPad || isIPhone;
+            var url = '';
+            if (isIOS) {
+                // $('.iosimg').attr('src', './img/iosdownimg.jpg')
+                // $('.iosimg').css({
+                // 	'margin-top': dheight - 95.75
+                // })
+                url = 'https://itunes.apple.com/cn/app/%E4%B8%87%E5%B9%B4%E5%8E%86%E9%BB%84%E5%8E%86%E6%97%A5%E5%8E%86/id527092746?mt=8';
+                location.href = url;
+            } else if (isWeixin) {
+                url = 'http://shouji.baidu.com/software/22714643.html';
+                location.href = url;
+            } else {
+                url =
+                    'https://cdn.jptj.goodstudydayup.com/apk/calendar_hl.apk';
+                location.href = url;
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <!-- <div class="iosbg">
+				<img alt="" class="iosimg">
+			</div> -->
+</body>
+
+</html>

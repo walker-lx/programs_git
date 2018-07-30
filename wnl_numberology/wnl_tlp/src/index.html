@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="copyright" content="Copyright (c) 51wnl.com" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="万年历" />
+    <meta name="keywords" content="万年历" />
+    <title>万年历塔罗牌</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+        <!-- build:remove -->
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="base64.min.js"></script>
+    <script type="text/javascript" src="router.js"></script>
+    <!-- /build -->
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261046939'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1261046939' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <style>
+    #cnzz_stat_icon_1261046939 {
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="section index_setion hidden">
+            <a href="javascript:void(0);" class="history_btn hidden">我的测算</a>
+            <div class="title_top"></div>
+            <!--<div class="title">事业财运早知道</div>
+			<div class="sub_title">新年季度事业运势详细预测</div>-->
+            <div class="title_img"></div>
+            <div class="title_bottom"></div>
+            <img src="../img/card_img.png" class="card_img" />
+            <div class="top_txt1">起源中世纪古老而神秘的塔罗牌，为你揭秘未来三个月职场运势与机会，人际关系，财运起伏！</div>
+            <div class="txt_tip adapt">
+                <!--<img src="../img/kuang_white@3x.png" class="txt_tip_img">-->
+                <div class="tl_frame txt_tip_img"></div>
+                <div class="txt_tip_tl txt_tip_d"></div>
+                <div class="txt_tip_tr txt_tip_d"></div>
+                <div class="txt_tip_bl txt_tip_d"></div>
+                <div class="txt_tip_br txt_tip_d"></div>
+                <div class="txt_tip_top_line"></div>
+                <div class="txt_tip_bottom_line"></div>
+                <div class="txt_tip_left_line"></div>
+                <div class="txt_tip_right_line"></div>
+                <div class="flex_txt">适合人群</div>
+                <div class="index_txt"><span>如果我在</span><span class="super">寻找工作</span><span>，我未来三个月什么时候适合跳槽？我应该寻找怎样的工作？我要怎么超越竞争对手？</span></div>
+                <div class="index_txt"><span>如果我在</span><span class="super">职场沉浮</span><span>，我未来三个月如何能够升职加薪？我能够从职场得到什么？我要如何应对职场小人？</span></div>
+                <div class="index_txt"><span>如果我在</span><span class="super">创业奋斗</span><span>，我未来三个月应该如何抢占先机？我该如何管理我的员工？我要投资什么样的项目？</span></div>
+            </div>
+            <div class="txt_tip measure">
+                <!--<img src="../img/kuang_white@3x.png" alt="wnl" class="txt_tip_img">-->
+                <div class="txt_tip_tl txt_tip_d"></div>
+                <div class="txt_tip_tr txt_tip_d"></div>
+                <div class="txt_tip_bl txt_tip_d"></div>
+                <div class="txt_tip_br txt_tip_d"></div>
+                <div class="txt_tip_top_line"></div>
+                <div class="txt_tip_bottom_line"></div>
+                <div class="txt_tip_left_line"></div>
+                <div class="txt_tip_right_line"></div>
+                <div class="flex_txt">测算流程</div>
+                <div class="process">
+                    <img src="../img/question_icon@2x.png" alt="" class="process_question">
+                    <span class="flex_txt">默念问题</span>
+                </div>
+                <div class="process">
+                    <img src="../img/3card_icon@3x.png" alt="" class="process_select">
+                    <span class="flex_txt">选择三张牌</span>
+                </div>
+                <div class="process">
+                    <img src="../img/answer_icon@3x.png" alt="" class="process_answer">
+                    <span class="flex_txt">得到答案</span>
+                </div>
+            </div>
+            <div class="txt_tip feedback">
+                <!--<img src="../img/kuang_white@3x.png" class="txt_tip_img">-->
+                <div class="tl_frame txt_tip_img"></div>
+                <div class="txt_tip_tl txt_tip_d"></div>
+                <div class="txt_tip_tr txt_tip_d"></div>
+                <div class="txt_tip_bl txt_tip_d"></div>
+                <div class="txt_tip_br txt_tip_d"></div>
+                <div class="txt_tip_top_line"></div>
+                <div class="txt_tip_bottom_line"></div>
+                <div class="txt_tip_left_line"></div>
+                <div class="txt_tip_right_line"></div>
+                <div class="flex_txt">客户反馈</div>
+                <div class="feedback_txt">
+                    <div class="quotation">
+                        <ul>
+                            <li class="index_txt1">陈先生：针对新年财运的测试好贴心！</li>
+                            <li class="index_txt1">王女士：最近很迷茫要不要换工作，占卜之后得到的结果让我豁然开朗！</li>
+                            <li class="index_txt1">周先生：很符合正在找工作的我，测算结果给了我很有用的提示！</li>
+                            <li class="index_txt1">郭女士：工作三年了还是浮浮沉沉，测试出来的结果给我指了一条明路。</li>
+                            <li class="index_txt1">罗先生：我在创业阶段，该结果让我找到了先机！</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_mask">
+                <a href="javascript:void(0);" class="begin_btn">立即占卜</a>
+            </div>
+        </div>
+        <div class="section history_section hidden">
+            <a href="javascript:void(0);" class="history_item temp_history_item hidden">
+                <div class="lock_icon"></div>
+                <div class="history_item_info">
+                    <div class="history_item_txt history_item_txt1"></div>
+                    <div class="history_item_txt history_item_tx2"></div>
+                </div>
+                <div class="unlock_txt">未解锁</div>
+            </a>
+            <div class="history_list"></div>
+        </div>
+        <div class="section astro_section hidden">
+            <div class="mask astro_mask hidden"></div>
+            <div class="modal astro_select_modal hidden">
+                <div class="astro_modal_title">星座选择</div>
+                <div class="astro_list">
+                    <div class="astro_list_line clear_float">
+                        <a href="javascript:void(0);" class="astro_list_item aquarius">
+                            <div class="astro_active"></div>
+                        </a>
+                        <a href="javascript:void(0);" class="astro_list_item pisces">
+                            <div class="astro_active"></div>
+                        </a>
+                        <a href="javascript:void(0);" class="astro_list_item aries">
+                            <div class="astro_active"></div>
+                        </a>
+                    </div>
+                    <div class="astro_list_line clear_float">
+                        <a href="javascript:void(0);" class="astro_list_item taurus">
+                            <div class="astro_active"></div>
+                        </a>
+                        <a href="javascript:void(0);" class="astro_list_item gemini">
+                            <div class="astro_active"></div>
+                        </a>
+                        <a href="javascript:void(0);" class="astro_list_item cancer">
+                            <div class="astro_active"></div>
+                        </a>
+                    </div>
+                    <div class="astro_list_line clear_float">
+                        <a href="javascript:void(0);" class="astro_list_item leo">
+                            <div class="astro_active"></div>
+                        </a>
+                        <a href="javascript:void(0);" class="astro_list_item virgo">
+                            <div class="astro_active"></div>
+                        </a>
+                        <a href="javascript:void(0);" class="astro_list_item libra">
+                            <div class="astro_active"></div>
+                        </a>
+                    </div>
+                    <div class="astro_list_line clear_float">
+                        <a href="javascript:void(0);" class="astro_list_item scorpio">
+                            <div class="astro_active"></div>
+                        </a>
+                        <a href="javascript:void(0);" class="astro_list_item sagittarius">
+                            <div class="astro_active"></div>
+                        </a>
+                        <a href="javascript:void(0);" class="astro_list_item capricorn">
+                            <div class="astro_active"></div>
+                        </a>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" class="astro_select_btn">确认</a>
+            </div>
+            <div class="astro_content">
+                <div class="choose_astro_content">
+                    <div class="choose_astro_tip">我的星座:</div>
+                    <div class="choose_astro_name"></div>
+                    <div class="choose_astro_icon"></div>
+                </div>
+                <div class="card_stage">
+                    <div class="cards_content">
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                        <div class="card_big"></div>
+                    </div>
+                </div>
+                <div class="txt_show_content">
+                    <!--<div class="txt_show_line line1">洗牌前，请合上双眼，</div>-->
+                    <!--<div class="txt_show_line line2">用心默念关心的工作问题。</div>-->
+                    <!--<div class="txt_show_line line3">放轻松，从现在开始，</div>-->
+                    <!--<div class="txt_show_line line4">塔罗奥义将为你解开困惑。</div>-->
+                    <div class="txt_show_line line1">心中默念你最关心的事业问题。</div>
+                </div>
+                <a href="javascript:void(0);" class="card_mix_btn">洗牌</a>
+            </div>
+        </div>
+        <div class="section choose_section hidden">
+            <div class="card_line_list flex_row">
+                <div class="card_verticle_line flex_row">
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                </div>
+                <div class="card_verticle_line">
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                </div>
+                <div class="card_verticle_line">
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                </div>
+                <div class="card_verticle_line flex_row">
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                    <div class="card_wrapper">
+                        <div class="card"></div>
+                        <div class="card_back"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="choose_tip tip1 hidden">
+                <div class="choose_tip_line">摒弃杂念</div>
+                <div class="choose_tip_line">请用直觉选择三张牌</div>
+            </div>
+            <div class="choose_tip tip2 hidden">再选两张</div>
+            <div class="choose_tip tip3 hidden">再选一张</div>
+            <a href="javascript:void(0);" class="result_btn hidden">解牌</a>
+        </div>
+        <div class="section result_section hidden">
+            <!--<a href="javascript:void(0);" class="kyxz"></a>-->
+            <div class="mask result_mask hidden"></div>
+            <div class="modal payModal hidden">
+                <div class="modal_close"></div>
+                <div class="modal_content">
+                    <div class="modal_title">解锁未来三个月事业运完整版</div>
+                    <img src="../img/modal_line.png" alt="" class="modal_line">
+                    <div class="modal_tip modal_tip1">立即解锁，让你未来三个月职场</div>
+                    <div class="modal_tip modal_tip2">无往不利</div>
+                    <img src="../img/modal_line.png" alt="" class="modal_line">
+                    <div class="modal_price">
+                        <div class="payed_priece">支付金额：18元</div>
+                        <div class="natural_priece">原价：28元</div>
+                    </div>
+                    <!--<a href="javascript:void(0);" class="wx_pay_btn hidden">
+                        <div class="pay_icon wx"></div>
+                        <div class="loading hidden"></div>
+                        <div class="pay_txt">微信支付</div>
+                    </a>
+                    <a href="javascript:void(0);" class="zfb_pay_btn">
+                        <div class="pay_icon zfb"></div>
+                        <div class="loading hidden"></div>
+                        <div class="pay_txt">支付宝支付</div>
+                    </a>-->
+                    <a href="javascript:void(0);" class="pay_btn">
+                        <div class="loading hidden"></div>
+                        <div class="pay_txt">立即支付解锁</div>
+                    </a>
+                </div>
+            </div>
+            <div class="cards_top">
+                <div class="card_result" data-index="1">
+                    <div class="card_result_img"></div>
+                </div>
+                <div class="card_result" data-index="2">
+                    <div class="card_result_img"></div>
+                </div>
+                <div class="card_result" data-index="3">
+                    <div class="card_result_img"></div>
+                </div>
+            </div>
+            <div class="result">
+                <div class="list_arrow">
+                    <div class="month_list">
+                        <div class="month_item"></div>
+                        <div class="month_item"></div>
+                        <div class="month_item"></div>
+                        <span class="month_item_line"></span>
+                        <span class="month_item_line"></span>
+                    </div>
+                    <div class="result_arrow_list">
+                        <div class="result_arrow_wrapper">
+                            <div class="result_arrow"></div>
+                        </div>
+                        <div class="result_arrow_wrapper">
+                            <div class="result_arrow"></div>
+                        </div>
+                        <div class="result_arrow_wrapper">
+                            <div class="result_arrow"></div>
+                        </div>
+                    </div>
+                    <div class="result_head"></div>
+                </div>
+                <div class="result_content">
+                    <div class="result_top flex_row">
+                        <div class="result_top_left">
+                            <div class="result_top_tip">牌名</div>
+                            <div class="result_top_txt"></div>
+                        </div>
+                        <div class="result_top_right">
+                            <div class="result_top_tip">关键字</div>
+                            <div class="result_top_txt"></div>
+                        </div>
+                    </div>
+                    <div class="txt_tip card_explain txt_tip_border">
+                        <!--<img src="../img/kuang@3x.png" alt="wnl" class="txt_tip_img">-->
+                        <div class="txt_tip_tl txt_tip_d"></div>
+                        <div class="txt_tip_tr txt_tip_d"></div>
+                        <div class="txt_tip_bl txt_tip_d"></div>
+                        <div class="txt_tip_br txt_tip_d"></div>
+                        <div class="txt_tip_top_line"></div>
+                        <div class="txt_tip_bottom_line"></div>
+                        <div class="txt_tip_left_line"></div>
+                        <div class="txt_tip_right_line"></div>
+                        <div class="result_middle_tip">牌义解释</div>
+                        <div class="result_middle_txt"></div>
+                    </div>
+                    <div class="txt_tip work_transport txt_tip_border hidden">
+                        <div class="txt_tip_tl txt_tip_d"></div>
+                        <div class="txt_tip_tr txt_tip_d"></div>
+                        <div class="txt_tip_bl txt_tip_d"></div>
+                        <div class="txt_tip_br txt_tip_d"></div>
+                        <div class="txt_tip_top_line"></div>
+                        <div class="txt_tip_bottom_line"></div>
+                        <div class="txt_tip_left_line"></div>
+                        <div class="txt_tip_right_line"></div>
+                        <div id="txt_tip_wrapper_1" class="txt_tip_wrapper"></div>
+                        <div class="free_content_list hidden"></div>
+                    </div>
+                    <div class="txt_tip lucky_star hidden">
+                        <div class="txt_tip_tl txt_tip_d"></div>
+                        <div class="txt_tip_tr txt_tip_d"></div>
+                        <div class="txt_tip_bl txt_tip_d"></div>
+                        <div class="txt_tip_br txt_tip_d"></div>
+                        <div class="txt_tip_top_line"></div>
+                        <div class="txt_tip_bottom_line"></div>
+                        <div class="txt_tip_left_line"></div>
+                        <div class="txt_tip_right_line"></div>
+                        <div id="txt_tip_wrapper_2" class="txt_tip_wrapper"></div>
+                        <div class="payed_content">
+                            <div class="payed_content_list"></div>
+                        </div>
+                    </div>
+                    <div class="mask_payed_content">
+                        <div class="mask_payed_tip">
+                            <div class="free_content_list "></div>
+                        </div>
+                        <div class="mask_content">
+                            <div class="xz_icon"></div>
+                            <div class="mask_tip">解锁塔罗，你将获得</div>
+                            <div class="mask_txt">我在职场，谁是小人？</div>
+                            <div class="mask_txt">我在创业，前景如何？</div>
+                            <div class="mask_txt">我在求职，何时成功？</div>
+                            <div class="mask_txt">财运不佳，如何开运！</div>
+                            <!--<div class="mask_txt">适合你的开运物品是？</div>-->
+                            <a href="javascript:void(0);" class="unlock_btn">立即解锁</a>
+                            <div class="mask_bottom">
+                                <div class="mask_bottom_txt">解锁完整版同时获得未来两月事业运预测</div>
+                                <div class="mask_bottom_txt">以及趋利避害小技巧</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="astroBanner hidden" style="margin: 10px; padding: 0;background-size: cover;">
+                <img src="//mobile.51wnl.com/numberology/tlp/img/astroBanner.jpg" style="width:100%"/>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+    <span id="toast1"></span>
+    <div class="wnlBanner">
+        <a class="closeBanner" href="javascript:void(0)"></a>
+        <div class="wnllogo"></div>
+        <div class="ad-title">
+            <div class="ad-t1">万年历</div>
+            <div class="ad-t2">神准塔罗，把握财运先机</div>
+        </div>
+        <a class="downloadBtn" href="javascript:void(0)">打开APP</a>
+    </div>
+    <script type="text/javascript" src="//www.51wnl.com/wnl_utils/openapp.js"></script>
+    <script type="text/javascript" src="//mobile.51wnl.com/utils/in-view/dist/in-view.min.js"></script>
+    <script type="text/javascript" src="//mobile.51wnl.com/numberology/redpackage/js/wnl_redpackage.js"></script>
+
+    <script type="text/javascript" src="//www.51wnl.com/wnl_utils/wnlHistory.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>

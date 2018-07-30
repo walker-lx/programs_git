@@ -1,0 +1,40 @@
+.btnRadius {
+            height: 40px;
+            width: 150px;
+            border-radius: 30px;
+        }
+.header {
+            height: 30px;
+        }
+
+        .container {
+            font-size: 14px;
+        }
+
+        div {
+            padding: 5px;
+        }
+
+        .fontBig {
+            font-weight: 800;
+            font-size: 40;
+        }
+.moreItemUl
+        {
+    margin:0px;
+    padding:0px;
+        }
+
+        .moreItemUl li
+        {
+            list-style:none;
+            line-height:30px;
+            font-size:18px;
+            width:120px;
+            float:left;
+            margin:15px;
+        }
+        .clear
+        {
+            clear:both;
+        }

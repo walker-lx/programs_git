@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>八字测算</title>
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="./css/picker.css">
+	<link rel="stylesheet" type="text/css" href="./css/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="./mobiscroll/mobiscroll.custom-2.14.4.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<script type="text/javascript">
+		var cnzz_protocol = (('https:' == document.location.protocol) ? 'https://' : ' http://');
+		document.write(unescape("%3Cspan id='cnzz_stat_icon_1263911903'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol +
+			"s19.cnzz.com/z_stat.php%3Fid%3D1263911903' type='text/javascript'%3E%3C/script%3E"));
+
+	</script>
+	<style>
+		/*声明 WebFont*/
+
+		@font-face {
+			font-family: 'zidingyi';
+			src: url('./font/zidingyi.eot');
+			src: url('./font/zidingyi.eot?#font-spider') format('embedded-opentype'),
+			url('./font/zidingyi.woff') format('woff'),
+			url('./font/zidingyi.ttf') format('truetype'),
+			url('./font/zidingyi.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'zidingyi2';
+			src: url('./font/zidingyi2.eot');
+			src: url('./font/zidingyi2.eot?#font-spider') format('embedded-opentype'),
+			url('./font/zidingyi2.woff') format('woff'),
+			url('./font/zidingyi2.ttf') format('truetype'),
+			url('./font/zidingyi2.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		#cnzz_stat_icon_1263911903 {
+			display: none;
+		}
+
+	</style>
+	<script type="text/javascript" src="./static/jquery-3.2.1.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript" src='//mobile.51wnl.com/utils/wnlHistory/wnlHistoryPro.js'></script>
+	<div class="topBanner">
+		<a class="recordLink hidden" id="btnRecords" href="javascript:void(0)">我的测算</a>
+		<a href="javascript:void(0)" class="redirectLink"><span class="clickContent"></span></a>
+	</div>
+	<div class="dashiPic"><img src="./img/bzcs/dashi.jpg"></div>
+	<div class="main index_main">
+		<div class="inputContent">
+			<div class="inputLine nameConent">
+				<div class="titleContent">您的姓名</div>
+				<div class="controlContent"><input class="nameTxt" type="text" id="txtName" placeholder="点击输入" /></div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="inputLine birthContent">
+				<div class="titleContent">您的性别</div>
+				<div class="controlContent">
+					<div class="sexSelect manSexSelect">
+						<div class="sexIcon active"></div>
+						<div class="sexTxt">男</div>
+					</div>
+					<div class="sexSelect womanSexSelect">
+						<div class="sexIcon"></div>
+						<div class="sexTxt">女</div>
+					</div>
+				</div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="inputLine birthContent">
+				<div class="titleContent">出生日期</div>
+				<div class="controlContent wnl_dataPicker">
+					<input type="text" id="spBirthDate" placeholder="点击选择" readonly/>
+				</div>
+				<div class="arrowContent"></div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="inputLine timeContent">
+				<div class="titleContent">出生时间</div>
+				<div class="controlContent">
+					<div class="ui-select bornTime">
+						<select id="bornTime" class="select-border">
+                            <option value="12:00:00">不清楚出生时间</option>
+                            <option value="0:30:00">00:00-00:59</option>
+                            <option value="1:30:00">01:00-01:59</option>
+                            <option value="2:30:00">02:00-02:59</option>
+                            <option value="3:30:00">03:00-03:59</option>
+                            <option value="4:30:00">04:00-04:59</option>
+                            <option value="5:30:00">05:00-05:59</option>
+                            <option value="6:30:00">06:00-06:59</option>
+                            <option value="7:30:00">07:00-07:59</option>
+                            <option value="8:30:00">08:00-08:59</option>
+                            <option value="9:30:00">09:00-09:59</option>
+                            <option value="10:30:00">10:00-10:59</option>
+                            <option value="11:30:00">11:00-11:59</option>
+                            <option value="12:30:00">12:00-12:59</option>
+                            <option value="13:30:00">13:00-13:59</option>
+                            <option value="14:30:00">14:00-14:59</option>
+                            <option value="15:30:00">15:00-15:59</option>
+                            <option value="16:30:00">16:00-16:59</option>
+                            <option value="17:30:00">17:00-17:59</option>
+                            <option value="18:30:00">18:00-18:59</option>
+                            <option value="19:30:00">19:00-19:59</option>
+                            <option value="20:30:00">20:00-20:59</option>
+                            <option value="21:30:00">21:00-21:59</option>
+                            <option value="22:30:00">22:00-22:59</option>
+                            <option value="23:30:00">23:00-23:59</option>
+                        </select>
+					</div>
+				</div>
+				<div class="arrowContent"></div>
+				<div class="placeholder"></div>
+			</div>
+		</div>
+		<a class="confirmBtn" id="btnMeasure" href="javascript:void(0)" onclick="_czc.push(['_trackEvent', 'start_cs.C', 'bzcs_index+click+start_cs'],'','',1);">
+			<div class="titleTxt1">开始测算</div>
+			<div class="leftRadius1"></div>
+			<div class="rightRadius1"></div>
+		</a>
+		<div class="">
+			<div class="titleLeft">
+				<div class="lineTitle01"></div>
+				<div class="pointTitle01"></div>
+			</div>
+			<div class="titleContentBanner">最权威的专家团队</div>
+			<div class="titleRight">
+				<div class="pointTitle02"></div>
+				<div class="lineTitle02"></div>
+			</div>
+		</div>
+		<div class="expertTeamSwiper">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="swiperBGLeft"><img src="./img/bzcs/cs-master-dyq@3x.png"></div>
+						<div class="swiperBG">
+							<div class="swiperBGRight">
+								<div class="expertName">董易奇</div>
+								<div class="expertDesc">国际易经民俗文化专家，“易奇八字”App创始人，世界易经大会学术顾问。18岁被东南亚易学会授予“易学奇才”称号，22岁成为登上人民大会堂演说周易文化的国际易学代表。</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="swiperBGLeft"><img src="./img/bzcs/cs-master-zyh@3x.png"></div>
+						<div class="swiperBG">
+							<div class="swiperBGRight">
+								<div class="expertName">曾绎华</div>
+								<div class="expertDesc">八字命理、六爻、奇门预测专家。生于易学世家，自幼耳闻目睹，熟习传统传统命理理论，后师从多位港台名师，博取众家之长为己用。对命理学有近二十年的研究学习，实践累积了大量的实例，预测推算拥有极高的准确率。
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="swiperBGLeft"><img src="./img/bzcs/cs-master-ljh@3x.png"></div>
+						<div class="swiperBG">
+							<div class="swiperBGRight">
+								<div class="expertName">李俊辉</div>
+								<div class="expertDesc">自幼失明，但盲于目而不盲于心。研究八字命理多年，现从事四柱命理五行研究，专研六爻、命理预测、八字合婚、择吉日等。李俊辉先生对易经命理、五行八字的独到见解，得到业内的广泛认同，被誉为“盲派六爻八字神算师。</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<div class="bzcsResult">
+			<div class="titleLeft titleLeft01 titleLeft01know">
+				<div class="lineTitle01"></div>
+				<div class="pointTitle01"></div>
+			</div>
+			<div class="titleContentBanner titleContentBanner02">测算后您将知道</div>
+			<div class="titleRight titleRight01 titleRight01know">
+				<div class="pointTitle02"></div>
+				<div class="lineTitle02"></div>
+			</div>
+		</div>
+		<div class="bzcsResultDetail">
+			<div class="bzcsResultDetailContent">
+				<div class="bzcsResultLabel">
+					<div class="bzcsResultLabelContent">事业运势</div>
+				</div>
+				<div class="bzcsResultLabel">
+					<div class="bzcsResultLabelContent">爱情运势</div>
+				</div>
+				<div class="bzcsResultLabel">
+					<div class="bzcsResultLabelContent">财富运势</div>
+				</div>
+				<div class="bzcsResultLabel">
+					<div class="bzcsResultLabelContent">健康运势</div>
+				</div>
+				<div class="bzcsResultLabel">
+					<div class="bzcsResultLabelContent">人际关系</div>
+				</div>
+				<div class="bzcsResultLabel">
+					<div class="bzcsResultLabelContent">性情分析</div>
+				</div>
+				<div class="bzcsResultLabel">
+					<div class="bzcsResultLabelContent">喜神用神</div>
+				</div>
+				<div class="bzcsResultLabel">
+					<div class="bzcsResultLabelContent">开运秘诀</div>
+				</div>
+			</div>
+		</div>
+		<div class="bzcsFortune">
+			<div class="titleLeft titleLeft02">
+				<div class="lineTitle01 lineTitle01_03"></div>
+				<div class="pointTitle01"></div>
+			</div>
+			<div class="titleContentBanner titleContentBanner03">未来运势走向，提前预知</div>
+			<div class="titleRight titleRight02">
+				<div class="pointTitle02"></div>
+				<div class="lineTitle02 lineTitle02_03"></div>
+			</div>
+		</div>
+		<div class="bzcsFortuneDetail">
+			<div class="bzcsFortuneImg"><img src="./img/bzcs/cs-qxt-img@3x.png"></div>
+		</div>
+		<div class="bzcsFeedback">
+			<div class="titleLeft titleLeft03">
+				<div class="lineTitle01 lineTitle01_04"></div>
+				<div class="pointTitle01"></div>
+			</div>
+			<div class="titleContentBanner titleContentBanner04">看看测过的人怎么说</div>
+			<div class="titleRight titleRight03">
+				<div class="pointTitle02"></div>
+				<div class="lineTitle02 lineTitle02_04"></div>
+			</div>
+		</div>
+		<div class="bzcsTestNum"></div>
+		<div class="bzcsFeedbackContent">
+			<div class="marquee-top" id="marquee-top">
+			</div>
+		</div>
+		<div class="bzcsFeedbackContentBottom"></div>
+		<div class="bzcsLNYS">
+			<div class="titleLeft titleLeft01">
+				<div class="lineTitle01"></div>
+				<div class="pointTitle01"></div>
+			</div>
+			<div class="titleContentBanner titleContentBanner01">八字测算中的大运</div>
+			<div class="titleRight titleRight01">
+				<div class="pointTitle02"></div>
+				<div class="lineTitle02"></div>
+			</div>
+		</div>
+		<div class="bzcsLNYSDetail">
+			<div class="lnysContent">
+				<div class="lnysContentTitle">什么是大运？</div>
+				<div class="lnysContentDetail">古说“十年河东，十年河西”，人的大运十年一变，每一个大运，会与你的本命产生相生、相克的吉凶状况，影响你这十年的个性、情绪、心境、欲望、境遇好坏等，进而改变了你的事业发展、财富投资、爱情婚姻等运势，影响时间长而深远。所谓的大运，是指人一生中N个十年阶段的运势情况，起运时间依据八字中的月令、性别等信息而定，因此每个人起运年龄会有所不同。
+				</div>
+			</div>
+			<div class="lnysContentHr"></div>
+			<div class="lnysContent">
+				<div class="lnysContentTitle">为什么要批大运？</div>
+				<div class="lnysContentDetail">孔子在《论语》中提出人要“三知”,即“知命”、“知礼”、“知言”，而“知命”排在第一位。通过大运分析，可以纵观人生命运起伏，知悉事业、财富、爱情、健康等运势走向，为重大决策提供依据，帮助你妥善规划人生，知运转运，趋吉避凶。
+				</div>
+			</div>
+		</div>
+
+		<div class="promotionBanner hiddenIndex"></div>
+		<div class="contactLine">
+			<span class="contactTip">测算答疑: </span>
+			<span class="contactTxt">QQ 1254836806 &nbsp&nbsp&nbsp 电话 020-28965013</span>
+		</div>
+		<div class="bzcsBottomHr bzcsBottomHrCopyright hidden"></div>
+		<div class="copyright hidden"><span> Copyright © CALENDAR Tech. All Rights Reserved.</span></div>
+	</div>
+	<div class="bzcsBottomHr bzcsBottomHr01"></div>
+	<div class="wnlBanner">
+		<a class="closeBanner" href="javascript:void(0)"></a>
+		<div class="downloadBanner">
+			<div class="wnllogo"></div>
+			<div class="ad-title">
+				<div class="ad-t1">万年历</div>
+				<div class="ad-t2">看农历、选日子，测运势</div>
+			</div>
+		</div>
+		<a class="downloadBtn" href="javascript:void(0)">打开APP</a>
+	</div>
+	<div class="bottomSubmitFixed bottomSubmitFixedHidden" onclick="_czc.push(['_trackEvent', 'start_cs.C', 'bzcs_index+click+start_cs'],'','',2);">
+		<div class="submitBottom">开始测算</div>
+	</div>
+	<div class="mask hidden"></div>
+	<div class="circleMask hidden">
+		<div class="circleMaskBackground"></div>
+		<div class="circleMaskContent"></div>
+		<div class="circleMaskImage"></div>
+	</div>
+	<div>
+		<div id="toast"></div>
+		<span id="toast1"></span>
+	</div>
+	<script type="text/javascript" src="//mobile.51wnl.com/utils/in-view/dist/in-view.min.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+	<script type="text/javascript" src="./static/base64.min.js"></script>
+	<script type="text/javascript" src="./static/underscore-min.js"></script>
+	<script type="text/javascript" src="./static/jquery.marquee.js"></script>
+	<script type="text/javascript" src="./static/feedback.js"></script>
+	<script type="text/javascript" src="./mobiscroll/mobiscroll-2.14.4-crack.js"></script>
+	<script type="text/javascript" src="./mobiscroll/i18n/mobiscroll.i18n.zh.js"></script>
+	<script type="text/javascript" src="./mobiscroll/mobiscroll.select.js"></script>
+	<script type="text/javascript" src="./mobiscroll/solar.js"></script>
+	<script type="text/javascript" src="./static/swiper-3.4.2.jquery.min.js"></script>
+
+	<script>
+		var title = '八字测算详批';
+		var text = '我在万年历做的八字测算，好准，你也来看看？';
+		var imageURL = 'https://qiniu.image.cq-wnl.com/content/20170824c4936b61b83049028cd8ef95484b8903.jpg';
+		var textObj = {
+			title: title,
+			text: text,
+			image: '0',
+			imageURL: imageURL,
+			url: location.href,
+			pureText: text,
+			prefix: ''
+		};
+		var textObj1 = {
+			title: title,
+			text: text,
+			image: '0',
+			imageURL: imageURL,
+			targetUrl: location.href,
+			perfix: ''
+		};
+
+		function appCallback_share() {
+			try {
+				if (window.ylwindow) {
+					ylwindow.reportHasShare(true);
+					location.href = 'protocol://share:' + encodeURI(JSON.stringify(textObj1));
+				}
+				else {
+					location.href = 'protocol://share#' + encodeURI(JSON.stringify(textObj));
+				}
+			}
+			catch (e) {
+				console.log(e);
+			}
+			return 1;
+		}
+
+		function ylappCallback_back() {
+			if (isExist !== null) {
+				return 0;
+			}
+			location.href = 'protocol://exit';
+			if (window.ylwindow) {
+				ylwindow.reportHasBack(true);
+			}
+			return 1;
+		}
+
+	</script>
+	<script>
+		$('.marquee-top').marquee();
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE lang="en">
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+	/>
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="copyright" content="Copyright (c) 51wnl.com" />
+	<meta name="description" content="万年历" />
+	<meta name="keywords" content="万年历" />
+	<title>子女运势</title>
+	<link rel="stylesheet" href="./css/home-result.css">
+</head>
+
+<body>
+	<div class="homeResultShow">
+		<div class="header-section">
+			<div class="header-section-title" id="headerSectionTitle"></div>
+		</div>
+		<div class="infoContent-section">
+			<div class="infoContent-section-innner">
+				<div class="infoForm">
+					<div class="infoContent-section-title">
+						<div class="infoContent-left clear">
+							<div class="titleName" id="yourName"></div>
+							<div class="titleLabel">的专属成长卡片</div>
+						</div>
+						<div class="cornerImg01">
+							<img src="./img/triangle-yellow.png">
+						</div>
+						<div class="infoContent-right clear">
+							<div class="xingzuoPic">
+								<img src="" id="xingzuoPic">
+							</div>
+							<div class="shengxiao" id="shengxiao"></div>
+							<div class="">
+								<div class="characterLebal characterLebal01" id="characterLebal01"></div>
+								<div class="characterLebal characterLebal02" id="characterLebal02"></div>
+								<div class="characterLebal characterLebal03" id="characterLebal03"></div>
+							</div>
+						</div>
+					</div>
+					<div class="infoContent-user">
+						<div class="birthDate">
+							<label class="userInfoLabel">出生日期</label>
+							<div class="birthDateContent" id="yourBirthDay"></div>
+						</div>
+						<hr>
+						<div class="birthPlace">
+							<label class="userInfoLabel">出生地点</label>
+							<div class="birthPlaceContent" id="yourBirthPlace"></div>
+						</div>
+					</div>
+					<div class="character-section">
+						<div class="characterLabe clear">相似命格</div>
+						<div class="cornerImg02">
+							<img src="./img/triangle-blue.png">
+						</div>
+						<div class="characterContent clear" id="characterContent"></div>
+					</div>
+					<div class="horizontalLine"></div>
+					<div class="education-section">
+						<div class="educationLable clear">适合教育方式</div>
+						<div class="cornerImg03">
+							<img src="./img/triangle-green.png">
+						</div>
+						<div class="educationContent clear">
+							<div class="ways">
+								<span class="constraints">约束式</span>
+								<div class="proportion">
+									<div class="value" id="value01"></div>
+								</div>
+								<span class="freestyle">自由式</span>
+							</div>
+							<div class="educationContentDeatil" id="educationContentDeatil"></div>
+						</div>
+					</div>
+					<div class="horizontalLine"></div>
+					<div class="goAbroad-section">
+						<div class="goAbroadLable clear">出国可能性</div>
+						<div class="cornerImg04">
+							<img src="./img/triangle-green.png">
+						</div>
+						<div class="goAbroadContent clear">
+							<div class="ways">
+								<span class="constraints">约束式</span>
+								<div class="proportion">
+									<div class="value" id="value02"></div>
+								</div>
+								<span class="freestyle">自由式</span>
+							</div>
+							<div class="goAbroadContentDeatil" id="goAbroadContentDeatil"></div>
+						</div>
+					</div>
+					<div class="horizontalLine"></div>
+					<div class="employment-section">
+						<div class="employmentLabe clear">适合就业方向</div>
+						<div class="employmentContentDetail clear" id="employmentContentDetail"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="other-section">
+			<div class="detailSection">
+				<div class="personality-section">
+					<div class="personalityLabel clear">个性解读</div>
+					<div class="cornerImg05">
+						<img src="./img/triangle-blue.png">
+					</div>
+					<div class="neizai clear">
+						<div class="personalityLabel01">内在</div>
+						<div class="personalityContent01" id="personalityContent01">内在方面比较务实，对现实有很高的要求，并且会通过计划来达成，有时候还会显得有点按部就班，缺乏一点随机应变的能力。</div>
+					</div>
+					<div class="waizai clear">
+						<div class="personalityLabel02">外在</div>
+						<div class="personalityContent02" id="personalityContent02">表面看起来安静、低调，做事情也是慢吞吞的，给人踏实和诚恳的感觉；但是有时候慢条斯理会让急性子的人对你产生不耐烦的情况。</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="detailSection">
+				<div class="parents-section">
+					<div class="parentsLabel clear">父母缘分</div>
+					<div class="cornerImg05">
+						<img src="./img/triangle-blue.png">
+					</div>
+					<div class="parentsContent clear" id="parentsContent">孩子的母亲可能是比较大大咧咧、口直心快的，爱比较别人家的孩子；另一种可能是让孩子随性发展，对孩子的培养不会花很多时间的母亲；这样都会让孩子形成早熟和敏感的性格，这种性格很会照顾别人，像个小大人一样，但其实内心也有柔弱的一面，因为孩子内心也希望收到别人的关注和照顾。</div>
+				</div>
+			</div>
+
+			<div class="detailSection">
+				<div class="abroad-section detaiSection01">
+					<div class="teachLabel clear detaiSection02">教育方式</div>
+					<div class="cornerImg05">
+						<img src="./img/triangle-blue.png">
+					</div>
+					<div class="teachContent clear detaiSection03" id="teachContent">孩子头脑冷静超然，理性客观。他们擅长智力活动和抽象思维。沟通上会有别具一格的方式，跳跃性很强，主题会随时切换，想法超乎寻常，不受传统牵绊，会接受新鲜的实验性方法。偶尔想法标新立异，思维抽象会在情感表达上可能会冷静和疏离，给父母有点冷淡的感觉。</div>
+				</div>
+			</div>
+
+			<div class="detailSection">
+				<div class="study-section detaiSection01">
+					<div class="studyLabel clear detaiSection02">学业深造</div>
+					<div class="cornerImg05">
+						<img src="./img/triangle-blue.png">
+					</div>
+					<div class="studyContent clear detaiSection03" id="studyContent">孩子可能对语言、写作、出版与演讲有天分。十分热衷于探索生命的意义、接触各种不同的人，而且认同世界就是一个地球村的概念。对精神层面及高等教育比较注重，尽可能追求更高等的学问，有很高的动力意愿，想要往自己理想的学术继续的钻研下去。</div>
+				</div>
+			</div>
+
+			<div class="detailSection">
+				<div class="abroad-section detaiSection01">
+					<div class="abroadLabel clear detaiSection02">出国机会</div>
+					<div class="cornerImg05">
+						<img src="./img/triangle-blue.png">
+					</div>
+					<div class="abroadContent clear detaiSection03" id="abroadContent">孩子对于国外的东西和事物，会比较有明显的认同感，很容易沉醉在跟外国有关系的事物上，接受度比较高，而且对于学习外文以及国外相关的东西，学习能力会比较高，短期的国外旅行或长期地生活在国外，都是有可能的，所以出国的机会会比较高。</div>
+				</div>
+			</div>
+
+			<div class="detailSection">
+				<div class="grandmaster-section detaiSection01">
+					<div class="grandmasterLabel clear detaiSection02">大师叮嘱</div>
+					<div class="cornerImg05">
+						<img src="./img/triangle-blue.png">
+					</div>
+					<div class="grandmasterContent clear detaiSection03" id="grandmasterContent">孩子从小思考问题就很深入，并且对人性方面特别感兴趣，适合心理学方面的研究，原因是他们与生俱来就一种深谋远虑，渴望挖掘到最深层的知识和原因，适合去探索未知和好奇的领域；另外，孩子的洞察力和感知能力也很强，可以说做很多事情只要用心就能很不错，所以说家长没有必要管得太严而压抑了孩子。</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-banner"></div>
+		<div class="copyright">Copyright © 2013-2017 &nbsp;&nbsp;万年历</div>
+		<div class="iphoneXAdaptation"></div>
+	</div>
+	<!-- <script type="text/javascript" src="./static/wnl_redpackage.js"></script> -->
+	<script type="text/javascript" src="//mobile.51wnl.com/numberology/redpackage/js/wnl_redpackage.1.0.5.js"></script>
+	<script type="text/javascript" src="./static/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="./js/wnlui.js"></script>
+	<script type="text/javascript" src="./js/home-result.js"></script>
+	<!--分享  -->
+	<script>
+		function funcUrlDel(name) {
+			var loca = window.location;
+			var baseUrl = loca.origin + loca.pathname + "?";
+			var query = loca.search.substr(1);
+			if (query.indexOf(name) > -1) {
+				var obj = {}
+				var arr = query.split("&");
+				for (var i = 0; i < arr.length; i++) {
+					arr[i] = arr[i].split("=");
+					obj[arr[i][0]] = arr[i][1];
+				};
+				delete obj[name];
+				var url = baseUrl + JSON.stringify(obj).replace(/[\"\{\}]/g, "").replace(/\:/g, "=").replace(/\,/g, "&");
+				return url
+			};
+		};
+
+		var title = "天下没有教育不好的孩子？";
+		var localUrl = funcUrlDel('orderId').replace('home-result', 'index');
+		var text = "只有不会教育孩子的家长！";
+		var imgUrl = "https://qiniu.image.cq-wnl.com/content/20170803268fb3b8362d40bdaaf28c7a31cdfe21.jpg";
+		var textObj = {
+			title: title,
+			text: title,
+			image: '0',
+			imageURL: imgUrl,
+			url: localUrl,
+			pureText: text,
+			prefix: ""
+		};
+		var textObj1 = {
+			title: title,
+			text: text,
+			image: '0',
+			imageURL: imgUrl,
+			targetUrl: localUrl,
+			perfix: ""
+		};
+		weChatShare.wxShare({
+		  title: '星盘子女运',
+		  text: '我在万年历看【星盘子女运】，分享给你，一起看吧！',
+		  imgUrl: imgUrl,
+		  imageUrl: imgUrl,
+		  url: localUrl
+		});
+
+		function appCallback_share() {
+			try {
+				if (window.ylwindow) {
+					ylwindow.reportHasShare(true);
+					location.href = "protocol://share:" + encodeURI(JSON.stringify(textObj1));
+				} else {
+					location.href = "protocol://share#" + encodeURI(JSON.stringify(textObj));
+				}
+			} catch (e) {}
+			return 1;
+		}
+
+	</script>
+</body>
+
+</html>

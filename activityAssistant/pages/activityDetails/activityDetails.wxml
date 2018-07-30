@@ -1,0 +1,118 @@
+<!--pages/activityDetails/activityDetails.wxml-->
+<import src='../toast/toast.wxml' />
+<template is='toast' data='{{..._toast_}}' />
+<view class='content' style='position:{{fixed}}'>
+  <view class='activitydetail'>
+    <view class='activitytype'>{{status}}</view>
+      <view class='accontent'>
+        <view class='activityphoto'>
+          <view class='activitypic' style='background-image:url("{{bgimg}}")'>
+            <image src='../../img/crown-icon@2x.png' class='crownicon' wx:if='{{showcrown}}'></image>
+          </view>
+          <text class='activityusername'>{{bgname}}</text>
+        </view>
+        <view class='activitytime'><text wx:if='{{year}}'>{{year}}年</text>{{sdate}}月{{sday}}日 {{sweekday}} {{shm}}</view>
+        <view class='activityname'>{{acname}}</view>
+        <view class='activityaddr' wx:if='{{acaddr}}'>地点：<text class='addrtext'>{{acaddr}}</text></view>
+        <view class='spend' wx:if='{{cost}}'><text class='spendcolor'>花费</text>：人均 ￥{{cost}}元</view>
+        <view class='tip' wx:if='{{actip}}'>备注：{{actip}}</view>
+
+        <!--参与者  -->
+        <view wx:if='{{hasjoin}}'>
+          <view class='line'></view>          
+          <view class='join'>
+            <view class='bmcount'>已报名 {{bmcount}} 人：</view>
+            <view class='scan' wx:if='{{bmcount > 9}}' bindtap='lookusers' >
+              <text>查看所有报名</text>
+              <image src='../../img/more-icon@2x.png'></image>
+            </view>
+          </view>
+          <view class='joiner'>
+            <view class='joinerinfo' wx:for='{{joiners}}' wx:key='item'>
+              <!-- <image class='joinerinfo-headimg' src='http://iph.href.lu/40x40'></image>  -->
+              <image class='joinerinfo-headimg' src='{{item.joinerAvatarUrl}}'></image>             
+              <view class='joinerinfo-name'>{{item.joinerNickName}}</view>
+            </view>
+            <button class='joinerinfo add' open-type="share" wx:if='{{accancel}}'>
+              <image class='joinerinfo-headimg addimg' src='../../img/add-icon@2x.png'></image>
+            </button>
+          </view>
+        </view>
+
+        <!--未报名显示提示  -->
+        <view wx:if='{{notsign}}'>
+          <view class='tipline'></view>
+          <view class='signtip'>未报名无法查看参与者</view>
+        </view>
+      </view>
+  </view>
+
+  <!--创建者显示（活动未开始）  -->
+     <view class='functab' wx:if='{{iscreate}}'>   
+    <!-- <view class='functab'>     -->
+      <view class='acmanage' bindtap='acclick'>活动管理</view>
+      <view class='acspend' bindtap='spendclick'>活动账本</view>
+      <view class='mask' wx:if='{{maskshow}}' bindtap='maskclick'></view>
+      <view class='masktab' wx:if='{{maskshow}}'>
+          <view class='maskitem' bindtap='stopsign' wx:if='{{stopstatus}}'>截止报名</view> 
+          <view class='maskitem' bindtap='updateinfo'>修改活动</view>
+          <view class='maskitem last' bindtap='cancelactivity'>取消活动</view>
+      </view>
+    </view>
+    <!--点击截止报名弹窗  -->
+  <view wx:if='{{stopclick}}'>
+    <view class='stopmask' bindtap='closestopmask'></view>
+    <view class='stopcontent'>
+      <view class='stoptip'>您将截止该活动报名</view>
+      <view class='stoptext'>截止后不能再继续报名</view>
+      <view class='stopbtn'>
+        <view class='stopcomfirm' bindtap='stopcomfirm'>确认截止</view>
+        <view class='stopcancel' bindtap='closestopmask'>取消</view>      
+      </view>
+    </view>
+  </view>
+  <!--点击取消报名弹窗  -->
+  <view wx:if='{{qxclick}}'>
+    <view class='qxmask' bindtap='closeqxmask'></view>
+    <view class='qxcontent'>
+      <view class='qxtip'>您将取消该活动</view>
+      <view class='qxtext'>活动被取消后不能恢复</view>
+      <view class='qxbtn'>
+        <view class='qxcomfirm' bindtap='qxcomfirm'>确认取消</view>
+        <view class='qxcancel' bindtap='closeqxmask'>不取消</view>      
+      </view>
+    </view>
+  </view>
+
+  <!--创建者显示（活动正在进行）  -->
+   <view class='actab' wx:if='{{isbegin}}'> 
+  <!-- <view class='actab'>   -->
+    <view class='advance' bindtap='advance'>提前完成活动</view>
+    <view class='acspend' bindtap='spendclick'>活动账本</view>    
+  </view>
+  <!--点击提前完成活动弹窗  -->
+    <view wx:if='{{tqclick}}'> 
+      <view class='tqmask' bindtap='closetqmask'></view>
+      <view class='tqcontent'>
+        <view class='tqtip'>您将提前完成活动</view>
+        <view class='tqtext'>完成后您仍可以编辑账本</view>
+        <view class='tqbtn'>
+          <view class='tqcomfirm' bindtap='tqcomfirm'>确认</view>
+          <view class='tqcancel' bindtap='closetqmask'>取消</view>      
+        </view>
+      </view>
+    </view>
+
+    <!--创建者（活动已完成）  -->
+    <view class='acspendfinish' bindtap='spendclick' wx:if='{{isfinish}}'>活动账本</view>
+
+  <!--报名参与者显示  -->
+    <view class='cancel' wx:if='{{sign_1}}' bindtap='cancelsign'>取消报名</view>  
+
+  <!--未报名参与者显示  -->
+  <form bindsubmit='sign' report-submit='true'>
+     <!-- <view class='sign' wx:if='{{sign_0}}' bindtap='sign'>报名</view>    -->
+     <button class='sign' wx:if='{{sign_0}}' formType="submit">报名</button>       
+  </form>
+</view>
+

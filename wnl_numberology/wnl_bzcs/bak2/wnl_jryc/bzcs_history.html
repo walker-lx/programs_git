@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>测算历史</title>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="./css/bzcs.css?v=1.2">
+    <script type="text/javascript" src="./scripts/jquery-fastclick.min.js"></script>
+    <script type="text/javascript" src="./scripts/underscore-min.js"></script>
+    <script type="text/javascript" src="./scripts/modal.js"></script>
+    <script type="text/javascript" src="scripts/bzcs_history.js?v=1.2"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8e0b53b1de7438bdfa7a36b7a4a9ee61";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="noneItem hidden" style="margin-top: 50px;text-align: center">暂无测算历史</div>
+        <div class="infoContainer" id="dvHistory"></div>
+    </div>
+    <div class="fixedEditContent">
+        <div class="editContent">
+            <a class="editBtn" href="javascript:void(0)">编辑</a>
+        </div>
+        <div class="operateContent hidden">
+            <div class="operateBtnList">
+                <a class="cancelBtn" href="javascript:void(0)">取消</a>
+                <a class="allBtn" href="javascript:void(0)">全选</a>
+                <a class="deleteBtn" href="javascript:void(0)">删除</a>
+            </div>
+        </div>
+    </div>
+    <div id="deleteConfirModal" class="modal hide fade modaliOSStyle doubleBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <div class="deleteString">确定删除所选内容?</div>
+        </div>
+        <div class="modal-footer">
+            <button id="cancelDelete" data-dismiss="modal" aria-hidden="true" class="btn">取消</button>
+            <button id="confirmDelete" data-dismiss="modal" aria-hidden="true" class="btn">确定</button>
+        </div>
+    </div>
+    <div id="tipModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <div class="showString deleteString"></div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn dismissBtn" data-dismiss="modal" aria-hidden="true">确定</button>
+        </div>
+    </div>
+</body>
+
+</html>

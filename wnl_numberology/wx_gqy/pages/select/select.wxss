@@ -1,0 +1,78 @@
+/* pages/select/select.wxss */
+@import '../../assets/image.wxss';
+
+.select {
+  background-color: #fff1fe;
+  padding-top: 88rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  margin-bottom: 65rpx;
+  text-align: center;
+  color: #afa3b1;
+}
+
+.select-col-card {
+  float: left;
+  width: 25%;
+}
+
+.select-col-card:first-child, .select-col-card:last-child {
+  margin-top: 18%;
+}
+
+.select-card {
+  width: 128rpx;
+  height: 220rpx;
+  background-size: 100%;
+  position: relative;
+  margin: 0 auto;
+  transform-style: preserve-3d !important;
+  border-radius: 3rpx;
+}
+
+.select-card-p {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 0;
+  top: 0;
+  border-radius: 12rpx;
+  overflow: hidden;
+  box-shadow: 0px 2px 6px 2px #e0c6ce;
+}
+
+.select-card:not(:first-child) {
+  margin-top: 10rpx;
+}
+
+.select-card.checked {
+  transition: all 2s ease;
+  opacity: 0;
+}
+
+.select-card.active {
+  transform: rotateY(-180deg);
+  transition: all 2.4s ease;
+  opacity: 1 !important;
+}
+
+.select-card-n {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  border-radius: 0.3rem;
+}
+
+.select-card-n image {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,11 @@
+{
+	"usingComponents": {
+		"date-picker": "../components/datePicker/datePicker"
+	},
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "生命灵数",
+		"navigationBarTextStyle": "black"
+	}
+}

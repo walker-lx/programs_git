@@ -1,0 +1,7 @@
+<!--pages/pay/pay.wxml-->
+<view class='moneyIcon'>
+  <image class="shape" src="../../img/shape@3x.png"></image>
+</view>
+<view class="orderName">{{orderName}}</view>
+<button class="payBtn" type='primary' bindtap='pay'>支付金额:￥78</button>
+<view class="cancelPay" bindtap='cancelPay'>取消支付</view>

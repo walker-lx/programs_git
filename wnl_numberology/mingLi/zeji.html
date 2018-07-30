@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>择吉</title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=320px, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<a class="wnlBannerLink hidden" href="javascript:void(0)">
+    <div class="downIcon"></div>
+    <div class="downTxt">
+        <div class="txtContainer">
+            <div class="txtWrapper">
+                <img class="downTxtImg" src="img/AD-ww08@3x.png" alt="万年历下载">
+            </div>
+        </div>
+    </div>
+    <div class="downBtnImg"></div>
+</a>
+    <div class="top">
+        <a href="javascript:void(0)" class="backBtn1"></a>
+        <div class="title1">填写信息</div>
+    </div>
+    <div class="main">
+        <div class="mainContent">
+            <div class="descTitle">
+                <span class="leftDesc">基本信息</span>
+                <span class="rightDesc">请确保信息的真实性</span>
+            </div>
+            <div class="inputContent">
+                <input type="text" class="contactNameTxt" placeholder="联系人"/>
+            </div>
+            <div class="inputContent">
+                <input type="text" class="contactTelTxt" placeholder="联系电话"/>
+            </div>
+            <div class="descTitle">
+                <span class="leftDesc">指定吉日范围</span>
+            </div>
+            <div class="ui-select beginRangeDateUISelect">
+                <span>开始日期</span>
+            </div>
+            <div class="ui-select endRangeDateUISelect">
+                <span>结束日期</span>
+            </div>
+            <div class="borderContent"></div>
+            <div class="zejiCatgory">
+                <input type="button" class="qiaoqianBtn active"/>
+                <input type="button" class="kaizhangBtn"/>
+            </div>
+            <div class="zejiCatgory">
+                <input type="button" class="chuxingBtn"/>
+                <input type="button" class="hehunBtn"/>
+            </div>
+            <div class="qiaoqianContent categoryContent">
+                <div class="descTitle bottomBorder">
+                    <span class="leftDesc purposeTxt">择吉/乔迁择日</span>
+                    <span class="rightDesc purposePrice">¥50</span>
+                </div>
+                <div class="descTitle">
+                    <span class="leftDesc">男主人信息</span>
+                </div>
+                <div class="inputContent">
+                    <input class="qiaoqianMaleNameTxt" type="text" placeholder="姓名"/>
+                </div>
+                <div class="inputContent">
+                    <div class="ui-select qiaoqianMaleBornDateUISelect">
+                        <span>出生日期</span>
+                    </div>
+                    <div class="ui-select qiaoqianMaleBornTimeUISelect">
+                        <span>时间</span>
+                        <select name="select-native"  class="qiaoqianMaleBornTimeSelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="descTitle">
+                    <span class="leftDesc">女主人信息</span>
+                </div>
+                <div class="inputContent">
+                    <input class="qiaoqianFemaleNameTxt" type="text" placeholder="姓名"/>
+                </div>
+                <div class="inputContent">
+                    <div class="ui-select qiaoqianFemaleBornDateUISelect">
+                        <span>出生日期</span>
+                    </div>
+                    <div class="ui-select qiaoqianFemaleBornTimeUISelect">
+                        <span>时间</span>
+                        <select name="select-native"  class="qiaoqianFemaleBornTimeSelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputContent">
+                    <input class="zuoxiangTxt" type="text" placeholder="宅屋坐向（如：坐南朝北）"/>
+                </div>
+                <textarea class="familyBornTimeTxa" placeholder="其他家庭成员生辰信息" placeholdernl>
+其他家庭成员生辰信息
+提示：儿子，张三，男，公历1993年1月1日16时
+                </textarea>
+            </div>
+            <div class="kaizhangContent categoryContent hidden">
+                <div class="descTitle bottomBorder">
+                    <span class="leftDesc purposeTxt">择吉/公司开张</span>
+                    <span class="rightDesc purposePrice">¥188</span>
+                </div>
+                <div class="descTitle">
+                    <span class="leftDesc">主营业者信息</span>
+                </div>
+                <div class="inputContent">
+                    <input class="kaizhangNameTxt" type="text" placeholder="姓名"/>
+                    <div class="ui-select kaizhangSexUISelect">
+                        <span>性别</span>
+                        <select name="select-native"  class="kaizhangSexSelect">
+                            <option value="-1">请选择</option>
+                            <option value="0">男</option>
+                            <option value="1">女</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputContent">
+                    <div class="ui-select kaizhangBornDateUISelect">
+                        <span>出生日期</span>
+                    </div>
+                    <div class="ui-select kaizhangBornTimeUISelect">
+                        <span>时间</span>
+                        <select name="select-native"  class="kaizhangBornTimeSelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputContent">
+                    <input class="gongsiZuoxiangTxt" type="text" placeholder="公司/商铺座向"/>
+                </div>
+                <textarea class="partnerBornTimeTxa" placeholder="其他合作人生辰资料" placeholdernl>
+其他合作人生辰资料
+提示 如：某某，张三，男，公历1993年1月1日16时
+                </textarea>
+            </div>
+            <div class="chuxingContent categoryContent hidden">
+                <div class="descTitle bottomBorder">
+                    <span class="leftDesc purposeTxt">择吉/出行动身</span>
+                    <span class="rightDesc purposePrice">¥50</span>
+                </div>
+                <div class="descTitle">
+                    <span class="leftDesc">出行人信息</span>
+                </div>
+                <div class="inputContent">
+                    <input class="chuxingNameTxt" type="text" placeholder="姓名"/>
+                    <div class="ui-select chuxingSexUISelect">
+                        <span>性别</span>
+                        <select name="select-native"  class="chuxingSexSelect">
+                            <option value="-1">请选择</option>
+                            <option value="0">男</option>
+                            <option value="1">女</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputContent">
+                    <div class="ui-select chuxingBornDateUISelect">
+                        <span>出生日期</span>
+                    </div>
+                    <div class="ui-select chuxingBornTimeUISelect">
+                        <span>时间</span>
+                        <select name="select-native"  class="chuxingBornTimeSelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputContent">
+                    <div class="ui-select bornProvinceUISelect">
+                        <span>出生省份</span>
+                        <select name="select-native"  class="bornProvinceSelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                    <div class="ui-select bornCityUISelect">
+                        <span>出生城市</span>
+                        <select name="select-native"  class="bornCitySelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                    <div class="ui-select bornCountryUISelect">
+                        <span>出生区/县</span>
+                        <select name="select-native"  class="bornCountrySelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputContent">
+                    <input class="bornAddressTxt" type="text" placeholder="出生地详细地址"/>
+                </div>
+                <div class="inputContent">
+                    <div class="ui-select goProvinceUISelect">
+                        <span>出行省份</span>
+                        <select name="select-native"  class="goProvinceSelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                    <div class="ui-select goCityUISelect">
+                        <span>出行城市</span>
+                        <select name="select-native"  class="goCitySelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                    <div class="ui-select goCountryUISelect">
+                        <span>出行区/县</span>
+                        <select name="select-native"  class="goCountrySelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputContent">
+                    <input class="goAddressTxt" type="text" placeholder="出行地详细地址"/>
+                </div>
+            </div>
+            <div class="hehunContent categoryContent hidden">
+                <div class="descTitle bottomBorder">
+                    <span class="leftDesc purposeTxt">择吉/择吉结婚</span>
+                    <span class="rightDesc purposePrice">¥188</span>
+                </div>
+                <div class="descTitle">
+                    <span class="leftDesc">男方信息</span>
+                </div>
+                <div class="inputContent">
+                    <input class="hehunMaleNameTxt" type="text" placeholder="姓名"/>
+                    <!--<div class="ui-select hehunMaleSexUISelect">-->
+                        <!--<span>性别</span>-->
+                        <!--<select name="select-native"  class="hehunMaleSexSelect">-->
+                            <!--<option value="-1">请选择</option>-->
+                            <!--<option value="0">男</option>-->
+                            <!--<option value="1">女</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                </div>
+                <div class="inputContent">
+                    <div class="ui-select hehunMaleBornDateUISelect">
+                        <span>出生日期</span>
+                    </div>
+                    <div class="ui-select hehunMaleBornTimeUISelect">
+                        <span>时间</span>
+                        <select name="select-native"  class="hehunMaleBornTimeSelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputContent">
+                    <div class="ui-select hehunMaleBornProvinceUISelect">
+                        <span>出生省份</span>
+                        <select name="select-native"  class="hehunMaleBornProvinceSelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                    <div class="ui-select hehunMaleBornCityUISelect">
+                        <span>出生城市</span>
+                        <select name="select-native"  class="hehunMaleBornCitySelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                    <div class="ui-select hehunMaleBornCountryUISelect">
+                        <span>出生区/县</span>
+                        <select name="select-native"  class="hehunMaleBornCountrySelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputContent">
+                    <input class="hehunMaleBornAddressTxt" type="text" placeholder="出生地详细地址"/>
+                </div>
+                <div class="inputContent">
+                    <div class="ui-select hehunMaleFatherYearUISelect">
+                        <span>男方父亲生肖</span>
+                        <select name="select-native"  class="hehunMaleFatherYearSelect">
+                            <option value="-1">请选择</option>
+                            <option value="1">鼠</option>
+                            <option value="2">牛</option>
+                            <option value="3">虎</option>
+                            <option value="4">兔</option>
+                            <option value="5">龙</option>
+                            <option value="6">蛇</option>
+                            <option value="7">马</option>
+                            <option value="8">羊</option>
+                            <option value="9">猴</option>
+                            <option value="10">鸡</option>
+                            <option value="11">狗</option>
+                            <option value="12">猪</option>
+                        </select>
+                    </div>
+                    <div class="ui-select hehunMaleMotherYearUISelect">
+                        <span>男方母亲生肖</span>
+                        <select name="select-native"  class="hehunMaleMotherYearSelect">
+                            <option value="-1">请选择</option>
+                            <option value="1">鼠</option>
+                            <option value="2">牛</option>
+                            <option value="3">虎</option>
+                            <option value="4">兔</option>
+                            <option value="5">龙</option>
+                            <option value="6">蛇</option>
+                            <option value="7">马</option>
+                            <option value="8">羊</option>
+                            <option value="9">猴</option>
+                            <option value="10">鸡</option>
+                            <option value="11">狗</option>
+                            <option value="12">猪</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="descTitle">
+                    <span class="leftDesc">女方信息</span>
+                </div>
+                <div class="inputContent">
+                    <input class="hehunFeMaleNameTxt" type="text" placeholder="姓名"/>
+                    <!--<div class="ui-select hehunFeMaleSexUISelect">-->
+                        <!--<span>性别</span>-->
+                        <!--<select name="select-native"  class="hehunFeMaleSexSelect">-->
+                            <!--<option value="-1">请选择</option>-->
+                            <!--<option value="0">男</option>-->
+                            <!--<option value="1">女</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                </div>
+                <div class="inputContent">
+                    <div class="ui-select hehunFeMaleBornDateUISelect">
+                        <span>出生日期</span>
+                    </div>
+                    <div class="ui-select hehunFeMaleBornTimeUISelect">
+                        <span>时间</span>
+                        <select name="select-native"  class="hehunFeMaleBornTimeSelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputContent">
+                    <div class="ui-select hehunFeMaleBornProvinceUISelect">
+                        <span>出生省份</span>
+                        <select name="select-native"  class="hehunFeMaleBornProvinceSelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                    <div class="ui-select hehunFeMaleBornCityUISelect">
+                        <span>出生城市</span>
+                        <select name="select-native"  class="hehunFeMaleBornCitySelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                    <div class="ui-select hehunFeMaleBornCountryUISelect">
+                        <span>出生区/县</span>
+                        <select name="select-native"  class="hehunFeMaleBornCountrySelect">
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputContent">
+                    <input class="hehunFeMaleBornAddressTxt" type="text" placeholder="出生地详细地址"/>
+                </div>
+                <div class="inputContent">
+                    <div class="ui-select hehunFeMaleFatherYearUISelect">
+                        <span>女方父亲生肖</span>
+                        <select name="select-native"  class="hehunFeMaleFatherYearSelect">
+                            <option value="-1">请选择</option>
+                            <option value="1">鼠</option>
+                            <option value="2">牛</option>
+                            <option value="3">虎</option>
+                            <option value="4">兔</option>
+                            <option value="5">龙</option>
+                            <option value="6">蛇</option>
+                            <option value="7">马</option>
+                            <option value="8">羊</option>
+                            <option value="9">猴</option>
+                            <option value="10">鸡</option>
+                            <option value="11">狗</option>
+                            <option value="12">猪</option>
+                        </select>
+                    </div>
+                    <div class="ui-select hehunFeMaleMotherYearUISelect">
+                        <span>女方母亲生肖</span>
+                        <select name="select-native"  class="hehunFeMaleMotherYearSelect">
+                            <option value="-1">请选择</option>
+                            <option value="1">鼠</option>
+                            <option value="2">牛</option>
+                            <option value="3">虎</option>
+                            <option value="4">兔</option>
+                            <option value="5">龙</option>
+                            <option value="6">蛇</option>
+                            <option value="7">马</option>
+                            <option value="8">羊</option>
+                            <option value="9">猴</option>
+                            <option value="10">鸡</option>
+                            <option value="11">狗</option>
+                            <option value="12">猪</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <textarea class="otherRequestTxa" placeholder="其他要求"></textarea>
+        </div>
+        <div class="resultTip" style="font-size: 12px;color: #7d7d7d;width: 100%;text-align: center;margin: 10px 0 0">
+            订单提交后不可修改，请确认后提交
+        </div>
+        <div class="resultTip" style="font-size: 12px;color: #7d7d7d;width: 100%;text-align: center;margin: 0">
+            测算结果会在付款后三个工作日之内回复，请耐心等待
+        </div>
+        <input type="button" class="confirmBtn zejiConfirm" value="确定"/>
+    </div>
+    <div id="tipModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <div class="showString"></div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn dismissBtn" data-dismiss="modal" aria-hidden="true">确定</button>
+        </div>
+    </div>
+    <div id="datePickModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <div class="descTitle">
+                <span class="leftDesc">选择日期</span>
+                <div class="lunarSelectContent">
+                    <input class="lunarBtn" type="button" value="阴历"/>
+                    <input class="solarBtn active" type="button" value="阳历"/>
+                </div>
+            </div>
+            <div class="datePickContent">
+                <div class="sDateContent">
+                    <div class="ui-select sYearUISelect">
+                        <span class="selectTxt">年</span>
+                        <select name="select-native" class="sYearSelect"></select>
+                    </div>
+                    <div class="ui-select sMonthUISelect">
+                        <span class="selectTxt">月</span>
+                        <select name="select-native" class="sMonthSelect"></select>
+                    </div>
+                    <div class="ui-select sDayUISelect">
+                        <span class="selectTxt">日</span>
+                        <select name="select-native" class="sDaySelect"></select>
+                    </div>
+                </div>
+                <div class="lDateContent hidden">
+                    <div class="ui-select lYearUISelect">
+                        <span class="selectTxt">年</span>
+                        <select name="select-native" class="lYearSelect"></select>
+                    </div>
+                    <div class="ui-select lMonthUISelect">
+                        <span class="selectTxt">月</span>
+                        <select name="select-native" class="lMonthSelect"></select>
+                    </div>
+                    <div class="ui-select lDayUISelect">
+                        <span class="selectTxt">日</span>
+                        <select name="select-native" class="lDaySelect"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn dismissBtn pickConfirmBtn" data-dismiss="modal" aria-hidden="true">确定</button>
+        </div>
+    </div>
+    <div class="mask hidden"></div>
+    <script>
+        var title="万年历的在线命理很准的哦，小伙伴们也快来试一下";
+        var textObj = {
+            text: title,
+            image: "1",
+            url:location.href,
+            pureText:title,
+            prefix:""
+        };
+        var textObj1={
+            text: title,
+            image: "1",
+            targetUrl:location.href,
+            perfix:""
+        };
+        function appCallback_share(){
+            try{
+                if(window.ylwindow){
+                    ylwindow.reportHasShare(true);
+                    location.href="protocol://share:" + encodeURI(JSON.stringify(textObj1));
+                }
+                else{
+                    location.href="protocol://share#" + encodeURI(JSON.stringify(textObj));
+                }
+            }
+            catch (e){}
+            return 1;
+        }
+    </script>
+    <script type="text/javascript" src="js/jquery-fastclick.min.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/kernelCalendar.js"></script>
+    <script type="text/javascript" src="js/zeji.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!--pages/activityspend/activityspend.wxml-->
+<import src='../toast/toast.wxml' />
+<template is='toast' data='{{..._toast_}}' />
+<view class='content'>
+  <view class='top'>
+    <view class='title'>活动账本</view>
+    <view class='nospend' wx:if='{{nospend}}'>
+      <view class='tip'>贴心的活动记账助手~</view>
+    </view>
+    <!-- <view class='hasspend' wx:if='{{hasspend}}'> -->
+      <image class='totalimg' src='../../img/allpay-icon@2x.png' wx:if='{{hasspend}}'></image>
+      <view class='totalspend' wx:if='{{hasspend}}'>
+        <view class='totalcount'>￥{{totalspend}}</view>
+        <view class='spendedit' bindtap='edit' wx:if='{{showedit}}'>编辑</view>
+        <view class='cancel' wx:if='{{editclick}}' bindtap='close'>取消</view>
+        <view class='confirm' wx:if='{{editclick}}' bindtap='finish'>完成</view>
+      </view>
+      <view class='line' wx:if='{{hasspend}}'></view> 
+      <view class='spendlist' wx:if='{{hasspend}}'>
+        <view class='spenditem'>支出人</view>
+        <view class='spenditem'>支出事项</view>
+        <view class='spenditem'>支出金额</view>      
+      </view>   
+  </view>
+  <view class='hasspend' wx:if='{{hasspend}}'>        
+    <!--花费列表  -->
+    <view class='itemlist'>
+      <view wx:for='{{bill}}' wx:key='item'>
+        <view class='userspendlist'>
+          <view class='useritem' style='margin-left:{{spendleft}}'>
+            <view class='userorder' style='left:{{orderleft}}'>{{index + 1}}</view>
+              <view class='username'>{{item.spender}}</view>          
+          </view>
+          <view class='useritem'>{{item.spendItem}}</view>
+          <view class='useritem'>￥{{item.cost / 100}}</view>
+          <image src='../../img/delete2-icon@2x.png' class='delete' wx:if='{{editclick}}' bindtap='del' data-index='{{index + 1}}' data-id='{{item.id}}'></image>
+        </view>
+        <view class='itemline'></view>      
+      </view>
+    </view>
+    <view class='cal' bindtap='calc' style='opacity:{{opc}}'>马上结算</view>
+  </view>
+  <view wx:if='{{showmask}}'>    
+    <!-- <view>       -->
+    <view class='spendmask' bindtap='closemask'></view>
+    <view class='maskcont' style='top:{{margintop}}'>
+      <view class='title'>
+        <view>人均统计</view>
+        <image src='../../img/close-icon@2x.png' bindtap='closemask'></image>
+      </view>
+      <form bindsubmit='calcspend'>
+        <view class='input' style='border:{{borderstyle}}'>
+          <input name='countinput' type='number' placeholder='请输入实际参与人数' placeholder-style='font-size:30rpx;color:#777' bindfocus='focus' bindblur='blur' cursor='50' bindinput='costinput' value='{{costvalue}}'></input>
+        </view>
+        <view class='avg'>
+          <text>人均：</text>
+          <text class='showcount'>{{count / 100}}</text>
+        </view>
+        <button class='btn' formType="submit" disabled='{{dis}}'>确认</button>
+      </form>
+    </view>
+  </view> 
+  <view class='addspend' bindtap='sponsor'>
+    <view class='addtext'>添加</view>
+    <view>花费</view>
+  </view>
+</view>

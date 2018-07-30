@@ -1,0 +1,2 @@
+/* pages/result/miniresult.wxss */
+@import "./result.wxss";

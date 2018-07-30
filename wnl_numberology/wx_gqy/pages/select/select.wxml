@@ -1,0 +1,13 @@
+<view class="container select">
+  <view class="title">请从牌阵中任意选出1张牌，你的问题将得到指引</view>
+  <view class="select-card-list clearfix">
+    <view class="select-col-card" wx:for="{{cardList}}" wx:key="colIndex" wx:for-item="col" wx:for-index="colIndex">
+      <view class="select-card {{checked==true?'checked':''}} {{row.select==true?'active':''}}" wx:for="{{col}}" wx:for-item="row" wx:key="rowIndex" bindtap="selectCard" wx:for-index="rowIndex" data-colIndex="{{colIndex}}" data-rowIndex="{{rowIndex}}">
+        <view class="select-card-p card-image"></view>
+        <view class="select-card-n">
+          <image src="{{row.imgsrc}}" mode="scaleToFill"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

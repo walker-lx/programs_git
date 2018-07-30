@@ -1,0 +1,139 @@
+.result-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  .header-content {
+    position: relative;
+    margin: 0.34rem 0.2rem 0 0.2rem;
+    .avator1 {
+      position: absolute;
+      left: 10.5%;
+      top: 41.9%;
+      height: 1.4rem;
+      width: 1.4rem;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .avator2 {
+      position: absolute;
+      right: 10.5%;
+      top: 41.9%;
+      height: 1.4rem;
+      width: 1.4rem;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+  .result-detail {
+    margin: 0.32rem 0.2rem 0 0.2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: 100% 100%;
+    .yuanfen-content {
+      display: flex;
+      align-items: center;
+      height: 1.46rem;
+      margin: 0.35rem 0.25rem 0 0.25rem;
+      border-radius: 8px;
+      background-size: 100% 100%;
+      .desc {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        height: 0.43rem;
+        margin: 0 0.34rem 0 0.23rem;
+        .label,
+        .score {
+          font-size: 18px;
+          color: #fff;
+        }
+      }
+    }
+    .other-detail {
+      margin: 0.33rem 0.25rem 0 0.25rem;
+      .detail-item {
+        position: relative;
+        margin-bottom: 0.3rem;
+        border-radius: 8px;
+        overflow: hidden;
+        background-size: 100% 100%;
+        .item-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 0.46rem;
+          padding: 0.44rem 0.34rem 0 0.23rem;
+          line-height: 0.46rem;
+          .label {
+            font-size: 18px;
+            color: #fff;
+          }
+          .icon {
+            display: inline-block;
+            margin-left: -0.5rem;
+            vertical-align: middle;
+            text-align: center;
+            @media screen and (min-width: 320px) and (max-width: 359px) {
+              margin-left: -0.3rem;
+            }
+          }
+          .scoreDive {
+            height: 0.21rem;
+            width: 2.66rem;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            .scoreValue {
+              height: 100%;
+              width: 90%;
+              border-radius: 5px;
+            }
+          }
+          .score {
+            width: 1rem;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            @media screen and (min-width: 320px) and (max-width: 359px) {
+              width: 1.2rem;
+            }
+          }
+        }
+        .detail-content {
+          position: relative;
+          margin: 0.72rem 0.62rem 0.55rem 0.69rem;
+          line-height: 1.42;
+          font-size: 18px;
+          color: #fff;
+          text-align: justify;
+        }
+        .yh {
+          position: absolute;
+          width: 0.36rem;
+          height: 0.3rem;
+          top: 1.61rem;
+          left: 0.23rem;
+        }
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: space-between;
+    -webkit--moz-box-pack: space-between;
+    justify-content: space-between;
+    margin: 0.29rem auto 0.47rem auto;
+    padding: 0 20px;
+    .share,
+    .play-again {
+      width: 2.85rem;
+    }
+    .ewm {
+      width: 3.61rem;
+      margin: 0 auto;
+    }
+  }
+}

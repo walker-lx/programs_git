@@ -1,0 +1,26 @@
+<!--pages/createinfo/createinfo.wxml-->
+<view class='content'>
+<view class='activitydetail'>
+  <view class='activitytype'>正在报名</view>
+    <view class='accontent'>
+      <view class='activityphoto'>
+        <view class='activitypic' style='background-image:url("{{avatar}}")'>
+          <image src='../../img/crown-icon@2x.png' class='crownicon'></image>
+        </view>
+        <text class='activityusername'>{{nickname}}</text>
+      </view>
+      <view class='activitytime'>{{sdate}}月{{sday}}日 {{sweekday}} {{shm}}</view>
+      <view class='activityname'>{{acname}}</view>
+      <view class='activityaddr' wx:if='{{acaddr}}'>地点：<text class='addrtext'>{{acaddr}}</text></view>
+      <view class='spend' wx:if='{{cost}}'>花费：人均 ￥{{cost}}元</view>
+      <view class='tip' wx:if='{{actip}}'>备注：{{actip}}</view>
+      <view class='line'></view>
+      <view class='sign'>
+        <view class='bm'>已报名:</view>
+        <view class='sharetip'>立即分享邀请好友参与吧</view>
+      </view>
+    </view>
+  </view>
+  <button class='share' open-type="share">立即分享</button>
+</view>
+

@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>八字测算</title>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no"/>
+    <link  type="text/css" rel="stylesheet" href="mobiscroll/mobiscroll.custom-2.14.4.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="./css/bzcs.css?v=2.1">
+    <script>
+        // var _hmt = _hmt || [];
+        // (function() {
+        //     var hm = document.createElement("script");
+        //     hm.src = "//hm.baidu.com/hm.js?6967ce9e5ea5cb281f21abf82576c70e";
+        //     var s = document.getElementsByTagName("script")[0];
+        //     s.parentNode.insertBefore(hm, s);
+        // })();
+    </script>
+</head>
+<body>
+    <div class="topBanner">
+        <a class="recordLink" id="btnRecords" href="javascript:void(0)">我的测算</a>
+        <a href="javascript:void(0)" class="redirectLink"><span class="clickContent"></span></a>
+    </div>
+    <div class="main index_main">
+        <div class="inputContent">
+            <div class="inputLine nameConent">
+                <div class="titleContent">您的姓名</div>
+                <div class="controlContent"><input class="nameTxt" type="text" id="txtName" placeholder="点击输入"/></div>
+                <!--<div class="arrowContent"></div>-->
+                <div class="placeholder"></div>
+            </div>
+            <div class="inputLine birthContent">
+                <div class="titleContent">出生日期</div>
+                <div class="controlContent">
+                    <input type="text" id="spBirthDate" placeholder="点击选择"/>
+                </div>
+                <div class="arrowContent"></div>
+                <div class="placeholder"></div>
+            </div>
+            <div class="inputLine timeContent">
+                <div class="titleContent">出生时间</div>
+                <div class="controlContent">
+                    <div class="ui-select bornTime">
+                        <span class="bornTimeTxt">时间</span>
+                        <select name="select-native" id="ddlBirthHour">
+                            <!--<option value="-1">请选择</option>-->
+                            <option value="24">不清楚</option>
+                            <option value="00">0时</option>
+                            <option value="01">1时</option>
+                            <option value="02">2时</option>
+                            <option value="03">3时</option>
+                            <option value="04">4时</option>
+                            <option value="05">5时</option>
+                            <option value="06">6时</option>
+                            <option value="07">7时</option>
+                            <option value="08">8时</option>
+                            <option value="09">9时</option>
+                            <option value="10">10时</option>
+                            <option value="11">11时</option>
+                            <option value="12">12时</option>
+                            <option value="13">13时</option>
+                            <option value="14">14时</option>
+                            <option value="15">15时</option>
+                            <option value="16">16时</option>
+                            <option value="17">17时</option>
+                            <option value="18">18时</option>
+                            <option value="19">19时</option>
+                            <option value="20">20时</option>
+                            <option value="21">21时</option>
+                            <option value="22">22时</option>
+                            <option value="23">23时</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="arrowContent"></div>
+                <div class="placeholder"></div>
+            </div>
+            <div class="inputLine birthContent">
+                <div class="titleContent">您的性别</div>
+                <div class="controlContent">
+                    <div class="sexSelect manSexSelect">
+                        <div class="sexIcon active"></div>
+                        <div class="sexTxt">男</div>
+                    </div>
+                    <div class="sexSelect womanSexSelect">
+                        <div class="sexIcon"></div>
+                        <div class="sexTxt">女</div>
+                    </div>
+                </div>
+                <!--<div class="arrowContent"></div>-->
+                <div class="placeholder"></div>
+            </div>
+        </div>
+        <a class="confirmBtn" id="btnMeasure" href="javascript:void(0)">
+            <div class="titleTxt1">开始测算</div>
+            <div class="leftRadius1"></div>
+            <div class="rightRadius1"></div>
+        </a>
+        <div class="contactLine">
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+            <span class="contactTip">测算答疑: </span>
+            <span class="contactTxt">QQ 1254836806 &nbsp&nbsp&nbsp 电话 020-28965013</span>
+        </div>
+    </div>
+    <div class="descTitleContent">
+        <div class="descTitleIcon"></div>
+        <div class="descTitleTxt">八字测算包含以下内容</div>
+    </div>
+    <div class="descContent">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+        <div class="descTitle">流年运势分析：</div>
+        <div class="descTxt">流年即“一年的运程”，流年分析是对一年运程的分析。</div>
+        <div class="descTitle">流年动态：</div>
+        <div class="descTxt">从当年的流年利弊，分析一年的运程走向。</div>
+        <div class="descTitle">流年遇到的吉神、凶神：</div>
+        <div class="descTxt">人一生或一年的运程就如走路，吉神就是在路上遇到的车辆可以载你一程，凶神就如路上的石头或陷阱阻扰你前进的步伐。</div>
+        <div class="descTitle">现阶段“十年大运”分析：</div>
+        <div class="descTxt">人的大运十年一变，古说“十年河东，十年河西”，十年大运分析是对相对应的十年运程走势的一个总体大概的分析解说。 </div>
+        <div class="descTitle">现阶段“十年大运”特征：</div>
+        <div class="descTxt">也即是大运十神，十神的所属含义不同，分别代表运程中所遇之事，影响运势的好坏以及具体的事项。</div>
+        <div class="descTitle">现阶段“十年大运”起落：</div>
+        <div class="descTxt">将人的运程起落比作不同的道路，运起时如走“快速路、高速路”顺风顺水，运落时如走“烂泥路”磕磕碰碰，运势平平则为“普通路”。</div>
+        <div class="descTitle">现阶段“十年大运”吉凶转变：</div>
+        <div class="descTxt">运势由好变坏或由坏变好，对实际运势产生较大影响。</div>
+    </div>
+    <div class="yiqiDesc">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+        <div class="descLine">易奇八字专家团倾力打造 <a class="zhuanjiaLink" href="zhuanjia.html">查看专家团简介</a></div>
+    </div>
+    <!-- <a class="wnlBannerLink hidden" href="javascript:void(0)">
+        <div class="downIcon"></div>
+        <div class="downTxt">
+            <div class="txtContainer">
+                <div class="txtWrapper">
+                    <img class="downTxtImg" src="img/ad-ww@3x.png" alt="万年历下载">
+                </div>
+            </div>
+        </div>
+        <div class="downBtnImg"></div>
+    </a> -->
+    <div class="wnlBanner">
+        <a class="closeBanner" href="javascript:void(0)"></a>
+        <div class="wnllogo"></div>
+        <div class="ad-title">
+            <div class="ad-t1">万年历</div>
+            <div class="ad-t2">看农历、选日子，测运势</div>
+        </div>
+        <a class="downloadBtn" href="javascript:void(0)">打开APP</a>
+    </div>
+
+    <div class="mask hidden"></div>
+    <div id="tipModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <div class="showString"></div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn dismissBtn" data-dismiss="modal" aria-hidden="true">确定</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="./scripts/vc.js"></script>
+
+    <script type="text/javascript" src="./scripts/jquery-fastclick.min.js"></script>
+    <script type="text/javascript" src="./scripts/modal.js"></script>
+    <script type="text/javascript" src="./mobiscroll/mobiscroll-2.14.4-crack.js"></script>
+    <script type="text/javascript" src="./mobiscroll/i18n/mobiscroll.i18n.zh.js"></script>
+    <script type="text/javascript" src="./mobiscroll/solar.js"></script>
+    <script type="text/javascript" src="./scripts/base64.min.js"></script>
+    <script type="text/javascript" src="./scripts/bzcs_index.js?v=2.3"></script>
+    <script type="text/javascript" src="./scripts/wnlHistory.js"></script>
+
+    <!--<a class="testLink" href="http://zj.ios.ijinshan.com/wnl/jp"><span id="clickConent"></span></a>-->
+</body>
+</html>

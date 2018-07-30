@@ -1,0 +1,20 @@
+.main{
+    width: 640px;
+    margin: 0 auto;
+}
+.bannerContent{
+    width: 580px;
+}
+.mainContent{
+    width: 580px;
+}
+.username{
+    max-width:400px;
+}
+
+
+.txtContent{
+    top: 140px;
+    left: 60px;
+    right: 60px;
+}

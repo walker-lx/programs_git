@@ -1,0 +1,7 @@
+dist/*
+build/*
+config/*
+dll/*
+src/static/*
+node_modules/*
+.eslintcache

@@ -1,0 +1,24 @@
+/*声明 WebFont*/
+
+
+/* @font-face {
+  font-family: 'DFLiSong-Md-WIN-BF';
+  src: url('DFLiSong-Md-WIN-BF.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font{
+  font-family: 'DFLiSong-Md-WIN-BF';
+} */
+
+@font-face {
+    font-family: 'labatext';
+    src: url('labatext.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font {
+    font-family: 'labatext';
+}

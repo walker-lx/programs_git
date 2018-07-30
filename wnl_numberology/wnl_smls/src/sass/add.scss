@@ -1,0 +1,40 @@
+@import '../css/base.scss';
+
+.tip {
+    position: fixed;
+    bottom: -30px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
+    transition: all .3s;
+    z-index: 510;
+    &.slide {
+        bottom: 318px;
+    }
+}
+.addactive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .1);
+}
+.active {
+    color: #D6D3D0;
+}
+input {
+    @media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 360px) {
+        padding-top: 3px;                            
+    }
+}
+input::-webkit-input-placeholder {
+    color: #D6D3D0;
+    font-size: 17px;
+}

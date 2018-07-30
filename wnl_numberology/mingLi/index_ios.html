@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>更多命理测算</title>
+	<meta name="description" content="">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width,user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta http-equiv="cleartype" content="on">
+
+	<!-- Add to homescreen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="万年历">
+	<meta name="format-detection" content="telephone=no">
+	<style>
+		body,
+		html {
+			font-family: -apple-system, "苹方-简", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", sans-serif;
+		}
+		body {
+			padding: 0 !important;
+			margin: 0 !important;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			-webkit-text-size-adjust: none;
+			-webkit-overflow-scrolling: touch;
+			-webkit-focus-ring-color: rgba(0, 0, 0, 0);
+			outline: none;
+			background-color: #fff9f1;
+		}
+		.dayunTitle1 {
+			position: relative;
+			height: 35px;
+			margin: 25px 15px 15px;
+			overflow: hidden;
+		}
+		.titleIcon {
+			position: absolute;
+			left: 15px;
+			z-index: 100;
+			width: 11px;
+			height: 35px;
+			background-image: url("img/moretools/hl-title-icon@3x.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 11px 11px;
+		}
+		.titleTxt1 {
+			height: 35px;
+			line-height: 35px;
+			font-size: 16px;
+			color: #9f4200;
+			text-indent: 10px;
+			text-align: left;
+			margin: 0 20px;
+			background-image: url("img/moretools/hl-h5-title-boxin-img01@3x.png");
+			background-position: 30px 0;
+			background-repeat: repeat-x;
+			background-size: 1px 35px;
+		}
+		.leftRadius,
+		.rightRadius {
+			position: absolute;
+			top: 0;
+			width: 20px;
+			height: 35px;
+			background-image: url("img/moretools/hl-h5-title-box-img01@3x.png");
+			background-repeat: no-repeat;
+			background-size: 50px 35px;
+		}
+		.leftRadius {
+			left: 0;
+			background-position: 0 0;
+		}
+		.rightRadius {
+			right: 0;
+			background-position: -30px 0;
+		}
+		.linkContent {
+			margin: 0 27px;
+		}
+		.linkLine {
+			margin-bottom: 15px;
+			display: box;
+			display: -webkit-box;
+			display: -moz-box;
+			display: -o-box;
+			display: -ms-box;
+		}
+		.linkDom {
+			display: block;
+			width: 45px;
+			height: 65px;
+			text-decoration: none;
+			position: relative;
+		}
+		.linkIcon {
+			width: 45px;
+			height: 45px;
+			margin: 0 auto;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 45px 45px;
+		}
+		.linkIcon1 {
+			background-image: url("img/moretools/button-bg@3x.png");
+		}
+		.linkIcon1.icon1 {
+			background-image: url("icon/mlhs-list-box-bg01@3x.png");
+		}
+		.linkIcon1.icon2 {
+			background-image: url("icon/mlhs-list-box-bg02@3x.png");
+		}
+		.linkIcon1.icon3 {
+			background-image: url("icon/mlhs-list-box-bg03@3x.png");
+		}
+		.linkIcon1.icon4 {
+			background-image: url("icon/mlhs-list-box-bg04@3x.png");
+		}
+		.linkIcon1.icon5 {
+			background-image: url("icon/mlhs-list-box-bg05@3x.png");
+		}
+		.linkIcon1.icon6 {
+			background-image: url("icon/mlhs-list-box-bg06@3x.png");
+		}
+		.linkIcon1.icon7 {
+			background-image: url("icon/mlhs-list-box-bg07@3x.png");
+		}
+		.linkIcon1.icon8 {
+			background-image: url("icon/mlhs-list-box-bg08@3x.png");
+		}
+		.linkIcon1>div {
+			width: 45px;
+			height: 45px;
+			margin: 0 auto;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 30px 30px;
+		}
+		.linkIcon1 .dssg {
+			background-image: url("img/moretools/hl-tjgj-dssg@3x.png");
+		}
+		.linkIcon1 .bzjp {
+			background-image: url("img/moretools/hl-tjgj-bzjp@3x.png");
+		}
+		.linkIcon1 .bzyy {
+			background-image: url("img/moretools/hl-tjgj-bzyy@3x.png");
+		}
+		.linkIcon1 .thdy {
+			background-image: url("img/moretools/hl-tjgj-thdy@3x.png");
+		}
+		.linkIcon1 .zyzb {
+			background-image: url("img/moretools/hl-tjgj-zyzb@3x.png");
+		}
+		.linkIcon1 .zwcy {
+			background-image: url("img/moretools/hl-tjgj-zwlc@3x.png");
+		}
+		.linkIcon1 .bzcs {
+			background-image: url("http://7u2s0k.com2.z0.glb.qiniucdn.com/f3f9120b-1dc7-4641-b374-330299f1612d.png");
+		}
+		.linkIcon1 .bzhh {
+			background-image: url("http://7u2s0k.com2.z0.glb.qiniucdn.com/b03d3c27-13e7-4a5f-85ac-47330cde6a99.png");
+		}
+		.linkIcon1 .snyc {
+			background-image: url("http://7u2s0k.com2.z0.glb.qiniucdn.com/bee6dbb1-5c09-4827-91be-d82bda47a58f.png");
+		}
+		.linkIcon1 .zwds {
+			background-image: url("http://7u2s0k.com2.z0.glb.qiniucdn.com/f81e79df-b9cf-4786-ac83-57a0702ec34e.png");
+		}
+		.linkIcon .sy {
+			background-image: url("icon/zjqc-icon-sy@2x.png");
+		}
+		.linkIcon .hy {
+			background-image: url("icon/zjqc-icon-hy@2x.png");
+		}
+		.linkIcon .cy {
+			background-image: url("icon/zjqc-icon-cy@2x.png");
+		}
+		.linkIcon .zwqm {
+			background-image: url("icon/zjqc-icon-zwqm@2x.png");
+		}
+		.linkIcon .zwjz {
+			background-image: url("icon/zjqc-icon-zwjz@2x.png");
+		}
+		.linkIcon .xy {
+			background-image: url("icon/zjqc-icon-xy@2x.png");
+		}
+		.linkIcon .hh {
+			background-image: url("icon/zjqc-icon-hh@2x.png");
+		}
+		.linkIcon .sy {
+			background-image: url("icon/zjqc-icon-sy@2x.png");
+		}
+		.linkIcon .zrqq {
+			background-image: url("icon/zjqc-icon-zjqq@2x.png");
+		}
+		.linkIcon .zrjh {
+			background-image: url("icon/zjqc-icon-zjjh@2x.png");
+		}
+		.linkIcon .zrcx {
+			background-image: url("icon/zjqc-icon-zjcx@2x.png");
+		}
+		.linkIcon .zrkz {
+			background-image: url("icon/zjqc-icon-zjkz@2x.png");
+		}
+		.linkIcon .cx {
+			background-image: url("icon/zjqc-icon-cx@2x.png");
+		}
+		.linkIcon .tz {
+			background-image: url("icon/zjqc-icon-tz@2x.png");
+		}
+		.linkIcon .jt {
+			background-image: url("icon/zjqc-icon-jt@2x.png");
+		}
+		.linkIcon .jk {
+			background-image: url("icon/zjqc-icon-jk@2x.png");
+		}
+		.linkIcon .hz {
+			background-image: url("icon/zjqc-icon-hz@2x.png");
+		}
+		.linkIcon .zy {
+			background-image: url("icon/zjqc-icon-zy@2x.png");
+		}
+		.txtDom {
+			position: absolute;
+			left: -5px;
+			width: 55px;
+			margin-top: 5px;
+			text-align: center;
+			font-size: 13px;
+			color: #333333;
+		}
+		.placeholder1 {
+			box-flex: 1;
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-o-box-flex: 1;
+			-ms-box-flex: 1;
+		}
+		@media only screen and (-webkit-min-device-pixel-ratio: 3),
+		only screen and (-o-min-device-pixel-ratio: 6/2),
+		only screen and (min--moz-device-pixel-ratio: 3),
+		only screen and (min-device-pixel-ratio: 3) {
+			.linkIcon.sy {
+				background-image: url("icon/zjqc-icon-sy@3x.png");
+			}
+			.linkIcon.hy {
+				background-image: url("icon/zjqc-icon-hy@3x.png");
+			}
+			.linkIcon.cy {
+				background-image: url("icon/zjqc-icon-cy@3x.png");
+			}
+			.linkIcon.zwqm {
+				background-image: url("icon/zjqc-icon-zwqm@3x.png");
+			}
+			.linkIcon.zwjz {
+				background-image: url("icon/zjqc-icon-zwjz@3x.png");
+			}
+			.linkIcon.xy {
+				background-image: url("icon/zjqc-icon-xy@3x.png");
+			}
+			.linkIcon.hh {
+				background-image: url("icon/zjqc-icon-hh@3x.png");
+			}
+			.linkIcon.sy {
+				background-image: url("icon/zjqc-icon-sy@3x.png");
+			}
+			.linkIcon.zrqq {
+				background-image: url("icon/zjqc-icon-zjqq@3x.png");
+			}
+			.linkIcon.zrjh {
+				background-image: url("icon/zjqc-icon-zjjh@3x.png");
+			}
+			.linkIcon.zrcx {
+				background-image: url("icon/zjqc-icon-zjcx@3x.png");
+			}
+			.linkIcon.zrkz {
+				background-image: url("icon/zjqc-icon-zjkz@3x.png");
+			}
+			.linkIcon.cx {
+				background-image: url("icon/zjqc-icon-cx@3x.png");
+			}
+			.linkIcon.tz {
+				background-image: url("icon/zjqc-icon-tz@3x.png");
+			}
+			.linkIcon.jt {
+				background-image: url("icon/zjqc-icon-jt@3x.png");
+			}
+			.linkIcon.jk {
+				background-image: url("icon/zjqc-icon-jk@3x.png");
+			}
+			.linkIcon.hz {
+				background-image: url("icon/zjqc-icon-hz@3x.png");
+			}
+			.linkIcon.zy {
+				background-image: url("icon/zjqc-icon-zy@3x.png");
+			}
+		}
+	</style>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script>
+		$(function() {
+			var ua = window.navigator.userAgent;
+			var appVersion = parseInt(ua.split(' ').pop().replace(/\./g, ''))
+			var sysVersion = GetIOSVersion() || getAndroidVersion();
+			console.log("appver:"+ appVersion + "sysver:" +sysVersion);
+			function GetIOSVersion() {
+				if (window.MSStream) {
+					return false;
+				}
+				var match = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/),
+					version;
+				if (match !== undefined && match !== null) {
+					version = [
+						parseInt(match[1], 10),
+						parseInt(match[2], 10),
+						parseInt(match[3] || 0, 10)
+					];
+					return parseFloat(version.join('.'));
+				}
+				return false;
+			}
+
+			function getAndroidVersion() {
+				ua = ua.toLowerCase();
+				var match = ua.match(/android\s([0-9\.]*)/);
+				return match ? parseFloat(match[1]) : false;
+			}
+			var pushToken = getQueryString("pushToken");
+			var deviceMacId = getQueryString("mac");
+			var wnlUserId = getQueryString("userId") || getQueryString("userid");
+			var appver = appVersion || getQueryString("appver");
+			var model = getQueryString("model");
+			var osver = sysVersion || getQueryString("osver");
+			// var bundle = getQueryString("bundle");
+			var idfa = getQueryString("idfa");
+			var gid = getQueryString("gid");
+			//新增参数
+			var deviceId=getQueryString("deviceId") || getQueryString("deviceid");
+			var boundId=getQueryString("boundId") || getQueryString("boundid");
+			var posId=getQueryString("posId") || getQueryString("posid");
+			var imei=getQueryString("imei");
+			
+			if (wnlUserId === null || wnlUserId === '' || wnlUserId.toLowerCase() === '[wnluserid]') {
+				wnlUserId = '';
+			}
+			wnlUserId = wnlUserId === '' || wnlUserId == null ? wnlUserId : wnlUserId.replace('?name=', '');
+
+			if (deviceId === null || deviceId === '' || deviceId.toLowerCase() === '[openudid]') {
+				deviceId = '';
+			}
+			gid = deviceId;
+
+			localStorage.setItem("pushToken", pushToken);
+			localStorage.setItem("deviceMacId", deviceMacId);
+			localStorage.setItem("wnlUserId", wnlUserId);
+			localStorage.setItem("appver", appver);
+			localStorage.setItem("model", model);
+			localStorage.setItem("osver", osver);
+			// localStorage.setItem("bundle", bundle);
+			localStorage.setItem("idfa", idfa);
+			localStorage.setItem("gid", gid);
+			 //新增参数
+			localStorage.setItem("deviceid",deviceId);
+			localStorage.setItem("boundid",boundId);
+			localStorage.setItem("posid",posId);
+			localStorage.setItem("imei",imei);
+
+			$(".linkDom1").each(function() {
+				$(this).attr("href", "http://coco70.youloft.cn/mingli/" + $(this).attr("href") + "?versioncode=1");
+			});
+			// $(".linkDom1").each(function() {
+			// 	$(this).attr("href", "http://coco70.51wnl.com/mingli/" + $(this).attr("href") + "?versioncode=1");
+			// });
+			//            localStorage.setItem("versioncode","1");
+			function getQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = window.location.search.substr(1).match(reg);
+				if (r != null) {
+					return decodeURI(r[2]);
+				}
+				return null;
+			}
+		});
+	</script>
+</head>
+
+<body>
+	<div class="main">
+		<div class="dayunTitle1">
+			<div class="titleIcon"></div>
+			<div class="titleTxt1">
+				热门测算
+			</div>
+			<div class="leftRadius"></div>
+			<div class="rightRadius"></div>
+		</div>
+		<div class="linkContent">
+			<div class="linkLine">
+				<a class="linkDom" href="https://www.51wnl.com/linksite/DoLink.aspx?key=3841&loc=10&MAC=[MAC]&IDFA=[IDFA]&OPENUDID=[OPENUDID]&IMEI=[IMEI]&WNLUSERID=[WNLUSERID]&BUNDLE=[BUNDLE]&PTOKEN=[PTOKEN]">
+					<div class="linkIcon linkIcon1 icon1">
+						<div class="bzcs"></div>
+					</div>
+					<div class="txtDom">八字测算</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom" href="http://m.linghit.com/Hlsg?channel=51wnl&lap=wnl">
+					<div class="linkIcon linkIcon1 icon2">
+						<div class="dssg"></div>
+					</div>
+					<div class="txtDom">大师算卦</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom" href="http://m.linghit.com/Jianpi?channel=51wnl&lap=wnl">
+					<div class="linkIcon linkIcon1  icon3">
+						<div class="bzjp"></div>
+					</div>
+					<div class="txtDom">八字精批</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom" href="http://zxcs.linghit.com/bazihehun?channel=51wnl">
+					<div class="linkIcon linkIcon1 icon4">
+						<div class="bzyy"></div>
+					</div>
+					<div class="txtDom">八字姻缘</div>
+				</a>
+			</div>
+			<div class="linkLine">
+				<a class="linkDom" href="http://m.linghit.com/Taohua?channel=51wnl&lap=wnl">
+					<div class="linkIcon linkIcon1 icon5">
+						<div class="thdy"></div>
+					</div>
+					<div class="txtDom">桃花大运</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom" href="http://zxcs.linghit.com/Zhouyi?channel=51wnl">
+					<div class="linkIcon linkIcon1 icon6">
+						<div class="zyzb"></div>
+					</div>
+					<div class="txtDom">周易占卜</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom" href="https://www.51wnl.com/linksite/DoLink.aspx?key=5431&loc=10&MAC=[MAC]&IDFA=[IDFA]&OPENUDID=[OPENUDID]&IMEI=[IMEI]&WNLUSERID=[WNLUSERID]">
+					<div class="linkIcon linkIcon1  icon7">
+						<div class="bzhh"></div>
+					</div>
+					<div class="txtDom">八字合婚</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom" href="http://zxcs.linghit.com/baziyunshi?channel=51wnl">
+					<div class="linkIcon linkIcon1 icon2">
+						<div class="snyc"></div>
+					</div>
+					<div class="txtDom">十年运程</div>
+				</a>
+			</div>
+		</div>
+		<div class="dayunTitle1">
+			<div class="titleIcon"></div>
+			<div class="titleTxt1">其他测算</div>
+			<div class="leftRadius"></div>
+			<div class="rightRadius"></div>
+		</div>
+		<div class="linkContent">
+			<div class="linkLine">
+				<a class="linkDom" href="http://zxcs.linghit.com/zw?channel=51wnl">
+					<div class="linkIcon linkIcon1 icon7">
+						<div class="zwds"></div>
+					</div>
+					<div class="txtDom">紫薇斗数</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom" href="http://zxcs.linghit.com/Wealth?channel=51wnl">
+					<div class="linkIcon linkIcon1 icon5">
+						<div class="zwcy"></div>
+					</div>
+					<div class="txtDom">紫薇财运</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zwws_sycs.html">
+					<div class="linkIcon linkIcon1  icon1">
+						<div class="sy"></div>
+					</div>
+					<div class="txtDom">事业</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zwws_hycs.html">
+					<div class="linkIcon linkIcon1 icon2">
+						<div class="hy"></div>
+					</div>
+					<div class="txtDom">婚姻</div>
+				</a>
+			</div>
+			<div class="linkLine">
+				<a class="linkDom linkDom1" href="zwws_cycs.html">
+					<div class="linkIcon linkIcon1 icon3">
+						<div class="cy"></div>
+					</div>
+					<div class="txtDom">财运</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zwqm.html">
+					<div class="linkIcon linkIcon1 icon4">
+						<div class="zwqm"></div>
+					</div>
+					<div class="txtDom">紫微全命</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zwjz.html">
+					<div class="linkIcon linkIcon1 icon5">
+						<div class="zwjz"></div>
+					</div>
+					<div class="txtDom">紫微精装</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zwws_xycs.html">
+					<div class="linkIcon linkIcon1 icon6">
+						<div class="xy"></div>
+					</div>
+					<div class="txtDom">学业</div>
+				</a>
+			</div>
+			<div class="linkLine">
+				<a class="linkDom linkDom1" href="zwws_hhcs.html">
+					<div class="linkIcon linkIcon1 icon7">
+						<div class="hh"></div>
+					</div>
+					<div class="txtDom">合婚</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zrqq.html">
+					<div class="linkIcon linkIcon1 icon3">
+						<div class="zrqq"></div>
+					</div>
+					<div class="txtDom">择日乔迁</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zrjh.html">
+					<div class="linkIcon linkIcon1 icon4">
+						<div class="zrjh"></div>
+					</div>
+					<div class="txtDom">择日结婚</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zrcx.html">
+					<div class="linkIcon linkIcon1 icon8">
+						<div class="zrcx"></div>
+					</div>
+					<div class="txtDom">择日出行</div>
+				</a>
+			</div>
+			<div class="linkLine">
+				<a class="linkDom linkDom1" href="zrkz.html">
+					<div class="linkIcon linkIcon1 icon7">
+						<div class="zrkz"></div>
+					</div>
+					<div class="txtDom">择日开张</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zwws_cxcs.html">
+					<div class="linkIcon linkIcon1 icon7">
+						<div class="cx"></div>
+					</div>
+					<div class="txtDom">出行</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zwws_tzcs.html">
+					<div class="linkIcon linkIcon1 icon5">
+						<div class="tz"></div>
+					</div>
+					<div class="txtDom">投资</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zwws_jtcs.html">
+					<div class="linkIcon linkIcon1 icon3">
+						<div class="jt"></div>
+					</div>
+					<div class="txtDom">家庭</div>
+				</a>
+			</div>
+			<div class="linkLine">
+				<a class="linkDom linkDom1" href="zwws_jkcs.html">
+					<div class="linkIcon linkIcon1 icon6">
+						<div class="jk"></div>
+					</div>
+					<div class="txtDom">健康</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zwws_hzcs.html">
+					<div class="linkIcon linkIcon1 icon2">
+						<div class="hz"></div>
+					</div>
+					<div class="txtDom">合作</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="zwws_zycs.html">
+					<div class="linkIcon linkIcon1 icon1">
+						<div class="zy"></div>
+					</div>
+					<div class="txtDom">置业</div>
+				</a>
+				<div class="placeholder1"></div>
+				<a class="linkDom linkDom1" href="javascript:void(0)"></a>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

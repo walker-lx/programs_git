@@ -1,0 +1,302 @@
+@import '../css/base.scss';
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    // font-size: 16px;
+    -webkit-overflow-scrolling:touch; 
+}
+.banner{
+    width: 100%;
+    height: 2.43rem;
+    background: url('../img/v2/toutu.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.content {
+    width: 100%;
+    height: auto;
+    background: url('../img/v2/beijing.jpg') repeat-y;
+    background-position-y: -0.15rem;
+    background-size: 100% 5.08rem;
+    padding-top: 0.22rem;
+    padding-bottom: 0.09rem;
+}
+.wnl_history_btn {
+    z-index: 50;
+}
+.nav {
+    position: relative;
+    height: 1.3rem;
+    box-sizing: border-box;
+    background-color: rgba(253, 249, 226, .65);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 3.6px 3.6px 8px 1px #A14611;
+    color: #762D02;
+    margin: 0 8px;
+    padding: 0.11rem 0.2rem 0 1.3rem;
+    word-break:break-all;
+    font-size: 0.11rem;
+    font-family: 'font';
+    &.ios5snav {
+        font-size: 0.1rem !important;
+        margin: 0 5px !important;
+        padding: 0.09rem 0.2rem 0 1.3rem !important;
+    }
+    .nav_img1 {
+        position: absolute;
+        left: 0.09rem;
+        top: 0.1rem;
+        width: 2rem;
+        height: 1.13rem;
+        background: url('../img/v2/bairenlaosi.png') no-repeat;
+        background-size: 100% 100%;
+    }
+    .nav_img2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0.92rem;
+        height: 1.18rem;
+        background: url('../img/v2/huabian01.png') no-repeat;
+        background-size: 100% 100%;
+    }
+}
+.inputarea {
+    width: 100%;
+    margin-top: 0.27rem;
+    .inputdiv {
+        position: relative;
+        margin: 0 8px;
+        padding-bottom: 1.06rem;
+        background-color: rgba(253, 249, 226, .65);
+        border-radius: 3px;
+        box-shadow: 3.6px 3.6px 8px 1px #A14611;
+        .tip {
+            width: 100%;
+            height: 0.37rem;
+            line-height: 0.39rem;
+            background: url('../img/v2/tiaotiao01.png') no-repeat;
+            background-size: 100% 100%;
+            text-align: center;
+            color: #F9EED8;
+            border-radius: 3px 3px 0 0;
+            font-size: 0.16rem;
+            // font-size: 16px;
+            font-family: 'font';
+        }
+        .username, .addr, .userdate {
+            position: relative;
+            display: flex;
+            margin: 0.23rem 0.27rem 0 0.12rem;
+            z-index: 2;
+            .nametext, .addrtext, .datetext {
+                color: #A14611;
+                font-size: 0.15rem;
+                font-family: 'font';
+                margin-top: 0.01rem;
+            }
+            .cityinput, .dateinput, .nameinput {
+                flex: 1;
+                width: 2.97rem;           
+                margin-left: 0.09rem;
+                margin-top: -1px;
+                border-bottom: 2px dotted rgba($color: #A14611, $alpha: 0.4);
+                color: #A7A7A7;
+                font-family: 'font';
+                input {
+                    width: 100%;
+                    height: 100%;
+                    text-align: left;
+                    box-sizing: border-box;
+                    padding: 0 4px;
+                    font-size: 15px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    background-color: transparent;
+                    color: #A7A7A7;
+                    font-family: 'font';
+                    font-size: 0.15rem;
+                }
+            }
+            .nameinput {
+                width: 1.8rem;
+                input {
+                    width: 1.8rem;
+                }
+            }
+            .nameinput, .dateinput, .cityinput {
+                input {
+                    &::-webkit-input-placeholder {
+                        color: #A7A7A7;
+                        font-family: 'font';
+                        font-size: 0.15rem;
+                    }
+                }
+            }
+            .sex {
+                position: absolute;
+                right: 0.07rem;
+                top: -5px;
+                color: #FDF9E2;
+                font-size: 0;
+                @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-width: 412) {
+                    top: -8px;
+                }
+                &.oppo5 {
+                    top: -5px !important;
+                }
+                &.ios5s {
+                    top: -3px !important;
+                }
+                .mail, .femail {
+                    display: inline-block;
+                    width: 0.45rem;
+                    height: 0.25rem;
+                    line-height: 0.25rem;
+                    text-align: center;
+                    border-radius: 0.13rem;
+                    background-color: #A7A7A7;
+                    font-size: 0.15rem;
+                    &.choosed {
+                        background-color: #871811;
+                    }
+                }
+                .mail {
+                    margin-right: 0.05rem !important;
+                }
+            }
+        }
+        .addr, .userdate {
+            margin-top: 0.35rem;
+        }
+        .ck {
+            position: absolute;
+            bottom: 0.1rem;
+            right: 0.18rem;
+            width: 2.83rem;
+            height: 2.03rem;
+            margin: 5px auto 0;
+            background: url('../img/v2/anniu01.png') no-repeat;
+            background-size: 100% 100%;
+            z-index: 1;
+        }
+        .subbtn {
+            position: absolute;
+            width: 1rem;
+            height: 0.81rem;
+            left: 50%;
+            margin-left: -0.5rem;
+            bottom: 0.1rem;
+            z-index: 100;
+        }
+    }
+}
+.luck {
+    position: relative;
+    background-color: rgba(253, 249, 226, .65);
+    margin: 0.28rem 8px 0;
+    border-radius: 3px;
+    box-shadow: 3.6px 3.6px 8px 1px #A14611;
+    padding-bottom: 3px;
+    .tip {
+        width: 100%;
+        height: 0.37rem;
+        line-height: 0.39rem;
+        background: url('../img/v2/tiaotiao01.png') no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+        color: #F9EED8;
+        border-radius: 3px 3px 0 0;
+        font-size: 0.16rem;
+        // font-size: 16px;
+        font-family: 'font';
+    }
+    .luck_item {
+        margin: 0.09rem auto 0;
+        width: 3.87rem;
+        height: 0.738rem;
+        background: url('../img/v2/banban01.png') no-repeat;
+        background-size: 3.87rem 0.738rem;
+        box-sizing: border-box;
+        padding-top: 0.17rem;
+        .item_text1, .item_text2 {
+            text-align: center;
+            color: #7D2E00;
+            font-size: 0.15rem;
+            font-family: 'font';
+        }
+        .item_text2 {
+            margin-top: 0.02rem;
+        }
+    }
+    .item2, .item3 {
+        margin: 0.02rem auto 0;
+    }
+}
+.yhfk {
+    position: relative;
+    background-color: rgba(253, 249, 226, .65);
+    margin: 0.32rem 8px 0;
+    border-radius: 3px;
+    box-shadow: 3.6px 3.6px 8px 1px #A14611;
+    .title {
+        width: 100%;
+        height: 0.37rem;
+        line-height: 0.39rem;
+        background: url('../img/v2/tiaotiao01.png') no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+        color: #F9EED8;
+        border-radius: 3px 3px 0 0;
+        letter-spacing: .65em;
+        font-size: 0.16rem;
+        // font-size: 16px;
+        font-family: 'font';
+    }
+    .text {
+        position: relative;
+        background-color: rgba(253, 249, 226, .65);
+        border-radius: 6px;
+        padding-top: 0.29rem;
+        padding-bottom: 0.27rem;
+        box-sizing: border-box;
+        .list-content {
+            height: 248px;
+            margin: 0 25px; 
+            overflow: hidden;
+        }
+        .list {
+            font-size: 15px;
+            .list-item {
+                margin-bottom: 46px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid rgba(190,190,190, .1);
+                text-align: center;
+                color: #7D2E00;
+                font-size: 0.15rem;
+                font-family: 'font';
+                .item-text {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+.bottom {
+    width: 1.43rem;
+    height: 0.43rem;
+    margin: 0.03rem auto;
+    background: url('../img/v2/anniu02.png') no-repeat;
+    background-size: 100% 100%;
+}
+.oppor9 {
+    margin-top: 0.02rem !important;
+}
+.ios5s {
+    margin-top: 0.03rem !important;
+}

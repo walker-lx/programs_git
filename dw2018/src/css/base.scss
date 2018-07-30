@@ -1,0 +1,232 @@
+@mixin _bg($url, $ext) {
+    // 背景图片适配2倍屏与3倍屏
+    background-image: url($url + "@2x." + $ext);
+    background-repeat: no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+        background-image: url($url + "@3x." + $ext);
+    }
+}
+@font-face {
+    font-family: 'dw';
+    src: url('../assets/dw.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+  font-size: 0;
+}
+html, body {
+    user-select: none;
+}
+body,
+html {
+  font-family: -apple-system, 'SF Pro SC', 'HanHei SC', 'SF Pro Text', 'Myriad Set Pro', 'SF Pro Icons',
+    'Apple Legacy Chevron', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  // font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none;
+  -webkit-focus-ring-color: none;
+  outline: none;
+  -webkit-overflow-scrolling: touch;
+}
+a,
+img {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* user-select: none; */
+  outline: none;
+  -webkit-touch-callout: default;
+}
+img {
+  display: block;
+}
+button,
+input {
+  -webkit-appearance: none;
+  padding: 0;
+  border: none;
+}
+.hidden {
+  display: none !important;
+}
+.visibility_hidden {
+  visibility: hidden;
+}
+.clear_float::after {
+  clear: both;
+  content: '\0020';
+  display: block;
+  visibility: hidden;
+  height: 0;
+}
+.mask {
+  opacity: 0.8;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+input::-webkit-input-placeholder {
+  font-size: 15px;
+}
+input:focus {
+  -webkit-appearance: none;
+  outline: none;
+  outline-style: none;
+  box-shadow: none;
+}
+.border_top {
+  border-top: 1px solid #eaeaea;
+}
+.border_bottom {
+  border-bottom: 1px solid #eaeaea;
+}
+.border_all {
+  border: 1px solid #eaeaea;
+}
+#img {
+  width: 325px;
+}
+.wxsharemask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    img {
+        position: fixed;
+        top: 40px;
+        right: 30px;
+    }
+}
+// toast
+#toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  // transform: translate3d(-50%, -50%, 0);
+  // max-width: 80%;
+  text-align: center;
+  width: 158px;
+  margin-left: -87px;
+  // box-sizing: border-box;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 100;
+}
+// 音乐按钮
+.music_icon {
+  position: fixed;
+  top: 8px;
+  right: 10px;
+  z-index: 100;
+  .paly, .pause {
+      width: 30px;
+      height: 30px;
+  }
+}
+.rotate {
+  animation: circle 2s infinite linear;
+  @keyframes circle {
+    0% {
+      transform: rotate(0)
+    }
+    100% {
+      transform: rotate(1turn)
+    }
+  }
+}
+// 按钮样式
+.indexbtn {
+  position: absolute;
+  width: 175px;
+  height: 44px;
+  left: 50%;
+  bottom: 155px;
+  margin-left: -87.5px;
+  background: url('../assets/btn@3x.png') no-repeat;
+  background-size: 100% 100%;
+  font-size: 0;
+  .indexbtn_box {
+      position: relative;
+      width: 168.5px;
+      height: 38px;
+      border: 1px solid #63A14E;
+      box-sizing: border-box;
+      margin: 3px 3px 3px 3.5px;
+      padding: 0;
+      .indexbtn_text {
+          text-align: center;              
+          line-height: 38px;            
+          color: #fff;
+          font-size: 21px;
+          font-family: 'dw';
+      }
+      .indexbtn_icon {
+          position: absolute;
+          bottom: 6px;
+          left: -13.5px;              
+          width: 17.5px;
+          height: 6px;
+          background: url('../assets/xiaowanwan@3x.png') no-repeat;
+          background-size: 100% 100%;
+      }
+  }
+}
+
+.transitionbtn {
+  // position: absolute;
+  width: 175px;
+  height: 44px;
+  // left: 50%;
+  // bottom: 96px;
+  // margin-left: -87.5px;
+  margin: 0.5rem auto 0;
+  background: url('../assets/btn@3x.png') no-repeat;
+  background-size: 100% 100%;
+  font-size: 0;
+//   @media only screen and (-webkit-min-device-pixel-ratio: 2) and (device-height: 480px) {
+//     bottom: 76px;            
+// }
+  padding-top: 3px;
+  .transitionbtn_box {
+      position: relative;
+      width: 168.5px;
+      height: 41px;
+      border: 1px solid #63A14E;
+      box-sizing: border-box;
+      margin: 0 3px 3px 3.5px;
+      padding: 0;
+      font-size: 0;
+      .transitionbtn_text {
+          text-align: center;                
+          line-height: 38px;                
+          color: #fff;
+          font-size: 21px;
+          font-family: 'dw';
+      }
+      .transitionbtn_icon {
+          position: absolute;
+          bottom: 6px;
+          left: -13.5px;              
+          width: 17.5px;
+          height: 6px;
+          background: url('../assets/xiaowanwan@3x.png') no-repeat;
+          background-size: 100% 100%;
+      }
+  }
+}

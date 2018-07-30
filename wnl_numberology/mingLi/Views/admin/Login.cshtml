@@ -1,0 +1,57 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <script src="~/Content/jquery.min.js"></script>
+    <script src="~/Content/jquery.easyui.min.js"></script>
+    <script type="text/javascript">
+        function submitlogin()
+        {
+            $('#fm').form('submit', {
+                url: "../admin/loginin", 
+                success: function (result) {
+                    var result = eval('(' + result + ')');
+                    if (result.errorMsg) {
+                        $.messager.show({
+                            title: 'Error',
+                            msg: result.errorMsg
+                        });
+                    }
+                    else {
+                        window.location.href = result.url;
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <div style="margin:auto;width:500px">
+            <form id="fm" method="post" >
+            <table style="">
+                <tr>
+                    <td>用户名</td>
+                    <td><input id="name" type="text" name="name" /></td>
+                </tr>
+                <tr>
+                    <td>密码</td>
+                    <td><input id="pwd" type="password" name="pwd" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id="stb" type="button" value="提交" onclick="submitlogin()" />
+                    </td>
+                </tr>
+            </table>
+          </form>
+        </div>
+    </div>
+</body>
+</html>

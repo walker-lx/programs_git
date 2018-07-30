@@ -1,0 +1,190 @@
+2015-08-28 10:39:17.968 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[7a0f32f8d2c8433db642c82f856ca492]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[3d25bef1d8a74acbb8406f8cebf9e32a]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[3AD82225883CAA3751379F4354917590]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828110917]]></time_expire><time_start><![CDATA[20150828103917]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 10:39:18.674 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[I4ho0UbLTfKrHglE]]></nonce_str>
+<sign><![CDATA[BF889F922AC243EA4FA8A740E60EC222]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201508281039279da6b472130318320917]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 10:39:18.686 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=8cb98a36f7db417dacf0cc9d0e27fc04<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281039279da6b472130318320917<br>sign=C88022CEB6F2DC9C4877CD37918C1FB0<br>timestamp=1440729559<br>
+2015-08-28 10:48:04.971 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=f9ac6e8f920e4eaeb227bc626b459863<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281039279da6b472130318320917<br>sign=2D686AEDB1B5668433543EE5A8067895<br>timestamp=1440730085<br>
+2015-08-28 10:49:32.714 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[6e9ee99c64a94b939aa58f99631c77c5]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[f8098c109ff44c6696208d6b4f8f7a26]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[9377FCA404DF81983A32D58B427B77E5]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828111932]]></time_expire><time_start><![CDATA[20150828104932]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 10:49:33.391 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[KgujvXumgQXHuKPC]]></nonce_str>
+<sign><![CDATA[52CA099CE615F7687AA3B5ADF72B5160]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150828104942a97c38a4810121725533]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 10:49:33.392 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=53ab3f3416494e938a63cd88ce75852e<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828104942a97c38a4810121725533<br>sign=2E8BA94469E1016542CDA471F8CAC5B1<br>timestamp=1440730173<br>
+2015-08-28 10:52:44.505 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[1754c3749d7743528f298654bc6d5949]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[76d1efd2007749828a68b6504c5fe317]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[95A88765651B0FEFD2A8640F70C7D28A]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828112244]]></time_expire><time_start><![CDATA[20150828105244]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 10:52:45.245 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[pw8N3u0fyzhKNNGB]]></nonce_str>
+<sign><![CDATA[438CA011C308F790514041DC199E641E]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2015082810525470e0adbf120070973382]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 10:52:45.247 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=cae71af901e84e118cd4a82d7fb669ba<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx2015082810525470e0adbf120070973382<br>sign=09EAE536D2D975C162264AFC1C687EC4<br>timestamp=1440730365<br>
+2015-08-28 10:53:41.028 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=70781f7c985c4d0892205bca31711928<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx2015082810525470e0adbf120070973382<br>sign=BE0414BDAEFF85965533692DA1477116<br>timestamp=1440730421<br>
+2015-08-28 10:53:47.310 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=0f93f1509a5b4614b7a38fac5345a388<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx2015082810525470e0adbf120070973382<br>sign=CD55FFE2F9AD4BF4DD0A0D1BDD55A3D1<br>timestamp=1440730427<br>
+2015-08-28 10:53:53.868 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=ac03ff9082c542b294e368ac30fcd148<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx2015082810525470e0adbf120070973382<br>sign=4E0F68FB1FBFEAE9F5756F3B1393DC65<br>timestamp=1440730434<br>
+2015-08-28 10:54:44.839 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=07906acc2a4c4f9e9c2692fed47c1f9b<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx2015082810525470e0adbf120070973382<br>sign=6991A564CD6DEB0CBDF13F2E0DFE92EF<br>timestamp=1440730485<br>
+2015-08-28 10:56:04.776 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[50f8775439c746b8ae2c1fc962e06705]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[cc1ff8e8506245bbbc193bbae92a0e6e]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[0D89C96494BB87D2D10380C74E9E0957]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828112604]]></time_expire><time_start><![CDATA[20150828105604]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 10:56:05.426 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[7DtrTI99ApY3Mb1J]]></nonce_str>
+<sign><![CDATA[497D6C3B5A062A6E8384D83C87BCC227]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150828105614ecc310526d0230072647]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 10:56:05.427 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=ce289720db184e53a6c735a5d6e8570e<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828105614ecc310526d0230072647<br>sign=DC53C246EB9A074CCF6E435226FE6A8C<br>timestamp=1440730565<br>
+2015-08-28 11:14:42.559 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[c9f1f05c2fe34c80b46744cf78523110]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[0df9e87f22b548619f324da4552b7103]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[FC3F68B6F01D696AC19B8A47241E8DB0]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828114442]]></time_expire><time_start><![CDATA[20150828111442]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 11:14:43.179 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[7V7TmqQtNgmh810p]]></nonce_str>
+<sign><![CDATA[BA4EE3032A36D45BFF5699DDED0FB4B3]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150828111452c8e433f9ce0680230842]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 11:14:43.181 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=21c6e2b53623471baa534137c6f00dbd<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828111452c8e433f9ce0680230842<br>sign=BCEBEEE74DDD32D596E6A62D007B6BA6<br>timestamp=1440731683<br>
+2015-08-28 11:16:17.695 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=8edcd261612b491eb9f08a7ed356f5f1<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828111452c8e433f9ce0680230842<br>sign=FAF44E5F292285254BBFEFDBF505ACC3<br>timestamp=1440731778<br>
+2015-08-28 11:28:40.569 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=61ee6778bb044ec198f151ef70b72eca<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828111452c8e433f9ce0680230842<br>sign=E491461F76DF777436D53D055F3AB3A1<br>timestamp=1440732521<br>
+2015-08-28 11:32:17.310 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=3cb82018ce924231811fe0059823daf4<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828111452c8e433f9ce0680230842<br>sign=F93C45A4F8F3BD996E3EA3155AAED9E9<br>timestamp=1440732737<br>
+2015-08-28 11:33:11.115 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[d5643142f8d0469f875605c5467b00ca]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[df1026382c9d44c589f830e5d38a20b3]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[F9F3A3CA8E9C8F0FE0B16F8E3F2B7F45]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828120311]]></time_expire><time_start><![CDATA[20150828113311]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 11:33:11.782 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[Ljc6xxupgRQtLqCR]]></nonce_str>
+<sign><![CDATA[62B3D78D47F1EA76289926EC83C781BA]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201508281133215e8a4682960909602295]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 11:33:11.784 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=8822bb03f7454f68b8810fe9f6db2d2c<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281133215e8a4682960909602295<br>sign=92611181F53A1621ECC2836E793F1454<br>timestamp=1440732792<br>
+2015-08-28 11:40:05.871 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[065aef5f6ec5456ea6b2b2eabe9282d6]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[3ccc7483002e4a61b922d26725319f25]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[1DABB5462A2E2B035597AFDBF9146434]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828121005]]></time_expire><time_start><![CDATA[20150828114005]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 11:40:06.547 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[AY74myLdqaVTjgEc]]></nonce_str>
+<sign><![CDATA[0AB24376896F32AB1D7A4777FAD0F255]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201508281140159d3dfc02610372337842]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 11:40:06.549 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=0e5c608d0f574deda9d94970eac956d9<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281140159d3dfc02610372337842<br>sign=B7F480AD7FD9792D3AF87EFD227F5BFF<br>timestamp=1440733207<br>
+2015-08-28 11:40:14.879 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=7425684a3f144ede8bdc508365b96252<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281140159d3dfc02610372337842<br>sign=0B09F5F3D7902D1A39891A583661DDA2<br>timestamp=1440733215<br>
+2015-08-28 11:43:11.752 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=78213aaa042345289dd44c60a0b1eba8<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281140159d3dfc02610372337842<br>sign=79B241E1E03EEC4DA5CC6A12DDDF4248<br>timestamp=1440733392<br>
+2015-08-28 11:43:18.326 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=c9a5f4ebb8bc40a495cce21591b4db5c<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281140159d3dfc02610372337842<br>sign=BB0FFE679F4B9221DDF862FA92B1249C<br>timestamp=1440733398<br>
+2015-08-28 11:59:54.466 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=fd7c96ccb7c4414cbdda25536f3378aa<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281140159d3dfc02610372337842<br>sign=5973EE57B28F100BD2D57BBD9FAD1DCF<br>timestamp=1440734394<br>
+2015-08-28 13:43:48.056 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[41da83088b6a4a6aa1bb507ebfa77ddf]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[9a51d9f2eb91474db83895e84271b0f5]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[26BFC7B89545A1B6D530146A5020CD9C]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828141348]]></time_expire><time_start><![CDATA[20150828134348]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 13:43:48.937 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[ETNsQdWpVyCx0Kyj]]></nonce_str>
+<sign><![CDATA[F3EFE0EB9B3748E36931A5259ABC92E3]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150828134358163add678b0811182134]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 13:43:48.956 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=163ed1c8958a4c508ce625092c7f75f9<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828134358163add678b0811182134<br>sign=0A00BBEDC416A2FA0963A5E38B9DB71F<br>timestamp=1440740629<br>
+2015-08-28 13:43:58.813 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=028cd74b8d7a4d6fa583f3894e13cc78<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828134358163add678b0811182134<br>sign=17E94288E9F75311325E82D304B57565<br>timestamp=1440740639<br>
+2015-08-28 13:44:02.339 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=c3159d50acf84af7a927e6218c7a9079<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828134358163add678b0811182134<br>sign=4FA39D0744AFF13147F003BD68C097A9<br>timestamp=1440740642<br>
+2015-08-28 13:44:07.220 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[7eb85984323d4569bacfdf9185b05699]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[8ba2082a-07c0-4e0b-81c5-e4878e927db6]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[DF1C8FEC633B715C8ED455A1533C413E]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828141407]]></time_expire><time_start><![CDATA[20150828134407]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 13:44:07.612 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid out_trade_no]]></return_msg>
+</xml>
+2015-08-28 13:44:24.314 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=2c04bc91f6d2471395684825b8e1879c<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828134358163add678b0811182134<br>sign=5155632C91210F2EF9E2C6B9E30EDCCE<br>timestamp=1440740664<br>
+2015-08-28 13:46:29.637 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=1f6b2730cbc64fd2a96447dbdd32e078<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828134358163add678b0811182134<br>sign=AFC366ABDDC0C44A963E55A22A574104<br>timestamp=1440740790<br>
+2015-08-28 13:46:33.258 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=57c0e8892f78404c877e47589b8d826c<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828134358163add678b0811182134<br>sign=EF5643B7A541ACBDDE13E4F1B667D021<br>timestamp=1440740793<br>
+2015-08-28 14:45:48.094 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=bf5246252cb64c8c8c5c4ab9948f4d46<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828134358163add678b0811182134<br>sign=31594F3A10ADD59F687620610C55E8DF<br>timestamp=1440744348<br>
+2015-08-28 15:18:40.430 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[e4bcf6ff6ed848d289106597f5a72c04]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[1e60bf9afbf041c1bf12ef5de1afa331]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[642F933416A8B0A9DD99A70349D93AD9]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828154840]]></time_expire><time_start><![CDATA[20150828151840]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 15:18:41.304 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[9t8VLibZgjzJQ3KU]]></nonce_str>
+<sign><![CDATA[946191E170ABD2B7ABE37FE59A55F320]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150828151850437d9095ab0095233981]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 15:18:41.316 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=ecc4b1e6177741c2b57bebb42e59e7c2<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828151850437d9095ab0095233981<br>sign=40C5B988A5B0348BF6DBB3521E278F19<br>timestamp=1440746321<br>
+2015-08-28 15:19:32.203 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=36a04b78a4b145e49e6f7377fade9b9b<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828151850437d9095ab0095233981<br>sign=A99F781F42683931619DD28C516361F0<br>timestamp=1440746372<br>
+2015-08-28 15:19:50.948 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=f96dc0979ddd4122ace3c7558ae81172<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828151850437d9095ab0095233981<br>sign=F7C77F9570B00E7139574BC1362F9C01<br>timestamp=1440746391<br>
+2015-08-28 15:20:28.319 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=51bc45519be445b5b7743f1542364983<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828151850437d9095ab0095233981<br>sign=FE366627CD0DFCAFA564C9299591E2A0<br>timestamp=1440746428<br>
+2015-08-28 15:22:59.768 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[d2b68ebc8a5647baa840d6bf826890b3]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[0a8e2808902649b5a61fdd7c39eeba1a]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[23FBEF6A71F929B366EA0FC7C120817C]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828155259]]></time_expire><time_start><![CDATA[20150828152259]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 15:23:00.480 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[siC5vsoGxBIzdVza]]></nonce_str>
+<sign><![CDATA[9150CA8998B378CC414B11A34B67D57A]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150828152310b0ff173abc0289977895]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 15:23:00.481 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=78ea98407a9c4e6095c2fe48b7c925a8<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828152310b0ff173abc0289977895<br>sign=CC9FAED208944EEBA63FC86A67E25278<br>timestamp=1440746580<br>
+2015-08-28 15:23:18.151 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=efccba9812a84bf8986f059be0fe8237<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx20150828152310b0ff173abc0289977895<br>sign=C4776AFEAD3F056E0643EC4C5EA4D6B4<br>timestamp=1440746598<br>
+2015-08-28 16:42:18.182 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[bbbcc135caa54a4aafcd2a954b3bbb15]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[e274ee6e324d470db6df756507895c27]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[152BA810AFF65F4744C5CDE8A7E326F9]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828171218]]></time_expire><time_start><![CDATA[20150828164218]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 16:42:18.886 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[5wulghZdJduPLN0k]]></nonce_str>
+<sign><![CDATA[6A3A624648D641E1B6F946793D93FC08]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201508281642287894deb8ab0739067925]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 16:42:18.907 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=fc9dd779994e417194737059cb4613c1<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281642287894deb8ab0739067925<br>sign=6D241289EAB19DF5D437350C27B11659<br>timestamp=1440751339<br>
+2015-08-28 16:42:18.972 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=6d6b1f4c4f7a424996f00d46d3dd3fc4<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281642287894deb8ab0739067925<br>sign=8DB84BC158B139D1D2D7C08277092C5C<br>timestamp=1440751339<br>
+2015-08-28 16:42:21.727 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=0445a7e3fe294583a0335c75d81c77a5<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281642287894deb8ab0739067925<br>sign=C75B91BF34F07CF82B836CCACA0F1142<br>timestamp=1440751342<br>
+2015-08-28 16:42:22.238 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=c4b1fe511a694f67934eab92c1540da5<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281642287894deb8ab0739067925<br>sign=817B4167DAA8950A002B7365082A760E<br>timestamp=1440751342<br>
+2015-08-28 16:42:22.537 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=5bbbb501340c40a786ac4c4d7f666f79<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281642287894deb8ab0739067925<br>sign=0CCD36121468F6EB418C7DBD876F3871<br>timestamp=1440751343<br>
+2015-08-28 16:42:22.820 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=ef37e427e24a4f39a0faaa6b728096a8<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281642287894deb8ab0739067925<br>sign=33DCF139CB8970EE349DBDD627CF8783<br>timestamp=1440751343<br>
+2015-08-28 16:42:23.104 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=26f1ebf825c844f5ac3545efcf3a1be0<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281642287894deb8ab0739067925<br>sign=EF1044174A0608A0A3E51AF18C5BEFEB<br>timestamp=1440751343<br>
+2015-08-28 16:49:45.413 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[f4592aa8b3784e29b2610687cac76ed3]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[12de154cde4946b1af0875631704916c]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[EAD4EF159D900CA8586B5D53216A4B3F]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828171945]]></time_expire><time_start><![CDATA[20150828164945]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 16:49:46.099 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[WgeBnmfjC0BbqPWW]]></nonce_str>
+<sign><![CDATA[425E61B7C2853B44BAD721EBAA6C0AD7]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2015082816495558b02b91ca0981152716]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 16:49:46.100 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=514cd14bc403420285833ef059c18574<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx2015082816495558b02b91ca0981152716<br>sign=AF2C82B0A3A9300FCD642E41618E0972<br>timestamp=1440751786<br>
+2015-08-28 17:01:37.227 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[噩梦化解wnl]]></body><goods_tag><![CDATA[噩梦化解wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[c1b7016ccbcf4ef6b63f8718d8f67577]]></nonce_str><notify_url><![CDATA[http://coco70.51wnl.com/pay/WxPay/Notify]]></notify_url><out_trade_no><![CDATA[38a493edbc3e40519a04af23fe35c7a6]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[BB0BD7C4580993312D87C16361CF5A8F]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150828173137]]></time_expire><time_start><![CDATA[20150828170137]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-28 17:01:37.903 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[PwgzRzQoNBpklFKp]]></nonce_str>
+<sign><![CDATA[0815D68C7670AE99A90F7D9FDFAACBDB]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201508281701479fd16e03a00422944985]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-28 17:01:37.904 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=95fdfbf25b064c01925a956865cfa586<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281701479fd16e03a00422944985<br>sign=680CB501E22B1F956147586475C87E76<br>timestamp=1440752498<br>
+2015-08-28 17:02:15.306 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=e67883c6479045e0bc08db7bf6387977<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281701479fd16e03a00422944985<br>sign=B2CE78BEC1275435B99C334D6D2AE28C<br>timestamp=1440752535<br>
+2015-08-28 17:02:36.591 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=67d228183fb8402285be24dea73a348e<br>package=Sign_WNL_WXPay<br>partnerid=1263336101<br>prepayid=wx201508281701479fd16e03a00422944985<br>sign=95C06B1C6FEE3CEB671F803E16571E10<br>timestamp=1440752557<br>

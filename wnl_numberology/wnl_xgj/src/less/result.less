@@ -1,0 +1,231 @@
+.result {
+    background-color: #fcf7e2;
+    padding: 20px 0;
+    min-height: 100%;
+    .card {
+        opacity: 0;
+    }
+    .layout {
+        opacity: 0;
+        transition: all 1s ease-in-out;
+    }
+}
+
+.card-type {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+// .card-type:before {
+//     content: "";
+//     position: absolute;
+//     width: 223px;
+//     height: 171px;
+//     left: -10px;
+//     clip-path: polygon(39% 0, 95% 100%, 16% 100%, 7% 84%);
+//     background-color: #f6eecc;
+// }
+.card-type .card {
+    width: 83px;
+    height: 145px;
+    box-shadow: 2px 2px 3px 0 rgba(128, 128, 128, .39);
+    transform: translateZ(2px);
+    overflow: hidden;
+    margin-left: 15px;
+    background-image: none;
+    padding-top: 0;
+    border-radius: 8px;
+    img {
+        width: 100%;
+        height: 102%;
+        line-height: 0;
+    }
+}
+
+.card-type>div {
+    float: left;
+}
+
+.card-type .left {
+    float: left;
+    margin-right: -100%;
+}
+
+.card-type .left>div {
+    float: left;
+}
+
+.card-tag {
+    margin: 15px 10px 0 13px;
+    transform: translateZ(2px);
+}
+
+.card-type .name {
+    border-radius: 3px;
+    width: 37px;
+    height: 17px;
+    background: url('../img/cardname.png') no-repeat center;
+    background-size: cover;
+}
+
+.card-type .keywords {
+    margin-top: 19px;
+    border-radius: 3px;
+    width: 37px;
+    height: 17px;
+    background: url('../img/keyword.png') no-repeat center;
+    background-size: cover;
+}
+
+.card-des {
+    width: 100%;
+    padding-left: 123px;
+    transform: translateZ(2px);
+    .item {
+        border: solid 1px #589bee;
+        float: left;
+        border-radius: 2px;
+        padding: 0px 6px;
+        font-size: 13px;
+    }
+    .item {
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.condition .warning-text {
+    background-color: #589bee;
+}
+
+.result .condition .level {
+    margin-bottom: 14px;
+}
+
+.condition .level+.status.warning-status {
+    background-color: #81a8e3;
+    color: #fff;
+}
+
+.condition .level+.status.warning-status:before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 16px solid #81a8e3;
+}
+
+.name-des {
+    margin-top: 15px;
+}
+
+.name-des .text {
+    line-height: 1;
+    font-size: 21px;
+    letter-spacing: 0.6px;
+    color: #635028;
+    float: left;
+}
+
+.name-des-reverse {
+    float: left;
+    width: 47px;
+    height: 18px;
+    background: url('../img/niwei.png') no-repeat center;
+    background-size: cover;
+    color: #fff;
+    margin-left: 2px;
+    font-size: 14px;
+    letter-spacing: 1.1px;
+    text-indent: 6px;
+    line-height: 1.3;
+}
+
+.enname-des {
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.4px;
+    text-align: justify;
+    color: #bfa879;
+    margin-top: 9px;
+}
+
+.keywords-des {
+    text-align: justify;
+    margin-top: 22px;
+    margin-left: -5px;
+    margin-right: 20px;
+}
+
+.switch-card {
+    overflow: hidden;
+    margin-top: 20px;
+    background-color: #ffc96a;
+    padding: 0 13px 13px;
+}
+
+.switch-card .title {
+    margin: 13px 0;
+}
+
+.switch-card {
+    .title {
+        position: relative;
+    }
+    i {
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+    }
+    span {
+        margin-left: 30px;
+    }
+    .icon-1 {
+        width: 20px;
+        height: 20px;
+        background-color: #f94b56;
+        border-radius: 50%;
+        margin: 0 auto;
+        background-image: url('../img/star6.png');
+        background-size: 16px 17px
+    }
+    .icon-2 {
+        width: 34px;
+        height: 28px;
+        background-image: url('../img/refresh.png');
+        background-size: 17px 14px;
+        right: 0;
+        top: -2px;
+    }
+}
+
+.switch-card span {
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.switch-card .item {
+    float: left;
+    width: 31%;
+    padding: 9px 0;
+    background-color: #e69f60;
+}
+
+.switch-card .item:not(:last-child) {
+    margin-right: 3.5%;
+}
+
+.switch-card .card {
+    width: 71px;
+    height: 122px;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #fefefe;
+}

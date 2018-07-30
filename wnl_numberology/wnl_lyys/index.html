@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+	/>
+	<meta name="copyright" content="Copyright (c) 51wnl.com" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="description" content="万年历" />
+	<meta name="keywords" content="万年历" />
+	<title>流月运势</title>
+	<link rel="stylesheet" type="text/css" href="mobiscroll/mobiscroll.custom-2.14.4.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript">
+		var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cspan id='cnzz_stat_icon_1263913783'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol +
+			"s13.cnzz.com/z_stat.php%3Fid%3D1263913783' type='text/javascript'%3E%3C/script%3E"));
+
+	</script>
+	<style>
+		/*声明 WebFont*/
+
+		a[target='_blank'] {
+			display: none;
+		}
+
+		@font-face {
+			font-family: 'zidingyi';
+			src: url('./font/zidingyi.eot');
+			src: url('./font/zidingyi.eot?#font-spider') format('embedded-opentype'),
+			url('./font/zidingyi.woff') format('woff'),
+			url('./font/zidingyi.ttf') format('truetype'),
+			url('./font/zidingyi.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		#cnzz_stat_icon_1260884334 {
+			display: none;
+		}
+
+	</style>
+
+	<!-- <script src="//www.51wnl.com/vconsole.min.js"></script> -->
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src='//mobile.51wnl.com/utils/wnlHistory/wnlHistoryPro-v2.js'></script>
+	<link rel="stylesheet" type="text/css" href="//mobile.51wnl.com/utils/picker/css/wnlui.css">
+	<script type="text/javascript" src="//mobile.51wnl.com/utils/picker/js/wnlui.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css">
+	<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
+</head>
+
+<body>
+	<div class="main">
+		<div class="top_banner">
+			<img src="img/top_banner.jpg" alt="流月运势" class="banner_img">
+			<a href="list.html" class="cesuan_record_link hidden">我的运势</a>
+		</div>
+		<div class="inner_content">
+			<img class="dashi_content" src="img/dashi.jpg" alt="大师" />
+			<div class="title_tip_content box_line">
+				<div class="title_line"></div>
+				<div class="title_dot"></div>
+				<div class="title_txt">谁最需要流月运势?</div>
+				<div class="title_dot"></div>
+				<div class="title_line"></div>
+			</div>
+			<div class="user_txt_content clear_float">
+				<div class="user_txt">
+					<div class="user_txt_line">现阶段迷茫不知所措</div>
+					<div class="user_txt_line">想要趋吉避凶趋利避害</div>
+				</div>
+				<div class="user_txt">
+					<div class="user_txt_line">情感道路坎坷停滞的人</div>
+					<div class="user_txt_line">期望快人一步掌握先机</div>
+				</div>
+			</div>
+			<div class="inputContent">
+				<div class="inputLine box_line nameConent">
+					<div class="titleContent">您的姓名</div>
+					<div class="controlContent">
+						<input class="nameTxt" type="text" id="txtName" placeholder="点击输入">
+					</div>
+					<div class="placeholder"></div>
+				</div>
+				<div class="inputLine box_line birthContent">
+					<div class="titleContent">您的性别</div>
+					<div class="controlContent">
+						<div class="sexSelect manSexSelect">
+							<div class="sexIcon active"></div>
+							<div class="sexTxt">男</div>
+						</div>
+						<div class="sexSelect womanSexSelect">
+							<div class="sexIcon"></div>
+							<div class="sexTxt">女</div>
+						</div>
+					</div>
+					<div class="placeholder"></div>
+				</div>
+				<div class="inputLine box_line birthContent">
+					<div class="titleContent">出生日期</div>
+					<div class="controlContent timeSelect">
+						<input type="text" id="spBirthDate" placeholder="点击选择" readonly="">
+					</div>
+					<div class="arrowContent"></div>
+					<div class="placeholder"></div>
+				</div>
+				<div class="inputLine box_line box_line timeContent">
+					<div class="titleContent">出生时间</div>
+					<div class="controlContent">
+						<div class="ui-select bornTime">
+							<span class="bornTimeTxt">不清楚出生时间</span>
+							<select name="select-native" id="ddlBirthHour">
+								<option value="24">不清楚出生时间</option>
+								<option value="00">0时</option>
+								<option value="01">1时</option>
+								<option value="02">2时</option>
+								<option value="03">3时</option>
+								<option value="04">4时</option>
+								<option value="05">5时</option>
+								<option value="06">6时</option>
+								<option value="07">7时</option>
+								<option value="08">8时</option>
+								<option value="09">9时</option>
+								<option value="10">10时</option>
+								<option value="11">11时</option>
+								<option value="12">12时</option>
+								<option value="13">13时</option>
+								<option value="14">14时</option>
+								<option value="15">15时</option>
+								<option value="16">16时</option>
+								<option value="17">17时</option>
+								<option value="18">18时</option>
+								<option value="19">19时</option>
+								<option value="20">20时</option>
+								<option value="21">21时</option>
+								<option value="22">22时</option>
+								<option value="23">23时</option>
+							</select>
+						</div>
+					</div>
+					<div class="arrowContent"></div>
+					<div class="placeholder"></div>
+				</div>
+			</div>
+			<a href="javascript:void(0);" class="confirm_btn visible_confirm_btn" onclick="_czc.push(['_trackEvent', 'start_cs.C', 'lyys_index+click+start_cs'],'','',1);">查看我的本月运势</a>
+			<div class="title_tip_content box_line">
+				<div class="title_line"></div>
+				<div class="title_dot"></div>
+				<div class="title_txt">最权威的专家团队</div>
+				<div class="title_dot"></div>
+				<div class="title_line"></div>
+			</div>
+
+			<div class="expertTeamSwiper">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="swiperBGLeft">
+								<img src="./img/cs-master-dyq@3x.png">
+							</div>
+							<div class="swiperBG">
+								<div class="swiperBGRight">
+									<div class="expertName">董易奇</div>
+									<div class="expertDesc">国际易经民俗文化专家，“易奇八字”App创始人，世界易经大会学术顾问。18岁被东南亚易学会授予“易学奇才”称号，22岁成为登上人民大会堂演说周易文化的国际易学代表。</div>
+								</div>
+							</div>
+							<!-- <div class="swiperFooter"></div> -->
+						</div>
+						<div class="swiper-slide">
+							<div class="swiperBGLeft">
+								<img src="./img/cs-master-zyh@3x.png">
+							</div>
+							<div class="swiperBG">
+								<div class="swiperBGRight">
+									<div class="expertName">曾绎华</div>
+									<div class="expertDesc">八字命理、六爻、奇门预测专家。生于易学世家，自幼耳闻目睹，熟习传统传统命理理论，后师从多位港台名师，博取众家之长为己用。对命理学有近二十年的研究学习，实践累积了大量的实例，预测推算拥有极高的准确率。
+									</div>
+								</div>
+							</div>
+							<!-- <div class="swiperFooter"></div> -->
+						</div>
+						<div class="swiper-slide">
+							<div class="swiperBGLeft">
+								<img src="./img/cs-master-ljh@3x.png">
+							</div>
+							<div class="swiperBG">
+								<div class="swiperBGRight">
+									<div class="expertName">李俊辉</div>
+									<div class="expertDesc">自幼失明，但盲于目而不盲于心。研究八字命理多年，现从事四柱命理五行研究，专研六爻、命理预测、八字合婚、择吉日等。李俊辉先生对易经命理、五行八字的独到见解，得到业内的广泛认同，被誉为“盲派六爻八字神算师。</div>
+								</div>
+							</div>
+							<!-- <div class="swiperFooter"></div> -->
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+
+			<!-- <div class="cesuan_group_content box_line">
+				<div class="group">
+					<div class="groupItem" value="1">
+						<div class="personImg personImg1"></div>
+						<div class="personInfo">
+							<div class="personName">董易奇</div>
+							<div class="personAbout">国际易经民俗文化专家，“易奇八字”App创始人，世界易经大会学术顾问。18岁被东南亚易学会授予“易学奇才”称号，22岁成为登上人民大会堂演说周易文化的国际易学代表。</div>
+						</div>
+					</div>
+					<div class="groupItem" value="2">
+						<div class="personImg personImg2"></div>
+						<div class="personInfo">
+							<div class="personName">曾绎华</div>
+							<div class="personAbout">八字命理、六爻、奇门预测专家。生于易学世家，自幼耳闻目睹，熟习传统传统命理理论，后师从多位港台名师，博取众家之长为己用。对命理学有近二十年的研究学习，实践累积了大量的实例，预测推算拥有极高的准确率。</div>
+						</div>
+					</div>
+					<div class="groupItem" value="3">
+						<div class="personImg personImg3"></div>
+						<div class="personInfo">
+							<div class="personName">李俊辉</div>
+							<div class="personAbout">自幼失明，但盲于目而不盲于心。研究八字命理多年，现从事四柱命理五行研究，专研六爻、命理预测、八字合婚、择吉日等。李俊辉先生对易经命理、五行八字的独到见解，得到业内的广泛认同，被誉为“盲派六爻八字神算师”。</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+
+			<div class="title_tip_content box_line">
+				<div class="title_line"></div>
+				<div class="title_dot"></div>
+				<div class="title_txt">测算后您将揭晓</div>
+				<div class="title_dot"></div>
+				<div class="title_line"></div>
+			</div>
+			<div style="margin-top:15px;clear:both">
+				<div class="cesuan_desc_first">
+					<div class="cesuan_desc_tag">
+						<div class="tag_1"></div>
+						<div class="tag_title">事业</div>
+						<div class="tag_desc">职场变动
+							<br/>事业走向</div>
+					</div>
+					<div class="cesuan_desc_tag">
+						<div class="tag_2"></div>
+						<div class="tag_title">财富</div>
+						<div class="tag_desc">财务状况
+							<br/>赚钱之道</div>
+					</div>
+					<div class="cesuan_desc_tag">
+						<div class="tag_3"></div>
+						<div class="tag_title">爱情</div>
+						<div class="tag_desc">桃花旺衰
+							<br/>感情姻缘</div>
+					</div>
+					<div class="cesuan_desc_tag">
+						<div class="tag_4"></div>
+						<div class="tag_title">健康</div>
+						<div class="tag_desc">身体状况
+							<br/>健康运势</div>
+					</div>
+				</div>
+				<div class="cesuan_desc_second">
+					<div class="cesuan_desc_tag">
+						<div class="tag_5"></div>
+						<div class="tag_title">人际</div>
+						<div class="tag_desc">人脉关系
+							<br/>贵人帮扶</div>
+					</div>
+					<div class="cesuan_desc_tag">
+						<div class="tag_6"></div>
+						<div class="tag_title">家庭</div>
+						<div class="tag_desc">融洽程度
+							<br/>命运兴衰</div>
+					</div>
+					<div class="cesuan_desc_tag">
+						<div class="tag_7"></div>
+						<div class="tag_title">学业</div>
+						<div class="tag_desc">考试留学
+							<br/>择校选择</div>
+					</div>
+					<div class="cesuan_desc_tag">
+						<div class="tag_8"></div>
+						<div class="tag_title">投资</div>
+						<div class="tag_desc">投资理财
+							<br/>最佳时机</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="title_tip_content box_line">
+				<div class="title_line"></div>
+				<div class="title_dot"></div>
+				<div class="title_txt">独家开运秘诀让你愿望成真</div>
+				<div class="title_dot"></div>
+				<div class="title_line"></div>
+			</div>
+			<div style="margin-top:15px;clear:both">
+				<div class="cesuan_info_first">
+					<div class="cesuan_info_tag cesuan_info_tag_1">
+						<div class="tag_title">爱情事业双丰收</div>
+					</div>
+					<div class="cesuan_info_tag cesuan_info_tag_2">
+						<div class="tag_title">财源滚滚赚大钱</div>
+					</div>
+				</div>
+				<div class="cesuan_info_second">
+					<div class="cesuan_info_tag cesuan_info_tag_3">
+						<div class="tag_title">家庭和睦喜临门</div>
+					</div>
+					<div class="cesuan_info_tag cesuan_info_tag_4">
+						<div class="tag_title">健康吉祥顺心意</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="title_tip_content box_line">
+				<div class="title_line"></div>
+				<div class="title_dot"></div>
+				<div class="title_txt">看看测过的人怎么说</div>
+				<div class="title_dot"></div>
+				<div class="title_line"></div>
+			</div>
+			<div style="padding: 15px 0;font-size: 13px;line-height: 1;text-align: center;color: #999999;">
+				已有
+				<span id="predictNum">-</span> 人解锁本月运势
+			</div>
+			<div class="cesuan_comments_content">
+				<div class="cesuan_comments">
+					<div class="marqueeItem">
+						<div class="head">
+							<span class="name">张先生</span>
+							<span class="city">成都</span>
+							<span class="stars">
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+							</span>
+						</div>
+						<div class="comment">
+							每个月初都会来测算一次，已经成为了习惯，能提前了解未来的运势，做好心理准备。
+						</div>
+					</div>
+					<div class="marqueeItem">
+						<div class="head">
+							<span class="name">陈先生</span>
+							<span class="city">深圳</span>
+							<span class="stars">
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+							</span>
+						</div>
+						<div class="comment">
+							厉害了！整月爱情、财运、事业、健康都有详细的分析，对于较差的运势还有独家的开运秘诀和建议，超值！
+						</div>
+					</div>
+					<div class="marqueeItem">
+						<div class="head">
+							<span class="name">钱先生</span>
+							<span class="city">温州</span>
+							<span class="stars">
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+							</span>
+						</div>
+						<div class="comment">
+							我是测算产品的忠实用户了，各个网站和软件的测算都使用过，这个最准！真心推荐给大家。
+						</div>
+					</div>
+					<div class="marqueeItem">
+						<div class="head">
+							<span class="name">赵女士</span>
+							<span class="city">苏州</span>
+							<span class="stars">
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star"></span>
+							</span>
+						</div>
+						<div class="comment">
+							最近感情和工作都不顺利，于是抱着试试看的心态测算了一下，释然了很多，一下子解开了自己的困惑，按照嘱咐小心行事，现在运势已经在慢慢好转了。
+						</div>
+					</div>
+					<div class="marqueeItem">
+						<div class="head">
+							<span class="name">梁先生</span>
+							<span class="city">重庆</span>
+							<span class="stars">
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+								<span class="star starActive"></span>
+							</span>
+						</div>
+						<div class="comment">
+							原本以为网络上的测算都是骗人玩的，算了之后才发现，大师批的真准，而且价格也不贵
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="title_tip_content box_line">
+				<div class="title_line"></div>
+				<div class="title_dot"></div>
+				<div class="title_txt">什么是流月运势</div>
+				<div class="title_dot"></div>
+				<div class="title_line"></div>
+			</div>
+			<div class="cesuan_about_content">
+				<div class="cesuan_about">
+					<div class="title">什么是流月运势？</div>
+					<div class="about">
+						八字命理学是以节气来划分月份，每一节代表每个流月的开始，通过流月可以完整剖析出当月的整体状况、事业发展、财富投资、爱情际遇、身体状态等运势。
+					</div>
+				</div>
+				<div class="cesuan_about">
+					<div class="title">为什么要测流月运势？</div>
+					<div class="about">
+						节气的转换影响了每个流月运势的波动，而人生的每一个抉择，都将决定未来方向，流月运势能引导你在对的时机做正确的对应策略，可以在关键机缘中了解你将遇到的机遇或危机，告知你将会发生的大事趋向，揭秘你当月贵人和开运秘法，让你月月走好运。
+					</div>
+				</div>
+			</div>
+
+			<!-- 测算热门专区 -->
+			<div class="hot-cesuan-area hidden">
+				<div class="hot-cesuan-header">
+					<img src="./img/hot-cesuan-title.png">
+				</div>
+				<div class="hot-cesuan-content" id="hotCesuanArea">
+				</div>
+			</div>
+
+			<div class="contact_content clear_float">
+				<div class="qq_txt">测算答疑：QQ1254836806</div>
+				<div class="phone_txt">电话：
+					<a href='tel:020-28965013'>020-28965013</a>
+				</div>
+			</div>
+
+			<div class="copyRight clear_float">
+				Copyright © CALENDAR Tech. All Rights Reserved.
+			</div>
+		</div>
+	</div>
+	<div class="confirm_btn_fixed confirm_btn_fixed_hidden">
+		<div href="jdivvascript:void(0);" class="confirm_btn_fixed_link" onclick="_czc.push(['_trackEvent', 'start_cs.C', 'lyys_index+click+start_cs'],'','',2);">查看我的本月运势</div>
+	</div>
+	<div class="mask hidden"></div>
+	<div class="circleMask hidden">
+		<div class="circleMaskBackground"></div>
+		<div class="circleMaskContent"></div>
+		<div class="circleMaskImage"></div>
+	</div>
+
+	<div id="toast"></div>
+	<span id="toast1"></span>
+
+	<div class="iphoneXBanner hidden" style="height:34px;width: 100%;position:fixed;bottom: 0;z-index: 9999;background: #FFF;">
+	</div>
+	<script type="text/javascript" src="mobiscroll/mobiscroll-2.14.4-crack.js"></script>
+	<script type="text/javascript" src="mobiscroll/i18n/mobiscroll.i18n.zh.js"></script>
+	<script type="text/javascript" src="mobiscroll/solar.js"></script>
+	<script type="text/javascript" src="js/base64.min.js"></script>
+	<script type="text/javascript" src="js/wnlui.js"></script>
+	<script type="text/javascript" src="js/index.js?v=3"></script>
+	<script type="text/javascript" src="js/jquery.marquee.js"></script>
+	<script type="text/javascript" src="//mobile.51wnl.com/utils/in-view/dist/in-view.min.js"></script>
+	<!-- <script src="//www.51wnl.com/vconsole.min.js"></script> -->
+</body>
+
+</html>

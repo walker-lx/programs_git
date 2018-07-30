@@ -1,0 +1,8 @@
+<view class="container shuffle">
+  <view class="title-1">正在洗牌</view>
+  <view class="title-2">现在请静下心来 在心中反复默念你的问题</view>
+  <view class="card-wrap">
+    <view class="card card-image" animation="{{animationData1}}"></view>
+    <view class="card1 card1-image" animation="{{animationData2}}"></view>
+  </view>
+</view>

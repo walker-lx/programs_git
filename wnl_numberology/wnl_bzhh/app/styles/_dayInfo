@@ -1,0 +1,131 @@
+.dayInfo{
+  padding: 0.15rem;
+  color: #333;
+  line-height: 1.27;
+  .dayInfo1{
+    display:block;
+
+    .dayNum{
+      @extend .font_60;
+      text-align: center;
+      //font-family: SF UI Display;
+      line-height: 0.5rem;
+      float: left;
+      width: 0.7rem;
+      color: #d03f3f;
+      margin-bottom: 0.06rem;
+    }
+    .rightDayInfo1{
+      padding-top: 0.055rem;
+      padding-left: 0.11rem;
+      float: left;
+      @extend .font_15;
+      font-weight: 500;
+      .rightDayInfoLine{
+        .lunarDay{
+          color: #333333;
+          font-weight: 500;
+          padding-right: 0.1rem;
+        }
+        .jieqi{
+         font-weight: 500;
+          margin-top: 0.02rem;
+          color: #d03f3f;
+        }
+        .weekString{
+          font-weight: 300;
+        }
+      }
+
+    }
+  }
+  .dayInfo2{
+    clear:both;
+    margin-bottom: 0.15rem;
+    height: 0.19rem;
+    @extend .font_15;
+    color: #999;
+    .black{
+      color: #333;
+    }
+    @media screen and (max-width:321px){
+      .shuxiang{
+        padding:0 0.06rem !important;
+      }
+      .span{
+        padding-right: 0.08rem !important;
+      }
+    }
+    .shuxiang{
+      position:relative;
+      padding:0 0.08rem;
+      @extend .font_15;
+      line-height: 1.27;
+      height: 0.19rem;
+      &::before{
+        content: '';
+        position: absolute;
+
+        left: 0;
+        bottom: 0.025rem;
+        width: 0.04rem;
+        height: 0.14rem;
+        background-image: url(../images/card-rk-sx-left-img@3x.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 0.04rem 0.14rem;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0.025rem;
+        width: 0.04rem;
+        height: 0.14rem;
+        background-image: url(../images/card-rk-sx-right-img@3x.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 0.04rem 0.14rem;
+      }
+    }
+    .span{
+      padding-right: 0.1rem;
+      @extend .font_15;
+      line-height: 1.27;
+      height: 0.19rem;
+    }
+  }
+  .dayInfo3{
+    clear:both;
+    width:3.55rem;
+    height: auto;
+    .spanLine{
+      clear: both;
+      display: block;
+      height:0.19rem;
+      .spanTitle{
+        float:left;
+      }
+      .spanContent{
+        float:left;
+        padding: 0 0.1rem 0 0.15rem;
+        color: #333333;
+        box-sizing: border-box;
+        max-width: 3.26rem;
+        overflow: hidden;
+        white-space: pre;
+        text-overflow: ellipsis;
+        word-break: keep-all;
+      }
+      &:first-of-type {
+        color: #34a8d9;
+        padding-bottom: 0.07rem;
+      }
+      &:last-of-type{
+        color: #d93448;
+      }
+
+    }
+
+  }
+}

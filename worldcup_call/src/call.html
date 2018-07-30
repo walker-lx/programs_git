@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>世界杯打call</title>
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no" />
+  <!-- <script src="../static/vconsole.min.js"></script> -->
+</head>
+<body>
+
+  <!-- 微信分享遮罩 -->
+  <!-- <div class="wxsharemask hidden">
+    <img src="./assets/guide.png" alt="">
+  </div> -->
+  <!-- 禁用页面操作 -->
+  <div class="dispage hidden"></div>
+  <!-- 弹窗 -->
+  <div class="tip hidden">
+    <div class="tip-mask mask"></div>
+    <div class="tip-con">
+        <div class="tip-detail">
+            <div class="tip-text text1">你今日已成功打CALL</div>
+            <div class="tip-text text2">记得明天再来刷票~</div>
+            <div class="tip-text text3">让朋友也帮你打CALL球队！</div>
+        </div>
+    </div>
+  </div>
+  <!-- 分享图片 -->
+  <div class="img">
+    <img id="img" alt="">
+  </div>
+  <div class="index">
+    <div class="title">打CALL排行</div>
+    <div class="rank-wrap">
+        <div class="rank">
+            <div class="front">
+                <!-- <div class="rank_item hidden rank_item_temp">
+                    <div class="rank_item_no"></div>
+                    <div class="rank_item_country">
+                        <div>葡萄牙队</div>
+                        <div class="none">ad</div>
+                    </div>
+                    <div class="rank_item_numbox">
+                        <div class="rank_item_num"><span class="num">40993</span>人打CALL</div>
+                    </div>
+                </div> -->
+                <div class="hidden rank_item_temp">
+                    <div class="rank_item_no"></div>
+                    <div class="rank_item_country">
+                        <span class="rank_item_country_text">葡萄牙队</span>
+                        <span class="none"></span>
+                    </div>
+                    <div class="rank_item_numbox">
+                        <div class="rank_item_num"><span class="num">40993</span>人打CALL</div>
+                    </div>
+                </div>
+            </div>
+            <div class="behind"></div>
+        </div>
+    </div>
+
+    <!-- 更多 -->
+    <div class="more">
+        <div class="down"></div>
+        <div class="upbox hidden">
+            <div class="up"></div>
+        </div>
+    </div>
+    <div class="csbtn"></div>
+    <div class="scroll_box">
+        <div class="scroll_boxwrap">
+            <div class="scroll_list" id="marquee-top">
+                <div class="call_list_item hidden">
+                    <img class="callimg" alt="">
+                    <div class="calltext">
+                        <span class="item_name">俩猫的娘123</span>&nbsp;给&nbsp;&nbsp;&nbsp;<span class="item_country">日本队</span>&nbsp;&nbsp;&nbsp;疯狂打CALL成功
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom hidden">
+        <!-- 输入框和btn -->
+        <div class="center">
+            <div class="search">
+                <div class="search_icon"></div>
+                <div class="search_input">
+                    <input type="text" id="input" value="" placeholder="输入国家名">
+                </div>
+            </div>
+            <div class="call_btn_box"></div>
+        </div>
+        <!-- 国家选择组件 -->
+        <div class="country_select">
+            <div class="country_select_box">
+                <div class="country_selected_item"></div>
+            </div>
+            <div class="country_select_wrap">
+                <div class="country_select_con" style="transform: translate3d(0, 0, 0)">
+                    <div class="country_select_item hidden">
+                        <img class="item_flag" src="./assets/faguo.png">
+                        <div class="item_name">法国队</div>
+                    </div>
+                    <!-- <div class="fill hidden"></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 分享btn -->
+    <div class="sharebtn hidden"></div>
+  </div>
+  
+  <!-- 埋点统计 -->
+  <!-- <div id="cnzz" style="display: none">
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1273884475'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1273884475' type='text/javascript'%3E%3C/script%3E")); // eslint-disable-line</script>
+  </div> -->
+</body>
+
+</html>

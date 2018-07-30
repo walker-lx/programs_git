@@ -1,0 +1,142 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Master</title>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/demo/demo.css">
+    <script src="~/Content/jquery.min.js"></script>
+    <script src="~/Content/jquery.easyui.min.js"></script>
+     
+</head>
+<body>
+    <div style="margin:20px 0;"></div>
+    <div class="easyui-layout" style="width:100%;height:650px;">
+        <div data-options="region:'north'" style="height:50px">
+            <div style="line-height:48px;font-size:xx-large;font-weight:400;float:left;width:80%">
+                订单解答系统
+            </div>
+            <div style="float:right; line-height:48px;">
+                <label>@ViewBag.user</label>
+                <a href="loginout">退出</a>
+            </div>
+        </div>
+        <div data-options="region:'south',split:true" style="height:50px;"></div> 
+        <div data-options="region:'center'">
+    <div>
+         <table id="dg" title="订单列表"  style="width:100%;height:500px"
+            
+            toolbar="#toolbar" pagination="true"
+            rownumbers="true" fitColumns="true" singleSelect="true">
+        <thead>
+            <tr>
+                <td field="orderid" width="30">订单标示</td>
+                <th field="ordertype" width="50">订单类别</th>
+                <th field="date" width="50">创建时间</th>
+                <th field="price" width="50">价格</th> 
+                <td></td>
+            </tr>
+        </thead>
+    </table>
+        <h1></h1>
+    <div id="toolbar">
+        <select id="Select1" class="easyui-select" onchange="changestatus()" > 
+            <option value="3">待解答</option>
+            <option value="4">解答完成</option> 
+        </select> 
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="answerorder()">解答订单</a>
+    </div>
+
+         <div id="dlg" class="easyui-dialog" style="width:880px;height:280px;padding:10px 20px"
+            closed="true" buttons="#dlg-buttons">
+
+            <div style="width:400px;float:left;height:100px">
+                <iframe width="400" id="iframedetail" >
+
+                </iframe>
+            </div>
+             <div style="width:400px;float:right;"><div class="ftitle"></div>
+        <form id="fm" method="post" novalidate>
+            <div class="fitem"> 
+                 订单编号<label id="orderlable"> </label>
+                 <input type="hidden" name="orderid" id="idhidden" /><br />
+                 <select name="answertype">
+                     <option value="0">需要更多信息</option>
+                     <option value="1">解答订单</option>
+                 </select>
+                <br />
+                <textarea name="answercontent" style="width:80%" ></textarea>
+            </div> 
+           </form></div>
+        
+             </div>
+        <div id="dlg-buttons">
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="submitanswer()">提交</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')">Cancel</a>
+    </div>
+    </div>
+            </div>
+        </div>
+    <script type="text/javascript">
+        function changestatus() {
+            $('#dg').datagrid('load', {
+                status: $("#Select1").val(),
+                masterid: '@ViewBag.masterid'
+            });
+        };
+
+        function answerorder() {
+            var row = $('#dg').datagrid('getSelected');
+            if (row) {
+                $('#dlg').dialog('open').dialog('setTitle', '解答订单');
+                $('#orderlable').text(row.orderid);
+                $('#idhidden').val(row.orderid);
+                $("#iframedetail").attr("src", "../ordershow.html?orderid="+row.orderid);
+            }
+
+        }
+
+        function submitanswer() {
+            $('#fm').form('submit', {
+                url: '../admin/answerorder',
+                onSubmit: function () {
+                    return true;
+                    //return $(this).form('validate');
+                },
+                success: function (result) {
+                    var result = eval('(' + result + ')');
+                    if (result.status > 0) {
+                        $.messager.show({
+                            title: 'Error',
+                            msg: result.errorMsg
+                        });
+                    } else {
+                        $('#dlg').dialog('close');        // close the dialog
+                        changestatus();    // reload the user data
+                    }
+                }
+            });
+        }
+
+        $(function () {
+            var url = '../admin/getdata';
+            var masterid = '@ViewBag.masterid';
+            $('#dg').datagrid({
+                url: url,
+                queryParams: {
+                    status: $("#Select1").val(),
+                    masterid: masterid
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

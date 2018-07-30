@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>订单确认</title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=320px, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery-fastclick.min.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/orderConfirm.js"></script>
+</head>
+<body>
+<div class="top">
+    <a href="orders.html" class="backBtn1"></a>
+    <div class="title1">订单确认</div>
+</div>
+<div class="main">
+    <div class="orderContent">
+        <div class="orderIntro">
+            <span class="orderDetailNum"></span>
+            <span class="orderState"></span>
+        </div>
+        <div class="orderDetailLine">
+            <span class="detailName">咨&nbsp&nbsp询&nbsp人：</span>
+            <span class="detailValue orderName"></span>
+        </div>
+        <div class="orderDetailLine">
+            <span class="detailName">联系方式：</span>
+            <span class="detailValue">万年历系统通知</span>
+        </div>
+        <div class="orderDetailLine hidden">
+            <span class="detailName">出生时辰：</span>
+            <span class="detailValue orderData">1970年9月9日15:00生</span>
+        </div>
+        <div class="orderDetailLine">
+            <span class="detailName">咨询服务：</span>
+            <span class="detailValue orderService"></span>
+        </div>
+        <div class="orderDetailLine">
+            <span class="detailName">用途描述：</span>
+            <span class="detailValue orderCategory1"></span>
+        </div>
+        <div class="orderDetailLine">
+            <span class="detailName">金　　额：</span>
+            <span class="detailValue orderDetailPrice"></span>
+        </div>
+        <div class="replyLine">大师回复</div>
+        <div class="orderDetailLine replyContent"></div>
+        <textarea class="extraTxa" placeholder="请填写上述需要提供的信息"></textarea>
+        <div class="replyBtnContent">
+            <input type="button" value="确认" class="replyBtn"/>
+            <span class="tipSpan">请确认填写信息已完整，以确保接收到大师指点的解答</span>
+        </div>
+    </div>
+    <div id="myModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <div class="showString"></div>
+        </div>
+        <div class="modal-footer">
+            <button  data-dismiss="modal" aria-hidden="true" class="btn btn-primary">确定</button>
+        </div>
+    </div>
+</div>
+<script>
+    var title="万年历的在线命理很准的哦，小伙伴们也快来试一下";
+    var textObj = {
+        text: title,
+        image: "1",
+        url:location.href,
+        pureText:title,
+        prefix:""
+    };
+    var textObj1={
+        text: title,
+        image: "1",
+        targetUrl:location.href,
+        perfix:""
+    };
+    function appCallback_share(){
+        try{
+            if(window.ylwindow){
+                ylwindow.reportHasShare(true);
+                location.href="protocol://share:" + encodeURI(JSON.stringify(textObj1));
+            }
+            else{
+                location.href="protocol://share#" + encodeURI(JSON.stringify(textObj));
+            }
+        }
+        catch (e){}
+        return 1;
+    }
+</script>
+</body>
+</html>

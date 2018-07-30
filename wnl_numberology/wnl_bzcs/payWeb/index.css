@@ -1,0 +1,202 @@
+body,html{
+    font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+body{
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust:none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-focus-ring-color:  rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: #fff9f1;
+}
+.hidden{
+    display: none !important;
+}
+.payContent{
+    margin: 15px;
+    padding-bottom: 20px;
+    border-radius: 6px;
+    background-image: url("img/pop-box-lt@2x.png"),url("img/pop-box-rt@2x.png"),url("img/pop-box-lb@2x.png"),url("img/pop-box-rb@2x.png"),
+    url("img/pop-box-ti@2x.png"),url("img/pop-box-li@2x.png"),url("img/pop-box-ri@2x.png"),url("img/pop-box-bi@2x.png");
+    background-position: left top,right top,left bottom,right bottom,left top,left top,right top,left bottom;
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,repeat-x,repeat-y,repeat-y,repeat-x;
+    background-size: 20px 20px,20px 20px,20px 20px,20px 20px,1px 20px,20px 1px,20px 1px,1px 20px;
+    background-color: #fff9f1;
+}
+.zhifuContent,.jifenCount,.introContent{
+    margin: 0 2px;
+    padding: 20px 18px 18px;
+    border-bottom: 1px solid #F9D4AD;
+}
+.zhifuTxt {
+    font-size: 18px;
+    color: #111111;
+}
+.zhifuCount,.payedCount {
+    font-size: 18px;
+    color: #d93448;
+    padding-left: 5px;
+}
+.zhifuCount.jifen{
+    color: #999999;
+    text-decoration: line-through;
+}
+.jifenCount{
+    font-size: 0;
+}
+.jifenCount>div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.selectIcon{
+    width: 15px;
+    height: 15px;
+    background-image: url("img/select-sex-icon-normal@2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+}
+.selectIcon.active{
+    background-image: url("img/select-sex-icon-active@2x.png");
+}
+.jifenCount.none .selectIcon{
+    background-image: url("img/select-sex-icon-normal@2x.png");
+}
+.jifenTxt{
+    margin-left: 10px;
+    font-size: 15px;
+    color: #666666;
+}
+.redJinfenNum{
+    color: #d93448;
+}
+.introTitle {
+    font-size: 15px;
+    color: #111111;
+}
+.wxConfirmBtn,.zfbConfirmBtn{
+    display: block;
+    position: relative;
+    margin: 15px 20px 0;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.wxConfirmBtn{
+    background-color: #15b64d;
+}
+.zfbConfirmBtn{
+    background-color: #01a0eb;
+}
+.zhifuIcon {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+.zhifuIcon.wx{
+    background-image: url("img/pop-box-wx-logo@2x.png");
+}
+.zhifuIcon.zfb{
+    background-image: url("img/pop-box-zfb-logo@2x.png");
+}
+.zhifuArrow {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    width: 7px;
+    height: 100%;
+    margin-right: 15px;
+    background-image: url("img/pop-box-more-arrow@2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 7px 12px;
+}
+.loginLink{
+    display: block;
+    text-decoration: underline;
+    text-align: center;
+    margin: 15px 20px 0;
+    font-size: 13px;
+    color: #666666;
+}
+.zhifuSongTipTxt{
+    display: block;
+    text-align: center;
+    margin: 15px 20px 0;
+    font-size: 13px;
+    color: #666666;
+}
+.maskContent{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+    background-color: #ffffff;
+    opacity: .2;;
+    border-radius: 7px;
+}
+.mask {
+    opacity: 0.8;
+    z-index: 9998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width:100%;
+    height:100%;
+    background: url("img/loading.gif") no-repeat center,#000000;
+    background-size: 25px 25px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (-o-min-device-pixel-ratio: 6/2),
+only screen and (min--moz-device-pixel-ratio: 3),
+only screen and (min-device-pixel-ratio: 3) {
+    .payContent{
+        background-image: url("img/pop-box-lt@3x.png"),url("img/pop-box-rt@3x.png"),url("img/pop-box-lb@3x.png"),url("img/pop-box-rb@3x.png"),
+        url("img/pop-box-ti@3x.png"),url("img/pop-box-li@3x.png"),url("img/pop-box-ri@3x.png"),url("img/pop-box-bi@3x.png");
+    }
+    .selectIcon{
+        background-image: url("img/select-sex-icon-normal@3x.png");
+    }
+    .selectIcon.active{
+        background-image: url("img/select-sex-icon-active@3x.png");
+    }
+    .jifenCount.none .selectIcon{
+        background-image: url("img/select-sex-icon-normal@3x.png");
+    }
+    .zhifuIcon.wx{
+        background-image: url("img/pop-box-wx-logo@3x.png");
+    }
+    .zhifuIcon.zfb{
+        background-image: url("img/pop-box-zfb-logo@3x.png");
+    }
+    .zhifuArrow {
+        background-image: url("img/pop-box-more-arrow@3x.png");
+    }
+}
+
+
+
+
+
+
+
+
+
+

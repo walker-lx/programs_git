@@ -1,0 +1,10 @@
+/build/
+/config/
+/dist/
+/*.js
+/src/components/test.vue
+/src/components/test1.vue
+/src/assets/utils/*.js
+/static/*.js
+/static/wnlui/*.js
+

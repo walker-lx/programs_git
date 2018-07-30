@@ -1,0 +1,697 @@
+html,
+body {
+	overflow: hidden;
+	background: linear-gradient(#ffe198 60%, #fff0ac 40%);
+	background-size: 100% 20px;
+	overflow-y: auto;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-family: -apple-system, "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/*header-section  */
+
+.header-section {
+	margin: 0 auto;
+	margin-top: 29px;
+	width: 100%;
+	height: 54px;
+	font-family: FZLANTY_ZHUNK-GBK1-0;
+	font-size: 13px;
+	letter-spacing: 0.2px;
+	text-align: center;
+	color: #ffffff;
+	line-height: 36px;
+}
+
+.header-section-title {
+	height: 100%;
+	width: 41%;
+	margin: 0 auto;
+	background: url('../img/mutoudaoshi.png') center no-repeat;
+	background-size: 100% 100%;
+}
+
+
+/*infoContent-section  */
+
+.infoContent-section {
+	padding: 0 5px 0 5px;
+}
+
+.infoContent-section-innner {
+	background: url('../img/background03.png') no-repeat;
+	background-size:100% 100%;
+	padding: 23px 6px 22px 6px;
+	margin-top: -20px;	
+}
+
+.infoContent-section-title {
+	overflow: hidden;
+}
+
+.infoForm {
+	border-radius: 10px;
+	background: #fff;
+}
+
+.infoContent-left {
+	float: left;
+	position: absolute;
+	margin-left: -6px;
+	width: 30%;
+	border-radius: 3px;
+	background-color: #ffa340;
+	height: 79px;
+}
+
+.titleName {
+	font-family: PingFangSC;
+	font-size: 20px;
+	margin-top: 12%;
+	letter-spacing: 0.3px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.titleLabel {
+	font-family: FZLANTY_ZHUNK-GBK1-0;
+	font-size: 12px;
+	letter-spacing: 0.1px;
+	line-height: 22px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.infoContent-right {
+	float: right;
+	width: 66%;
+	margin-top: 15px;
+}
+.cornerImg01 {
+	position: absolute;
+	margin-top: 79px;
+	margin-left: -6px;
+	width: 6px;
+	height: 6px;
+}
+.cornerImg01 > img {
+	width: 100%;
+	height: 100%;
+}
+.cornerImg02 {
+	position: absolute;
+	margin-top: 49px;
+	margin-left: -6px;
+	width: 6px;
+	height: 6px;
+}
+.cornerImg02 > img {
+	width: 100%;
+	height: 100%;
+}
+.cornerImg03 {
+	position: absolute;
+	margin-top: 132px;
+	margin-left: -6px;
+	width: 6px;
+	height: 6px;
+}
+.cornerImg03 > img {
+	width: 100%;
+	height: 100%;
+}
+.cornerImg04 {
+	position: absolute;
+	margin-top: 179px;
+	margin-left: -6px;
+	width: 6px;
+	height: 6px;
+}
+.cornerImg04 > img {
+	width: 100%;
+	height: 100%;
+}
+.cornerImg05 {
+	position: absolute;
+	margin-top: 47px;
+	margin-left: -13px;
+	width: 6px;
+	height: 6px;
+}
+.cornerImg05 > img {
+	width: 100%;
+	height: 100%;
+}
+.xingzuoPic {
+	width: 61px;
+	height: 20px;
+	float: left;
+}
+
+.xingzuoPic>img {
+	width: 100%;
+	height: 100%;
+}
+
+.shengxiao {
+	border-radius: 3px;
+	display: inline-block;
+	width: 27px;
+	height: 20px;
+	font-family: FZLANTY_ZHUNK-GBK1-0;
+	font-size: 13px;
+	line-height: 20px;
+	letter-spacing: 1px;
+	text-align: center;
+	color: #ffffff;
+	margin-left: 10px;
+	background: #4b9df0;
+}
+
+.characterLebal {
+	display: inline-block;
+	width: auto;
+	margin-top: 10px;
+	text-align: center;
+	font-family: PingFangSC;
+	font-size: 13px;
+	line-height: 19px;
+	letter-spacing: 1.2px;
+	text-align: left;
+	padding: 1px;
+}
+
+.characterLebal01 {
+	border-radius: 3px;
+	color: #ff9416;
+	border: solid 1px #ff9416;
+}
+
+.characterLebal02 {
+	border-radius: 3px;
+	color: #5fb2ed;
+	border: solid 1px #5fb2ed;
+}
+
+.characterLebal03 {
+	border-radius: 3px;
+	color: #47bf5e;
+	border: solid 1px #47bf5e;
+}
+
+.infoContent-user {
+	margin-top: 40px;
+	padding: 0 18px 0 18px;
+}
+
+.userInfoLabel {
+	font-family: PingFangSC;
+	font-size: 16px;
+	letter-spacing: 1.2px;
+	text-align: left;
+	color: #565656;
+	display: inline-block;
+}
+
+.birthDate {
+	padding: 0 0 15px 0;
+	border-bottom: solid 1px #ededed;
+}
+
+.birthPlace {
+	padding: 15px 0 3px 0;
+	border-bottom: solid 1px #ededed;
+}
+.birthPlace > label {
+	height: 34px;
+}
+.birthDateContent {
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 1.2px;
+    text-align: left;
+    color: #565656;
+    display: inline-block;
+    margin-left: 13px;
+    width: 65%;
+    position: absolute;
+    margin-top: 3px;
+}
+
+.birthPlaceContent {
+	font-family: PingFangSC;
+	font-size: 15px;
+	line-height: 15px;
+	letter-spacing: 1.2px;
+	text-align: left;
+	color: #565656;
+	display: inline-block;
+	margin-left: 13px;
+	width: 65%;
+	position: absolute;
+	margin-top: 3px;
+}
+
+.character-section {
+	margin-top: 15px;
+	overflow: hidden;
+	padding-bottom: 25px;
+}
+
+.characterLabe {
+	float: left;
+	height: 40px;
+	border-radius: 3px;
+	background-color: #4faeff;
+	width: 12%;
+	font-family: PingFangSC;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: 3.2px;
+	text-align: center;
+	color: #ffffff;
+	padding: 5px 3px 5px 7px;
+	margin-left: -6px;
+	position: absolute;
+}
+
+.characterContent {
+	float: right;
+	font-family: PingFangSC;
+	font-size: 15px;
+	line-height: 1.4;
+	letter-spacing: 1.2px;
+	text-align: left;
+	color: #565656;
+	width: 80%;
+	height: 35px;
+	margin-top: 5px;
+}
+
+.horizontalLine {
+	height: 1px;
+	margin: 0 8px 0 13px;
+	background: #ededed;
+}
+
+.education-section {
+	margin-top: 15px;
+	overflow: hidden;
+	padding-bottom: 25px;
+}
+
+.educationLable {
+	float: left;
+	height: 81px;
+	border-radius: 3px;
+	background-color: #8ed85c;
+	width: 12%;
+	font-family: PingFangSC;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: 3.2px;
+	text-align: center;
+	color: #ffffff;
+	padding: 37px 3px 15px 7px;
+	margin-left: -6px;
+	position: absolute;
+}
+
+.educationContent {
+	float: right;
+	width: 80%;
+}
+
+.ways {
+	margin-top: 3px;
+}
+
+.constraints {
+	font-size: 12px;
+	line-height: 1.5;
+	letter-spacing: 0.7px;
+	text-align: justify;
+	color: #ff6123;
+}
+
+.freestyle {
+	font-size: 12px;
+	line-height: 1.5;
+	letter-spacing: 0.7px;
+	text-align: justify;
+	color: #4faeff;
+}
+
+.proportion {
+	display: inline-block;
+	height: 4px;
+	border-radius: 2px;
+	background-color: #8ed85c;
+	width: 60%;
+	margin-bottom: 2px;
+}
+
+.value {
+	width: 12px;
+	height: 12px;
+	border-radius: 7px;
+	background-color: #76c143;
+	margin-top: -4px;
+	margin-left: 60%;
+}
+
+.educationContentDeatil {
+	margin-top: 15px;
+	font-family: PingFangSC;
+	font-size: 15px;
+	line-height: 1.4;
+	letter-spacing: 1.2px;
+	text-align: justify;
+	color: #565656;
+	margin-right: 20px;
+}
+
+.goAbroad-section {
+	margin-top: 15px;
+	overflow: hidden;
+	padding-bottom: 30px;
+}
+
+.goAbroadLable {
+	float: left;
+	height: 80px;
+	border-radius: 3px;
+	background-color: #6bd4ab;
+	width: 12%;
+	font-family: PingFangSC;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 3.2px;
+	text-align: center;
+	color: #ffffff;
+	padding: 60px 3 40px 7px;
+	margin-left: -6px;
+	position: absolute;
+}
+
+.goAbroadContent {
+	float: right;
+	width: 80%;
+}
+
+.ways {
+	margin-top: 3px;
+}
+
+.constraints {
+	font-size: 12px;
+	line-height: 1.5;
+	letter-spacing: 0.7px;
+	text-align: justify;
+	color: #ff6123;
+}
+
+.goAbroadContentDeatil {
+	margin-top: 15px;
+	font-family: PingFangSC;
+	font-size: 15px;
+	line-height: 1.4;
+	letter-spacing: 1.2px;
+	text-align: justify;
+	color: #565656;
+	margin-right: 20px;
+}
+
+.employment-section {
+	margin-top: 15px;
+	overflow: hidden;
+	padding-bottom: 35px;
+}
+
+.employmentLabe {
+	float: left;
+	height: 50px;
+	border-radius: 3px;
+	background-color: #7aa0ff;
+	width: 12%;
+	font-family: PingFangSC;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: 3.2px;
+	text-align: center;
+	color: #ffffff;
+	padding: 10px 3px 15px 7px;
+	margin-left: -6px;
+	position: absolute;
+}
+
+.employmentContentDetail {
+	float: right;
+	width: 75%;
+	margin-top: 15px;
+	font-family: PingFangSC;
+	font-size: 15px;
+	line-height: 1.4;
+	letter-spacing: 1.2px;
+	text-align: justify;
+	color: #565656;
+	margin-right: 20px;
+}
+
+
+/*other-section  */
+
+.other-section {
+	padding: 15px 6px 0 5px;
+}
+
+.detailSection {
+	padding: 8px 7px 10px 7px;
+	background: url('../img/jieguokuang2.png') no-repeat;
+	background-size: 100% 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.personality-section {
+	border-radius: 10px;
+	height: auto;
+	padding: 4px 4px 5px 5px;
+	background-color: #fff;
+}
+
+.personalityLabel {
+	height: 38px;
+	border-radius: 3px;
+	background-color: #4faeff;
+	width: 27%;
+	font-family: PingFangSC;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 38px;
+	letter-spacing: 1.2px;
+	text-align: center;
+	color: #ffffff;
+	margin-top: 10px;
+	float: left;
+	margin-left: -13px;
+}
+
+.neizai {
+	padding: 10px 0 0 12px;
+}
+
+.personalityLabel01 {
+	border-radius: 3px;
+	color: #5fb2ed;
+	border: solid 1px #5fb2ed;
+	width: 35px;
+	height: 23px;
+	font-family: PingFangSC;
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.personalityContent01 {
+	font-family: PingFangSC;
+	font-size: 15px;
+	line-height: 1.4;
+	letter-spacing: 1.2px;
+	text-align: justify;
+	color: #565656;
+	margin-top: 5px;
+	margin-right: 9px;
+}
+
+.waizai {
+	padding: 10px 0 0 12px;
+}
+
+.personalityLabel02 {
+	border-radius: 3px;
+	color: #ff7563;
+	border: solid 1px #ff7563;
+	width: 35px;
+	height: 23px;
+	font-family: PingFangSC;
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.personalityContent02 {
+	font-family: PingFangSC;
+	font-size: 15px;
+	line-height: 1.4;
+	letter-spacing: 1.2px;
+	text-align: justify;
+	color: #565656;
+	margin-top: 5px;
+	margin-right: 9px;
+	padding-bottom: 5px;
+}
+
+.parentsLabel {
+	height: 38px;
+	border-radius: 3px;
+	background-color: #4faeff;
+	width: 27%;
+	font-family: PingFangSC;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 38px;
+	letter-spacing: 1.2px;
+	text-align: center;
+	color: #ffffff;
+	margin-top: 10px;
+	float: left;
+	margin-left: -13px;
+}
+
+.parents-section {
+	border-radius: 10px;
+	height: auto;
+	padding: 4px 4px 5px 5px;
+	background-color: #fff;
+}
+
+.parentsContent {
+	padding: 10px 0 5px 12px;
+	font-family: PingFangSC;
+	font-size: 15px;
+	line-height: 1.4;
+	letter-spacing: 1.2px;
+	text-align: justify;
+	color: #565656;
+	margin-top: 5px;
+	margin-right: 9px;
+}
+
+.detaiSection01 {
+	border-radius: 10px;
+	height: auto;
+	padding: 4px 4px 5px 5px;
+	background-color: #fff;
+}
+
+.detaiSection02 {
+	height: 38px;
+	border-radius: 3px;
+	background-color: #4faeff;
+	width: 27%;
+	font-family: PingFangSC;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 38px;
+	letter-spacing: 1.2px;
+	text-align: center;
+	color: #ffffff;
+	margin-top: 10px;
+	float: left;
+	margin-left: -13px;
+}
+
+.detaiSection03 {
+	padding: 10px 0 5px 12px;
+	font-family: PingFangSC;
+	font-size: 15px;
+	line-height: 1.4;
+	letter-spacing: 1.2px;
+	text-align: justify;
+	color: #565656;
+	margin-top: 5px;
+	margin-right: 9px;
+}
+.copyright {
+	font-size: 11px;
+	font-family: PingFangSC;
+	color: #084032;
+	width: 100%;
+	text-align: center;
+	margin-top: 9px;
+	margin-bottom: 10px;
+
+}
+.bottom-banner {
+    margin: 15px 10px 0 10px;
+    height: 78px;
+    background-image: url('../img/bottom-banner.jpg');
+    background-size: 100% 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.homeResultShow {
+    display: none;
+}
+.iphoneXAdaptation {
+    height: 24px;
+    width: 100%;
+    display: none;
+}
+@media screen and (min-width: 310px) and (max-width: 359px) {
+	.birthDateContent  {
+		margin-left: 11px;
+	}
+	.birthPlaceContent {
+		margin-left: 11px;
+		width: 61%;
+	}
+	.characterLebal {
+		font-size: 11px;
+	}
+
+	.goAbroadLable {
+		padding: 53px 0 43px 10px;
+		line-height: 1.3;
+	}
+	.cornerImg04 {
+		margin-top: 174px;
+	}
+	.characterLabe {
+		height: 52px;
+		padding: 14px 5px 8px 5px;
+	}
+	.cornerImg02 {
+		margin-top: 71px;
+	}
+	.character-section {
+		padding-bottom: 42px;
+	}
+}

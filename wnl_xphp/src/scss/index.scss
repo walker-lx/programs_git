@@ -1,0 +1,59 @@
+.index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  .header-content {
+    min-height: 2.114rem;
+    margin: 0.6rem 0.5rem 0 0.54rem;
+  }
+  .desc-info-content {
+    position: relative;
+    min-height:6.12rem;
+    margin: 0.9rem 0.21rem 0 0.21rem;
+    .btn {
+      position: absolute;
+      bottom: 0.54rem;
+      left: 0;
+      right: 0;
+      width: 4.4rem;
+      margin: 0 auto;
+    }
+  }
+  .mxhp-content {
+    position: relative;
+    min-height: 4.24rem;
+    margin: 0.45rem .21rem 0 .21rem;
+    .btn {
+      position: absolute;
+      bottom: .45rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 2.58rem;
+    }
+  }
+  .jzhp-content-index {
+    position: relative;
+    min-height: 4.1782rem;
+    margin: 0.45rem .21rem 0.89rem .21rem;
+    .btn {
+      position: absolute;
+      bottom: .45rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      height: 0.83rem;
+      width: 2.58rem;
+    }
+  }
+  .user-center-btn {
+    position: fixed;
+    bottom: 0.1rem;
+    right: 0.21rem;
+    width: 2.16rem;
+    height: 0.57rem;
+  }
+}

@@ -1,0 +1,613 @@
+body, html {
+	font-family: -apple-system, "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	width: 100%;
+	height: 100%;
+}
+body {
+	padding: 0 !important;
+	margin: 0 !important;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: none;
+	-webkit-overflow-scrolling: touch;
+	-webkit-focus-ring-color: rgba(0, 0, 0, 0);
+	outline: none;
+	position: relative;
+	z-index: 1000;
+	display: block;
+	background: url('../img/background.jpg') center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	/*color: #fff;*/
+}
+body:before {
+	content: ' ';
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url('../img/background.jpg') center 0 no-repeat;
+	background-size: cover;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+.hidden {
+	display: none !important;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+/*head_section 顶部*/
+
+.head_section {
+	width: 100%;
+	/*height: 240.5px;*/
+	position: relative;
+	text-align: center;
+	background: url('../img/title1.png') center no-repeat;
+	background-size: cover;
+}
+.head_detail {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translate(-50%);
+	transform: translate(-50%);
+	-ms-transform: translate(-50%);
+	/* IE 9 */
+	-moz-transform: translate(-50%);
+	/* Firefox */
+	-webkit-transform: translate(-50%);
+	/* Safari 和 Chrome */
+	-o-transform: translate(-50%);
+	/* Opera */
+	width: 100%;
+	font-size: 15px;
+	color: #bef4fe;
+	text-align: center;
+}
+.my_test {
+	width: 74px;
+	text-align: center;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background-color: transparent;
+	color: #fefefe;
+	font-size: 13px;
+	line-height: 15px;
+	padding: 5px 0px;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	cursor: pointer;
+}
+.inner_content {
+	margin: 0 10px;
+}
+
+/*like_section 点赞部分*/
+
+.like_section {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%);
+	transform: translate(-50%);
+	-ms-transform: translate(-50%);
+	/* IE 9 */
+	-moz-transform: translate(-50%);
+	/* Firefox */
+	-webkit-transform: translate(-50%);
+	/* Safari 和 Chrome */
+	-o-transform: translate(-50%);
+	/* Opera */
+	width: 100%;
+	/*height: 20px;*/
+	margin: 0 auto;
+	font-size: 12px;
+	text-align: center;
+	color: #8985c1;
+}
+.like_number {
+	position: absolute;
+	top: 5px;
+	left: 61%;
+}
+.user_icon {
+	width: 15px;
+	height: 15px;
+	margin: 5px 10px 0 0;
+}
+
+/*vedio_section 视频部分*/
+
+.vedio_section {
+	/*width: 355px;
+  height: 200px;*/
+	overflow: hidden;
+	text-align: center;
+	background: url('../img/vedio_frame.png') center no-repeat;
+	background-size: cover;
+	margin: 20px auto 0;
+}
+video {
+	/*height: 120px;*/
+	width: 88.5%;
+	height: 88.5%;
+	/*margin: 5px 0 0 -2px;*/
+	/*object-fit: contain;*/
+	/*display: none;*/
+}
+.video-dimensions {
+	width: 88.5%;
+	height: 80.5%;
+	margin: 20px auto 0;
+}
+.vjs-big-play-centered .vjs-big-play-button {
+	top: 50%;
+	left: 50%;
+	margin-top: -34px;
+	margin-left: -34px;
+}
+.video-js .vjs-big-play-button {
+	font-size: 40px;
+	line-height: 68px;
+	height: 68px;
+	width: 68px;
+	/*display: block;*/
+	/*position: absolute;*/
+	/*top: 10px;*/
+	/*left: 10px;*/
+	padding: 0;
+	cursor: pointer;
+	opacity: 1;
+	/*border: 0.06666em solid #fff;*/
+	/*background-color: #ffffff;*/
+	background-color: rgba(255, 255, 255, 0.3);
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 5em;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+/*personalData_section 个人资料部分*/
+
+.personalData_section {
+	text-align: center;
+	margin-top: 30px;
+	/*padding-top: 5px;*/
+}
+.data_head {
+	position: relative;
+	margin-bottom: 10px;
+	/*height: 36px;*/
+	text-align: center;
+}
+.head_title {
+	font-size: 18px;
+	color: #ffdc7f;
+	display: inline-block;
+	margin: 0px 5px 0;
+}
+.point_line {
+	width: 29.7%;
+	height: 3px;
+	padding-bottom: 5px;
+}
+.point_line_white {
+	width: 15.4%;
+	height: 2px;
+	padding-bottom: 5px;
+}
+.data_content {
+	height: 222.5px;
+	border-radius: 7px;
+	margin: 0 auto 17px;
+	padding: 5px 10px;
+	font-size: 14px;
+	background-color: #27243f;
+}
+.content_temp {
+	height: 53px;
+	border-bottom: 1px solid #3e3a5c;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.place_content {
+	height: 48px;
+	border: none;
+}
+.name_content {
+	position: relative;
+}
+.name {
+	margin: 20px 10px 5px 10px;
+	/*border-right: 1px solid #fff;*/
+	padding-right: 20px;
+	color: #fefefe;
+	font-size: 15px;
+}
+.input_name {
+	width: 100px;
+	position: absolute;
+	top: 19px;
+	left: 100px;
+	line-height: 1.6;
+	outline: 0;
+	border: 0;
+	background-color: transparent;
+	color: #fefefe;
+	font-size: 15px;
+}
+input {
+	line-height: 1.6;
+	outline: 0;
+	border: 0;
+	background-color: transparent;
+	color: #fefefe;
+	font-size: 15px;
+}
+select {
+	border: none;
+	outline: none;
+	/*将默认的select选择框样式清除*/
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+}
+.placehoder {
+	width: 60%;
+	margin: 19px 10px 0 0px;
+	text-align: left;
+	cursor: pointer;
+}
+::-webkit-input-placeholder {
+	/* WebKit browsers */
+	color: #7f79af;
+	font-size: 14px;
+}
+:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #7f79af;
+	font-size: 14px;
+}
+::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #7f79af;
+	font-size: 14px;
+}
+:-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	color: #7f79af;
+	font-size: 14px;
+}
+.sex {
+	margin: 20px 0 5px 0px;
+}
+.sex_male, .sex_famale {
+    font-size: 0;
+	text-align: center;
+	width: 39px;
+	height: 22px;
+	line-height: 22px;
+	background-color: #1c1932;
+	color: #433e6a;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+}
+.sex_famale {
+	border-right: none;
+	border-radius: 15px 0 0 15px;
+}
+.sex_male {
+    display: inline-block;
+	border-radius: 0 15px 15px 0;
+}
+.sex_type {
+    display: inline-block;
+	vertical-align: middle;
+    font-size: 9px;
+}
+.sex_famale .sex_type{
+    margin-right: -2px;
+}
+.sex_icon {
+	width: 8px;
+	height: 8px;
+	margin-right: 2px;
+	vertical-align: middle;
+}
+.sex_male .sex_icon{
+    margin-left: -2px;
+}
+.on {
+	background-color: #ff8a01;
+	color: white;
+}
+.dw-i {
+	text-align: center;
+}
+
+/*查看按钮*/
+
+.free_submit {
+	margin: 0 auto 20px;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+	background-color: #ffbd55;
+	font-size: 18px;
+	padding: 11px 0;
+	line-height: 18px;
+}
+
+/*prompt_section 提示部分*/
+
+.prompt_section {
+	cursor: pointer;
+}
+.prompt_title {
+	/*width: 50%;*/
+	margin: 0 auto 40px;
+	text-align: center;
+	font-size: 13px;
+	color: #3ceaff;
+}
+.prompt_explain {
+	z-index: 1002;
+	width: 89.3%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -44.7%;
+	display: none;
+}
+.close_img {
+	background: url('../img/close.png') center no-repeat;
+	background-size: cover;
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	top: -10px;
+	right: -10px;
+}
+.explain_title {
+	height: 66.5px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 66.5px;
+	color: #ffffff;
+	background-color: #16add9;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.explain_content {
+	background-color: #dfdfdf;
+	padding: 15px 23.5px 20px 20.5px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font-size: 14px;
+	line-height: 18px;
+	color: #535353;
+}
+
+/*disc_section 合盘部分*/
+
+.disc_section {
+	margin: 0 auto;
+	border-radius: 15px;
+	background: url('../img/background_bottom.png') center no-repeat;
+	background-size: cover;
+	padding-top: 40px;
+}
+.disc_title {
+	text-align: center;
+	font-size: 18px;
+	line-height: 1.3;
+	color: #fef3a9;
+}
+.text_2 {
+	margin: 10px auto 24.5px;
+	font-size: 16px;
+}
+.disc_section .data_head {
+	margin: 0 auto 15px;
+}
+.disc_section .head_title {
+	color: #ffffff;
+}
+.disc_section .point_line {
+	background-color: #ffffff;
+}
+.clear_float:after {
+	clear: both;
+	content: '\0020';
+	display: block;
+	visibility: hidden;
+	height: 0;
+}
+.disc_content {
+	/*display: box;               
+    display: -webkit-box;       
+    display: -webkit-flex;      
+    display: flex; 
+
+    -webkit-box-pack: space-around;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: center;
+     justify-content: space-around;
+     
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;*/
+	padding: 0 10px;
+}
+.disc_temp {
+	/*position: relative;*/
+	float: left;
+	margin-bottom: 10px;
+	/*margin-right: 9px;*/
+}
+.disc_temp.right {
+	margin-left: 20px;
+}
+.temp_img {
+	/*width: 162px;
+    height: 100px;*/
+	/*border: 1px solid #fff;*/
+	width: 100%;
+	height: 100%;
+}
+.temp_img_1 {
+	background: url('../img/temp_img_1.png') center no-repeat;
+	background-size: cover;
+}
+.temp_img_2 {
+	background: url('../img/temp_img_2.png') center no-repeat;
+	background-size: cover;
+}
+.temp_img_3 {
+	background: url('../img/temp_img_3.png') center no-repeat;
+	background-size: cover;
+}
+.temp_img_4 {
+	background: url('../img/temp_img_4.png') center no-repeat;
+	background-size: cover;
+}
+.temp_img_5 {
+	background: url('../img/temp_img_5.png') center no-repeat;
+	background-size: cover;
+}
+.temp_img_6 {
+	background: url('../img/temp_img_6.png') center no-repeat;
+	background-size: cover;
+}
+.mask, .index_mask {
+	z-index: 1001;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	display: none;
+	cursor: pointer;
+}
+.index_mask {
+	background: #fff;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	display: block;
+}
+@-webkit-keyframes rotation {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+.loading, .index_loading {
+	-webkit-transform: rotate(360deg);
+	-webkit-animation: rotation 1s linear infinite;
+	-moz-animation: rotation 1s linear infinite;
+	-o-animation: rotation 1s linear infinite;
+	animation: rotation 1s linear infinite;
+	background: url('../img/loading.png') center no-repeat;
+	background-size: cover;
+	width: 24px;
+	height: 24px;
+	z-index: 1002;
+	margin: 0 auto;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -7.5px 0 0 -7.5px;
+	display: none;
+}
+.index_loading {
+	background: url('../img/loading.gif') center no-repeat;
+	background-size: cover;
+	display: block;
+}
+#toast {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	line-height: 37px;
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+	opacity: 0;
+	border-radius: 10px;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 0 10px;
+	z-index: 9999;
+	/*The good stuff */
+	-webkit-transition: opacity 0.5s ease-out;
+	/* Saf3.2+, Chrome */
+	-moz-transition: opacity 0.5s ease-out;
+	/* FF4+ */
+	-ms-transition: opacity 0.5s ease-out;
+	/* IE10? */
+	-o-transition: opacity 0.5s ease-out;
+	/* Opera 10.5+ */
+	transition: opacity 0.5s ease-out;
+}
+#toast1 {
+	font-size: 16px;
+	font-weight: 500;
+	padding: 0 10px;
+	visibility: hidden;
+	white-space: nowrap;
+}
+
+/* iphone5 */
+
+@media screen and (min-width: 310px) and (max-width: 359px) {
+	.head_detail {
+		bottom: 40px;
+	}
+	.like_section {
+		bottom: 12px;
+	}
+	.video-dimensions {
+		height: 79.3%;
+	}
+}
+
+/* iphone6 */
+
+@media screen and (min-width: 370px) and (max-width: 410px) {
+	.input_name {
+		width: 140px;
+	}
+}
+
+/* iphone6p */
+
+@media screen and (min-width: 410px) and ( max-width: 470px) {
+	.input_name {
+		width: 170px;
+	}
+	.video-dimensions {
+		margin-top: 22px;
+	}
+}

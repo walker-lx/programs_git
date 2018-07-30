@@ -1,0 +1,252 @@
+@import "reset";
+@import "font";
+@import "html5";
+@import "indexPage";
+@import "freePage";
+@import "star";
+.container {
+  position: relative;
+  z-index: 0;
+  bottom: 0.05rem;
+  margin: 0.05rem;
+  margin-top: 0.10rem;
+  border-radius: 0.02rem;
+  background-color: #ffffff;
+  box-shadow: 0 0.01rem 0.02rem 0 rgba(0, 0, 0, 0.1);
+  @extend .font_15;
+}
+
+.monthBg {
+  position: absolute;
+  bottom: 0.05rem;
+  z-index: 1;
+  top: 0;
+  right: 0.10rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  text-align: center;
+  @extend .font_15;
+  color: #FFFFFF;
+  background-image: url(../images/monthBg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.35rem 0.35rem;
+  span {
+    position: absolute;
+    top: 0.06rem;
+    left: 0;
+    height: 0.19rem;
+    width: 0.35rem;
+    text-align: center;
+    line-height: 0.19rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+a[target="_blank"] {
+  display: none;
+}
+
+.mask {
+  opacity: 0;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+#toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  line-height: 37px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 10px;
+  z-index: 9999;
+  /*The good stuff */
+  -webkit-transition: opacity 0.5s ease-out;
+  /* Saf3.2+, Chrome */
+  -moz-transition: opacity 0.5s ease-out;
+  /* FF4+ */
+  -ms-transition: opacity 0.5s ease-out;
+  /* IE10? */
+  -o-transition: opacity 0.5s ease-out;
+  /* Opera 10.5+ */
+  transition: opacity 0.5s ease-out;
+}
+
+#toast1 {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 10px;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.circleMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.circleMaskBackground {
+  z-index: 9997;
+  position: fixed;
+  opacity: 0.3;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #000000;
+}
+
+.circleMaskImage {
+  z-index: 9999;
+  width: 22px;
+  height: 22px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -11px;
+  margin-left: -11px;
+  background: url("../images/h5-loading-icon@3x.png") no-repeat center;
+  background-size: cover;
+  animation: circle 1s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+}
+
+.circleMaskContent {
+  z-index: 9998;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  background-color: #ffffff;
+  opacity: 1;
+  border-radius: 7px;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  67% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.jumpOut {
+  animation: jumpout 0.33s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+}
+
+@keyframes jumpout {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* 热门测算专区 */
+
+.hot-cesuan-area {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #FFE3CB;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.hot-cesuan-header {
+  width: 92px;
+  margin: 15px auto 0 auto;
+}
+
+.hot-cesuan-header img {
+  width: 100%;
+  height: 100%;
+}
+
+.hot-cesuan-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -moz-flex;
+  display: flex;
+  width: 100%;
+  padding: 15px 0 0 0;
+  box-sizing: border-box;
+  /* justify-content: space-between; */
+  -webkit-flex-wrap: wrap;
+  -webkit-box-lines: multiple;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hot-cesuan-item {
+  width: 25%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hot-cesuan-item-header {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+}
+
+.hot-cesuan-item-header img {
+  height: 100%;
+  width: 100%;
+}
+
+.hot-cesuan-item-footer {
+  font-size: 13px;
+  color: #333;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+@media only screen and (max-device-width: 320px) {
+  .hot-cesuan-content {
+    padding: 12px 0 0 0;
+  }
+  .hot-cesuan-item {
+    margin-bottom: 15px;
+  }
+  .hot-cesuan-item-footer {
+    font-size: 12px;
+  }
+}

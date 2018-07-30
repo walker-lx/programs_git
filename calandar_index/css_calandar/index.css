@@ -1,0 +1,2299 @@
+body,
+html {
+  /*font-family:"San Francisco Display","pingfang", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  /*font-family: "PingHei",  "Helvetica Neue", "Helvetica", "Arial", sans-serif;*/
+  /*font-family: -apple-system, "苹方-简", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", "微软雅黑", sans-serif;*/
+  /*font-family: -apple-system, "PingFang SC", "STHeitiSC", "PingFangSC-Regular";*/
+  /*font-family: "PingFang SC", "苹方-简", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", sans-serif;*/
+  font-family: -apple-system, 'SF Pro SC', 'HanHei SC', 'SF Pro Text', 'Myriad Set Pro', 'SF Pro Icons',
+    'Apple Legacy Chevron', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'Arial', '微软雅黑', sans-serif;
+}
+
+/*   drawToast  */
+
+#toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  line-height: 37px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 10px;
+  z-index: 99999;
+  /*The good stuff */
+  -webkit-transition: opacity 0.5s ease-out;
+  /* Saf3.2+, Chrome */
+  -moz-transition: opacity 0.5s ease-out;
+  /* FF4+ */
+  -ms-transition: opacity 0.5s ease-out;
+  /* IE10? */
+  -o-transition: opacity 0.5s ease-out;
+  /* Opera 10.5+ */
+  transition: opacity 0.5s ease-out;
+}
+
+#toast1 {
+  position: fixed;
+  bottom: 0;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 10px;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none;
+  -webkit-overflow-scrolling: touch;
+  -webkit-focus-ring-color: rgba(0, 0, 0, 0);
+  outline: none;
+  background-color: #ffffff;
+}
+
+html.noscroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+#cnzz_stat_icon_1260066306 {
+  display: none;
+}
+
+a[title='站长统计'] {
+  display: none;
+}
+
+/*.wxLink:hover .wxQRCode{
+	display:block;
+
+}*/
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+#cnzz_stat_icon_1260066306 {
+  display: none;
+}
+
+.main {
+  width: 100%;
+}
+
+.topBanner {
+  width: 100%;
+  position: relative;
+}
+
+.firstLevel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0.05;
+  filter: alpha(opacity=5);
+  background-image: url('../img_calandar/mask.png');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 6px 6px;
+}
+
+.secondLevel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: #ffffff;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.thirdLevel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.thirdLevel.index {
+  background-image: url('../img_calandar/h-pp4.jpg');
+  background-size: 1920px 1200px;
+}
+
+.thirdLevel.about {
+  background-image: url('../img_calandar/PP1.jpg');
+  background-size: 1920px 1080px;
+}
+
+.thirdLevel.cooperate {
+  background-image: url('../img_calandar/PP2.jpg');
+  background-size: 1920px 1080px;
+  background-position: center 40%;
+}
+
+.thirdLevel.job {
+  background-image: url('../img_calandar/PP3.jpg');
+  background-size: 1920px 1080px;
+  background-position: center 40%;
+}
+
+.thirdLevel.news {
+  background-image: url('../img_calandar/PP1.jpg');
+  background-size: 1920px 1080px;
+  background-position: center 40%;
+}
+
+.thirdLevel.recruit {
+  background-image: url('../img_calandar/PP3.jpg');
+  background-size: 1920px 1080px;
+}
+
+.fourthLevel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 97;
+  background-color: #d93448;
+}
+
+.topBannerContent {
+  width: 940px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 111;
+}
+
+.navContent {
+  width: 100%;
+  height: 68px;
+  padding-top: 15px;
+}
+
+.wnlIcon {
+  float: left;
+  width: 60px;
+  height: 60px;
+  background-image: url('../img_calandar/logo-icon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+}
+
+.wnlTxt {
+  float: left;
+  width: 145px;
+  height: 68px;
+  margin-left: 30px;
+  background-image: url('../img_calandar/wnl-words.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 145px 40px;
+}
+
+.navList {
+  float: right;
+  height: 68px;
+}
+
+.navLink {
+  float: left;
+  height: 68px;
+  color: #ffffff;
+  padding-top: 26px;
+  font-size: 14px;
+}
+
+.navLink + .navLink {
+  margin-left: 50px;
+}
+
+.navLinkActive {
+  width: 100%;
+  height: 2px;
+  margin-top: 5px;
+  background-color: #ffffff;
+  display: none;
+}
+
+.navLink.active .navLinkActive {
+  display: block;
+}
+
+.loginLink {
+  display: none;
+  float: left;
+  margin-left: 60px;
+  margin-top: 19px;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 84px;
+}
+
+.wnlDescTxt {
+  margin: 80px auto 40px;
+  font-size: 60px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.wnlDownloadContent {
+  width: 636px;
+  height: 50px;
+  margin: 0 auto 40px;
+}
+
+.wnlDownloadContent a {
+  float: left;
+  width: 190px;
+  height: 50px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
+.iosLink {
+  margin-left: 30px;
+}
+
+.androidLink {
+  margin-left: 30px;
+}
+
+.downloadLinkIcon {
+  float: left;
+  width: 66px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+.webIcon {
+  background-image: url('../img_calandar/web-icon.png');
+}
+
+.iosIcon {
+  background-image: url('../img_calandar/apple-icon.png');
+}
+
+.androidIcon {
+  background-image: url('../img_calandar/and-icon.png');
+}
+
+.downloadLinkTxt {
+  float: right;
+  width: 123px;
+  height: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  border-left: 1px solid #ffffff;
+  font-weight: 300;
+}
+
+.descContent {
+  width: 700px;
+  height: 50px;
+  margin: 0 auto;
+  padding-bottom: 87px;
+}
+
+.descContent > div {
+  width: 220px;
+  height: 50px;
+  float: left;
+}
+
+.descDom2,
+.descDom3 {
+  margin-left: 20px;
+}
+
+.leftDescDom,
+.rightDescDom {
+  width: 25px;
+  height: 50px;
+  float: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px 50px;
+}
+
+.leftDescDom {
+  background-image: url('../img_calandar/home-tt-l.png');
+}
+
+.rightDescDom {
+  background-image: url('../img_calandar/home-tt-r.png');
+}
+
+.descTxtDom {
+  float: left;
+  width: 170px;
+  height: 50px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  /*font-weight: lighter;*/
+}
+
+.descTxtDom2 {
+  margin-top: 4px;
+}
+
+.descTxtDom.light {
+  font-weight: 300;
+}
+
+.wnlDesc1 {
+  width: 940px;
+  height: 400px;
+  margin: 80px auto 0;
+  border-bottom: 2px solid #dfdfdf;
+}
+
+.wnlLeftTxt1 {
+  float: left;
+  margin-left: 40px;
+  margin-top: 90px;
+  max-width: 460px;
+}
+
+.nongliIconContent {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.nongliIcon1 {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-image: url('../img_calandar/icon01.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 37px 40px;
+}
+
+.nongliIcon2 {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  background-image: url('../img_calandar/icon02.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+
+.noneliTitle {
+  font-size: 32px;
+  color: #111111;
+  line-height: 1.25em;
+  margin-bottom: 20px;
+}
+
+.nongliDesc {
+  font-size: 20px;
+  color: #999999;
+  line-height: 1.5em;
+}
+
+.wnlRightImg {
+  float: right;
+  width: 320px;
+  height: 400px;
+  background-image: url('../img_calandar/home-sm-img01.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 320px 663px;
+}
+
+.wnlDesc2 {
+  position: relative;
+  width: 940px;
+  height: 400px;
+  margin: 80px auto 0;
+  border-bottom: 2px solid #dfdfdf;
+}
+
+.wnlToolImg1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 282px;
+  height: 251px;
+  background-image: url('../img_calandar/home-sm-img02c.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 282px 453px;
+}
+
+.wnlToolImg2 {
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+  z-index: 11;
+  width: 282px;
+  height: 311px;
+  background-image: url('../img_calandar/home-sm-img02b.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 282px 453px;
+}
+
+.wnlToolImg3 {
+  position: absolute;
+  left: 120px;
+  bottom: 0;
+  z-index: 12;
+  width: 282px;
+  height: 400px;
+  background-image: url('../img_calandar/home-sm-img02a.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 282px 502px;
+}
+
+.shadowLeft1 {
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  z-index: 12;
+  width: 20px;
+  height: 251px;
+  background-image: url('../img_calandar/home-shadow-l.png');
+  background-position: 0 0;
+  background-repeat: repeat-y;
+  background-size: 20px 1px;
+}
+
+.shadowLeft2 {
+  position: absolute;
+  left: 100px;
+  bottom: 0;
+  z-index: 12;
+  width: 20px;
+  height: 311px;
+  background-image: url('../img_calandar/home-shadow-l.png');
+  background-position: 0 0;
+  background-repeat: repeat-y;
+  background-size: 20px 1px;
+}
+
+.wnlDescTxt2 {
+  float: right;
+  max-width: 460px;
+  margin: 90px 40px 90px 0;
+}
+
+.toolIconContent {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.toolIcon1 {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-image: url('../img_calandar/icon03.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+
+.toolIcon2 {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin: 0 20px;
+  background-image: url('../img_calandar/icon04.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px 35px;
+}
+
+.toolIcon3 {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-image: url('../img_calandar/icon05.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+
+.toolTitle {
+  font-size: 32px;
+  color: #111111;
+  line-height: 1.25em;
+  margin-bottom: 20px;
+}
+
+.toolDesc {
+  font-size: 20px;
+  color: #999999;
+  line-height: 1.5em;
+}
+
+.wnlDesc3 {
+  position: relative;
+  width: 940px;
+  height: 400px;
+  margin: 80px auto 0;
+  border-bottom: 2px solid #dfdfdf;
+}
+
+.wnlDescTxt3 {
+  float: left;
+  margin-left: 40px;
+  margin-top: 90px;
+  max-width: 460px;
+}
+
+.cardIconContent {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.cardIcon1 {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  background-image: url('../img_calandar/icon06.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px 31px;
+}
+
+.cardIcon2 {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-image: url('../img_calandar/icon07.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px 34px;
+}
+
+.cardIcon3 {
+  float: left;
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  background-image: url('../img_calandar/icon08.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px 32px;
+}
+
+.cardTitle {
+  font-size: 32px;
+  color: #111111;
+  line-height: 1.25em;
+  margin-bottom: 20px;
+}
+
+.cardDesc {
+  font-size: 20px;
+  color: #999999;
+  line-height: 1.5em;
+}
+
+.wnlCardImg1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 282px;
+  height: 251px;
+  background-image: url('../img_calandar/home-sm-img03c.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 282px 453px;
+}
+
+.wnlCardImg2 {
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  z-index: 11;
+  width: 282px;
+  height: 311px;
+  background-image: url('../img_calandar/home-sm-img03b.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 282px 453px;
+}
+
+.wnlCardImg3 {
+  position: absolute;
+  right: 120px;
+  bottom: 0;
+  z-index: 12;
+  width: 282px;
+  height: 400px;
+  background-image: url('../img_calandar/home-sm-img03a.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 282px 502px;
+}
+
+.shadowRight1 {
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+  z-index: 12;
+  width: 20px;
+  height: 251px;
+  background-image: url('../img_calandar/home-shadow-r.png');
+  background-position: 0 0;
+  background-repeat: repeat-y;
+  background-size: 20px 1px;
+}
+
+.shadowRight2 {
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  z-index: 12;
+  width: 20px;
+  height: 311px;
+  background-image: url('../img_calandar/home-shadow-r.png');
+  background-position: 0 0;
+  background-repeat: repeat-y;
+  background-size: 20px 1px;
+}
+
+.secondBanner {
+  position: relative;
+  margin-top: 80px;
+  width: 100%;
+  height: 600px;
+}
+
+.thirdLevel.bottom {
+  background-image: url('../img_calandar/rm1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2000px 1333px;
+}
+
+.maskContent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  background: #ffffff;
+}
+
+.secondBannerContent {
+  padding-top: 190px;
+  position: relative;
+  z-index: 100;
+}
+
+.richengIcon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-image: url('../img_calandar/icon09.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+}
+
+.richengTitle1 {
+  font-size: 40px;
+  color: #ffffff;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.richengTitle2 {
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bottomBanner {
+  width: 100%;
+  background-color: #d93448;
+}
+
+.bottomWNLIcon {
+  width: 60px;
+  height: 60px;
+  padding-top: 40px;
+  margin: 0 auto;
+  background-image: url('../img_calandar/foot-logo.png');
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+}
+
+.socialListContent {
+  position: relative;
+  width: 150px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 20px 0 40px;
+}
+
+.socialListContent a {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+.wxLink {
+  background-image: url('../img_calandar/foot-wx-icon.png');
+}
+
+.qqLink {
+  margin-left: 10px;
+  background-image: url('../img_calandar/foot-qq-icon.png');
+}
+
+.wbLink {
+  margin-left: 10px;
+  background-image: url('../img_calandar/foot-wb-icon.png');
+}
+
+.emailLink {
+  margin-left: 10px;
+  background-image: url('../img_calandar/foot-mail-icon.png');
+}
+
+.qunContent {
+  position: absolute;
+  left: -40px;
+  top: 80px;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  background-color: #ffffff;
+  color: #d93448;
+  text-align: center;
+  z-index: 1000;
+}
+
+.qunContent:before {
+  content: '';
+  position: absolute;
+  left: 80px;
+  top: -26px;
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent;
+  border-bottom: 26px solid #ffffff;
+  border-right: 13px solid transparent;
+}
+
+.rightTxt {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: #dfdfdf;
+}
+
+.copyright,
+.goverment {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0 0;
+  font-size: 12px;
+  color: #dfdfdf;
+}
+
+.goverment {
+  padding: 5px 0 40px;
+}
+
+.goverment a {
+  display: inline-block;
+  color: #dfdfdf;
+  padding-right: 5px;
+}
+
+.topBannerContent.about {
+  height: 400px;
+}
+
+.topBannerContent.about .wnlDescTxt {
+  margin: 80px auto 10px;
+}
+
+.wnlDescTxt_2 {
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+  padding: 0 15px;
+}
+
+.teamImg {
+  display: block;
+  width: 940px;
+  height: 470px;
+  margin: 80px auto;
+}
+
+.aboutTitle {
+  font-size: 40px;
+  color: #111111;
+  line-height: 50px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.aboutTxtContent {
+  width: 940px;
+  margin: 0 auto;
+  /*font-size: 20px;*/
+  /*color: #999999;*/
+  /*line-height: 30px;*/
+  /*text-align: justify;*/
+  margin-top: 26px;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: justify;
+  color: #999999;
+  /*padding-bottom: 40px;*/
+}
+
+.aboutTxt {
+  padding: 0 0 30px;
+}
+
+.aboutTitle1 {
+  font-size: 20px;
+  color: #111111;
+  padding-bottom: 40px;
+  text-align: left;
+}
+
+.spliteLine {
+  width: 100%;
+  height: 2px;
+  background-color: #d93448;
+}
+
+.locateIcon {
+  width: 30px;
+  height: 38px;
+  margin: 80px auto 20px;
+  background-image: url('../img_calandar/aboutus-icon01.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px 38px;
+}
+
+.addressTitle {
+  font-size: 40px;
+  color: #111111;
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+.addressText {
+  text-align: left;
+  font-size: 20px;
+  line-height: 1;
+  color: rgb(17, 17, 17);
+  margin-bottom: 30px;
+}
+
+.mapContent {
+  width: 940px;
+  height: 400px;
+  margin: 0 auto 80px;
+}
+
+.contactIcon {
+  width: 37px;
+  height: 30px;
+  margin: 80px auto 20px;
+  background-image: url('../img_calandar/aboutus-icon02.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 37px 30px;
+}
+
+.contactTitle {
+  /*width: 436px;*/
+  font-size: 40px;
+  color: #111111;
+  text-align: center;
+  margin: 20px auto 40px;
+}
+
+.contactInfo {
+  width: 440px;
+  margin: 40px auto 80px;
+}
+
+.contactLine {
+  width: 100%;
+  height: 21px;
+}
+
+.contactLine + .contactLine {
+  margin-top: 13px;
+}
+
+.contactLine > div {
+  float: left;
+}
+
+.contactInfo1 {
+  font-size: 20px;
+  color: #d93448;
+  line-height: 20px;
+  text-align: left;
+}
+
+.contactSplite {
+  width: 2px;
+  height: 18px;
+  margin: 1px 20px;
+  background-color: #d93448;
+}
+
+.contactInfo2 {
+  font-size: 20px;
+  color: #999999;
+  line-height: 20px;
+  text-align: left;
+}
+
+.cooperateTitle {
+  font-size: 40px;
+  color: #111111;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.cooperateTxt {
+  width: 940px;
+  margin: 40px auto;
+  font-size: 20px;
+  color: #999999;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.cooperateCenter {
+  font-size: 20px;
+  line-height: 30px;
+  width: 940px;
+  text-align: left;
+  margin: 45px auto 0;
+}
+
+.cooperaterContent {
+  width: 940px;
+  height: 400px;
+  margin: 40px auto 0;
+}
+
+.cooperaterLeftContent,
+.cooperaterRightContent {
+  float: left;
+  width: 470px;
+}
+
+.cooperaterIcon {
+  width: 100%;
+  height: 160px;
+  margin-bottom: 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 160px 160px;
+}
+
+.cooperaterIcon.cooperater1 {
+  background-image: url('../img_calandar/head-img01_1.png');
+}
+
+.cooperaterIcon.cooperater2 {
+  background-image: url('../img_calandar/head-img02.png');
+}
+
+.cooperaterName {
+  text-align: center;
+  font-size: 32px;
+  color: #111111;
+  line-height: 32px;
+}
+
+.contactName {
+  text-align: center;
+  font-size: 20px;
+  color: #666666;
+  line-height: 20px;
+  margin: 10px 0;
+}
+
+.qqContact {
+  font-size: 0;
+  vertical-align: bottom;
+  text-align: center;
+  height: 20px;
+  margin: 0 auto;
+  display: block;
+}
+
+.qqContact.qqLong {
+  /*width: 204px;*/
+}
+
+.qqIcon {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-image: url('../img_calandar/b-qq-icon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+
+.qqNum {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 20px;
+  color: #666666;
+  line-height: 20px;
+}
+
+.emailContact {
+  /*width: 175px;*/
+  display: block;
+  font-size: 0;
+  vertical-align: bottom;
+  text-align: center;
+  height: 20px;
+  margin: 10px auto 0;
+}
+
+.emailContact.emailLong {
+  /*width: 316px;*/
+}
+
+.emailIcon {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-image: url('../img_calandar/b-mail-icon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 15px;
+}
+
+.emailNum {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 20px;
+  color: #666666;
+  line-height: 20px;
+}
+
+.jobContent {
+  width: 940px;
+  margin: 80px auto 80px;
+  clear: both;
+  overflow: hidden;
+}
+
+.jobLine {
+  width: 100%;
+  height: 60px;
+}
+
+.jobLine + .jobLine {
+  margin-top: 20px;
+}
+
+.jobLinkItem {
+  float: left;
+  border: 1px solid #d93448;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  width: 448px;
+  height: 58px;
+  line-height: 58px;
+  margin-bottom: 20px;
+  margin-right: 40px;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.jobLinkItem:nth-of-type(2n) {
+  margin-right: 0px;
+}
+
+/*.jobLinkItem+.jobLinkItem {
+	margin-left: 40px;
+}*/
+
+.jobIndex {
+  float: left;
+  width: 40px;
+  height: 58px;
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+  line-height: 58px;
+  background-color: #d93448;
+}
+
+.jobName {
+  float: left;
+  height: 58px;
+  font-size: 20px;
+  color: #111111;
+  /*line-height: 58px;*/
+  /*text-indent: 20px;*/
+  padding-left: 15px;
+  flex: 1;
+  -webkit-flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.jobLookDetail {
+  float: right;
+  height: 58px;
+  line-height: 58px;
+  margin-right: 20px;
+  font-size: 12px;
+  color: #999999;
+  /*display: none;*/
+  margin-left: 10px;
+}
+
+.jobEmail {
+  font-size: 20px;
+  color: #999999;
+  line-height: 30px;
+  text-align: center;
+  padding: 0 15px;
+  overflow: hidden;
+}
+
+.jobTitle {
+  margin: 80px 0 40px;
+  font-size: 40px;
+  color: #111111;
+  line-height: 40px;
+  text-align: center;
+}
+
+.BenefitsContent {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.BenefitsLine {
+  width: 100%;
+  height: 22px;
+}
+
+.BenefitsLine + .BenefitsLine {
+  margin-top: 10px;
+}
+
+.dotContent {
+  float: left;
+  width: 20px;
+  height: 22px;
+}
+
+.dotContent.bigDot {
+  width: 40px;
+}
+
+.dot {
+  background: #dfdfdf;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  margin: 8px 7px;
+}
+
+.dotContent.bigDot .dot {
+  margin: 8px 17px;
+}
+
+.BenefitName {
+  float: left;
+  width: 280px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 20px;
+  color: #999999;
+}
+
+.recruitImg {
+  display: block;
+  width: 940px;
+  height: 470px;
+  margin: 40px auto 80px;
+}
+
+.downloadMask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  opacity: 0.6;
+  background: #000000;
+}
+
+.qrcodeModal {
+  position: fixed;
+  z-index: 1000;
+  width: 300px;
+  height: 350px;
+  left: 50%;
+  margin-left: -150px;
+  top: 50%;
+  margin-top: -175px;
+  background: #ffffff;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  overflow: hidden;
+}
+
+.qrImg {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border: 0;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+.downloadTxt {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 14px;
+  color: #999999;
+}
+
+.indexContactInfo {
+  display: none;
+}
+
+.telIcon {
+  width: 37px;
+  height: 30px;
+  margin: 40px auto 20px;
+  background-image: url('../img_calandar/aboutus-icon02.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 37px 30px;
+}
+
+.contactTitle1 {
+  width: 275px;
+  margin: 0 auto;
+  font-size: 40px;
+  color: #111111;
+  line-height: 50px;
+  text-align: center;
+}
+
+.contactDetailInfo {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.contactDetailInfo1 {
+  color: #d93448;
+}
+
+.contactDetailInfo2,
+.contactDetailInfo2 a {
+  color: #999999;
+}
+
+.navMenu {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 16px;
+  left: 15px;
+  top: 42px;
+  z-index: 1000;
+}
+
+.menuLine {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.menuLine + .menuLine {
+  margin-top: 5px;
+}
+
+.firstLine.rotate {
+  -webkit-transform-origin: 15px 50%;
+  -webkit-transform: translate(0, 7px) rotate(45deg);
+  -o-transform: translate(0, 7px) rotate(45deg);
+  -moz-transform: translate(0, 7px) rotate(45deg);
+  transform: translate(0, 7px) rotate(45deg);
+}
+
+.secondLine.rotate {
+  -webkit-transform-origin: 15px 50%;
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.navWnlIcon {
+  display: none;
+  padding: 20px 0 19px;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  background-image: url('../img_calandar/logo-icon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+}
+
+.jobTitle1 {
+  display: none;
+}
+
+.ceoImgContent {
+  width: 240px;
+  height: 320px;
+  margin: 80px auto 16px;
+  background-image: url('../img_calandar/owen-img.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 240px 320px;
+}
+
+.ownName {
+  font-size: 32px;
+  line-height: 1.25;
+  color: #111111;
+  text-align: center;
+}
+
+.ceoTitle1,
+.ceoTitle2 {
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  color: #666666;
+}
+
+.ceoTitle1 {
+  margin-top: 12px;
+}
+
+.craftmarket {
+  position: relative;
+  width: 960px;
+  margin: 80px auto;
+  display: box;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.craft {
+  display: block;
+  position: relative;
+  position: relative;
+  box-sizing: border-box;
+  /* css3 rec */
+  -moz-box-sizing: border-box;
+  /* ff2 */
+  -ms-box-sizing: border-box;
+  /* ie8 */
+  -webkit-box-sizing: border-box;
+  /* safari3 */
+  -khtml-box-sizing: border-box;
+  /*/
+	/* konqueror */
+  width: 320px;
+  height: auto;
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+.craft img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.craft .product {
+  /*display: none;*/
+  box-sizing: border-box;
+  /* css3 rec */
+  -moz-box-sizing: border-box;
+  /* ff2 */
+  -ms-box-sizing: border-box;
+  /* ie8 */
+  -webkit-box-sizing: border-box;
+  /* safari3 */
+  -khtml-box-sizing: border-box;
+  /* konqueror */
+  position: absolute;
+  left: 20px;
+  bottom: -70px;
+  width: 280px;
+  color: rgba(0, 0, 0, 0.8);
+  padding-top: 5px;
+  font-size: 14px;
+}
+
+.craft .product-mask {
+  display: none;
+  box-sizing: border-box;
+  /* css3 rec */
+  -moz-box-sizing: border-box;
+  /* ff2 */
+  -ms-box-sizing: border-box;
+  /* ie8 */
+  -webkit-box-sizing: border-box;
+  /* safari3 */
+  -khtml-box-sizing: border-box;
+  /* konqueror */
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 280px;
+  color: #f6f6f6;
+  height: 50px;
+  padding-top: 5px;
+  font-size: 13px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.product a {
+  display: block;
+  height: 40px;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.product > a:hover {
+  text-decoration: underline;
+}
+
+.craft > a:hover img {
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
+}
+
+.craft > a:hover .product-mask {
+  display: block;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 4/2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2) {
+  .wnlIcon {
+    background-image: url('../img_calandar/logo-icon@2x.png');
+  }
+  .navWnlIcon {
+    background-image: url('../img_calandar/logo-icon@2x.png');
+  }
+  .wnlTxt {
+    background-image: url('../img_calandar/wnl-words@2x.png');
+  }
+  .webIcon {
+    background-image: url('../img_calandar/web-icon@2x.png');
+  }
+  .iosIcon {
+    background-image: url('../img_calandar/apple-icon@2x.png');
+  }
+  .androidIcon {
+    background-image: url('../img_calandar/and-icon@2x.png');
+  }
+  .nongliIcon1 {
+    background-image: url('../img_calandar/icon01@2x.png');
+  }
+  .nongliIcon2 {
+    background-image: url('../img_calandar/icon02@2x.png');
+  }
+  .wnlRightImg {
+    background-image: url('../img_calandar/home-sm-img01@2x.png');
+  }
+  .wnlToolImg1 {
+    background-image: url('../img_calandar/home-sm-img02c@2x.png');
+  }
+  .wnlToolImg2 {
+    background-image: url('../img_calandar/home-sm-img02b@2x.png');
+  }
+  .shadowLeft1 {
+    background-image: url('../img_calandar/home-shadow-l@2x.png');
+  }
+  .wnlToolImg3 {
+    background-image: url('../img_calandar/home-sm-img02a@2x.png');
+  }
+  .shadowLeft2 {
+    background-image: url('../img_calandar/home-shadow-l@2x.png');
+  }
+  .wnlCardImg1 {
+    background-image: url('../img_calandar/home-sm-img03c@2x.png');
+  }
+  .wnlCardImg2 {
+    background-image: url('../img_calandar/home-sm-img03b@2x.png');
+  }
+  .shadowRight1 {
+    background-image: url('../img_calandar/home-shadow-r@2x.png');
+  }
+  .wnlCardImg3 {
+    background-image: url('../img_calandar/home-sm-img03a@2x.png');
+  }
+  .shadowRight2 {
+    background-image: url('../img_calandar/home-shadow-r@2x.png');
+  }
+  .thirdLevel.index {
+    background-size: 960px 600px;
+  }
+  .thirdLevel.about {
+    background-size: 960px 540px;
+  }
+  .thirdLevel.cooperate,
+  .thirdLevel.job,
+  .thirdLevel.news {
+    background-size: 960px 540px;
+    background-position: center 40%;
+  }
+  .thirdLevel.recruit {
+    background-size: 960px 540px;
+  }
+  .thirdLevel.bottom {
+    background-size: 1000px 666px;
+  }
+  .bottomWNLIcon {
+    background-image: url('../img_calandar/foot-logo@2x.png');
+  }
+  .wxLink {
+    background-image: url('../img_calandar/foot-wx-icon@2x.png');
+  }
+  .qqLink {
+    background-image: url('../img_calandar/foot-qq-icon@2x.png');
+  }
+  .wbLink {
+    background-image: url('../img_calandar/foot-wb-icon@2x.png');
+  }
+  .emailLink {
+    background-image: url('../img_calandar/foot-mail-icon@2x.png');
+  }
+  .locateIcon {
+    background-image: url('../img_calandar/aboutus-icon01@2x.png');
+  }
+  .telIcon {
+    background-image: url('../img_calandar/aboutus-icon02@2x.png');
+  }
+  .cooperaterIcon.cooperater1 {
+    background-image: url('../img_calandar/head-img01__1@2x.png');
+  }
+  .cooperaterIcon.cooperater2 {
+    background-image: url('../img_calandar/head-img02@2x.png');
+  }
+  .leftDescDom {
+    background-image: url('../img_calandar/home-tt-l@2x.png');
+  }
+  .rightDescDom {
+    background-image: url('../img_calandar/home-tt-r@2x.png');
+  }
+  .richengIcon {
+    background-image: url('../img_calandar/icon09@2x.png');
+  }
+  .qqIcon {
+    background-image: url('../img_calandar/b-qq-icon@2x.png');
+  }
+  .emailIcon {
+    background-image: url('../img_calandar/b-mail-icon@2x.png');
+  }
+  .toolIcon1 {
+    background-image: url('../img_calandar/icon03@2x.png');
+  }
+  .toolIcon2 {
+    background-image: url('../img_calandar/icon04@2x.png');
+  }
+  .toolIcon3 {
+    background-image: url('../img_calandar/icon05@2x.png');
+  }
+  .contactIcon {
+    background-image: url('../img_calandar/aboutus-icon02@2x.png');
+  }
+  .ceoImgContent {
+    background-image: url('../img_calandar/owen-img@2x.jpg');
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+  only screen and (-o-min-device-pixel-ratio: 6/2),
+  only screen and (min--moz-device-pixel-ratio: 3),
+  only screen and (min-device-pixel-ratio: 3) {
+  .wnlIcon {
+    background-image: url('../img_calandar/logo-icon@3x.png');
+  }
+  .navWnlIcon {
+    background-image: url('../img_calandar/logo-icon@3x.png');
+  }
+  .wnlTxt {
+    background-image: url('../img_calandar/wnl-words@3x.png');
+  }
+  .webIcon {
+    background-image: url('../img_calandar/web-icon@3x.png');
+  }
+  .iosIcon {
+    background-image: url('../img_calandar/apple-icon@3x.png');
+  }
+  .androidIcon {
+    background-image: url('../img_calandar/and-icon@3x.png');
+  }
+  .nongliIcon1 {
+    background-image: url('../img_calandar/icon01@3x.png');
+  }
+  .nongliIcon2 {
+    background-image: url('../img_calandar/icon02@3x.png');
+  }
+  .wnlRightImg {
+    background-image: url('../img_calandar/home-sm-img01@2x.png');
+  }
+  .wnlToolImg1 {
+    background-image: url('../img_calandar/home-sm-img02c@2x.png');
+  }
+  .wnlToolImg2 {
+    background-image: url('../img_calandar/home-sm-img02b@2x.png');
+  }
+  .shadowLeft1 {
+    background-image: url('../img_calandar/home-shadow-l@3x.png');
+  }
+  .wnlToolImg3 {
+    background-image: url('../img_calandar/home-sm-img02a@2x.png');
+  }
+  .shadowLeft2 {
+    background-image: url('../img_calandar/home-shadow-l@3x.png');
+  }
+  .wnlCardImg1 {
+    background-image: url('../img_calandar/home-sm-img03c@2x.png');
+  }
+  .wnlCardImg2 {
+    background-image: url('../img_calandar/home-sm-img03b@2x.png');
+  }
+  .shadowRight1 {
+    background-image: url('../img_calandar/home-shadow-r@3x.png');
+  }
+  .wnlCardImg3 {
+    background-image: url('../img_calandar/home-sm-img03a@2x.png');
+  }
+  .shadowRight2 {
+    background-image: url('../img_calandar/home-shadow-r@3x.png');
+  }
+  .thirdLevel.index {
+    background-size: 960px 600px;
+  }
+  .thirdLevel.about {
+    background-size: 960px 540px;
+  }
+  .thirdLevel.cooperate,
+  .thirdLevel.job,
+  .thirdLevel.news {
+    background-size: 960px 540px;
+    background-position: center 40%;
+  }
+  .thirdLevel.recruit {
+    background-size: 960px 540px;
+  }
+  .thirdLevel.bottom {
+    background-size: 1000px 666px;
+  }
+  .bottomWNLIcon {
+    background-image: url('../img_calandar/foot-logo@3x.png');
+  }
+  .wxLink {
+    background-image: url('../img_calandar/foot-wx-icon@3x.png');
+  }
+  .qqLink {
+    background-image: url('../img_calandar/foot-qq-icon@3x.png');
+  }
+  .wbLink {
+    background-image: url('../img_calandar/foot-wb-icon@3x.png');
+  }
+  .emailLink {
+    background-image: url('../img_calandar/foot-mail-icon@3x.png');
+  }
+  .locateIcon {
+    background-image: url('../img_calandar/aboutus-icon01@3x.png');
+  }
+  .telIcon {
+    background-image: url('../img_calandar/aboutus-icon02@3x.png');
+  }
+  .cooperaterIcon.cooperater1 {
+    background-image: url('../img_calandar/head-img01_1@3x.png');
+  }
+  .cooperaterIcon.cooperater2 {
+    background-image: url('../img_calandar/head-img02@3x.png');
+  }
+  .leftDescDom {
+    background-image: url('../img_calandar/home-tt-l@2x.png');
+  }
+  .rightDescDom {
+    background-image: url('../img_calandar/home-tt-r@2x.png');
+  }
+  .richengIcon {
+    background-image: url('../img_calandar/icon09@2x.png');
+  }
+  .qqIcon {
+    background-image: url('../img_calandar/b-qq-icon@2x.png');
+  }
+  .emailIcon {
+    background-image: url('../img_calandar/b-mail-icon@2x.png');
+  }
+  .toolIcon1 {
+    background-image: url('../img_calandar/icon03@2x.png');
+  }
+  .toolIcon2 {
+    background-image: url('../img_calandar/icon04@2x.png');
+  }
+  .toolIcon3 {
+    background-image: url('../img_calandar/icon05@2x.png');
+  }
+  .contactIcon {
+    background-image: url('../img_calandar/aboutus-icon02@2x.png');
+  }
+  .ceoImgContent {
+    background-image: url('../img_calandar/owen-img@3x.jpg');
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  body {
+    overflow-x: hidden;
+  }
+  .navMenu {
+    display: block;
+  }
+  .thirdLevel.index {
+    background-image: url('../img_calandar/h-pp1.jpg');
+    background-size: 1280px 800px;
+  }
+  .topBannerContent {
+    width: 100%;
+    height: 500px;
+  }
+  .wnlTxt,
+  .navList {
+    display: none;
+  }
+  .navWnlIcon {
+    display: block;
+  }
+  .navList {
+    float: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    /*opacity: 0.89;*/
+    background-color: rgba(0, 0, 0, 0.89);
+  }
+  .navLink {
+    float: none;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    height: auto;
+    color: #ffffff;
+    height: 44px;
+    line-height: 44px;
+    padding: 0;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .navLink.cooNav {
+    width: 200px !important;
+  }
+  .navLink.cooperate,
+  .navLink,
+  .dynamics {
+    height: auto;
+  }
+  .navList .navLink.cooperate .cooMenu {
+    position: static;
+    width: 200px;
+    background: none;
+    border-radius: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+  }
+  .navList .navLink.dynamics .cooMenu {
+    position: static;
+    width: 200px;
+    background: none;
+    border-radius: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+  }
+  .navLink.cooperate .cooMenu::after,
+  .navLink.dynamics .cooMenu::after {
+    display: none;
+  }
+  .navList .cooNav:hover .cooMenu {
+    display: block !important;
+  }
+  .navList .navLink.cooperate .cooMenu a {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    height: 44px !important;
+    line-height: 44px !important;
+    text-align: center;
+    border: none;
+  }
+  .navList .navLink.dynamics .cooMenu a {
+    display: block;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    height: 44px !important;
+    line-height: 44px !important;
+    text-align: center;
+    border: none;
+  }
+  .navList .navLink .cooMenu a:hover {
+    color: #d93448;
+  }
+  .navLink + .navLink {
+    margin-left: 0;
+    margin: 0 auto;
+  }
+  .navLink.active {
+    color: #d93448;
+  }
+  .navLink.active .navLinkActive {
+    display: none;
+  }
+  .navContent {
+    padding: 20px 0 40px;
+  }
+  .wnlIcon {
+    float: none;
+    clear: both;
+    margin: 0 auto;
+  }
+  .wnlDescTxt {
+    width: 275px;
+    margin: 0 auto 28px;
+    line-height: 1em;
+    /*padding:0 15px;*/
+  }
+  .topBannerContent.about .wnlDescTxt {
+    width: auto;
+    margin: 0 auto 10px;
+  }
+  .wnlDownloadContent {
+    width: 192px;
+    height: auto;
+  }
+  .wnlDownloadContent a {
+    float: none;
+    display: block;
+  }
+  .iosLink,
+  .androidLink {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .descContent {
+    display: none;
+  }
+  .wnlDesc1,
+  .wnlDesc2,
+  .wnlDesc3 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 40px 0 0;
+    overflow-x: hidden;
+  }
+  .wnlLeftTxt1,
+  .wnlDescTxt3 {
+    float: none;
+    margin: 0 15px;
+  }
+  .wnlRightImg {
+    float: none;
+    margin: 20px auto 0;
+  }
+  .wnlToolImgList,
+  .wnlCardImgList {
+    width: 100%;
+    height: 400px;
+    margin: 20px auto 0;
+  }
+  .wnlToolImg2 {
+    left: 23px;
+  }
+  .shadowLeft1 {
+    left: 3px;
+  }
+  .wnlToolImg3 {
+    left: 63px;
+  }
+  .shadowLeft2 {
+    left: 43px;
+  }
+  .wnlDescTxt2 {
+    float: none;
+    margin: 0 15px;
+  }
+  .wnlCardImg2 {
+    right: 23px;
+  }
+  .shadowRight1 {
+    right: 3px;
+  }
+  .wnlCardImg3 {
+    right: 63px;
+  }
+  .shadowRight2 {
+    right: 43px;
+  }
+  .secondBanner {
+    margin-top: 40px;
+  }
+  .indexContactInfo {
+    display: block;
+  }
+  .teamImg {
+    width: 100%;
+    height: auto;
+    margin: 40px 0 20px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    /* css3 rec */
+    -moz-box-sizing: border-box;
+    /* ff2 */
+    -ms-box-sizing: border-box;
+    /* ie8 */
+    -webkit-box-sizing: border-box;
+    /* safari3 */
+    -khtml-box-sizing: border-box;
+    /* konqueror */
+  }
+  .aboutTitle {
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  .aboutTxtContent {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    /* css3 rec */
+    -moz-box-sizing: border-box;
+    /* ff2 */
+    -ms-box-sizing: border-box;
+    /* ie8 */
+    -webkit-box-sizing: border-box;
+    /* safari3 */
+    -khtml-box-sizing: border-box;
+    /* konqueror */
+  }
+  .locateIcon {
+    margin: 40px auto 20px;
+  }
+  .mapContent {
+    width: auto;
+    margin: 0 15px 40px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    /* css3 rec */
+    -moz-box-sizing: border-box;
+    /* ff2 */
+    -ms-box-sizing: border-box;
+    /* ie8 */
+    -webkit-box-sizing: border-box;
+    /* safari3 */
+    -khtml-box-sizing: border-box;
+    /* konqueror */
+  }
+  .aboutContactInfo {
+    display: none;
+  }
+  .jobContent {
+    width: 100%;
+    margin: 40px auto 20px;
+  }
+  .jobLine {
+    height: auto;
+  }
+  .jobLinkItem {
+    float: none;
+    display: block;
+    margin: 0 15px;
+    width: auto;
+    display: -webkit-box;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+    display: -moz-box;
+    display: -moz-flex;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .jobLinkItem + .jobLinkItem {
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+  .jobTitle {
+    display: none;
+  }
+  .jobTitle1 {
+    display: block;
+    margin: 40px auto 20px;
+    line-height: 50px;
+    font-size: 40px;
+    color: #111111;
+    text-align: center;
+  }
+  .BenefitsContent {
+    width: 100%;
+  }
+  .BenefitsLine {
+    clear: both;
+  }
+  .dotContent {
+    width: 35px;
+    margin-left: 15px;
+  }
+  .dotContent .dot {
+    margin: 8px 11px;
+  }
+  .dotContent.bigDot {
+    width: 35px;
+    clear: both;
+  }
+  .dotContent.bigDot .dot {
+    margin: 8px 11px;
+  }
+  .BenefitName {
+    width: 270px;
+    margin-bottom: 10px;
+  }
+  .recruitImg {
+    width: 100%;
+    height: auto;
+    margin: 40px 0 20px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    /* css3 rec */
+    -moz-box-sizing: border-box;
+    /* ff2 */
+    -ms-box-sizing: border-box;
+    /* ie8 */
+    -webkit-box-sizing: border-box;
+    /* safari3 */
+    -khtml-box-sizing: border-box;
+    /* konqueror */
+  }
+  .topBannerContent.about .wnlDescTxt.cooperate {
+    width: 275px;
+  }
+  .cooperateTitle {
+    margin: 40px 15px 0px;
+    /*width:100%;*/
+    /*padding:0 15px;*/
+  }
+  .cooperateTxt {
+    width: 100%;
+    margin: 20px auto 40px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    /* css3 rec */
+    -moz-box-sizing: border-box;
+    /* ff2 */
+    -ms-box-sizing: border-box;
+    /* ie8 */
+    -webkit-box-sizing: border-box;
+    /* safari3 */
+    -khtml-box-sizing: border-box;
+    /* konqueror */
+  }
+  .cooperateCenter {
+    margin: 45px auto 0;
+    width: 100% !important;
+    padding: 0 15px;
+    box-sizing: border-box;
+    /* css3 rec */
+    -moz-box-sizing: border-box;
+    /* ff2 */
+    -ms-box-sizing: border-box;
+    /* ie8 */
+    -webkit-box-sizing: border-box;
+    /* safari3 */
+    -khtml-box-sizing: border-box;
+    /* konqueror */
+  }
+  .cooperaterContent {
+    width: 100%;
+    height: auto;
+  }
+  .cooperaterLeftContent,
+  .cooperaterRightContent {
+    float: none;
+    width: 100%;
+  }
+  .emailContact {
+    margin: 10px auto 40px;
+  }
+  .addressTitle {
+    margin: 20px 15px 40px;
+  }
+  .addressText {
+    padding: 0 15px;
+  }
+  .ceoImgContent {
+    margin: 40px auto 16px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .thirdLevel.index {
+    background-size: 100% auto;
+  }
+  .thirdLevel.about {
+    background-size: 100% auto;
+  }
+  .thirdLevel.cooperate,
+  .thirdLevel.job,
+  .thirdLevel.news {
+    background-size: 100% auto;
+    background-position: center 40%;
+  }
+  .thirdLevel.recruit {
+    background-size: 100% auto;
+  }
+  .thirdLevel.bottom {
+    background-size: 100% auto;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .jobLookDetail {
+    margin-right: 10px;
+  }
+  .ceoTitle1,
+  .ceoTitle2 {
+    font-size: 18px;
+  }
+}

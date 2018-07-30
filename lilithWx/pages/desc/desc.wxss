@@ -1,0 +1,93 @@
+/* pages/desc/desc.wxss */
+Page {
+   /* background-color: #30284d;    */
+   background-attachment: fixed;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+  font-family: -apple-system, "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.backimg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(40rpx);
+  z-index: 1
+}
+.shadow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 2;
+}
+.tarot {
+  margin: 50rpx 40rpx;
+  display: flex;
+   align-items: center; 
+   z-index: 10;
+}
+.tarotpic{
+  width: 204rpx;
+  height: 356rpx;
+  border-radius: 8rpx;
+  background-size: contain;
+   z-index: 10;  
+}
+.tarot_desc {
+  font-size: 34rpx;
+  margin-left: 40rpx;
+  width: 442rpx;
+   z-index: 3;  
+}
+.tarotd {
+  display: block;
+   z-index: 3;  
+}
+.t2,.t3,.t4 {
+  margin-top: 40rpx;
+}
+.longtext {
+  margin: 38rpx 40rpx;
+  width: 670rpx;
+  height: 910rpx;
+  border: 1rpx solid #979797;
+  position: relative;
+   z-index: 3;  
+   text-overflow: ellipsis;
+}
+.longtext1 {
+  position: absolute;
+  left: 10rpx;
+  right: 10rpx;
+  height: 910rpx;
+  border-left: 1rpx solid #979797;
+  border-right: 1rpx solid #979797;  
+}
+.explan,.cards {
+  margin: 40rpx 30rpx;
+  font-size: 40rpx;
+  text-overflow: ellipsis;
+}
+.explan .explan_name {
+  margin-top: 40rpx;
+}
+.explan .explan_desc {
+  margin-top: 20rpx;
+  line-height: 1.59;
+  font-size: 34rpx;  
+}
+.cards_desc {
+  margin-top: 20rpx;
+  line-height: 1.59;
+  font-size: 34rpx;
+}

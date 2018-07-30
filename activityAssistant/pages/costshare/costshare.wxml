@@ -1,0 +1,36 @@
+<!--pages/costshare/costshare.wxml-->
+<view class='content'>
+  <view class='title'>
+    <image src='../../img/title-pic@2x.png' class='sharetitle'></image>
+    <view class='qr'></view>  
+  </view>
+  <view class='accontent'>
+    <view class='activitytime'>{{sdate}}月{{sday}}日 {{sweekday}} {{shm}}</view>
+    <view class='activityname'>{{acname}}</view>
+    <view class='activityaddr' wx:if='{{acaddr}}'>地点：<text class='addrtext'>{{acaddr}}</text></view>
+    <view class='count'>实际参与人数： {{count}}人</view>
+    <view class='totalspend'>共计花费： ￥{{totalspend}}</view>
+    <view class='avgspend'>人均： ￥{{avgspend}}</view>  
+  </view>
+
+  <view class='spenddetail'>
+    <view class='detailtext'>详细花费:</view>
+    <view class='spendlist'>
+      <view class='spenditem'>支出人</view>
+      <view class='spenditem'>支出事项</view>
+      <view class='spenditem'>支出金额</view>      
+    </view>
+    <!--花费列表  -->
+      <view wx:for='{{bill}}' wx:key='item'>
+        <view class='userspendlist'>
+          <view class='useritem'>
+            <view class='userorder'>{{index + 1}}</view>
+            <view class='username'>{{item.spender === '' ? '-' : item.spender}}</view>        
+          </view>
+          <view class='useritem'>{{item.spendItem}}</view>
+          <view class='useritem'>￥{{item.cost / 100}}</view>
+        </view>
+      </view>
+  </view>
+  <button class='share' open-type="share">马上分享</button>  
+ </view> 

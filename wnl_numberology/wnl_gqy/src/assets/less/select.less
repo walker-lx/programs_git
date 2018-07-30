@@ -1,0 +1,90 @@
+.select {
+    padding-top: 0.6rem;
+}
+
+.select-title {
+    height: 3.75rem;
+    background: url('../img/title3.png') no-repeat center;
+    background-size: 100%;
+}
+
+.select-card-list {
+    margin: 0 0.5rem;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.select-card-list.active {
+    opacity: 1;
+}
+
+.select-card {
+    width: 3.2rem;
+    height: 5.5rem;
+    background-size: 100%;
+    position: relative;
+    margin: 0 auto;
+    transform-style: preserve-3d!important;
+    border-radius: 0.3rem;
+}
+
+.select-card-p {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/card.png');
+    background-size: 100% 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px 2px #e0c6ce;
+}
+
+.select-card-n {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-image: url('../img/cards/c3.png');
+    background-size: 100% 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    border-radius: 0.3rem;
+}
+
+.select-card.active {
+    opacity: 1!important;
+}
+
+.select-col-card {
+    float: left;
+    width: 25%;
+}
+
+.select-card:not(:first-child) {
+    margin-top: 0.25rem;
+}
+
+.select-col-card:first-child,
+.select-col-card:last-child {
+    margin-top: 18%;
+}
+
+@media only screen and (max-device-height: 590px),
+screen and (max-height: 590px) {
+    .select-col-card:not(:first-child) {
+        margin-left: 0;
+    }
+}
+
+.select-tips {
+    font-size: 1.05rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 0.5rem;
+}

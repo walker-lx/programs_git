@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container index {{max==true?'max':'full'}}">
+  <view class="title">
+    <image src="../../assets/img/top-picture.jpg" mode="scaleToFill"></image>
+  </view>
+  <view class="question">
+    <image src="../../assets/img/picture2.jpg" mode="scaleToFill"></image>
+  </view>
+  <view class="feedback">
+    <view class="title">
+      <text>已有<text class="amount">{{amount}}</text>位小伙伴在这里找到了答案</text>
+    </view>
+    <view class="stage stage-1 {{showFeedback===true?'run':''}}">
+      <view class="item item-{{index+1}}" wx:for="{{feedback}}" wx:key="index">
+        <image src="../../assets/img/avator{{index+1}}.jpg"></image>
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view class="stage stage-2 {{showFeedback===true?'run':''}}">
+      <view class="item item-{{index+1}}" wx:for="{{feedback}}" wx:key="index">
+        <image src="../../assets/img/avator{{index+1}}.jpg"></image>
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="flow">
+    <image src="../../assets/img/flow.jpg" mode="scaleToFill"></image>
+  </view>
+  <view class="qq">更多测算、问题反馈，请关注微信公众号【暗月莉莉斯】</view>
+  <view class="copyright">Copyright © CALENDAR Tech. All Rights Reserved.</view>
+  <view class="btn-wrap">
+    <button class="btn-start" bindtap="start">开始占卜</button>
+  </view>
+  <view class="btn-order" bindtap="navigateToOrder" wx:if="{{process}}">我的占卜</view>
+</view>

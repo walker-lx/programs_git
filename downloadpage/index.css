@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    width: 100%;
+    overflow-y: hidden;
+}
+.swiper-slide {
+    width: 480px;
+    height: 800px;
+}
+.pic1 {
+    background: url('img/pic1.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.pic2 {
+    background: url('img/pic2.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.pic3 {
+    background: url('img/pic3.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.pic4 {
+    background: url('img/pic4.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.llsBanner {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 9999;
+    background: url('./img/download-pic@3x.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 100% 60px;
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone5 */
+    .swiper-slide {
+        width: 320px;
+        height: 568px;
+    }
+}
+@media (device-height:480px){/* 兼容iphone4s */
+    .swiper-slide {
+        width: 320px;
+        height: 480px;
+    }
+}
+@media only screen and (device-width:360px) {
+    .swiper-slide {
+        width: 360px;
+        height: 640px;
+    }
+}
+@media only screen and (device-width:375px) {
+    .swiper-slide {
+        width: 375px;
+        height: 667px;
+    }
+}

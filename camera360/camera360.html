@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <title>camera360</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #index {
+            position: relative;
+            width: 100vw;
+            /* height: 100vh; */
+            /* background-image: url('./bg.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed; */
+        }
+        .bgimg {
+            width: 100%;
+			height: auto;
+            /* height: 100%; */
+            /* overflow: hidden; */
+        }
+        /* .bg {
+            display: block;
+            width: calc(100vw - 25vw);
+            height: calc((100vw - 25vw) / 0.73);
+            margin: 16.5vh auto 15vh 10vw;
+        } */
+        .click {
+            position: absolute;
+            width: 60vw;
+            height: 11vh;
+            bottom: 33vh;
+            left: 20vw;
+        }
+        @media screen and (max-width: 355px) {
+            .click {
+                width: 180px;
+                height: 65px;
+                top: 328px;
+                left: 70px;
+            }
+        }
+		@media screen and (device-height: 480px) {
+			.click {
+                width: 180px;
+                height: 65px;
+                top: 325px;
+                left: 75px;
+            }
+        }
+		@media only screen and (min-width:360px) {
+            .click {
+                width: 215px;
+                height: 88px;
+                top: 367px;
+                left: 85px;
+            }
+        }
+		@media only screen and (min-width:412px) {
+            .click {
+                width: 225px;
+                height: 82px;
+                top: 421px;
+                left: 97px;
+            }
+        }
+		@media (min-width:412px) and (-webkit-min-device-pixel-ratio:3) {
+            .click {
+                width: 230px;
+                height: 85px;
+                top: 420px;
+                left: 95px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="index">
+        <img src="./camera360.jpg" alt="" class="bgimg">
+        <!-- <img src="./text.png" alt="" class="bg"> -->
+        <div class="click"></div>
+    </div>
+    <script>
+        var browser = {
+                isAndroid: function () {
+                    return navigator.userAgent.match(/Android/i) ? true : false;
+                },
+                isIOS: function () {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+                },
+                isWx: function () {
+                    return navigator.userAgent.match(/micromessenger/i) ? true : false;
+                },
+                isWp: function () {
+                    return ua.toLowerCase().indexOf('windows phone') > -1;
+                },
+                isWnl: function () {
+                    return ua.toLowerCase().indexOf('wnl') > -1;
+                }
+            }
+        document.getElementsByClassName('click')[0].onclick = function () {
+            if (browser.isIOS()) {
+                location.href = 'http://itunes.apple.com/cn/app/id419805549?mt=8'
+            } else {
+                location.href = 'https://qiniu.bigdata.cq-wnl.com/20488.apk'
+            }
+        }
+    </script>
+    <!-- <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1261564228'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261564228' type='text/javascript'%3E%3C/script%3E"));</script> -->
+</body>
+
+</html>

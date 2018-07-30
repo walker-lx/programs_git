@@ -1,0 +1,8 @@
+build/*
+config/*
+dist/*
+src/helper/*
+src/util/*
+node_modules/*
+static/libs/*
+.eslintcache

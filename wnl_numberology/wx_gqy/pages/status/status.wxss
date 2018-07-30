@@ -1,0 +1,66 @@
+@import '../../assets/image.wxss';
+
+.status {
+  padding-top: 100rpx;
+  background-color: #f2b2f9;
+}
+
+.title {
+  margin: 0 30rpx;
+  padding: 22rpx 0;
+  border-radius: 12rpx;
+  background-color: #d991e6;
+  font-size: 38rpx;
+  letter-spacing: 1.5rpx;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.arrows {
+  border: 10rpx solid transparent;
+  border-top: 20rpx solid #d991e6;
+  width: 0;
+  height: 0px;
+  margin-left: 80rpx;
+  margin-top: -1px;
+}
+
+.list-wrap {
+  margin: 0 10rpx;
+  padding: 60rpx 20rpx;
+  margin-top: 50rpx;
+  background-color: #fbd7ff;
+}
+
+.item {
+  border-radius: 12rpx;
+  background-color: #fdeeff;
+  display: flex;
+  align-items: center;
+  padding: 38rpx 0;
+  margin-bottom: 30rpx;
+  box-shadow: 0px 3px 7px 0px #e6b0e2;
+}
+
+.text1 {
+  font-size: 48rpx;
+  text-align: center;
+  color: #67496c;
+  margin-right: 30rpx;
+  margin-left: 52rpx;
+}
+
+.text2 {
+  font-size: 30rpx;
+  color: #ae9eb1;
+  margin-right: 72rpx;
+}
+
+.icon {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #d991e6;
+  border-radius: 50%;
+  background-size: cover;
+}

@@ -1,0 +1,73 @@
+body, html {
+  font-family: -apple-system, "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch; }
+
+body, div, img {
+  margin: 0;
+  padding: 0;
+  background-color: #292142;
+  color: #fff; }
+
+.hidden {
+  display: none !important; }
+
+a {
+  display: block;
+  color: #fff;
+  text-decoration: none; }
+
+.appicon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 52px auto 16px;
+  background-image: url("../assets/icon@2x.png");
+  background-repeat: no-repeat;
+  background-size: contain; }
+  @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+    .appicon {
+      background-image: url("../assets/icon@3x.png"); } }
+
+.appversion {
+  text-align: center; }
+
+.contact {
+  margin-top: 50px;
+  padding-left: 85px;
+  font-size: 15px; }
+  .contact .twitter {
+    padding-left: 28px;
+    background-image: url("../assets/twitterline-icon@2x.png");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: 19px 15px; }
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+      .contact .twitter {
+        background-image: url("../assets/twitterline-icon@3x.png"); } }
+  .contact .mail {
+    margin-top: 26px;
+    padding-left: 28px;
+    background-image: url("../assets/email-icon@2x.png");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: 18px 15px; }
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+      .contact .mail {
+        background-image: url("../assets/email-icon@3x.png"); } }
+
+.foot {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  font-size: 15px; }
+  .foot .companyname, .foot .companyinfo {
+    text-align: center; }
+  .foot .companyinfo {
+    margin-top: 10px;
+    font-size: 11px;
+    opacity: .5; }

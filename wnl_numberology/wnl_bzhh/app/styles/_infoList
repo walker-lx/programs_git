@@ -1,0 +1,115 @@
+.infoList{
+  position: relative;
+  margin: 0 0.05rem;
+  padding: 0 0.05rem;
+  border-top: 1px solid #eaeaea;
+  .infoItem{
+    position: relative;
+    clear:both;
+    padding-top: 0.15rem;
+    display:block;
+    &:last-child{
+      &::before{
+        bottom:inherit;
+        height:0.5rem;
+      }
+    }
+    .infoTitle{
+      position: absolute;
+      z-index: 100;
+      margin:0;
+      @extend .font_12;
+      color: #777;
+      background: #FFF;
+      box-sizing: border-box;
+      height: 0.35rem;
+      width: 0.35rem;
+      border-radius: 100%;
+      border: solid 1px #eaeaea;
+      text-align: center;
+      padding: 0.115rem 0;
+    }
+    .itemDetail{
+      position: relative;
+      box-sizing: border-box;
+      z-index: 100;
+      display: block;
+      left: 0.45rem;
+      width:3rem;
+      max-width: 3rem;
+      height:auto;
+      min-height: 0.39rem;
+      padding: 0.1rem 0.1rem;
+      border-radius: 0.02rem;
+      background-color: #f6f6f6;
+      line-height: 1.27;
+      text-align: justify;
+      .lineSpan{
+        padding-bottom: 0.07rem;
+      }
+      .festivalItem{
+        position: relative;
+        display: block;
+        height: 0.19rem;
+        padding-bottom: 0.07rem;
+        padding-right: 0.08rem;
+        float: left;
+      }
+      .xingzuoItem{
+        position: relative;
+        display: block;
+        height: 0.19rem;
+        padding-bottom: 0.07rem;
+        float: left;
+        @extend .font_15;
+        vertical-align: bottom;
+        .xingzuoLeftDetail{
+          @extend .font_15;
+          float: left;
+          min-width: 0.6rem;
+          padding-right: 0.08rem;
+          line-height: 0.19rem;
+        }
+        .xingzuoRightDetail{
+          @extend .font_15;
+          float: left;
+          line-height: 0.19rem;
+        }
+        &:nth-of-type(odd){
+          width: 1.65rem;
+        }
+        &:nth-of-type(even){
+          width: 1.15rem;
+        }
+      }
+      &::before{
+        content:"";
+        position: absolute;
+        z-index: 99;
+        top:0.12rem;
+        left:-0.04rem;
+        width:0.12rem;
+        height:0.12rem;
+        transform-origin: center center;
+        transform: rotate(45deg);
+        border-radius: 0.02rem;
+        background: #f6f6f6;
+      }
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0.175rem;
+      z-index: 10;
+      width: 1px;
+      top:0;
+      bottom:0;
+      background-color: #eaeaea;
+    }
+    &:last-child {
+      .itemDetail {
+        height:0.65rem;
+      }
+    }
+  }
+}

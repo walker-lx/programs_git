@@ -1,0 +1,206 @@
+Page{
+  background-color: #282142;
+  background-attachment: fixed;    
+}
+.container {
+  background-color: #282142;  
+}
+
+.showpage {
+    display: block;
+}
+.hidepage {
+    display: none;
+}
+
+.showpage {
+  display: block;
+}
+.hidepage {
+  display: none;
+}
+/*月运势样式  */
+.monthluck {
+  overflow: hidden;  
+  position: fixed;  
+  top: 50%;  
+  left: 0;  
+  z-index: 1001;  
+  margin: -400rpx 10rpx 0 20rpx;
+  border-radius: 8rpx;
+  color: white;
+  /* height: 180rpx; */
+  /* display: none; */
+}
+.monthluck .data {
+  background-color: #453b60;   
+   border-bottom: 1rpx solid rgba(255, 255, 255, 0.2); 
+}
+
+ .d8,.d9,.d10,.d11,.d12,.d13,.d15,.d16,.d17,.d18,.d19,.d20,.d22,.d23,.d24,.d25,.d26,.d27{
+   border-right: 1px solid rgba(255, 255, 255, 0.2);   
+} 
+
+.luckdesc {
+  padding-top: 31rpx;
+  padding-bottom: 30rpx;
+  background-color: #453b60;   
+  color: #f5f0e9;
+}
+.sevenluck {
+  background-color: #453b60;   
+}
+
+.luckgq,.luckcf,.luckgz {
+  background-color: #453b60;   
+  height: 40rpx;
+  font-size: 30rpx;
+  margin-left: 140rpx;
+  display: flex;
+  align-items: center;
+}
+.luckcf , .luckgz {
+  margin-top: 28rpx;
+}
+.luckdesc image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+} 
+.showmonth {
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  background: rgb(0, 0, 0);  
+   opacity: 0.7;   
+  overflow: hidden;  
+}
+.hide {
+  text-align: center;
+  margin-top: 20rpx;
+  z-index: 10001;  
+}
+.close {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.luckpic {
+  margin: 48rpx 0 20rpx;
+  width: 710rpx;
+  height: 192rpx;
+  position: relative;
+  /* border: 1rpx solid white; */
+  /* overflow: hidden;   */
+}
+
+.luckweekdesc {
+  width: 670rpx;
+  height: 116rpx;
+  margin: 10rpx auto 0;
+  border-radius: 8rpx;
+  background-color: rgba(222, 93, 235, 0.1);
+  font-size: 34rpx;
+  padding: 12rpx 14rpx 12rpx 14rpx;
+  display: flex;
+  align-items: center;
+  line-height: 1.35;
+}
+.luckpicleft {
+  display: flex;
+  flex-direction: column;
+  font-family: SFUIText;
+  font-size: 20rpx;
+  height: 116rpx;
+}
+.luckpicleft text {
+  opacity: 0.5;
+  font-family: SFUIText;
+  font-size: 20rpx;
+}
+ /* .picleft1 {
+  margin-left: -7rpx;
+}  */
+.luckpicleft .picleft2, .luckpicleft .picleft3 {
+  margin-top: 64rpx;
+  margin-left: 4rpx;
+}
+
+.gqy, .gzy, .cfy {
+  margin-top: 60rpx;  
+}
+.gqy {
+  color: #ff6161;
+}
+.gqydesc {
+  background-color: rgba(255, 97, 97, 0.1);
+}
+.cfy {
+  color:#ffb74a;
+}
+.cfydesc {
+  background-color: rgba(255,183,74, 0.1);
+}
+.gzy {
+  color:#49b5ff;
+}
+.gzydesc {
+  background-color: rgba(73,181,255, 0.1);
+}
+
+
+.canvas {
+  display: block;
+  height: 400rpx;
+  width: 100%;
+  overflow: hidden; 
+  margin-left: -15rpx; 
+  z-index: 550;
+}
+.fix {
+  position: fixed;
+}
+.scan {
+  background-color: #2e2b3f;
+  margin: 10rpx 20rpx;
+  padding-top: 60rpx;
+  border-radius: 8rpx;
+  height: 2530rpx
+}
+
+.none {
+  margin-top: 10rpx;
+  width: 30rpx;
+  height: 15rpx;
+  border-top: 4rpx solid #999;
+}
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 98rpx;
+  z-index: 99999;
+  display: flex;
+}
+.banner .xzbtn, .banner .mebtn {
+  margin-top: 3rpx;
+  width: 50%;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(49, 41, 77, 1);
+  font-size: 25rpx;
+  text-align: center
+}
+.banner image {
+  width: 56rpx;
+  height: 56rpx;
+}
+.xzbtn {
+  border-right: 1rpx solid rgba(255, 255, 255, 0.5);  
+}
+.xztext {
+  color: #de5deb
+}

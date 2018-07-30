@@ -1,0 +1,127 @@
+﻿<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <title>今日运程</title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no,init-scale=1.0,maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="css/jryc.css?v=1.1">
+    <script src="scripts/jquery-fastclick.min.js"></script>
+    <script src="./scripts/underscore-min.js"></script>
+    <script type="text/javascript" src="scripts/modal.js"></script>
+    <script type="text/javascript" src="scripts/base64.min.js"></script>
+    <script type="text/javascript" src="./scripts/jryc.js?v=1.0"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8e0b53b1de7438bdfa7a36b7a4a9ee61";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="summary">
+        <div id="score">
+            <span class="count"></span>分
+        </div>
+        <div class="info">
+            <div class="nameContent">
+                <div id="name"></div>
+                <a class="editLink" href="protocol://setjryc"></a>
+            </div>
+            <div class="percentContent">恭喜，您已超过<span id="percent"></span>的网友</div>
+            <span class="hidden" id="sex"></span>
+            <p class="hidden" id="birthday"></p>
+        </div>
+    </div>
+    <div class="detail">
+        <div class="detailTbl">
+            <div class="detailLine">
+                <div><b class="detailIcon caiWeiIcon"></b><b class="key">财位：</b><b id="caiWei" class="value"></b></div>
+                <div><b class="detailIcon colorIcon"></b><b class="key">吉色：</b><b id="color" class="value"></b></div>
+            </div>
+            <div class="detailLine">
+                <div><b class="detailIcon taoHuaIcon"></b><b class="key">桃花位：</b><b id="taoHua" class="value"></b></div>
+                <div ><b class="detailIcon numberIcon"></b><b class="key">幸运数字：</b><b id="number" class="value"></b></div>
+            </div>
+            <div class="detailLine">
+                <div><b class="detailIcon chongIcon"></b><b class="key">冲：</b><b id="chong" class="value"></b></div>
+                <div><b class="detailIcon jianXingIcon"></b><b class="key">建星：</b><b id="jianXing" class="value"></b></div>
+            </div>
+            <div class="detailLine">
+                <div><b class="detailIcon wangIcon"></b><b class="key">旺：</b><b id="wang" class="value"></b></div>
+            </div>
+            <div class="detailLine">
+                <div><b class="detailIcon shuaiIcon"></b><b class="key">衰：</b><b id="shuai" class="value"></b></div>
+            </div>
+            <div class="detailLine">
+                <div><b class="detailIcon ganZhiIcon"></b><b class="key">干支：</b><b id="ganZhi" class="value"></b></div>
+            </div>
+            <div class="detailLine">
+                <div><b class="detailIcon foodIcon"></b><b class="key">开运食物：</b><b id="food" class="value"></b></div>
+            </div>
+        </div>
+    </div>
+    <a class="mingpanLink" href="bzmp.html">
+        <div class="linkImg"></div>
+        <div class="linkTxt">立即查看<span class="txtArrow">&gt;</span></div>
+    </a>
+    <div class="jishiTitle hidden">
+        <div class="titleIcon"></div>
+        <div class="titleTxt">
+            今日吉时
+        </div>
+        <div class="leftRadius"></div>
+        <div class="rightRadius"></div>
+    </div>
+    <div class="jishiContent hidden">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" class="jiShi">
+            <tbody id="tbdJiShi"></tbody>
+        </table>
+    </div>
+    <div class="jishiTitle">
+        <div class="titleIcon"></div>
+        <div class="titleTxt">
+            八字测算
+        </div>
+        <div class="leftRadius"></div>
+        <div class="rightRadius"></div>
+    </div>
+    <div class="bazicesuan_ad">
+        <div class="cesuanImg"></div>
+        <div class="cesuanTxt">
+            <div class="cesuanTxt1">大师给你专业建议，让你的一生顺风顺水，远离苦痛！</div>
+            <div class="cesuanTxt2">已有32468人使用</div>
+        </div>
+    </div>
+    <a class="ceshiLink" href="javascript:void(0)"><span class="clickContent">马上试试</span></a>
+</div>
+<div class="wnlBanner">
+    <a class="closeBanner" href="javascript:void(0)"></a>
+    <div class="wnllogo"></div>
+    <div class="ad-title">
+        <div class="ad-t1">万年历</div>
+        <div class="ad-t2">立即查看我的八字运程</div>
+    </div>
+    <a class="downloadBtn" href="javascript:void(0)">打开APP</a>
+</div>
+<div id="tipModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-body">
+        <div class="showString">更多测算功能，请下载万年历。</div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn dismissBtn downloadBtn" data-dismiss="modal" aria-hidden="true">确定</button>
+    </div>
+</div>
+</body>
+</html>

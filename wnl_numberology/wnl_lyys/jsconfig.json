@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "system",
+		"allowSyntheticDefaultImports": true
+	},
+	"exclude": ["node_modules", "webpack", "webpack-dev-server"],
+	"typeAcquisition": {
+		"include": [
+			"@types/jquery"
+		]
+	}
+}

@@ -1,0 +1,103 @@
+/* pages/order/order.wxss */
+@import '../../assets/image.wxss';
+
+.user {
+  padding-top: 40rpx;
+	overflow: hidden;
+	background-size: cover;
+}
+
+.avator {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ccc;
+  margin: 0 auto;
+}
+
+.avator image {
+  width: 100%;
+  height: 100%;
+}
+
+.nickname {
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 36rpx;
+  color: #fff;
+  margin-bottom: 46rpx;
+}
+
+.order-status {
+  display: flex;
+  font-size: 32rpx;
+  color: #5b555b;
+  background-color: #fff1fe;
+  justify-content: space-around;
+  border-bottom: 1rpx solid #f0e4f1;
+}
+
+.order-status .item {
+  text-align: center;
+  padding: 40rpx 0;
+}
+
+.order-status .item.active {
+  color: #e250c1;
+  border-bottom: 2rpx solid #e250c1;
+}
+
+.order-list .item {
+  background-color: #fff1fe;
+  padding: 30rpx 40rpx;
+}
+
+.list {
+  overflow: hidden;
+}
+
+.list .item {
+  margin-bottom: 10rpx;
+}
+
+.item-name {
+  font-size: 32rpx;
+  text-align: left;
+  color: #ee60f3;
+  margin-bottom: 22rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-name text:first-child {
+  color: #5b555b;
+}
+
+.item-info {
+  font-size: 20rpx;
+  text-align: left;
+  color: #857e85;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.8;
+}
+
+.item-price {
+  font-size: 36rpx;
+  color: #5b555b;
+}
+
+.null-order {
+  color: #cab0cd;
+  text-align: center;
+}
+
+.icon-null-order {
+  width: 86rpx;
+  height: 93rpx;
+  font-size: 36rpx;
+  margin: 205rpx auto 26rpx;
+  background-size: cover;
+}
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, minimum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<title>一株佛心莲，寄予思念</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/flexible.js"></script>
+	<script src="js/html2canvas.js"></script>	
+	<script src="js/wnl-util.js"></script>
+	<script src="js/fastclick.js"></script>
+	<script src="js/index.js"></script>
+	
+
+</head>
+<body>
+	<div class="musicbtn">
+		<img src="img/music_on@2x.png"/>
+	</div>
+	<div class="circle2 yq11"></div>
+	<div class="circle2 yq22"></div>
+	<div class="circle2 yq33"></div>
+	<div class="circle2 yq44"></div>
+	<div class="circle2 yq55"></div>
+
+	<div class="circle3 yq111"></div>
+	<div class="circle3 yq222"></div>
+	<div class="circle3 yq333"></div>
+	<div class="circle3 yq444"></div>
+	<div class="circle3 yq555"></div>
+
+
+	<div class="index page1">
+		<audio class="music" src="css/music.mp3" loop="loop" autoplay="autoplay"></audio>
+
+		<div class="rain"></div>
+		<div class="rain1"></div>
+		<div class="rain2"></div>
+		<!--<div class="rain3"></div>
+		<div class="rain4"></div>
+		<div class="rain5"></div>
+		<div class="rain6"></div>-->
+
+		<div class="center"></div>
+		<div class="btn">
+			<button class="plant"></button>
+		</div>
+		<div class="foot"></div>
+	</div>
+
+	<!--结果页-->
+	 <div class="index page2 hidden">
+		<div class="top1">
+			<div class="top">
+			您种下了第<span class="num">34454</span>株佛心莲
+			</div>
+			<div class="des">千灯万盏，不如心灯一盏。</div>
+			<div class="center"></div>
+			<div class="bottom">
+				<div class="title">佛曰：</div>
+				<div class="text p1">每个人所见所遇到的都早有安排，一切都是缘。缘起缘灭，缘聚缘散，一切都是天意。</div>
+			</div>
+
+			<div class="weixin">
+				<img class="qrwx hidden" src="img/qrcode.png" alt="">
+				<!--<img class="qrimg hidden" src="img/QR@2x.png" alt="">		-->
+			</div>
+		</div>
+
+		<div class="imgpage2"></div>
+
+
+
+
+		<!--按钮部分-->
+		<div class="pagefoot">
+			<div class="btns">
+				<button class="again"></button>
+				<button class="share"></button>
+			</div>
+			<div class="foot"></div>
+		</div>
+
+		<div class="sharepic">
+			<img src="img/QR@3x(4).png">
+		</div>
+	</div>
+
+	
+
+
+	<div class="showShareMask hidden">
+  		<div class="shareArrow"></div>
+  	</div>
+	<!-- wnl share tool -->
+	<div class="sharemask hidden"></div>
+  	<div class="wnl-sharetool hidden">
+  	   <div class="platform">
+  		   <label class="weixin">微信</label>
+  		   <label class="weixin_circle">朋友圈</label>
+  		   <label class="qq">QQ</label>
+  		   <label class="weibo">新浪微博</label>
+  	   </div>
+  	   <div class="cancle-share">取消分享</div>
+  	</div>
+
+	 
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script>
+			$.ajax({
+				url: "https://b.cqyouloft.com/interface/API/weixinhandler.ashx",
+				type: "get",
+				data: {
+					requesturl: location.href
+				},
+				success: function(result) {
+					result = JSON.parse(result);
+					wx.config({
+						debug: false,
+						appId: 'wx347ab26567c5465f', // 必填，公众号的唯一标识
+						timestamp: result.timestamp, // 必填，生成签名的时间戳
+						nonceStr: result.nonceStr, // 必填，生成签名的随机串
+						signature: result.signature, // 必填，签名，见附录1
+						jsApiList: [
+								'onMenuShareTimeline',
+								'onMenuShareAppMessage',
+								'onMenuShareQQ',
+								'onMenuShareWeibo'
+							] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+					});
+				}
+			});
+		</script>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261564228'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261564228' type='text/javascript'%3E%3C/script%3E"));</script>
+		<!--<script src="js/index.js"></script>-->
+</body>
+</html>

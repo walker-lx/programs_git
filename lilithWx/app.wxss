@@ -1,0 +1,305 @@
+/**app.wxss**/
+.container {
+  padding: 24.6rpx 0;
+  box-sizing: border-box;
+   height: auto; 
+   background-image: url('https://mobile.51wnl.com/lilith/lilithWx/pages/img/Lilith-bg.jpg');
+   background-repeat: no-repeat; 
+  background-position: top;
+  background-size: cover;
+  background-color: #282142;
+  color: #fff;
+  font-family: -apple-system, "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+} 
+.top {
+  width: 710rpx;
+  height: 220rpx;
+  margin: 0 20rpx;
+  display: flex;
+  align-items: center;
+  background-image: url('https://mobile.51wnl.com/lilith/lilithWx/pages/img/Tarot-pic.jpg');
+  background-repeat: no-repeat;
+   background-position: 50% 50%; 
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+}
+
+.top .img {
+  display: block;
+   width: 106rpx; 
+   height: 192rpx;  
+  margin-left: 50rpx;
+    /* transform: rotateY(180);   */
+}
+.top .desc {
+  margin-left: 74rpx;
+  font-size: 30rpx;
+}
+.top .desc .text {
+  text-align: center;
+  line-height: 58rpx;
+}
+.desc1 {
+  width: 400rpx;
+}
+.top .desc1 .text2 {
+  text-overflow: -o-ellipsis-lastline;  
+	overflow: hidden;  
+	text-overflow: ellipsis;  
+	display: -webkit-box !important;
+  word-break: break-all;  
+	-webkit-line-clamp: 1;  
+	-webkit-box-orient: vertical; 
+}
+.top .desc .text3 {
+  opacity: 0.5;
+}
+.top .desc1 {
+  margin-left: 25px;
+  font-size: 30rpx;
+}
+.top .desc1 .text {
+  line-height: 1.7;
+}
+.top .more {
+  width: 12rpx;
+  height: 20rpx;
+  opacity: 0.5;
+  position: absolute;
+  right: 30rpx;
+  top: 100rpx;
+}
+.getluck {
+  border-radius: 8rpx;
+  margin: 30rpx 20rpx 0;
+   position: relative; 
+   width: calc(100vw - 40rpx);
+   height: 720rpx;
+    /* z-index: 510;  */
+}
+.userbg {
+  position: absolute;
+   /* display: none;  */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 8rpx;
+  z-index: 500 !important;
+}
+ .shadow {
+  position: absolute;
+  width: 100%;
+   height: 100%; 
+   left: 0;
+   top: 0;
+   border-radius: 8rpx;
+   background-color: rgba(0, 0, 0, 0.6);
+    z-index: 501;  
+}    
+.person {
+  padding-top: 30rpx;
+  color: white;
+   /* height: 663rpx;  */
+    z-index: 502;  
+    position: absolute;
+    width: 100%;
+}
+
+.tip {
+  /* margin: 0 auto; */
+  margin-top: 18px;
+  text-align: center;
+  font-size: 30rpx;
+}
+.date {
+  margin-top: 27px;
+  text-align: center;
+  /* font-family: Din;  */
+  font-size: 32rpx;
+  font-weight: 500;
+  font-style: italic;
+  position: relative;
+  
+}
+.date::before {
+  content: '';
+  position: absolute;
+  left: calc(50vw - 190rpx);
+  top: 16rpx;
+  width: 68rpx;
+  height: 2rpx;
+  background-image: url(https://mobile.51wnl.com/lilith/lilithWx/pages/img/top-line-left-icon@2x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-image: linear-gradient(to left, #ffffff, rgba(255, 255, 255, 0)); */
+}
+.date::after {
+  content: '';
+  position: absolute;
+  right: calc(50vw - 190rpx);
+  top: 16rpx;
+  width: 68rpx;
+  height: 2rpx;
+  background: url(https://mobile.51wnl.com/lilith/lilithWx/pages/img/top-line-right-icon@2x.png) no-repeat;
+  background-size: cover;
+   /* background-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0)); */
+  z-index: 510;
+   
+}
+.weekday {
+  text-align: center;
+  margin-top: 6px;
+  font-size: 26rpx;
+    font-family: Charter;  
+  font-style: italic;
+  z-index: 510;  
+}
+.xz {
+  width: 400rpx;
+   height: 100rpx; 
+  margin: 44rpx auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  /* z-index: 510;   */
+}
+
+.xz_name {
+  font-family: WenYue-HouXianDaiTi-NC-W4-75;
+  font-size: 48rpx;
+  letter-spacing: 8rpx;
+  z-index: 510;
+}
+.xz_date {
+   /* font-family: DIN;  */
+  font-size: 20rpx;
+  font-style: italic;
+  opacity: 0.7;
+  z-index: 510;  
+}
+.xz_desc {
+  text-align: center;
+  margin: 8px 20px;
+  font-family: PingFangSC;
+  font-size: 17px;
+   line-height: 1.35; 
+  z-index: 510;   
+}
+.line {
+  width: 94.4%;
+  margin: 10px auto 22px;
+  height: 1rpx;
+  border-top: 1px solid white;
+  opacity: 0.1;
+   -webkit-transform: scaleY(0.5); 
+   transform: scaleY(0.5); 
+}
+.zs {
+  display: flex;
+  justify-content: space-around;
+}
+.same {
+  font-size: 34rpx;
+  text-align: center;
+}
+.gq_name,.cf_name,.gz_name {
+  opacity: 0.8;        
+}
+.pic {
+  margin-top: 10px;
+}
+.pic .photo {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 4rpx; 
+}
+.goodluck {
+  margin: 0 5px;
+  border-radius: 8rpx;
+  width: calc(100vw - 10px);
+  height: 180rpx;
+  background-color: #453b60;
+  box-shadow: 0 2px 10px 0 rgba(33, 19, 35, 0.6);
+  overflow: hidden;
+  z-index: 510;
+}
+.sevenluck {
+  height: 56rpx;
+  line-height: 2;
+  text-align: center;
+  border-bottom: 2rpx solid rgba(255, 255, 255, 0.2);
+  font-size: 28rpx;
+}
+.data {
+  float: left;
+  width: calc((100vw - 20px - 6px) / 7);
+  height: calc(180rpx - 56rpx - 2rpx);
+}
+.d1,.d2,.d3,.d4,.d5,.d6 {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dayluck {
+  text-align: center;
+  display: flex;
+
+}
+.dayluck {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 2rpx;
+}
+.daytime {
+  text-align: center;
+  font-family: PingFangSC;
+  font-size: 22rpx;
+  margin-top: 10rpx;
+}
+.dayluck image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.day {
+  height: 124rpx;
+}
+.luckscan {
+  position: relative;
+}
+.lucky {
+  position: relative;
+  text-align: center;
+  font-size: 36rpx;
+  font-family: PingFangSC;
+  line-height: 1;
+  color: #de5deb;
+}
+.lucky::before {
+  content: '';
+  position: absolute;
+  left: calc(50vw - 190rpx);
+  top: 16rpx;
+  width: 88rpx;
+  height: 1px;
+  background: url(../img/top-line-left-icon@3x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(to left, #ffffff, rgba(255, 255, 255, 0.1));  
+}
+.lucky::after {
+  content: '';
+  position: absolute;
+  right: calc(50vw - 190rpx);
+  top: 16rpx;
+  width: 88rpx;
+  height: 1px;
+  background: url(../img/top-line-right-icon@3x.png) no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.1));  
+}
+

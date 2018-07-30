@@ -1,0 +1,129 @@
+.select {
+    min-height: 100%;
+    padding-top: 10px;
+    .card {
+        box-shadow: 2px 2px 3px 0px rgba(128, 128, 128, 0.72);
+    }
+}
+
+.select .title {
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    text-align: center;
+    color: #402c2d;
+}
+
+.select .tips {
+    border-radius: 6px;
+    background-color: #f6c1a7;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    text-align: center;
+    color: #92624b;
+    padding: 9px 0px;
+    width: 168px;
+    text-align: center;
+    margin: 10px auto 0;
+    position: relative;
+}
+
+.select .tips:before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid #f6c1a7;
+}
+
+.select .card-list {
+    opacity: 0;
+    margin: 13px 10px 15px;
+    transition: all 1s;
+}
+
+.card-column {
+    width: 25%;
+    float: left;
+}
+
+.select .card-wrap {
+    width: 67px;
+    height: 117px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.card-wrap .card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../img/xb1.png') no-repeat center;
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+
+.card-wrap .card-reverse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.col-1 .card-wrap:first-child,
+.col-4 .card-wrap:first-child {
+    margin-top: 59px;
+}
+
+.select .card-wrap:not(:first-child) {
+    margin-top: 10px;
+}
+
+.rotate-card-reverse {
+    animation: rotate-card-reverse 2.6s ease-out forwards;
+}
+
+.rotate-card-front {
+    animation: rotate-card-front 2.6s ease-out forwards;
+}
+
+.opacity-card {
+    animation: opacity-card 2s ease-out 1s forwards;
+}
+
+@keyframes rotate-card-reverse {
+    0% {
+        transform: rotateY(0);
+    }
+    30% {
+        transform: rotateY(0) scale(1.1);
+    }
+    100% {
+        transform: rotateY(180deg) scale(1.1);
+    }
+}
+
+@keyframes rotate-card-front {
+    0% {
+        transform: rotateY(180deg);
+    }
+    30% {
+        transform: rotateY(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotateY(360deg) scale(1.1);
+    }
+}
+
+@keyframes opacity-card {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,162 @@
+.status {
+    padding-top: 0.6rem;
+}
+
+.dialog-mask {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.dialog-closeicon {
+    width: 1.75rem;
+    height: 1.75rem;
+    background: url('../img/close.png') no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    right: 0.85rem;
+    top: 4.3rem;
+}
+
+.dialog {
+    margin: 0 0.85rem;
+    height: 7.6rem;
+    background: url('../img/dialog.png') no-repeat center;
+    background-size: 100%;
+    margin-top: 8.8rem;
+}
+
+.status-tips {
+    position: absolute;
+    right: 1.5rem;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+}
+
+.status-tips-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: 1px solid #c85ac3;
+    font-size: 0.6rem;
+    text-align: center;
+    color: #c85ac3;
+    margin: 0.5rem auto;
+}
+
+.status-title {
+    height: 3.75rem;
+    background: url('../img/title1.png') no-repeat center;
+    background-size: 100%;
+}
+
+.status-optionList {
+    position: relative;
+    opacity: 0;
+    transition: all 1.4s ease;
+}
+
+.status-optionList.active {
+    opacity: 1;
+}
+
+.status-option {
+    width: 6.15rem;
+    height: 9.1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 6%;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 8px 1px #caafb8
+}
+
+.status-option:nth-child(1) {
+    background-image: url('../img/p1.png');
+}
+
+.status-option:nth-child(2) {
+    background-image: url('../img/p2.png');
+}
+
+.status-option:nth-child(3) {
+    background-image: url('../img/p3.png');
+}
+
+.status-option:nth-child(4) {
+    background-image: url('../img/p4.png');
+}
+
+.status-option:nth-child(1),
+.status-option:nth-child(3) {
+    float: left;
+    margin-left: 10%;
+}
+
+.status-option:nth-child(2),
+.status-option:nth-child(4) {
+    float: right;
+    margin-right: 10%;
+}
+
+.status-option.active {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto!important;
+}
+
+.dialog-text {
+    font-size: 0.65rem;
+    color: #3e2408;
+    margin-left: 1.1rem;
+    line-height: 1.4;
+}
+
+.dialog-text:nth-child(1) {
+    text-align: center;
+    padding-top: 0.9rem;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.dialog-text:nth-child(2) {
+    margin-top: 0.7rem;
+}
+
+@media only screen and (max-width:330px) {
+    .status-option:nth-child(1),
+    .status-option:nth-child(3) {
+        margin-left: 6%;
+    }
+    .status-option:nth-child(2),
+    .status-option:nth-child(4) {
+        margin-right: 6%;
+    }
+    .dialog {
+        margin: 0 0.45rem;
+        background: url('../img/dialog.png') no-repeat center;
+        background-size: 100%;
+        margin-top: 8.8rem;
+        height: 7.8rem;
+    }
+    .dialog-text:nth-child(1) {
+        text-align: center;
+        padding-top: 1.1rem;
+        font-size: 0.8rem;
+        margin: 0px;
+    }
+    .dialog-text {
+        margin-left: 0.5rem;
+    }
+    .dialog-text:nth-child(2) {
+        margin-top: 0rem;
+    }
+}

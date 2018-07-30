@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./utils/jquery.min.js"></script>
+    <script src="./utils/jquery.rotate.js"></script>
+    <title>腊八节</title>
+    <link rel="stylesheet" href="./css/wnlui.css">
+    <!-- <script src="./utils/vconsole.min.js"></script> -->
+    <script src="./utils/flexible.js"></script>
+</head>
+<body>
+    <audio src="./music.mp3" autoplay="autoplay" loop="loop" id="audio"></audio>
+    <div class="musicicon cq play"></div>
+    <div class="musicicon stop hidden"></div>
+    <div class="maskshow hidden"></div>
+    <div class="wxsharemask hidden">
+        <img src="./img/guide.png" alt="">
+    </div>
+    <div class="wnlpic hidden"></div>
+    <div class="login hidden">
+        <div class="logincontent">请登录后继续</div>
+        <div class="choose">
+            <div class="fq">放弃</div>
+            <div class="qd">确定</div>
+        </div>
+    </div>
+    <div class="index">
+        <!-- <div class="cj cjbtn" id="index_cj"><span>抽奖</span> <span class="cjcount">0</span></div> -->
+        <div class="title"></div>
+        <!-- <div class="animate">
+            <div class="a1"></div>
+            <div class="a2"></div>
+            <div class="a3"></div>
+            <div class="a4"></div>
+            <div class="a5"></div>
+            <div class="a6"></div>
+            <div class="a7"></div>
+        </div> -->
+        <div class="indexgif"></div>
+        <div class="open1">
+            <div class="open"></div>
+        </div>
+        <div class="wnlicon"></div>
+        <div class="rule"></div>
+        <div class="prize"></div>
+        <div class="prizemask hidden">
+            <div class="mask"></div>
+            <div class="prizerecord"></div>
+            <div class="closeprize"></div>
+            <div class="prizeitemline">
+                <div class="prizeitem">
+                    <div class="username">姓名</div>
+                    <div class="gettime">时间</div>
+                    <div class="getprize">获得奖品</div>
+                </div>
+            </div>         
+            <div class="prizelist">
+                <!-- <div class="item">
+                    <div class="listitem">
+                        <div class="nickname">啊速度加快</div>
+                        <div class="t">2018年01月04日</div>
+                        <div class="getprize">礼品卡</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="rulemask hidden">
+            <div class="mask"></div>
+            <div class="ruletext"></div>
+            <div class="closerule"></div>
+            <div class="rulecontent">
+                <div class="awards">
+                    <div class="jp">活动奖品</div>
+                    <div class="jp1">1、台历50本</div>
+                    <div class="jp2">2、价值99元的年货礼品卡100张。</div>
+                    <div class="jp3">3、价值169元的年货礼品卡100张。</div>
+                </div>
+                <div class="rules">
+                    <div class="gz">活动规则</div>
+                    <div class="gz1">1、游戏共提供六幅图，可任意选一幅图翻牌，开始拼图。</div>
+                    <div class="gz2">2、每幅图规定时间20秒，用九宫格形式，每完成一幅拼图，赢得一次抽奖机会，抽奖次数当天可累积。</div>
+                    <div class="gz3">3、在规定时间未完成拼图即游戏结束。</div>
+                </div>
+                <div class="publish">
+                    <div class="gb">获奖公布</div>
+                    <div class="gbcontent">活动结束一周内，由工作人员联系中奖用户 并邮寄奖品。</div>
+                </div>
+                <div class="sponsor">
+                    <div class="dw">主办单位</div>
+                    <div class="name">万年历</div>
+                </div>
+                <div class="actime">
+                    <div class="timetext">活动时间</div>
+                    <div class="time">2018年1月22日00:00——26日00:00</div>
+                </div>
+                <!-- <div class="acspecial">
+                    <div class="specialtitle">特别说明</div>
+                    <div class="specialtext">活动结束一周内，未及时填写个人信息的中奖用户关注公众号与我们联系，逾期即视为放弃奖品。</div>
+                </div> -->
+                <div class="wnlcopyright">本次活动最终解释权归万年历所有</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 拼图选择页 -->
+    <div class="pt hidden">
+        <div class="pt_top">你有<span class="cjcount"></span>次抽奖机会</div>
+        <div class="pt_cj cjbtn" id="pt_cj"><span>抽奖</span> <span class="cjcount"></span></div>
+        <div class="choose"></div>
+        <div class="chooseitem">
+            <div class="item item1" id="item1"></div>
+            <div class="item item2" id="item2"></div>
+            <div class="item item3" id="item3"></div>
+            <div class="item item4" id="item4"></div>
+            <div class="item item5" id="item5"></div>
+            <div class="item item6" id="item6"></div>
+        </div>
+    </div>
+
+    <!-- 拼图详情页 -->
+    <div class="ptpage hidden">
+        <div class="ptpage_top">你有<span class="cjcount"></span>次抽奖机会</div>
+        <div class="ptpage_cj cjbtn" id="ptpage_cj"><span>抽奖</span> <span class="cjcount"></span></div>
+
+        <div class="showpt">
+            <!-- <div class="remember">第<span>二</span>幅 你有5秒记忆原图</div> -->
+            <div class="remember"><span>二</span> <span class="before">你有5秒记忆原图</span></div>          
+            <div class="ptimg">
+                <div class="ptimg_time">
+                    <div class="progress">
+                        <div class="progress_ani"></div>
+                    </div>
+                    <div class="progresstime"><span id="pt_time">20</span>s</div>
+                </div>
+                <div class="ptimg_img" id="ptimg">
+                    <!-- <img src="./img/pt1.png" alt=""> -->
+                </div>
+                <div class="countdown"></div>                    
+            </div>
+            <div class="imgdesc"></div>
+        </div>
+
+        <div class="succ hidden">
+            <div class="succ_desc"><span id="appname" class="appname">xx</span>在习俗大拼图游戏中，完成<span class="succnum"></span>幅拼图，开启了通关之路的<span id="finishnum" class="succnum"></span>/6，再接再厉。</div>
+            <div class="succ_img"></div>
+            <div class="succ_btn">
+                <div class="succ_again"></div>
+                <div class="succ_share share"></div>
+            </div>
+        </div>
+
+        <div class="fail hidden">
+            <div class="fail_desc">很遗憾，没有完成拼图，千万不要气馁，换个姿势重新来战。</div>
+            <div class="fail_img"></div>
+            <div class="fail_btn">
+                <div class="fail_again"></div>
+                <div class="fail_share"></div>
+            </div>
+        </div>
+    </div>
+
+<!-- 分享页面 -->
+<div class="sharepage hidden">
+    <div class="sharetop">
+        <div class="ptpage_top">你有
+            <span class="cjcount"></span>次抽奖机会</div>
+        <div class="ptpage_cj cjbtn" id="sharepage_cj">
+            <span>抽奖</span>
+            <span class="cjcount"></span>
+        </div>
+    </div>
+    <div class="succ_share">
+        <div class="succ_desc">
+            <span class="appname">xx</span>太厉害了，在习俗大拼图游戏中通关，简直碉堡了。</div>
+        <!-- <div class="succ_img"></div> -->
+        <div class="chooseitem">
+            <div class="succitem succitem1"></div>
+            <div class="succitem succitem2"></div>
+            <div class="succitem succitem3"></div>
+            <div class="succitem succitem4"></div>
+            <div class="succitem succitem5"></div>
+            <div class="succitem succitem6"></div>
+        </div>
+        <div class="sharebottom">
+            <img class="qr hidden" src="./img/qr.png">
+            <div class="sharetext hidden">
+                <div class="text1">习俗大拼图 我要来挑战</div>
+                <div class="text2">识别二维码参与</div>
+            </div>
+        </div>
+        <div class="succshare_btn">
+            <div class="succshare_again"></div>
+            <div class="succshare_share share"></div>
+        </div>
+    </div>
+    <div class="nosucc_share hidden">
+        <div class="nosucc_desc">
+            <span class="appname">xx</span>在习俗大拼图游戏中，完成<span class="succnum"></span>幅拼图，开启了通关之路的
+            <span id="succnum" class="succnum"></span>/6，再接再厉。</div>
+        <!-- <div class="nosuccbg"></div> -->
+        <div class="chooseitem">
+            <div class="succitem succitem1"></div>
+            <div class="succitem succitem2"></div>
+            <div class="succitem succitem3"></div>
+            <div class="succitem succitem4"></div>
+            <div class="succitem succitem5"></div>
+            <div class="succitem succitem6"></div>
+        </div>
+        <img class="qr hidden" src="./img/qr.png">
+        <div class="sharetext">
+            <div class="text1">习俗大拼图 我要来挑战</div>
+            <div class="text2">识别二维码参与</div>
+        </div>
+    </div>
+</div>
+    <!-- 抽奖页面 -->
+    <div class="cjpage hidden">
+        <!-- <div class="cjmask"></div> -->
+        <div class="cjchance">你有<span class="cjcount"></span>次抽奖机会</div>
+        <div class="cjnum cjbtn" id="cjpage_cj"><span>抽奖</span> <span class="cjcount"></span></div>
+        <div class="cjcontent">
+            <div class="circle">
+                <div class="circletext"></div>
+            </div>
+            <div class="guide">
+                <div class="cjicon"></div>                                 
+            </div>
+        </div>
+    </div>
+
+    <!-- 未中奖页面 -->
+    <div class="noaward hidden">
+        <!-- <div class="wnlicon"></div> -->
+        <div class="awardchance">你有<span class="cjcount"></span>次抽奖机会</div>
+        <div class="awardcount cjbtn" id="noward_cj"><span>抽奖</span> <span class="cjcount"></span></div>
+        <div class="awardcontent">
+            <div class="line1">哎呀！</div>
+            <div class="line2">没有中奖！</div>
+            <div class="line3">不要灰心！</div>               
+        </div>
+        <div class="awardbtn">
+            <div class="awardagain"></div>
+            <div class="awardinvite share"></div>
+        </div>
+    </div>
+
+    <!-- 中奖页面 -->
+    <div class="zjpage hidden">
+        <!-- <div class="wnlicon"></div> -->
+        <div class="zjchance">你有<span class="cjcount"></span>次抽奖机会</div>
+        <div class="zjcount cjbtn" id="zjpage_cj"><span>抽奖</span> <span class="cjcount"></span></div>
+        <div class="zj_content hidden">
+            <div class="zjcontent">
+                <div class="line1">恭喜你！</div>
+                <div class="line2 hidden">获得台历一本！</div>
+                <div class="line3">获得价值169元</div>
+                <div class="line4">年货礼品卡一张</div>                                   
+            </div>
+            <div class="zjbtn"></div>
+        </div>
+        <div class="infowrite hidden">
+            <div class="scroll">
+                <div class="info_desc">以便我们的工作人员与你联系，请填写以下真实信息，如本次未立即填写并提交，即视为放弃领取奖品。</div>
+                <div class="info_input">
+                    <div class="name_input">
+                        <div>真实姓名</div>
+                        <input type="text" id="username">
+                    </div>
+                    <div class="phone_input">
+                        <div>手机号码</div>
+                        <input type="text" id="userphone">
+                    </div>
+                    <div class="addr_input">
+                        <div>邮寄地址</div>
+                        <input type="text" id="useraddr">
+                        <!-- <div class="edit" contenteditable="true"></div> -->
+                        <!-- <textarea id="useraddr"></textarea> -->
+                        <!-- <div class="inputline1"></div>
+                        <div class="inputline2"></div> -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="info_sub"></div>
+        </div>
+        <div class="sub_succ hidden">
+            <div class="sub_cont">
+                <div class="succ_icon"></div>
+                <div class="succ_text">你的信息提交成功</div>
+            </div>
+            <div class="sub_btn">
+                <div class="sub_again"></div>
+                <div class="sub_share share"></div>
+            </div>
+        </div>
+    </div>
+    <div style="display: none">
+        <script src="https://s13.cnzz.com/z_stat.php?id=1272651681&web_id=1272651681" language="JavaScript"></script>
+    </div>
+    <script src="./utils/wnlui.js"></script>
+    <script src="./utils/maskscroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
+    <script src="./utils/game1.js"></script>   
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

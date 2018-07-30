@@ -1,0 +1,22 @@
+{
+  "name": "wnl_numberology",
+  "version": "1.0.0",
+  "description": "万年历测算合集仓库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://guojinhai@192.168.1.80:29418/~guojinhai/wnl_numberology.git"
+  },
+  "dependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-html": "^2.0.3",
+    "eslint-plugin-import": "^2.3.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

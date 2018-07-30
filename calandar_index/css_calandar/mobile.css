@@ -1,0 +1,318 @@
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 4/2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2) {
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+  only screen and (-o-min-device-pixel-ratio: 6/2),
+  only screen and (min--moz-device-pixel-ratio: 3),
+  only screen and (min-device-pixel-ratio: 3) {
+}
+
+@media only screen and (min-width: 1024px) {
+  .dyTime {
+    top: 4px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .topBanner .secondNav {
+    left: 15px !important;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .jobLinkItem:nth-of-type(2n) {
+    margin-right: 15px;
+  }
+  .jobContent {
+    padding: 0 0px 80px;
+    box-sizing: border-box;
+  }
+  .jobContent.jobTxt {
+    padding: 0 15px 80px;
+    box-sizing: border-box;
+  }
+  .jobontent {
+    padding: 0 0px 80px !important;
+  }
+  .jobTopContent {
+    position: relative;
+  }
+  .about {
+    width: 100%;
+  }
+  .aboutA {
+    width: 100%;
+  }
+  .aboutB {
+    width: 100%;
+  }
+  .aboutC {
+    width: 100%;
+  }
+  .aboutD {
+    width: 100%;
+  }
+  .contactSpan {
+    width: 100% !important;
+    padding-left: 15px !important;
+    margin-top: 26px;
+    box-sizing: border-box;
+    /* css3 rec */
+    -moz-box-sizing: border-box;
+    /* ff2 */
+    -ms-box-sizing: border-box;
+    /* ie8 */
+    -webkit-box-sizing: border-box;
+    /* safari3 */
+    -khtml-box-sizing: border-box;
+  }
+  .contactSpanTitle {
+    text-align: left;
+    padding: 0;
+    margin-left: 0;
+  }
+  .contactSpanInfo {
+    margin: 0 auto;
+    text-align: center;
+    margin: 0;
+    display: -webkit-flex;
+    display: flex;
+    /*display: -webkit-box;
+		display: box;
+		display: -moz-flex;
+		display: -o-flex;*/
+  }
+  .contactSpanInfoIcon {
+    display: inline-block;
+  }
+  .contactSpanInfoDesc {
+    display: inline-block;
+  }
+  .aboutCInfo {
+    padding: 0 15px;
+  }
+  .apiContent {
+    width: 100%;
+  }
+  .lContent .apiBtn {
+    position: relative;
+    margin-top: 20px;
+    bottom: 0;
+    left: 0;
+  }
+  .apiContent .content .lContent {
+    width: 100% !important;
+    float: none;
+    margin: 20px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    /* css3 rec */
+    -moz-box-sizing: border-box;
+    /* ff2 */
+    -ms-box-sizing: border-box;
+    /* ie8 */
+    -webkit-box-sizing: border-box;
+    /* safari3 */
+    -khtml-box-sizing: border-box;
+  }
+  .content:nth-of-type(2) .lContent .conDescribe {
+    width: 100% !important;
+  }
+  .apiContent .content .lContent .conName {
+    width: 100%;
+    box-sizing: border-box;
+    /* css3 rec */
+    -moz-box-sizing: border-box;
+    /* ff2 */
+    -ms-box-sizing: border-box;
+    /* ie8 */
+    -webkit-box-sizing: border-box;
+    /* safari3 */
+    -khtml-box-sizing: border-box;
+  }
+  .apiContent .rContent {
+    float: none;
+    margin: 20px auto 0;
+  }
+  .apiContent .content {
+    position: relative;
+    height: auto;
+  }
+  /*背景图片*/
+  .lContent .conNameIcon {
+    background-image: url(../img_calandar/huangli-icon@3x.png);
+  }
+  .holiday .conNameIcon {
+    background-image: url(../img_calandar/festival-icon@3x.png);
+  }
+  .tiaoxiu .conNameIcon {
+    background-image: url(../img_calandar/restday-icon@3x.png);
+  }
+  .jieri .conNameIcon {
+    background-image: url(../img_calandar/tips-icon@3x.png);
+  }
+  .xignzuo .conNameIcon {
+    background-image: url(../img_calandar/xingzuo-icon@3x.png);
+  }
+  .apiBtn .apibtnArrow {
+    background-image: url(../img_calandar/API-arrow-icon@3x.png);
+  }
+  .content .rContent {
+    background-image: url(../img_calandar/API-01-img@3x.png);
+  }
+  .holiday .rContent {
+    background-image: url(../img_calandar/API-02-img@3x.png);
+  }
+  .tiaoxiu .rContent {
+    background-image: url(../img_calandar/API-03-img@3x.png);
+  }
+  .jieri .rContent {
+    background-image: url(../img_calandar/IMG_4068@3x.png);
+  }
+  .xignzuo .rContent {
+    background-image: url(../img_calandar/IMG_4069@3x.png);
+  }
+  .contactQQIcon {
+    background-image: url(../img_calandar/contact-qq-icon@3x.png);
+  }
+  .contactMailIcon {
+    background-image: url(../img_calandar/contact-email-icon@3x.png);
+  }
+  .contactWeixinIcon {
+    background-image: url(../img_calandar/contact-wechat-icon@3x.png);
+  }
+  .contactCallIcon {
+    background-image: url(../img_calandar/contact-tellphone-icon@3x.png);
+  }
+  .contactNameIcon {
+    background-image: url(../img_calandar/contact-user-icon@3x.png);
+  }
+  /**/
+  .apiDetail {
+    width: 100%;
+  }
+  .lDetail {
+    display: none;
+  }
+  .rDetail {
+    margin: 0;
+    word-break: break-all;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+  }
+  /* 动态*/
+  .dongtai {
+    width: 100%;
+  }
+  .dynamicsContent {
+    margin-top: 10px;
+    padding-bottom: 30px;
+  }
+  .dynamicsContent .dyImg {
+    width: calc(100% - 30px);
+    height: auto;
+    /*height:200px;*/
+    margin: 0 15px 15px 15px;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+  .dynamicsContent .dyTitle {
+    margin-top: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    white-space: nowrap;
+    margin-bottom: 10px;
+  }
+  .dynamicsContent .dyDetails {
+    width: 100%;
+    margin: 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+  }
+  .dynamicsContent .dyDetails .dyTime {
+    position: absolute;
+    text-align: left;
+    left: 0;
+    bottom: -30px !important;
+    left: 15px;
+    margin-bottom: 10px;
+  }
+  .tabBtn {
+    display: none;
+  }
+  .dyTitle {
+    width: 100%;
+    text-align: left;
+  }
+  /*新闻详情*/
+  .newsContent {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  .newsArticle {
+    width: 100% !important;
+  }
+  .chooseTab {
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .jobMail {
+    bottom: -10px;
+    height: 32px;
+    line-height: 32px;
+    right: 0px;
+    margin: 0 auto;
+    font-size: 16px;
+    width: 88px;
+  }
+  .jobMilFormat {
+    bottom: -35px;
+  }
+  .jobTime {
+    margin-bottom: 42px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .aboutTitle,
+  .abouttitle,
+  .cooperateTitle {
+    font-size: 36px !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .jobName {
+    font-size: 16px;
+  }
+  .jobLinkItem {
+    height: 50px;
+  }
+  .jobIndex {
+    height: 50px;
+  }
+  .cooperateTitle {
+    font-size: 30px !important;
+  }
+  .aboutTitle,
+  .abouttitle {
+    font-size: 30px !important;
+  }
+  .addressText {
+    font-size: 18px !important;
+  }
+}

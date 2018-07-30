@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="./css/free.css">
+</head>
+<body>
+    <div id="dvFreeResult" style="width: 320px;margin:0 auto;position: relative;">
+        <div>
+            <p>
+                <span>姓名：<b data-free-name></b></span>
+                <span>性别：<b data-free-sex></b></span>
+            </p>
+
+            <p>
+                <span>公历：<b data-free-birth></b></span>
+            </p>
+
+            <p>
+                <span>八字：<b data-free-bazi></b></span>
+            </p>
+
+            <div>
+                <p><span>大运：</span></p>
+                <p data-free-dayun></p>
+            </div>
+        </div>
+        <div>
+            <p>性情信息</p>
+            <p data-free-xingqing>            </p>
+            <a href="javascript: void(0);"><input type="button" value="查看我的八字精批" id="btnViewDetail" class="viewDetail"></a>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div style="border: 1px solid #F00;">
+            <a href="javascript: void(0);">
+                <img src="http://7u2s0k.com2.z0.glb.qiniucdn.com/kaiyunshangcheng/1419301832.jpg"
+                     class="jingPi">
+            </a>
+
+            <div>
+                八字合婚是以周易八字命理为基础，结合婚姻树理论，为两人的匹配提供全面参考的有效工具。由易奇八字专家团倾情打造。
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 320px;margin:0 auto;position: relative; border: 1px solid" id="dvPaidResult">
+        <div>
+            <p>
+                <span>姓名：<b data-paid-name></b></span>
+                <span>性别：<b data-paid-sex></b></span>
+            </p>
+
+            <p>
+                <span>公历：<b data-paid-birth></b></span>
+            </p>
+
+            <p>
+                <span>八字：<b data-paid-bazi></b></span>
+            </p>
+
+            <div>
+                <p><span>大运：</span></p>
+                <p data-paid-dayun></p>
+            </div>
+            <p>五行力量：</p>
+
+            <p data-paid-wuxing></p>
+
+            <p>命局五行喜忌：</p>
+
+            <p><b>最喜五行金：</b></p>
+
+            <p data-paid-zuixi></p>
+
+            <p><b>次喜五行土：</b></p>
+
+            <p data-paid-cixi></p>
+
+            <p><b>最忌五行木：</b></p>
+
+            <p data-paid-zuiji></p>
+
+            <p><b>次忌五行水：</b></p>
+
+            <p data-paid-ciji></p>
+
+            <p><b>平常五行火：</b></p>
+
+            <p data-paid-pingchang></p>
+        </div>
+        <div>
+            <p class="infoTitle"><b>性情信息</b></p>
+
+            <div style="margin: 0 10px;" data-paid-xingqing>
+                
+            </div>
+        </div>
+        
+        <div id="dvLiuNian">
+        </div>
+    </div>
+
+
+    <div id="dvPay" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-header">
+            <p>支付金额：<b>98</b>元</p>
+        </div>
+        <div class="modal-body">
+            <p>支付成功后，可查看十年运程批示所有信息：</p>
+
+            <p><span>1.大运总体分析；</span><span>2.大运特征；</span></p>
+
+            <p><span>3.大运起落；</span><span>4.大运吉凶转变；</span></p>
+
+            <p><span>5.流年分析；</span><span>6.流年动态；</span></p>
+
+            <p><span>7.吉神、凶神；</span></p>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn dismissBtn pickConfirmBtn" aria-hidden="true" id="btnPay">使用支付宝支付</button>
+        </div>
+    </div>
+
+    <script src="./scripts/jquery-fastclick.min.js"></script>
+    <script src="./scripts/modal.js"></script>
+    <script src="./scripts/underscore-min.js"></script>
+    <script src="./scripts/wnl-utils.js"></script>
+    <script>
+        var pageObj = (function () {
+			var apiLoadResult = "/numberology/NRLorder/GetOrderAnswer?orderid=";
+			var orderId = wnl_utils.getQS("orderid");
+			
+			function loadInfo(){
+				if (!orderId) {
+					alert("请传入orderid");
+					return;
+				} else {
+					if (orderId.length != 36) {
+						alert("请传入正确的orderid");
+						return;
+					} else {
+						$.ajax({
+							cache: false,
+							type: "GET",
+							dataType: "json",
+							url: apiLoadResult + orderId,
+							success: function (result) {
+								if (result.status == 0) {
+									var baziResult = result.data;
+									if (baziResult.isPayed) {
+										$("#dvFreeResult").hide();
+										$("#dvPaidResult").show();
+
+										$("[data-paid-xingqing]").text(baziResult.xingQing);
+										$("[data-paid-bazi]").text(baziResult.baZi);
+										$("[data-paid-birth]").text(baziResult.birth);
+										$("[data-paid-name]").text(baziResult.name);
+										$("[data-paid-sex]").text(baziResult.sex);
+										$("[data-paid-dayun]").text(baziResult.daYunYear);
+
+										$("[data-paid-wuxing]").text(baziResult.wuXingLiLiang);
+										$("[data-paid-zuixi]").text(baziResult.zuiXi);
+										$("[data-paid-cixi]").text(baziResult.ciXi);
+										$("[data-paid-zuiji]").text(baziResult.zuiJi);
+										$("[data-paid-ciji]").text(baziResult.ciJi);
+										$("[data-paid-pingchang]").text(baziResult.pingChang);
+
+										var liuNianTemplate = '<p data-year="<%- justYear %>" class="infoTitle"><b><%- year %></b>运势得分：<span><%- score %></span></p>\
+											<div style="margin: 0 10px;">\
+												<p><b>【简评】</b></p>\
+												<p><%- text %></p>\
+												<p><b>【吉神】</b></p>\
+												<p><%- jiShen %></p>\
+												<p><b>【凶神】</b></p>\
+												<p><%- xiongShen %></p>\
+												<p><b>【流年十神】：<span><%- shiShenName %></span></b></p>\
+												<p><%- shiShenText %></p>\
+											</div>';
+
+										$.each(baziResult.liuNian, function () {
+											var mkpItem = _.template(liuNianTemplate)({
+												justYear: this.year.substring(0, 4),
+												year: this.year,
+												score: this.score,
+												text: this.text,
+												jiShen: this.jiShen,
+												xiongShen: this.xiongShen,
+												shiShenName: this.shiShenName,
+												shiShenText: this.shiShenText,
+											});
+
+											$("#dvLiuNian").append(mkpItem);
+										});
+										
+										var daYunTemplate = '<p class="infoTitle"><b><%- year %></b></p>\
+											<div style="margin: 0 10px;">\
+												<p><b>【大运得分】 <%- score %></b></p>\
+												<p><%- text %></p>\
+												<p><b>【大运起落】</b></p>\
+												<p><%- qiLuo %></p>\
+												<p><b>【大运十神】</b></p>\
+												<p><%- shiShen %></p>\
+												<p><b>【大运冲合】</b></p>\
+												<p><%- chongHe %></p>\
+											</div>';
+											
+										$.each(baziResult.daYun, function(){											
+											var mkpItem = _.template(daYunTemplate)({
+												year: this.year,
+												score: this.score,
+												text: this.text,
+												qiLuo: this.qiLuo,
+												shiShen: this.shiShen,
+												chongHe: this.chongHe,
+											});
+											
+											$(_.template("[data-year=<%- startYear %>]")({ 
+												startYear: this.year.substring(0, 4) 
+												})).before(mkpItem);
+										});	
+									} else {
+										$("#dvFreeResult").show();
+										$("#dvPaidResult").hide();
+
+										$("[data-free-xingqing]").text(baziResult.xingQing);
+										$("[data-free-bazi]").text(baziResult.baZi);
+										$("[data-free-birth]").text(baziResult.birth);
+										$("[data-free-name]").text(baziResult.name);
+										$("[data-free-sex]").text(baziResult.sex);
+										$("[data-free-dayun]").text(baziResult.daYun);
+									}
+								} else {
+									alert("获取测算数据错误,错误信息为" + result.msg);
+								}
+							},
+							error: function (xhr, ajaxOperation, throwErr) {
+								debugger;
+								return;
+							}
+						});
+					}
+				}
+			};
+			
+            return {
+				obj: {
+					orderId: orderId,
+				},
+                page: {
+                    pay: "/numberology/NRLorder/PayedOrder?orderid=<%- orderId %>&returnUrl=<%- returnUrl %>",
+					returnUrl: "/numberology/tools/bzjp_result.html",
+                },
+				func: {
+					loadInfo: loadInfo
+				}
+            };
+        })();
+
+        $(function () {
+            pageObj.func.loadInfo();
+
+            $("#btnViewDetail").click(function () {
+                $("#dvPay").modal();
+            });
+
+            $("#btnPay").click(function () {
+                window.open(_.template(pageObj.page.pay)({
+                    orderId: pageObj.obj.orderId,
+                    returnUrl: pageObj.page.returnUrl
+                }));
+            })
+        })
+    </script>
+</body>
+</html>

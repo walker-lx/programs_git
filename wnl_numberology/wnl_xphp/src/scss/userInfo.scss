@@ -1,0 +1,153 @@
+.user-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  .header-content {
+    margin: 0.34rem 0.2rem 0 0.2rem;
+    .mxhp {
+      position: relative;
+      .avator1 {
+        position: absolute;
+        top: 41%;
+        left: 10.5%;
+        height: 1.4rem;
+        width: 1.4rem;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .avator2 {
+        position: absolute;
+        top: 41%;
+        right: 10.5%;
+        height: 1.4rem;
+        width: 1.4rem;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+  }
+  .user-info-content {
+    position: relative;
+    min-height: 6.7rem;
+    margin: 0.32rem .21rem 0 .21rem;
+    background-size: 100% 100%;
+    overflow: hidden;
+    .input-group {
+      margin: 1.5rem 0.36rem 0.2rem 0.36rem;
+      .input-content {
+        position: relative;
+        display: flex;
+        height: 1.15rem;
+        border-bottom: solid 1px #9585e6;
+        font-size: 18px;
+        color: #ffffff;
+        @media screen and (min-width: 320px) and (max-width: 359px) {
+          font-size:15px;
+        }
+        label {
+          display: inline-block;
+          width: 2rem;
+          margin-left: 0.13rem;
+          line-height: 1.15rem;
+        }
+        .sex {
+          position: absolute;
+          right: 0.41rem;
+          top: 0.4rem;
+          display: flex;
+          border-radius: 5px;
+          overflow: hidden;
+          .sex-option {
+            width: 0.61rem;
+            height: 0.44rem;
+            line-height: 0.44rem;
+            font-size: 12px;
+            text-align: center;
+            color: #463c95;
+            background-color: #31107d;
+          }
+          .checked {
+            background-color: #ffcc33;
+            color:#403799;
+          }
+        }
+        input {
+          /* line-height: 1.15rem; */
+          color: #fff;
+          font-size: 18px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          @media screen and (min-width: 320px) and (max-width: 359px) {
+            font-size:15px;
+          }
+        }
+      }
+    }
+  }
+  .yqMargin {
+    margin-top: 1.5rem;
+  }
+  .btn {
+    width: 2.58rem;
+    margin:0.5rem auto 0.4rem auto;
+  }
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-size: 16px;
+  color: #bbacc9;}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-size: 16px;
+  color: #bbacc9;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-size: 16px;
+  color: #bbacc9;
+}
+#input-name {
+  width: 2.5rem !important;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  font-size: 16px;
+  color: #bbacc9;
+}
+
+/* iphone5 */
+@media screen and (min-width: 320px) and (max-width: 359px) {
+  ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    font-size: 14px;
+    color: #bbacc9;
+  }
+
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    font-size: 14px;
+    color: #bbacc9;
+  }
+
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    font-size: 14px;
+    color: #bbacc9;
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    font-size: 14px;
+    color: #bbacc9;
+  }
+}

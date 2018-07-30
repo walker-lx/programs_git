@@ -1,0 +1,82 @@
+<!--history.wxml-->
+<view class="container">
+  <view class="userinfo" wx:if="{{hasUserInfo}}">
+    <view class="userinfo_back" style="background-image:url({{userInfo.avatarUrl?userInfo.avatarUrl:''}});"></view>
+    <view bindtap="bindViewTap" class="userinfo-avatar" style="background-image:url({{userInfo.avatarUrl?userInfo.avatarUrl:''}});"></view>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="tabs flex-wrp" style="flex-direction:row;">
+    <view class="tab_item {{tabIndex === 0 ? 'tab_item_active' : ''}}" bindtap="tabFirst">全部订单</view>
+    <view class="tab_item {{tabIndex === 1 ? 'tab_item_active' : ''}}" bindtap="tabSecond">未支付</view>
+    <view class="tab_item {{tabIndex === 2 ? 'tab_item_active' : ''}}" bindtap="tabThird">已支付</view>
+  </view>
+  <view class="products" wx:if="{{tabIndex === 0}}">
+    <view wx:if="{{lists[0].length === 0 && pageIndex[0] === 0}}">
+      <view class="empty">没有订单记录...</view>
+    </view>
+    <block wx:for="{{lists[0]}}" wx:for-item="item" wx:key="key">
+      <view class="product" bindtap="viewOrder" data-order="{{item.serviceOrderID}}" value="48670E40A290405DBF489D6A6B4390A6" data-orderName="{{item.orderName}}" data-url="{{item.url}}">
+        <view class="product_head">
+          <view class="product_name">{{item.orderName}}</view>
+        </view>
+        <view class="product_body" data-url="{{item.url}}">
+          <view class="title">订单号</view>
+          <view class="product_id">{{item.orderID}}</view>
+          <view class="title" style="margin-top: 11px;clear: left;">创建时间</view>
+          <view class="product_id" style="margin-top: 11px;">{{item.createTime}}</view>
+        </view>
+        <view class="product_foot">
+          <view class="price">{{item.totalFee}}</view>
+          <view class="invalid" wx:if="{{item.orderStatus === 0}}">待支付</view>
+          <view class="payed" wx:if="{{item.payStatus === 1}}"></view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="products" wx:if="{{tabIndex === 1}}">
+    <view wx:if="{{lists[0].length === 0 && pageIndex[0] === 0}}">
+      <view class="empty">没有订单记录...</view>
+    </view>
+    <block wx:for="{{lists[1]}}" wx:for-item="item" wx:key="key">
+      <view class="product" value="48670E40A290405DBF489D6A6B4390A6" bindtap="viewOrder" data-orderName="{{item.orderName}}" data-order="{{item.serviceOrderID}}" value="48670E40A290405DBF489D6A6B4390A6" data-url="{{item.url}}">
+        <view class="product_head">
+          <view class="product_name">{{item.orderName}}</view>
+        </view>
+        <view class="product_body" value="-1" data-url="{{item.url}}">
+          <view class="title" value="-1">订单号</view>
+          <view class="product_id" value="-1">{{item.orderID}}</view>
+          <view class="title" style="margin-top: 11px;clear: left;">创建时间</view>
+          <view class="product_id" style="margin-top: 11px;" value="2017-09-19 11:47:48">{{item.createTime}}</view>
+        </view>
+        <view class="product_foot">
+          <view class="price">{{item.totalFee}}</view>
+          <view class="invalid" wx:if="{{item.orderStatus === 0}}">待支付</view>
+          <view class="payed" wx:if="{{item.payStatus === 1}}"></view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="products" wx:if="{{tabIndex === 2}}">
+    <view wx:if="{{lists[0].length === 0 && pageIndex[0] === 0}}">
+      <view class="empty">没有订单记录...</view>
+    </view>
+    <block wx:for="{{lists[2]}}" wx:for-item="item" wx:key="key">
+      <view class="product" value="48670E40A290405DBF489D6A6B4390A6" bindtap="viewOrder" data-orderName="{{item.orderName}}" data-order="{{item.serviceOrderID}}" value="48670E40A290405DBF489D6A6B4390A6" data-url="{{item.url}}">
+        <view class="product_head">
+          <view class="product_name">{{item.orderName}}</view>
+        </view>
+        <view class="product_body" value="-1"  data-url="{{item.url}}">
+          <view class="title" value="-1">订单号</view>
+          <view class="product_id" value="-1">{{item.orderID}}</view>
+          <view class="title" style="margin-top: 11px;clear: left;">创建时间</view>
+          <view class="product_id" style="margin-top: 11px;" value="2017-09-19 11:47:48">{{item.createTime}}</view>
+        </view>
+        <view class="product_foot">
+          <view class="price">{{item.totalFee}}</view>
+          <view class="invalid" wx:if="{{item.orderStatus === 0}}">待支付</view>
+          <view class="payed" wx:if="{{item.payStatus === 1}}"></view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

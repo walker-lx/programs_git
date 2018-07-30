@@ -1,0 +1,20 @@
+{
+  "name": "calandar_index",
+  "version": "1.0.0",
+  "description": "可兰达官网",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://haoyajun@192.168.1.80:29418/~guojinhai/calandar_index.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,90 @@
+.content {
+	width: 100%;
+	height: 100vh;
+	background-color: #eee;
+	overflow-x: hidden
+}
+.content_box {
+	padding-top: 38rpx;
+}
+.edittip {
+	color: #888888;
+	font-size: 28rpx;
+	margin-left: 20rpx;
+}
+.info {
+	background-color: #fff;
+	padding: 26rpx 20rpx;
+	margin-top: 24rpx;
+}
+.name, .birth {
+	position: relative;
+	display: flex;
+	align-items: center;
+	font-size: 34rpx;
+}
+.nametext, .birthtext {
+	color: #615A50
+}
+.nameinput, .birthdate {
+	flex: 1;
+	color: #9F9A93;
+	margin-left: 108rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.birthdate {
+	margin-left: 40rpx;
+}
+.birthicon {
+	position: absolute;
+	right: 20rpx;
+	width: 16rpx;
+	height: 26rpx;
+	background: url('https://qiniu.image.cq-wnl.com/content/201804250b1efc454d9b4a3fa4a49c0053cbace5.png') no-repeat;
+	background-size: cover;
+}
+.line {
+	height: 1px;
+	background-color: #EAEAEA;
+	margin: 26rpx auto 28rpx;
+}
+.qdbtn {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 140rpx;
+	background-color: #fff;
+	padding: 20rpx;
+	box-sizing: border-box;
+}
+.qdbtn_text {
+	position: relative;
+	height: 100rpx;
+	background-color: #F5A623;
+	color: #fff;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 100rpx;
+	font-size: 34rpx;
+}
+.toast {
+	position: fixed;
+	/* max-width: 100vw; */
+	 width: 55%; 
+	padding: 32rpx;
+	box-sizing: border-box;
+	border-radius: 5px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, .6);
+	color: #fff;
+	top: 40%;
+	left: 50%;
+	 transform: translate(-50%, -50%); 
+	font-size: 34rpx;
+	transition: all .4s;
+	opacity: 0;
+}
+.active {
+	opacity: 1;
+}

@@ -1,0 +1,17 @@
+{
+    "pages": [
+		"pages/index/index",		
+		"pages/pay/pay",		
+		"pages/historyluck/historyluck",		
+		"pages/users/users",		
+		"pages/add/add",		
+		"pages/edit/edit",		
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "生命灵数",
+        "navigationBarTextStyle": "black"
+    }
+}

@@ -1,0 +1,53 @@
+{ 
+    " html " : { 
+        " allowed_file_extensions " : [ " htm " , " html " , " xhtml " , " shtml " , " xml " , " svg "], 
+        " arch_style " : " collapse " , // [collapse | expand | end-expand | none]将大括号放在与控制语句（默认）相同的行上,或者将自己的大括号放在自己的行（Allman / ANSI style）上,或者试图将它们保持在自己的位置 
+        " end_with_newline " : false , //使用换行符输出结果 
+        " indent_char " : " " , //缩进字符 
+        " indent_handlebars " : false , // eg {{#foo}},{{/ foo}} 
+        " indent_inner_html " : false , //缩进<head>和<body>部分 
+        " indent_scripts " : " keep " , // [keep | separate | normal] 
+        " indent_size " : 4 , //缩进大小 
+        " max_preserve_newlines " : 0 , //要保留在一个块中的最大换行符数（0个禁用） 
+        " preserve_newlines " : true , //是否应该保留元素之前的现有行中断（仅在元素之前工作,而不是在标签内部或文本中） 
+        "未格式化" : [ " a " , " span " , " img " , " code " , " pre " , " sub " , " sup " , " em " , " strong " , " b " , " i ", " h1 " , " h4 " , " h5 " , " h6 " ], //列表不应重新格式化 
+        " wrap_line_length " : 0 //在这个字符数（0个禁用）之后,行应该在下一个机会中换行 
+    }, 
+    " css " : { 
+        " allowed_file_extensions " : [ " css " , " scss " , " sass " , " less " ], 
+        " end_with_newline " : false , //使用换行符输出结果 
+        " indent_char " : " " , //缩进字符 
+        " indent_size " : 4 , //缩进大小 
+        " newline_between_rules " : true , //在每个css规则之后添加一行 
+        " selector_separator " : " " , 
+        " selector_separator_newline " : true //使用换行符分隔选择器（例如"a,\ nbr"或"a,br"） 
+    }, 
+    " js " : { 
+        " allowed_file_extensions " : [ " js " , " json " , " jshintrc " , " jsbeautifyrc " ], 
+        //设置大括号 
+        // collapse:（old default）将大括号放在与控制语句相同的行上 
+        // collapse-preserve-inline:（new default）与崩溃相同,但更好地支持ES6解构和其他功能。  https://github.com/victorporof/Sublime-HTMLPrettify/issues/231 
+        // expand:将大括号放在自己的行上（Allman / ANSI style） 
+        // end-expand:将end括号放在自己的行上 
+        // none:将它们保留在哪里 
+        " brace_style " : " collapse-preserve-inline " , 
+        " break_chained_methods " : false , //断开后续行中的链接方法调用 
+        " e4x " : false , //传递E4X xml文字通过不变的 
+        " end_with_newline " : false , //使用换行符输出结果 
+        " indent_char " : " " , //缩进字符 
+        " indent_level " : 0 , //初始缩进级别 
+        " indent_size " : 4 , //缩进大小 
+        " indent_with_tabs " : false , //缩进选项卡,覆盖`indent_size`和`indent_char` 
+        " jslint_happy " : false , //如果为true,则执行jslint- stricter 模式 
+        " keep_array_indentation " : false , //保留数组缩进 
+        " keep_function_indentation " : false , //保留函数缩进 
+        " max_preserve_newlines " : 0 , //要保留在一个块中的最大换行符数（0个禁用） 
+        " preserve_newlines " : true , //是否应保留现有换行符 
+        " space_after_anon_function " : false , //应该添加一个匿名函数的括号之前的空格,"function（）"vs"function（）" 
+        " space_before_conditional " : true , //应该添加条件语句之前的空格,"if（true）"vs"if（true）" 
+        " space_in_empty_paren " : false , //在空括号内添加填充空格,"f（）"vs"f（）" 
+        " space_in_paren " : false , //在括号内添加填充空格,即。  f（a,b） 
+        " unescape_strings " : false , //应以\ xNN符号编码的字符串中的可打印字符为非转义,"example"vs"\ x65 \ x78 \ x61 \ x6d \ x70 \ x6c \ x65" 
+        " wrap_line_length " : 0 //在这个字符数（0个禁用）之后,行应该在下一个机会中换行 
+    } 
+}

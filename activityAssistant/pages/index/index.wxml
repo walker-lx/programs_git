@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<import src='../toast/toast.wxml' />
+<template is='toast' data='{{..._toast_}}' />
+<button open-type='getUserInfo' bindgetuserinfo="getinfo" id='get'>请点击获取个人信息</button>
+<view class='indexcontent' style='position:{{fixed}}'>
+  <view class='statelist'>
+    <view class='choose' bindtap='choose'>
+      <text>{{itemValue}}</text>
+      <image class='moreicon' src='../../img/tab-more-icon@2x.png'></image>
+    </view>
+  </view>
+  <view class='selectmask' wx:if='{{selectlist}}' bindtap='closeselect'></view>
+    <view class='selectarea' wx:if='{{selectlist}}'>
+      <view wx:if='true' class='selectlist'>
+        <button wx:for='{{items}}' wx:key='item' class='list-item' bindtap='choice' data-value='{{item.value}}'>{{item.name}}
+          <image class='choosedicon' wx:if='{{item.checked}}' src='../../img/select-icon@2x.png'></image>
+        </button>
+    </view>  
+  </view>
+
+  <!--活动内容  -->
+  <view class='activitylist' wx:for='{{activitydata}}' wx:key='item' bindtap='todetail' data-acid='{{item.id}}' data-create='{{item.create}}' data-sign='{{item.signstatus}}' data-index='{{index}}' data-acstatus='{{item.activityStatus}}' data-s='{{item.status}}'>
+    <view class='activitytype' style='color:{{statecolor}}'>{{item.status}}</view>
+    <view class='activityphoto'>
+      <view class='activitypic' style='background-image: url("{{item.createUserAvatarUrl}}")'>
+         <image src='../../img/crown-icon@2x.png' class='crownicon' wx:if='{{item.showcrown}}'></image> 
+        <!-- <image src='{{item.joiners[0].joinerAvatarUrl}}' class='crownicon'></image>         -->
+      </view>
+      <text class='activityusername'>{{item.createUserNickName}}</text>
+    </view>
+    <view class='activitytime' style='color:{{item.timecolor}}'><text style='color:{{item.timecolor}}' wx:if='{{item.syear}}'>{{item.syear}}年</text><text style='color:{{item.timecolor}}'>{{item.sdate}}月{{item.sday}}日 {{item.sweekday}} {{item.shm}}</text></view>
+    <view class='activityname' style='color:{{item.namecolor}}'>{{item.activityName}}</view>
+    <view class='activityaddr' wx:if='{{item.address}}'>地点：<text class='addrtext' style='color:{{item.addrcolor}}'>{{item.address}}</text></view>
+    <view class='spend' wx:if='{{item.costvalue}}'>花费：<text style='color:{{item.spendcolor}}'>人均 ￥{{item.costvalue}}元</text></view>
+    <view class='tip' wx:if='{{item.remark}}'>备注：<text style='color:{{item.tipcolor}}'>{{item.remark}}</text></view>
+
+    <view class='headlist'>
+      <view class='{{headclass}}' wx:for='{{item.joiners}}' wx:key='item' style='z-index:calc(100 - {{index}}); opacity:calc(1 - {{index}} / 20)'>
+        <image src='{{item.joinerAvatarUrl}}'></image>    
+      </view>
+      <view class='more' wx:if='{{item.count > 9}}'>...</view>   
+      <view class='count'>{{item.count}}人</view>     
+    </view> 
+  </view>
+
+  <!--第一次进入小程序的引导  -->
+   <view wx:if='{{firstinto}}'>
+    <view class='guidemask' bindtap='closeguide'></view>
+    <image class='guidetip' src='../../img/pic1@2x.png' bindtap='closeguide'></image>
+    <view class='guidecircle' bindtap='closeguide'>
+        <view class='guide'>
+          <view class='guidetext'>发起</view>
+          <view>活动</view>
+        </view>
+    </view>
+  </view> 
+  <!--活动历史没有更多活动时显示  -->
+  <!-- <view wx:if='{{hasmore}}'>
+    <view class='moremask' bindtap='closemore'></view>
+    <image class='moretip' src='../../img/pic2@2x.png' bindtap='closemore'></image>
+    <view class='morecircle' bindtap='closemore'>
+        <view class='moresponsor'>
+          <view class='moretext'>发起</view>
+          <view>活动</view>
+        </view>
+    </view>
+  </view> -->
+  <view class='publish' bindtap='sponsor'>
+      <view class='publishtext'>发起</view>
+      <view>活动</view>          
+  </view>
+</view>

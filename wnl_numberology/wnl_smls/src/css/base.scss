@@ -1,0 +1,181 @@
+@mixin _bg($url, $ext) {
+    // 背景图片适配2倍屏与3倍屏
+    background-image: url($url + "@2x." + $ext);
+    background-repeat: no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+        background-image: url($url + "@3x." + $ext);
+    }
+}
+@font-face {
+    font-family: 'font';
+    src: url('../../static/libs/font/smls.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+.border-all-1px {
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200%;
+        height: 200%;
+        border: 1px solid red;
+        box-sizing: border-box;        
+        // -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        // -webkit-transform: scale(.5);
+        transform: scale(.5);
+    }
+}
+.border-bottom-1px {
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200%;
+        height: 200%;
+        border-bottom: 1px solid red;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+    }
+}
+
+// 公共样式(编辑添加用户页面)
+.content {
+    height: 100vw;
+    height: 100vh;
+    background-color: #eee;
+    overflow-x: hidden;
+    .edit {
+        margin: 19px 0 0 10px;
+        color: #888888;
+        font-size: 14px;
+    }
+    .name, .birth {
+        position: relative;
+        // width: 100%;
+        display: flex;
+        background-color: #fff;
+        padding: 13px 10px;
+        box-sizing: border-box;
+        align-items: center;
+        // justify-content: space-between;
+        font-size: 17px;
+    }
+    .name {
+        margin-top: 12px;
+        // border-bottom: 1px solid #EAEAEA;
+    }
+    .linegap {
+        // width: calc(100vw - 20px);
+        height: 1px;
+        background-color: #EAEAEA;
+        margin: 0 10px;
+    }
+    .nametext, .birthtext {
+        color: #615A50;
+    }
+    .nameinput, .birthinput {
+        // padding: 13px 0;
+        // flex: 1;
+        box-sizing: border-box;
+        color: #9F9A93;
+    }
+    .nameinput {
+        // width: 180px;
+        flex: 1;
+        margin-left: 54px;
+    }
+    .birthinput {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+    .nameinput input {
+        width: 100%;
+        color: #9F9A93;
+        overflow: hidden;
+        text-overflow: ellipsis;      
+        font-size: 17px;                
+    }
+    .birthinput_icon {
+        position: absolute;
+        right: 10px;
+        width: 8px;
+        height: 13px;
+        background: url('https://qiniu.image.cq-wnl.com/content/201804250b1efc454d9b4a3fa4a49c0053cbace5.png') no-repeat;
+        background-size: cover;
+    }
+}
+// 底部按钮公共样式
+.comfirm {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 50;
+    .comfirmtext {
+        position: relative;
+        height: 50px;
+        color: #fff;
+        background-color: #F5A623;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 17px;
+    }
+}
+
+// 盒子内部线条公共样式
+.line1, .line2, .line3, .line4 {
+    position: absolute;
+}
+.line1 {
+    top: 5px;
+    width: 100%;
+    height: 1px;
+    background-color: #B8C494;
+}
+.line2 {
+    bottom: 5px;
+    width: 100%;
+    height: 1px;
+    background-color: #B8C494;
+}
+.line3 {
+    left: 5px;
+    width: 1px;
+    height: 100%;
+    background-color: #B8C494;
+}
+.line4 {
+    right: 5px;
+    width: 1px;
+    height: 100%;
+    background-color: #B8C494;
+}
+// 微信分享遮罩
+.wxsharemask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    img {
+        position: fixed;
+        top: 40px;
+        right: 30px;
+    }
+}
+

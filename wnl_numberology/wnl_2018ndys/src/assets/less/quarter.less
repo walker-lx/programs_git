@@ -1,0 +1,80 @@
+.quarter {
+    overflow: hidden;
+    padding-bottom: 27px;
+    background-image: url('../img/background.jpg');
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    .tips {
+        margin-top: 18px;
+    }
+    .content {
+        margin: 9px 16px 20px;
+        color: #4b4866;
+        font-size: 15px;
+    }
+    .section-inside .keywords {
+        color: #8a81de;
+        display: flex;
+        margin: 9px 16px 0px;
+        align-items: center;
+    }
+    .section-inside .keywords-text {
+        margin-left: 10px;
+        font-size: 15px;
+        color: #ffe0b0;
+        padding: 2px 4px;
+        background-color: #7a72cc;
+        border-radius: 2px;
+    }
+}
+
+.goodlist {
+    display: flex;
+    padding-bottom: 36px;
+}
+
+.goodlist-item {
+    height: 130px;
+    width: 31%;
+    margin-top: 10px;
+    position: relative;
+}
+
+.goodlist-item-title {
+    position: absolute;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: 0.6px;
+    text-align: center;
+    color: #fefefe;
+    top: 10px;
+    left: 5%;
+    z-index: 4;
+}
+
+.goodlist-item-num {
+    position: absolute;
+    font-size: 9px;
+    line-height: 2;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: #ffffff;
+    bottom: 7px;
+    right: 6%;
+    z-index: 4;
+}
+
+.goodlist-item:nth-child(2) {
+    margin-left: 3.5%;
+}
+
+.goodlist-item:nth-child(3) {
+    margin-left: 3.5%;
+}
+.goodlist-item-mask{
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+}

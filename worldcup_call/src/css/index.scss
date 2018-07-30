@@ -1,0 +1,63 @@
+@import './base.scss';
+.index {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    // overflow: visible;
+    background: url('../assets/beijing.jpg') no-repeat fixed;
+    // background-position-y: -64px;
+    // background-size: 100% 7.36rem;
+    background-size: 100% 100%;
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+        // background-size: 100% 100%;
+        background-position-y: 0;
+    }
+    &.ios {
+        background-size: 100% 7.36rem;
+        background-position-y: -64px;
+    }
+    .callbtn {
+        position: absolute;
+        bottom: 0.37rem;
+        left: 50%;
+        margin-left: -1.504rem;
+        width: 3.08rem;
+        // height: 0.53rem;
+        height: 0.608rem;
+        background: url('../assets/anniu01.png') no-repeat;
+        background-size: 100% 100%;
+        @media only screen and (min-width: 360px) and (-webkit-device-pixel-ratio: 3){
+            bottom: 0.12rem;
+        }
+    }
+}
+.country {
+    text-align: center;
+    height: 34px !important;
+    font-size: 0;
+    // line-height: 34px !important;
+    img, span {
+        display: inline-block;
+        width: 26px;
+        height: 13px;
+        margin-right: 4px;
+        font-size: 14px;
+        // margin-top: 16px;
+    }
+}
+.box {
+    margin: 100px 10px;
+    border: 1px solid #000;
+    height: 280px;
+    overflow: hidden;
+    .wrap {
+        margin: 10px;
+        height: 100%;
+        overflow: scroll;
+        .item {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+    }
+}

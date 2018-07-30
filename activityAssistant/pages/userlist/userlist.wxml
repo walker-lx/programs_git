@@ -1,0 +1,14 @@
+<!--pages/userlist/userlist.wxml-->
+<view class='topline'></view>
+<view class='userlist'>
+  <view class='usercount'>已报名 {{count}} 人</view>
+  <view class='userinfo'>
+    <view class='userdetail' wx:for='{{joiners}}' wx:key='{{item}}'>
+      <image class='img' src='{{item.joinerAvatarUrl === "" ? "https://mobile.51wnl.com/activityAssistant/img/headimg.jpg" : item.joinerAvatarUrl}}'></image>
+      <view class='username'>{{item.joinerNickName}}</view> 
+    </view>
+    <button class='userdetail add' open-type="share" wx:if='{{acstop}}'>
+      <image class='addicon' src='../../img/add-icon@2x.png'></image>
+    </button>
+  </view>
+</view>

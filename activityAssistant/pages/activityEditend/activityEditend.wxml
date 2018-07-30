@@ -1,0 +1,49 @@
+<!--pages/activityEditend/activityEditend.wxml-->
+<import src='../toast/toast.wxml' />
+<template is='toast' data='{{..._toast_}}' />
+
+<view class='progress'>
+  <view class='item-1'></view>
+  <view class='item-2'>1</view>
+  <view class='item-3'></view>
+  <view class='item-4'>2</view>
+  <view class='item-5'>
+    <view class='item-5-1' style='background-color:{{bg5_1}}'></view>
+    <view class='item-5-2' style='background-color:{{bg5_2}}'></view>
+    <view class='item-5-3' style='background-color:{{bg5_3}}'></view>
+    <view class='item-5-4' style='background-color:{{bg5_4}}'></view>    
+  </view>  
+</view>
+
+<form bindsubmit='formSubmit' report-submit='true'>
+<view class='acinfo'>
+  <view class='activityplace'>
+    <view class='activityplace-text'>活动地点</view>
+    <view class='place' style='{{placeborder}}'>
+      <input type='text' name='placeinput' class='activityplace-input' bindfocus='placefocus' bindblur='placeblur' value='{{placevalue}}' bindinput='placeinput' maxlength='20'></input>
+      <image class='clearplace' wx:if='{{hasplace}}' src='../../img/delete-icon@2x.png' catchtap='clearplace'></image>
+    </view>
+  </view>
+  <view class='limitcount' >
+    <view class='limitcount-text'>限制人数</view>
+    <view class='limit' style='{{countborder}}'>
+      <input name='countinput' type='number' class='count-input' bindinput='limitinput' bindfocus='countfocus' bindblur='countblur' value='{{limitvalue}}' maxlength='5'></input>
+       <image wx:if='{{haslimit}}' class='clearlimit' src='../../img/delete-icon@2x.png' bindtap='clearlimit'></image>       
+    </view>
+  </view>
+  <view class='predictspend'>
+    <view class='predictspend-text'>预计花费</view>
+    <view class='spend' style='{{spendborder}}'>
+      <view class='spendinfo'>人均:</view>
+      <input name='spendinput' type='digit'  class='spend-input' bindfocus='spendfocus' bindblur='spendblur' value='{{spendvalue}}' bindinput='spendinput' maxlength='10' focus='{{sfocus}}'></input>
+    </view>
+  </view>
+  <view class='tip'>
+    <view class='tip-text'>备注</view>
+    <textarea name='tipinput' placeholder='例如：提醒参与人准时到达、带好所需物品...' placeholder-style='z-index:1000' style='{{tipborder}}' class='tip-input' bindfocus='tipfocus' bindblur='tipblur' value='{{tipvalue}}' bindinput='tipinput' maxlength='300'></textarea>    
+  </view>
+</view>
+  <button formType="submit" class='nextbtn' disabled='{{dis}}'>下一步</button>
+</form>
+
+

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+	<meta name="copyright" content="Copyright (c) 51wnl.com" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="description" content="万年历" />
+	<meta name="keywords" content="万年历" />
+	<title>2017年运势</title>
+	<!--<link rel="stylesheet" type="text/css" href="mobiscroll/mobiscroll.custom-2.14.4.min.css" />-->
+	<link rel="stylesheet" type="text/css" href="css/index3.css">
+	<script type="text/javascript">
+		var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cspan id='cnzz_stat_icon_1261206258'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261206258' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<style>
+		#cnzz_stat_icon_1261206258 {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="main">
+		<div class="result_card_section flex_row">
+			<img src="" alt="" class="result_card_img">
+			<div class="result_card_info">
+				<div class="result_card_title"></div>
+				<div class="result_card_txt"></div>
+			</div>
+		</div>
+		<div class="result_title"></div>
+		<div class="section2">
+			<div class="keyword_content">
+				<span>关键词：</span>
+				<span class="keyword_txt year_keyword_txt"></span>
+			</div>
+			<div class="score_content clear_float">
+				<div class="line_title">年度评分：</div>
+				<div class="star_list year">
+					<div class="star_item"></div>
+					<div class="star_item"></div>
+					<div class="star_item"></div>
+					<div class="star_item"></div>
+					<div class="star_item"></div>
+				</div>
+			</div>
+		</div>
+		<div class="quater_index_list flex_row hidden">
+			<div class="quater_index" data-index="0">
+				<div class="quater_index_name">
+					<div class="quater_txt">1~3月</div>
+					<div class="quater_lock"></div>
+					<div class="quater_index_line"></div>
+				</div>
+			</div>
+			<div class="quater_index" data-index="1">
+				<div class="quater_index_name">
+					<div class="quater_txt">4~6月</div>
+					<div class="quater_lock"></div>
+					<div class="quater_index_line"></div>
+				</div>
+			</div>
+			<div class="quater_index" data-index="2">
+				<div class="quater_index_name">
+					<div class="quater_txt">7~9月</div>
+					<div class="quater_lock"></div>
+					<div class="quater_index_line"></div>
+				</div>
+			</div>
+			<div class="quater_index" data-index="3">
+				<div class="quater_index_name">
+					<div class="quater_txt">10~12月</div>
+					<div class="quater_lock"></div>
+					<div class="quater_index_line"></div>
+				</div>
+			</div>
+		</div>
+		<div class="free_content hidden">
+			<div class="free_content_top">解锁后你将获得以下内容</div>
+			<div class="free_content_list">
+				<div class="free_content_line flex_row">
+					<div class="free_content_item">
+						<img src="img/3.0word-1-pic@3x.png" alt="" class="free_content_img">
+					</div>
+					<div class="free_content_item">
+						<img src="img/3.0word-2-pic@3x.png" alt="" class="free_content_img">
+					</div>
+				</div>
+				<div class="free_content_line flex_row">
+					<div class="free_content_item">
+						<img src="img/3.0word-3-pic@3x.png" alt="" class="free_content_img">
+					</div>
+					<div class="free_content_item">
+						<img src="img/3.0word-4-pic@3x.png" alt="" class="free_content_img">
+					</div>
+				</div>
+			</div>
+			<div class="btn_mask free_btn_mask">
+				<a href="javascript:void(0);" class="begin_btn">立即半价解锁下半年运势</a>
+			</div>
+			<!--<div class="lock_tip">立即解锁查看
+					<span class="month_range"></span>月运势详情</div>
+				<div class="lock_tip_titel">解锁后你将获得</div>
+				<div class="lock_tip_txt">
+					<span class="month_range"></span>月综合运势</div>
+				<div class="lock_tip_txt">事业运势详情</div>
+				<div class="lock_tip_txt">感情运势详情</div>-->
+		</div>
+		<div class="payed_content hidden">
+			<div class="year_txt"></div>
+			<div class="quater_detail result_quater_detail">
+				<img src="img/kuang@3x.png" alt="kuang" class="result_tip_img">
+				<div class="keyword_content">
+					<span>关键词：</span>
+					<span class="keyword_txt quater_keyword_txt"></span>
+				</div>
+				<div class="quarter_txt_1"></div>
+			</div>
+			<div class="zongyun_wrapper">
+				<div class="zongyun_index_content">
+					<div class="index_item zonghe clear_float">
+						<div class="line_title">总运综合指数：</div>
+						<div class="star_list">
+							<div class="star_item"></div>
+							<div class="star_item"></div>
+							<div class="star_item"></div>
+							<div class="star_item"></div>
+							<div class="star_item"></div>
+						</div>
+					</div>
+					<div class="index_item jiankang clear_float">
+						<div class="line_title">总运健康指数：</div>
+						<div class="star_list">
+							<div class="star_item"></div>
+							<div class="star_item"></div>
+							<div class="star_item"></div>
+							<div class="star_item"></div>
+							<div class="star_item"></div>
+						</div>
+					</div>
+					<div class="index_item caiyun clear_float">
+						<div class="line_title">总运财运指数：</div>
+						<div class="star_list">
+							<div class="star_item"></div>
+							<div class="star_item"></div>
+							<div class="star_item"></div>
+							<div class="star_item"></div>
+							<div class="star_item"></div>
+						</div>
+					</div>
+				</div>
+				<div class="quarter_zongyun_title"></div>
+				<div class="quarter_zongyun_txt"></div>
+			</div>
+		</div>
+		<div class="payed_item_content qinggan_content hidden">
+			<div class="payed_item_title">情感结果</div>
+			<div class="payed_item_detail">
+				<img src="img/kuang@3x.png" alt="kuang" class="result_tip_img">
+				<div class="txt_tip">
+					<img src="img/txt_tip_bg.png" alt="wnl" class="txt_tip_line">
+					<div class="txt_tip_wrapper">如果你有伴侣</div>
+				</div>
+				<div class="score_content clear_float">
+					<div class="line_title">感情指数：</div>
+					<div class="star_list gqszs">
+						<div class="star_item"></div>
+						<div class="star_item"></div>
+						<div class="star_item"></div>
+						<div class="star_item"></div>
+						<div class="star_item"></div>
+					</div>
+				</div>
+				<div class="payed_item_content_title gqstitle"></div>
+				<div class="payed_item_txt gqsdesc"></div>
+				<div class="txt_tip">
+					<img src="img/txt_tip_bg.png" alt="wnl" class="txt_tip_line">
+					<div class="txt_tip_wrapper">如果你是单身</div>
+				</div>
+				<div class="score_content clear_float">
+					<div class="line_title">感情指数：</div>
+					<div class="star_list gqzs">
+						<div class="star_item"></div>
+						<div class="star_item"></div>
+						<div class="star_item"></div>
+						<div class="star_item"></div>
+						<div class="star_item"></div>
+					</div>
+				</div>
+				<div class="payed_item_content_title gqtitle">~</div>
+				<div class="payed_item_txt gqdesc"></div>
+			</div>
+		</div>
+		<div class="payed_item_content shiye_content hidden">
+			<div class="payed_item_title">事业结果</div>
+			<div class="payed_item_detail">
+				<img src="img/kuang@3x.png" alt="kuang" class="result_tip_img">
+				<div class="score_content clear_float">
+					<div class="line_title">事业指数：</div>
+					<div class="star_list workzs">
+						<div class="star_item"></div>
+						<div class="star_item"></div>
+						<div class="star_item"></div>
+						<div class="star_item"></div>
+						<div class="star_item"></div>
+					</div>
+				</div>
+				<div class="payed_item_content_title worktitle"></div>
+				<div class="payed_item_txt workdesc"></div>
+			</div>
+		</div>
+		<div class="result_bottom_tip hidden">
+			<img src="img/kuang@3x.png" alt="kuang" class="result_tip_img">
+			<div class="result_tip_title">2017年重要星象提示</div>
+			<div class="result_tip_txt"></div>
+		</div>
+	</div>
+	<div id="toast"></div>
+	<span id="toast1"></span>
+	<div class="mask result_mask hidden"></div>
+	<div class="modal payModal hidden">
+		<div class="modal_close"></div>
+		<div class="modal_content">
+			<div class="modal_title">解锁未来三个月事业运完整版</div>
+			<div class="select_item select_item_month flex_row selected">
+				<div class="month_info">
+					<span class="month_range"></span>月份运势</div>
+				<div class="item_price">18</div>
+				<div class="select_icon"></div>
+			</div>
+			<div class="select_item select_item_year flex_row">
+				<div class="month_info">
+					<div class="month_txt">2017全年运势</div>
+					<div class="month_num">(1月~12月)</div>
+				</div>
+				<div class="item_price">
+					<div class="price_now">
+						<div class="price_icon">¥ </div>
+						<div class="price_now_num">58</div>
+					</div>
+					<div class="price_old">¥ 72</div>
+				</div>
+				<div class="select_icon"></div>
+			</div>
+			<div class="pay_btn">去支付</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/result3.js"></script>
+  <script type="text/javascript" src="//mobile.51wnl.com/numberology/redpackage/js/wnl_redpackage.js"></script>
+</body>
+
+</html>

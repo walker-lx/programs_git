@@ -1,0 +1,32 @@
+<view class="container order">
+  <view class="user icon-order-title">
+    <view class="avator">
+      <image src="{{userInfo.avatarUrl}}" mode="scaleToFill"></image>
+    </view>
+    <view class="nickname">{{userInfo.nickName}}</view>
+  </view>
+  <view class="order-list">
+    <view class="order-status">
+      <view wx:for="{{orderStatus}}" wx:key="{{index}}" data-index="{{index}}" class="item {{active===index?'active':''}}" bindtap="selectOrderStatus">{{item}}</view>
+    </view>
+    <view class="list">
+      <view class="null-order" wx:if="{{orderList.length<1}}">
+        <view class="icon-null-order"></view>
+        <text>没有订单...</text>
+      </view>
+      <view class="item" wx:for="{{orderList}}" wx:key="{{index}}" data-orderId="{{item.serviceOrderID}}" bindtap="toResult">
+        <view class="item-name">
+          <text>{{item.orderName}}</text>
+          <text>{{item.fmtPayStatus}}</text>
+        </view>
+        <view class="item-info">
+          <view>
+            <view>订单编号：{{item.orderID}}</view>
+            <view>创建时间：{{item.createTime}}</view>
+          </view>
+          <view class="item-price">￥{{item.totalFee}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

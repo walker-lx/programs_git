@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>test</title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=320px, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <script type="text/javascript" src="js/jquery-fastclick.min.js"></script>
+    <style>
+        body{
+            background: url("test.jpg") 0 0 repeat;
+        }
+        button,a{
+            display: block;
+            width: 150px;
+            height: 80px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        $(function(){
+            var obj = {
+                image: "1",
+                text: "test test 我的我的",
+                url:encodeURI("http://www.baidu.com")
+            };
+            var jsonString="protocol://"+encodeURI("share:" + JSON.stringify(obj));
+//            var jsonString="protocol://PickDate:19800615#8";
+
+
+//            var jsonString="protocol://auth:%7B%22ID%22:%22mini11%22,%22Name%22:%225Y+R5bm/5ZGK%22,%22IconUrl%22:%22http://um.51wnl.com/userImage/mini11/5ab82d730f99405c9a6e56078f6d3962.jpg%22,%22RealName%22:%22%E5%8F%91%E7%BB%99%E9%A5%AD%E5%90%A6%22,%22SignName%22:%22%E5%8F%8C%E9%B1%BC%22,%22BloodName%22:%22AB%22,%22AnimalName%22:%22%E9%BC%A0%22,%22Sex%22:%22M%20%22,%22BirthDay%22:%221984-03-05%22,%22BirthPlace%22:%22%E9%A5%AD%E5%90%A6%E5%8F%91%22,%22IOSScore%22:0,%22IOSGold%22:0,%22AndroidScore%22:0,%22AndroidGold%22:0,%22ImageUrls%22:null,%22IsFriend%22:0,%22Description%22:null,%22UpdateDate%22:%222014/3/24%2022:22:04%22,%22AccessToken%22:%221967613868610714737249203226951054822154%22%7D";
+//            $(".shareLink").attr("href",jsonString);
+            $(".share2").click(function(){
+                $(".text").html(jsonString);
+                document.location = jsonString;
+            });
+            $(".share3").click(function(){
+                $(".text").html("protocol://auth:");
+                document.location = "protocol://auth:";
+            });
+            $(".shareLink").click(function(){
+//                $(".text").html("protocol://auth#%7B%22ID%22:%22mini11%22,%22Name%22:%225Y+R5bm/5ZGK%22,%22IconUrl%22:%22http://um.51wnl.com/userImage/mini11/5ab82d730f99405c9a6e56078f6d3962.jpg%22,%22RealName%22:%22%E5%8F%91%E7%BB%99%E9%A5%AD%E5%90%A6%22,%22SignName%22:%22%E5%8F%8C%E9%B1%BC%22,%22BloodName%22:%22AB%22,%22AnimalName%22:%22%E9%BC%A0%22,%22Sex%22:%22M%20%22,%22BirthDay%22:%221984-03-05%22,%22BirthPlace%22:%22%E9%A5%AD%E5%90%A6%E5%8F%91%22,%22IOSScore%22:0,%22IOSGold%22:0,%22AndroidScore%22:0,%22AndroidGold%22:0,%22ImageUrls%22:null,%22IsFriend%22:0,%22Description%22:null,%22UpdateDate%22:%222014/3/24%2022:22:04%22,%22AccessToken%22:%221967613868610714737249203226951054822154%22%7D");
+//                document.location = "protocol://auth#%7B%22ID%22:%22mini11%22,%22Name%22:%225Y+R5bm/5ZGK%22,%22IconUrl%22:%22http://um.51wnl.com/userImage/mini11/5ab82d730f99405c9a6e56078f6d3962.jpg%22,%22RealName%22:%22%E5%8F%91%E7%BB%99%E9%A5%AD%E5%90%A6%22,%22SignName%22:%22%E5%8F%8C%E9%B1%BC%22,%22BloodName%22:%22AB%22,%22AnimalName%22:%22%E9%BC%A0%22,%22Sex%22:%22M%20%22,%22BirthDay%22:%221984-03-05%22,%22BirthPlace%22:%22%E9%A5%AD%E5%90%A6%E5%8F%91%22,%22IOSScore%22:0,%22IOSGold%22:0,%22AndroidScore%22:0,%22AndroidGold%22:0,%22ImageUrls%22:null,%22IsFriend%22:0,%22Description%22:null,%22UpdateDate%22:%222014/3/24%2022:22:04%22,%22AccessToken%22:%221967613868610714737249203226951054822154%22%7D";
+                var dateNow=new Date();
+                while(true){
+                    if((new Date())-dateNow>2000){
+                        return true;
+                    }
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <button class="share2">分享（有参数）</button>
+    <button class="share3">分享（无参数）</button>
+    <button class="share4">分享（#）</button>
+    <span class="text"></span>
+    <a class="shareLink" href="http://baidu.com">分享链接</a>
+    <audio controls="controls" autoplay>
+        <!--<source src="test.amr"/>-->
+        <source src="test.mp3"/>
+        <source src="test.ogg"/>
+        Your browser does not support the audio tag.
+    </audio>
+</body>
+</html>

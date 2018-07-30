@@ -1,0 +1,122 @@
+<view class='resultPaid'>
+    <view class='headerPanel'>
+      <view class="bzcs_name">{{headerInfo[0].name}}</view>
+      <view class="bzcs_sex">{{headerInfo[0].sex}}</view>
+      <view class="infoData hidden">
+        <view class='bzgl'>
+          <view class="bzcs_date">
+            <view class="bzcs_gl">公历</view>
+            <view class="bzcs_year bzcs_font">{{headerInfo[0].glYear}}年</view>
+            <view class="bzcs_month bzcs_font">{{headerInfo[0].glMonth}}月</view>
+            <view class="bzcs_day bzcs_font">{{headerInfo[0].glDay}}日</view>
+            <view class="bzcs_time bzcs_font">{{headerInfo[0].glHour}}时</view>
+          </view>
+          <view class="bzcs_date_hr"></view>
+          <view class="bzcs_bzLabel">
+            <view class="bzcs_bz">八字</view>
+            <view class="bzcs_bz_year bzcs_font">{{headerInfo[0].bzYear}}</view>
+            <view class="bzcs_bz_month bzcs_font">{{headerInfo[0].bzMonth}}</view>
+            <view class="bzcs_bz_day bzcs_font">{{headerInfo[0].bzDay}}</view>
+            <view class="bzcs_bz_time bzcs_font">{{headerInfo[0].bzHour}}</view>
+          </view>
+        </view>
+        <view class="bzcs_bzgl_hr"></view>
+      </view>
+      <view class='ysChart'>
+        <view class="ysChartTitle">十年运势</view>
+        <view class='ysChartContent'>
+          <canvas canvas-id='ysChartLine' class='ysChartLine'></canvas>
+        </view>
+        <view class="bzcs_ysChart_hr"></view>
+      </view>
+      <view class='wxContent'>
+        <view class="wxContentTitle">五行力量</view>
+        <view class='wxContentPieChart'>
+          <view class='wxContentLeft'>
+            <canvas canvas-id='wxChartPie' class='canvasWXPie'></canvas>
+          </view>
+          <view class='wxContentRight'>
+            <block wx:for='{{wuxingList}}' wx:for-index='index' wx:key='{{index}}'>
+              <view class='wxDetail'>
+                <view class='wxIcon'></view>
+                <view class='wxValue'>{{item}}</view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+      <view class="headerPanelBottom">
+        <view class='cardTxt' hidden>
+          
+        </view>
+      </view>
+    </view>
+    <view class='dayunContent'>
+      <view class="dayunTitle">大运</view>
+      <view class='dayunYearsDetail'>
+        <block wx:for='{{dayunYearList}}' wx:key='{{index}}' wx:for-index='index'>
+          <view class="dayunYearList {{index ==6 || index == 7 ? '':'dayunYearListBottomBorder'}}">
+            <view class='dayunYearLabel'>{{item.dayunTime}}</view>
+            <view class='dayunYearNum'>{{item.dayunTimeDes}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="xingqingContent">
+      <view class="xingqingTitle">性情信息</view>
+      <view class="xingqingDetail">{{headerInfo[0].xingQing}}</view>
+    </view>
+    <view class="wuxingxijiContent">
+      <view class="wuxingxijiTitle">命局五行喜忌</view>
+      <block wx:for='{{wuxingxijiList}}' wx:key='{{index}}' wx:for-index='index'>
+        <view class="wuxingxijiTitleS">{{item.title}}</view>
+        <view class="wuxingxijiDetail">{{item.content}}</view>
+        <view class="{{index == 4 ? '':'wuxingxijiContentHr'}}"></view>
+      </block>
+    </view>
+    <view class='liuNianContent'>
+      <block wx:for="{{dayunYearsList}}" wx:for-index="index" wx:key="{{index}}" wx:for-item='dayunYearsList'>
+        <block wx:for='{{dayunTenList}}' wx:for-index="index" wx:key="{{index}}" wx:for-item='dayunTenList'>
+          <view wx:if='{{dayunTenList.year[3] == dayunYearsList.year[3] && dayunTenList.year[2] == dayunYearsList.year[2]}}'>
+            <view class="dayunYearTenContent">
+              <view class="dayunYearTenTitle">{{dayunTenList.year}}</view>
+              <view class="dayunYearTenScoreTitle">大运得分</view>
+              <view class="dayunYearTenScoreNum">{{dayunTenList.score}}</view>
+              <view class="dayunYearTenScoreContent"></view>
+              <view class="dayunYearDetailHr"></view>
+              <view class="dayunYearTenQLTitle">大运起落</view>
+              <view class="dayunYearTenQLContent">{{dayunTenList.qiLuo}}</view>
+              <view class="dayunYearDetailHr"></view>
+              <view class="dayunYearTenSSTitle">大运十神</view>
+              <view class="dayunYearTenSSContent">{{dayunTenList.shiShen}}</view>
+              <view class="dayunYearDetailHr"></view>
+              <view class="dayunYearTenCHTitle">大运冲合</view>
+              <view class="dayunYearTenCHContent">{{dayunTenList.chongHe}}</view>
+            </view>
+          </view>
+        </block>
+        <view class="dayunYearDetailContent">
+          <view class="dayunYearDetailTitle">{{dayunYearsList.year}}</view>
+          <view class="dayunYearDetailScore">{{dayunYearsList.score}}</view>
+          <view class="dayunYearDetailjpTtitle">简评</view>
+          <view class="dayunYearDetailjpContent">{{dayunYearsList.text}}</view>
+          <view class="dayunYearDetailHr"></view>
+          <view class="dayunYearDetailjsTtitle">吉神</view>
+          <view class="dayunYearDetailjsContent">{{dayunYearsList.jiShen}}</view>
+          <view class="dayunYearDetailHr"></view>
+          <view class="dayunYearDetailxsTtitle">凶神</view>
+          <view class="dayunYearDetailxsContent">{{dayunYearsList.xiongShen}}</view>
+          <view class="dayunYearDetailHr"></view>
+          <view class="dayunYearDetailllssTtitle">{{dayunYearsList.shiShenName}}</view>
+          <view class="dayunYearDetailllssContent">{{dayunYearsList.shiShenText}}</view>
+        </view>
+      </block>
+    </view>
+    <view class='cesuanContactContent cesuanContactContentPaied'>
+      <view class='contactTxt'>测算答疑: QQ1254836806</view>
+      <view class='contactTxt contactPhone'>电话: 020-28965013</view>
+    </view>
+    <view class='copyright copyrightPaid'>
+      Copyright © CALENDAR Tech. All Rights Reserved.
+    </view>
+  </view>

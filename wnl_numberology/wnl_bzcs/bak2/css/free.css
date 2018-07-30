@@ -1,0 +1,26 @@
+.viewDetail {
+    background-color: #da2138;
+    height: 35px;
+    margin: 10px auto 10px 25%;
+    border: none
+}
+
+.jingPi {
+    max-height: 60px;
+    max-width: 60px;
+    float: left;
+    padding: 5px;
+    margin: 5px;
+}
+
+.modal-backdrop, .modal-backdrop.fade.in{
+    opacity: 0.8;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+}
+
+.modal-backdrop.fade {
+    opacity: 0;
+}

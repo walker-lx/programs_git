@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css_calandar/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css_calandar/index.css">
+  <link rel="stylesheet" type="text/css" href="css_calandar/style.css">
+  <link rel="stylesheet" type="text/css" href="css_calandar/mobile.css">
+  <title>51万年历官方网站，3亿用户共同选择。中国传统日历农历查询工具</title>
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260066306'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol +
+      "s11.cnzz.com/z_stat.php%3Fid%3D1260066306' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    if (window.location.host == "www.51wnl.com" || window.location.host == "51wnl.com") {
+      window.location.host = "open.51wnl.com";
+    }
+  </script>
+</head>
+
+<body>
+  <div class="qrcodeModal downlaodQRCode hidden">
+    <img class="qrImg" src="img_calandar/download_QRCode.png" alt="万年历二维码" />
+    <div class="downloadTxt">扫描下载-万年历</div>
+  </div>
+  <div class="downloadMask hidden"></div>
+  <div class="qrcodeModal wxQRCode hidden">
+    <img class="qrImg" src="img_calandar/wx_QRCode.png" alt="万年历微信二维码" />
+    <div class="downloadTxt">扫描关注-万年历微信</div>
+  </div>
+  <div class="topBanner">
+    <div class="firstLevel"></div>
+    <div class="secondLevel"></div>
+    <div class="thirdLevel cooperate"></div>
+    <div class="fourthLevel"></div>
+    <div class="topBannerContent newabout">
+      <div class="navContent">
+        <div class="wnlIcon"></div>
+        <div class="wnlTxt"></div>
+        <a class="navMenu" href="javascript:void(0)">
+          <div class="menuLine firstLine"></div>
+          <div class="menuLine secondLine"></div>
+          <div class="menuLine lastLine"></div>
+        </a>
+        <div class="navList">
+          <div class="navWnlIcon"></div>
+          <a class="navLink" href="index_calandar.html">首页</a>
+          <div class="navLink cooNav cooperate active">
+            <div class="navLinkTxt">合作</div>
+            <div class="navLinkActive"></div>
+            <div class="cooMenu">
+              <a href="document_calandar.html">51万年历API</a>
+              <a href="cooperate_calandar.html">商务合作</a>
+            </div>
+          </div>
+          <div class="navLink cooNav dynamics">
+            <div class="navLinkTxt">动态</div>
+            <div class="navLinkActive"></div>
+            <div class="cooMenu">
+              <!--<a href="news_calandar.html">新闻</a>
+                            <a href="youloft_calandar.html">优路家</a>-->
+            </div>
+          </div>
+          <a class="navLink" href="recruit_calandar.html">招聘</a>
+          <a class="navLink" href="about_calandar.html">关于</a>
+          <!--<a class="navLink hidden wnlgyp" href="craftwork_calandar.html">工艺品</a>
+                        <a class="loginLink" href="http://www.51wnl.com">网页版</a>-->
+        </div>
+      </div>
+      <div class="secondNav">
+        <a href="document_calandar.html" class="activeLi">51万年历API</a>
+        <a href="cooperate_calandar.html">商务合作</a>
+      </div>
+    </div>
+
+  </div>
+  <!--<div class="apiBg">
+        <div class="apiNav">
+            <a class="con1 activeNav" href="#con1">传统黄历</a>
+            <a class="con2" href="#con2">节假日</a>
+            <a class="con3" href="#con3">调休安排</a>
+        </div>
+    </div>-->
+  <div class="apiContent">
+    <div class="huangli content">
+      <div id="con1" class="lContent">
+        <div class="conName">
+          <div class="conNameIcon"></div>
+          <div class="conNameTxt">传统黄历API</div>
+        </div>
+        <div class="conDescribe">宜忌查询、天干地支、时辰宜忌、彭祖百忌等</div>
+        <div class="conUse">提供专业全面的传统黄历信息</div>
+        <a class="apiBtn" href="apiDetail_calandar.html?apicon=4#api5">
+          <div class="apibtnText">API文档</div>
+          <div class="apibtnArrow"></div>
+        </a>
+      </div>
+      <div class="rContent"></div>
+    </div>
+    <div id="con2" class="holiday content">
+      <div class="lContent">
+        <div class="conName">
+          <div class="conNameIcon"></div>
+          <div class="conNameTxt">节假日API</div>
+        </div>
+        <div class="conDescribe" style="line-height:30px">元旦节、万国邮联日、国际护士节，你知道或不知道的节日这里都有...</div>
+        <div class="conUse">提供大陆、香港、澳门、台湾的信息</div>
+        <a class="apiBtn" href="apiDetail_calandar.html?apicon=3#api4">
+          <div class="apibtnText">API文档</div>
+          <div class="apibtnArrow"></div>
+        </a>
+      </div>
+      <div class="rContent"></div>
+    </div>
+    <div id="con3" class="tiaoxiu content">
+      <div class="lContent">
+        <div class="conName">
+          <div class="conNameIcon"></div>
+          <div class="conNameTxt">调休安排API</div>
+        </div>
+        <div class="conDescribe">法定假期调班安排早知道</div>
+        <div class="conUse">提供当年调休放假情况</div>
+        <a class="apiBtn" href="apiDetail_calandar.html?apicon=2#api3">
+          <div class="apibtnText">API文档</div>
+          <div class="apibtnArrow"></div>
+        </a>
+      </div>
+      <div class="rContent"></div>
+    </div>
+    <div id="con4" class="jieri content">
+      <div class="lContent">
+        <div class="conName">
+          <div class="conNameIcon"></div>
+          <div class="conNameTxt">节日小贴士API</div>
+        </div>
+        <div class="conDescribe">了解不同节日节气的背景、起源和意义</div>
+        <div class="conUse">提供全面详尽的节日信息</div>
+        <a class="apiBtn" href="apiDetail_calandar.html?apicon=2#api8">
+          <div class="apibtnText">API文档</div>
+          <div class="apibtnArrow"></div>
+        </a>
+      </div>
+      <div class="rContent"></div>
+    </div>
+    <div id="con5" class="xignzuo content">
+      <div class="lContent">
+        <div class="conName">
+          <div class="conNameIcon"></div>
+          <div class="conNameTxt">星座运势API</div>
+        </div>
+        <div class="conDescribe">查询不同星座爱情运、财富运、事业运等</div>
+        <div class="conUse">提供专业全面的星座运势信息</div>
+        <a class="apiBtn" href="apiDetail_calandar.html?apicon=2#api9">
+          <div class="apibtnText">API文档</div>
+          <div class="apibtnArrow"></div>
+        </a>
+      </div>
+      <div class="rContent"></div>
+    </div>
+  </div>
+  <div class="aboutB about">
+    <div class="contactTitle abouttitle">联系我们</div>
+    <div class="contactSpans">
+      <div class="contactSpan">
+        <div class="contactSpanTitle">
+          商务合作
+        </div>
+        <div class="contactSpanInfo">
+          <div class="contactSpanInfoIcon contactNameIcon">
+          </div>
+          <div class="contactSpanInfoDesc">
+            龚小姐
+          </div>
+        </div>
+        <div class="contactSpanInfo" href="javascript:void(0)">
+          <div class="contactSpanInfoIcon contactQQIcon"></div>
+          <div class="contactSpanInfoDesc">
+            6635 2806
+          </div>
+        </div>
+        <a class="emaillink contactSpanInfo" href="mailto:gh@youloft.com">
+          <div class="contactSpanInfoIcon contactMailIcon"></div>
+          <div class="contactSpanInfoDesc">gh@youloft.com</div>
+        </a>
+      </div>
+      <div class="contactSpan">
+        <div class="contactSpanTitle">
+          推广合作
+        </div>
+        <div class="contactSpanInfo">
+          <div class="contactSpanInfoIcon contactNameIcon">
+          </div>
+          <div class="contactSpanInfoDesc">
+            陈先生
+          </div>
+        </div>
+        <div class="contactSpanInfo" href="javascript:void(0)">
+          <div class="contactSpanInfoIcon contactQQIcon"></div>
+          <div class="contactSpanInfoDesc">
+            2494 5479 0
+          </div>
+        </div>
+        <a class="emaillink contactSpanInfo" href="mailto:sufferchen@youloft.com">
+          <div class="contactSpanInfoIcon contactMailIcon"></div>
+          <div class="contactSpanInfoDesc">sufferchen@youloft.com</div>
+        </a>
+      </div>
+      <div class="contactSpan">
+        <div class="contactSpanTitle">
+          51万年历客服
+        </div>
+        <a class="emaillink contactSpanInfo" href="mailto:cal@youloft.com">
+          <div class="contactSpanInfoIcon contactMailIcon"></div>
+          <div class="contactSpanInfoDesc">cal@youloft.com</div>
+        </a>
+        <div class="contactSpanInfo">
+          <div class="contactSpanInfoIcon contactCallIcon">
+          </div>
+          <div class="contactSpanInfoDesc">
+            023-8875 6859
+          </div>
+        </div>
+        <a class="contactSpanInfo wxLink" href="javascript:void(0)" target="_blank">
+          <div class="contactSpanInfoIcon contactWeixinIcon"></div>
+          <div class="contactSpanInfoDesc">youloftwnl</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="spliteLine"></div>
+  <div class="bottomBanner">
+    <div class="bottomWNLIcon"></div>
+    <div class="socialListContent">
+      <a class="wxLink" href="javascript:void(0)" target="_blank"></a>
+      <a class="qqLink" href="http://shang.qq.com/wpa/qunwpa?idkey=f0f832e5f143c4825ec1ce2c5d5e75c5e45af7276e5765ef590f0932c1618b48" target="_blank"></a>
+      <a class="wbLink" href="http://weibo.com/51wnl" target="_blank"></a>
+      <a class="emailLink" href="mailto:cal@youloft.com"></a>
+      <div class="qunContent hidden">QQ群:186720268</div>
+      <div class="mask qunMask hidden"></div>
+    </div>
+    <div class="rightTxt">版权所有 ® 重庆可兰达科技有限公司</div>
+    <div class="copyright">Copyright
+      <span class="copyright-time"></span> CALENDAR Tech., All Rights Reserved.</div>
+    <div class="goverment">
+      <a class="goverment_link" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50019002500524">渝公网安备 50019002500524号</p>
+      </a>
+      <a class="goverment_icp" target="_blank" href="http://www.miitbeian.gov.cn">ICP: 渝ICP备11000038号-1</a>
+    </div>
+  </div>
+  <script type="text/javascript" src="js_calandar/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js_calandar/index.js"></script>
+  <script type="text/javascript" src="js_calandar/style.js"></script>
+  <script>
+    $(".apiNav a").click(function () {
+      $(".apiNav").find("a").removeClass("activeNav");
+      $(this).addClass("activeNav");
+    });
+  </script>
+</body>
+
+</html>

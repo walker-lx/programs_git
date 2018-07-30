@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/result/result",
+    "pages/result/miniresult",
+    "pages/history/history",
+    "pages/pay/pay",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d03f3f",
+    "navigationBarTitleText": "八字测算",
+    "navigationBarTextStyle": "#fff"
+  }
+}

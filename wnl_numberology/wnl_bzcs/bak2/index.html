@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>生命之书</title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no,init-scale=1.0,maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link  type="text/css" rel="stylesheet" href="mobiscroll/mobiscroll.custom-2.14.4.min.css"/>
+    <link  type="text/css" rel="stylesheet" href="../css/modal.css"/>
+    <link  type="text/css" rel="stylesheet" href="index.css"/>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="jquery-2.1.3-fastclick.min.js"></script>
+    <script type="text/javascript" src="mobiscroll/mobiscroll-2.14.4-crack.js"></script>
+    <script type="text/javascript" src="mobiscroll/i18n/mobiscroll.i18n.zh.js"></script>
+    <script type="text/javascript" src="mobiscroll/solar.js"></script>
+    <script type="text/javascript" src="../js/modal.js"></script>
+    <script type="text/javascript" src="progressbar.min.js"></script>
+    <script type="text/javascript" src="resLoader.js"></script>
+    <script type="text/javascript" src="router.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?959c29a0efafc81a5ccb9f6b92bdad39";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+    <div class="loadContent">
+        <div class="loadBg"></div>
+        <div class="topLoadIcon topLeft"></div>
+        <div class="topLoadIcon topRight"></div>
+        <div class="bottomLoadIcon topLeft"></div>
+        <div class="bottomLoadIcon topRight"></div>
+        <div class="loadIcon">
+            <div id="percent-container"></div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="page inputPage">
+            <div class="innerPage">
+                <img class="inputTitle" src="img/smzs-title-img@3x.png"/>
+                <div class="nameContent boxContent">
+                    <div class="boxLeftContent">输入姓名</div>
+                    <div class="boxRightContent">
+                        <input class="nameTxt" type="text"/>
+                    </div>
+                </div>
+                <div class="dateContent boxContent">
+                    <div class="boxLeftContent">出生日期</div>
+                    <div class="boxRightContent">
+                        <input type="text" name="appDate" id="appDate"/>
+                    </div>
+                </div>
+                <div class="sexContent boxContent">
+                    <div class="boxLeftContent">性别</div>
+                    <div class="boxRightContent">
+                        <div class="maleContent"></div>
+                        <div class="femaleContent"></div>
+                    </div>
+                </div>
+                <a class="confirmBtn" href="javascript:void(0)">确定</a>
+                <div class="lianhuaImg"></div>
+            </div>
+        </div>
+        <div class="page ajaxPage">
+            <div class="pageContent">
+                <div class="pageTopContent"></div>
+                <div class="pageCenterContent">
+                    <div class="leftCenterContent">
+                        <div class="smzsTop"></div>
+                        <div class="smzs-zs-img"></div>
+                        <div class="smzs-word-img02"></div>
+                    </div>
+                    <div class="rightCenterContent">
+                        <div class="tjImg"></div>
+                        <div class="tj_zx"></div>
+                    </div>
+                </div>
+                <div class="pageBottomContent">
+                    <div class="ajaxWNLIcon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="page indexPage">
+            <div class="pageContent">
+                <div class="pageTopContent"></div>
+                <div class="pageCenterContent">
+                    <div class="leftCenterContent">
+                        <div class="smzsTop"></div>
+                        <div class="smzs-zs-img"></div>
+                        <div class="smzs-word-img03"></div>
+                    </div>
+                    <div class="rightCenterContent">
+                        <div class="nameDesc">
+                            <div class="leftNameIcon"></div>
+                            <div class="nameDescTxt"></div>
+                            <div class="rightNameIcon"></div>
+                        </div>
+                        <a class="indexLink identityBtn" href="javascript:void(0)">
+                            <div class="huiheImg huiheImg1"></div>
+                            <div class="stepTxtImg stepTxtImg1"></div>
+                            <div class="stepIcon"></div>
+                        </a>
+                        <a class="indexLink characterBtn" href="javascript:void(0)">
+                            <div class="huiheImg huiheImg2"></div>
+                            <div class="stepTxtImg stepTxtImg2"></div>
+                            <div class="stepIcon"></div>
+                        </a>
+                        <a class="indexLink careerBtn" href="javascript:void(0)">
+                            <div class="huiheImg huiheImg3"></div>
+                            <div class="stepTxtImg stepTxtImg3"></div>
+                            <div class="stepIcon"></div>
+                        </a>
+                        <a class="indexLink fateBtn" href="javascript:void(0)">
+                            <div class="huiheImg huiheImg4"></div>
+                            <div class="stepTxtImg stepTxtImg4"></div>
+                            <div class="stepIcon"></div>
+                        </a>
+                        <a class="indexLink examineBtn" href="javascript:void(0)">
+                            <div class="huiheImg huiheImg5"></div>
+                            <div class="stepTxtImg stepTxtImg5"></div>
+                            <div class="stepIcon"></div>
+                        </a>
+                        <a class="indexLink healthyBtn" href="javascript:void(0)">
+                            <div class="huiheImg huiheImg6"></div>
+                            <div class="stepTxtImg stepTxtImg6"></div>
+                            <div class="stepIcon"></div>
+                        </a>
+                        <a class="indexLink huazaiBtn" href="javascript:void(0)">
+                            <div class="huiheImg huiheImg7"></div>
+                            <div class="stepTxtImg stepTxtImg7"></div>
+                            <div class="stepIcon"></div>
+                        </a>
+                        <a class="indexLink kaiyunBtn" href="javascript:void(0)">
+                            <div class="huiheImg huiheImg8"></div>
+                            <div class="stepTxtImg stepTxtImg8"></div>
+                            <div class="stepIcon"></div>
+                        </a>
+                        <a class="userTryBtn hidden" href="javascript:void(0)">查看我的生命之书</a>
+                    </div>
+                </div>
+                <div class="pageBottomContent">
+                    <div class="ajaxWNLIcon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="page identityPage">
+            <div class="pageContent">
+                <div class="pageTopContent">
+                    <a class="toIndexLink" href="#/index">目录</a>
+                    <a class="detailUerTryBtn" href="javascript:void(0)">我也测测</a>
+                </div>
+                <div class="pageCenterContent">
+                    <div class="leftCenterContent">
+                        <div class="smzsTop"></div>
+                        <div class="smzs-zs-img"></div>
+                        <div class="smzs-word-img smzs-word-img04"></div>
+                    </div>
+                    <div class="rightCenterContent">
+                        <div class="identityImg"></div>
+                        <div class="trueIdentity"></div>
+                        <div class="identityPeopleWrapper">
+                            <img class="identityPeople" src="img/people/p01.jpg"/>
+                        </div>
+                        <div class="identityTxt">
+                            <div class="identityName"></div>
+                            <div class="bornDate"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pageBottomContent">
+                    <div class="ajaxWNLIcon"></div>
+                    <a class="identityNextLink" href="javascript:void(0)">性格密码</a>
+                </div>
+            </div>
+        </div>
+        <div class="page characterPage">
+            <div class="pageContent">
+                <div class="pageTopContent">
+                    <a class="toIndexLink" href="#/index">目录</a>
+                    <a class="detailUerTryBtn" href="javascript:void(0)">我也测测</a>
+                </div>
+                <div class="pageCenterContent">
+                    <div class="leftCenterContent">
+                        <div class="smzsTop"></div>
+                        <div class="smzs-zs-img"></div>
+                        <div class="smzs-word-img smzs-word-img05"></div>
+                    </div>
+                    <div class="rightCenterContent">
+                        <div class="nameDesc">
+                            <div class="leftNameIcon"></div>
+                            <div class="nameDescTxt1">性格密码</div>
+                            <div class="rightNameIcon"></div>
+                        </div>
+                        <div class="rightCenterTxt characterRightCenterTxt"></div>
+                        <div class="smzs-nr-ss01"></div>
+                    </div>
+                </div>
+                <div class="pageBottomContent">
+                    <div class="ajaxWNLIcon"></div>
+                    <div class="rightControlContent">
+                        <a class="preveControlLink identityLink" href="javascript:void(0)">身份解密</a>
+                        <a class="nextControlLink careerLink" href="javascript:void(0)">事业助力</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page careerPage">
+            <div class="pageContent">
+                <div class="pageTopContent">
+                    <a class="toIndexLink" href="#/index">目录</a>
+                    <a class="detailUerTryBtn" href="javascript:void(0)">我也测测</a>
+                </div>
+                <div class="pageCenterContent">
+                    <div class="leftCenterContent">
+                        <div class="smzsTop"></div>
+                        <div class="smzs-zs-img"></div>
+                        <div class="smzs-word-img smzs-word-img06"></div>
+                    </div>
+                    <div class="rightCenterContent">
+                        <div class="nameDesc">
+                            <div class="leftNameIcon"></div>
+                            <div class="nameDescTxt1">事业助力</div>
+                            <div class="rightNameIcon"></div>
+                        </div>
+                        <div class="rightCenterTxt careerRightCenterTxt"></div>
+                        <div class="smzs-nr-ss02"></div>
+                    </div>
+                </div>
+                <div class="pageBottomContent">
+                    <div class="ajaxWNLIcon"></div>
+                    <div class="rightControlContent">
+                        <a class="preveControlLink characterLink" href="javascript:void(0)">性格密码</a>
+                        <a class="nextControlLink fateLink" href="javascript:void(0)">异性缘分</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page fatePage">
+            <div class="pageContent">
+                <div class="pageTopContent">
+                    <a class="toIndexLink" href="#/index">目录</a>
+                    <a class="detailUerTryBtn" href="javascript:void(0)">我也测测</a>
+                </div>
+                <div class="pageCenterContent">
+                    <div class="leftCenterContent">
+                        <div class="smzsTop"></div>
+                        <div class="smzs-zs-img"></div>
+                        <div class="smzs-word-img smzs-word-img07"></div>
+                    </div>
+                    <div class="rightCenterContent">
+                        <div class="nameDesc">
+                            <div class="leftNameIcon"></div>
+                            <div class="nameDescTxt1">异性缘分</div>
+                            <div class="rightNameIcon"></div>
+                        </div>
+                        <div class="rightCenterTxt fateRightCenterTxt"></div>
+                        <div class="smzs-nr-ss03"></div>
+                    </div>
+                </div>
+                <div class="pageBottomContent">
+                    <div class="ajaxWNLIcon"></div>
+                    <div class="rightControlContent">
+                        <a class="preveControlLink careerLink" href="javascript:void(0)">事业助力</a>
+                        <a class="nextControlLink examineLink" href="javascript:void(0)">学业考试</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page examinePage">
+            <div class="pageContent">
+                <div class="pageTopContent">
+                    <a class="toIndexLink" href="#/index">目录</a>
+                    <a class="detailUerTryBtn" href="javascript:void(0)">我也测测</a>
+                </div>
+                <div class="pageCenterContent">
+                    <div class="leftCenterContent">
+                        <div class="smzsTop"></div>
+                        <div class="smzs-zs-img"></div>
+                        <div class="smzs-word-img smzs-word-img08"></div>
+                    </div>
+                    <div class="rightCenterContent">
+                        <div class="nameDesc">
+                            <div class="leftNameIcon"></div>
+                            <div class="nameDescTxt1">学业考试</div>
+                            <div class="rightNameIcon"></div>
+                        </div>
+                        <div class="rightCenterTxt examineRightCenterTxt"></div>
+                        <div class="smzs-nr-ss04"></div>
+                    </div>
+                </div>
+                <div class="pageBottomContent">
+                    <div class="ajaxWNLIcon"></div>
+                    <div class="rightControlContent">
+                        <a class="preveControlLink fateLink" href="javascript:void(0)">异性缘分</a>
+                        <a class="nextControlLink healthyLink" href="javascript:void(0)">健康分析</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page healthyPage">
+            <div class="pageContent">
+                <div class="pageTopContent">
+                    <a class="toIndexLink" href="#/index">目录</a>
+                    <a class="detailUerTryBtn" href="javascript:void(0)">我也测测</a>
+                </div>
+                <div class="pageCenterContent">
+                    <div class="leftCenterContent">
+                        <div class="smzsTop"></div>
+                        <div class="smzs-zs-img"></div>
+                        <div class="smzs-word-img smzs-word-img09"></div>
+                    </div>
+                    <div class="rightCenterContent">
+                        <div class="nameDesc">
+                            <div class="leftNameIcon"></div>
+                            <div class="nameDescTxt1">健康分析</div>
+                            <div class="rightNameIcon"></div>
+                        </div>
+                        <div class="rightCenterTxt healthyRightCenterTxt"></div>
+                        <div class="smzs-nr-ss05"></div>
+                    </div>
+                </div>
+                <div class="pageBottomContent">
+                    <div class="ajaxWNLIcon"></div>
+                    <div class="rightControlContent">
+                        <a class="preveControlLink examineLink" href="javascript:void(0)">学业考试</a>
+                        <a class="nextControlLink huazaiLink" href="javascript:void(0)">化灾解祸</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page huazaiPage">
+            <div class="pageContent">
+                <div class="pageTopContent">
+                    <a class="toIndexLink" href="#/index">目录</a>
+                    <a class="detailUerTryBtn" href="javascript:void(0)">我也测测</a>
+                </div>
+                <div class="pageCenterContent">
+                    <div class="leftCenterContent">
+                        <div class="smzsTop"></div>
+                        <div class="smzs-zs-img"></div>
+                        <div class="smzs-word-img smzs-word-img10"></div>
+                    </div>
+                    <div class="rightCenterContent">
+                        <div class="nameDesc">
+                            <div class="leftNameIcon"></div>
+                            <div class="nameDescTxt1">化灾解祸</div>
+                            <div class="rightNameIcon"></div>
+                        </div>
+                        <div class="rightCenterTxt huazaiRightCenterTxt"></div>
+                        <div class="smzs-nr-ss06"></div>
+                    </div>
+                </div>
+                <div class="pageBottomContent">
+                    <div class="ajaxWNLIcon"></div>
+                    <div class="rightControlContent">
+                        <a class="preveControlLink healthyLink" href="javascript:void(0)">健康分析</a>
+                        <a class="nextControlLink kaiyunLink" href="javascript:void(0)">开运之法</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page kaiyunPage">
+            <div class="pageContent">
+                <div class="pageTopContent">
+                    <a class="toIndexLink" href="#/index">目录</a>
+                    <a class="detailUerTryBtn" href="javascript:void(0)">我也测测</a>
+                </div>
+                <div class="pageCenterContent">
+                    <div class="leftCenterContent">
+                        <div class="smzsTop"></div>
+                        <div class="smzs-zs-img"></div>
+                        <div class="smzs-word-img smzs-word-img11"></div>
+                    </div>
+                    <div class="rightCenterContent">
+                        <div class="nameDesc">
+                            <div class="leftNameIcon"></div>
+                            <div class="nameDescTxt1">开运之法</div>
+                            <div class="rightNameIcon"></div>
+                        </div>
+                        <div class="rightCenterTxt kaiyunRightCenterTxt"></div>
+                        <div class="smzs-nr-ss07"></div>
+                    </div>
+                </div>
+                <div class="pageBottomContent">
+                    <div class="ajaxWNLIcon"></div>
+                    <div class="rightControlContent">
+                        <a class="preveControlLink healthyLink" href="javascript:void(0)">化灾解祸</a>
+                        <a class="nextControlLink shareLink" href="javascript:void(0)">立即分享</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page sharePage">
+            <div class="shareImgContent"></div>
+            <a class="shareBookBtn" href="javascript:void(0)"></a>
+            <a class="reviewBtn" href="javascript:void(0)"></a>
+            <div class="shareWnlIcon"></div>
+            <div class="share-cr"></div>
+        </div>
+    </div>
+    <div class="mask hidden">
+        <div class="shareTip"></div>
+    </div>
+    <div id="tipModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <p class="showString"></p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn dismissBtn" data-dismiss="modal" aria-hidden="true">确定</button>
+        </div>
+    </div>
+    <script>
+        $.ajax({
+            url:"http://www.51wnl.com/interface/API/weixinhandler.ashx",
+            type:"get",
+            data:{
+                requesturl:location.href
+            },
+            success:function(result){
+                result=JSON.parse(result);
+                wx.config({
+                    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                    appId: 'wx347ab26567c5465f', // 必填，公众号的唯一标识
+                    timestamp:result.timestamp, // 必填，生成签名的时间戳
+                    nonceStr: result.nonceStr, // 必填，生成签名的随机串
+                    signature: result.signature,// 必填，签名，见附录1
+                    jsApiList: [
+                        'onMenuShareTimeline',
+                        'onMenuShareAppMessage',
+                        'onMenuShareQQ',
+                        'onMenuShareWeibo'
+                    ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                });
+            }
+        });
+    </script>
+</body>
+</html>

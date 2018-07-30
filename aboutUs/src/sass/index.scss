@@ -1,0 +1,189 @@
+@mixin _bg($url, $ext: 'png') {
+    // 背景图片适配2倍屏与3倍屏
+    background-image: url($url + "@2x." + $ext);
+    background-repeat: no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+        background-image: url($url + "@3x." + $ext);
+    }
+}
+div,a,img {
+    -webkit-tap-highlight-color: transparent;
+    /* -webkit-touch-callout: none; */
+    /* -webkit-user-select: none; */
+    /* user-select:none; */
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+html,body {
+    overflow-x: hidden;
+    font-size: 16px;  
+    -webkit-overflow-scrolling:touch;  
+    box-sizing:border-box;
+    height:auto; 
+    overflow: auto;
+    -webkit-text-size-adjust:none;    
+    background-color: rgb(41, 33, 66);
+    font-family: -apple-system, "苹方-简", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", sans-serif;        
+}
+body {
+    width: 100%;
+    background-color: rgb(41, 33, 66);
+    color: white;
+    user-select: none;
+}
+.app_icon {
+    width: 80px;
+    height: 80px;
+    margin: 52px auto 16px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    @include _bg('../img/iPhone spotlight-40');
+    background-position: 50% 50%;
+}
+.version {
+    font-size: 15px;
+    text-align: center;
+}
+.contact {
+    margin-left: 1.83rem; 
+    margin-top: 61px;
+    user-select: text;
+    .wx, .yx, .wb, .qq {
+        height: 21px;
+        background-position: 0% center;
+        background-size: 15px 15px;
+        font-size: 15px;
+        padding-left: 23px;
+        user-select: all;
+    }
+    .yx, .wb, .qq {
+        margin-top: 20px;
+    }
+    .wx {
+        @include _bg('../img/share-wxhy-icon');
+    }
+    .yx {
+        @include _bg('../img/share-mail-icon');
+    }
+    .wb {
+        @include _bg('../img/share-sina-icon');
+    }
+    .qq {
+        @include _bg('../img/share-qq-icon');
+    }
+}
+// .contact .wx {
+//     background: url('../img/share-wxhy-icon@2x.png') no-repeat;
+// }
+// .contact .yx {
+//     background: url('../img/share-mail-icon@2x.png') no-repeat;
+//     margin-top: 20px;
+    
+// }
+// .contact .wb {
+//     background: url('../img/share-sina-icon@2x.png') no-repeat;
+//     margin-top: 20px;   
+     
+// }
+// .contact .qq {
+//     background: url('../img/share-qq-icon@2x.png') no-repeat;
+//     margin-top: 20px;    
+//     user-select: all;
+    
+// }
+.foot {
+    position: absolute;
+    bottom: 20px;
+    font-size: 15px;
+}
+.foot .company {
+    opacity: .7;
+    margin-left: 2.08rem;
+}
+.foot .copyright {
+    font-size: 11px;
+    margin-top: 10px;
+    opacity: .24;
+}
+ 
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 4/2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    .wx {
+        background: url('../img/share-wxhy-icon@2x.png') no-repeat;         
+    }
+    .wb {
+        background: url('../img/share-sina-icon@2x.png') no-repeat;                
+    }
+    .yx {
+        background: url('../img/share-mail-icon@2x.png') no-repeat;                 
+    }
+    .qq {
+        background: url('../img/share-qq-icon@2x.png') no-repeat;                 
+    }
+    .app_icon {
+        background: url('../img/iPhone spotlight-40@2x.png');
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (-o-min-device-pixel-ratio: 6/2),
+only screen and (min--moz-device-pixel-ratio: 3),
+only screen and (min-device-pixel-ratio: 3) {
+    .contact .wx {
+        background: url('../img/share-wxhy-icon@3x.png') no-repeat;   
+        background-position: 0 50%;    
+        background-size: 15px 15px;    
+    }
+    .contact .wb {
+        background: url('../img/share-sina-icon@3x.png') no-repeat;  
+        background-position: 0 50%;  
+        background-size: 15px 15px;            
+    }
+    .contact .yx {
+        background: url('../img/share-mail-icon@3x.png') no-repeat;  
+        background-position: 0 50%;     
+        background-size: 15px 15px;            
+    }
+    .contact .qq {
+        background: url('../img/share-qq-icon@3x.png') no-repeat;   
+        background-position: 0 50%;   
+        background-size: 15px 15px;            
+    }
+    .app_icon {
+        background: url('../img/iPhone spotlight-40@3x.png');
+        background-position: 50% 50%;   
+        background-size: 80px 80px;    
+    }
+}
+@media only screen and (min-width:412px) {
+    .contact {
+        margin-left: 2.15rem; 
+    }
+    .foot .company {
+        margin-left: 2.18rem;
+    }
+}
+ 
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone5 */
+    .contact {
+        margin-left: 1.55rem; 
+    }
+    .foot .company {
+        margin-left: 1.8rem;
+    }
+}
+@media (device-height:480px){/* 兼容iphone4s */
+    .contact {
+        margin-left: 1.6rem; 
+    }
+    .foot .company {
+        margin-left: 1.79rem;
+    }
+}

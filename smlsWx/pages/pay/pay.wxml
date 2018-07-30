@@ -1,0 +1,6 @@
+<view class="content">
+	<view class='icon'></view>
+	<view class='desc'>{{ month }}月运势</view>
+	<view class='btn' bindtap='pay'>支付金额：¥{{ money }}</view>
+	<view class='qx' bindtap='cancelPay'>取消支付</view>	
+</view>

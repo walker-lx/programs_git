@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>callbackMiguMusic</title>
+</head>
+<script type="text/javascript">
+	function openMigu() {
+		var h5URL = 'http://a.mll.migu.cn/app/v2/zt/p/associate-member/index.html';
+		var androidurl = 'migumusic://programa=topicdetail&h5URL=' + h5URL;
+		var iosurl='mgmusic://browser?url='+encodeURIComponent(h5URL);
+		if (uais('ios')) {
+			surl=iosurl;
+		}else{
+			surl=androidurl;
+		}
+		
+		tryOpenApp(surl, function(done) {
+			if (!done) {
+				location.href = 'http://wm.10086.cn';
+			}
+		});
+	}
+
+	function uais(name) {
+		var ua = navigator.userAgent.toLowerCase();
+		var is = false;
+		switch (name) {
+		case 'weixin':
+			is = ua.match(/(micromessenger|qq|txmicroblog);?/i)
+			break;
+		case 'ios':
+			is = ua.match(/(iphone|ipod|ipad);?/i)
+			break;
+		case 'browser':
+			is = ua.match(/(applewebkit);?/i)
+			break;
+		//如果为咪咕客户端
+		case 'migu':
+			is = uais('android-migu') || uais('ios-migu');
+			break;
+		case 'android-migu':
+			is = window.migumusicjs ? true : location.href
+					.match(/(ua=Android|ua=Android_sst);?/i);
+			break;
+		case 'ios-migu':
+			if (!window.migumusicjs)
+				is = ua.match(/(mobilemusic);?/i)
+						|| location.href.match(/(ua=Iphone_Sst);?/i);
+			break;
+		default:
+			is = ua.indexOf(name) > -1;
+		}
+		return is;
+	}
+	/**
+	 * 尝试唤起APP
+	 * @param {*} appurl 
+	 * @param {*} fn 
+	 */
+	function tryOpenApp(appurl, fn) {
+		var beginTime = Date.now();
+		//异步检测是否唤起
+		setTimeout(function() {
+			if (Date.now() - beginTime < 1100) {
+				fn && (fn(false));
+			} else {
+				//成功唤起
+				fn && (fn(true));
+			}
+		}, 1000)
+
+		if (uais('ios')) {
+			location.href = appurl;
+			return;
+		}
+		if (uais('android')) {
+			//不支持Iframe开启对手机型号
+			var mobiles = [ 'samsung-sch', 'samsung-sm' ];
+			for ( var k in mobiles) {
+				if (uais(mobiles[k])) {
+					window.open(appurl);
+					return;
+				}
+			}
+			var iframe = document.createElement('iframe');
+			iframe.style.width = '0px';
+			iframe.style.height = '0px';
+			iframe.style.border = '0px';
+			iframe.style.display = 'none';
+			document.body.appendChild(iframe);
+			iframe.src = appurl;
+			return;
+		}
+	}
+</script>
+<body onload="openMigu()">
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<view class="container status">
+  <view class="title">
+    <text>悄悄告诉我你目前的感情状态</text>
+  </view>
+    <view class="arrows"></view>
+  <view class="list-wrap">
+    <view class="list">
+      <view class="item" wx:for="{{list}}" wx:key="{{index}}" bindtap="navigateToShuffle" data-index="{{index}}">
+        <view class="text1">{{item.text1}}</view>
+        <view class="text2">{{item.text2}}</view>
+        <view class="icon  icon-arrows"></view>
+      </view>
+    </view>
+  </view>
+</view>

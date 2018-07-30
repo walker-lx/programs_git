@@ -1,0 +1,35 @@
+.content {
+    height: 100vh;
+    background-color: #F0F6EA;
+    box-sizing: border-box;
+    padding-top: 141px;
+    text-align: center;
+    overflow: hidden;
+    .icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+        background: url('https://qiniu.image.cq-wnl.com/content/201804177a48aa44bbd54b3bb6eb9a649a0bd3fe.png') no-repeat;
+        background-size: cover;
+    }
+    .desc {
+        color: #333333;
+        margin-top: 15px;
+        font-size: 20px;
+    }
+    .btn {
+        margin: 90px 10px 0;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+        background-color: #F39700;
+        border-radius: 4px;
+        font-size: 17px;
+    }
+    .qx {
+        margin-top: 30px;
+        color: #999999;
+        font-size: 15px;
+    }
+}

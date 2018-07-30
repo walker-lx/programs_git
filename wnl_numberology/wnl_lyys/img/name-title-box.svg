@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>name-title-box</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9.14647146,50 L40.8535285,50 C42.3599531,45.7379328 45.7379328,42.3599531 50,40.8535285 L50,9.14647146 C45.7379328,7.64004685 42.3599531,4.26206724 40.8535285,6.05515638e-12 L9.14647146,0 C7.64004685,4.26206724 4.26206724,7.64004685 4.4408921e-16,9.14647146 L0,40.8535285 C4.26206724,42.3599531 7.64004685,45.7379328 9.14647146,50 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="50" height="50" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="name-title-box" stroke="#FF9447" stroke-width="4">
+            <use id="Combined-Shape" mask="url(#mask-2)" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

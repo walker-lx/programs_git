@@ -1,0 +1,199 @@
+﻿<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>八字命盘</title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no,init-scale=1.0,maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" type="text/css" href="css/bzmp.css?v=1.0">
+	<script type="text/javascript" src="scripts/jquery-fastclick.min.js"></script>
+	<script type="text/javascript" src="scripts/underscore-min.js"></script>
+    <script type="text/javascript" src="scripts/base64.min.js"></script>
+	<script type="text/javascript" src="scripts/bzmp.js?v=1.0"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8e0b53b1de7438bdfa7a36b7a4a9ee61";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="briefContent">
+            <div class="briefTbl">
+                <div class="briefLine">
+                    <div>
+                        <span class="key">姓名：</span>
+                        <span id="name" class="value"></span>
+                    </div>
+                    <div>
+                        <span class="key">性别：</span>
+                        <span id="sex" class="value"></span>
+                    </div>
+                </div>
+                <div class="briefLine">
+                    <div>
+                        <span class="key">公历：</span>
+                        <span id="gongli" class="value"></span>
+                    </div>
+                    <div>
+                        <span class="key">空亡：</span>
+                        <span id="kongWang" class="value"></span>
+                    </div>
+                </div>
+                <div class="briefLine">
+                    <div>
+                        <span class="key">节气：</span>
+                        <span id="term" class="value"></span>
+                    </div>
+                    <div>
+                        <span class="key">命宫：</span>
+                        <span id="mingGong" class="value"></span>
+                    </div>
+                </div>
+                <div class="briefLine">
+                    <div>
+                        <span class="key">胎原：</span>
+                        <span id="taiYuan" class="value"></span>
+                    </div>
+                    <div>
+                        <span class="key">吉数：</span>
+                        <span id="jiShu" class="value"></span>
+                    </div>
+                </div>
+                <div class="briefLine">
+                    <div>
+                        <span class="key">吉色：</span>
+                        <span id="jiSe" class="value"></span>
+                    </div>
+                    <div>
+                        <span class="key">吉位：</span>
+                        <span id="jiWei" class="value"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detailContent">
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+            <div class="lineList">
+                <div class="detailLine line1">
+                    <div class="leftLineContent"></div>
+                    <div class="rightLineContent">
+                        <div class="rightLineItem">年</div>
+                        <div class="rightLineItem">月</div>
+                        <div class="rightLineItem">日</div>
+                        <div class="rightLineItem">时</div>
+                    </div>
+                </div>
+                <div class="detailLine line2">
+                    <div class="leftLineContent"><div class="innerTxt">乾造</div></div>
+                    <div class="rightLineContent">
+                        <div class="rightLineItem">
+                            <div class="upRightItem tiangan1"></div>
+                            <div class="downRightItem dizhi1"></div>
+                        </div>
+                        <div class="rightLineItem">
+                            <div class="upRightItem tiangan2"></div>
+                            <div class="downRightItem dizhi2"></div>
+                        </div>
+                        <div class="rightLineItem">
+                            <div class="upRightItem tiangan3"></div>
+                            <div class="downRightItem dizhi3"></div>
+                        </div>
+                        <div class="rightLineItem">
+                            <div class="upRightItem tiangan4"></div>
+                            <div class="downRightItem dizhi4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailLine line3">
+                    <div class="leftLineContent"><div class="innerTxt">藏干</div></div>
+                    <div class="rightLineContent">
+                        <div class="rightLineItem">
+                            <div class="upRightItem zanggan1"></div>
+                            <div class="downRightItem shishen1"></div>
+                        </div>
+                        <div class="rightLineItem">
+                            <div class="upRightItem zanggan2"></div>
+                            <div class="downRightItem shishen2"></div>
+                        </div>
+                        <div class="rightLineItem">
+                            <div class="upRightItem zanggan3"></div>
+                            <div class="downRightItem shishen3"></div>
+                        </div>
+                        <div class="rightLineItem">
+                            <div class="upRightItem zanggan4"></div>
+                            <div class="downRightItem shishen4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailLine line4">
+                    <div class="leftLineContent"><div class="innerTxt">十二长生</div></div>
+                    <div class="rightLineContent">
+                        <div class="rightLineItem changsheng1"></div>
+                        <div class="rightLineItem changsheng2"></div>
+                        <div class="rightLineItem changsheng3"></div>
+                        <div class="rightLineItem changsheng4"></div>
+                    </div>
+                </div>
+                <div class="detailLine line5">
+                    <div class="leftLineContent"><div class="innerTxt">纳音</div></div>
+                    <div class="rightLineContent">
+                        <div class="rightLineItem nayin1"></div>
+                        <div class="rightLineItem nayin2"></div>
+                        <div class="rightLineItem nayin3"></div>
+                        <div class="rightLineItem nayin4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="riyuanContent">
+            日元旺衰分析：<span id="riYuan"></span>
+        </div>
+        <div class="xijiContent">
+            <div class="xijiTitle">五行喜忌：</div>
+            <div class="xijiTxt" id="xiJi"></div>
+        </div>
+        <div class="dayunTitle1">
+            <div class="titleIcon"></div>
+            <div class="titleTxt">
+                大运
+            </div>
+            <div class="leftRadius"></div>
+            <div class="rightRadius"></div>
+        </div>
+        <div class="dayunContent">
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="jiShi">
+                <tbody id="tbdJiShi"></tbody>
+            </table>
+        </div>
+    </div>
+    <!--<a class="yiqibaziLink" href="zhuanjia.html">-->
+        <!--<img class="bannerImg" src="img/yiqibazi_ad.png" alt="董易奇专家团"/>-->
+    <!--</a>-->
+    <div class="yiqiDesc">易奇八字专家团倾力打造 <a class="zhuanjiaLink" href="zhuanjia.html">查看专家团简介</a></div>
+    <a class="wnlBannerLink hidden" href="javascript:void(0)">
+        <div class="downIcon"></div>
+        <div class="downTxt">
+            <div class="txtContainer">
+                <div class="txtWrapper">
+                    <img class="downTxtImg" src="img/ad-ww@3x.png" alt="万年历下载">
+                </div>
+            </div>
+        </div>
+        <div class="downBtnImg"></div>
+    </a>
+</body>
+</html>

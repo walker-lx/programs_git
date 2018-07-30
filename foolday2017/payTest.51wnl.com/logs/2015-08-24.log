@@ -1,0 +1,333 @@
+2015-08-24 11:33:12.061 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[test]]></attach><body><![CDATA[test]]></body><goods_tag><![CDATA[jjj]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[2bc915845a4a4cce8843d9cdcc9281ad]]></nonce_str><notify_url><![CDATA[notifyurlTODO]]></notify_url><out_trade_no><![CDATA[126333610120150824113312618]]></out_trade_no><product_id><![CDATA[abc]]></product_id><sign><![CDATA[E946FA1CDC89ACB1C24C610B32E457D2]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824114312]]></time_expire><time_start><![CDATA[20150824113312]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 11:33:12.748 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[a71eVSrIikIMRV5B]]></nonce_str>
+<sign><![CDATA[A1475017D4058F96593326332958C41F]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201508241133134aaeabd6ef0602135355]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 11:35:44.693 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[test]]></attach><body><![CDATA[test]]></body><goods_tag><![CDATA[jjj]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[f04043d87a5a446190c1dfe79b3b6c32]]></nonce_str><notify_url><![CDATA[notifyurlTODO]]></notify_url><out_trade_no><![CDATA[126333610120150824113544276]]></out_trade_no><product_id><![CDATA[xxx]]></product_id><sign><![CDATA[F52D0C592AD4D698A7F74C149BD93745]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824114544]]></time_expire><time_start><![CDATA[20150824113544]]></time_start><total_fee>1</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 11:35:45.343 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[XuHvHGhv17ZMkqU4]]></nonce_str>
+<sign><![CDATA[10B75DECF7B65DD7D5820014B013636B]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150824113545fec1406fb30532254141]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 13:46:10.663 ERROR Youloft.Pay.WxPay.lib.WxPayData: WxPayData内部含有值为null的字段!
+2015-08-24 13:48:21.591 ERROR Youloft.Pay.WxPay.lib.WxPayData: WxPayData内部含有值为null的字段!
+2015-08-24 13:50:03.275 ERROR Youloft.Pay.WxPay.lib.WxPayData: WxPayData内部含有值为null的字段!
+2015-08-24 13:59:57.246 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字合婚wnl]]></body><goods_tag><![CDATA[八字合婚wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[13ca197516b043bebc79f9f3a52e3649]]></nonce_str><notify_url><![CDATA[www.baidu.com]]></notify_url><out_trade_no><![CDATA[5a417c92-eb6d-4bcf-b1c3-66ee65c2e5a0]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[0D45A587FCAE5C959872AD0E0A214FDE]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824142957]]></time_expire><time_start><![CDATA[20150824135957]]></time_start><total_fee>6460</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 13:59:57.748 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid out_trade_no]]></return_msg>
+</xml>
+2015-08-24 14:00:33.313 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字合婚wnl]]></body><goods_tag><![CDATA[八字合婚wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[6ab271b89df34c5599dc9ec46397192b]]></nonce_str><notify_url><![CDATA[www.baidu.com]]></notify_url><out_trade_no><![CDATA[5a417c92-eb6d-4bcf-b1c3-66ee65c2e5a0]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[A90E1FE9D470CEB8CA82B83AB6B90DEE]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824143033]]></time_expire><time_start><![CDATA[20150824140033]]></time_start><total_fee>6460</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 14:00:33.699 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid out_trade_no]]></return_msg>
+</xml>
+2015-08-24 14:01:40.632 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字合婚wnl]]></body><goods_tag><![CDATA[八字合婚wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[2a65fb7046844497afcfb968a680f9b5]]></nonce_str><notify_url><![CDATA[www.baidu.com]]></notify_url><out_trade_no><![CDATA[5a417c92-eb6d-4bcf-b1c3-66ee65c2e5a0]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[60B2145D43E8A2C717414DB0F67E0FFA]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824143120]]></time_expire><time_start><![CDATA[20150824140120]]></time_start><total_fee>6460</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 14:01:41.029 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid out_trade_no]]></return_msg>
+</xml>
+2015-08-24 16:00:00.759 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[ee412f4ed92847ea80daa8db0ab6e2c8]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[0F2851E9E85AD34F4962D0A2561F897A]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824163000]]></time_expire><time_start><![CDATA[20150824160000]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:00:01.005 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[20ce347d24b947fd90d0339d2f25bb19]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[78BF1E972A8A2AB3664C8639A13F57D3]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824163001]]></time_expire><time_start><![CDATA[20150824160001]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:00:01.184 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[78dea8e834214d5a902f571f2485e3d0]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[14371FF3BA8E1F5FF573540E1758C550]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824163001]]></time_expire><time_start><![CDATA[20150824160001]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:00:01.245 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:00:01.364 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[31e6c664b9cb4c50a215700fe2e51c84]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[DC29FEFBDC5697222117D947888D08DB]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824163001]]></time_expire><time_start><![CDATA[20150824160001]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:00:01.403 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:00:01.529 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:00:01.572 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[d6d2a2d435384052825dd57bbb6099f2]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[B22751AAFE2D979CFD1F4A16760B002C]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824163001]]></time_expire><time_start><![CDATA[20150824160001]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:00:01.575 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:00:01.737 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:03:03.643 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[05462f75045f4d6ca0f01960ecd23396]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[96A6E00DE87B0873619ACD80AB7BF226]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824163303]]></time_expire><time_start><![CDATA[20150824160303]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:03:04.325 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:04:07.879 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[165061d38a4247a98fef79ea7ac40cde]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[15B402353A40C4F373775C7D2ABD7B4E]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824163407]]></time_expire><time_start><![CDATA[20150824160407]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:04:08.282 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:04:24.900 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[4cadd07d717a4e5daf6c0e2e3e093dce]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[5B43B386F92EDDDB2387272FFB2774F1]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824163424]]></time_expire><time_start><![CDATA[20150824160424]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:04:25.301 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:04:25.444 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[9412537d1af042f08b223d1bb3fb8e15]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[76356212F715E2C9246A8CF2F24FF4E1]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824163425]]></time_expire><time_start><![CDATA[20150824160425]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:04:25.612 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:06:43.499 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[6f1b49747cb8455488fe34c8844c12a2]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[94F894C623556B8DEE8E64955AF67D23]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824163643]]></time_expire><time_start><![CDATA[20150824160643]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:06:43.903 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:08:07.567 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[b7e571f46dbd4e98b789638924829e88]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[C124C2A241134BC8EB4EFC0D2EC6AD4A]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824163807]]></time_expire><time_start><![CDATA[20150824160807]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:08:07.971 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:13:27.762 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[45b362ac8c0f42adba7bbb3bb2bc44ef]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[B701E79D02EBCF34B20DB63E5B0B0BBB]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824164327]]></time_expire><time_start><![CDATA[20150824161327]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:13:28.201 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:13:44.575 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字精批wnl]]></body><goods_tag><![CDATA[八字精批wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[f5dcc8d4206b4f06ac827834bdbf0673]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[1113b540-c901-4acc-a2d6-f90758becee7]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[D37FCA3F3B69C9CCE13CE94454BD2634]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824164344]]></time_expire><time_start><![CDATA[20150824161344]]></time_start><total_fee>0</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:13:44.956 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+2015-08-24 16:17:03.187 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[06936207fc9f4febbebf8b8bec07c555]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[f1164f597e2342cd848bbc4593fdf02b]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[856507FF54C768C301A3BF80B941F078]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824164703]]></time_expire><time_start><![CDATA[20150824161703]]></time_start><total_fee>9310</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:17:03.833 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[3I0EmGFg3JX3l0yx]]></nonce_str>
+<sign><![CDATA[F640AE53D781C09A30AF769395C25410]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150824161704467fa101f80427186307]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 16:20:32.865 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[6e645ebb5c3e403288922ac757aa8230]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[f1164f597e2342cd848bbc4593fdf02b]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[CD4AB673D93A9729E832E6E873318670]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824165032]]></time_expire><time_start><![CDATA[20150824162032]]></time_start><total_fee>9609</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:20:33.538 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[rGnC61TdRYUWnWtW]]></nonce_str>
+<sign><![CDATA[54A9D843DE1744A25C68A5575236B28B]]></sign>
+<result_code><![CDATA[FAIL]]></result_code>
+<err_code><![CDATA[OUT_TRADE_NO_USED]]></err_code>
+<err_code_des><![CDATA[商户订单号重复]]></err_code_des>
+</xml>
+2015-08-24 16:20:54.895 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[84c4204b1b594bb6970911742855cbd7]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[f1164f597e2342cd848bbc4593fdf02b]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[B9AACF0780E4F13D5DD5F6438186DD17]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824165054]]></time_expire><time_start><![CDATA[20150824162054]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:20:55.524 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[3ioAmNdXRhfoCO3P]]></nonce_str>
+<sign><![CDATA[B13D270F21AD4B47E2F12F8FCAD207ED]]></sign>
+<result_code><![CDATA[FAIL]]></result_code>
+<err_code><![CDATA[OUT_TRADE_NO_USED]]></err_code>
+<err_code_des><![CDATA[商户订单号重复]]></err_code_des>
+</xml>
+2015-08-24 16:23:54.544 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[40c2dd130c8c4dfdb50ca7dd28555e5e]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[f1164f597e2342cd848bbc4593fdf02b]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[285DCD300C8E255E072DC6FA3650EF98]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824165354]]></time_expire><time_start><![CDATA[20150824162354]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:23:55.270 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[0zwcBRylTOkvCAnE]]></nonce_str>
+<sign><![CDATA[D35A6D008DFD0603F99D980AE88A0809]]></sign>
+<result_code><![CDATA[FAIL]]></result_code>
+<err_code><![CDATA[OUT_TRADE_NO_USED]]></err_code>
+<err_code_des><![CDATA[商户订单号重复]]></err_code_des>
+</xml>
+2015-08-24 16:24:15.502 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[c21ffab002174db88a1929fd998d86f4]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[f1164f597e2342cd848bbc4593fdf02b]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[BB8B2CC0B04ABA9B65F10985BE11773E]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824165415]]></time_expire><time_start><![CDATA[20150824162415]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:24:16.167 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[IuQFuU2GBQMe4KAX]]></nonce_str>
+<sign><![CDATA[284406DB85ACE5234AC09D7D7E7FB26D]]></sign>
+<result_code><![CDATA[FAIL]]></result_code>
+<err_code><![CDATA[OUT_TRADE_NO_USED]]></err_code>
+<err_code_des><![CDATA[商户订单号重复]]></err_code_des>
+</xml>
+2015-08-24 16:32:00.880 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[9cbf12d443764d33a25c5e7c6bbbcca6]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[f1164f597e2342cd848bbc4593fdf02b]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[C4740137FC18260F752B5A381BCD10CB]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824170200]]></time_expire><time_start><![CDATA[20150824163200]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:32:01.549 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[jW1vKZ5fVmsPxfNY]]></nonce_str>
+<sign><![CDATA[2EB84BE73EB4170359287419159065AC]]></sign>
+<result_code><![CDATA[FAIL]]></result_code>
+<err_code><![CDATA[OUT_TRADE_NO_USED]]></err_code>
+<err_code_des><![CDATA[商户订单号重复]]></err_code_des>
+</xml>
+2015-08-24 16:37:28.771 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[cda1b4a59a5d4429af8915ba22db07b3]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[25b8bb83b9fb45ccbf2b316da6dfe282]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[3B14F1ADD722725101FB980D3F125367]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824170728]]></time_expire><time_start><![CDATA[20150824163728]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:37:29.442 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[xUIfMsDdWITvlglE]]></nonce_str>
+<sign><![CDATA[619CC5900CE3DD464AEA130E83DC85C2]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150824163730256d9cfdc00298237109]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 16:37:29.449 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=27a06cb47df44b17a22aad8703cebba4<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx20150824163730256d9cfdc00298237109<br>sign=8605AE540D79AC4708F3F28203F228D5<br>timestamp=1440405449<br>
+2015-08-24 16:37:38.964 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[c5f5147156194b5caf0530b9f24eccb7]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[25b8bb83b9fb45ccbf2b316da6dfe282]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[A58022CE1104ECFAD59621316217AC76]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824170738]]></time_expire><time_start><![CDATA[20150824163738]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:37:39.603 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[1b2pNZISwlx1pKay]]></nonce_str>
+<sign><![CDATA[6A55FD38EB2165660C4E717E2B943062]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2015082416374048802e1d4c0169655371]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 16:37:39.603 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=910b43dc6b1d47e09a80c881805d71e0<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx2015082416374048802e1d4c0169655371<br>sign=6D0397B7E98107CAA1F67C556B28AB2C<br>timestamp=1440405460<br>
+2015-08-24 16:40:41.859 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[e05b840862dc4c6b8f82ccc4956f899f]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[25b8bb83b9fb45ccbf2b316da6dfe282]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[5377C0D433F6D9F3EB049744C6172607]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824171041]]></time_expire><time_start><![CDATA[20150824164041]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:40:42.503 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[dvkRd5fU4BBR68ju]]></nonce_str>
+<sign><![CDATA[CE44690E70EF5AA370C744B33D82FA6A]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201508241640430f51e5cf900035496978]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 16:40:42.503 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=8644e8ee29eb4fb39c1deed22860991d<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx201508241640430f51e5cf900035496978<br>sign=F0C20E349059E63BBFCC3AF6A024CF15<br>timestamp=1440405643<br>
+2015-08-24 16:40:45.359 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[04fe5e63a36e434b85064b1fc2203e33]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[25b8bb83b9fb45ccbf2b316da6dfe282]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[F2FC0E1ED557D3A5F1F08751EFFF920F]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824171045]]></time_expire><time_start><![CDATA[20150824164045]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:40:45.749 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[jCzHhozhmIjXBaGX]]></nonce_str>
+<sign><![CDATA[445E457C7C0034F7B9730C69EC2B0F85]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201508241640463a525536d40345480104]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 16:40:45.749 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=ea584917dd8c476094b3b6b472a5a576<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx201508241640463a525536d40345480104<br>sign=2B65053691358528411C58AF5C344F41<br>timestamp=1440405646<br>
+2015-08-24 16:41:29.367 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[2602a67a136646269b9c80991d654c97]]></nonce_str><notify_url><![CDATA[www.baidu.com]]></notify_url><out_trade_no><![CDATA[25b8bb83b9fb45ccbf2b316da6dfe282]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[9AB4ADD6908037E5C38592C769BBE084]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824171129]]></time_expire><time_start><![CDATA[20150824164129]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:41:29.988 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[s7wGQYd1yFVE3zXp]]></nonce_str>
+<sign><![CDATA[BCBE6951D427615AC75B6AF8518FF3D3]]></sign>
+<result_code><![CDATA[FAIL]]></result_code>
+<err_code><![CDATA[OUT_TRADE_NO_USED]]></err_code>
+<err_code_des><![CDATA[商户订单号重复]]></err_code_des>
+</xml>
+2015-08-24 16:43:29.768 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[2de58e134edb4120b115794706cd344c]]></nonce_str><notify_url><![CDATA[www.baidu.com]]></notify_url><out_trade_no><![CDATA[47c8798aa7944c37b51b3720f769b5f8]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[F0627E421C775BCEF1B876BB45F7484D]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824171329]]></time_expire><time_start><![CDATA[20150824164329]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:43:30.431 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[huCXMD0yiQLQx2Vh]]></nonce_str>
+<sign><![CDATA[0A62AFF6F6A0BBD47D1B1BEFACEC1EAE]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201508241643316d958e3d970741078273]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 16:43:30.431 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=37e9878b3aaa453a870e9775c9d347ac<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx201508241643316d958e3d970741078273<br>sign=E1AC91AF0BFB291BBA1CB3FB795E654E<br>timestamp=1440405810<br>
+2015-08-24 16:44:06.789 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[fc214c2b0d8e4531a7d07467821628b7]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[47c8798aa7944c37b51b3720f769b5f8]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[00BB87583F4A435B67DD727E830283F7]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824171406]]></time_expire><time_start><![CDATA[20150824164406]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:44:07.401 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[nvm5D9UR0JYdxL0l]]></nonce_str>
+<sign><![CDATA[CCD0C7948E2D5B6F06E0DF47FC8B3A90]]></sign>
+<result_code><![CDATA[FAIL]]></result_code>
+<err_code><![CDATA[OUT_TRADE_NO_USED]]></err_code>
+<err_code_des><![CDATA[商户订单号重复]]></err_code_des>
+</xml>
+2015-08-24 16:44:42.615 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[11af2eba60424ab7a140fc7ea10ea0a3]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[494ef363924d4d428e4e2f79678bee65]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[40B07C4F0F762DAE3D7F013C0D70EC05]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824171442]]></time_expire><time_start><![CDATA[20150824164442]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:44:43.239 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[TDetFnaY7FpRJ8Kb]]></nonce_str>
+<sign><![CDATA[7C8B48B352C31B7C0EDCBBCAF5B64170]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150824164444b7d63038340398068345]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 16:44:43.239 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=eb88371018a64fea94cf1256c48ff437<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx20150824164444b7d63038340398068345<br>sign=7F7A6F41F7A677A33E9BEA63518C534C<br>timestamp=1440405883<br>
+2015-08-24 16:46:10.920 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[252cdce379984c22bc7415275b661ff8]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[494ef363924d4d428e4e2f79678bee65]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[88FD949270A4978E1C765AC1D04DDD94]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824171610]]></time_expire><time_start><![CDATA[20150824164610]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:46:11.635 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[yIaEiUtxrPw1kLn8]]></nonce_str>
+<sign><![CDATA[0F44C66F0F9A32E48E8119FF2227C8BA]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150824164612325726e4e90740848982]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 16:46:11.635 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=c585aade9f6e4810b03b62c043de93fe<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx20150824164612325726e4e90740848982<br>sign=DC5CBF4B6C31F57D7BDAC01664B1A923<br>timestamp=1440405972<br>
+2015-08-24 16:47:26.925 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[c8efc58cb66a41e2903237ba64640826]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[494ef363924d4d428e4e2f79678bee65]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[E4AD5535B4C7AF9EC855CC0296B62E06]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824171726]]></time_expire><time_start><![CDATA[20150824164726]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:47:27.566 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[UmLthAWZ1XG8fOVx]]></nonce_str>
+<sign><![CDATA[F8AE4A32093027A5BC82629574C280F4]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150824164728dc59d4bea80898208165]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 16:47:27.566 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=5e4170e5e6b04aff820c83dbae362834<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx20150824164728dc59d4bea80898208165<br>sign=2CF75258F4519F8FB66D67A8DA270C51<br>timestamp=1440406048<br>
+2015-08-24 16:50:21.696 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[adf8e9677a9d4c9790f3750a0531ae7d]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[494ef363924d4d428e4e2f79678bee65]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[80209C31EE8F363DBD0CD5AEF19CE0FA]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824172021]]></time_expire><time_start><![CDATA[20150824165021]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 16:50:22.395 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[9F1UJzrp9zlxS13M]]></nonce_str>
+<sign><![CDATA[F9A38CD864FFE0A4A603F101C8E8780D]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150824165023722e11276f0953145968]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 16:50:22.396 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=8e79f889f21b4534810bd2eebe54d84b<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx20150824165023722e11276f0953145968<br>sign=E00E455A34603F2A2D7F981D931E1BF1<br>timestamp=1440406222<br>
+2015-08-24 17:24:40.436 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[e26d60d028664f7bb02e4bf2a96d3fc9]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[5782ed6220914487be07f793c2786565]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[0BDAB20693BB9057FF14EFDBA86FEDD8]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824175439]]></time_expire><time_start><![CDATA[20150824172439]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 17:24:41.128 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[d32rC4p7sqPqCtqD]]></nonce_str>
+<sign><![CDATA[7290D2F9D66770C44DD8EA7EEB35F8DD]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201508241724423ec06264250991899636]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 17:24:41.135 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=cbb502270e9d4255a3c36762ee6e2458<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx201508241724423ec06264250991899636<br>sign=B9FC2FDE7A66C27205FB1207FF176661<br>timestamp=1440408281<br>
+2015-08-24 17:24:55.817 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[e97357a82a6141ca838fbe3e6860788c]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[5782ed6220914487be07f793c2786565]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[599123317B481AEB5E5E1B45AF801F10]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824175455]]></time_expire><time_start><![CDATA[20150824172455]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 17:24:56.447 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[RSHbBKsXOGukwInh]]></nonce_str>
+<sign><![CDATA[847172435528FD39C087E447A7EA424A]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150824172457d2adc7e0ad0108479988]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 17:24:56.447 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=5a1b573d1e834b72975b58c45bbb9f82<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx20150824172457d2adc7e0ad0108479988<br>sign=40FB64850000F7DFE316E09A5D73AB62<br>timestamp=1440408296<br>
+2015-08-24 17:33:08.758 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[f83bcb8837d24e27812d8cec28e15b62]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[5782ed6220914487be07f793c2786565]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[919952E2ED31A80A0AE04E70BCF3BAFE]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824180308]]></time_expire><time_start><![CDATA[20150824173308]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 17:33:09.434 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[SLDgwtzkcAxyC2w4]]></nonce_str>
+<sign><![CDATA[AACA54B0FA037E1BFF55632791BD4804]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201508241733104da6339bb70843466516]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 17:33:09.435 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=8835b6fa45024e2f8c9c020340ed803d<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx201508241733104da6339bb70843466516<br>sign=2E713E959C158E3E663F3D5AEF845DC0<br>timestamp=1440408789<br>
+2015-08-24 17:58:48.942 DEBUG WxPayApi: UnfiedOrder request : <xml><appid><![CDATA[wx5f3a0d4653cd3485]]></appid><attach><![CDATA[wnlattach]]></attach><body><![CDATA[八字测算wnl]]></body><goods_tag><![CDATA[八字测算wnl]]></goods_tag><mch_id><![CDATA[1263336101]]></mch_id><nonce_str><![CDATA[84ee7c61c44b46abb7eac934b6e7e037]]></nonce_str><notify_url><![CDATA[/numberology/tools/bzcs_result.html]]></notify_url><out_trade_no><![CDATA[5e3e469f2f3b4359b5b15ad772cded25]]></out_trade_no><product_id><![CDATA[test product]]></product_id><sign><![CDATA[E4C815DD32D2AE0175226734D7AC9471]]></sign><spbill_create_ip><![CDATA[58.17.245.115]]></spbill_create_ip><time_expire><![CDATA[20150824182848]]></time_expire><time_start><![CDATA[20150824175848]]></time_start><total_fee>9800</total_fee><trade_type><![CDATA[APP]]></trade_type></xml>
+2015-08-24 17:58:49.653 DEBUG WxPayApi: UnfiedOrder response : <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx5f3a0d4653cd3485]]></appid>
+<mch_id><![CDATA[1263336101]]></mch_id>
+<nonce_str><![CDATA[dj0jFwK634Q1ZVeg]]></nonce_str>
+<sign><![CDATA[CA9738DF33CE86BB636935323B89D72F]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150824175850d2bb74802f0417790113]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>
+2015-08-24 17:58:49.660 DEBUG Youloft.Pay.WxPay.lib.WxPayData: Print in Web Page : appid=wx5f3a0d4653cd3485<br>noncestr=f3e27a4a0dd14c59932c38575d3d3d1e<br>package=wnlapp<br>partnerid=1263336101<br>prepayid=wx20150824175850d2bb74802f0417790113<br>sign=2D513ACFCA46D898E91620EEF0554045<br>timestamp=1440410330<br>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>万年历命理-订单详情</title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=320px, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery-fastclick.min.js"></script>
+    <!-- <script type="text/javascript" src="js/orderShow.js?v=1.0"></script> -->
+    <script type="text/javascript" src="js/orderShow.js"></script>
+</head>
+<body>
+    <div class="main main_show">
+        <div class="ziweibazi orderContent hidden">
+            <div class="orderDetailLine">
+                <span class="detailName">咨询服务:</span>
+                <span class="detailValue orderCategory1"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">咨询人:</span>
+                <span class="detailValue orderName"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">性　　别:</span>
+                <span class="detailValue sex"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">出生日期:</span>
+                <span class="detailValue bornDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">出生时间:</span>
+                <span class="detailValue bornTime"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">民　　族:</span>
+                <span class="detailValue ethnic"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">婚　　否:</span>
+                <span class="detailValue marriage"></span>
+            </div>
+            <div class="hehunContent hidden">
+                <div class="orderDetailLine">
+                    <span class="detailName">合婚对象姓名:</span>
+                    <span class="detailValue hehunOrderName"></span>
+                </div>
+                <div class="orderDetailLine">
+                    <span class="detailName">合婚对象性别:</span>
+                    <span class="detailValue hehunSex"></span>
+                </div>
+                <div class="orderDetailLine">
+                    <span class="detailName">合婚对象出生日期:</span>
+                    <span class="detailValue hehunBornDate"></span>
+                </div>
+                <div class="orderDetailLine">
+                    <span class="detailName">合婚对象出生时间:</span>
+                    <span class="detailValue hehunBornTime"></span>
+                </div>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">家庭状况:</span>
+                <span class="detailValue familyDesc"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">开始日期:</span>
+                <span class="detailValue beginDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">结束日期:</span>
+                <span class="detailValue endDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">其他要求:</span>
+                <span class="detailValue otherRequest"></span>
+            </div>
+        </div>
+        <div class="qiaoqian orderContent hidden">
+            <div class="orderDetailLine">
+                <span class="detailName">咨询服务:</span>
+                <span class="detailValue orderCategory1"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">联系人:</span>
+                <span class="detailValue orderName"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">男主人姓名:</span>
+                <span class="detailValue qiaoqianMaleName"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">男主人出生日期:</span>
+                <span class="detailValue qiaoqianMaleBornDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">男主人出生时间:</span>
+                <span class="detailValue qiaoqianMaleBornTime"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">女主人姓名:</span>
+                <span class="detailValue qiaoqianFemaleName"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">女主人出生日期:</span>
+                <span class="detailValue qiaoqianFemaleBornDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">女主人出生时间:</span>
+                <span class="detailValue qiaoqianFemaleBornTime"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">宅屋坐向:</span>
+                <span class="detailValue zuoxiang"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">家庭成员生辰信息:</span>
+                <span class="detailValue familyBornTime"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">开始日期:</span>
+                <span class="detailValue beginDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">结束日期:</span>
+                <span class="detailValue endDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">其他要求:</span>
+                <span class="detailValue qiaoqianOtherRequest"></span>
+            </div>
+        </div>
+        <div class="chuxing  orderContent hidden">
+            <div class="orderDetailLine">
+                <span class="detailName">咨询服务:</span>
+                <span class="detailValue orderCategory1"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">联系人:</span>
+                <span class="detailValue orderName"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">出行人姓名:</span>
+                <span class="detailValue chuxingName"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">出行人性别:</span>
+                <span class="detailValue chuxingSex"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">出行人出生日期:</span>
+                <span class="detailValue chuxingBornDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">出行人出生时间:</span>
+                <span class="detailValue chuxingBornTime"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">出生地详细地址:</span>
+                <span class="detailValue bornAddress"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">出行地详细地址:</span>
+                <span class="detailValue goAddress"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">开始日期:</span>
+                <span class="detailValue beginDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">结束日期:</span>
+                <span class="detailValue endDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">其他要求:</span>
+                <span class="detailValue chuxingOtherRequest"></span>
+            </div>
+        </div>
+        <div class="kaizhang  orderContent hidden">
+            <div class="orderDetailLine">
+                <span class="detailName">咨询服务:</span>
+                <span class="detailValue orderCategory1"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">联系人:</span>
+                <span class="detailValue orderName"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">主营者姓名:</span>
+                <span class="detailValue kaizhangName"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">主营者性别:</span>
+                <span class="detailValue kaizhangSex"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">主营者出生日期:</span>
+                <span class="detailValue kaizhangBornDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">主营者出生时间:</span>
+                <span class="detailValue kaizhangBornTime"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">公司/商铺座向:</span>
+                <span class="detailValue gongsiZuoxiang"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">合作人生辰资料:</span>
+                <span class="detailValue partnerBornTime"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">开始日期:</span>
+                <span class="detailValue beginDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">结束日期:</span>
+                <span class="detailValue endDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">其他要求:</span>
+                <span class="detailValue kaizhangOtherRequest"></span>
+            </div>
+        </div>
+        <div class="hehun  orderContent hidden">
+            <div class="orderDetailLine">
+                <span class="detailName">咨询服务:</span>
+                <span class="detailValue orderCategory1"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">联系人:</span>
+                <span class="detailValue orderName"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">男方姓名:</span>
+                <span class="detailValue hehunMaleName"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">男方出生日期:</span>
+                <span class="detailValue hehunMaleBornDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">男方出生时间:</span>
+                <span class="detailValue hehunMaleBornTime"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">男方出生地地址:</span>
+                <span class="detailValue maleBornAddress"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">男方父亲生肖:</span>
+                <span class="detailValue hehunMaleFatherZodiac"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">男方母亲生肖:</span>
+                <span class="detailValue hehunMaleMotherZodiac"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">女方姓名:</span>
+                <span class="detailValue hehunFeMaleName"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">女方出生日期:</span>
+                <span class="detailValue hehunFeMaleBornDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">女方出生时间:</span>
+                <span class="detailValue hehunFeMaleBornTime"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">女方出生地地址:</span>
+                <span class="detailValue femaleBornAddress"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">女方父亲生肖:</span>
+                <span class="detailValue hehunFeMaleFatherZodiac"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">女方母亲生肖:</span>
+                <span class="detailValue hehunFeMaleMotherZodiac"></span>
+            </div>
+
+            <div class="orderDetailLine">
+                <span class="detailName">开始日期:</span>
+                <span class="detailValue beginDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">结束日期:</span>
+                <span class="detailValue endDate"></span>
+            </div>
+            <div class="orderDetailLine">
+                <span class="detailName">其他要求:</span>
+                <span class="detailValue hehunOtherRequest"></span>
+            </div>
+        </div>
+        <div class="replyLine">大师回复</div>
+        <div class="orderDetailLine replyContent"></div>
+        <div class="replyLine">客户回复</div>
+        <div class="orderDetailLine clientReplyContent"></div>
+        <div class="replyLine">测算结果</div>
+        <div class="orderDetailLine endContent"></div>
+    </div>
+</body>
+</html>

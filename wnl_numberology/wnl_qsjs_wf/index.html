@@ -1,0 +1,370 @@
+<!DOCTYPE lang="en">
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+	/>
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="copyright" content="Copyright (c) 51wnl.com" />
+	<meta name="description" content="万年历" />
+	<meta name="keywords" content="万年历" />
+	<title>前生今世</title>
+	<link rel="stylesheet" href="./mobiscroll/mobiscroll.custom-2.14.4.min.css">
+	<link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./static/indexCity.css">
+    
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1264380794'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1264380794' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+	<style>
+		/*声明 WebFont*/
+
+		@font-face {
+			font-family: 'zidingyi';
+			src: url('./font/zidingyi.eot');
+			src: url('./font/zidingyi.eot?#font-spider') format('embedded-opentype'),
+			url('./font/zidingyi.woff') format('woff'),
+			url('./font/zidingyi.ttf') format('truetype'),
+			url('./font/zidingyi.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+        }
+        
+        #cnzz_stat_icon_1264380794 {
+			display: none;
+		}
+	</style>
+    <script type="text/javascript" src="./static/jquery-3.2.1.js"></script>
+</head>
+
+<body>
+    
+	<script type="text/javascript" src='//mobile.51wnl.com/utils/wnlHistory/wnlHistoryPro.js'></script>
+	<div class="index">
+		<div class="header_section">
+			<div class="headerBanner">
+				<div class="revealingNumDiv"></div>
+				<div class="revealingNum hiddenIndex"></div>
+			</div>
+		</div>
+
+		<div class="wuyanSection"></div>
+		<div class="infoContent_section">
+			<div class="infoTitle">
+				<div class="infoTitleContent">请填写个人信息</div>
+				<div class="infoTitleContent">揭晓前世今生的密码</div>
+			</div>
+			<div class="inputSection">
+				<div class="contentForm">
+					<div class="input-content yourName">
+						<div class="contentLabel contentLabel01">您的姓名</div>
+						<input type="text" placeholder="请输入姓名" id="yourName">
+						<div class="sex">
+							<div class="sex-female sex-on">
+								<div class="sex-type">女生</div>
+							</div>
+							<div class="sex-male">
+								<div class="sex-type">男生</div>
+							</div>
+						</div>
+					</div>
+					<div class="input-content yourBirthDay">
+						<div class="contentLabel contentLabel02">出生日期</div>
+						<input type="text" placeholder="1990.01.01" id="yourBirthDay" readonly>
+					</div>
+					<div class="input-content yourBirthTime">
+						<div class="contentLabel contentLabel02">出生时间</div>
+						<select id="yourBirthTime" class="select-border">
+                            <option value="12:00:00">不清楚</option>
+                            <option value="0:30:00">00:00-00:59</option>
+                            <option value="1:30:00">01:00-01:59</option>
+                            <option value="2:30:00">02:00-02:59</option>
+                            <option value="3:30:00">03:00-03:59</option>
+                            <option value="4:30:00">04:00-04:59</option>
+                            <option value="5:30:00">05:00-05:59</option>
+                            <option value="6:30:00">06:00-06:59</option>
+                            <option value="7:30:00">07:00-07:59</option>
+                            <option value="8:30:00">08:00-08:59</option>
+                            <option value="9:30:00">09:00-09:59</option>
+                            <option value="10:30:00">10:00-10:59</option>
+                            <option value="11:30:00">11:00-11:59</option>
+                            <option value="12:30:00">12:00-12:59</option>
+                            <option value="13:30:00">13:00-13:59</option>
+                            <option value="14:30:00">14:00-14:59</option>
+                            <option value="15:30:00">15:00-15:59</option>
+                            <option value="16:30:00">16:00-16:59</option>
+                            <option value="17:30:00">17:00-17:59</option>
+                            <option value="18:30:00">18:00-18:59</option>
+                            <option value="19:30:00">19:00-19:59</option>
+                            <option value="20:30:00">20:00-20:59</option>
+                            <option value="21:30:00">21:00-21:59</option>
+                            <option value="22:30:00">22:00-22:59</option>
+                            <option value="23:30:00">23:00-23:59</option>
+                        </select>
+					</div>
+					<div class="input-content yourBirthPlace">
+						<div class="contentLabel contentLabel01">出生地点</div>
+						<input type="text" placeholder="请完善出生地点" id="yourBirthPlace" unselectable="on" onfocus='this.blur()' class="wnl_cityPicker">
+					</div>
+				</div>
+			</div>
+			<div class="submitBtn submitBtnIndex" id="submitBtn">开启前世穿越</div>
+			<div class="infoTitle">
+				<div class="infoTitleContent">前世今生，因果相连</div>
+				<div class="infoTitleContent">天道轮回，招感今生之缘</div>
+			</div>
+			<div class="picContent clear">
+				<div class="picContentDetail"></div>
+				<div class="picContentDetail"></div>
+				<div class="picContentDetail"></div>
+				<div class="picContentDetail"></div>
+			</div>
+			<div class="submitBtn submitBtn01 clear">谁才是你的前世</div>
+			<div class="infoTitle">
+				<div class="infoTitleContent">阡陌轮回，今生又如何？</div>
+				<div class="infoTitleContent">前世轮回详解出你今生的答案</div>
+			</div>
+			<div class="qianshiSection">
+				<div class="qianshiTitle">前世</div>
+				<div class="qianshiContent">
+					<div class="qianshiContentDetail">前世业力</div>
+					<div class="qianshiContentDetail">前世职业</div>
+				</div>
+			</div>
+			<div class="jinshengSection">
+				<div class="jinshengTitle">今生</div>
+				<div class="jinshengContent">
+					<div class="jinshengContentDetail">命运启示</div>
+					<div class="jinshengContentDetail">感情症结</div>
+					<div class="jinshengContentDetail">痛苦根源</div>
+					<div class="jinshengContentDetail">另一半模样</div>
+					<div class="jinshengContentDetail">好运来源</div>
+					<div class="jinshengContentDetail">更多...</div>
+				</div>
+			</div>
+			<div class="submitBtn clear submitBtn02">预知今生命运</div>
+			<div class="infoTitle">
+				<div class="infoTitleContent infoTitleContentFeedback">用户反馈</div>
+			</div>
+			<div class="customerFeedback">
+				<div class="customerFeedbackAdjust">
+					<div class="customerFeedbackContent">
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">江先生:</div>
+							<div class="FeedbackContentRight">感觉我的前世和今生的反差好大!</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">凌女士:</div>
+							<div class="FeedbackContentRight">确实很准！也很有道理</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">李女士:</div>
+							<div class="FeedbackContentRight">看我老公爱哔哔的样子，前世是说书人一点都没有错。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">刘女士:</div>
+							<div class="FeedbackContentRight">我前世是将军，不可思议！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">李先生:</div>
+							<div class="FeedbackContentRight">这个测算还真的挺详细的，面面俱到，说得很准！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">赵女士:</div>
+							<div class="FeedbackContentRight">我跟我老公，一个是优伶，一个是军爷，哈哈~</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">左女士:</div>
+							<div class="FeedbackContentRight">好好玩，好有趣。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">刘先生:</div>
+							<div class="FeedbackContentRight">我的前世和今生，反差很明显耶！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">蒋先生:</div>
+							<div class="FeedbackContentRight">好贴心的建议！谢谢！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">罗先生:</div>
+							<div class="FeedbackContentRight">棒！说得很精准！</div>
+                        </div>
+                        <div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">廖女士:</div>
+							<div class="FeedbackContentRight">有点因果轮回的意思~</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">韩先生:</div>
+							<div class="FeedbackContentRight">原来是这样！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">闵女士:</div>
+							<div class="FeedbackContentRight">我的业力有点大，说得在理。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">陈女士:</div>
+							<div class="FeedbackContentRight">我妹妹的今生和前世，都是宠妃，什么鬼？哈哈哈~。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">郑先生:</div>
+							<div class="FeedbackContentRight">明天让媳妇试试，她超爱这些。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">黎女士:</div>
+							<div class="FeedbackContentRight">前世是侠女，突然感觉自己可以去拍古装片。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">周女士:</div>
+							<div class="FeedbackContentRight">我可以去找一个前世是太医的人当男朋友了。</div>
+                        </div>
+                        <div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">张女士:</div>
+							<div class="FeedbackContentRight">我今生应该受什么样的指引呢？</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">钱先生:</div>
+							<div class="FeedbackContentRight">宿命轮回，好棒的测试！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">魏女士:</div>
+							<div class="FeedbackContentRight">谢谢，我感觉一下子没有那么迷茫了！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">张先生:</div>
+							<div class="FeedbackContentRight">我老婆前世职业是媒婆，人设太准，我哭笑不得。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">彭先生:</div>
+							<div class="FeedbackContentRight">我要朝着我的目标一直努力！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">朱先生:</div>
+							<div class="FeedbackContentRight">运气来源，真的不错！。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">胡女士:</div>
+							<div class="FeedbackContentRight">我另一半原来是这样的，O(∩_∩)O~。</div>
+                        </div>
+                        <div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">王女士:</div>
+							<div class="FeedbackContentRight">我的感情死穴都给算出来了，万年历厉害！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">邓女士:</div>
+							<div class="FeedbackContentRight">我要给我儿子算一下，真有意思。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">侯女士:</div>
+							<div class="FeedbackContentRight">我的前世对今生的影响还挺大的。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">苏先生:</div>
+							<div class="FeedbackContentRight">前世绝配，好厉害！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">代先生:</div>
+							<div class="FeedbackContentRight">掌握到我的方向了，太感谢万年历了！</div>
+                        </div>
+                        <div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">杨女士:</div>
+							<div class="FeedbackContentRight">这是万年历独家的产品吗？目前确实没有看到别家有。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">姚女士:</div>
+							<div class="FeedbackContentRight">很准，又有趣！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">贺女士:</div>
+							<div class="FeedbackContentRight">我女儿的感情问题，我要给她找找问题。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">钟女士:</div>
+							<div class="FeedbackContentRight">我悄悄给我老公看了一下，的确就是这样子的。</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">潘女士:</div>
+							<div class="FeedbackContentRight">我的前世是才女，现在也是才女，赞！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">郝先生:</div>
+							<div class="FeedbackContentRight">很感谢这个测试，太准确了！</div>
+						</div>
+						<div class="marqueeItem feedbackItem">
+							<div class="FeedbackContentLeft">林女士:</div>
+							<div class="FeedbackContentRight">有点时光穿梭的宿命感，前世今生！仿佛看见了另一个自己。</div>
+						</div>
+                    </div>
+				</div>
+			</div>
+		</div>
+        <div class="copyright">Copyright © CALENDAR Tech. All Rights Reserved.</div>
+        <div class="iphoneXAdaptation"></div>
+		<div class="mask hidden"></div>
+		<div class="circleMask hidden">
+			<div class="circleMaskBackground"></div>
+			<div class="circleMaskContent"></div>
+			<div class="circleMaskImage"></div>
+		</div>
+		<div>
+            <div id="toast"></div>
+			<span id="toast1"></span>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="./static/city.js"></script>
+	<script type="text/javascript" src="./static/indexCity.js"></script>
+	<script type="text/javascript" src="./static/citypicker.js"></script>
+	<script type="text/javascript" src="./static/base64.min.js"></script>
+	<script type="text/javascript" src="./mobiscroll/mobiscroll-2.14.4-crack.js"></script>
+	<script type="text/javascript" src="./mobiscroll/mobiscroll.select.js"></script>
+	<script type="text/javascript" src="./mobiscroll/i18n/mobiscroll.i18n.zh.js"></script>
+	<script type="text/javascript" src="./mobiscroll/solar.js"></script>
+	<script type="text/javascript" src="./js/jquery.marquee.js"></script>
+	<script type="text/javascript" src='./js/index.js'></script>
+
+	<!--分享  -->
+	<script>
+		var title = '点这里！窥探你前世的秘密!';
+		var text = '揭晓前世之命，解开今生的结。';
+		var imageURL = 'https://qiniu.image.cq-wnl.com/content/20170905149cb5987b9a4c039d29dcf57a194d34.png';
+		var localUrl = 'https://mobile.51wnl.com/numberology/qsjs/index.html?userId=WNLUSERID&deviceId=OPENUDID&pushToken=PTOKEN&pToken=PTOKEN&mac=MAC&imei=IMEI&idfa=IDFA&channel=CHANNEL&posId=posId&boundId=BUNDLE';
+		var textObj = {
+			title: title,
+			text: title,
+			image: '0',
+			imageURL: imageURL,
+			url: localUrl,
+			pureText: text,
+			prefix: ""
+		};
+		var textObj1 = {
+			title: title,
+			text: text,
+			image: '0',
+			imageURL: imageURL,
+			targetUrl: localUrl,
+			perfix: ""
+		};
+
+		function appCallback_share() {
+			try {
+				if (window.ylwindow) {
+					ylwindow.reportHasShare(true);
+					location.href = "protocol://share:" + encodeURI(JSON.stringify(textObj1));
+				} else {
+					location.href = "protocol://share#" + encodeURI(JSON.stringify(textObj));
+				}
+			} catch (e) {}
+			return 1;
+		}
+
+	</script>
+</body>
+
+</html>

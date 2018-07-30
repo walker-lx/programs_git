@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>51万年历解锁你的童心</title>
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no" />
+  <!-- <script src="../static/vconsole.min.js"></script> -->
+</head>
+
+<body>
+  <audio src="./assets/bg.mp3" autoplay="autoplay" loop="loop" id="audio"></audio>
+  <audio src="./assets/music.mp3" class="hidden" id="qaudio"></audio>
+  <!-- <img src="https://qiniu.image.cq-wnl.com/Fiv961TOpGpEi6whlAEZMl79irJr" alt="" width="335" height="427">   -->
+  <!-- <img src="./assets/bg-1@3x.jpg" width="335" height="427"> -->
+  <div class="music_icon">
+    <img class="play rotate" src="./assets/music-on-icon@3x.png" width="30" height="30">
+    <img class="pause hidden" src="./assets/music-off-icon@3x.png" width="30" height="30">
+  </div>
+  <div id="index" class="hidden">
+    <!-- <div class="index_btn"></div> -->
+    <img src="./assets/btn1@3x.png" class="index_btn" alt="">
+    <div class="wnl_icon"></div>
+  </div>
+
+
+  <div id="question" class="hidden">
+    <div class="question">
+        <div class="q_title">第<span class="q_num"></span>题</div>
+        <div class="q_text"></div>
+        <div class="has_music hidden">
+            <div class="has_music_bg"></div>
+            <div class="has_music_text">点击播放声音</div>
+        </div>
+        <div class="has_img hidden"></div>
+    </div>
+    <div class="answer" id="answer">
+        <div class="a ans_text" data-num="0">
+            <div>A.<span id="a"></span></div>
+            <div class="answer_icon">
+                <img class="wrong hidden" src="./assets/mistake@3x.png" width="9" height="9">
+                <img class="right hidden" src="./assets/right@3x.png" width="13" height="9">                    
+            </div>
+        </div>
+        <div class="b ans_text" data-num="1">
+            <div>B.<span id="b"></span></div>
+            <div class="answer_icon">
+                <img class="wrong hidden" src="./assets/mistake@3x.png" width="9" height="9">
+                <img class="right hidden" src="./assets/right@3x.png" width="13" height="9">                    
+            </div>
+        </div>
+        <div class="c ans_text" data-num="2">
+            <div>C.<span id="c"></span></div>
+            <div class="answer_icon">
+                <img class="wrong hidden" src="./assets/mistake@3x.png" width="9" height="9">
+                <img class="right hidden" src="./assets/right@3x.png" width="13" height="9">                  
+            </div>
+        </div>
+        <div class="d ans_text" data-num="3">
+            <div>D.<span id="d"></span></div>
+            <div class="answer_icon">
+                <img class="wrong hidden" src="./assets/mistake@3x.png" width="9" height="9">
+                <img class="right hidden" src="./assets/right@3x.png" width="13" height="9">                    
+            </div>
+        </div>        
+    </div>
+    <div class="progress">
+        <span class="q_num"></span>/10
+    </div>
+    <div class="result_img" id="resultpage_img">
+            <!-- <div class="wnl_icon"></div>       -->
+            <img src="./assets/wnl-icon.png" class="wnl_icon" alt="">
+            <div class="title">
+                <span class="name">你</span>
+                <span class="text">的童心值</span>
+                <div class="score">
+                    <div class="scorenum">100</div>       
+                    <img class="scorebg" src="./assets/line.png">           
+                </div>
+            </div>
+            <div class="wz">
+              <div class="_bg">
+                  <img src="./assets/tianzige.png" alt="">
+                  <div class="_desc1">孩</div>
+              </div>
+              <div class="_bg">
+                    <img src="./assets/tianzige.png" alt="">
+                    <div class="_desc2">子</div>
+              </div>
+              <div class="_bg">
+                    <img src="./assets/tianzige.png" alt="">
+                    <div class="_desc3">王</div>
+              </div>
+            </div>
+            <div class="_text">正如你的童心宛若新生的嫩芽，时刻伴随在你内心中，仿佛是一种治愈的力量，给身边的人带来美好的存在。</div>
+            <div class="qr">
+                <!-- <div class="qrbg"></div> -->
+                <img src="./assets/QR.png" alt="" class="qrbg">
+                <div class="qrdesc1">识别二维码</div>          
+                <div class="qrdesc2">测出你的童心值</div>
+            </div>
+        </div>
+  </div>
+  <!-- 微信分享遮罩 -->
+<div class="wxsharemask hidden">
+    <img src="./assets/guide.png" alt="">
+</div>
+
+<!-- 结果页 -->
+<div class="resultpage hidden">
+        <div id="resultcontent">
+                <div class="detail hidden">
+                    <div class="result">
+                        <!-- <img id="relimg" alt=""> -->
+                        <!-- <img src="./assets/1111.jpg" class="qrmask"> -->
+                        <div class="wnl_icon"></div>
+                        <div class="result_title">
+                            <div class="title_text"><span id="name">你</span><span class="spantext">的童心值为</span></div>                
+                            <div class="title_score">
+                                <div id="score">100</div>
+                                <div class="scorebg"></div>
+                            </div>
+                        </div>
+                        <div class="result_desc">
+                            <div class="result_desc1 descbg">孩</div>
+                            <div class="result_desc2 descbg">子</div>
+                            <div class="result_desc3 descbg">王</div>            
+                        </div>
+                        <div class="result_text">正如你的童心宛若新生的嫩芽，时刻伴随在你内心中，仿佛是一种治愈的力量，给身边的人带来美好的存在。</div>
+                    </div>
+                    <div class="tip">长按图片可保存哦</div>        
+                    <div class="result_btn">
+                        <div class="share btn">分享记忆</div>
+                        <div class="again btn">再次回忆</div>
+                    </div>
+                </div>
+              </div>
+</div>
+<div class="relmask">
+    <!-- <img id="result_img" class="hidden" src="https://qiniu.image.cq-wnl.com/content/201805250d270cfc333e42698b457efe2e3900f9.jpg" alt=""> -->
+    <!-- <img id="result_img" class="hidden" src="https://qiniu.image.cq-wnl.com/Fiv961TOpGpEi6whlAEZMl79irJr" alt="">  -->
+    <img id="result_img" class="hidden" alt="">           
+</div>
+<div class="disclick hidden"></div>
+<div id="cnzz">
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1273778348'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1273778348' type='text/javascript'%3E%3C/script%3E")); // eslint-disable-line</script>    
+</div>
+</body>
+
+</html>

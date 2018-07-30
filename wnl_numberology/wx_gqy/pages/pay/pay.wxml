@@ -1,0 +1,12 @@
+<view class="container pay">
+  <view class="section">
+    <text class="name">支付项目：</text>
+    <text class="value">塔罗感情运势占卜</text>
+  </view>
+  <view class="section">
+    <text class="name">支付项目：</text>
+    <text class="value price">￥9.9</text>
+  </view>
+  <view class="btn-pay" bindtap="pay">立即支付</view>
+  <view class="btn-cancel" bindtap="navigateBack">取消支付</view>
+</view>

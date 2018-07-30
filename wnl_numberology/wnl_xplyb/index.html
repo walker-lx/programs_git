@@ -1,0 +1,216 @@
+<!DOCTYPE lang="en">
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+	/>
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="copyright" content="Copyright (c) 51wnl.com" />
+	<meta name="description" content="万年历" />
+	<meta name="keywords" content="万年历" />
+	<title>另一半</title>
+	<link rel="stylesheet" href="./mobiscroll/mobiscroll.custom-2.14.4.min.css">
+	<link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./static/indexCity.css">
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1263358839'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263358839' type='text/javascript'%3E%3C/script%3E"));</script>
+	<style type="text/css">
+		 #cnzz_stat_icon_1263358839 {
+	            display: none;
+	        }
+    </style>
+    <script type="text/javascript" src="./static/jquery-3.2.1.js"></script>
+
+</head>
+
+<body>
+	<script type="text/javascript" src='//mobile.51wnl.com/utils/wnlHistory/wnlHistoryPro-v2.js'></script>
+	<div class="index">
+		<div class="">
+			<div class="head-section">
+				<img src="./img/flower2.png" alt="" class="head-section-bg">
+			</div>
+			<div class="like-section">
+				<div class="test-avatar">
+					<img src="./img/user_img_1.png" alt="" class="user-icon">
+					<img src="./img/user_img_2.png" alt="" class="user-icon">
+					<img src="./img/user_img_3.png" alt="" class="user-icon">
+				</div>
+				<div class="test-number" id="test-number"></div>
+			</div>
+		</div>
+
+		<div class="layout">
+			<form action="" class="form">
+				<div class="set clearfix">
+					<div class="self-div">
+						<span class="self active">看自己</span>
+						<img src="./img/cut off rule-left.png">
+					</div>
+					<div class="other-div">
+						<span class="other">看他人</span>
+						<img src="./img/cut off rule.png">
+					</div>
+				</div>
+				<div class="form-item clearfix">
+					<label for="your_name" class="form-item-label" id="nameLabel">你的姓名</label>
+					<input class="input-inner input-name " placeholder="请输入姓名" type="text" name="name" id="your_name">
+					<div class="sex">
+						<div class="sex-female sex-on">
+							<img src="./img/female_icon.png" alt="" class="sex-icon">
+							<div class=" sex-type">女生</div>
+						</div>
+						<div class="sex-male">
+							<img src="./img/male_icon.png" alt="" class="sex-icon">
+							<div class=" sex-type">男生</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-item clearfix form-item-bord01">
+					<label for="birth_day_one" class="form-item-label">出生日期</label>
+					<div class="form-item-input">
+						<input class="input-inner" type="text" name="data" id="birth_day_one" placeholder="1990.01.01" readonly>
+					</div>
+				</div>
+				<div class="form-item clearfix">
+					<label for="birth_time_one" class="form-item-label">出生时间</label>
+					<div class="form-item-input">
+						<select id="birth_time_one" class="select-border">
+                            <option value="12:00:00">不清楚</option>
+                            <option value="0:30:00">00:00-00:59</option>
+                            <option value="1:30:00">01:00-01:59</option>
+                            <option value="2:30:00">02:00-02:59</option>
+                            <option value="3:30:00">03:00-03:59</option>
+                            <option value="4:30:00">04:00-04:59</option>
+                            <option value="5:30:00">05:00-05:59</option>
+                            <option value="6:30:00">06:00-06:59</option>
+                            <option value="7:30:00">07:00-07:59</option>
+                            <option value="8:30:00">08:00-08:59</option>
+                            <option value="9:30:00">09:00-09:59</option>
+                            <option value="10:30:00">10:00-10:59</option>
+                            <option value="11:30:00">11:00-11:59</option>
+                            <option value="12:30:00">12:00-12:59</option>
+                            <option value="13:30:00">13:00-13:59</option>
+                            <option value="14:30:00">14:00-14:59</option>
+                            <option value="15:30:00">15:00-15:59</option>
+                            <option value="16:30:00">16:00-16:59</option>
+                            <option value="17:30:00">17:00-17:59</option>
+                            <option value="18:30:00">18:00-18:59</option>
+                            <option value="19:30:00">19:00-19:59</option>
+                            <option value="20:30:00">20:00-20:59</option>
+                            <option value="21:30:00">21:00-21:59</option>
+                            <option value="22:30:00">22:00-22:59</option>
+                            <option value="23:30:00">23:00-23:59</option>
+                            </select>
+					</div>
+				</div>
+				<div class="form-item clearfix form-item-noBord">
+					<label for="expressArea" class="form-item-label">出生地点</label>
+					<div class="form-item-input form-item-input-place">
+						<textarea class="input-inner wnl_cityPicker" type="text" name="data" id="your_birth_place" readonly placeholder="请完善出生地点"></textarea>
+					</div>
+				</div>
+			</form>
+			<div>
+				<div class="tips">为什么要精确到出生时间 ＞</div>
+				<div class="prompt_explain">
+					<div class="close_img"></div>
+					<div class="explain_title">为什么需要精准的出生时间？</div>
+					<div class="explain_content">提供更为准确的时间，能够为您提供更加精准的结果预测。如不知道具体出生时间，可以选择“不清楚”，我们将为您调整和计算出合适的时间。</div>
+				</div>
+			</div>
+
+			<div class="submit order-submit begin_btn">查看感情报告</div>
+			<div class="comic">
+				<div class="comic-title">
+					<span>这份报告适合</span><span class="keywords">不将就</span><span>也</span><span class="keywords">不随便</span><span>的你</span>
+				</div>
+				<div class="comic-item">
+					<img src="./img/picture1.jpg" alt="" class="comic-item-img">
+					<p class="comic-item-content">别人都在着急我的恋爱，我不着急的原因是因为我不想随便找个人过日子</p>
+				</div>
+				<div class="comic-item">
+					<img src="./img/picture2.jpg" alt="" class="comic-item-img">
+					<p class="comic-item-content">如果我知道ta想要的是怎样的人，我就可以朝着那个方向努力</p>
+				</div>
+				<div class="comic-item">
+					<img src="./img/picture3.jpg" alt="" class="comic-item-img">
+					<p class="comic-item-content">我和ta的感情真的有结果吗？我可不想在一个没有结果的感情上浪费时间</p>
+				</div>
+				<div class="comic-item">
+					<img src="./img/picture4.jpg" alt="" class="comic-item-img">
+					<p class="comic-item-content">我是不是真的能嫁入豪门？</p>
+				</div>
+			</div>
+            <div class="submit order-submit begin_btn">查看感情报告</div>
+            <div class="iphoneXAdaptation"></div>
+		</div>
+		<div>
+			<div class="mask"></div>
+			<div class="loading"></div>
+			<div id="toast"></div>
+			<span id="toast1"></span>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./static/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="./js/base64.min.js"></script>
+	<script type="text/javascript" src="./mobiscroll/mobiscroll-2.14.4-crack.js"></script>
+	<script type="text/javascript" src="./mobiscroll/mobiscroll.select.js"></script>
+	<script type="text/javascript" src="./mobiscroll/i18n/mobiscroll.i18n.zh.js"></script>
+	<script type="text/javascript" src="./mobiscroll/solar.js"></script>
+	<script type="text/javascript" src='./city/city.js'></script>
+	<script type="text/javascript" src="./city/indexCity.js"></script>
+    <script type="text/javascript" src="./city/citypicker.js"></script>
+    <script type="text/javascript" src='./js/wnlui.js'></script>
+    <script type="text/javascript" src='./js/index.js'></script>
+	<script>
+		var title = "不用脱光也能脱单的秘密武器！";
+		var localUrl = location.href;
+		var text = "让我们不将就不随便地找到另一半吧！";
+		var imgUrl = "https://qiniu.image.cq-wnl.com/content/201707212059dbb1f67545d0b33d6b05e8dc0862.jpg";
+		var textObj = {
+			title: title,
+			text: title,
+			image: '0',
+			imageURL: imgUrl,
+			url: localUrl,
+			pureText: text,
+			prefix: ""
+		};
+		var textObj1 = {
+			title: title,
+			text: text,
+			image: '0',
+			imageURL: imgUrl,
+			targetUrl: localUrl,
+			perfix: ""
+		};
+		wnlShare.wxShare({
+		  title: '星盘另一半',
+		  text: '我在万年历看【星盘另一半】，分享给你，一起看吧！',
+		  imgUrl: imgUrl,
+		  imageUrl: imgUrl,
+		  url: localUrl
+		});
+
+		function appCallback_share() {
+			try {
+				if (window.ylwindow) {
+					ylwindow.reportHasShare(true);
+					location.href = "protocol://share:" + encodeURI(JSON.stringify(textObj1));
+				} else {
+					location.href = "protocol://share#" + encodeURI(JSON.stringify(textObj));
+				}
+			} catch (e) {}
+			return 1;
+		}
+
+	</script>
+</body>
+
+</html>

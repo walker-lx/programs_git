@@ -1,0 +1,130 @@
+@import '../css/base.scss';
+.content {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F0F6EA;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 56px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    .history_list {
+        margin: 0 10px;
+        .listitem {
+            position: relative;
+            // padding-top: 15px;
+            border: 2px solid #B8C494;
+            margin-bottom: 15px;
+            background-color: #fff;
+            .monthtitle {
+                margin: 15px 0 0 26px;
+                color: #3B4A12;
+                font-size: 20px;
+                font-family: 'font';
+            }
+            .line {
+                height: 1px;
+                background-color: #B8C494;
+                margin: 8px 5px 0;
+            }
+            .monthicon {
+                color: #615A50;
+                margin: 20px 0 0 20px;
+                font-size: 17px;
+                .aq, .sy, .cf {
+                    display: flex;
+                    align-items: center;
+                }
+                .aq, .sy {
+                    margin-bottom: 15px;                    
+                }
+                .monthluck_zy_aq_icon1, .monthluck_zy_sy_icon1, .monthluck_zy_cf_icon1 {
+                    margin-left: 10px;
+                }
+                .monthluck_zy_aq_icon1, .monthluck_zy_aq_icon2, .monthluck_zy_aq_icon3, .monthluck_zy_aq_icon4, .monthluck_zy_aq_icon5 {
+                    background-image: url('../img/smls_home_love_dis_icon@3x.png');
+                    &.actaq {
+                        background-image: url('../img/smls_home_love_nor_icon@3x.png') !important;
+                        background-size: 100% 100%;                    
+                    }
+                }
+                .monthluck_zy_sy_icon1, .monthluck_zy_sy_icon2, .monthluck_zy_sy_icon3, .monthluck_zy_sy_icon4, .monthluck_zy_sy_icon5 {
+                    background-image: url('../img/smls_home_work_dis_icon@3x.png');
+                    &.actsy {
+                        background-image: url('../img/smls_home_work_nor_icon@3x.png') !important;
+                        background-size: 100% 100%;                    
+                    }
+                }
+                .monthluck_zy_cf_icon1, .monthluck_zy_cf_icon2, .monthluck_zy_cf_icon3, .monthluck_zy_cf_icon4, .monthluck_zy_cf_icon5 {
+                    background-image: url('../img/smls_home_money_dis_icon@3x.png');
+                    &.actcf {
+                        background-image: url('../img/smls_home_money_nor_icon@3x.png') !important;
+                        background-size: 100% 100%;
+                    }
+                }
+                .icon {
+                    width: 15px;
+                    height: 15px;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    margin-right: 5px;
+                }
+            }
+            .monthdesc {
+                color: #615A50;
+                margin: 20px 25px;
+                text-align: justify;
+                font-size: 16px;
+                line-height: 1.5;
+                text-indent: 1em;
+            }
+            ._line {
+                height: 1px;
+                background-color: #B8C494;
+                margin: 0 5px;
+            }
+            .kyzn {
+                margin: 15px 25px;
+                .kyzntitle {
+                    color: #3B4A12;
+                    font-size: 20px;
+                    font-family: 'font';
+                }
+                .kyzndesc {
+                    text-indent: 1em;
+                    color: #615A50;
+                    margin: 10px auto 30px;
+                    text-align: justify;
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+// .actaq {
+//     background-image: url('../img/smls_home_love_nor_icon@3x.png') !important;
+//     // background-size: 100% 100%;                    
+// }
+// .actsy {
+//     background-image: url('../img/smls_home_love_nor_icon@3x.png') !important;
+//     // background-size: 100% 100%;                    
+// }
+// .actcf {
+//     background-image: url('../img/smls_home_money_nor_icon@3x.png') !important;
+//     // background-size: 100% 100%;
+// }.actaq {
+//     background-image: url('../img/smls_home_love_nor_icon@3x.png') !important;
+//     // background-size: 100% 100%;                    
+// }
+// .actsy {
+//     background-image: url('../img/smls_home_love_nor_icon@3x.png') !important;
+//     // background-size: 100% 100%;                    
+// }
+// .actcf {
+//     background-image: url('../img/smls_home_money_nor_icon@3x.png') !important;
+//     // background-size: 100% 100%;
+// }
+.hidden {
+    display: none !important;
+}

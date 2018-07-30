@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="stylesheet" href="./assets/reset.css">
+    <link rel="stylesheet" href="./assets/wnlui.css">
+    <link rel="stylesheet" href="./assets/swiper.min.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <script src="./utils/jquery.min.js"></script>
+    <script src="./utils/swiper.min.js"></script>
+    <script src="./utils/wnlui.js"></script>    
+    <title>新春祝福</title>
+    <!-- <script src="./utils/vconsole.min.js"></script> -->
+</head>
+
+<body>
+    <div class="content">
+        <div class="rel hidden">
+            <div class="pic">
+                <img id="img" alt="" class="img">
+                <!-- <div id="img"></div> -->
+            </div>
+        </div>
+        <canvas id="canvas"></canvas>        
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide cardstyle" id="card1">
+                    <div class="scrollarea">
+                        <div class="cardtop top1"></div>
+                        <div class="cardtext center1">
+                            <textarea id="text1" class="text1 text" maxlength="1000"></textarea>
+                        </div>
+                        <div class="cardbottom bottom1"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide cardstyle" id="card2">
+                    <div class="scrollarea">
+                        <div class="cardtop top2"></div>
+                        <div class="cardtext center2">
+                            <textarea id="text2" class="text2 text" maxlength="1000"></textarea>
+                        </div>
+                        <!-- <div class="cardbottom bottom2"></div>                                  -->
+                    </div>
+                </div>
+                <div class="swiper-slide cardstyle" id="card3">
+                    <div class="scrollarea">
+                        <div class="cardtop top3"></div>
+                        <div class="cardtext center3">
+                            <textarea id="text3" class="text3 text" maxlength="1000"></textarea>
+                        </div>
+                        <div class="cardbottom bottom3"></div>
+                    </div>                 
+                </div>                        
+            </div>
+        </div>
+        <div class="tip">点击文字可进行编辑</div>
+        <div class="finish">完成</div>
+        <div class="longpress hidden">长按可保存图片哦~</div>
+    </div>
+</body>
+<script src="./utils/autosize.js"></script>
+<script>
+        function getParam(name, url) { // 获取地址栏参数
+            if (typeof name !== 'string') return false
+            if (!url) url = window.location.href
+            name = name.replace(/[\[\]]/g, '\\$&')
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
+            var results = regex.exec(url)
+            if (!results) return null
+            if (!results[2]) return ''
+            return decodeURIComponent(results[2].replace(/\+/g, ' '))
+        }
+        function toast(text, ms) {
+            if (!text) {
+                return false
+            }
+            var dom = $('<div class="public_toast">' + text + '</div>')
+            var ms = ms || 1500
+            $('body').append(dom)
+            setTimeout(function () {
+                dom.addClass('public_toast_show')
+            }, 10)
+            setTimeout(function () {
+                dom.removeClass('public_toast_show')
+                dom.on('webkitTransitionEnd', function () {
+                    dom.remove()
+                })
+            }, ms)
+        }
+        var index = 1
+        var editText
+        if (getParam('val')) {
+            editText = getParam('val')
+            $('.text').html(editText)
+        }
+        // $('.text').html('aa')
+        var certifySwiper = new Swiper('.swiper-container', {
+            watchSlidesProgress: true,
+            loop: true,
+            continuous: true,
+            disableScroll: true,
+            spaceBetween: 15,
+            slidesPerView: 'auto',
+            initialSlide: 0,
+            centeredSlides: true,
+            onSlideChangeEnd: function (swiperHere) {
+                // console.log(swiperHere.activeIndex % 3)
+                // console.log($('.swiper-slide-active textarea').attr('class'))
+                $('.swiper-slide').css({ 'overflow': 'hidden', 'borderRadius': '8px'})
+                $('.swiper-slide .scrollarea').css({'height': (document.body.offsetWidth - 50) * (1329 / 975)})
+                $('.swiper-slide-prev, .swiper-slide-next').css('boxShadow', '0 0 0 0 rgba(71, 42, 42, 0)')         
+                $('.swiper-slide-active .scrollarea').css({'overflowY': 'scroll', 'height': '100%'})
+                $('.swiper-slide-active').css('boxShadow', '0 6px 10px 0 rgba(71, 42, 42, 0.4)')
+                // $('.swiper-slide-active').css({ 'overflowY': 'scroll'})                                                                                                      
+                autosize($('.swiper-slide-active textarea'))
+                index = $('.swiper-slide-active textarea').attr('class').slice(4, 5)
+                editText = $('.text' + index).val()
+                $('.text' + index).bind('input', function () {
+                    // editText = $(this).val()
+                    if ($(this).val().trim().length >= 1000) {
+                        toast('不能再输入更多了！')
+                    }
+                    editText = $(this).val().trim().length >= 1000 ? $(this).val().trim().slice(0, 1000) : $(this).val().trim()                    
+                    $('textarea').html(editText)
+                    // console.log(editText)
+                })
+            },
+            onProgress: function (swiper, progress) {
+                for (i = 0; i < swiper.slides.length; i++) {
+                    var slide = swiper.slides.eq(i);
+                    var slideProgress = swiper.slides[i].progress;
+                    if (Math.abs(slideProgress) > 1) {
+                        modify = (Math.abs(slideProgress) - 1) * 0.1;
+                    }
+                    var translate = slideProgress * modify * ((document.body.offsetWidth - 50) / 2) + 'px';
+                    var scale = 1 - Math.abs(slideProgress) / 12;
+                    var zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                    slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                    slide.css('zIndex', zIndex);
+                    slide.css('opacity', 1);
+                    if (Math.abs(slideProgress) > 3) {
+                        slide.css('opacity', 0);
+                    }
+                }
+            }
+        })
+</script>
+<script src="./js/card.js"></script>
+</html>

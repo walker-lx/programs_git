@@ -1,0 +1,22 @@
+<view class='content {{ stopscroll ? "fixed" : "" }}'>
+	<view class='content_box'>
+		<view class='edittip'>添加新用户</view>
+		<view class='info'>
+			<view class='name'>
+				<text class='nametext'>姓名</text>
+				<input class='nameinput {{ finish }}' value='{{ name }}' placeholder='请输入姓名' placeholder-class='placehodler' bindinput='getname'></input>
+			</view>
+			<view class='line'></view>
+			<view class='birth' bindtap='openDatePicker'>
+				<text class='birthtext'>出生日期</text>
+				<view class='birthdate {{ finish1 }}'>{{ birth }}</view>
+				<view class='birthicon'></view>
+			</view>		
+		</view>
+	</view>
+</view>
+<view class='qdbtn'>
+	<view class='qdbtn_text' bindtap='comfirm' bindtouchstart='addclick1' bindtouchmove='removeaddclick1' bindtouchend='removeaddclick1'>确定<view class='{{ clickstyle }}'></view></view>
+</view>
+<date-picker datePickerMode="{{datePickerMode}}" bind:dateSelectConfirm="getDateInfo" isSolar="{{isSolar}}"></date-picker>
+<view class='toast {{ isactive ? "active" : "" }}'>{{ toasttext }}</view>

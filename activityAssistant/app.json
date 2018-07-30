@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/activityEditend/activityEditend",
+    "pages/costshare/costshare",
+    "pages/createinfo/createinfo",
+    "pages/activityEdit/activityEdit",  
+    "pages/addspend/addspend",
+    "pages/activityspend/activityspend",  
+    "pages/userlist/userlist",
+    "pages/activityDetails/activityDetails",
+    "pages/form/form"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

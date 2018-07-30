@@ -1,0 +1,152 @@
+body,html{
+    font-family: -apple-system, "苹方-简", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", sans-serif;
+}
+body{
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust:none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-focus-ring-color:  rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: #fff9f1;
+}
+.hidden{
+    display: none !important;
+}
+.payContent{
+    margin: 15px;
+    padding-bottom: 20px;
+    border-radius: 6px;
+    background-image: url("img/pop-box-lt@2x.png"),url("img/pop-box-rt@2x.png"),url("img/pop-box-lb@2x.png"),url("img/pop-box-rb@2x.png"),
+    url("img/pop-box-ti@2x.png"),url("img/pop-box-li@2x.png"),url("img/pop-box-ri@2x.png"),url("img/pop-box-bi@2x.png");
+    background-position: left top,right top,left bottom,right bottom,left top,left top,right top,left bottom;
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,repeat-x,repeat-y,repeat-y,repeat-x;
+    background-size: 20px 20px,20px 20px,20px 20px,20px 20px,1px 19px,20px 1px,20px 1px,1px 20px;
+    background-color: #fff9f1;
+}
+.zhifuContent,.jifenCount,.introContent{
+    margin: 0 2px;
+    padding: 20px 18px 18px;
+    border-bottom: 1px solid #F9D4AD;
+}
+.zhifuTxt {
+    font-size: 18px;
+    color: #111111;
+}
+.zhifuCount,.payedCount {
+    font-size: 18px;
+    color: #d93448;
+    padding-left: 5px;
+}
+.zhifuCount.jifen{
+    color: #999999;
+    text-decoration: line-through;
+}
+.jifenCount{
+    font-size: 0;
+}
+.jifenCount>div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.selectIcon{
+    width: 15px;
+    height: 15px;
+    background-image: url("img/select-sex-icon-normal@2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+}
+.selectIcon.active{
+    background-image: url("img/select-sex-icon-active@2x.png");
+}
+.jifenCount.none .selectIcon{
+    background-image: url("img/select-sex-icon-normal@2x.png");
+}
+.jifenTxt{
+    margin-left: 10px;
+    font-size: 15px;
+    color: #666666;
+}
+.redJinfenNum{
+    color: #d93448;
+}
+.introTitle {
+    font-size: 15px;
+    color: #111111;
+}
+.wxConfirmBtn,.zfbConfirmBtn{
+    display: block;
+    position: relative;
+    margin: 15px 20px 0;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.wxConfirmBtn{
+    background-color: #15b64d;
+}
+.zfbConfirmBtn{
+    background-color: #01a0eb;
+}
+.zhifuIcon {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+.zhifuIcon.wx{
+    background-image: url("img/pop-box-wx-logo@2x.png");
+}
+.zhifuIcon.zfb{
+    background-image: url("img/pop-box-zfb-logo@2x.png");
+}
+.zhifuArrow {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    width: 7px;
+    height: 100%;
+    margin-right: 15px;
+    background-image: url("img/pop-box-more-arrow@2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 7px 12px;
+}
+.loginLink{
+    display: block;
+    text-decoration: underline;
+    text-align: center;
+    margin: 15px 20px 0;
+    font-size: 13px;
+    color: #666666;
+}
+.zhifuSongTipTxt{
+    display: block;
+    text-align: center;
+    margin: 15px 20px 0;
+    font-size: 13px;
+    color: #666666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+.content {
+	height: 100vh;
+	background-color: #F0F6EA;	
+	overflow: hidden;
+}
+.content_box {
+	height: 100%;
+	padding-bottom: 112rpx;	
+	 padding-top: 40rpx; 
+	 box-sizing: border-box;
+	 overflow: scroll;
+	 -webkit-overflow-scrolling: touch;
+}
+.box_item {
+	position: relative;
+	margin: 0 20rpx 40rpx;
+	border: 2px solid #B8C494;
+	padding-bottom: 60rpx;
+	background-color: #fff;
+}
+.box_content {
+	margin: 30rpx 10rpx 0;
+}
+.date {
+	color: #3B4A12;
+	margin-left: 52rpx;
+	 font-family: 'font'; 
+	font-size: 40rpx;
+}
+.box_line1, .box_line2 {
+	height: 1px;
+	background-color: #B8C494;
+	margin: 16rpx 0 40rpx;
+}
+.box_line2 {
+	margin-top: 40rpx;
+}
+.aq, .sy, .cf {
+	display: flex;
+	align-items: center;
+	color: #615A50;
+	margin-left: 50rpx;
+	font-size: 34rpx;
+}
+.sy, .cf {
+	margin-top: 30rpx;
+}
+.lucktext, .kyzn_text {
+	color: #615A50;
+	margin: 40rpx 50rpx 0;
+	text-indent: 1em;
+	line-height: 1.5;	
+	font-size: 32rpx;
+}
+.kyzn_title {
+	font-family: 'font';
+	color: #3B4A12;
+	margin: 30rpx 0 0 50rpx;
+	font-size: 40rpx;
+}
+.aq_text, .cf_text, .sy_text {
+	margin-right: 20rpx;
+}
+.by_aq_icon, .by_sy_icon, .by_cf_icon, .by_aq_noicon, .by_sy_noicon, .by_cf_noicon {
+	width: 30rpx;
+	height: 30rpx;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-right: 10rpx;
+}
+/* .by_aq_icon:first-of-type, .by_sy_icon:first-of-type, .by_cf_icon:first-of-type {
+	margin-left: 20rpx;
+} */
+/* .by_aq_noicon, .by_sy_noicon {
+	width: 15px;
+	height: 14px;
+} */
+.by_aq_icon {
+	background-image: url('https://qiniu.image.cq-wnl.com/content/201804285021654852ac4f86aaf9d23286077fac.png');
+}
+.by_sy_icon {
+	background-image: url('https://qiniu.image.cq-wnl.com/content/201804282eecbfb780ce411788c68a4a7b7834dc.png')
+}
+.by_cf_icon {
+	background-image: url('https://qiniu.image.cq-wnl.com/content/201804285c7749f30ac04d94b2e629dfe1c1ae9f.png')
+}
+.by_aq_noicon {
+	background-image: url('https://qiniu.image.cq-wnl.com/content/2018042360c6ff9805f94be6a5c81c18f1c23f02.png');
+}
+.by_sy_noicon {
+	background-image: url('https://qiniu.image.cq-wnl.com/content/20180423bf3b7601b2d1435288d5cba98795a67b.png');
+}
+.by_cf_noicon {
+	background-image: url('https://qiniu.image.cq-wnl.com/content/201804236eba28e37b264db180f654aa1ede0a33.png');
+}
+

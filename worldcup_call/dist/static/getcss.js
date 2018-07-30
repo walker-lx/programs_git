@@ -1,0 +1,1 @@
+export default function getTransform(el) { var results = $(el).css('-webkit-transform').match(/matrix(?:(3d)\(\d+(?:, \d+)*(?:, (\d+))(?:, (\d+))(?:, (\d+)), \d+\)|\(\d+(?:, \d+)*(?:, (\d+))(?:, (\d+))\))/); if(!results) return [0, 0, 0]; if(results[1] == '3d') return results.slice(2,5); results.push(0); return results.slice(5, 8);}

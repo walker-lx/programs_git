@@ -1,0 +1,32 @@
+<!--pages/users.wxml-->
+<view class='content'>
+	<view class='nouser' wx:if="{{ nousershow }}">
+		<image src='https://qiniu.image.cq-wnl.com/content/20180427e935db3c23e6473abc9d0f4d4f7fad77.png'></image>
+		<view class='nouser_tip'>暂无用户信息</view>
+	</view>
+	<view class='userslist'>
+		<view class='item {{ item.isclick ? "click" : "" }}' id='{{ item.id }}' wx:for="{{ userlist }}" wx:key="{{ item.id }}">
+			<view class='item_top' data-id='{{ item.id }}' data-name='{{ item.name }}' data-birth='{{ item.glBirthDay }}' data-orderid='{{ item.orderID }}' bindtap='backIndex'>
+				<view class='name'>{{ item.name }}</view>
+				<view class='birth'>{{ item.glBirthDay }}</view>	
+			</view>
+			<view class='line'></view>
+			<view class='item_bottom'>
+				<view class='bottom_content'>
+					<view class='edit' data-name='{{ item.name }}' data-birth='{{ item.glBirthDay }}' bindtouchstart='edit' data-orderid='{{ item.orderID }}' data-ispay='{{ ispay }}'>
+						<image class='edit_icon' src='https://qiniu.image.cq-wnl.com/content/20180425c2a5f11ff8044a9abb36c7801ea086dd.png'></image>
+						<view class='edit_text'>编辑</view>			
+					</view>
+					<view class='del' bindtouchstart='del' data-orderid='{{ item.orderID }}' data-ispay='{{ ispay }}'>
+						<image class='del_icon' src='https://qiniu.image.cq-wnl.com/content/201804253375cd9696a847f9b65b0f960d5a4a88.png'></image>
+						<view class='del_text'>删除</view>				
+					</view>
+				</view>
+			</view>		
+		</view>
+	</view>
+</view>
+<view class='addbtn' bindtap='add'>
+	<view class='addbtn_text' bindtouchstart='addclick1' bindtouchmove='removeaddclick1' bindtouchend='removeaddclick1'>添加新用户<view class='{{ clickstyle }}'></view></view>
+</view>
+<view class='toast {{ isactive ? "active" : "" }}'>{{ toasttext }}</view>

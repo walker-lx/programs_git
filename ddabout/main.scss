@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 16px;  
+    box-sizing:border-box;
+    width: 100%;    
+    height: 100%; 
+    overflow: auto;
+    -webkit-overflow-scrolling:touch; 
+    overflow-y: scroll;    
+    -webkit-text-size-adjust:none;    
+    font-family: -apple-system, "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+.top {
+    $color: #333333;
+    text-align: center;
+    .ddicon {
+        width: 100%;
+        height: 100px;
+        background-image: url('../img/diandi-icon.jpg');
+        background-repeat: no-repeat;
+        background-size: 100px 100px;
+        background-position: center;
+        margin-top: 59.5px;
+    }
+    .version {
+        color: $color;
+        font-size: 13px;
+    }
+    .desc {
+        color: $color;        
+        font-size: 20px;
+        margin-top: 34px;
+    }
+}
+
+.contact {
+    margin-top: 60px;
+    font-size: 15px;
+    a {
+        display: block;
+        height: 44.5px;
+        line-height: 44.5px;
+        border-top: 0.5px solid #eaeaea;
+        padding-right: 15px;
+        padding-left: 15px;
+        color: #333333;
+        background-color: #f6f6f6;
+    }
+    .url {
+        float: right;
+        color: #888888;
+    }
+    .name {
+        margin-left: 25px;
+    }
+    .wx {
+        background: url('../img/about-binding-wechat-icon@2x.png') no-repeat;
+        background-position: 15px;
+        background-size: 15px 15px;
+    }
+    .mail {
+        background: url('../img/aboutus-mail-icon@2x.png') no-repeat;
+        background-position: 15px;
+        background-size: 15px 15px;
+    }
+    .qq {
+        border-bottom: 0.5px solid #eaeaea;
+        background: url('../img/binding-qq-icon@2x.png') no-repeat;
+        background-position: 15px;
+        background-size: 15px 15px;
+    }
+}
+

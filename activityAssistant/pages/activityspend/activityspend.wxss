@@ -1,0 +1,222 @@
+/* pages/activityspend/activityspend.wxss */
+page {
+  min-height: 100%;
+  background-color: #fff;
+}
+.content {
+  padding-bottom: 110rpx;
+}
+.top {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000000;
+}
+.title {
+  text-align: center;
+  font-size: 34rpx;
+  color: #333;
+  margin-top: 15.2rpx;
+}
+.tip {
+  text-align: center;
+  font-size: 50rpx;
+  color: #999;
+  margin-top: 448rpx;
+}
+.addspend {
+  position: fixed; 
+  font-size: 30rpx;
+  width: 110rpx;
+  height: 110rpx;
+  right: 30rpx;
+  bottom: 120rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #ffc42f;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  box-shadow: 0 4rpx 10rpx 0 rgba(255, 196, 47, 0.5);
+  z-index: 10000010;
+} 
+.addtext {
+  margin-top: 16rpx;
+}
+/*有内容  */
+.totalimg {
+  top: 36rpx;
+  display: block;
+  width: 162rpx;
+  height: 50rpx;
+  margin: 36rpx auto;
+}
+.totalspend {
+  position: relative;
+  text-align: center;
+}
+.spendedit, .cancel, .confirm {
+  position: absolute;
+  right: 30rpx;
+  top: -4rpx;
+  width: 118rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  text-align: center;
+  color: #ffc42f;
+  border: 1rpx solid #ffc42f;
+  border-radius: 31.2rpx;
+  font-size: 30rpx;
+}
+.cancel {
+  left: 30rpx;
+}
+.line {
+  width: 100%;
+  height: 20rpx;
+  background-color: #f6f6f6;
+  margin-top: 36rpx;
+}
+.spendlist {
+  display: flex;
+  margin-top: 30rpx; 
+  font-size: 30rpx;
+  color: #999;
+}
+.spenditem {
+  flex: 1;
+  text-align: center;
+}
+.itemlist {
+   padding-top: 410rpx;        
+}
+.userspendlist {
+  display: flex;
+  height: 44rpx;
+  align-items: center;
+  margin-top: 52rpx;
+  font-size: 30rpx;
+  z-index: 97;
+}
+.useritem {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  text-overflow: -o-ellipsis-lastline;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical; 
+}
+.userorder, .username {
+  text-overflow: -o-ellipsis-lastline;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical; 
+  z-index: 9999;
+}
+.username {
+  width: 100rpx;
+  text-align: center;
+  margin-left: 75rpx;
+  text-overflow: -o-ellipsis-lastline;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical; 
+}
+.delete {
+  display: block;
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 30rpx;
+}
+.userorder {
+  position: absolute;
+  left: 30rpx;
+  top: 4rpx; 
+}
+.itemline {
+  width: calc(100vw - 60rpx);
+  margin: 30rpx auto 0; 
+  height: 1rpx;
+  background-color: #eaeaea;
+  transform: scaleY(0.5);
+}
+.cal {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #fff;
+  background-color: #ffc42f;
+  font-size: 34rpx;
+  z-index: 2000000;
+}
+.spendmask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2000000;
+}
+.maskcont {
+  position: fixed;
+  width: 550rpx;
+  height: 484rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  top: 137rpx;  
+  left: calc(50% - 275rpx); 
+  z-index: 2000001;
+}
+.title {
+  text-align: center;
+  font-size: 34rpx;
+}
+.title image {
+  position: absolute;
+  width: 26rpx;
+  height: 26rpx;
+  right: 32rpx;
+  top: 20rpx;
+}
+.input {
+  width: 330rpx;
+  height: 100rpx;
+  margin: 80rpx auto 0;
+  border: 1rpx solid #eaeaea;
+}
+.input input {
+  height: 100%;
+  line-height: 100rpx;
+  margin-left: 30rpx;
+}
+.avg {
+  text-align: center;
+  font-size: 34rpx;
+  margin-top: 44rpx;
+}
+.showcount {
+  color: #999;
+}
+.btn {
+  width: 330rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  margin: 56rpx auto 0;
+  color: #fff;
+  background-color: #ffc42f;
+}

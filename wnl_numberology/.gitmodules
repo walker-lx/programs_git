@@ -1,0 +1,9 @@
+[submodule "in-view"]
+	path = in-view
+	url = https://github.com/camwiegert/in-view.git
+[submodule "wnl_utils"]
+	path = wnl_utils
+	url = http://guojinhai@192.168.1.80:8080/r/~guojinhai/wnl_utils.git
+[submodule "wnlui_html"]
+	path = wnlui_html
+	url = http://guojinhai@192.168.1.80:8080/r/~guojinhai/wnlui_html.git

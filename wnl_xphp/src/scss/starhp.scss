@@ -1,0 +1,75 @@
+.star-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  .header-content {
+    position: relative;
+    min-height: 3.2288rem;
+    margin: .41rem .2rem 0 .2rem;
+    .avator1 {
+      position: absolute;
+      top: 41%;
+      left: 10.5%;
+      height: 1.4rem;
+      width: 1.4rem;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .avator2 {
+      position: absolute;
+      top: 41%;
+      right: 10.5%;
+      height: 1.4rem;
+      width: 1.4rem;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+  .main-content {
+    margin: 0.36rem 0.2rem 0 0.2rem;
+    min-height: 3.36rem;
+    background-size: 100% 100%;
+    overflow: hidden;
+    .star-warp {
+      margin: 0.62rem 0.07rem 0.53rem 0.57rem;
+      overflow: auto;
+      .star-item {
+        width: 1.72rem;
+        height: 2.29rem;
+        float: left;
+        margin: 0 0.41rem .49rem 0;
+        img {
+          border-radius: 50%;
+        }
+        .star-name {
+          margin-top: 0.23rem;
+          font-size: 17px;
+          color:#fff;
+          text-align: center;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow:ellipsis;
+          @media screen and (min-width: 320px) and (max-width: 359px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .getMore,.flodList {
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+  }
+  .btn {
+    width: 2.58rem;
+    margin: 0.4rem auto 0.4rem auto;
+  }
+}

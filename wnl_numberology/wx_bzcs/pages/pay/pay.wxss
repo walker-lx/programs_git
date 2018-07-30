@@ -1,0 +1,60 @@
+/* pages/pay/pay.wxss */
+.moneyIcon {
+  margin: 0 auto;
+  text-align: center;
+}
+.shape{
+  margin: 100rpx auto;
+  width: 186rpx;
+  height: 186rpx;
+  padding: 43rpx 54rpx;
+  box-sizing: border-box;
+  background-color: #ffcf4d;
+  border-radius: 100%;
+}
+.orderName{
+  width: 750rpx;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 100rpx;
+}
+button[type="primary"] {
+  color: #fff;
+  background-color: #ff9447;
+  border-radius: 28rpx;
+}
+button::after {
+  border: 0 none;
+}
+.button-hover[type="primary"] {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #f26d0e;
+  border-radius: 28rpx;
+}
+
+.payBtn{
+  margin: 0 auto;
+  width: 690rpx;
+  height: 100rpx;
+  border-radius: 28rpx;
+  background-color: #ff9447;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 0.8;
+  text-align: center;
+  color: #ffffff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.cancelPay{
+  width: 750rpx;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  color: #999999;
+  margin-top: 60rpx;
+}

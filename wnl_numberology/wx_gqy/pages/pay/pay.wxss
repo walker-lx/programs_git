@@ -1,0 +1,40 @@
+/* pages/pay/pay.wxss */
+
+.pay {
+  background-color: #fbd6ff;
+}
+
+.section {
+  background-color: #fff1fe;
+  font-size: 36rpx;
+  letter-spacing: 1.4rpx;
+  text-align: left;
+  color: #5b555b;
+  padding: 30rpx 0 30rpx 50rpx;
+}
+
+.section:first-child {
+  border-bottom: 1rpx solid #f0e4f1;
+}
+
+.price {
+  color: #e250c1;
+}
+
+.btn-pay, .btn-cancel {
+  border-radius: 12rpx;
+  background-color: #e250c1;
+  font-size: 32rpx;
+  letter-spacing: 1.3px;
+  text-align: center;
+  color: #fefefe;
+  padding: 25rpx 0;
+  margin: 0 30rpx;
+  margin-top: 30rpx;
+}
+
+.btn-cancel {
+  border: solid 2rpx #e250c1;
+  background-color: #fbd6ff;
+  color: #e250c1;
+}

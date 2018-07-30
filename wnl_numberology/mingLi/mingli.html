@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>在线命理</title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=320px, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=1.0">
+    <script type="text/javascript" src="js/jquery-fastclick.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body class="indexMain">
+    <!--<div class="wnlBanner">
+        <a class="closeBanner" href="javascript:void(0)"></a>
+        <div class="wnllogo"></div>
+        <div class="ad-title">
+            <div class="ad-t1">万年历</div>
+            <div class="ad-t2">查看更多命理测算</div>
+        </div>
+        <a class="downloadBtn" href="javascript:void(0)">打开APP</a>
+    </div>-->
+    <div style="color:crimson;font-size:25px;text-align:center;margin-top:20px;">在线命理</div>
+    <div class="main index">
+       <div class="mainContent indexMainContent">
+           <a class="zeji" href="zeji.html">
+               <div class="projectImg"></div>
+               <div class="placeHolder"></div>
+               <div class="textContent">
+                   <div class="textLine1">
+                       <span class="text">乔迁择日</span>
+                       <span class="text">出行动身</span>
+                   </div>
+                   <div class="textLine2">
+                       <span class="text">公司开张</span>
+                       <span class="text">择吉结婚</span>
+                   </div>
+               </div>
+               <div class="arrowContent"></div>
+           </a>
+           <a class="ziwei" href="ziwei.html">
+               <div class="projectImg"></div>
+               <div class="placeHolder"></div>
+               <div class="textContent">
+                   <div class="textLine1">
+                       <span class="text">紫微问事</span>
+                       <span class="text">紫微全命</span>
+                   </div>
+                   <div class="textLine2">
+                       <span class="text">紫微精装</span>
+                   </div>
+               </div>
+               <div class="arrowContent"></div>
+           </a>
+           <a class="bazi" href="bazi.html">
+               <div class="projectImg"></div>
+               <div class="placeHolder"></div>
+               <div class="textContent">
+                   <div class="textLine1">
+                       <span class="text text1">投资</span>
+                       <span class="text text1">事业</span>
+                       <span class="text text1">姻缘</span>
+                       <span class="text text1">财运</span>
+                   </div>
+                   <div class="textLine2">
+                       <span class="text text1">考学</span>
+                       <span class="text text1">合作</span>
+                       <span class="text text1">健康</span>
+                       <span class="text text1">出行</span>
+                   </div>
+               </div>
+               <div class="arrowContent"></div>
+           </a>
+           <a class="ordersLink" href="orders.html">
+               我的订单
+           </a>
+       </div>
+        <div class="otherInfo">
+            <div class="txtTip">
+                注: 在线命理为人工有偿测算服务，由易奇文化提供服务支持。
+            </div>
+            <div class="contactInfo">
+                <div>QQ: 1254836806</div>
+                <div> 邮箱: 1254836806@qq.com</div>
+                <div style="color:crimson">重庆哎呦科技有限公司</div>
+                <div style="color:crimson">渝ICP备13001476号-2</div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <script>
+        var title="万年历的在线命理很准的哦，小伙伴们也快来试一下";
+        var textObj = {
+            text: title,
+            image: "1",
+            url:location.href,
+            pureText:title,
+            prefix:""
+        };
+        var textObj1={
+            text: title,
+            image: "1",
+            targetUrl:location.href,
+            perfix:""
+        };
+        function appCallback_share(){
+            try{
+                if(window.ylwindow){
+                    ylwindow.reportHasShare(true);
+                    location.href="protocol://share:" + encodeURI(JSON.stringify(textObj1));
+                }
+                else{
+                    location.href="protocol://share#" + encodeURI(JSON.stringify(textObj));
+                }
+            }
+            catch (e){}
+            return 1;
+        }
+    </script>
+</body>
+</html>

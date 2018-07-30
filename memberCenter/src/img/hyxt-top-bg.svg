@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360px" height="80px" viewBox="0 0 360 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>hyxt-top-bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pic" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hyxt-top-bg" fill="#D03F3F">
+            <path d="M0,0 L360,0 L360,72 C300,77.3333333 240,80 180,80 C120,80 60,77.3333333 0,72 L0,0 Z" id="Rectangle-4"></path>
+        </g>
+    </g>
+</svg>

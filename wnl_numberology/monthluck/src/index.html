@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>流月运势</title>
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <script src="./static/libs/js/vconsole.min.js"></script> -->
+</head>
+
+<body class="hidden"></body>
+	<script src="./static/libs/js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="//mobile.51wnl.com/utils/wnlHistory/wnlHistoryPro-v2.js"></script>
+	<div class="banner"></div>
+	<div class="content">
+		<div class="nav">
+			泊仁老师，自幼跟随名师学习古占术数，熟习传统命理理论以及古占术数理论。并在实践中研习出命理精髓，结合上百万的实践案例，对预测推算拥有更高的准确率。
+			<div class="nav_img1"></div>
+			<div class="nav_img2"></div>
+		</div>
+		<div class="inputarea">
+			<div class="inputdiv">
+				<!-- <div class="input-title">简单的操作方式</div> -->
+				<div class="tip">输入您的出生日期立即查看</div>
+				<div class="username">
+					<!-- <div class="nametext">姓名</div> -->
+					<label for="name" class="nametext">您的姓名</label>
+					<div class="nameinput">
+						<input type="text" id="name" class="name" value="" placeholder="请输入姓名" />
+						<div class="sex">
+							<div class="mail">女</div>
+							<div class="femail choosed">男</div>
+						</div>
+					</div>
+					<!-- <div class="line"></div> -->
+				</div>
+				<div class="userdate">
+					<label class="datetext" for="date">出生日期</label>
+					<div class="dateinput">
+						<input type="text" id="date" class="birth" value="" placeholder="选择出生日期" onfocus="this.blur()" readonly />
+					</div>
+					<div class="line"></div>
+				</div>
+				<div class="addr">
+					<label for="addr" class="addrtext">出生地点</label>
+					<div class="cityinput">
+						<input type="text" id="addr" class="city" value="" placeholder="选择出生地点" onfocus="this.blur()" readonly />
+					</div>
+					<div class="line"></div>
+				</div>
+				<div class="ck">
+					<!-- <div class="ck-in"></div> -->
+				</div>
+				<div class="subbtn"></div>
+			</div>
+		</div>
+		<div class="luck">
+			<div class="tip">随时查看任意日期的三十天运势</div>
+			<div class="luck_item item1">
+				<div class="item_text1">更人性化的查看方式</div>
+				<div class="item_text2">让你告别单调千篇一律的每月运势</div>
+			</div>
+			<div class="luck_item item2">
+				<div class="item_text1">正是为急需的你所准备</div>
+				<div class="item_text2">方便您及时查看未来三十天的运势</div>
+			</div>
+			<div class="luck_item item3">
+				<div class="item_text1">全方位的定制内容</div>
+				<div class="item_text2">真正做到为您排忧解难和趋利避凶</div>
+			</div>
+		</div>
+		<div class="yhfk">
+			<div class="title">用户反馈</div>
+			<div class="text">
+				<div class="list-content">
+					<div class="list" id="marquee-top">
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">陈先生182****5582</div>
+								<!-- <div class="phone">182****5582</div> -->
+							</div>
+							<div class="item-text">这个月运很准，给我很多启示。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">李小姐186****4423</div>
+								<!-- <div class="phone">186****4423</div> -->
+							</div>
+							<div class="item-text">期待了好久的月运，终于出来了，太感谢了！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">王女士131****6221</div>
+								<!-- <div class="phone">131****6221</div> -->
+							</div>
+							<div class="item-text">爆准的月运，我收获了很多，谢谢！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">刘女士133****9654</div>
+								<!-- <div class="phone">133****9654</div> -->
+							</div>
+							<div class="item-text">我们一家大小全部都看了各自的月运，真的太好了，感谢万年历！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">赵先生182****2789</div>
+								<!-- <div class="phone">182****2789</div> -->
+							</div>
+							<div class="item-text">万年历居然出月运了，太好了！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">曹女士130****9656</div>
+								<!-- <div class="phone">130****9656</div> -->
+							</div>
+							<div class="item-text">这个月运我很满意，说得很详细，而且都是纯干货。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">谢女士134****9772</div>
+								<!-- <div class="phone">134****9772</div> -->
+							</div>
+							<div class="item-text">看了月运，我心中有数了，谢谢！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">胡先生134****9772</div>
+								<!-- <div class="phone">134****9772</div> -->
+							</div>
+							<div class="item-text">看了月运，我心中有数了，谢谢！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">胡先生188****9641</div>
+								<!-- <div class="phone">188****9641</div> -->
+							</div>
+							<div class="item-text">最近运势不是很好，急需解惑，谢谢万年历，这个月运太及时了。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">蒋先生187****9876</div>
+								<!-- <div class="phone">187****9876</div> -->
+							</div>
+							<div class="item-text">这个月运，对我的指导很大，每句话都值得我好好研究。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">罗先生130****1524</div>
+								<!-- <div class="phone">130****1524</div> -->
+							</div>
+							<div class="item-text">最近桃花真的像月运里面说的很不错耶，脱单有希望啊！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">钱女士138****2894</div>
+								<!-- <div class="phone">138****2894</div> -->
+							</div>
+							<div class="item-text">月运内容好详细哦，对自己的生活安排太有帮助了！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">马先生180****5210</div>
+								<!-- <div class="phone">180****5210</div> -->
+							</div>
+							<div class="item-text">其实这个月我一直很茫然，但也不想再这样下去了，现在看了月运，我知道该怎么发展了。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">文女士132****1463</div>
+								<!-- <div class="phone">132****1463</div> -->
+							</div>
+							<div class="item-text">真是精品，好准啊！感谢了！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">陈女士188****6969</div>
+								<!-- <div class="phone">188****6969</div> -->
+							</div>
+							<div class="item-text">好准，这个钱花得很值得，内容真的好多，非常满意。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">郑女士186****3513</div>
+								<!-- <div class="phone">186****3513</div> -->
+							</div>
+							<div class="item-text">分析的非常详细，每个建议都说得好好。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">肖女士185****2356</div>
+								<!-- <div class="phone">185****2356</div> -->
+							</div>
+							<div class="item-text">看完月运我对工作更加有信心了，升职加薪不是梦！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">龙先生177****5645</div>
+								<!-- <div class="phone">177****5645</div> -->
+							</div>
+							<div class="item-text">提前看有个准备，内容很详细，各方面都有。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">梁女士186****2265</div>
+								<!-- <div class="phone">186****2265</div> -->
+							</div>
+							<div class="item-text">月运里面的建议特别好，平时一定会多注意的。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">赵女士135****9969</div>
+								<!-- <div class="phone">135****9969</div> -->
+							</div>
+							<div class="item-text">职场、情感都有讲，还包括房屋、出行等，很全面。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">谢先生171****5252</div>
+								<!-- <div class="phone">171****5252</div> -->
+							</div>
+							<div class="item-text">祝自己一直好运不断！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">方女士135****1479</div>
+								<!-- <div class="phone">135****1479</div> -->
+							</div>
+							<div class="item-text">看来我得注意一下周围的烂桃花，不然会影响整个感情运势。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">张女士131****6531</div>
+								<!-- <div class="phone">131****6531</div> -->
+							</div>
+							<div class="item-text">月运真的很有帮助价格还便宜，最近纠结的棘手问题都解决。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">孙先生136****3789</div>
+								<!-- <div class="phone">136****3789</div> -->
+							</div>
+							<div class="item-text">最近财运不错耶，我要把理财安排提上日程，抓住机会。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">彭女士130****6351</div>
+								<!-- <div class="phone">130****6351</div> -->
+							</div>
+							<div class="item-text">这个月会遇到真爱，终于不用做单身狗了。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">钟先生151****6800</div>
+								<!-- <div class="phone">151****6800</div> -->
+							</div>
+							<div class="item-text">点赞，测算写得很用心，已经秒杀其他网站的产品，而且看起来不累，讲得很清楚。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">钱女士181****1256</div>
+								<!-- <div class="phone">181****1256</div> -->
+							</div>
+							<div class="item-text">帮老公买了月运来看，助他开展工作，做好他的贤内助。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">王先生138****9125</div>
+								<!-- <div class="phone">138****9125</div> -->
+							</div>
+							<div class="item-text">提前准备能做到趋利避凶，凡事都有个预知，才能有福气啊。</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">孟女士138****6547</div>
+								<!-- <div class="phone">138****6547</div> -->
+							</div>
+							<div class="item-text">重要日期都标注了，期待近期的桃花！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">吴先生134****4242</div>
+								<!-- <div class="phone">134****4242</div> -->
+							</div>
+							<div class="item-text">看完月运就是赚了啊，花点小钱就帮助自己走出迷途！</div>
+						</div>
+						<div class="list-item marqueeItem">
+							<div class="item-name">
+								<div class="">郑先生178****7785</div>
+								<!-- <div class="phone">178****7785</div> -->
+							</div>
+							<div class="item-text">看完觉得值了，而且价格不贵，没事还可以翻出来看一看，提醒下自己。</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contact">
+			<div class="qq-mail">
+				QQ：1436953644 &nbsp;&nbsp;&nbsp;&nbsp;电话：023-88756857
+			</div>
+			<div class="copyright">Copyright CALENDAR Tech. All Rights Reserved.</div>
+		</div>
+		<div class="bottom subbtn">
+			<!-- <div class="bottom-text">点击立即查看</div> -->
+		</div>
+	</div>
+	<div style="display: none">
+		<script src="https://s13.cnzz.com/z_stat.php?id=1273366791&web_id=1273366791" language="JavaScript"></script>
+	</div>
+	<script src="./static/libs/js/wnlui.js"></script>
+	<script src="./static/libs/js/0.js"></script>
+	<script src="./static/libs/js/1.js"></script>
+	<!-- <script src="./static/libs/js/wnl-util.js"></script> -->
+	<!-- <script src="./static/libs/js/scroll.js"></script> -->
+</body>
+
+</html>

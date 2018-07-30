@@ -1,0 +1,654 @@
+/**index.wxss**/
+
+@font-face {
+  font-family: 'zidingyi';
+  src: url('https://mobile.51wnl.com/numberology/lyys/font/zidingyi.eot');
+  src: url('https://mobile.51wnl.com/numberology/lyys/font/zidingyi.eot?#font-spider') format('embedded-opentype'),
+         url('https://mobile.51wnl.com/numberology/lyys/font/zidingyi.woff') format('woff'),
+         url('https://mobile.51wnl.com/numberology/lyys/font/zidingyi.ttf') format('truetype'),
+         url('https://mobile.51wnl.com/numberology/lyys/font/zidingyi.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'zidingyi2';
+  src: url('https://mobile.51wnl.com/numberology/bzcs/font/zidingyi2.eot');
+  src: url('https://mobile.51wnl.com/numberology/bzcs/font/zidingyi2.eot?#font-spider') format('embedded-opentype'),
+         url('https://mobile.51wnl.com/numberology/bzcs/font/zidingyi2.woff') format('woff'),
+         url('https://mobile.51wnl.com/numberology/bzcs/font/zidingyi2.ttf') format('truetype'),
+         url('https://mobile.51wnl.com/numberology/bzcs/font/zidingyi2.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@import "../../modules/datePicker/datePicker.wxss";
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+page {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system,
+                 "SF Pro SC",
+                 "HanHei SC",
+                 "SF Pro Text",
+                 "Myriad Set Pro",
+                 "SF Pro Icons",
+                 "Apple Legacy Chevron",
+                 "PingFang SC",
+                 "Helvetica Neue",
+                 "Helvetica",
+                 "Arial",
+                 sans-serif;
+}
+
+.container {
+  background-color: #fcfbf9;
+}
+
+.header-top {
+  height: auto;
+}
+
+.header-banner {
+  width: 100%;
+  height: 300rpx;
+}
+
+.header-dashi {
+  width: 100%;
+  height: 108rpx;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+
+/*input-content  */
+
+.user-input-content {
+  margin: 30rpx 30rpx 0 30rpx;
+  border-radius: 20rpx;
+  border: solid 2rpx #ff9447;
+}
+
+.input-content {
+  height: 88rpx;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.input-content01 {
+  border-bottom: solid 2rpx #ff9447;
+}
+
+.input-content-label {
+  font-family: PingFangSC;
+  font-size: 34rpx;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  color: #ff9447;
+  float: left;
+  padding: 26rpx 30rpx 28rpx 30rpx;
+}
+
+.input-content-value {
+  float: left;
+  font-family: PingFangSC;
+  font-size: 34rpx;
+  line-height: 1;
+  text-align: left;
+  color: #333;
+  height: 100%;
+  width: 490rpx;
+}
+
+.input-content-value text {
+  width: 100%;
+  height: 100%;
+  float: left;
+  padding: 28rpx 0 26rpx 0;
+}
+
+#spBirthDate {
+  padding: 0;
+  line-height: 88rpx;
+}
+
+.sexSelect {
+  width: 90rpx;
+  height: 34rpx;
+  float: left;
+  margin-top: 28rpx;
+}
+
+.sexIcon {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-top: 4rpx;
+}
+
+.sexIcon image {
+  width: 100%;
+  height: 100%;
+}
+
+.sexTxt {
+  float: left;
+  margin-left: 20rpx;
+}
+
+.sexSelectFemale {
+  margin-left: 130rpx;
+}
+
+.arrowContent {
+  width: 9px;
+  height: 100%;
+  background-image: url(http://mobile.51wnl.com/numberology/bzcs/img/bzcs/ca-more-arrow-icon@3x.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 9px 4px;
+  /* float: right; *//* margin-right: 30rpx; */
+  position: absolute;
+  top: 0;
+  right: 30rpx;
+}
+
+.confirmBtn {
+  height: 50px;
+  box-sizing: border-box;
+  margin: 15px;
+}
+button {  
+  height: 100%;
+  line-height: 50px;
+  border: none;
+}
+button[type="primary"] {
+  color: #fff;
+  background-color: #ff9447;
+  border-radius: 14px;
+}
+
+button::after {
+  border: 0 none;
+}
+.button-hover[type="primary"] {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #f26d0e;
+  border-radius: 28rpx;
+}
+
+/* .confirmBtn button {
+  height: 100%;
+  width: 100%;
+  font-size: 40rpx;
+  font-weight: 500;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 28rpx;
+  background-color: #ff9447;
+} */
+
+/*indexContent  */
+
+.indexContent {
+  margin: 60rpx 30rpx 0 30rpx;
+}
+
+.box_line {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-pack: justify;
+  -webkit-box-align: stretch;
+  -webkit-box-lines: single;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  -webkit-align-content: flex-start;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+}
+
+.title_line {
+  width: 100%;
+  height: 1px;
+  background-color: #ff9447;
+  /* -webkit-box-flex: 1; *//* -webkit-flex: 1; */
+  flex: 1;
+}
+
+.title_dot {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 100%;
+  background-color: #ff9447;
+}
+
+.title_txt {
+  margin: 0 20rpx;
+  height: 34rpx;
+  font-size: 17px;
+  line-height: 34rpx;
+  text-align: center;
+  color: #ff9447;
+  font-weight: 500;
+}
+
+.expertTeamSwiper {
+  height: 388rpx;
+}
+
+swiper {
+  height: 100%;
+}
+
+.dashiSwiper {
+  margin-top: 30rpx;
+}
+
+.swiperBG {
+  height: 358rpx;
+  border-radius: 10px;
+  background-color: #f5f0e9;
+  top: 15px;
+  position: absolute;
+  box-sizing: border-box;
+  background-image: url('http://mobile.51wnl.com/numberology/lyys/img/cs-bg@3x.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 50px;
+}
+
+.swiperBGLeft {
+  position: absolute;
+  top: 0;
+  width: 32.46%;
+  width: calc(29.87vw);
+  max-width: 120px;
+  max-height: 194px;
+  z-index: 1;
+  height: 100%;
+  height: calc(51.73vw);
+}
+
+.swiperBGLeft > image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.swiperBGRight {
+  margin-right: 30rpx;
+  float: right;
+  width: 61%;
+}
+
+.expertName {
+  font-family: zidingyi !important;
+  font-size: 48rpx;
+  line-height: 1;
+  text-align: left;
+  color: #f16300;
+  padding: 30rpx 0 20rpx 0;
+}
+
+.expertDesc {
+  font-family: PingFangSC;
+  font-size: 24rpx;
+  line-height: 1.45;
+  text-align: justify;
+  color: #333;
+  overflow: visible;
+}
+
+.cesuanResultContent, .cesuanYunshiContent, .cesuanFeedbackContent,
+.cesuanIntroductionContent, .cesuanContactContent {
+  margin-top: 60rpx;
+}
+
+.cesuanResult {
+  margin-top: 30rpx;
+  height: 284rpx;
+  border-radius: 20rpx;
+  background-color: #f5f0e9;
+  padding: 30rpx 20rpx 30rpx 20rpx;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bzcsResultLabel {
+  width: 70rpx;
+  height: 224rpx;
+  background: url('https://mobile.51wnl.com/numberology/bzcs/img/bzcs/cs-zdnr-bk@3x.png') no-repeat;
+  background-size: 100% 100%;
+  margin-right: 14rpx;
+}
+
+.bzcsResultLabelContent {
+  font-family: zidingyi2 !important;
+  font-size: 38rpx;
+  line-height: 40rpx;
+  text-align: center;
+  color: #f16300;
+  margin-top: 30rpx;
+}
+
+.bzcsResultLabel01 {
+  margin-right: 0;
+}
+
+.yunshiDetailContent {
+  margin: 30rpx 0;
+  height: 414rpx;
+  border-radius: 20rpx;
+  background-color: #f5f0e9;
+  overflow: hidden;
+}
+
+.yunshiDetailContent image {
+  padding: 30rpx;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.feedBackNum {
+  margin: 30rpx 0;
+  font-size: 26rpx;
+  line-height: 1;
+  text-align: center;
+  color: #999;
+}
+
+.feedBackNum::before {
+  content: '已有 ';
+}
+
+.feedBackNum::after {
+  content: ' 人解锁八字测算';
+}
+
+.feedback {
+}
+
+.cesuan_comments_content {
+  clear: both;
+  background: #f5f0e9;
+  border-radius: 10px;
+  height: 268px;
+  padding: 0 15px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid #f5f0e9;
+}
+
+.cesuan_comments_content::before {
+  content: '';
+  z-index: 1;
+  width: 100%;
+  height: 15px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: #f5f0e9;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.cesuan_comments_content::after {
+  content: '';
+  z-index: 1;
+  width: 100%;
+  height: 25px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 10px;
+  clear: both;
+  background-image: linear-gradient(to bottom, rgba(245, 240, 233, 0) 0%, rgba(245, 240, 233, 1) 40%, rgba(245, 240, 233, 1) 100%);
+}
+
+.cesuan_comments {
+  animation: scrollPage 10s ease-in-out farwards;
+}
+
+@keyframes scrollPage {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    margin-top: 500rpx;
+  }
+
+  100% {
+    margin-top: 1000rpx;
+    opacity: 0;
+  }
+}
+
+.cesuan_comments .marqueeItem {
+  padding-top: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px dotted rgba(153, 153, 153, 0.3);
+}
+
+.cesuan_comments .marqueeItem .name {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1;
+  color: #333;
+}
+
+.cesuan_comments .marqueeItem .city {
+  font-size: 13px;
+  line-height: 1;
+  color: #999;
+  padding-left: 5px;
+}
+
+.cesuan_comments .marqueeItem .head {
+  height: 17px;
+  margin-bottom: 7px;
+}
+
+.cesuan_comments .marqueeItem .comment {
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: justify;
+  color: #999;
+}
+
+.cesuan_comments .marqueeItem .stars {
+  float: right;
+  height: 15px;
+  width: 85px;
+}
+
+.cesuan_comments .marqueeItem .stars .star {
+  float: left;
+  height: 15px;
+  width: 15px;
+  background-image: url('https://mobile.51wnl.com/numberology/lyys/img/cs-yhpl-xj-wxz@3x.png');
+  background-size: cover;
+  margin-left: 2px;
+}
+
+.cesuan_comments .marqueeItem .stars .starActive {
+  float: left;
+  height: 15px;
+  width: 15px;
+  background-image: url('https://mobile.51wnl.com/numberology/lyys/img/cs-yhpl-xj-xz@3x.png');
+  background-size: cover;
+}
+
+.bzcsLNYSDetail {
+  width: 100%;
+  margin-top: 30rpx;
+  background: #f5f0e9;
+  border-radius: 10px;
+}
+
+.lnysContent {
+  padding: 30rpx 30rpx 24rpx 30rpx;
+}
+
+.lnysContentTitle {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+  color: #f16300;
+}
+
+.lnysContentDetail {
+  font-size: 17px;
+  line-height: 1.59;
+  text-align: justify;
+  color: #333;
+  margin-top: 10rpx;
+}
+
+.lnysContentHr {
+  opacity: 0.3;
+  border-bottom: 1px dotted #999;
+  margin: 0 30rpx;
+}
+
+.cesuanContactContent {
+  height: 58rpx;
+  border-radius: 30rpx;
+  background-color: #f5f0e9;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contactTxt {
+  font-family: SFProText;
+  font-size: 13px;
+  line-height: 1;
+  color: #999;
+}
+
+.contactPhone {
+  margin-left: 54rpx;
+}
+
+.copyright {
+  height: 22rpx;
+  font-size: 11px;
+  line-height: 1;
+  text-align: center;
+  color: #333;
+  padding: 15px 0;
+  border-top: 1px solid #eaeaea;
+  margin-top: 30px;
+  padding-bottom: 75px !important;
+}
+
+.confirm_btn_fixed {
+  position: fixed;
+  padding: 5px 15px;
+  z-index: 10;
+  height: 60px;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(252, 251, 249, 0.92);
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  transition: bottom 0.6s ease-in-out;
+}
+
+.confirm_btn_fixed_link {
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  background-color: #ff9447;
+  font-size: 20px;
+  color: #fff;
+  z-index: 10;
+  text-align: center;
+  opacity: 1;
+  transition: bottom 0.6s ease-in-out;
+}
+
+.confirm_btn_fixed_hidden {
+  bottom: -61px !important;
+}
+
+.toastContent {
+  position: fixed;
+  bottom: 40rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  overflow: hidden;
+  text-align: center;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+.toast {
+  display: inline-block;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  padding: 0 20rpx;
+}
+
+@media screen and (min-width: 310px) and (max-width: 350px) {
+  .contactTxt {
+    font-size: 11px;
+  }
+  /* .confirmBtn,.confirm_btn_fixed {
+    height: 50px;
+  }
+  button {
+    line-height: 45px;
+  }
+  .confirm_btn_fixed_link {
+    height: 40px
+  } */
+}
+/* .toastContentShow {
+  opacity: 0,8;
+}
+.toastContentHidden {
+  opacity: 0;
+} */

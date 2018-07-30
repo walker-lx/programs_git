@@ -1,0 +1,17 @@
+http://easings.net/zh-cn#easeInCirc
+
+x
+t
+CSS
+CSS ÊôĞÔ transition ºÍ animation ÔÊĞíÄãÖ¸¶¨»º¶¯º¯Êı¡£
+div {
+  -webkit-transition: all 600ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition:         all 600ms cubic-bezier(0.6, 0.04, 0.98, 0.335); }
+ÔÚ cubic-bezier.com ±à¼­
+SCSS
+Sass/SCSS °ïÖúÄãÃèÊö¶¯»­. Compass ³ıÈ¥ÁË CSS ÊôĞÔ transition ºÍ animation µÄÇ°×º£¬»¹ÓĞ Compass Ceaser ²å¼şÔÊĞíÄãÖ±½ÓÖ¸¶¨»º¶¯º¯ÊıÃû³ÆÀ´ÊµÏÖ»º¶¯º¯Êı¡£
+div {
+  @include transition(all 600ms ceaser($easeInCirc)); }
+JavaScript
+Ê¹ÓÃ jQuery ¼ÓÉÏ jQuery Easing ²å¼şÊÇÊµÏÖ»º¶¯º¯Êı×î¼òµ¥µÄ·½·¨. ÄãÖ»ĞèÒªÖ¸¶¨»º¶¯º¯ÊıÃû³Æ¸ø .animate º¯Êıµ±×öµÚÈı¸ö²ÎÊı»òÊÇ easing µÄ¼üÖµ¡£
+div.animate({ top: '-=100px' }, 600, 'easeInCirc', function () { ÿ })

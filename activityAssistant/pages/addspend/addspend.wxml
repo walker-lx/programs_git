@@ -1,0 +1,32 @@
+<!--pages/addspend/addspend.wxml-->
+<import src='../toast/toast.wxml' />
+<template is='toast' data='{{..._toast_}}' />
+<view class='content'>
+<form bindsubmit='formSubmit'>
+  <view class='section'>
+    <text class='section-text'>事项</text>
+    <view class='textinput' style='border:{{textborder}}'>
+      <input name='text' placeholder='购买 食材' placeholder-style='color:#999;font-size:34rpx' bindinput='textinput' bindfocus='textfocus' bindblur='textblur' value='{{textvalue}}' maxlength='100'></input>
+      <view class='delete' catchtap='cleartext' wx:if='{{hastext}}'></view>
+    </view>
+  </view>
+  <view class='section'>
+    <text class='section-user'>支出人</text>
+    <view class='userinput' style='border: {{userborder}}'>
+      <input name='spendor' placeholder='张三、李四...' placeholder-style='color:#999;font-size:34rpx' bindfocus='userfocus' bindblur='userblur' bindinput='userinput' value='{{uservalue}}'></input>
+      <view wx:if='{{hasuser}}' class='delete' catchtap='clearuser'></view>      
+    </view>
+  </view>
+  <view class='section'>
+    <text class='section-spend'>金额</text>
+    <view class='spendinput' style='border: {{spendborder}}'>
+      <input name='cost' type='digit' placeholder='请填入数字' placeholder-style='color:#999;font-size:34rpx' bindfocus='spendfocus' bindblur='spendblur' bindinput='spendinput' value='{{spendvalue}}' maxlength='10'></input>
+      <view wx:if='{{hasspend}}' class='delete' catchtap='clearspend'></view>      
+    </view>
+  </view>
+  <view class='btn'>
+    <button class='cancel' bindtap='cancel'>取消</button>
+    <button class='confirm' formType="submit" disabled='{{dis}}'>确认添加</button>    
+  </view>
+</form>
+</view>

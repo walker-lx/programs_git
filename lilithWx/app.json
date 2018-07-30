@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/desc/desc"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#30284d",
+    "navigationBarTitleText": "莉莉斯",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "backgroundColor": "#31294D",
+    "color": "#ffffff",
+    "selectedColor": "#de5deb",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "星座",
+        "iconPath": "./pages/img/tab-cece-icon2@2x.png",
+        "selectedIconPath": "./pages/img/tab-cece-icon@2x.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我",
+        "iconPath": "./pages/img/tab-mine-icon2@2x.png",
+        "selectedIconPath": "./pages/img/tab-mine-icon@2x.png"
+      }
+    ]
+  },
+    "debug":true
+}
+

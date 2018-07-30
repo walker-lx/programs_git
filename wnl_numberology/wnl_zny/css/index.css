@@ -1,0 +1,559 @@
+html,
+body {
+	overflow: hidden;
+	background: linear-gradient(#FFE299 60%, #FFE8A1 40%);
+	background-size: 100% 20px;
+	overflow-y: auto;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-family: -apple-system, "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+ 
+}
+.hidden {
+	display: none !important;
+}
+
+/*header-section  */
+
+.header-section {
+	height: 243px;
+	width: 100%;
+	background: url('../img/biaoti.jpg') no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+}
+
+.test-content {
+	height: 21px;
+	width: 93%;
+	border-radius: 7px;
+	background-color: #377a6a;
+	margin-top: 205px;
+	position: absolute;
+	margin-left: 3.5%;
+	line-height: 19px;
+}
+
+.test-number {
+	display: inline-block;
+	font-family: PingFangSC;
+	font-size: 12px;
+	line-height: 11px;
+	letter-spacing: 1.2px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.test-number-great {
+	display: inline-block;
+	font-family: PingFangSC;
+	font-size: 12px;
+	line-height: 11px;
+	letter-spacing: 1.2px;
+	text-align: center;
+	color: #ffffff;
+}
+
+
+/*question-section  */
+
+.question-section {
+	width: 100%;
+}
+
+.concerNum>img {
+	display: block;
+	margin: 0 auto;
+	width: 82%;
+	background-size: cover;
+	padding-top: 7px;
+}
+
+.question-section-pic {
+	margin: 15px 15px 0 15px;
+}
+
+.question-section-pic>img {
+	display: block;
+	width: 100%;
+	background-size: cover;
+	margin: 0 auto;
+}
+
+.understandChildren {
+	margin: 15px 35px 0 35px;
+}
+
+.understandChildren>img {
+	display: block;
+	width: 100%;
+	background-size: cover;
+	margin: 0 auto;
+}
+
+
+/*infoContent-section  */
+
+.infoContent-section {
+	padding: 0 7px 0 7px;
+}
+
+.infoContent-section-bg {
+	padding: 23px 7px 18px 7px;
+	background: url('../img/background02.png') center no-repeat;
+	background-size: 100% 100%;
+}
+
+.input-content {
+	margin: 0 20px;
+	border-bottom: solid 1px #a2a2a2;
+}
+
+.input-content>input {
+	display: inline-block;
+	border: none;
+	outline: none;
+	font-size: 15px;
+	margin-left: 7%;
+	width: 69%;
+}
+
+.contentForm {
+	background-color: #fff;
+	border-radius: 16px;
+}
+
+.contentLabel {
+	display: inline-block;
+	font-family: PingFangSC;
+	font-size: 15px;
+	letter-spacing: 1.2px;
+	text-align: left;
+	color: #000000;
+	padding-top: 2px;
+}
+
+.yourName {
+	height: 48px;
+}
+
+.contentLabel01 {
+	line-height: 46px;
+	float: left;
+}
+
+.contentLabel02 {
+	line-height: 54px;
+}
+
+.yourName > input {
+	font-size: 15px;
+	margin-left: 8%;
+	width: 38%;
+	background: #fff;
+	height: 48px;
+	padding-top: 1px;
+}
+
+.yourBirthDay {
+	height: 54px;
+}
+
+.yourBirthTime {
+	height: 54px;
+}
+.dw-i {
+	text-align: center;
+}
+
+.yourBirthPlace {
+	border: none;
+	height: 52px;
+}
+/*iphone5 readonly有输入框弹出  */
+.wnl_cityPicker {
+	-webkit-user-select: none !important;
+	margin-top: 9px;
+	display: inline-block;
+	margin-left: 7%;
+	padding-top: 5px;
+	ime-mode:disabled; 
+}
+/* .yourBirthPlace >::-webkit-input-placeholder {
+	padding-top: 5px;
+} */
+textarea {
+	resize: none;
+	height: 40px;
+	border-style: none;
+	background:#fff;
+	outline: none;
+	font-size: 14px;
+}
+input {
+	background: #fff;
+}
+
+/*性别  */
+
+.sex {
+	margin-top: 5%;
+	float: right;
+}
+
+.sex-female {
+	float: left;
+	background: #e1e1e1;
+	font-size: 0;
+	text-align: center;
+	width: 39px;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	border-radius: 15px 0 0 15px;
+}
+
+.sex-male {
+	float: left;
+	background: #e1e1e1;
+	font-size: 0;
+	text-align: center;
+	width: 39px;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	border-radius: 0 15px 15px 0;
+}
+
+.sex-on {
+	background: #ffb36f;
+	color: #fff;
+}
+
+.sex-icon {
+	width: 8px;
+	height: 8px;
+	margin-right: 2px;
+	vertical-align: middle;
+}
+
+.sex-type {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 9px;
+	cursor: pointer;
+}
+
+.sex-male>.sex-type {
+	color: #bfbfbf;
+}
+
+.submit {
+	margin: 0 10px 0 10px;
+	margin-top: 3px;
+	cursor: pointer !important;
+	background: linear-gradient(#FFE299 60%, #FFE8A1 40%);
+}
+
+
+/*弹窗  */
+
+.tips {
+	width: 100%;
+	text-align: center;
+	font-family: PingFangSC;
+	font-size: 13px;
+	line-height: 0.15;
+	letter-spacing: 0.5px;
+	color: #392e1f;
+	margin-top: 17.5px;
+	cursor: pointer;
+}
+
+.prompt_explain {
+	z-index: 1002;
+	width: 89.3%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -44.7%;
+	display: none;
+}
+
+.close_img {
+	background: url('../img/close.png') center no-repeat;
+	background-size: cover;
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	top: -10px;
+	right: -10px;
+	cursor: pointer;
+}
+
+.explain_title {
+	height: 66.5px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 66.5px;
+	color: #ffffff;
+	background-color: #16add9;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.explain_content {
+	background-color: #dfdfdf;
+	padding: 15px 23.5px 20px 20.5px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font-size: 14px;
+	line-height: 18px;
+	color: #535353;
+}
+.order-submit {
+	background: url('../img/anniu-lijichakan.png');
+	background-size: 100% 100%;
+	width: 94%;
+	height: 49px;
+}
+.submit>img {
+	display: block;
+	width: 100%;
+	background-size: cover;
+	margin: 0 auto;
+}
+
+.titleInfo {
+	margin: 19px 43px 0 43px;
+}
+
+.titleInfo>img {
+	display: block;
+	width: 100%;
+	background-size: cover;
+	margin: 0 auto;
+}
+
+.measuredSorts {
+	margin: 10px 21.5px 0 21.5px;
+}
+
+.measuredSorts>img {
+	display: block;
+	width: 100%;
+	background-size: cover;
+	margin: 0 auto;
+}
+
+.measuredContent>.submit {
+	padding: 0 10px 0 10px;
+	margin-top: 16px;
+}
+
+.customerFeedback {
+	padding: 0 7.1px 0 7.5px;
+}
+.heightDou {
+	height: 36px !important;
+}
+.customerFeedbackTtile {
+	height: 40px;
+	width: 200px;
+	margin: 7.5 auto;
+}
+
+.customerFeedbackTtile>img {
+	display: block;
+	width: 100%;
+	background-size: cover;
+	margin: 0 auto;
+}
+
+.customerFeedbackContentPic {
+	height: 106%;
+	width: 100%;
+}
+
+.customerFeedbackContent {
+	height: 256px;
+	width: 100%;
+	margin-top: 6.5px;
+	background: url('../img/background01.png') center no-repeat;
+	background-size: 100% 100%;
+}
+
+.customerFeedbackContentDetail {
+	background: #fff;
+	margin: 23px 7.9px 14px 7.5px;
+	position: absolute;
+	width: 92%;
+	height: 215px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.customerFeedbackContentDetail>ul {
+	display: block;
+	padding: 15px;
+	overflow: hidden;
+}
+
+.customerFeedbackContentDetail>ul>li {
+	display: block;
+	width: 100%;
+	height: 13.5px;
+	font-family: PingFangSC;
+	font-size: 14px;
+	line-height: 1.29;
+	letter-spacing: 0.4px;
+	text-align: left;
+	color: #535353;
+	list-style: none;
+	padding: 4PX;
+	overflow: hidden;
+}
+
+.FeedbackTitle {
+	display: block;
+	float: left;
+	width: 18%;
+}
+
+.FeedbackContent {
+	display: block;
+	float: right;
+	width: 82%;
+}
+
+.feedbackHeight {
+	height: 36px;
+}
+.copyright {
+	font-size: 11px;
+	font-family: PingFangSC;
+	color: #084032;
+	width: 100%;
+	text-align: center;
+	margin-top: 9px;
+	margin-bottom: 10px;
+
+}
+#toast {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	line-height: 37px;
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+	opacity: 0;
+	border-radius: 10px;
+	font-size: 15px;
+	font-weight: 500;
+	padding: 0 10px;
+	z-index: 9999;
+	/*The good stuff */
+	-webkit-transition: opacity 0.5s ease-out;
+	/* Saf3.2+, Chrome */
+	-moz-transition: opacity 0.5s ease-out;
+	/* FF4+ */
+	-ms-transition: opacity 0.5s ease-out;
+	/* IE10? */
+	-o-transition: opacity 0.5s ease-out;
+	/* Opera 10.5+ */
+	transition: opacity 0.5s ease-out;
+}
+
+#toast1 {
+	font-size: 16px;
+	font-weight: 500;
+	padding: 0 10px;
+	visibility: hidden;
+	white-space: nowrap;
+	position: absolute;
+}
+.mask,
+.index_mask {
+	z-index: 1001;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	display: none;
+	cursor: pointer;
+}
+
+.loading,
+.index_loading {
+	-webkit-transform: rotate(360deg);
+	-webkit-animation: rotation 1s linear infinite;
+	-moz-animation: rotation 1s linear infinite;
+	-o-animation: rotation 1s linear infinite;
+	animation: rotation 1s linear infinite;
+	background: url('../img/loading.gif') center no-repeat;
+	background-size: cover;
+	width: 24px;
+	height: 24px;
+	z-index: 1002;
+	margin: 0 auto;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -7.5px 0 0 -7.5px;
+	display: none;
+}
+.iphoneXAdaptation {
+    height: 24px;
+    width: 100%;
+    display: none;
+}
+
+@media screen and (min-width: 310px) and (max-width: 359px) {
+	.input-content>input {
+		font-size: 14px;
+		margin-left: 3%;
+	}
+	.wnl_cityPicker {
+		width: 66%;
+		margin-left: 3%;
+		-webkit-user-select:none
+	}
+	.yourName>input {
+		margin-left: 8;
+	}
+	.customerFeedbackContentDetail {
+		height: 178px;
+		width: 91%;
+	}
+	.customerFeedbackContent {
+		height: 224px;
+	}
+	.FeedbackTitle {
+		width: 20%;
+	}
+	.FeedbackContent {
+		width: 80%;
+	}
+	.customerFeedbackContentDetail>ul {
+		padding: 5px;
+	}
+	.customerFeedbackContentDetail>ul>li {
+		padding: 4px 1px 4px 4px;
+		width: 100%;
+	}
+}
+

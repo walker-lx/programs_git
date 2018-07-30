@@ -1,0 +1,332 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body,html{
+    font-family: -apple-system, "苹方-简", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", sans-serif;
+}
+body{
+    margin: 0;
+    width: 375px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust:none;
+    background-color: #ffffff;
+}
+a {
+    margin:0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a:active{
+    opacity: .6;
+}
+.hidden{
+    display: none !important;
+}
+.visibilityHidden{
+    visibility: hidden;
+}
+.main{
+    width: 100%;
+}
+
+
+
+.mainContent{
+    width: 290px;
+    margin: 66px auto 0;
+}
+.shareInfoContent{
+    padding-top: 15px;
+}
+.shareTxt div{
+    text-align: center;
+}
+.qianNum{
+    font-size: 18px;
+}
+.qianLevel{
+    margin: 5px auto 10px;
+    font-size: 15px;
+}
+.borderContent{
+    width: 100%;
+    height: 1px;
+    background-color: #D8D8D8;
+}
+.qianTxt{
+    width: 220px;
+    margin: 5px auto 20px;
+    font-size: 15px;
+    color: #111111;
+    line-height: 134%;
+}
+.jieTip{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.jieTxt,.xianTxt,.qianDesc,.allusionsDesc{
+    font-size: 15px;
+    color: #111111;
+    line-height: 134%;
+}
+.xianTip,.qianTip,.allusionsName{
+    font-size: 18px;
+    margin: 20px auto 5px;
+}
+.lotGoBtn{
+    display: block;
+    width: 100%;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 50px auto 74px;
+    background-color: #d93448;
+    border-radius: 5px;
+}
+.downloadLink{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background-color: #F2F2F2;
+    color: #d93448;
+    text-decoration: none;
+    letter-spacing: -4px;
+    word-spacing: -4px;
+    font-size: 0;
+}
+.downloadLink span{
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    *display: inline;
+    zoom:1;
+    vertical-align: middle;
+}
+.downloadIcon{
+    width: 17px;
+    height: 44px;
+    background-image: url("../img/download-icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 17px 17px;
+    margin-right: 10px;
+}
+
+
+
+
+.lotsBox{
+    width: 150px;
+    height: 220px;
+    margin: 120px auto 10px;
+    background-image: url("../img/gylq/dh.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 600px 220px;
+}
+.lotStartBtn{
+    display: block;
+    width: 100%;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 40px auto 74px;
+    background-color: #d93448;
+    border-radius: 5px;
+}
+.resultContent .shareTxt{
+    margin-top: 120px;
+}
+
+.wnlDownloadBtn{
+    display: block;
+    width: 100%;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 40px auto 74px;
+    background-color: #d93448;
+    border-radius: 5px;
+}
+.qrcodeImgContent{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+.contentMask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    -moz-opacity: 0.6;
+    background-color: #000000;
+    z-index: -1;
+}
+.wnlQRImgContent{
+    width: 280px;
+    position: absolute;
+    left: 50%;
+    margin-left: -140px;
+    top: 50%;
+    margin-top: -190px;
+    background-color: #ffffff;
+}
+.downloadTxt1{
+    text-align: center;
+}
+.line1{
+    margin-top: -10px;
+}
+.resultContent .shareTxt{
+    width: 100%;
+    height: 220px;
+    display: table;
+}
+.tableWrapper{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.wnlBanner{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 375px;
+    height: 64px;
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+    z-index: 100;
+}
+.closeBanner{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background: url(../img/ad-close-icon@3x.png) center no-repeat;
+    background-size: 10px 10px;
+}
+.wnllogo{
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    width: 44px;
+    height: 44px;
+    background: url(../img/ad-logo-icon.png) no-repeat;
+    background-size: 44px 44px;
+}
+.ad-title{
+    display: inline-block;
+    margin-top: 14px;
+    margin-left: 84px;
+}
+.ad-title .ad-t1{
+    font-family:PingFangSC-Regular;
+    font-size:14px;
+    color:#111111;
+    line-height:18px;
+    text-align:left;
+}
+.ad-title .ad-t2{
+    margin-top: 1px;
+    font-family:PingFangSC-Regular;
+    font-size:12px;
+    color:#333333;
+    line-height:18px;
+    text-align:left;
+}
+.downloadBtn{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -13px;
+    display: block;
+    border:1px solid #2ea9df;
+    border-radius:3px;
+    width:68px;
+    height:24px;
+    font-family:PingFangSC-Regular;
+    font-size:14px;
+    color:#2ea9df;
+    line-height:24px;
+    text-align:center;
+    text-decoration: none;
+}
+
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 4/2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    .downloadIcon{
+        background-image: url("../img/download-icon@2x.png");
+    }
+    .lotsBox{
+        background-image: url("../img/gylq/dh@2x.jpg");
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (-o-min-device-pixel-ratio: 6/2),
+only screen and (min--moz-device-pixel-ratio: 3),
+only screen and (min-device-pixel-ratio: 3) {
+    .downloadIcon{
+        background-image: url("../img/download-icon@3x.png");
+    }
+    .lotsBox{
+        background-image: url("../img/gylq/dh@3x.jpg");
+    }
+}
+@media only screen and (min-width:414px) {
+    .bannerContent,.mainContent{
+        width: 330px;
+    }
+}
+@media only screen and (min-width:1024px) {
+    .qianTxt {
+        width: 100%;
+    }
+    .bannerContent,.mainContent{
+        width: 580px;
+    }
+    .username{
+        max-width:400px;
+    }
+}

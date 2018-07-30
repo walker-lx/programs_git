@@ -1,0 +1,430 @@
+@import '../css/base.scss';
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    // overflow: hidden;
+}
+body {
+    width: 100%;
+    height: 100%;
+    // font-size: 16px;
+    -webkit-overflow-scrolling:touch; 
+}
+.wxsharemask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    img {
+        position: fixed;
+        top: 40px;
+        right: 30px;
+    }
+}
+.lock {
+    width: 100%;
+    min-height: 100%;
+    background: url('../img/v2/beijing.jpg') repeat-y;
+    background-position-y: -0.13rem;
+    background-size: 100% 5.08rem;
+    padding-top: 0.21rem;
+    padding-bottom: 0.2rem;
+    box-sizing: border-box;
+    .lock_title {
+        position: relative;
+        width: 3.63rem;
+        height: 0.67rem;
+        background: url('../img/v2/tiaotiao02.png') no-repeat;
+        background-size: 100% 100%;
+        margin: 0 auto;
+        line-height: 0.69rem;
+        box-sizing: border-box;
+        padding-left: 0.54rem;
+        div {
+            display: inline-block;
+            color: #7D2E00;
+            font-size: 0.15rem;
+            font-family: 'font';
+        }
+        .lock_title_date {
+            position: absolute;
+            // float: right;
+            right: 0.25rem;
+            // top: 0.1rem;
+            line-height: 0.75rem;
+            // @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-width: 412px) {
+            //     line-height: 0.72rem;
+            // }
+            // &.6p {
+            //     line-height: 0.72rem !important;
+            // }
+        }
+    }
+    .lock_btns {
+        margin: 0.25rem 0.37rem 0 0.36rem;
+        .btnitem {
+            position: relative;
+            display: inline-block;
+            height: 0.37rem;
+            .syicon {
+                background-image: url('../img/v2/shiye.png');
+            }
+            .gqicon {
+                background-image: url('../img/v2/ganqing.png');
+            }
+            .cyicon {
+                background-image: url('../img/v2/caiyun.png');
+            }
+            .jkicon {
+                background-image: url('../img/v2/jiankang.png');
+            }
+            .btnicon {
+                display: inline-block;
+                width: 0.51rem;
+                height: 0.37rem;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-right: 0.07rem;
+            }
+            .btnprogress {
+                position: absolute;
+                display: inline-block;
+                width: 0.95rem;
+                // height: 0.18rem;
+                // line-height: 0.19rem;
+                height: 18px;
+                line-height: 20px;
+                border: 1px solid #A14611;
+                border-radius: 9px;
+                top: 50%;
+                left: 0.56rem;
+                margin-top: -0.08rem;
+                overflow: hidden;
+                &.huawei {
+                    height: 0.25rem;
+                    line-height: 0.29rem;
+                }
+                .num {
+                    width: 0.5rem;
+                    height: 100%;
+                    color: #F9EED8;
+                    background-color: #A14611;
+                    border-radius: 0 9px 9px 0;
+                    text-indent: 0.5em;
+                    transition: all .3s;
+                    font-size: 0.17rem;
+                    font-family: 'font2';
+                }
+            }
+        }
+        .sy, .cy {
+            margin-right: 1.34rem;
+        }
+        .cy, .jk {
+            margin-top: 0.38rem;
+        }
+    }
+    .lock_zy {
+        position: relative;
+        background-color: rgba(253, 249, 226, .65);
+        margin: 0.28rem 8px 0;
+        border-radius: 3px;
+        box-shadow: 3.6px 3.6px 8px 1px #A14611;
+        padding-bottom: 0.27rem;
+        .title {
+            width: 100%;
+            height: 0.37rem;
+            line-height: 0.39rem;
+            background: url('../img/v2/tiaotiao01.png') no-repeat;
+            background-size: 100% 100%;
+            text-align: center;
+            color: #F9EED8;
+            border-radius: 3px 3px 0 0;
+            letter-spacing: 0.65em;
+            font-size: 0.18rem;
+            font-family: 'font';
+        }
+        .zy_item {
+            margin: 0 auto;
+            width: 3.87rem;
+            // background: url('../img/v2/banban01.png') no-repeat;
+            // background-size: 3.87rem 0.738rem;
+            box-sizing: border-box;
+            padding: 0 0.1rem;
+            color: #7D2E00;
+            font-size: 0.15rem;
+            font-family: 'font2';
+            .qq_text, .hq_text, .kyw, .xyfx_text {
+                text-align: left;
+            }
+        }
+        .hq, .kyw, .xyfx {
+            margin: 0.02rem auto 0;
+        }
+        .dot {
+            width: 100%;
+            margin-top: 0.15rem;
+            margin-bottom: 0.15rem;
+            border-bottom: 2px dotted ;
+            opacity: 0.3;
+        }
+        .hq {
+            margin-top: 0.21rem !important;
+        }
+        .qq {
+            margin-top: 0.23rem;
+        }
+        .kyw, .qq, .hq, .xyfx {
+            .kyw_title, .qq_title, .hq_title, .xyfx_title {
+                font-size: 0.16rem;
+            }
+            .kyw_text, .qq_text, .hq_text, .xyfx_text {
+                margin-top: 0.23rem;
+                text-align: justify;
+                font-size: 0.15rem;
+            }
+            // .hq_title {
+            //     margin-top: 0.21rem;
+            // }
+        }
+    }
+    .shareicon {
+        width: 1.43rem;
+        height: 0.43rem;
+        margin: 0.27rem auto;
+        background: url('../img/v2/anniu03.png') no-repeat;
+        background-size: cover;
+    }
+    .toindex {
+        width: 1.64rem;
+        height: 0.43rem;
+        margin: 0.27rem auto;
+        background: url('../img/v2/anniu07.png') no-repeat;
+        background-size: cover;
+    }
+}
+.wnl_history_btn {
+    display: none !important;
+}
+.iosplus {
+    line-height: 0.72rem !important;
+}
+// .wnl_history_btn {
+//     bottom: 16px !important;
+//     z-index: 50 !important;
+// }
+// .date {
+//     display: flex;
+//     justify-content: space-between;
+//     background-color: #8484FD;
+//     color: #fff;
+//     padding: 10px 9px;
+//     font-size: 17px;
+//     font-weight: 600;
+//     @media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 360px) {
+//         padding: 10px 2px;
+//         font-size: 15px;
+//     }
+//     @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+//         padding: 10px 2px;
+//         font-size: 15px;
+//     }
+//     .front-icon, .behind-icon {
+//         display: flex;
+//         align-self: center;
+//         align-items: center;
+//         width: 78px;
+//         // width: 5.92rem;
+//         height: 4px;
+//         @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+//             width: 58px;
+//         }
+//         @media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 360px) {
+//             width: 58px;
+//         }
+//         .line1, .line2 {
+//             width: 74px;
+//             // width: 5.92rem;            
+//             height: 2px;
+//             // background-color: #fff;
+//             @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+//                 width: 54px;
+//             }
+//             @media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 360px) {
+//                 width: 54px;
+//             }
+//         }
+//         .line1 {
+//             background:linear-gradient(to right, rgba(132,132,253,1), rgba(255, 255, 255, .4));
+//         }
+//         .line2 {
+//             background:linear-gradient(to left, rgba(132,132,253,1), rgba(255, 255, 255, .4));
+//         }
+//         .cq {
+//             width: 4px;
+//             height: 4px;
+//             border-radius: 50%;
+//             background-color: rgba(255, 255, 255, .7);
+//         }
+//     }
+// }
+// .wnl_history_btn {
+//     display: none !important;
+//     opacity: 0 !important;
+//     // bottom: 74px;
+// }
+// .luck {
+//     background-color: #B2D4FC;
+//     padding-top: 37px;
+//     padding-bottom: 60px;  
+//     .zyjx {
+//         .qq-text, .hq-text, .kyw-text {
+//             position: relative;
+//             color: transparent;
+//             text-shadow: 0 0 6px rgba($color: #837B70, $alpha: 1);
+//             transition: text-shadow 1s cubic-bezier(0, 1, 0, 1);
+//         }
+//     }
+//     .luckitem {
+//         position: relative;
+//         margin: 20px 10px 0;
+//         background-color: #fff;
+//         box-shadow: 0px 0px 75px 0px rgba(236, 242, 253, 1) inset;
+//         border-radius: 6px ;
+//         padding-top: 20px;
+//         padding-bottom: 31px;
+//         .nav {
+//             position: absolute;
+//             top: 22px;
+//             left: -4px;
+//             width: 99px;
+//             height: 33px;
+//             // background-image: url('../img/title-label@3x.png');
+//             @include _bg('../img/title-label', 'png');
+//             background-size: cover;
+//             text-align: center;
+//             line-height: 28px;
+//             font-size: 15px;
+//             font-weight: 600;
+//             color: #fff;
+//         }
+//         .title {
+//             position: relative;
+//             width: 110px;
+//             height: 24px;
+//             margin: 0 auto;
+//             font-family: 'font';
+//             text-align: center;
+//             padding: 0;
+//             font-size: 20px;
+//             color: #7184F5;
+//             font-weight: 700;
+//             // background: url('../img/keyword-blue-bg@3x.png') no-repeat;
+//             // background-position: 50% center;
+//             // background-size: 110px 14px;
+//             .title-bg {
+//                 position: absolute;
+//                 top: 15px;
+//                 width: 110px;
+//                 height: 14px;
+//             }
+//             // padding-bottom: 15px;
+//             // span {
+//             //     position: absolute;
+//             //     width: 100%;
+//             //     text-align: center;
+//             // }
+//             .icon {
+//                 position: absolute;
+//                 top: 9px;
+//                 left: 110px;
+//                 // display: inline-block;
+//                 width: 18px;
+//                 height: 16px;
+//                 @include _bg('../img/decline-icon', 'png');
+//                 background-size: cover;
+//                 margin-left: 5px;
+//             }
+//             .sy-icon, .gq-icon {
+//                 @include _bg('../img/rise-icon', 'png');
+//             }
+//         }
+//         .sy-title, .gq-title {
+//             color: #FF8901;
+//             // background: url('../img/keyword-yellow-bg@3x.png') no-repeat;
+//             // background-position: 50% center;
+//             // background-size: 110px 14px;      
+//         }
+//         .text {
+//             position: relative;
+//             margin-top: 20px;
+//             span {
+//                 display: inline-block;
+//                 color: transparent;
+//                 margin: 10px 35px 0;
+//                 font-size: 15px;
+//                 text-shadow: 0 0 6px rgba($color: #837B70, $alpha: .7);
+//                 transition: text-shadow 1s cubic-bezier(0, 1, 0, 1);
+//             }
+//             .btn {
+//                 position: absolute;
+//                 left: 0;
+//                 top: 0;
+//                 right: 0;
+//                 bottom: 0;
+//                 margin: auto;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 flex-direction: column;
+//                 .js {
+//                     position: relative;
+//                     width: 140px;
+//                     height: 46px;
+//                     @include _bg('../img/deblock-decline-button', 'png');
+//                     background-size: contain;
+//                     .symask, .gqmask, .cymask, .cxmask, .jkmask, .rjgxmask {
+//                         position: absolute;
+//                         top: 0;
+//                         left: 0;
+//                         right: 0;
+//                         bottom: 0;
+//                         border-radius: 8px;
+//                         background-color: rgba($color: #000000, $alpha: .1);
+//                         z-index: 10;
+//                     }
+//                 }
+//                 .sy-js, .gq-js {
+//                     @include _bg('../img/deblock-rise-button', 'png');
+//                     // background: linear-gradient(-90deg,#FCAF09,#FB9921);
+//                 }
+//                 .tip {
+//                     color: rgba($color: #7184F5, $alpha: .8);
+//                     margin-top: 5px;
+//                     font-size: 11px;
+//                 }
+//                 .sy-tip, .gq-tip {
+//                     color: rgba($color: #FF8901, $alpha: .8);
+//                 }
+//             }
+//         }
+//     }
+// }
+// .opa {
+//     opacity: 0 !important;
+// }
+// .jsbtn {
+//     bottom: 0;
+// }
+// .bottom {
+//     transition: all 10ms;
+// }

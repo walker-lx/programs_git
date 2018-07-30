@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                订单状态值说明:0 创建(待付款) 1 修改(已付款待确定) 2 删除(已删除) 3 待解答(付款之后的状态) 4 解答完成
+            </li>
+
+            <li>
+                上传数据接口  interface/CreateOrder<br />
+                参数：type  msg  price mac pushtoken userid  idfa gid
+            </li>
+            <li>
+                获取数据列表接口 interface/getlist<br />
+                参数: userid idfa gid 三个参数不能同时为空
+            </li>
+
+            <li>
+                删除订单 interface/DeleteOrder<br />
+                参数: orderid userid idfa gid
+            </li>
+            <li>
+                获取订单详细接口 interface/ShowDetail<br />
+                参数: orderid
+            </li>
+            <li>
+                得到额外信息接口 GetExtraData<br />
+                参数:orderid type(0：表示返回大师提问,如需要额外信息 1：表示返回订单解答结果)
+            </li>
+            <li>
+                上传额外信息接口;UploadExtraData<br />
+                参数:orderid  content
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

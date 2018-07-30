@@ -1,0 +1,93 @@
+<!--pages/activityEdit/activityEdit.wxml-->
+<import src='../toast/toast.wxml' />
+<template is='toast' data='{{..._toast_}}' />
+<view class='progress'>
+  <view class='item-1'></view>
+  <view class='item-2'>1</view>
+  <view class='item-3'>
+    <view class='item-3-1' style='background-color:{{bg3_1}}'></view>
+    <view class='item-3-2' style='background-color:{{bg3_2}}'></view>
+    <view class='item-3-3' style='background-color:{{bg3_3}}'></view>    
+  </view>
+  <view class='item-4'>2</view>
+  <view class='item-5'></view>  
+</view>
+ <form bindsubmit='formSubmit'> 
+  <view class='formcontent'>
+    <view class='activityname'>
+      <view class='activityname-text'>活动名称</view>
+      <view class='content' style='{{nameborder}}'>
+        <input name='nameinput' class='activityname-input' bindinput='nameinput' placeholder-style='color:#999;font-size:34rpx' placeholder='自驾、爬山、桌游...' bindfocus='namefocus' bindblur='nameblur' value='{{namevalue}}' maxlength='30'>
+        </input>
+        <image wx:if='{{valuenull}}' class='clear' src='../../img/delete-icon@2x.png' catchtap='clearvalue'></image>
+      </view>     
+    </view>
+    <view class='stime'>
+      <view class='stime-text'>开始时间</view>
+      <view class='stime-input' bindtap='showselect'>
+         <text>{{begindateyear}}年{{begindate}}</text>
+        <text class='begindatehm'>{{begindatehm}}</text> 
+      </view>
+    </view>
+    <view class='etime'>
+      <view class='etime-text'>结束时间</view>
+      <view class='etime-input' bindtap='showselect1'>
+        <text>{{enddateyear}}年{{enddate}}</text>
+        <text class='enddatehm'>{{enddatehm}}</text>
+      </view>
+    </view>
+    <button formType="submit" class='nextbtn' style='opacity:{{btnopacity}}'>下一步</button>
+  </view>
+ </form> 
+
+<!--开始时间选择器  -->
+<view wx:if='{{condition}}' class="datepickers">
+  <view class='mask' bindtap='close'></view>   
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 280px;" value="{{value}}" bindchange="bindChange" class="datebody" animation="{{animationData}}">
+    <view class="dateheader">
+      <view bindtap="close" class="date-cancel" >取消</view>
+      <view bindtap="comfired" class="date-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{month}}" wx:key="item" class='monthitem'>{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{day}}" wx:key="item" class='dayitem'>{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{hour}}" wx:key="item" class='houritem'>{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view style="line-height: 50px;padding-left:0;z-index:99999">:</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{minute}}" wx:key="item" class='minitem'>{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<!--结束时间选择器  -->
+<view wx:if='{{condition1}}' class="datepickers1">
+  <view class='mask1' bindtap='close1'></view>    
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 280px;" value="{{value1}}" bindchange="bindChange1" class="datebody1" animation="{{animationData}}">
+    <view class="dateheader1">
+      <view bindtap="close1" class="date-cancel1">取消</view>
+      <view bindtap="comfired1" class="date-true1">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{month1}}" wx:key="item" class='monthitem1'>{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{day1}}" wx:key="item" class='dayitem1'>{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{hour1}}" wx:key="item" class='houritem1'>{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view style="line-height: 50px;padding-left:0;z-index:99999">:</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{minute1}}" wx:key="item" class='minitem1'>{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

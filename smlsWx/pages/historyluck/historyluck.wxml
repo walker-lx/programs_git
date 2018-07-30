@@ -1,0 +1,35 @@
+<view class="content">
+	<view class='content_box'>
+		<view class='box_item' wx:for="{{ luckdata }}" wx:key="{{ item.id }}">
+			<view class='line1'></view>
+			<view class='line2'></view>
+			<view class='line3'></view>
+			<view class='line4'></view>
+			<view class='box_content'>
+				<view class='date'>{{ item.month }}月运势</view>
+				<view class='box_line1'></view>
+				<view class='aq'>
+					<view class='aq_text'>本月爱情运</view>
+					<view class='by_aq_icon' wx:for="{{ item.love }}" wx:key="love"></view>
+					<view class='by_aq_noicon' wx:for="{{ item.nolove }}" wx:key="love"></view>					
+				</view>
+				<view class='sy'>
+					<view class='sy_text'>本月事业运</view>
+					<view class='by_sy_icon' wx:for="{{ item.work }}" wx:key="love"></view>
+					<view class='by_sy_noicon' wx:for="{{ item.nowork }}" wx:key="love"></view>					
+				</view>
+				<view class='cf'>
+					<view class='cf_text'>本月财富运</view>
+					<view class='by_cf_icon' wx:for="{{ item.money }}" wx:key="love"></view>
+					<view class='by_cf_noicon' wx:for="{{ item.nomoney }}" wx:key="love"></view>					
+				</view>
+				<view class='lucktext'>{{ item.oneDayOneForward }}</view>
+				<view class='box_line2'></view>	
+				<view class='kyzn'>
+					<view class='kyzn_title'>开运指南</view>
+					<view class='kyzn_text'>{{ item.luckPropose }}</view>					
+				</view>			
+			</view>
+		</view>
+	</view>
+</view>

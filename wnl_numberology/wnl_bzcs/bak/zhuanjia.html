@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>易奇八字专家团</title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no,init-scale=1.0,maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <style>
+        body,html{
+            font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+        }
+        body{
+            padding: 0 !important;
+            margin: 0 !important;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-text-size-adjust:none;
+            background-color: #fff9f1;
+        }
+        .hidden{
+            display: none !important;
+        }
+        .main{
+            margin: 15px;
+        }
+        .topBanner{
+            width: 286px;
+            height: 70px;
+            background-image: url("img/zhuanjia/zjtjj-top-tit@2x.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 286px 70px;
+        }
+        .briefContent {
+            position: relative;
+            margin: 10px 0 25px;
+            background-color: #fff9f1;
+            border: 1px solid #F9D4AD;
+            padding: 15px;
+        }
+        .corner {
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            border: 1px solid #F9D4AD;
+            background-color: #fff9f1;
+        }
+        .top-left {
+            top: -1px;
+            left: -1px;
+            border-radius: 0 0 100% 0;
+            border-width: 0 1px 1px 0;
+        }
+        .top-right {
+            top: -1px;
+            right: -1px;
+            border-radius: 0 0 0 100%;
+            border-width: 0 0 1px 1px;
+        }
+        .bottom-left {
+            bottom: -1px;
+            left: -1px;
+            border-radius: 0 100% 0 0;
+            border-width: 1px 1px 0 0;
+        }
+        .bottom-right {
+            bottom: -1px;
+            right: -1px;
+            border-radius: 100% 0 0 0;
+            border-width: 1px 0 0 1px;
+        }
+        .briefTxt{
+            font-size: 12px;
+            color: #666666;
+            line-height: 1.42em;
+        }
+        .weixinTxt{
+            font-size: 13px;
+            color: #dc915b;
+            margin-top: 10px;
+        }
+        .masterContent{
+            margin-bottom: 25px;
+        }
+        .masterItem{
+            clear: both;
+            border-bottom: solid 1px #F9D4AD;
+        }
+        .masterImg{
+            float: left;
+            width: 90px;
+            height: 90px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 90px 90px;
+        }
+        .masterImg1{
+            background-image: url("img/zhuanjia/zjtjj-heard-dyq@2x.png");
+        }
+        .masterImg2{
+            background-image: url("img/zhuanjia/zjtjj-heard-ldm@2x.png");
+        }
+        .masterImg3{
+            background-image: url("img/zhuanjia/zjtjj-heard-sly@2x.png");
+        }
+        .masterImg4{
+            background-image: url("img/zhuanjia/zjtjj-heard-zhy@2x.png");
+        }
+        .masterDesc{
+            margin-left: 110px;
+        }
+        .name{
+            font-size: 13px;
+            color: #dc915b;
+            margin-top: 15px;
+        }
+        .desc{
+            font-size: 13px;
+            color: #666666;
+            line-height: 1.39em;
+            margin: 5px 0 15px;
+        }
+        .yiqi_download_banner_link{
+            display: block;
+            border: 1px solid #F9D4AD;
+            border-radius: 3px;
+            height: 44px;
+            max-width: 100%;
+            margin: 25px 15px 10px;
+            background-image: url("img/zhuanjia/zjtjj-gg-words@2x.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 195px 15px;
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 3),
+        only screen and (-o-min-device-pixel-ratio: 6/2),
+        only screen and (min--moz-device-pixel-ratio: 3),
+        only screen and (min-device-pixel-ratio: 3) {
+            .topBanner{
+                background-image: url("img/zhuanjia/zjtjj-top-tit@3x.png");
+            }
+            .masterImg1{
+                background-image: url("img/zhuanjia/zjtjj-heard-dyq@3x.png");
+            }
+            .masterImg2{
+                background-image: url("img/zhuanjia/zjtjj-heard-ldm@3x.png");
+            }
+            .masterImg3{
+                background-image: url("img/zhuanjia/zjtjj-heard-sly@3x.png");
+            }
+            .masterImg4{
+                background-image: url("img/zhuanjia/zjtjj-heard-zhy@3x.png");
+            }
+            .yiqi_download_banner_link{
+                background-image: url("img/zhuanjia/zjtjj-gg-words@3x.png");
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main" id="main">
+        <div class="topBanner hidden"></div>
+        <div class="briefContent">
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+            <div class="briefTxt">是由【广州易祈文化科技有限公司】发起，民俗文化专家【董易奇】先生带领，致力于为易学去神秘化，以现代科技演绎古老周易文明而组建的肩负实现“民族文化复兴梦”的周易大师团体。</div>
+            <div class="weixinTxt">关注我们：微信号yiqibazi</div>
+        </div>
+        <div class="masterContent">
+            <div class="masterItem">
+                <div class="masterImg masterImg1"></div>
+                <div class="masterDesc masterDesc1">
+                    <div class="name">董易奇</div>
+                    <div class="desc">国际易经民俗文化专家，“易奇八字”APP创始人，世界易经大会学术顾问。18岁被东南亚易学会授予“易学奇才”称号，22岁成为登上人民大会堂演说周易文化的国际易学代表。</div>
+                </div>
+            </div>
+            <div class="masterItem">
+                <div class="masterImg masterImg2"></div>
+                <div class="masterDesc masterDesc2">
+                    <div class="name">李东明</div>
+                    <div class="desc">岭南首席风水大师，著名周易命名学者，世界华人周易协会理事。从事易经工作十几年来，精通风水勘测、六爻预测、起名测名等，是位难得的多面型周易专家。</div>
+                </div>
+            </div>
+            <div class="masterItem">
+                <div class="masterImg masterImg3"></div>
+                <div class="masterDesc masterDesc3">
+                    <div class="name">芳宁远</div>
+                    <div class="desc">周易命名专家。曾成功为政商歌影视各界名人企业公司等进行名称策划分析，以促长足发展。主撰《南都》每周三宜居版《说名道姓》栏目，行文平实，通俗通懂，广获好评。</div>
+                </div>
+            </div>
+            <div class="masterItem">
+                <div class="masterImg masterImg4"></div>
+                <div class="masterDesc masterDesc4">
+                    <div class="name">张航语</div>
+                    <div class="desc">周易命名专家。自幼研习古典文学，精于结合诗词歌赋与当代艺术美感选字取名，在姓名学方面造诣深厚，擅长为新生儿取名、成人改名、公司企业命名、产品商标命名等。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="yiqi_download_banner_link" id="yiqi_download_banner_link" href="http://m.yiqibazi.com/?from=youlu"></a>
+    <!--<a class="yiqi_download_banner_link" id="yiqi_download_banner_link" href="https://itunes.apple.com/us/app/yi-qi-ba-zi-xing-ye-zui-re/id553106760?l=zh&ls=1&mt=8">-->
+        <!--<img class="bannerImg" src="img/zhuanjia/yiqi_download_banner.jpg" alt="易奇八字"/>-->
+    <!--</a>-->
+    <!--<script>-->
+        <!--if(navigator.userAgent.toLocaleLowerCase().indexOf("android")>-1){-->
+            <!--document.getElementById("yiqi_download_banner_link").setAttribute("href","http://wap.yiqibazi.com/download/android/all/Yiqibazi.apk");-->
+        <!--}-->
+       <!--if(document.getElementById("main").clientHeight+30+document.getElementById("yiqi_download_banner_link").clientHeight+25<window.screen.height){-->
+           <!--document.getElementById("yiqi_download_banner_link").style.position="absolute";-->
+       <!--}-->
+    <!--</script>-->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8e0b53b1de7438bdfa7a36b7a4a9ee61";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</body>
+</html>

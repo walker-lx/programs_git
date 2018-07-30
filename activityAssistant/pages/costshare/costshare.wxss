@@ -1,0 +1,105 @@
+/* pages/costshare/costshare.wxss */
+page {
+  min-height: 100%;
+  padding-bottom: 120rpx;
+}
+.sharetitle {
+  width: 460rpx;
+  height: 90rpx;
+  margin-top: 31.2rpx;
+}
+.qr {
+  position: absolute;
+  right: 30rpx;
+  top: 31.2rpx;
+  width: 190rpx;
+  height: 192rpx;
+  background-image: url('https://mobile.51wnl.com//activityAssistant/img/qr.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.accontent {
+  margin: 72rpx 30rpx;
+}
+.activitytime {
+  margin-top: 38rpx;
+  font-size: 30rpx;
+}
+.activityname {
+  margin-top: 24rpx;
+  font-size: 34rpx;
+  color: #000000;
+  text-overflow: -o-ellipsis-lastline;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical;    
+}
+.activityaddr {
+  margin-top: 24rpx;
+  font-size: 30rpx;
+}
+.count, .totalspend, .avgspend {
+  font-size: 30rpx;
+  margin-top: 24rpx;
+}
+
+.spenddetail {
+  margin: 30rpx 14rpx;
+  padding: 20rpx 16rpx;
+  background-color: #f4f2ef;
+  font-size: 30rpx;
+}
+.spendlist {
+  display: flex;
+  margin-top: 44rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+.spenditem {
+  flex: 1;
+  text-align: center;
+}
+.userspendlist {
+  display: flex;
+  height: 44rpx;
+  align-items: center;
+  margin-top: 52rpx;
+  font-size: 30rpx;
+}
+.useritem {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  text-overflow: -o-ellipsis-lastline;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical; 
+}
+.userorder, .username {
+  text-overflow: -o-ellipsis-lastline;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical; 
+}
+.userorder {
+  position: absolute;
+  left: rpx;
+  top: 4rpx;
+}
+.share {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  background-color: #ffc42f;
+}

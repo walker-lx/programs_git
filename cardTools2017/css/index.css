@@ -1,0 +1,149 @@
+@charset "UTF-8";
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0; }
+
+.public_toast {
+  padding: 10px 15px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  max-width: 260px;
+  z-index: 9999;
+  color: #FFF;
+  font-size: 13px;
+  -webkit-transform: translate3d(-50%, 100%, 0);
+  opacity: 0;
+  -webkit-transition: all linear .1s;
+  transition: all linear .1s;
+  white-space: nowrap; }
+
+.public_toast_show {
+  opacity: 1;
+  -webkit-transform: translate3d(-50%, 0, 0); }
+
+button {
+  outline: none; }
+
+.index {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background-image: url("../img/BG@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  padding-top: 114px; }
+  @media screen and (max-width: 355px) {
+    .index {
+      padding-top: 104px; } }
+  @media screen and (min-width: 412px) {
+    .index {
+      padding-top: 122px; } }
+  .index .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: box;
+    /* OLD - Android 4.4- */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    /* 09版 */
+    -webkit-box-lines: multiple;
+    /* 12版 */
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100vw;
+    min-height: 92px;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-bottom: 1px solid #EAEAEA;
+    z-index: 99999 !important; }
+    .index .top .label {
+      width: -webkit-calc((100vw - 30px - 33px) / 4);
+      height: -webkit-calc(((100vw - 30px - 33px) / 4) * (16 / 39));
+      text-align: center;
+      border: 1px solid #E7E7E7;
+      border-radius: 16px;
+      line-height: -webkit-calc(((100vw - 30px - 33px) / 4) * (16 / 39));
+      color: #333;
+      background-color: #F4F4F4;
+      font-size: 15px;
+      word-wrap: break-word; }
+      .index .top .label.choosed {
+        color: #fff;
+        background-color: #D03F3F; }
+    .index .top .label:nth-child(2),
+    .index .top .label:nth-child(3),
+    .index .top .label:nth-child(4),
+    .index .top .label:nth-child(6),
+    .index .top .label:nth-child(7),
+    .index .top .label:nth-child(8),
+    .index .top .label:nth-child(10),
+    .index .top .label:nth-child(11),
+    .index .top .label:nth-child(12) {
+      margin-left: 11px; }
+    .index .top .label:nth-child(5),
+    .index .top .label:nth-child(6),
+    .index .top .label:nth-child(7),
+    .index .top .label:nth-child(8),
+    .index .top .label:nth-child(9),
+    .index .top .label:nth-child(10),
+    .index .top .label:nth-child(11),
+    .index .top .label:nth-child(12) {
+      margin-top: 9px; }
+  .index .card {
+    width: -webkit-calc(100vw - 30px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* -webkit-overflow-scrolling: touch; */
+    margin: 0 15px; }
+    .index .card .item {
+      width: 6.9rem;
+      overflow-x: hidden;
+      background-color: #fff;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(179, 168, 168, 0.3);
+              box-shadow: 0 2px 4px 0 rgba(179, 168, 168, 0.3);
+      padding: 15px 10px;
+      margin-bottom: 10px;
+      cursor: pointer; }
+      .index .card .item .text {
+        color: #333;
+        line-height: 1.5;
+        font-size: 16px;
+        word-wrap: break-word;
+        word-break: break-all; }
+      .index .card .item .make {
+        position: relative;
+        width: 100%;
+        height: 0.6rem;
+        margin-top: 12px; }
+        .index .card .item .make .btn,
+        .index .card .item .make .copy {
+          position: absolute;
+          width: 1.84rem;
+          height: 0.6rem;
+          border-radius: 30px;
+          text-align: center;
+          line-height: 0.6rem;
+          font-size: 16px;
+          cursor: pointer; }
+        .index .card .item .make .btn {
+          right: 2rem;
+          color: #fff;
+          background-color: #E44F21; }
+        .index .card .item .make .copy {
+          right: 0;
+          color: #E44F21;
+          background-color: #fff;
+          border: 1px solid #E44F21; }

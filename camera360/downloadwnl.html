@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <style>
+    </style>
+    <script>
+        window.onload = function () {
+            var url = ''
+            var browser = {
+                isAndroid: function () {
+                    return navigator.userAgent.match(/Android/i) ? true : false;
+                },
+                isIOS: function () {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+                },
+                isWx: function () {
+                    return navigator.userAgent.match(/micromessenger/i) ? true : false;
+                },
+                isWp: function () {
+                    return ua.toLowerCase().indexOf('windows phone') > -1;
+                },
+                isWnl: function () {
+                    return ua.toLowerCase().indexOf('wnl') > -1;
+                }
+            }
+            if (browser.isIOS()) {
+                url = 'http://itunes.apple.com/cn/app/id419805549?mt=8';
+                location.href = url;
+            }
+            // else if (browser.isWx()) {
+            //     url = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.youloft.calendarpro';
+            //     location.href = url;
+            // }
+            else {
+                url = 'https://qiniu.bigdata.cq-wnl.com/20488.apk';
+                location.href = url;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="iosbg">
+        <img alt="" class="iosimg">
+    </div>
+</body>
+
+</html>

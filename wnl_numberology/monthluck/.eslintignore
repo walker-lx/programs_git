@@ -1,0 +1,7 @@
+build/*
+config/*
+dist/*
+src/helper/*
+node_modules/*
+static/libs/js/*
+.eslintcache

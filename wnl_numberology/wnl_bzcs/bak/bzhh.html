@@ -1,0 +1,249 @@
+﻿<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>八字合婚</title>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no"/>
+    <link  type="text/css" rel="stylesheet" href="mobiscroll/mobiscroll.custom-2.14.4.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="./css/bzhh.css?v=2.1">
+    <script type="text/javascript" src="scripts/jquery-fastclick.min.js"></script>
+    <script type="text/javascript" src="scripts/modal.js"></script>
+    <script type="text/javascript" src="mobiscroll/mobiscroll-2.14.4-crack.js"></script>
+    <script type="text/javascript" src="mobiscroll/i18n/mobiscroll.i18n.zh.js"></script>
+    <script type="text/javascript" src="mobiscroll/solar.js"></script>
+    <script type="text/javascript" src="scripts/base64.min.js"></script>
+    <script type="text/javascript" src="scripts/bzhh_index.js?v=2.1"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?b8f2e3f491d5451bca9c72b4e2e4334e";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+    <div class="topBanner">
+        <a class="recordLink" id="btnRecords" href="javascript:void(0)">我的测算</a>
+        <a href="javascript:void(0)" class="redirectLink"><span class="clickContent"></span></a>
+    </div>
+    <div class="main index_main">
+        <div class="maleInfoContent">
+            <div class="inputContent">
+                <div class="inputLine nameConent">
+                    <div class="titleContent">男方姓名</div>
+                    <div class="controlContent">
+                        <input class="maleNameTxt" type="text" id="maleNameTxt" placeholder="点击输入">
+                    </div>
+                    <!--<div class="arrowContent1"></div>-->
+                    <div class="placeholder"></div>
+                </div>
+                <div class="inputLine birthContent">
+                    <div class="titleContent">出生日期</div>
+                    <div class="controlContent">
+                        <input type="text" id="maleBornInput" placeholder="点击选择"/>
+                    </div>
+                    <div class="arrowContent1"></div>
+                    <div class="placeholder"></div>
+                </div>
+                <div class="inputLine timeContent">
+                    <div class="titleContent">出生时间</div>
+                    <div class="controlContent">
+                        <div class="ui-select bornTime">
+                            <span class="bornTimeTxt" id="maleBirthHourUI">时间</span>
+                            <select name="select-native" id="maleBirthHour">
+                                <!--<option value="-1">请选择</option>-->
+                                <option value="24">不清楚</option>
+                                <option value="00">0时</option>
+                                <option value="01">1时</option>
+                                <option value="02">2时</option>
+                                <option value="03">3时</option>
+                                <option value="04">4时</option>
+                                <option value="05">5时</option>
+                                <option value="06">6时</option>
+                                <option value="07">7时</option>
+                                <option value="08">8时</option>
+                                <option value="09">9时</option>
+                                <option value="10">10时</option>
+                                <option value="11">11时</option>
+                                <option value="12">12时</option>
+                                <option value="13">13时</option>
+                                <option value="14">14时</option>
+                                <option value="15">15时</option>
+                                <option value="16">16时</option>
+                                <option value="17">17时</option>
+                                <option value="18">18时</option>
+                                <option value="19">19时</option>
+                                <option value="20">20时</option>
+                                <option value="21">21时</option>
+                                <option value="22">22时</option>
+                                <option value="23">23时</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="arrowContent1"></div>
+                    <div class="placeholder"></div>
+                </div>
+            </div>
+        </div>
+        <div class="femaleInfoContent">
+            <div class="inputContent">
+                <div class="inputLine nameConent">
+                    <div class="titleContent">女方姓名</div>
+                    <div class="controlContent">
+                        <input class="maleNameTxt" type="text" id="femaleNameTxt" placeholder="点击输入">
+                    </div>
+                    <!--<div class="arrowContent1"></div>-->
+                    <div class="placeholder"></div>
+                </div>
+                <div class="inputLine birthContent">
+                    <div class="titleContent">出生日期</div>
+                    <div class="controlContent">
+                        <input type="text" id="femaleBornInput" placeholder="点击选择"/>
+                    </div>
+                    <div class="arrowContent1"></div>
+                    <div class="placeholder"></div>
+                </div>
+                <div class="inputLine timeContent">
+                    <div class="titleContent">出生时间</div>
+                    <div class="controlContent">
+                        <div class="ui-select bornTime">
+                            <span class="bornTimeTxt" id="femaleBirthHourUI">时间</span>
+                            <select name="select-native" id="femaleBirthHour">
+                                <!--<option value="-1">请选择</option>-->
+                                <option value="24">不清楚</option>
+                                <option value="00">0时</option>
+                                <option value="01">1时</option>
+                                <option value="02">2时</option>
+                                <option value="03">3时</option>
+                                <option value="04">4时</option>
+                                <option value="05">5时</option>
+                                <option value="06">6时</option>
+                                <option value="07">7时</option>
+                                <option value="08">8时</option>
+                                <option value="09">9时</option>
+                                <option value="10">10时</option>
+                                <option value="11">11时</option>
+                                <option value="12">12时</option>
+                                <option value="13">13时</option>
+                                <option value="14">14时</option>
+                                <option value="15">15时</option>
+                                <option value="16">16时</option>
+                                <option value="17">17时</option>
+                                <option value="18">18时</option>
+                                <option value="19">19时</option>
+                                <option value="20">20时</option>
+                                <option value="21">21时</option>
+                                <option value="22">22时</option>
+                                <option value="23">23时</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="arrowContent1"></div>
+                    <div class="placeholder"></div>
+                </div>
+            </div>
+        </div>
+        <a class="confirmBtn" id="btnMeasure" href="javascript:void(0)">
+            <div class="titleTxt1">开始测算</div>
+            <div class="leftRadius1"></div>
+            <div class="rightRadius1"></div>
+        </a>
+        <div class="contactLine">
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+            <span class="contactTip">测算答疑: </span>
+            <span class="contactTxt">QQ 1254836806 &nbsp&nbsp&nbsp 电话 020-28965013</span>
+        </div>
+        <div class="descContent1">
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+            <div class="descWrapper">
+                <div class="leftDescContent">
+                    <div class="descItemLine">
+                        <div class="descItemIcon"></div>
+                        <div class="descItemTxt">婚后幸福指数</div>
+                    </div>
+                    <div class="descItemLine">
+                        <div class="descItemIcon"></div>
+                        <div class="descItemTxt">婚外情指数</div>
+                        <div class="descItemHot"></div>
+                    </div>
+                    <div class="descItemLine">
+                        <div class="descItemIcon"></div>
+                        <div class="descItemTxt">互帮互助指数</div>
+                    </div>
+                    <div class="descItemLine">
+                        <div class="descItemIcon"></div>
+                        <div class="descItemTxt">老婆旺夫指数</div>
+                    </div>
+                    <div class="descItemLine">
+                        <div class="descItemIcon"></div>
+                        <div class="descItemTxt">家庭和睦指数</div>
+                    </div>
+                </div>
+                <div class="rightDescContent">
+                    <div class="descItemLine">
+                        <div class="descItemIcon"></div>
+                        <div class="descItemTxt">婚姻稳定指数</div>
+                    </div>
+                    <div class="descItemLine">
+                        <div class="descItemIcon"></div>
+                        <div class="descItemTxt">心灵默契指数</div>
+                    </div>
+                    <div class="descItemLine">
+                        <div class="descItemIcon"></div>
+                        <div class="descItemTxt">老公旺妻指数</div>
+                    </div>
+                    <div class="descItemLine">
+                        <div class="descItemIcon"></div>
+                        <div class="descItemTxt">子女衰旺指数</div>
+                        <div class="descItemHot"></div>
+                    </div>
+                    <div class="descItemLine">
+                        <div class="descItemIcon"></div>
+                        <div class="descItemTxt">月下老人总评</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="yiqiDesc">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+        <div class="descLine">易奇八字专家团倾力打造 <a class="zhuanjiaLink" href="zhuanjia.html">查看专家团简介</a></div>
+    </div>
+    <a class="wnlBannerLink pabsolute hidden" href="javascript:void(0)">
+        <div class="downIcon"></div>
+        <div class="downTxt">
+            <div class="txtContainer">
+                <div class="txtWrapper">
+                    <img class="downTxtImg" src="img/ad-ww@3x.png" alt="万年历下载">
+                </div>
+            </div>
+        </div>
+        <div class="downBtnImg"></div>
+    </a>
+    <div class="mask hidden"></div>
+    <div id="tipModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <div class="showString"></div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn dismissBtn" data-dismiss="modal" aria-hidden="true">确定</button>
+        </div>
+    </div>
+</body>
+</html>

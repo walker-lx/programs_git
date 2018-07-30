@@ -1,0 +1,456 @@
+<!--塔罗运势首页-->
+<view class="container {{fix}}">
+  <view class="top">
+    <image src="{{cardsrc}}" class="img" animation="{{animation1}}"></image>
+    <!-- <image src="{{cardsrc1}}" class="img" wx:if="{{tarothide}}"></image>     -->
+    <view class="desc" wx:if="{{showcard}}" bindtap="getCard">
+      <view class="text text1">每日塔罗</view>
+      <view class="text text2">你今日的专属塔罗提示！</view>
+      <view class="text text3">点击获取</view>      
+    </view>
+    <view class="desc1" wx:if="{{hidecard}}" bindtouchstart="getDesc">
+      <view class="text text1">牌名: {{tarotname}} （{{tarotup}}）</view>
+      <view class="text text2">关键词： {{tarotkey}}</view>
+      <view class="text text3">星座： {{tarotxz}}</view>   
+      <view class="text text4">元素： {{tarotys}}</view>   
+      <image src="../img/more@2x.png" class="more"></image>                  
+    </view>
+  </view>
+
+  <view class="getluck">       
+    <view class="person" bindtap="{{getmore}}">
+      <view class="tip">{{hello}}{{user_name}}，{{tiptext}}</view>
+      <view class="date">{{t}}</view>
+      <view class="weekday">{{week}}</view>
+      <!-- <view class="xz" style="background-image: url('../img/Aries@2x.png')"> -->
+      <view class="xz" style="background-image: url('{{xzbg}}')">      
+        <view class="xz_name">{{test}}</view>
+        <view class="xz_date">{{time}}</view>        
+      </view>
+      <view class="xz_desc">{{xzdesc}}</view>
+      <view class="line"></view>
+      <view class="zs">
+        <view class="same gq">
+          <view class="gq_name">感情指数</view>
+          <view class="pic gq_zs">
+            <image src="../img/calendar-love-s{{gq1}}-icon@2x.png" class="photo gq1"></image>
+            <image src="../img/calendar-love-s{{gq2}}-icon@2x.png" class="photo gq2"></image>
+            <image src="../img/calendar-love-s{{gq3}}-icon@2x.png" class="photo gq3"></image>
+            <image src="../img/calendar-love-s{{gq4}}-icon@2x.png" class="photo gq4"></image>
+            <image src="../img/calendar-love-s{{gq5}}-icon@2x.png" class="photo gq5"></image>            
+          </view>          
+        </view>
+        <view class="same cf">
+          <view class="cf_name">财富指数</view>
+          <view class="pic cf_zs">
+            <image src="../img/calendar-money-s{{cf1}}-icon@2x.png" class="photo cf1"></image>
+            <image src="../img/calendar-money-s{{cf2}}-icon@2x.png" class="photo cf2"></image>
+            <image src="../img/calendar-money-s{{cf3}}-icon@2x.png" class="photo cf3"></image>
+            <image src="../img/calendar-money-s{{cf4}}-icon@2x.png" class="photo cf4"></image>
+            <image src="../img/calendar-money-s{{cf5}}-icon@2x.png" class="photo cf5"></image>
+          </view> 
+        </view>
+        <view class="same gz">
+          <view class="gz_name">工作指数</view>
+          <view class="pic gz_zs">
+            <image src="../img/calendar-work-s{{gz1}}-icon@2x.png" class="photo gz1"></image>
+            <image src="../img/calendar-work-s{{gz2}}-icon@2x.png" class="photo gz2"></image>
+            <image src="../img/calendar-work-s{{gz3}}-icon@2x.png" class="photo gz3"></image>
+            <image src="../img/calendar-work-s{{gz4}}-icon@2x.png" class="photo gz4"></image>
+            <image src="../img/calendar-work-s{{gz5}}-icon@2x.png" class="photo gz5"></image>
+          </view> 
+        </view>       
+      </view>
+    </view>
+    <image src="{{bgsrc1}}" class="userbg"></image>
+    <view class="shadow"></view>
+  </view>
+
+    <view class="goodluck" bindtap="getmonth">
+        <view class="sevenluck">7天佳运预览</view>
+        <view class="day">
+          <view class="data d1">
+            <view class="dayluck">
+               <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[0].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[0].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[0].workshow}}"></image>
+               <view class="none" hidden="{{array[0].lucknone}}"></view>                                             
+            </view>
+            <view class="daytime">今天</view>
+          </view>
+          <view class="data d2">
+            <view class="dayluck">
+               <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[1].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[1].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[1].workshow}}"></image>
+               <view class="none" hidden="{{array[1].lucknone}}"></view>               
+            </view>
+            <view class="daytime">明天</view>
+          </view>
+          <view class="data d3">
+            <view class="dayluck">
+               <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[2].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[2].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[2].workshow}}"></image>
+               <view class="none" hidden="{{array[2].lucknone}}"></view>               
+            </view>
+            <view class="daytime">{{day3}}</view>
+          </view>
+          <view class="data d4">
+            <view class="dayluck">
+               <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[3].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[3].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[3].workshow}}"></image>
+               <view class="none" hidden="{{array[3].lucknone}}"></view>              
+            </view>
+            <view class="daytime">{{day4}}</view>
+          </view>
+          <view class="data d5">
+            <view class="dayluck">
+               <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[4].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[4].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[4].workshow}}"></image>
+               <view class="none" hidden="{{array[4].lucknone}}"></view>               
+            </view>
+            <view class="daytime">{{day5}}</view>
+          </view>
+          <view class="data d6">
+            <view class="dayluck">
+               <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[5].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[5].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[5].workshow}}"></image>
+               <view class="none" hidden="{{array[5].lucknone}}"></view>               
+            </view>
+            <view class="daytime">{{day6}}</view>
+          </view>
+          <view class="data d7">
+            <view class="dayluck">
+               <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[6].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[6].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[6].workshow}}"></image>
+               <view class="none" hidden="{{array[6].lucknone}}"></view>               
+            </view>
+            <view class="daytime">{{day7}}</view>
+          </view>          
+        </view> 
+    </view>
+    <view class="scan" bindtap="{{getmore}}">
+     <view class="luckscan week1">
+      <view class="lucky">运势概括</view>
+      <canvas canvas-id="luckcanvas" class="canvas"></canvas>                              
+      <view class="luckweekdesc">{{luckavg}}</view>
+      </view> 
+
+      <view class="luckscan week2">
+        <view class="lucky gqy">感情运</view>
+        <canvas canvas-id="gqcanvas" class="canvas"></canvas>                            
+        <view class="luckweekdesc gqydesc">{{luckgqy}}</view>
+      </view> 
+
+      <view class="luckscan week3">
+        <view class="lucky cfy">财富运</view>
+        <canvas canvas-id="cfcanvas" class="canvas"></canvas>                            
+        <view class="luckweekdesc cfydesc">{{luckcfy}}</view>
+      </view> 
+
+      <view class="luckscan week4">
+        <view class="lucky gzy">工作运</view>
+        <canvas canvas-id="gzcanvas" class="canvas"></canvas>                            
+        <view class="luckweekdesc gzydesc">{{luckgzy}}</view>
+      </view> 
+    </view>
+</view>
+
+<!-- 底部banner   -->
+    <!-- <view class="banner">
+      <view class="xzbtn" bindtap="xzindex">
+        <image src="../img/tab-cece-icon@2x.png"></image>
+        <view class="xztext" >星座</view>    
+      </view>
+      <view class="mebtn" bindtap="xzme">
+        <image src="../img/tab-mine-icon2@2x.png"></image>
+        <view class="" >我</view>    
+      </view>
+    </view>   -->
+
+<!--获取月运势  -->
+      <view class="showmonth" wx:if="{{showmon}}"></view>
+      <view class="monthluck" wx:if="{{showmon}}">
+          <view class="sevenluck">28天好运日历</view>
+          <view class="day">
+            <view class="data d1">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[0].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[0].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[0].workshow}}"></image>
+               <view class="none" hidden="{{array[0].lucknone}}"></view>                                                         
+              </view>
+              <view class="daytime">今天</view>
+            </view>
+            <view class="data d2">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[1].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[1].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[1].workshow}}"></image>
+               <view class="none" hidden="{{array[1].lucknone}}"></view>                           
+              </view>
+              <view class="daytime">明天</view>
+            </view>
+            <view class="data d3">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[2].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[2].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[2].workshow}}"></image>
+               <view class="none" hidden="{{array[2].lucknone}}"></view>                           
+              </view>
+              <view class="daytime">{{day3}}</view>
+            </view>
+            <view class="data d4">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[3].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[3].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[3].workshow}}"></image>
+               <view class="none" hidden="{{array[3].lucknone}}"></view>                           
+              </view>
+              <view class="daytime">{{day4}}</view>
+            </view>
+            <view class="data d5">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[4].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[4].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[4].workshow}}"></image>
+               <view class="none" hidden="{{array[4].lucknone}}"></view>                           
+              </view>
+              <view class="daytime">{{day5}}</view>
+            </view>
+            <view class="data d6">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[5].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[5].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[5].workshow}}"></image>
+               <view class="none" hidden="{{array[5].lucknone}}"></view>                           
+              </view>
+              <view class="daytime">{{day6}}</view>
+            </view>
+            <view class="data d7">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[6].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[6].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[6].workshow}}"></image>
+               <view class="none" hidden="{{array[6].lucknone}}"></view>                           
+              </view>
+              <view class="daytime">{{day7}}</view>
+            </view>          
+          </view> 
+          <view class="day">
+            <view class="data d8">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[7].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[7].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[7].workshow}}"></image>
+               <view class="none" hidden="{{array[7].lucknone}}"></view>                                              
+              </view>
+              <view class="daytime">{{day8}}</view>
+            </view>
+            <view class="data d9">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[8].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[8].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[8].workshow}}"></image>
+               <view class="none" hidden="{{array[8].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day9}}</view>
+            </view>
+            <view class="data d10">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[9].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[9].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[9].workshow}}"></image>
+               <view class="none" hidden="{{array[9].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day10}}</view>
+            </view>
+            <view class="data d11">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[10].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[10].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[10].workshow}}"></image>
+               <view class="none" hidden="{{array[10].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day11}}</view>
+            </view>
+            <view class="data d12">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[11].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[11].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[11].workshow}}"></image>
+               <view class="none" hidden="{{array[11].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day12}}</view>
+            </view>
+            <view class="data d13">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[12].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[12].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[12].workshow}}"></image>
+               <view class="none" hidden="{{array[12].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day13}}</view>
+            </view>
+            <view class="data d14">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[13].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[13].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[13].workshow}}"></image>
+               <view class="none" hidden="{{array[13].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day14}}</view>
+            </view>     
+          </view>
+          <view class="day">
+            <view class="data d15">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[14].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[14].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[14].workshow}}"></image>
+               <view class="none" hidden="{{array[14].lucknone}}"></view>                                              
+              </view>
+              <view class="daytime">{{day15}}</view>
+            </view>
+            <view class="data d16">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[15].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[15].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[15].workshow}}"></image>
+               <view class="none" hidden="{{array[15].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day16}}</view>
+            </view>
+            <view class="data d17">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[16].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[16].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[16].workshow}}"></image>
+               <view class="none" hidden="{{array[16].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day17}}</view>
+            </view>
+            <view class="data d18">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[17].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[17].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[17].workshow}}"></image>
+               <view class="none" hidden="{{array[17].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day18}}</view>
+            </view>
+            <view class="data d19">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[18].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[18].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[18].workshow}}"></image>
+               <view class="none" hidden="{{array[18].lucknone}}"></view>              
+              </view>
+              <view class="daytime">{{day19}}</view>
+            </view>
+            <view class="data d20">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[19].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[19].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[19].workshow}}"></image>
+               <view class="none" hidden="{{array[19].lucknone}}"></view>               
+              </view>
+              <view class="daytime">{{day20}}</view>
+            </view>
+            <view class="data d21">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[20].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[20].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[20].workshow}}"></image>
+               <view class="none" hidden="{{array[20].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day21}}</view>
+            </view>            
+          </view>
+          <view class="day">
+            <view class="data d22">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[21].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[21].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[21].workshow}}"></image>
+               <view class="none" hidden="{{array[21].lucknone}}"></view>                                              
+              </view>
+              <view class="daytime">{{day22}}</view>
+            </view>
+            <view class="data d23">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[22].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[22].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[22].workshow}}"></image>
+               <view class="none" hidden="{{array[22].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day23}}</view>
+            </view>
+            <view class="data d24">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[23].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[23].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[23].workshow}}"></image>
+               <view class="none" hidden="{{array[23].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day24}}</view>
+            </view>
+            <view class="data d25">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[24].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[24].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[24].workshow}}"></image>
+               <view class="none" hidden="{{array[24].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day25}}</view>
+            </view>
+            <view class="data d26">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[25].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[25].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[25].workshow}}"></image>
+               <view class="none" hidden="{{array[25].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day26}}</view>
+            </view>
+            <view class="data d27">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[26].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[26].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[26].workshow}}"></image>
+               <view class="none" hidden="{{array[26].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day27}}</view>
+            </view>
+            <view class="data d28">
+              <view class="dayluck">
+                <image src="../img/calendar-love-s-icon@3x.png" hidden="{{array[27].loveshow}}"></image> 
+               <image src="../img/calendar-money-s-icon@3x.png" hidden="{{array[27].cfshow}}"></image>
+               <image src="../img/calendar-work-s-icon@3x.png" hidden="{{array[27].workshow}}"></image>
+               <view class="none" hidden="{{array[27].lucknone}}"></view>                
+              </view>
+              <view class="daytime">{{day28}}</view>
+            </view>            
+          </view>
+
+          <view class="luckdesc">
+            <view class="luckgq">
+              <image src="../img/calendar-love-s-icon@3x.png"></image>
+              <text>感情运佳，适合约会玩乐</text>
+            </view>
+            <view class="luckcf">
+              <image src="../img/calendar-money-s-icon@3x.png"></image>
+              <text>财富运佳，或许有意外惊喜额</text>
+            </view>
+            <view class="luckgz">
+              <image src="../img/calendar-work-s-icon@3x.png"></image>
+              <text>工作运佳，努力主动争取</text>
+            </view>
+          </view>
+      <view class="hide" wx:if="{{showmon}}"><image src="../img/constellation-calendar-close-icon@2x.png" class="close" bindtouchstart="closed"></image></view>                          
+      </view>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>紫微斗数</title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=320px, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<a class="wnlBannerLink hidden" href="javascript:void(0)">
+    <div class="downIcon"></div>
+    <div class="downTxt">
+        <div class="txtContainer">
+            <div class="txtWrapper">
+                <img class="downTxtImg" src="img/AD-ww08@3x.png" alt="万年历下载">
+            </div>
+        </div>
+    </div>
+    <div class="downBtnImg"></div>
+</a>
+<div class="top">
+    <a href="javascript:void(0)" class="backBtn1"></a>
+    <div class="title1">填写信息</div>
+</div>
+<div class="main">
+    <div class="mainContent">
+        <div class="descTitle">
+            <span class="leftDesc">基本信息</span>
+            <span class="rightDesc">请确保信息的真实性</span>
+        </div>
+        <div class="inputContent">
+            <input type="text" class="nameTxt" placeholder="姓名"/>
+            <div class="ui-select sexUISelect">
+                <span>性别</span>
+                <select name="select-native"  class="sexSelect">
+                    <option value="-1">请选择</option>
+                    <option value="0">男</option>
+                    <option value="1">女</option>
+                </select>
+            </div>
+        </div>
+        <div class="inputContent">
+            <div class="ui-select bornDateUISelect">
+                <span>出生日期</span>
+            </div>
+            <div class="ui-select bornTimeUISelect">
+                <span>时间</span>
+                <select name="select-native"  class="bornTimeSelect">
+                    <option value="-1">请选择</option>
+                </select>
+            </div>
+        </div>
+        <div class="inputContent">
+            <input type="text" class="ethnicTxt" placeholder="民族"/>
+            <div class="ui-select marriageUISelect">
+                <span>婚否</span>
+                <select name="select-native" class="marriageSelect">
+                    <option value="-1">请选择</option>
+                    <option value="0">已婚</option>
+                    <option value="1">未婚</option>
+                </select>
+            </div>
+        </div>
+        <div class="inputContent last">
+            <textarea class="familyTxa"  placeholder="家庭状况" placeholdernl>
+提示：家庭成员出生信息，如：
+父亲，王五，男，公历1960年1月1日21时
+母亲，陈花，女，公历1965年6月3日11时
+            </textarea>
+        </div>
+        <div class="ziweiCategory">
+            <input type="button" class="weishiBtn active" value="紫微问事"/>
+            <input type="button" class="quanmingBtn" value="紫微全命"/>
+            <input type="button" class="jingzhuangBtn" value="紫微精装"/>
+        </div>
+        <div class="descTitle bottomBorder">
+            <span class="leftDesc purposeTxt">紫微斗数/紫微问事</span>
+            <span class="rightDesc purposePrice">¥98</span>
+        </div>
+        <div class="inputContent purposeContent">
+            <div class="ui-select purposeUISelect">
+                <span>请选择您所问项目</span>
+                <select name="select-native"  class="purposeSelect">
+                    <option value="-1">请选择</option>
+                    <option value="B11">单项预测投资</option>
+                    <option value="B12">单项预测事业</option>
+                    <option value="B13">单项预测婚姻</option>
+                    <option value="B14">单项预测家庭</option>
+                    <option value="B16">单项预测财运</option>
+                    <option value="B17">单项预测考学</option>
+                    <option value="B18">单项预测合作</option>
+                    <option value="B19">单项预测健康</option>
+                    <option value="B110">单项预测置业</option>
+                    <option value="B111">单项预测出行</option>
+                    <option value="B15">合婚</option>
+                </select>
+            </div>
+        </div>
+        <div class="descTitle">
+            <span class="leftDesc">期限</span>
+            <span class="rightDesc">所决策的事项若有时间限制(如考学)请说明</span>
+        </div>
+        <div class="ui-select beginLimitDateUISelect">
+            <span>开始日期</span>
+        </div>
+        <div class="ui-select endLimitDateUISelect">
+            <span>结束日期</span>
+        </div>
+        <textarea class="otherTxa" placeholder="其他要求"></textarea>
+    </div>
+    <div class="resultTip" style="font-size: 12px;color: #7d7d7d;width: 100%;text-align: center;margin: 10px 0 0">
+        订单提交后不可修改，请确认后提交
+    </div>
+    <div class="resultTip" style="font-size: 12px;color: #7d7d7d;width: 100%;text-align: center;margin: 0">
+        测算结果会在付款后三个工作日之内回复，请耐心等待
+    </div>
+    <input type="button" class="confirmBtn ziweiConfirm" value="确定"/>
+</div>
+<div id="tipModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-body">
+        <div class="showString"></div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn dismissBtn" data-dismiss="modal" aria-hidden="true">确定</button>
+    </div>
+</div>
+<div id="datePickModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-body">
+        <div class="descTitle">
+            <span class="leftDesc">选择日期</span>
+            <div class="lunarSelectContent">
+                <input class="lunarBtn" type="button" value="阴历"/>
+                <input class="solarBtn active" type="button" value="阳历"/>
+            </div>
+        </div>
+        <div class="datePickContent">
+            <div class="sDateContent">
+                <div class="ui-select sYearUISelect">
+                    <span class="selectTxt">年</span>
+                    <select name="select-native" class="sYearSelect"></select>
+                </div>
+                <div class="ui-select sMonthUISelect">
+                    <span class="selectTxt">月</span>
+                    <select name="select-native" class="sMonthSelect"></select>
+                </div>
+                <div class="ui-select sDayUISelect">
+                    <span class="selectTxt">日</span>
+                    <select name="select-native" class="sDaySelect"></select>
+                </div>
+            </div>
+            <div class="lDateContent hidden">
+                <div class="ui-select lYearUISelect">
+                    <span class="selectTxt">年</span>
+                    <select name="select-native" class="lYearSelect"></select>
+                </div>
+                <div class="ui-select lMonthUISelect">
+                    <span class="selectTxt">月</span>
+                    <select name="select-native" class="lMonthSelect"></select>
+                </div>
+                <div class="ui-select lDayUISelect">
+                    <span class="selectTxt">日</span>
+                    <select name="select-native" class="lDaySelect"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn dismissBtn pickConfirmBtn" data-dismiss="modal" aria-hidden="true">确定</button>
+    </div>
+</div>
+<div class="mask hidden"></div>
+<script>
+    var title="万年历的在线命理很准的哦，小伙伴们也快来试一下";
+    var textObj = {
+        text: title,
+        image: "1",
+        url:location.href,
+        pureText:title,
+        prefix:""
+    };
+    var textObj1={
+        text: title,
+        image: "1",
+        targetUrl:location.href,
+        perfix:""
+    };
+    function appCallback_share(){
+        try{
+            if(window.ylwindow){
+                ylwindow.reportHasShare(true);
+                location.href="protocol://share:" + encodeURI(JSON.stringify(textObj1));
+            }
+            else{
+                location.href="protocol://share#" + encodeURI(JSON.stringify(textObj));
+            }
+        }
+        catch (e){}
+        return 1;
+    }
+</script>
+<script type="text/javascript" src="js/jquery-fastclick.min.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/kernelCalendar.js"></script>
+<script type="text/javascript" src="js/ziwei.js"></script>
+</body>
+</html>

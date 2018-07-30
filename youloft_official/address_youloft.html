@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="重庆优路科技有限公司">
+    <meta name="description" content="优路科技 | 创新助力生活">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=fR1fKK1u7PudWSYVQpZVQ9SG"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="apple-touch-icon" href="favicon-180-precomposed.png">
+    <link rel="Bookmark" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <title>公司地址</title>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+
+        .map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map" id="map"> </div>
+    <script type="text/javascript">
+        // 百度地图API功能
+        var map = new BMap.Map("map");
+        var poi = new BMap.Point(106.5073, 29.613723);
+        map.centerAndZoom(poi, 16);
+        map.enableScrollWheelZoom();
+        map.setCurrentCity("重庆");
+        var content = '优路科技有限公司';
+
+        //创建检索信息窗口对象
+        var searchInfoWindow = null;
+        searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+            title: "优路科技有限公司", //标题
+            width: 290, //宽度
+            height: 55, //高度
+            panel: "panel", //检索结果面板
+            enableAutoPan: false, //自动平移
+            searchTypes: [
+                BMAPLIB_TAB_SEARCH, //周边检索
+                BMAPLIB_TAB_TO_HERE, //到这里去
+                BMAPLIB_TAB_FROM_HERE //从这里出发
+            ]
+        });
+        var marker = new BMap.Marker(poi); //创建marker对象
+        marker.enableDragging(); //marker可拖拽
+        marker.addEventListener("click", function (e) {
+            searchInfoWindow.open(marker);
+        });
+        map.addOverlay(marker); //在地图中添加marker
+        //            window.setTimeout(function(){ map.panBy(305,165);}, 1000);
+    </script>
+   
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+@mixin bgImg($url){
+    background-image: url($url + '@2x.png');
+    @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+      background-image: url($url + '@3x.png');
+    }
+}
+
+@mixin border-1px($color,$top:0) {
+  position: relative;
+  &:after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: $top;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid $color;
+    color: $color;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    // -webkit-box-sizing: border-box;
+    // -moz-box-sizing: border-box;
+    // box-sizing: border-box;
+  }
+}
+body, html {
+	font-family: -apple-system, "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+html {
+	font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+	-webkit-overflow-scrolling : touch;
+}
+body, div, img {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(41, 33, 66);
+	color: #fff;
+}
+.hidden {
+	display: none !important;
+}
+a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+.appicon {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin: 52px auto 16px;
+	@include bgImg('../assets/icon');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.appversion {
+	text-align: center;
+}
+.contact {
+	margin-top: 50px;
+	padding-left: 85px;
+	font-size: 15px;
+	.twitter {
+		padding-left: 28px;
+		@include bgImg('../assets/twitterline-icon');
+		background-repeat: no-repeat;
+		background-position: 0 center;
+		background-size: 19px 15px;
+	}
+	.mail {
+		margin-top: 26px;
+		padding-left: 28px;
+		@include bgImg('../assets/email-icon');
+		background-repeat: no-repeat;
+		background-position: 0 center;
+		background-size: 18px 15px;
+	}
+}
+.foot {
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
+	font-size: 15px;
+	.companyname, .companyinfo {
+		text-align: center
+	}
+	.companyinfo {
+		margin-top: 10px;
+		font-size: 11px;
+		opacity: .5;
+	}
+}
+
+
+

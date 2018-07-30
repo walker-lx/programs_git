@@ -1,0 +1,59 @@
+/* pages/addspend/addspend.wxss */
+page {
+  min-height: 100%;
+}
+.content {
+  margin: 31.2rpx 30rpx 0;
+}
+.section {
+  margin-bottom: 44rpx;
+}
+.section-text, .section-user, .section-spend {
+  font-size: 30rpx;
+  color: #777;
+  margin-left: 20rpx;
+}
+.textinput, .userinput, .spendinput {
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  border: 1rpx solid #eaeaea;
+  margin-top: 20rpx;  
+}
+.textinput input, .userinput input, .spendinput input {
+  width: 85%; 
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 20rpx;
+}
+.delete {
+  width: 44rpx;
+  height: 44rpx;
+  align-self: center;
+  margin-left: 20rpx;  
+  background-image: url('https://mobile.51wnl.com/activityAssistant/img/delete-icon@2x.png');
+  background-size: 44rpx 44rpx;
+  z-index: 9999;  
+}
+.btn {
+  display: flex;
+  justify-content: space-between;
+  font-size: 34rpx;
+}
+.cancel, .confirm {
+  width: 282rpx;
+  height: 100rpx;
+  border-radius: 0;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 100rpx;
+}
+.cancel {
+  border: 1rpx solid #ffc42f;
+  color: #ffc42f;
+}
+.confirm {
+  border: 1rpx solid #ffc42f;  
+  color: #fff;
+  background-color: #ffc42f;
+}

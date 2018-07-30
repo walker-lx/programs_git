@@ -1,0 +1,66 @@
+/**app.wxss**/
+
+/* @font-face {
+  font-family: 'zidingyi';
+  src: url('https://mobile.51wnl.com/numberology/lyys/font/zidingyi.eot');
+  src: url('https://mobile.51wnl.com/numberology/lyys/font/zidingyi.eot?#font-spider') format('embedded-opentype'),
+         url('https://mobile.51wnl.com/numberology/lyys/font/zidingyi.woff') format('woff'),
+         url('https://mobile.51wnl.com/numberology/lyys/font/zidingyi.ttf') format('truetype'),
+         url('https://mobile.51wnl.com/numberology/lyys/font/zidingyi.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'zidingyi2';
+  src: url('https://mobile.51wnl.com/numberology/bzcs/font/zidingyi2.eot');
+  src: url('https://mobile.51wnl.com/numberology/bzcs/font/zidingyi2.eot?#font-spider') format('embedded-opentype'),
+         url('https://mobile.51wnl.com/numberology/bzcs/font/zidingyi2.woff') format('woff'),
+         url('https://mobile.51wnl.com/numberology/bzcs/font/zidingyi2.ttf') format('truetype'),
+         url('https://mobile.51wnl.com/numberology/bzcs/font/zidingyi2.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/*  button  */
+
+.historyBtnScroll {
+  bottom: 65px !important;
+}
+
+.historyBtn {
+  font-size: 32rpx;
+  line-height: 76rpx;
+  position: fixed;
+  box-sizing: border-box;
+  text-align: right;
+  z-index: 1000;
+  right: 30rpx;
+  width: 224rpx;
+  bottom: 20rpx;
+  border-radius: 40rpx;
+  height: 76rpx;
+  /* -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); */
+  background-color: rgba(96, 96, 96, 0.95);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-decoration: none;
+  /* padding: 12px; */
+  padding-right: 30rpx;
+  transition: bottom 0.6s ease-in-out;
+}
+
+.historyBtn::before {
+  content: "";
+  position: absolute;
+  z-index: 1000;
+  left: 30rpx;
+  top: 24rpx;
+  width: 24rpx;
+  height: 30rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAtCAYAAADGD8lQAAAB+UlEQVR4Ae2WNYwdMRCGw9hLYa7SpU0v2Q4zM3bBOoxNeL0bpi7UB/s+nF6hY+a7uRn5nvXegjS790g6W5rFf//5nunNqCwNArUEPPEePNmMZygMfKblO9KMGm6DByvnQyC3gK9Oo+lZE+ok6FWLCmC06LEAiSG786EgWDETfY9ZX8xBuShnFOTeyimYOEg017Id7qrFpDU9I4AZ742/mI7XdYk6yv1851QLhAk/MszPGa1oSgHUOOR/mNGjnwBgNIn388zVPtND8hcbCLUGaJlk6X1xgDMEbaDFfXi5cawxl2fZQKi1o+CJq4zefU/CupDJG5M8vsG9Q+NR84oB84q0iT6Yg3KFvqsbFfurGA308qWoPU76UByndzyPaG/zgYrfHJADqjwQ3Fs5x64sXhwHb9nc4gNZGLux8YO+QajiA2lx1GrSQx0tPlAg12YG8tWa4gMBjMb3N2xRxglTrF13y94B5RlcTz2HaN4BjC46EK2UzKsMV+gI2Idwt82yU2M00i5fdCALlfa/DGHcsnflhys/XPnhlr0DckAVBdKyL7RUL5cNCHOFOqOPgL6GHv4BX14g+pKGyfE3tKN/QSDxyD6odGj5MFcJtlYBTIst5sCXG/FhW+VgsEO02hCa8asW4YtnSPoTzwNlgBgAyuXJp3BPLcxxDAIW7eqU/T4wfwAAAABJRU5ErkJggg==) no-repeat;
+  background-size: cover;
+}
+
+

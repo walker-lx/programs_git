@@ -1,0 +1,18 @@
+/**app.wxss**/
+@import './pages/toast/toast.wxss';
+view {
+  font-size: 100%;
+  font-family: -apple-system, "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+} 
+ /* input {
+  overflow: visible !important;
+}  */
+button::after {
+   content: none;
+}
+button {
+  border-radius: 0;
+}
+page {
+  min-height: 100%;
+}

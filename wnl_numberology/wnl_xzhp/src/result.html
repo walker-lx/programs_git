@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+    <meta name="copyright" content="Copyright (c) 51wnl.com" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="万年历" />
+    <meta name="keywords" content="万年历" />
+    <title>万年历感情合盘</title>
+    <link rel="stylesheet" href="../css/result.css">
+</head>
+<body>
+    <div class="inner_content">
+        <div class="head_section">
+            <div class="head"></div>
+            <div class="person">
+                <div class="person_info">
+                    <img src="../img/famale_head.png" alt="" class="head_img head_img_1">
+                    <div class="one_name"></div>
+                </div>
+                <img src="../img/VS.png" alt="" class="vs_img">
+                <div class="person_info">
+                    <img src="../img/male_head.png" alt="" class="head_img head_img_2">
+                    <div class="two_name"></div>
+                </div>
+            </div>
+        </div>
+        <div class="matching_index">
+            <div class="match_txt">
+                <div class="crown_txt ">
+                    <div class="crown"></div>
+                    <span class="congratulations">恭喜!</span>
+                     <span class="match_txt_1">你们的匹配指数</span>
+                </div>
+            </div>
+            <div class="match_txt_2">超过&nbsp;&nbsp;&nbsp;<span class="match_percent"></span><spna class="percent">%</spna>&nbsp;&nbsp;&nbsp;的测试者</div>
+            <div class="pay_match_icon"></div>
+            <div class="pay_match_txt"></div>
+        </div>
+        <!--雷达图-->
+        <div class="radar_map">
+            <canvas class="chart" width="200" height="220"></canvas>
+            <div class="heart">
+                <div class="score_question"></div>
+                <div class="score hidden">
+                    <span class="average_score"></span>
+                    <span class="average_word">分</span>
+                </div>
+            </div>
+            <div class="word_mask">
+                <div class="word_detail">
+                    <div class="label label_1">
+                        <div class="label_txt">
+                            <span>感情观相似度</span>
+                            <span class="point point_1"></span>
+                        </div>
+                    </div>
+                    <div class="label label_2">
+                        <div class="label_txt">
+                            <span class="point point_2"></span>
+                            <span>默契度</span>
+                        </div>
+                    </div>
+                    <div class="label label_3">
+                        <div class="label_txt">
+                            <span class="point point_3"></span>
+                            <span>性爱和谐度</span>
+                        </div>
+                    </div>
+                    <div class="label label_4">
+                        <div class="label_txt">
+                            <span class="point point_4"></span>
+                            <span>沟通效率</span>
+                        </div>
+                    </div>
+                    <div class="label label_5">
+                        <div class="label_txt">
+                            <span>忠诚度</span>
+                            <span class="point point_5"></span>
+                        </div>
+                    </div>
+                    <div class="label label_6">
+                        <div class="label_txt">
+                            <span>物质要求</span>
+                            <span class="point point_6"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="free_content">
+            <div class="data_temp">
+                <div class="data_head">
+                    <img src="../img/point_line.png" class="point_line">
+                    <div class="head_title">感情相似度</div>
+                    <img src="../img/point_line.png" class="point_line">
+                </div>
+                <img src="../img/temp_lock_1.png" alt="" class="temp_img">
+            </div>
+            <div class="data_temp">
+                <div class="data_head">
+                    <img src="../img/point_line.png" class="point_line">
+                    <div class="head_title">感情默契度</div>
+                    <img src="../img/point_line.png" class="point_line">
+                </div>
+                <img src="../img/temp_lock_2.png" alt="" class="temp_img">
+            </div>
+            <div class="data_temp">
+                <div class="data_head">
+                    <img src="../img/point_line.png" class="point_line">
+                    <div class="head_title">性爱和谐度</div>
+                    <img src="../img/point_line.png" class="point_line">
+                </div>
+                <img src="../img/temp_lock_3.png" alt="" class="temp_img">
+            </div>
+            <div class="data_temp">
+                <div class="data_head">
+                    <img src="../img/point_line.png" class="point_line short_line">
+                    <div class="head_title">矛盾时如何沟通</div>
+                    <img src="../img/point_line.png" class="point_line short_line">
+                </div>
+                <img src="../img/temp_lock_4.png" alt="" class="temp_img">
+            </div>
+            <div class="data_temp">
+                <div class="data_head">
+                    <img src="../img/point_line.png" class="point_line">
+                    <div class="head_title">感情忠诚度</div>
+                    <img src="../img/point_line.png" class="point_line">
+                </div>
+                <img src="../img/temp_lock_5.png" alt="" class="temp_img">
+            </div>
+            <div class="data_temp">
+                <div class="data_head">
+                    <img src="../img/point_line.png" class="point_line short_line">
+                    <div class="head_title">物质要求匹配度</div>
+                    <img src="../img/point_line.png" class="point_line short_line">
+                </div>
+                <img src="../img/temp_lock_6.png" alt="" class="temp_img">
+            </div>
+
+        </div>
+
+        <div class="pay_content">
+            <div class="result_content content_temp hidden">
+                <div class="result_temp">
+                    <div class="result_head">
+                        <div class="result_title"></div>
+                        <div class="result_score right">
+                            <span class="score_num"></span>
+                            <span class="word">分</span>
+                        </div>
+                        <div class="result_progress right">
+                            <div class="progress_1"></div>
+                            <div class="progress_2"></div>
+                        </div>
+                    </div>
+                     <div class="one_content">
+                        <div class="child_title_one">
+                            <span class="onename"></span>
+                            <span class="onetitle"></span>
+                            <span>:</span>
+                        </div>
+                        <div class="child_title_one_content"></div>
+                    </div>
+                    <div class="two_content">
+                        <div class="child_title_two">
+                            <span class="twoname"></span>
+                            <span class="twotitle"></span>
+                            <span>:</span>
+                        </div>
+                        <div class="child_title_two_content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom_button">
+        <a href="javascript:void(0)" class="pay_submit">立即解锁幸福秘诀</a>
+    </div>
+
+    <div class="astroBanner hidden" style="margin: 10px; padding: 0;background-size: cover;">
+        <img src="//mobile.51wnl.com/numberology/xzhp/img/astroBanner.jpg" style="width:100%"/>
+    </div>
+
+    <script type="text/javascript" src="../js/base64.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <!--<script type="text/javascript" src="../js/Chart.min.js"></script>-->
+    <script type="text/javascript" src="../js/Chart.js"></script>
+    <!-- <script type="text/javascript" src="../js/vconsole.min.js"></script> -->
+    <script type="text/javascript" src="../js/wnlui.js"></script>
+    <script type="text/javascript" src="../js/result-001.js"></script>
+    <script type="text/javascript" src="//mobile.51wnl.com/utils/in-view/dist/in-view.min.js"></script>
+    <script type="text/javascript" src="//mobile.51wnl.com/numberology/redpackage/js/wnl_redpackage.js"></script>
+</body>
+</html>

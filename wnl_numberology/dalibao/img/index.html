@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="copyright" content="Copyright (c) 51wnl.com" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="万年历" />
+    <meta name="keywords" content="万年历" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="static/css/wnlui.css">
+    <style>
+    @font-face {
+        font-family: 'zidingyi1';
+        src: url('./img/zidingyi1.eot');
+        src:
+          url('./img/zidingyi1.eot?#font-spider') format('embedded-opentype'),
+          url('./img/zidingyi1.woff') format('woff'),
+          url('./img/zidingyi1.ttf') format('truetype'),
+          url('./img/zidingyi1.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    @font-face {
+        font-family: 'zidingyi2';
+        src: url('./img/zidingyi2.eot');
+        src:
+          url('./img/zidingyi2.eot?#font-spider') format('embedded-opentype'),
+          url('./img/zidingyi2.woff') format('woff'),
+          url('./img/zidingyi2.ttf') format('truetype'),
+          url('./img/zidingyi2.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    <script src="//www.51wnl.com/vconsole.min.js"></script>
+    <title>新春大礼包</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="./static/js/wnlui.js"></script>
+    <script type="text/javascript" src='//mobile.51wnl.com/utils/wnlHistory/wnlHistoryPro-v2.js'></script>
+    <div class="main">
+        <div class="header-section">
+            <img src="./img/toutu.jpg" style="width:100vw"/>
+        </div>
+        <div class="main-section">
+            <div class="inputContent">
+                <div class="inputBox nameContent">
+                    <div class="titleContent">您的姓名</div>
+                    <div class="txtContent">
+                        <input type="text" class="nameTxt" placeholder="点击输入">
+                    </div>
+                    <div class="sex">
+                        <div class="sex-type sex-on">
+                            <div class="male-bg sex-bg"></div>
+                            <div class="sex-con">男</div>
+                        </div>
+                        <div class="sex-type">
+                            <div class="female-bg sex-bg"></div>
+                            <div class="sex-con">女</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputBox dateContent">
+                    <div class="titleContent">出生日期</div>
+                    <div class="txtContent">
+                        <input type="text" class="dateTxt" placeholder="点击选择" readonly unselectable="on" onfocus="this.blur()" />
+                    </div>
+                </div>
+                <div class="inputBox timeContent">
+                    <div class="titleContent">出生时间</div>
+                    <div class="txtContent">
+                        <div class="txtContent">
+                            <input type="text" id="bornTime" placeholder="点击选择" readonly onfocus="this.blur()" />
+                        </div>
+                    </div>
+                </div>
+                <div class="inputBox placeContent">
+                    <div class="titleContent">出生地点</div>
+                    <div class="txtContent">
+                        <input type="text" id="birthPlace" class="birthPlace" placeholder="点击选择" readonly onfocus="this.blur()" />
+                    </div>
+                </div>
+                <div class="inputBigBox">
+                    <div class="inputBoxPlus">
+                        <div class="titleContent">感情状况</div>
+                        <div class="txtContent">
+                            <div class="txtItem" value="1">单身求桃花</div>
+                            <div class="txtItem" value="2">暧昧难自处</div>
+                            <div class="txtItem" value="3">恋爱有困扰</div>
+                            <div class="txtItem" value="4">婚姻何处去</div>
+                        </div>
+                    </div>
+                    <div class="confirm_btn btn">立即解锁</div>
+                </div>
+            </div>
+            
+            <div class="explain">
+                <div class="close-img"></div>
+                <div class="explain-title">为什么需要精确到出生时间？</div>
+                <div class="explain-content">提供更为准确的时间，能够为您提供更加精准的结果预测。如不知道具体出生时间，可以选择“不清楚”，我们将为您调整和计算出合适的时间。</div>
+            </div>
+
+            <div class="goods">
+                <div class="goodsTitle">福袋产品一览</div>
+                <!-- <div class="goodsItem">
+                    <div class="goodsImg">
+                        <img src="https://qiniu.image.cq-wnl.com/content/20170904c5a7eb4155044267907576801de40987.jpg"/>
+                    </div>
+                    <div class="desc desc1">
+                        揭密前世之命
+                    </div>
+                    <div class="desc desc2">
+                        解开今生之劫
+                    </div>
+                    <div class="price">
+                        原价：28元
+                    </div>
+                </div> -->
+                <div class="totalPrePrice">
+                    原价：83.8元
+                </div>
+                <div class="totalPrice zidingyi1">
+                    <span class="zidingyi1">福袋价：</span><span class="zidingyi1 priceSpan">55元</span>
+                </div>
+            </div>
+            <div class="about">
+                <div class="callNumber">
+                    <div class="qq">QQ：436953644</div>
+                    <div class="phone">电话：023-88756857</div>
+                </div>
+                <div class="copyRight">Copyright © CALENDAR Tech. <br/>All Rights Reserved.</div>
+            </div>
+        </div>
+    </div>
+    <div class="iphoneXBanner hidden" style="height:34px;width: 100%;position:fixed;bottom: 0;z-index: 9999;background-color: rgba(0, 0, 0, 0.3);"></div>
+    <div class="mask"></div>
+    <div class="nameMask hidden"></div>
+    <!--加载动画-->
+    <div class="circleMask hidden">
+        <div class="circleMaskBackground"></div>
+        <div class="circleMaskContent"></div>
+        <div class="circleMaskImage"></div>
+    </div>
+    <!--错误提示-->
+    <div id="toast"></div>
+    <!-- wnl share tool -->
+    <div class="sharemask hidden"></div>
+    <div class="wnl-sharetool hidden">
+        <div class="platform">
+            <label class="weixin">微信</label>
+            <label class="weixin_circle">朋友圈</label>
+            <label class="qq">QQ</label>
+            <label class="weibo">新浪微博</label>
+        </div>
+        <div class="cancle-share">取消分享</div>
+    </div>
+    <div class="zidingyi1 hidden">福袋价：0123456789.元</div>
+    <div class="zidingyi2 hidden">揭秘前世之命 解开今生的劫预知感情运势避开危机陷阱感情不能将就帮你找到真命桃花旺财运佳爱情事业双丰收</div>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script>
+        $.ajax({
+            url: "//b.cqyouloft.com/interface/API/weixinhandler.ashx",
+            type: "get",
+            data: {
+                requesturl: location.href
+            },
+            success: function (result) {
+                result = JSON.parse(result);
+                wx.config({
+                    debug: false,
+                    appId: 'wx347ab26567c5465f', // 必填，公众号的唯一标识
+                    timestamp: result.timestamp, // 必填，生成签名的时间戳
+                    nonceStr: result.nonceStr, // 必填，生成签名的随机串
+                    signature: result.signature, // 必填，签名，见附录1
+                    jsApiList: [
+                        'onMenuShareTimeline',
+                        'onMenuShareAppMessage',
+                        'onMenuShareQQ',
+                        'onMenuShareWeibo'
+                    ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                });
+            }
+        });
+    </script>
+    <script type="text/javascript" src="./static/js/flexible.debug.js"></script>
+    <script type="text/javascript" src="./js/jquery.marquee.js"></script>
+    <script type="text/javascript" src="./js/base64.min.js"></script>
+    <script type="text/javascript" src="./static/js/wnl-util.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/share.js"></script>
+
+</body>
+
+</html>

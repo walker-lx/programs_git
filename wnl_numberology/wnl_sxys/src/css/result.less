@@ -1,0 +1,451 @@
+.result {
+    width: 100%;
+    background-color: #fbf4ee;
+}
+
+.result-title {
+    height: 7.5rem;
+    position: relative;
+}
+
+.result-tssy {
+    color: #333;
+    font-size: 15px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.change-sx-btn {
+    z-index: 1;
+    position: absolute;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0.5rem;
+}
+
+.change-sx {
+    z-index: 1;
+    position: absolute;
+    right: -0.1rem;
+    top: 0.4rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    background-image: url('../assets/img/change_icon@3x.png');
+    background-size: cover;
+}
+
+.chart {
+    height: 200px;
+}
+
+ec-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.title-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: rgba(249, 185, 14, 1);
+    margin-bottom: 19px;
+}
+
+.title-text .text {
+    margin: 0 7px;
+}
+
+.img-title-icon-1 {
+    background-image: url('../assets/img/title_left_icon@3x.png');
+}
+
+.img-title-icon-2 {
+    background-image: url('../assets/img/title_right_icon@3x.png');
+}
+
+.title-icon {
+    width: 85px;
+    height: 4px;
+    background-size: cover;
+}
+
+.result-btn {
+    display: flex;
+    margin: 0 auto;
+    width: 17.25rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: rgba(163, 103, 64, 1);
+    background-image: url('../assets/img/btn_big@3x.png');
+    background-size: cover;
+}
+
+.month {
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.ys-month {
+    border: 2px solid #f5cf77;
+    position: relative;
+}
+
+.ys-month {
+    padding: 0 15px;
+    margin: 0 5px;
+    margin-bottom: 20px;
+}
+
+.ys-month .title {
+    font-weight: 600;
+    text-align: center;
+    font-size: 17px;
+    color: rgba(163, 103, 64, 1);
+    line-height: 48px;
+}
+
+.ys-month .date {
+    font-size: 15px;
+    color: rgba(163, 103, 64, 1);
+}
+
+.level {
+    margin-top: 10px;
+    font-size: 15px;
+    color: rgba(163, 103, 64, 1);
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    width: 14px;
+    height: 13px;
+    margin-right: 5px;
+    background-size: cover;
+}
+
+.img-star {
+    background-image: url('../assets/img/star_icon@3x.png');
+}
+
+.img-star-bg {
+    background-image: url('../assets/img/star2_icon@3x.png');
+}
+
+.ys-month .article {
+    font-size: 15px;
+    color: rgba(51, 51, 51, 1);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.shield {
+    position: relative;
+    height: 7.8rem;
+    margin-left: -0.35rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.result-btn-3 {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.shield-btn {
+    position: absolute;
+}
+
+.img-corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/img/kuang_icon_3@3x.png');
+    background-size: cover;
+}
+
+.img-corner.c1 {
+    left: -2px;
+    top: -2px;
+    transform: rotate(-90deg);
+}
+
+.img-corner.c2 {
+    right: -2px;
+    top: -2px;
+}
+
+.img-corner.c3 {
+    right: -2px;
+    bottom: -2px;
+    transform: rotate(90deg);
+}
+
+.img-corner.c4 {
+    left: -2px;
+    bottom: -2px;
+    transform: rotate(180deg);
+}
+
+.month-slide {
+    display: flex;
+    width: 70px;
+    margin-right: 10px;
+}
+
+.month-item {
+    display: inline-block;
+    width: 70px;
+    height: 35px;
+    font-size: 17px;
+    color: rgba(163, 103, 64, 1);
+    text-align: center;
+    line-height: 36px;
+    opacity: 0.6;
+    flex: none;
+    background-image: url('../assets/img/btn_s_pic@3x.png');
+    background-size: cover;
+}
+
+.month-item.active {
+    opacity: 1;
+}
+
+.result-btn-1 {
+    margin-bottom: 20px;
+}
+
+.result-btn .arrow {
+    width: 6px;
+    height: 10px;
+    margin-left: 10px;
+    background-image: url('../assets/img/btn-more-icon@3x.png');
+    background-size: cover;
+}
+
+.line {
+    height: 7px;
+    background: rgba(232, 222, 214, 1);
+    margin-bottom: 10px;
+}
+
+.line-1 {
+    margin-bottom: 10px;
+}
+
+.sxys-brief {
+    font-size: 15px;
+    color: rgba(51, 51, 51, 1);
+    margin: 0 15px;
+    text-align: justify;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section {
+    display: flex;
+    margin: 0 15px;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+.section-item {
+    width: 82px;
+    height: 35px;
+    font-size: 17px;
+    color: rgba(163, 103, 64, 1);
+    line-height: 35px;
+    text-align: center;
+    opacity: 0.6;
+    position: relative;
+    background-image: url('../assets/img/btn_m_pic@3x.png');
+    background-size: cover;
+}
+
+.section-item .sign {
+    z-index: 1;
+    width: 17px;
+    height: 12px;
+    position: absolute;
+    bottom: -17px;
+    left: 65px;
+}
+
+.section-item.active {
+    opacity: 1;
+}
+
+.sxys-detail {
+    border: 2px solid #f5cf77;
+    position: relative;
+    padding-top: 5px;
+    margin: 0 5px;
+    margin-bottom: 20px;
+}
+
+.sxys-text {
+    font-size: 15px;
+    color: rgba(51, 51, 51, 1);
+    text-align: justify;
+    margin: 0 15px;
+    margin-bottom: 15px;
+}
+
+.sxys-detail .level {
+    margin-left: 15px;
+    margin-bottom: 19px;
+}
+
+.result-btn-2 {
+    margin-bottom: 25px;
+}
+
+.sxys-tips {
+    padding: 0 15px 20px;
+}
+
+.sxys-tips .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.sxys-tips .great {
+    width: 144px;
+    height: 32px;
+    background: rgba(245, 207, 119, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.great-text-1 {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.great-text-2 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.great-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 1px;
+}
+
+.img-great-ani {
+    margin-bottom: 5px;
+    background-image: url('../assets/img/dianzan-3x-90x90-1s.png');
+    background-size: cover;
+}
+
+.img-ungreat-ani {
+    background-image: url('../assets/img/nodianzan-3x-90x90-1s.png');
+    background-size: cover;
+}
+
+.sxys-tips .title {
+    font-size: 21px;
+    color: rgba(163, 103, 64, 1);
+    font-weight: 800;
+}
+
+.sxys-tips .jx {
+    font-size: 15px;
+    color: rgba(163, 103, 64, 1);
+    margin-bottom: 28px;
+}
+
+.sxys-tips .content {
+    font-size: 15px;
+    color: rgba(51, 51, 51, 1);
+}
+
+.choose-sx {
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.choose-sx-mask {
+    z-index: 8;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.choose-sx-box {
+    z-index: 9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 17.25rem;
+    height: 17.2rem;
+    background: rgba(251, 244, 238, 1);
+    border-radius: 0.5rem;
+}
+
+.choose-sx-title {
+    font-size: 17px;
+    color: rgba(51, 51, 51, 1);
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 800;
+}
+
+.sx-box-inside {
+    margin-left: 1px;
+}
+
+.sx-item {
+    position: relative;
+    float: left;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 0.6rem;
+    margin-top: 1rem;
+}
+
+.sx-item .checked {
+    z-index: 1;
+    position: absolute;
+    width: 3.5rem;
+    height: 3.5rem;
+    left: 0;
+    top: 0;
+    background-size: 100%;
+}
+
+.bszy {
+    width: 73px;
+    height: 58px;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
+
+.btn:active {
+    background-color: #E1BF6E;
+}

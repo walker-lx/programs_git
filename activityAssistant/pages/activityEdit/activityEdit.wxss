@@ -1,0 +1,177 @@
+/* pages/activityEdit/activityEdit.wxss */
+.progress {
+  display: flex;
+  height: 50rpx;
+  margin-top: 21.2rpx;
+  align-items: center;
+}
+.item-1, .item-3, .item-5 {
+  flex: 1;
+  height: 6rpx;
+}
+.item-1 {
+  background-color: #ffc42f;  
+}
+.item-3 {
+  display: flex;
+}
+.item-3-1, .item-3-2, .item-3-3 {
+  flex: 1;
+  background-color: #d8d8d8;  
+}
+.item-5 {
+  background-color: #d8d8d8;
+}
+.item-2, .item-4 {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%; 
+  text-align: center;
+  line-height: 50rpx;
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.item-2 {
+  background-color: #ffc42f;
+}
+.item-4 {
+  background-color: #d8d8d8;
+}
+.formcontent {
+  margin: 0 30rpx; 
+}
+.activityname, .stime, .etime {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.activityname {
+  position: relative;
+}
+.content, .stime-input, .etime-input {
+  position: relative;
+  /* width: calc(100% - 20rpx); */
+  width: 98%;     
+  height: 100rpx;
+  padding-left: 20rpx; 
+  margin-top: 20rpx; 
+  line-height: 100rpx;
+  border: 1rpx solid #eaeaea;
+  overflow: hidden;
+}
+.activityname-input {
+  /* width: calc(100% - 20rpx - 60rpx) !important;  */
+  width: 85%;
+  height: 100rpx;
+  line-height: 100rpx; 
+} 
+.activityname-text, .stime-text, .etime-text {
+  margin-left: 35rpx;
+  color: #777;
+  font-size: 30rpx;
+}
+.activityname-text {
+  margin-top: 66rpx;
+}
+.stime-text, .etime-text {
+  margin-top: 44rpx;
+}
+.begindatehm, .enddatehm {
+  margin-left: 30rpx;
+}
+.content {
+  display: flex;
+}
+.nextbtn {
+  width: 376rpx;
+  height: 100rpx;
+  border: none;
+  border-radius: 0;
+  text-align: center;
+  line-height: 100rpx;
+  margin-top: 176rpx;
+  color: #fff;
+  background-color: #ffc42f;
+  font-size: 34rpx;
+  opacity: 0.5;
+}
+.clear {
+  width: 44rpx;
+  height: 44rpx;
+  z-index: 9999;
+  margin-left: 24rpx;
+  align-self: center;
+}
+/*时间选择器样式  */
+.datepickers, .datepickers1{
+  position: fixed;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+.datebody, .datebody1 {
+  position: absolute;
+  width: 100%;
+  height: 280px;
+  bottom: -280px; 
+  padding: 0 30rpx;
+  z-index: 99999;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255,1); 
+}
+.datebody picker-view-column, .datebody1 picker-view-column {
+  color: #333;
+}
+picker-view-column {
+  text-align: center;
+}
+.monthitem, .dayitem, .monthitem1, .dayitem1 {
+  line-height: 50px;
+  margin-left: 20px;
+  z-index: 99999;
+}
+.houritem, .houritem1 {
+  line-height: 50px;
+  margin-left: 30px;
+  z-index: 99999;
+}
+.minitem, .minitem1 {
+  line-height: 50px;
+  margin-left: -30px;
+  z-index: 99999;
+}
+.dateheader, .dateheader1 {
+  position: absolute;
+  top:0px;
+  width: 100%;
+  z-index:100001;
+}
+.date-cancel, .date-cancel1 {
+  float: left;
+  margin: 20rpx;
+  color: #818181;
+}
+.date-true, .date-true1 {
+  float: right;
+  margin: 20rpx;
+  color: #2FB42E;
+  z-index: 9999;
+}
+.section .picker, .section1 .picker1 {
+  background-color: #fff;
+  border-bottom: 1px #d9d9d9 solid;
+  border-top: 1px #d9d9d9 solid;
+   padding: 20rpx; 
+  z-index: 9999;
+}
+.mask, .mask1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10001;
+}

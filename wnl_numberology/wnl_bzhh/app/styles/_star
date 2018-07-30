@@ -1,0 +1,17 @@
+
+.star {
+	float: left;
+	width: 0.13rem;
+	height: 0.12rem;
+	margin-top: 0.035rem;
+	background-image: url("../images/star.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 0.13rem 0.12rem;
+}
+.star+.star {
+	margin-left: 0.01rem;
+}
+.star.active {
+	background-image: url("../images/star_active.png");
+}

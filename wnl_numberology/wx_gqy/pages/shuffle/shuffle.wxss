@@ -1,0 +1,48 @@
+/* pages/shuffle/shuffle.wxss */
+@import '../../assets/image.wxss';
+
+.shuffle {
+  padding-top: 130rpx;
+  background-color: #fff1fe;
+}
+
+.title-1 {
+  font-size: 40rpx;
+  text-align: center;
+  color: #8e7e91;
+}
+
+.title-2 {
+  margin-top: 25rpx;
+  font-size: 28rpx;
+  text-align: center;
+  color: #afa3b1;
+}
+
+.card-wrap {
+  height: 460rpx;
+  width: 460rpx;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 184rpx;
+}
+
+.card {
+  width: 270rpx;
+  height: 460rpx;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  margin-left: -135rpx;
+}
+
+.card1 {
+  width: 460rpx;
+  height: 270rpx;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  margin-left: -230rpx;
+  top: 50%;
+  margin-top: -135rpx;
+}

@@ -1,0 +1,8 @@
+/**app.wxss**/
+
+.container {
+  min-height: 100%;
+	min-height: 100vh;
+  box-sizing: border-box;
+	background-color: #fbd6ff;
+}

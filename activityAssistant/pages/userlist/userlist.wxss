@@ -1,0 +1,55 @@
+/* pages/userlist/userlist.wxss */
+page {
+  min-height: 100%;
+}
+.topline {
+  width: 100%;
+  height: 20rpx;
+  background-color: #f6f6f6;
+}
+.userlist {
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 20rpx;
+}
+.usercount {
+  text-align: center;
+  margin-top: 30rpx;
+  font-size: 34rpx;
+}
+.userinfo {
+  margin: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.userdetail {
+  width: 120rpx;
+  text-align: center;
+  margin-bottom: 42rpx;
+  padding: 0 calc((100% - 600rpx) / 10) ;
+  font-size: 0;
+}
+.userdetail .img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.username {
+  text-align: center;
+  font-size: 26rpx;
+  margin-top: 12rpx;
+}
+.addicon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: 32rpx; 
+}
+.add {
+  width: 120rpx; 
+  height: 120rpx; 
+  border: 4rpx solid #ddd;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 calc((100% - 600rpx) / 10);
+  padding: 0;    
+}

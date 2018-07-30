@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="format-detection" content="telephone=no" />
+      <title>史上最准的颜值测试</title>
+      <script src="js/flexible-b9889.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/index-89c39.css">
+  </head>
+  <body>
+      <div class="page page1">
+          <div class="title"></div>
+          <div class="box">
+              <div class="face-slogan"></div>
+              <div class="face-box">
+                  <input type="file" id="upload2" />
+              </div>
+              <div class="face-title"></div>
+          </div>
+          <div class="upload-box">立即参与<input type="file" id="upload" /></div>
+      </div>
+      <div class="page loading">
+          <div class="loading-box">
+              <div class="loading-img">
+                  <span class="line"></span>
+              </div>
+              <div class="loading-text">正在识别颜值</div>
+          </div>
+      </div>
+      <div class="page page2">
+          <div class="title2"></div>
+          <div class="box">
+              <canvas id="backCanvas"></canvas>
+          </div>
+          <div class="btns">
+              <button class="againBtn">再测一次</button>
+              <button class="shareBtn">秀颜值</button>
+              <button class="homeBtn hidden">我也要玩</button>
+          </div>
+      </div>
+
+      <div class="showShareMask hidden">
+  		<div class="shareArrow"></div>
+  	</div>
+  	<!-- wnl share tool -->
+  	<div class="sharemask hidden"></div>
+  	<div class="wnl-sharetool hidden">
+  	   <div class="platform">
+  		   <label class="weixin">微信</label>
+  		   <label class="weixin_circle">朋友圈</label>
+  		   <label class="qq">QQ</label>
+  		   <label class="weibo">新浪微博</label>
+  	   </div>
+  	   <div class="cancle-share">取消分享</div>
+  	</div>
+
+      <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+      <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261442792'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1261442792' type='text/javascript'%3E%3C/script%3E"));</script>
+      <script type="text/javascript" src="js/jquery-2.1.3-fastclick.min.js"></script>
+      <script type="text/javascript" src="js/lrz.all.bundle.js"></script>
+      <script type="text/javascript" src="js/wnl-util.js"></script>
+      <script>
+          $.ajax({
+              url:"https://b.cqyouloft.com/interface/API/weixinhandler.ashx",
+              type:"get",
+              data:{
+                  requesturl:location.href
+              },
+              debug:true,
+              success:function(result){
+                  result=JSON.parse(result);
+                  wx.config({
+                      debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                      appId: 'wx347ab26567c5465f', // 必填，公众号的唯一标识
+                      timestamp:result.timestamp, // 必填，生成签名的时间戳
+                      nonceStr: result.nonceStr, // 必填，生成签名的随机串
+                      signature: result.signature,// 必填，签名，见附录1
+                      jsApiList: [
+                          'onMenuShareTimeline',
+                          'onMenuShareAppMessage',
+                          'onMenuShareQQ',
+                          'onMenuShareWeibo'
+                      ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                  });
+              }
+          });
+      </script>
+      <script type="text/javascript" src="js/main-abc18.js"></script>
+  </body>
+</html>

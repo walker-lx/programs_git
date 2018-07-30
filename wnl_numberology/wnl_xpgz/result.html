@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="copyright" content="Copyright (c) 51wnl.com" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="万年历" />
+    <meta name="keywords" content="万年历" />
+    <link rel="stylesheet" type="text/css" href="css/result.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script>
+        $.ajax({
+            url: "//b.cqyouloft.com/interface/API/weixinhandler.ashx",
+            type: "get",
+            data: {
+                requesturl: location.href
+            },
+            success: function (result) {
+                result = JSON.parse(result);
+                wx.config({
+                    debug: false,
+                    appId: result.appid, // 必填，公众号的唯一标识
+                    timestamp: result.timestamp, // 必填，生成签名的时间戳
+                    nonceStr: result.nonceStr, // 必填，生成签名的随机串
+                    signature: result.signature, // 必填，签名，见附录1
+                    jsApiList: [
+                        'onMenuShareTimeline',
+                        'onMenuShareAppMessage',
+                        'onMenuShareQQ',
+                        'onMenuShareWeibo'
+                    ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                });
+            }
+        });
+    </script>
+    <title>一生事业运</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="content content1 hidden">
+            <div class="title">性格分析</div>
+            <div class="nature-keywords">
+                <div class="keywords keywords01"></div>
+                <div class="keywords keywords02"></div>
+                <div class="keywords keywords03"></div>
+            </div>
+            <div class="nature-content"></div>
+        </div>
+        <div class="content content2 hidden">
+            <div class="title">能力分析</div>
+            <div class="ability">
+                <div class="result-header">
+                    <div class="result-title ">思维与沟通能力</div>
+                    <div class="result-score f1">
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                    </div>
+                </div>
+                <div class="result-content">
+                    <div class="pay-btn">解锁查看完整报告</div>
+                    <div class="result-content result-content-bg z2">你是思维敏捷，敢于创新的人，渴望开拓一条属于自己的独特道路，思考问题上面不喜欢拐弯，总是喜欢简单直接的解决问题，因此沟通上面缺乏一些语言艺术。</div>
+                </div>
+            </div>
+            <div class="ability">
+                <div class="result-header">
+                    <div class="result-title">工作态度</div>
+                    <div class="result-score f2">
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                    </div>
+                </div>
+                <div class="result-content">
+                    <div class="pay-btn">解锁查看完整报告</div>
+                    <div class="result-content result-content-bg z3">你的工作态度是属于精力旺盛、冲劲很强的类型，类似于工作狂的态度让你渴望成功，并且拥有事业的主导权</div>
+                </div>
+            </div>
+        </div>
+        <div class="content other hidden">
+            <div class="title">更多分析</div>
+            <div class="more">
+                <div class="more-title">能力预测</div>
+                <div class="more-bg1 more-content"></div>
+                <div class="more-bg2 more-content"></div>
+            </div>
+            <div class="more">
+                <div class="more-title">职场关系评价</div>
+                <div class="more-bg3 more-content"></div>
+                <div class="more-bg4 more-content"></div>
+                <div class="more-bg5 more-content"></div>
+            </div>
+            <div class="more">
+                <div class="more-title">创业潜力预测</div>
+                <div class="more-bg6 more-content"></div>
+                <div class="more-bg7 more-content"></div>
+            </div>
+            <div class="more">
+                <div class="more-title">财运潜力预测</div>
+                <div class="more-bg8 more-content"></div>
+                <div class="more-bg9 more-content"></div>
+            </div>
+        </div>
+        <div class="success_content  hidden">
+            <div class="title">潜能预测</div>
+            <div class="potential">
+                <div class="result-header">
+                    <div class="result-title">工作优势与机会</div>
+                </div>
+                <div class="result-content z4"></div>
+            </div>
+            <div class="potential">
+                <div class="result-header">
+                    <div class="result-title">事业成就</div>
+                </div>
+                <div class="result-content z5"></div>
+            </div>
+        </div>
+        <div class="success_content hidden">
+            <div class="title">职场人际</div>
+            <div class="work">
+                <div class="result-header">
+                    <div class="result-title">上司眼中的你</div>
+                </div>
+                <div class="result-content z6"></div>
+            </div>
+            <div class="work">
+                <div class="result-header">
+                    <div class="result-title">同事眼中的你</div>
+                </div>
+                <div class="result-content z7"></div>
+            </div>
+            <div class="work">
+                <div class="result-header">
+                    <div class="result-title">职场人际预测</div>
+                </div>
+                <div class="result-content z8"></div>
+            </div>
+        </div>
+        <div class="success_content hidden">
+            <div class="title">创业潜力</div>
+            <div class="start">
+                <div class="result-header">
+                    <div class="result-title">潜力指数</div>
+                    <div class="result-score f3">
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                    </div>
+                </div>
+                <div class="result-content z9"></div>
+            </div>
+        </div>
+        <div class="success_content hidden">
+            <div class="title">财运分析</div>
+            <div class="fortune">
+                <div class="result-header">
+                    <div class="result-title">事业财富指数</div>
+                    <div class="result-score f4">
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                    </div>
+                </div>
+                <div class="result-content z10"></div>
+            </div>
+            <div class="fortune">
+                <div class="result-header">
+                    <div class="result-title">偏财运指数</div>
+                    <div class="result-score f5">
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                        <span class="score"></span>
+                    </div>
+                </div>
+                <div class="result-content z11"></div>
+            </div>
+        </div>
+        <!--<div class="success_content hidden">
+            <div class="title">职场开运锦囊</div>
+            <a class="work_link" href="#">
+                <img src="#">
+            </a>
+        </div>-->
+        <div class="success_content hidden">
+            <div class="title">点击测试，爱情事业双丰收</div>
+            <div class="other_link">
+                <a class="link" href="#">
+                    <img src="#">
+                    <div class="link_content">
+                        <div class="link_title"></div>
+                        <div class="link_number"></div>
+                    </div>
+                </a>
+                <a class="link" href="#">
+                    <img src="#">
+                    <div class="link_content">
+                        <div class="link_title"></div>
+                        <div class="link_number"></div>
+                    </div>
+                </a>
+                <a class="link" href="#">
+                    <img src="#">
+                    <div class="link_content">
+                        <div class="link_title"></div>
+                        <div class="link_number"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="lock-btn hidden">解锁查看完整报告</div>
+    </div>
+    <div class="iphoneXBanner hidden" style="height:34px;width: 100%;position:fixed;bottom: 0;z-index: 9999;background: rgba(0,0,0,0);"></div>
+    <!-- wnl share tool -->
+    <div class="sharemask hidden"></div>
+    <div class="wnl-sharetool hidden">
+        <div class="platform">
+            <label class="weixin">微信</label>
+            <label class="weixin_circle">朋友圈</label>
+            <label class="qq">QQ</label>
+            <label class="weibo">新浪微博</label>
+        </div>
+        <div class="cancle-share">取消分享</div>
+    </div>
+
+    <script type="text/javascript" src="./static/js/flexible.debug.js"></script>
+    <script type="text/javascript" src="./static/js/wnl-util.js"></script>
+    <!-- <script src="//www.51wnl.com/vconsole.min.js"></script> -->
+    <!--<script type="text/javascript" src="http://mobile.51wnl.com/numberology/redpackage/js/wnl_redpackage.js"></script>-->
+    <script type="text/javascript" src="./js/wnl_redpackage.js"></script>
+    <script type="text/javascript" src="./js/result.js"></script>
+    <script type="text/javascript" src="./js/share.js"></script>
+
+
+</body>
+
+</html>

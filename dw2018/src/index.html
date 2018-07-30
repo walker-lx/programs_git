@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>万年历让你与粽不同</title>
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no" />
+  <!-- <script src="../static/vconsole.min.js"></script> -->
+</head>
+<body>
+  <audio src="./assets/dw.mp3" loop="loop" id="audio" autoplay="autoplay"></audio>
+  <!-- <img src="https://qiniu.image.cq-wnl.com/FmpTHhkqd96QKwpTwRQNj1qrBaku" alt="" width="355" height="585"> -->
+  <!-- <img src="./assets/QR.jpg" alt="" width="355" height="45"> -->
+  <div class="music_icon">
+    <img class="play rotate" src="./assets/music-on-icon@3x.png" width="30" height="30">
+    <img class="pause hidden" src="./assets/music-off-icon@3x.png" width="30" height="30">
+  </div>
+  <div id="toast" class="hidden"></div>
+  <!-- 首页 -->
+  <div class="index hidden">
+      <div class="indexbtn">
+          <div class="indexbtn_box">
+              <div class="indexbtn_text">塑造自我</div>
+              <div class="indexbtn_icon"></div>
+          </div>
+      </div>
+      <div class="wnlicon"></div>
+  </div>
+
+  <!-- 过渡页 -->
+  <div class="transition hidden">
+    <div class="tip">可选择1-3种材料到粽叶中</div>
+    <div class="zz">
+      <div class="item" data-zz="bl">
+        <img src="./assets/bl.png" alt="" width="75" height="75">
+        <div class="choose_icon hidden"></div>
+        <div class="item_mask hidden"></div>
+      </div>
+      <div class="item" data-zz="mz">
+        <img src="./assets/mz.png" alt="" width="75" height="75">
+        <div class="choose_icon hidden"></div>
+        <div class="item_mask hidden"></div>      
+      </div>
+      <div class="item" data-zz="xd">
+        <img src="./assets/xd.png" alt="" width="75" height="75">
+        <div class="choose_icon hidden"></div>
+        <div class="item_mask hidden"></div>
+      </div>
+      <div class="item" data-zz="bg">
+        <img src="./assets/bg.png" alt="" width="75" height="75">
+        <div class="choose_icon hidden"></div>
+        <div class="item_mask hidden"></div>
+      </div>
+      <div class="item" data-zz="ds">
+        <img src="./assets/ds.png" alt="" width="75" height="75">
+        <div class="choose_icon hidden"></div>
+        <div class="item_mask hidden"></div>
+      </div>
+      <div class="item" data-zz="ht">
+        <img src="./assets/ht.png" alt="" width="75" height="75">
+        <div class="choose_icon hidden"></div>
+        <div class="item_mask hidden"></div>
+      </div>
+      <div class="item" data-zz="lr">
+        <img src="./assets/lr.png" alt="" width="75" height="75">
+        <div class="choose_icon hidden"></div>
+        <div class="item_mask hidden"></div>
+      </div>
+      <div class="item" data-zz="xr">
+        <img src="./assets/xr.png" alt="" width="75" height="75">
+        <div class="choose_icon hidden"></div>
+        <div class="item_mask hidden"></div>
+      </div>
+      <div class="item" data-zz="xy">
+        <img src="./assets/xy.png" alt="" width="75" height="75">
+        <div class="choose_icon hidden"></div>
+        <div class="item_mask hidden"></div>
+      </div>
+      <div class="item" data-zz="gy">
+        <img src="./assets/gy.png" alt="" width="75" height="75">
+        <div class="choose_icon hidden"></div>
+        <div class="item_mask hidden"></div>
+      </div>
+      <div class="item" data-zz="mg">
+        <img src="./assets/mg.png" alt="" width="75" height="75">
+        <div class="choose_icon hidden"></div>
+        <div class="item_mask hidden"></div>
+      </div>
+      <div class="item" data-zz="hs">
+        <img src="./assets/hs.png" alt="" width="75" height="75">
+        <div class="choose_icon hidden"></div>
+        <div class="item_mask hidden"></div>
+      </div>      
+    </div>
+    <div class="transitionbtn">
+        <div class="transitionbtn_box">
+            <div class="transitionbtn_text">包粽子</div>
+            <div class="transitionbtn_icon"></div>
+        </div>
+    </div>
+    <div class="result_page" id="result_page">
+      <div class="top"></div>
+      <div class="bottom"></div>
+    </div>
+  </div>
+
+  <!-- 结果页 -->
+  <div class="result hidden">
+    <!-- <img class="img" src="https://qiniu.image.cq-wnl.com/Flf3gSFM3beduMDXThDuMAGX1F7T"> -->
+    <img class="img">    
+    <div class="result_detail">
+      <div class="title class2"><div id="name">个性</div><span id="text">牌</span></div>
+    </div>
+    <div class="longpress">长按图片可保存</div>
+    <div class="result_btn">
+      <div class="againbtn">
+        <div class="againbtn_box">重塑自我</div>
+      </div>
+      <div class="sharebtn">
+        <div class="sharebtn_box">奔走相告</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 微信分享遮罩 -->
+  <div class="wxsharemask hidden">
+    <img src="./assets/guide.png" alt="">
+  </div>
+  <!-- 埋点统计 -->
+  <div id="cnzz" style="display: none">
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1273884475'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1273884475' type='text/javascript'%3E%3C/script%3E")); // eslint-disable-line</script>
+  </div>
+</body>
+
+</html>

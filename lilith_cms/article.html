@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>莉莉斯星座</title>
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+	<meta name="format-detection" content="telephone=no" />
+	<!-- Add to home screen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="lilith_cms">
+
+	<% for (var chunk of webpack.chunks) {
+        for (var file of chunk.files) {
+          if (file.match(/\.(js|css)$/)) { %>
+		<link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
+		<% }}} %>
+</head>
+
+<body>
+	<noscript>
+		This is your fallback content in case JavaScript fails to load.
+	</noscript>
+
+	<div class="template_main article_detail visibility_hidden">
+		<div class="article_content">
+			<h1></h1>
+			<div class="article_subinfo clear_float">
+				<div class="article_resource"></div>
+				<div class="article_viewer"></div>
+				<a href="javascript:void(0);" class="font_small hidden">A
+					<i>-</i>
+				</a>
+				<a href="javascript:void(0);" class="font_big hidden">A
+					<i>+</i>
+				</a>
+			</div>
+			<div class="content_inner"></div>
+		</div>
+		<div class="article_more hidden">展开全文</div>
+		<div class="split_line"></div>
+		<div class="info_footer_txt"> 本文版权归原作者所有，如涉及作品版权问题，请与我们联系，我们将删除内容。 </div>
+	</div>
+	<a href="javascript:void(0)" id="llsBanner" class="hidden" style="display: block;margin:0;padding:0;position: fixed;bottom: 0;width: 100%;height: 60px;z-index: 9999;-webkit-tap-highlight-color: transparent;-webkit-touch-callout: none;-webkit-user-select: none;user-select:none;">
+        <img src="./static/img/download-pic@3x.jpg" style="width: 100%;height: 60px;">
+    </a> 
+
+	<!-- Todo: only include in production -->
+	<%= htmlWebpackPlugin.options.serviceWorkerLoader %>
+		<!-- built files will be auto injected -->
+		<!-- <script src="https://www.51wnl.com/vconsole.min.js"></script> -->
+</body>
+
+</html>

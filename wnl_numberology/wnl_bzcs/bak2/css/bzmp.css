@@ -1,0 +1,410 @@
+body,html{
+    font-family: -apple-system, "苹方-简", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", sans-serif;
+}
+body{
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust:none;
+    background-color: #fff9f1;
+}
+.hidden{
+    display: none !important;
+}
+.main{
+    margin: 15px;
+}
+.briefTbl{
+    width: 100%;
+    border-collapse:separate;
+    border-spacing:10px;
+}
+.briefLine{
+    width: 100%;
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -o-box;
+    display: -ms-box;
+}
+.briefLine+.briefLine{
+    margin-top:  20px;
+}
+.briefLine div:first-child{
+    width: 50%;
+}
+.briefLine div:last-child{
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    -ms-box-flex: 1;
+}
+.briefTbl .briefLine .value{
+    font-size: 15px;
+    color: #333333;
+}
+.briefTbl .briefLine .key{
+    font-size: 15px;
+    color: #dc915b;
+}
+.briefTbl .briefLine .value{
+    font-size: 15px;
+    color: #333333;
+}
+.detailContent {
+    position: relative;
+    margin: 25px 0;
+    background-color: #fff9f1;
+    border: 1px solid #F9D4AD;
+}
+.corner {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #F9D4AD;
+    background-color: #fff9f1;
+}
+.top-left {
+    top: -1px;
+    left: -1px;
+    border-radius: 0 0 100% 0;
+    border-width: 0 1px 1px 0;
+}
+.top-right {
+    top: -1px;
+    right: -1px;
+    border-radius: 0 0 0 100%;
+    border-width: 0 0 1px 1px;
+}
+.bottom-left {
+    bottom: -1px;
+    left: -1px;
+    border-radius: 0 100% 0 0;
+    border-width: 1px 1px 0 0;
+}
+.bottom-right {
+    bottom: -1px;
+    right: -1px;
+    border-radius: 100% 0 0 0;
+    border-width: 1px 0 0 1px;
+}
+.detailLine{
+    width: 100%;
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -o-box;
+    display: -ms-box;
+    border-bottom: 1px solid #F9D4AD;
+}
+.detailLine:last-child{
+    border-bottom: 0;
+}
+.leftLineContent{
+    width: 64px;
+    font-size: 15px;
+    color: #dc915b;
+    line-height: 1.2em;
+    text-align: center;
+    border-right: 1px solid #F9D4AD;
+}
+.rightLineContent{
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    -ms-box-flex: 1;
+}
+.rightLineItem{
+    float: left;
+    width: 24.6%;
+    height: 100%;
+    border-right: 1px solid #F9D4AD;
+}
+.rightLineItem:last-child{
+    border-right: 0;
+}
+.line1{
+    height: 29px;
+}
+.line1 .rightLineItem{
+    font-size: 15px;
+    color: #dc915b;
+    text-align: center;
+    line-height: 29px;
+}
+.line2{
+    height: 140px;
+}
+.innerTxt{
+    width: 15px;
+    line-height: 1.2em;
+    margin: 0 auto;
+}
+.line2 .innerTxt{
+    margin: 0 auto;
+    padding: 52px 0;
+}
+.line2 .rightLineItem div{
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+}
+.line2 .upRightItem{
+    margin: 15px auto 10px;
+}
+.line2 .downRightItem{
+    margin: 0 auto 15px;
+}
+.line3{
+    height: 68px;
+}
+.line3 .innerTxt{
+    margin: 0 auto;
+    padding: 16px 0;
+}
+.line3 .rightLineItem div{
+    font-size: 15px;
+    color: #333333;
+    text-align: center;
+}
+.line3 .upRightItem{
+    margin: 15px auto 8px;
+}
+.line3 .downRightItem{
+    margin: 0 auto 15px;
+}
+.line4,.line5{
+    height: 60px;
+}
+.line4 .innerTxt{
+    width: 32px !important;
+}
+.line4 .innerTxt,.line5 .innerTxt{
+    margin: 0 auto;
+    padding: 12px 0;
+}
+.line4 .rightLineItem,.line5 .rightLineItem{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+.riyuanContent,.xijiContent{
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #dc915b;
+    line-height: 1.2em;
+}
+#riYuan,#xiJi,#daYun{
+    font-size: 15px;
+    color: #111111;
+    line-height: 1.67em;
+}
+.dayunContent,.xijiContent{
+    width: 100%;
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -o-box;
+    display: -ms-box;
+}
+.dayunTitle{
+    width: 50px;
+    font-size: 15px;
+    color: #dc915b;
+    line-height: 1.67em;
+}
+.dayunTxt{
+    width: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    -ms-box-flex: 1;
+}
+.xijiTitle{
+    width: 80px;
+    font-size: 15px;
+    color: #dc915b;
+    line-height: 1.67em;
+}
+.xijiTxt{
+    width: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    -ms-box-flex: 1;
+}
+.yiqibaziLink{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 35px;
+}
+.bannerImg{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.dayunTitle1{
+    position: relative;
+    height: 35px;
+    margin: 25px auto 15px;
+}
+.titleTxt{
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    color: #9f4200;
+    text-indent: 10px;
+    text-align: left;
+    margin: 0 20px;
+    background-image: url("../img/hl-h5-title-boxin-img01@3x.png");
+    background-position: 30px 0;
+    background-repeat: repeat-x;
+    background-size: 1px 35px;
+}
+.leftRadius,.rightRadius{
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 35px;
+    background-image: url("../img/hl-h5-title-box-img01@3x.png");
+    background-repeat: no-repeat;
+    background-size: 50px 35px;
+}
+.leftRadius{
+    left: 0;
+    background-position: 0 0;
+}
+.rightRadius{
+    right: 0;
+    background-position: -30px 0;
+}
+.titleIcon{
+    position: absolute;
+    left: 15px;
+    z-index: 100;
+    width: 11px;
+    height: 35px;
+    background-image: url("../img/hl-title-icon@3x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 11px 11px;
+}
+.dayunContent{
+    position: relative;
+    margin: 0;
+    background-color: #fff9f1;
+    border: 1px solid #F9D4AD;
+}
+.jiShiItem{
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-bottom: 1px solid #F9D4AD;
+}
+.jiShiItem+.jiShiItem{
+    border-left: 1px solid #F9D4AD;
+}
+.timeLine:last-child .jiShiItem{
+    border-bottom: none;
+}
+.timeIndex{
+    font-size: 13px;
+    color: #111111;
+}
+.timeDesc{
+    font-size: 13px;
+    color: #999999;
+    padding-left: 4px;
+}
+.wnlBannerLink {
+    width: 100%;
+    height: 42px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    background-image: url("../img/wnlBannerLink_bg@2x.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -o-box;
+    display: -ms-box;
+}
+.downIcon {
+    margin-left: 15px;
+    width: 38px;
+    height: 42px;
+    background-image: url("../img/ad-wnl-logo@2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 38px 38px;
+}
+.downTxt {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    -ms-box-flex: 1;
+    margin-left: 10px;
+    margin-right: 25px;
+}
+.txtContainer {
+    display: table;
+    height: 42px;
+}
+.txtWrapper {
+    display: table-cell;
+    height: 42px;
+    vertical-align: middle;
+}
+.downTxtImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 187px;
+    vertical-align: middle;
+}
+.downBtnImg {
+    margin-right: 15px;
+    width: 74px;
+    height: 42px;
+    background-image: url("../img/wnlBannerLink_button@2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 74px 29px;
+}
+.yiqiDesc {
+    text-align: center;
+    font-size: 12px;
+    color: #999999;
+    margin: 15px 0;
+}
+.zhuanjiaLink {
+    color: #333333;
+    text-decoration: underline;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (-o-min-device-pixel-ratio: 6/2),
+only screen and (min--moz-device-pixel-ratio: 3),
+only screen and (min-device-pixel-ratio: 3) {
+    .wnlBannerLink {
+        background-image: url("../img/wnlBannerLink_bg@3x.jpg");
+    }
+    .downIcon {
+        background-image: url("../img/ad-wnl-logo@3x.png");
+    }
+    .downBtnImg {
+        background-image: url("../img/wnlBannerLink_button@3x.png");
+    }
+}
+

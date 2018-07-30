@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>pop-outbox</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="50" height="50" rx="5"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="50" height="50" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M0,0 L42,0 L42,42 L0,42 L0,0 Z M0,0 L9,0 L9,9 L0,9 L0,0 Z M33,0 L42,0 L42,9 L33,9 L33,0 Z M33,33 L42,33 L42,42 L33,42 L33,33 Z M0,33 L9,33 L9,42 L0,42 L0,33 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="42" height="42" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="0" y="0" width="5" height="5"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <rect id="path-7" x="4" y="4" width="5" height="5"></rect>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <rect id="path-9" x="4" y="8" width="5" height="5"></rect>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <rect id="path-11" x="8" y="4" width="5" height="5"></rect>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+        <rect id="path-13" x="0" y="0" width="5" height="5"></rect>
+        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-13"></use>
+        </mask>
+        <rect id="path-15" x="4" y="4" width="5" height="5"></rect>
+        <mask id="mask-16" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-15"></use>
+        </mask>
+        <rect id="path-17" x="4" y="8" width="5" height="5"></rect>
+        <mask id="mask-18" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-17"></use>
+        </mask>
+        <rect id="path-19" x="8" y="4" width="5" height="5"></rect>
+        <mask id="mask-20" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-19"></use>
+        </mask>
+        <rect id="path-21" x="0" y="0" width="5" height="5"></rect>
+        <mask id="mask-22" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-21"></use>
+        </mask>
+        <rect id="path-23" x="4" y="4" width="5" height="5"></rect>
+        <mask id="mask-24" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-23"></use>
+        </mask>
+        <rect id="path-25" x="4" y="8" width="5" height="5"></rect>
+        <mask id="mask-26" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-25"></use>
+        </mask>
+        <rect id="path-27" x="8" y="4" width="5" height="5"></rect>
+        <mask id="mask-28" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-27"></use>
+        </mask>
+        <rect id="path-29" x="0" y="0" width="5" height="5"></rect>
+        <mask id="mask-30" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-29"></use>
+        </mask>
+        <rect id="path-31" x="4" y="4" width="5" height="5"></rect>
+        <mask id="mask-32" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-31"></use>
+        </mask>
+        <rect id="path-33" x="4" y="8" width="5" height="5"></rect>
+        <mask id="mask-34" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-33"></use>
+        </mask>
+        <rect id="path-35" x="8" y="4" width="5" height="5"></rect>
+        <mask id="mask-36" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-35"></use>
+        </mask>
+    </defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pop-outbox" stroke="#F5E6D0">
+            <g id="box2">
+                <use id="Rectangle-48" mask="url(#mask-2)" stroke-width="4" fill="#FCFBF9" xlink:href="#path-1"></use>
+                <g id="Pop-box" transform="translate(4.000000, 4.000000)" stroke-width="2">
+                    <use id="Rectangle-158-Copy-4" mask="url(#mask-4)" xlink:href="#path-3"></use>
+                    <g id="Group" transform="translate(1.000000, 1.000000)">
+                        <use id="Rectangle-158" mask="url(#mask-6)" xlink:href="#path-5"></use>
+                        <use id="Rectangle-158-Copy" mask="url(#mask-8)" xlink:href="#path-7"></use>
+                        <use id="Rectangle-158-Copy-2" mask="url(#mask-10)" xlink:href="#path-9"></use>
+                        <use id="Rectangle-158-Copy-3" mask="url(#mask-12)" xlink:href="#path-11"></use>
+                    </g>
+                    <g id="Group" transform="translate(34.500000, 7.500000) scale(-1, 1) translate(-34.500000, -7.500000) translate(28.000000, 1.000000)">
+                        <use id="Rectangle-158" mask="url(#mask-14)" xlink:href="#path-13"></use>
+                        <use id="Rectangle-158-Copy" mask="url(#mask-16)" xlink:href="#path-15"></use>
+                        <use id="Rectangle-158-Copy-2" mask="url(#mask-18)" xlink:href="#path-17"></use>
+                        <use id="Rectangle-158-Copy-3" mask="url(#mask-20)" xlink:href="#path-19"></use>
+                    </g>
+                    <g id="Group" transform="translate(7.500000, 34.500000) scale(1, -1) translate(-7.500000, -34.500000) translate(1.000000, 28.000000)">
+                        <use id="Rectangle-158" mask="url(#mask-22)" xlink:href="#path-21"></use>
+                        <use id="Rectangle-158-Copy" mask="url(#mask-24)" xlink:href="#path-23"></use>
+                        <use id="Rectangle-158-Copy-2" mask="url(#mask-26)" xlink:href="#path-25"></use>
+                        <use id="Rectangle-158-Copy-3" mask="url(#mask-28)" xlink:href="#path-27"></use>
+                    </g>
+                    <g id="Group" transform="translate(34.500000, 34.500000) scale(-1, -1) translate(-34.500000, -34.500000) translate(28.000000, 28.000000)">
+                        <use id="Rectangle-158" mask="url(#mask-30)" xlink:href="#path-29"></use>
+                        <use id="Rectangle-158-Copy" mask="url(#mask-32)" xlink:href="#path-31"></use>
+                        <use id="Rectangle-158-Copy-2" mask="url(#mask-34)" xlink:href="#path-33"></use>
+                        <use id="Rectangle-158-Copy-3" mask="url(#mask-36)" xlink:href="#path-35"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

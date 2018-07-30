@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>万年历支付</title>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="zepto-fastclick.js"></script>
+    <script type="text/javascript" src="base64.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="payContent">
+            <div class="zhifuContent">
+                <span class="zhifuTxt">支付金额:</span>
+                <span class="zhifuCount"></span>
+                <span class="payedCount"></span>
+            </div>
+            <div class="jifenCount hidden">
+                <div class="selectIcon active"></div>
+                <div class="jifenTxt">可使用 <span class="redJinfenNum"></span> 个积分 <span class="maxScore hidden">(最多抵扣50%)</span></div>
+            </div>
+            <div class="introContent">
+                <div class="introTitle"></div>
+            </div>
+            <a href="javascript:void(0)" class="wxConfirmBtn hidden" aria-hidden="true">
+                <div class="zhifuIcon wx"></div>
+                <div class="zhifuTipTxt">微信支付</div>
+                <div class="zhifuArrow"></div>
+            </a>
+            <a href="javascript:void(0)" class="zfbConfirmBtn" aria-hidden="true">
+                <div class="zhifuIcon zfb"></div>
+                <div class="zhifuTipTxt">支付宝支付</div>
+                <div class="zhifuArrow"></div>
+            </a>
+            <a class="loginLink hidden" href="protocol://enterlogin#">登录后可用积分抵扣，并享受10%积分返还</a>
+            <div class="zhifuSongTipTxt hidden">成功支付后赠送<span class="songNum"></span>个积分</div>
+        </div>
+    </div>
+    <div class="mask hidden">
+        <div class="maskContent"></div>
+    </div>
+</body>
+</html>

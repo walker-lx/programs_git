@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no, target-densityDpi=device-dpi" />
+	<meta name="copyright" content="Copyright (c) 51wnl.com" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="description" content="万年历" />
+	<meta name="keywords" content="万年历" />
+	<title>zyy 商品 test</title>
+	<script>
+        var ua = window.navigator.userAgent;
+        var browser = {
+            isAndroid: function () {
+                return navigator.userAgent.match(/Android/i) ? true : false;
+            },
+            isIOS: function () {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+            },
+            isWx: function () {
+                return navigator.userAgent.match(/micromessenger/i) ? true : false;
+            },
+            isWp: function () {
+                return ua.toLowerCase().indexOf('windows phone') > -1;
+            },
+            isWnl: function () {
+                return ua.toLowerCase().indexOf('wnl') > -1;
+            },
+            getIOSVersion: function () {
+                if (window.MSStream) {
+                    return false;
+                }
+                var match = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/), version;
+                if (match !== undefined && match !== null) {
+                    version = [
+                        parseInt(match[1], 10),
+                        parseInt(match[2], 10),
+                        parseInt(match[3] || 0, 10)
+                    ];
+                    return parseFloat(version.join('.'));
+                }
+                return false;
+            }
+        };
+		if(browser.isAndroid()){
+			location.href='youloft419805549://albc-detail?id=44357866408';
+		}
+		else if(browser.isIOS()){
+			location.href='youloft.419805549://albc-detail?id=44357866408';
+		}
+    </script>
+</head>
+
+<body>
+	跳转中...
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+
+.header{
+  height:0.64rem;
+  background: #d03f3f;
+  padding: 0.32rem 0 0 0;
+  box-sizing: border-box;
+  .title{
+    @extend .font_16;
+    color:#f5f0e9;
+    font-weight: 400;
+    text-align: center;
+  }
+}

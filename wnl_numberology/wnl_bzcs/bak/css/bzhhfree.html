@@ -1,0 +1,152 @@
+﻿<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>八字合婚</title>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable = no,initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="./css/bzhh.css?v=1.0">
+    <script type="text/javascript" src="scripts/jquery-fastclick.min.js"></script>
+    <script type="text/javascript" src="scripts/modal.js"></script>
+    <script type="text/javascript" src="scripts/bzhh_free.js?v=1.0"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8e0b53b1de7438bdfa7a36b7a4a9ee61";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<div class="main hidden">
+    <div class="summary">
+        <div id="score">
+            <span class="count"></span>分
+        </div>
+        <div class="info">
+            <div class="nameContent"></div>
+            <div class="rateStringContent"></div>
+            <div class="percentContent">恭喜，您已超过<span id="percent"></span>%的网友</div>
+        </div>
+    </div>
+    <div class="descContent1">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+        <div class="descWrapper">
+            <div class="leftDescContent">
+                <div class="descItemLine">
+                    <div class="descItemIcon"></div>
+                    <div class="descItemTxt">婚后幸福指数</div>
+                </div>
+                <div class="descItemLine">
+                    <div class="descItemIcon"></div>
+                    <div class="descItemTxt">婚外情指数</div>
+                    <div class="descItemHot"></div>
+                </div>
+                <div class="descItemLine">
+                    <div class="descItemIcon"></div>
+                    <div class="descItemTxt">互帮互助指数</div>
+                </div>
+                <div class="descItemLine">
+                    <div class="descItemIcon"></div>
+                    <div class="descItemTxt">老婆旺夫指数</div>
+                </div>
+                <div class="descItemLine">
+                    <div class="descItemIcon"></div>
+                    <div class="descItemTxt">家庭和睦指数</div>
+                </div>
+            </div>
+            <div class="rightDescContent">
+                <div class="descItemLine">
+                    <div class="descItemIcon"></div>
+                    <div class="descItemTxt">婚姻稳定指数</div>
+                </div>
+                <div class="descItemLine">
+                    <div class="descItemIcon"></div>
+                    <div class="descItemTxt">心灵默契指数</div>
+                </div>
+                <div class="descItemLine">
+                    <div class="descItemIcon"></div>
+                    <div class="descItemTxt">老公旺妻指数</div>
+                </div>
+                <div class="descItemLine">
+                    <div class="descItemIcon"></div>
+                    <div class="descItemTxt">子女衰旺指数</div>
+                    <div class="descItemHot"></div>
+                </div>
+                <div class="descItemLine">
+                    <div class="descItemIcon"></div>
+                    <div class="descItemTxt">月下老人总评</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="btnViewDetail" class="viewDetail" href="javascript:void(0)">订阅幸福婚姻9大指数秘笈</a>
+</div>
+<!--<a class="yiqibaziLink hidden" href="zhuanjia.html">-->
+    <!--<img class="bannerImg" src="img/yiqibazi_ad.png" alt="董易奇专家团">-->
+<!--</a>-->
+<div class="yiqiDesc1 resultDesc pabsolute hidden">
+    <div class="descLine">易奇八字专家团倾力打造 <a class="zhuanjiaLink" href="zhuanjia.html">查看专家团简介</a></div>
+    <div class="contactLine" style="margin-top: 3px;">QQ:1254836806  电话:020-28965013</div>
+    <!--<div class="contactLine" style="margin: 15px">-->
+        <!--<div class="corner top-left"></div>-->
+        <!--<div class="corner top-right"></div>-->
+        <!--<div class="corner bottom-left"></div>-->
+        <!--<div class="corner bottom-right"></div>-->
+        <!--<span class="contactTip">测算答疑: </span>-->
+        <!--<span class="contactTxt">QQ 1254836806 &nbsp&nbsp&nbsp 电话 020-28965013</span>-->
+    <!--</div>-->
+    <!--<div class="yiqiDesc">-->
+        <!--<div class="corner top-left"></div>-->
+        <!--<div class="corner top-right"></div>-->
+        <!--<div class="corner bottom-left"></div>-->
+        <!--<div class="corner bottom-right"></div>-->
+        <!--<div class="descLine">易奇八字专家团倾力打造 <a class="zhuanjiaLink" href="zhuanjia.html">查看专家团简介</a></div>-->
+    <!--</div>-->
+</div>
+<a class="wnlBannerLink pabsolute hidden"  href="javascript:void(0)">
+    <div class="downIcon"></div>
+    <div class="downTxt">
+        <div class="txtContainer">
+            <div class="txtWrapper">
+                <img class="downTxtImg" src="img/ad-ww@3x.png" alt="万年历下载">
+            </div>
+        </div>
+    </div>
+    <div class="downBtnImg"></div>
+</a>
+<div id="dvPay" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <span class="zhifuTxt">支付金额:</span>
+        <span class="zhifuCount">68元</span>
+    </div>
+    <div class="modal-body">
+        <div class="introTitle">项目：【八字测算】</div>
+    </div>
+    <div class="modal-footer">
+        <a href="javascript:void(0)" class="dismissBtn pickConfirmBtn" aria-hidden="true" id="btnPay">
+            <div class="zhifuIcon"></div>
+            <div class="zhifuTipTxt">支付宝支付</div>
+            <div class="zhifuArrow"></div>
+        </a>
+    </div>
+</div>
+<div id="tipModal" class="modal hide fade modaliOSStyle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-body">
+        <div class="showString">更多测算功能，请下载万年历。</div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn dismissBtn downloadBtn" data-dismiss="modal" aria-hidden="true">确定</button>
+    </div>
+</div>
+</body>
+</html>

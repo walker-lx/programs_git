@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .infoContainer {
+            width: 320px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .spanItem {
+            margin: 0 0 0 10px;
+        }
+
+        .historyItem {
+            height: 84px;
+            border: 1px solid;
+            margin: 5px 0 5px 0;
+        }
+
+        .textContent {
+            float: left;
+            width: 278px;
+        }
+
+        .navTo {
+            float: right;
+            width: 20px;
+            padding: 32px 0 0 0;
+        }
+		
+		.operation{
+			height: 40px;
+			border: 1px solid;
+			padding-top: 10px;
+		}
+		
+		.checkAll{
+			margin: 14px 40px 0 5px;
+		}
+		
+		.delete{
+			background-color: #fff;
+			border-color: #00a2ca;
+			border: 1px solid;
+			min-width: 78px;
+			height: 33px;
+			line-height: 33px;
+			text-decoration: none;
+			color: #00a2ca;
+			padding: 5px 33px 5px 33px;
+		}
+    </style>
+</head>
+<body>
+    <div class="infoContainer" id="dvHistory">
+		<div class="operation">
+			<label class="checkAll"><input type="checkbox" id="chkAll" >全选</label>
+			
+			<a href="javascript: void(0);" class="delete" id="btnDelete">删除</a>
+		</div>
+    </div>
+
+    <script src="./scripts/jquery-fastclick.min.js"></script>
+    <script src="./scripts/underscore-min.js"></script>
+    <script src="./scripts/wnl-utils.js"></script>
+    <script>
+        var pageObj = (function () {
+			function loadHistory() {
+				var prm = {
+					userId: wnl_utils.getQS("userId"),
+					deviceId: wnl_utils.getQS("deviceid"),
+					mac: wnl_utils.getQS("mac"),
+					imei: wnl_utils.getQS("imei"),
+				};
+
+				if (!prm.userId && !prm.deviceId && !prm.mac && !prm.imei) {
+					alert("请传递UserId、设备Id、Mac或IMEI至少一个参数");
+					return;
+				}
+				
+				$.ajax({
+					cache: false,
+					type: "POST",
+					dataType: "json",
+					url: pageObj.api.getHistory + $.param(prm),
+					success: function (result) {
+						if (result.status == 0) {
+							$(".historyItem").remove();
+							
+							var itemTemplate = '<div class="historyItem">\
+								<div style="float:left; padding-top: 30px;">\
+								<input type="checkbox" name="measureItem" data-orderId="<%- orderId %>">\
+								</div>\
+								<div class="textContent">\
+									<p><span class="spanItem"><label>姓名:</label><b><%- name %></b></span><span class="spanItem"><label>性别:</label><b><%- sex %></b></span></p>\
+									<p><span class="spanItem"><label>公历:</label><b><%- birth %></b></span></p>\
+								</div>\
+								<div class="navTo"><a href="<%- resultPage %>" style="margin: 0 0 0 6px; text-decoration: none">></a></div>\
+							</div>';
+
+							$.each(result.data, function () {
+								var mkpItem = _.template(itemTemplate)({
+									name: this.name,
+									sex: this.sex,
+									birth: this.birth,
+									orderId: this.orderId,
+									resultPage: pageObj.page.measureResult + this.orderId,
+								});
+
+								$("#dvHistory").append(mkpItem);
+							});
+						} else {
+							alert("获取测算数据错误,错误信息为" + result.msg);
+						}
+					},
+					error: function (xhr, ajaxOperation, throwErr) {
+						debugger;
+						return;
+					}
+				});
+			};
+			
+			function deleteRecords(){
+				var ids = [];
+				$("[name=measureItem]").each(function(){/*【闻祖东 2015-06-16 151510】这个地方能不能通过选择器就直接返回所有选中的chkbox？？*/
+					if(this.checked)
+						ids.push($(this).data("orderid"));
+				});
+				
+				if(ids.length > 0){
+					$.ajax({
+						cache: false,
+						type: "POST",
+						dataType: "json",
+						url: pageObj.api.deleteOrder + JSON.stringify(ids),
+						success: function(result) {
+							if(result.status == 0) {
+								alert("删除成功！");
+							} else {
+								alert("删除失败，原因为：" + result.msg);
+							}
+							
+							loadHistory();
+						},
+						error: function(xhr, ajaxOperation, throwErr) {
+							debugger;
+							return;
+						}
+					});
+				} else {
+					alert("您尚未选中任何记录！");
+				}
+			};
+			
+            return {
+				page:{
+					measureResult: "/numberology/tools/bzjp_result.html?orderId=",
+				},
+                api: {
+                    getHistory: "/numberology/nrlorder/GetJPOrderList?",
+					deleteOrder: "/numberology/nrlorder/deleteorder?orderids=",
+                },
+				func: {
+					loadHistory: loadHistory,
+					deleteRecords: deleteRecords,
+				}
+            };
+        })();
+
+        $(function () {
+			pageObj.func.loadHistory();
+			
+			$("#chkAll").change(function(){
+				$("[name=measureItem]").prop("checked", this.checked);
+			});
+			
+			$("#btnDelete").click(function(){
+				pageObj.func.deleteRecords();
+			});
+        });
+    </script>
+</body>
+
+</html>

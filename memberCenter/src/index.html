@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable =no,initial-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>开通会员</title>
+	<link href="./css/style.css" rel="stylesheet"></link>
+</head>
+
+<body onload="onloadMigu()">
+	<div class="index-content">
+		<div class="user-header">
+			<div class="user-img">
+				<img style="width:50px;height:50px;border-radius:50%;" />
+			</div>
+			<div class="user-info">
+				<div class="user-noLogin">
+					<span>未登录</span>
+					<div class="user-login-img"></div>
+				</div>
+				<div class="user-login">
+					<div class="user-login-name">
+						<span></span>
+						<div class="user-login-shape"></div>
+					</div>
+					<div class="user-login-date"></div>
+				</div>
+			</div>
+		</div>
+		<div class="member member-gold">
+			<div class="member-name member-gold-name">万年历咪咕黄金会员</div>
+			<div class="member-content member-gold-content">权益1：</div>
+			<div class="member-content ">总共获得6000积分，价值60元</div>
+			<div class="member-content member-gold-content">权益2：</div>
+			<a class="member-content tlgzy" href="https://mobile.51wnl.com/numberology/vip/tlp/dist/index.html?userId=[WNLUSERID]&deviceId=[OPENUDID]&pushToken=[PTOKEN]&pToken=[PTOKEN]&mac=[MAC]&imei=[IMEI]&idfa=[IDFA]&boundid=[BUNDLE]&posId=[posId]">赠送价值18元的塔罗工作运测算></a>
+			<div class="member-content member-gold-content">权益3：</div>
+			<a class="member-content tlgqy" href="https://mobile.51wnl.com/numberology/vip/gqy/#/?userId=[WNLUSERID]&deviceId=[OPENUDID]&pushToken=[PTOKEN]&pToken=[PTOKEN]&mac=[MAC]&imei=[IMEI]&boundid=[BUNDLE]&posId=[posId]&DONTURLENCODE=[DONTURLENCODE]">赠送价值9.9元的塔罗感情运测算></a>
+			<!--<div class="member-use gold-use">总共获得6000积分，价值60元</div>-->
+			<div class="user-know">
+				<input type="checkbox" id="wnl-migu-agree" checked>
+				<a href="javascript:void(0)" class="agree-content">万年历咪咕黄金包会员协议</a>
+			</div>
+			<div class="member-price">
+				<div class="price-sympol">￥</div>
+				<div class="price-number gold-number">20</div>
+				<div class="price-other gold-other">/月</div>
+			</div>
+			<div class="member-btn-bg gold-bg order-member hidden">
+				<div class="member-btn month-btn">立即开通</div>
+			</div>
+			<div class="member-btn-bg gold-bg hidden view-quanyi" id="view-quanyi">
+				<div class="member-btn month-btn">查看权益</div>
+			</div>
+		</div>
+		<div class="member member-sliver">
+			<div class=" member-name member-sliver-name">白银会员</div>
+			<div class="member-content member-sliver-content">获得1500积分，并额外加赠1500积分</div>
+			<div class="member-use sliver-use">总共获得3000积分，价值30元</div>
+			<div class="member-price">
+				<div class="price-sympol sliver-sympol">￥</div>
+				<div class="price-number sliver-number">15</div>
+				<div class="price-other sliver-other">/月</div>
+			</div>
+			<div class="member-btn-bg sliver-bg">
+				<div class="member-btn quarter-btn">立即开通</div>
+			</div>
+		</div>
+		<div class="member member-bronze">
+			<div class=" member-name member-bronze-name">青铜会员</div>
+			<div class="member-content member-bronze-content">获得1000积分，并额外加赠1000积分</div>
+			<div class="member-use bronze-use">总共获得2000积分，价值20元</div>
+			<div class="member-price">
+				<div class="price-sympol">￥</div>
+				<div class="price-number bronze-number">10</div>
+				<div class="price-other bronze-other">/月</div>
+			</div>
+			<div class="member-btn-bg bronze-bg">
+				<div class="member-btn quarter-btn">立即开通</div>
+			</div>
+		</div>
+		<div class="member-footer">积分可用于积分商城兑换优惠券及物品</div>
+	</div>
+	<div class="migu-content hidden">
+		<div class="tuiding clear-float hidden">退订服务</div>
+		<div class="header-img">
+			<img src="./img//wnl-logo.png">
+			<img src="./img//migu-logo.jpg">
+		</div>
+		<div class="huiyuan-tip">
+			<div>尊敬的手机用户
+				<span class="tel-num"></span>
+			</div>
+			<div>您已开通万年历咕咪会员，可享权益：</div>
+			<div class="quanyi-content">
+				<div>
+					<span>1、</span>获得总共6000的万年历积分，价值60元；</div>
+				<div>
+					<span>2、</span>
+					<a class="" href="https://mobile.51wnl.com/numberology/vip/tlp/dist/index.html?userId=[WNLUSERID]&deviceId=[OPENUDID]&pushToken=[PTOKEN]&pToken=[PTOKEN]&mac=[MAC]&imei=[IMEI]&idfa=[IDFA]&boundid=[BUNDLE]&posId=[posId]&vip=1">赠送价值18元的塔罗工作运测算></a>
+				</div>
+				<div>
+					<span>3、</span>
+					<a class="" href="https://mobile.51wnl.com/numberology/vip/gqy/#/?userId=[WNLUSERID]&deviceId=[OPENUDID]&pushToken=[PTOKEN]&pToken=[PTOKEN]&mac=[MAC]&imei=[IMEI]&boundid=[BUNDLE]&posId=[posId]&DONTURLENCODE=[DONTURLENCODE]&isVip=true">赠送价值9.9元的塔罗感情运测算></a>
+				</div>
+				<div>
+					<span>4、</span>登陆咪咕音乐，可享受高清歌曲下载；</div>
+				<div>
+					<span>5、</span>登录咪咕音乐，可观看高清MV直播；</div>
+			</div>
+		</div>
+		<div class="download-migu">点击下载咪咕客户端享受咪咕权益</div>
+	</div>
+	<div class="toastContent">
+		<div class="toast"></div>
+	</div>
+	<div class="mask hidden"></div>
+	<div class="wnl-migu-arree-content hidden">
+		<h5>1.隐私保护</h5>
+		<div class="text-agree">（1）订购业务时，我司获取短信发送权限。我公司对用户相关信息采用专业加密存储与传输方式，并运用各种安全技术和程序建立完善的管理制度来保护用户隐私信息，以免遭受未经授权的访问、使用或披露。</div>
+		<div class="text-agree">（2）用户有责任妥善保管帐户信息及帐户密码的安全，用户需要对注册帐户以及密码下的行为承担法律责任。用户同意在任何情况下不向他人透露帐户及密码信息。当在用户怀疑他人在使用自己帐号及密码时，应立即通知我司。</div>
+		<div class="text-agree">(3)除司法机关或其他有权机关依法要求提交该等用户隐私信息外，未经用户的同意，我公司将不会擅自披露、改变或其他方式使用用户隐私信息。若用户认为我司存在违反前述范围使用该等隐私信息的，应立即与我司进行联系，我司将及时核实处理。</div>
+		<h5>2.责任说明：</h5>
+		<div class="text-agree">1.万年历提供的会员权益与咪咕音乐提供的权益无相关。</div>
+		<div class="text-agree">2.万年历确保提供的内容的准确性和安全性与合法性产生的一切争议与赔偿责任，与咪咕音乐公司无关。</div>
+		<div class="text-agree">3.如有问题请联系客服0551-65615050。</div>
+
+	</div>
+	<div class="confirm-pop hidden">
+		<div class="desc">确定退订该服务？退订后从下个月1日起生效。</div>
+		<div class="tuiding-btn">确认退订</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/Base64.js"></script>
+<script src="https://m.12530.com/order/pub-ui/js/and/migus.js"></script>
+<script src="https://m.12530.com/order/pub-ui/js/and/openMusicSDK.js"></script>
+<script src="./js/vconsole.min.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+
+</html>

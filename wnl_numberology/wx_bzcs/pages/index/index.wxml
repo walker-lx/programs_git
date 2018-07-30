@@ -1,0 +1,295 @@
+<!--index.wxml-->
+<include src="../../modules/datePicker/datePicker.wxml" />
+<view class='index'>
+  <view class='header-top'>
+    <image src='../../img/bzcs.jpg' class='header-banner'></image>
+    <image src='../../img/dashi.jpg' class='header-dashi'></image>
+  </view>
+
+  <!--input-content  -->
+
+  <view class='user-input-content'>
+    <view class='input-content input-content01'>
+      <view class='input-content-label'>您的姓名</view>
+      <input class='input-content-value' placeholder='点击输入' bindinput='youNameInput'></input>
+    </view>
+    <view class='input-content input-content01'>
+      <view class='input-content-label'>您的性别</view>
+      <view class='input-content-value'>
+        <view class='sexSelect' bindtap='sexClick' data-sexNum='1'>
+          <view class='sexIcon'>
+            <image src='{{selectedActiveSrc}}'></image>
+          </view>
+          <view class='sexTxt'>男</view>
+        </view>
+        <view class='sexSelect sexSelectFemale' bindtap='sexClick' data-sexNum='0'>
+          <view class='sexIcon'>
+            <image src='{{selectedNormalSrc}}'></image>
+          </view>
+          <view class='sexTxt'>女</view>
+        </view>
+      </view>
+    </view>
+    <view class='input-content input-content01'>
+      <view class='input-content-label'>出生日期</view>
+      <!-- <picker class='input-content-value' mode="date" value="{{birthDate}}" bindchange="listenerDatePickerSelected">
+        <text>{{birthDate}}</text>
+      </picker> -->
+      <view class="input-content-value">
+        <text bindtap="dateSelectTap" type="text" id="spBirthDate" readonly="">{{currentDateString}}</text>
+      </view>
+      <view class='arrowContent'></view>
+    </view>
+    <view class='input-content input-content04'>
+      <view class='input-content-label'>出生时间</view>
+      <picker class='input-content-value' mode="selector" range="{{birthTimeList}}" value="{{index}}" bindchange="listenerPickerSelected">
+        <text>{{birthTimeList[index]}}</text>
+      </picker>
+      <view class='arrowContent'></view>
+    </view>
+  </view>
+  <view class='confirmBtn'>
+    <button class='' type='primary' bindtap='btnMeasure' hover-start-time='0' data-position='0'>开始测算</button>
+  </view>
+  <view class='indexContent'>
+    <view class='expertTeamContent'>
+      <view class='title_tip_content box_line'>
+        <view class='title_line'></view>
+        <view class='title_dot'></view>
+        <view class='title_txt'>最权威的专家团队</view>
+        <view class='title_dot'></view>
+        <view class='title_line'></view>
+      </view>
+      <view class='expertTeamSwiper'>
+        <swiper class="swiper dashiSwiper" autoplay="true" indicator-dots="true" interval="6000" duration="1000" circular="true" indicator-active-color="#FF9447">
+          <block wx:for="{{exportTeam}}" wx:for-index="index" wx:key="{{item.id}}">
+            <swiper-item>
+              <view class="swiperBGLeft">
+                <image src="{{item.url}}"></image>
+              </view>
+              <view class="swiperBG">
+                <view class="swiperBGRight">
+                  <view class="expertName">{{item.name}}</view>
+                  <view class="expertDesc">{{item.desc}}</view>
+                </view>
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+    <view class='cesuanResultContent'>
+      <view class='title_tip_content box_line'>
+        <view class='title_line'></view>
+        <view class='title_dot'></view>
+        <view class='title_txt'>测算后您将知道</view>
+        <view class='title_dot'></view>
+        <view class='title_line'></view>
+      </view>
+      <view class='cesuanResult'>
+        <block wx:for='{{cesuanResultList}}' wx:for-index='index' wx:key='{{index}}'>
+          <view class="bzcsResultLabel {{index == 7? 'bzcsResultLabel01':''}}">
+            <view class="bzcsResultLabelContent">{{item}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class='cesuanYunshiContent'>
+      <view class='title_tip_content box_line'>
+        <view class='title_line'></view>
+        <view class='title_dot'></view>
+        <view class='title_txt'>未来运势走向，提前预知</view>
+        <view class='title_dot'></view>
+        <view class='title_line'></view>
+      </view>
+      <view class='yunshiDetailContent'>
+        <image src='../../img/cs-qxt-img@3x.png'></image>
+      </view>
+    </view>
+    <view class='cesuanFeedbackContent'>
+      <view class='title_tip_content box_line'>
+        <view class='title_line'></view>
+        <view class='title_dot'></view>
+        <view class='title_txt'>看看测过的人怎么说</view>
+        <view class='title_dot'></view>
+        <view class='title_line'></view>
+      </view>
+      <view class='feedBackNum'>{{feedBackNum}}</view>
+      <view class="cesuan_comments_content">
+        <view class="cesuan_comments" animation="{{scrollAnimation}}">
+          <view class="marqueeItem" id="comment1">
+            <view class="head">
+              <span class="name">钟先生</span>
+              <span class="city">无锡</span>
+              <span class="stars">
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+              </span>
+            </view>
+            <view class="comment">
+              说实话，钱赚的不少，就是存不住，投资运太差了，赔了不少，来这里看看是不是最近不适合做投资，终于找到了答案。
+            </view>
+          </view>
+          <view class="marqueeItem">
+            <view class="head">
+              <span class="name">何先生</span>
+              <span class="city">旧金山</span>
+              <span class="stars">
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+              </span>
+            </view>
+            <view class="comment">
+              在国外，背井离乡，生活中最离不开的就是中国的菜肴和中国的测算，菜还好找，在美国找八字测算的大师太难了，还好有朋友推荐，找到了这里。
+            </view>
+          </view>
+          <view class="marqueeItem">
+            <view class="head">
+              <span class="name">钱先生</span>
+              <span class="city">温州</span>
+              <span class="stars">
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+              </span>
+            </view>
+            <view class="comment">
+              我对八字和易学有一定的了解，从结果来看这个测算很专业，非常满意。
+            </view>
+          </view>
+          <view class="marqueeItem">
+            <view class="head">
+              <span class="name">赵女士</span>
+              <span class="city">苏州</span>
+              <span class="stars">
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star"></span>
+              </span>
+            </view>
+            <view class="comment">
+              最近感情和工作都不顺利，于是抱着试试看的心态测算了一下，释然了很多，一下子解开了自己的困惑，按照嘱咐小心行事，现在运势已经在慢慢好转了。
+            </view>
+          </view>
+          <view class="marqueeItem">
+            <view class="head">
+              <span class="name">梁先生</span>
+              <span class="city">重庆</span>
+              <span class="stars">
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+              </span>
+            </view>
+            <view class="comment">
+              原本以为网络上的测算都是骗人玩的，算了之后才发现，大师批的真准，而且价格也不贵
+            </view>
+          </view>
+          <view class="marqueeItem" id="comment2">
+            <view class="head">
+              <span class="name">钟先生</span>
+              <span class="city">无锡</span>
+              <span class="stars">
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+              </span>
+            </view>
+            <view class="comment">
+              说实话，钱赚的不少，就是存不住，投资运太差了，赔了不少，来这里看看是不是最近不适合做投资，终于找到了答案。
+            </view>
+          </view>
+          <view class="marqueeItem">
+            <view class="head">
+              <span class="name">何先生</span>
+              <span class="city">旧金山</span>
+              <span class="stars">
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+              </span>
+            </view>
+            <view class="comment">
+              在国外，背井离乡，生活中最离不开的就是中国的菜肴和中国的测算，菜还好找，在美国找八字测算的大师太难了，还好有朋友推荐，找到了这里。
+            </view>
+          </view>
+          <view class="marqueeItem">
+            <view class="head">
+              <span class="name">钱先生</span>
+              <span class="city">温州</span>
+              <span class="stars">
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+                <span class="star starActive"></span>
+              </span>
+            </view>
+            <view class="comment">
+              我对八字和易学有一定的了解，从结果来看这个测算很专业，非常满意
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class='feedback'>
+        <view class='feedBackContent'></view>
+        <view class='feedBackDetailContent'></view>
+        <view class='cesuan_comments_content'></view>
+      </view> -->
+    </view>
+    <view class='cesuanIntroductionContent'>
+      <view class='title_tip_content box_line'>
+        <view class='title_line'></view>
+        <view class='title_dot'></view>
+        <view class='title_txt'>八字测算中的大运</view>
+        <view class='title_dot'></view>
+        <view class='title_line'></view>
+      </view>
+      <view class="bzcsLNYSDetail">
+        <view class="lnysContent">
+          <view class="lnysContentTitle">什么是大运？</view>
+          <view class="lnysContentDetail">古说“十年河东，十年河西”，人的大运十年一变，每一个大运，会与你的本命产生相生、相克的吉凶状况，影响你这十年的个性、情绪、心境、欲望、境遇好坏等，进而改变了你的事业发展、财富投资、爱情婚姻等运势，影响时间长而深远。所谓的大运，是指人一生中N个十年阶段的运势情况，起运时间依据八字中的月令、性别等信息而定，因此每个人起运年龄会有所不同。
+          </view>
+        </view>
+        <view class="lnysContentHr"></view>
+        <view class="lnysContent">
+          <view class="lnysContentTitle">为什么要批大运？</view>
+          <view class="lnysContentDetail">孔子在《论语》中提出人要“三知”,即“知命”、“知礼”、“知言”，而“知命”排在第一位。通过大运分析，可以纵观人生命运起伏，知悉事业、财富、爱情、健康等运势走向，为重大决策提供依据，帮助你妥善规划人生，知运转运，趋吉避凶。
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='cesuanContactContent'>
+      <view class='contactTxt'>测算答疑: QQ1254836806</view>
+      <view class='contactTxt contactPhone'>电话: 020-28965013</view>
+    </view>
+    <view class='copyright'>
+      Copyright © CALENDAR Tech. All Rights Reserved.
+    </view>
+  </view>
+  <view wx:if="{{userId}}" hidden='{{orderBtnIsHidden}}' class="historyBtn {{fixButtonShow == true? 'historyBtnScroll' : ''}}" bindtap='goHistory'>
+    我的订单
+  </view>
+  <view class="confirm_btn_fixed {{bottomBtnisShow == true ? '':'confirm_btn_fixed_hidden'}}">
+    <button class='confirm_btn_fixed_link' type='primary' data-position='1' hover-start-time='0' bindtap='btnMeasure'>开始测算</button>
+  </view>
+  <view class="toastContent" hidden='{{toastIsHideen}}' >
+    <view class="toast">{{toastInfo}}</view>
+  </view>
+</view>
